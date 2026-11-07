@@ -256,22 +256,97 @@
     return String(value) + (suffix || "");
   }
 
+  // Wikimedia has been rate-limiting bare CDN hotlinks that omit Referer (bot heuristic).
+  // Safari + referrerpolicy=no-referrer was a common trigger; send a normal referrer instead.
+  // On error, retry once via Special:FilePath, then show a visible placeholder.
+  function commonsFileName(pageUrl) {
+    if (!pageUrl) return "";
+    var match = String(pageUrl).match(/\/wiki\/File:([^?#]+)/i);
+    if (!match) return "";
+    try {
+      return decodeURIComponent(match[1]);
+    } catch (err) {
+      return match[1];
+    }
+  }
+
+  function commonsFilePathFallback(image) {
+    var page = (image && (image.pageUrl || image.href)) || "";
+    if (!/commons\.wikimedia\.org/i.test(page)) return "";
+    var name = commonsFileName(page);
+    if (!name) return "";
+    return "https://commons.wikimedia.org/wiki/Special:FilePath/" + encodeURIComponent(name) + "?width=1280";
+  }
+
+  function reservePhoto(image) {
+    var src = image && (image.src || image.directUrl);
+    if (!src || !claimMedia(src)) return null;
+    var fallback = commonsFilePathFallback(image);
+    if (fallback) claimMedia(fallback);
+    return { src: src, fallback: fallback || "", page: image.pageUrl || image.href || "" };
+  }
+
+  function photoImgHtml(opts) {
+    var loading = opts.loading || "lazy";
+    var cls = opts.className ? ' class="' + esc(opts.className) + '"' : "";
+    var style = opts.style ? ' style="' + esc(opts.style) + '"' : "";
+    return "<img" + cls + ' src="' + esc(opts.src) + '" alt="' + esc(opts.alt || "Starship photo") + '"' +
+      ' loading="' + loading + '" decoding="async"' +
+      (opts.fallback ? ' data-fallback="' + esc(opts.fallback) + '"' : "") +
+      (opts.page ? ' data-page="' + esc(opts.page) + '"' : "") +
+      ' onerror="window.starshipPhotoError&&window.starshipPhotoError(this)"' + style + ">";
+  }
+
+  window.starshipPhotoError = function (img) {
+    if (!img || img.getAttribute("data-photo-failed") === "1") return;
+    var fallback = img.getAttribute("data-fallback");
+    if (fallback && img.getAttribute("data-photo-retried") !== "1") {
+      img.setAttribute("data-photo-retried", "1");
+      img.src = fallback;
+      return;
+    }
+    img.setAttribute("data-photo-failed", "1");
+    img.hidden = true;
+    var page = img.getAttribute("data-page") || "";
+    var frame = img.closest(".photo-frame") || img.parentNode;
+    if (!frame || frame.querySelector(".photo-fallback")) return;
+    var isFlickr = /flickr\.com/i.test(page);
+    var label = isFlickr
+      ? "Photo couldn't load — view on Flickr"
+      : "Photo couldn't load — view on Wikimedia Commons";
+    var node = document.createElement(page ? "a" : "div");
+    node.className = "photo-fallback" + (img.classList.contains("hero-img") ? " is-hero" : "");
+    if (page) {
+      node.href = page;
+      node.target = "_blank";
+      node.rel = "noopener noreferrer";
+    }
+    node.textContent = label;
+    frame.appendChild(node);
+  };
+
   function attributedFigure(image) {
-    var src = image.src || image.directUrl;
-    if (!src || !claimMedia(src)) return "";
-    var page = image.pageUrl || image.href || "";
+    var reserved = reservePhoto(image);
+    if (!reserved) return "";
+    var page = reserved.page;
     var lic = licenseHtml(image.license, image.licenseHref || image.licenseUrl);
     var alt = image.alt || image.caption || "Starship photo";
-    var img = '<img src="' + esc(src) + '" alt="' + esc(alt) + '" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.hidden=true">';
-    var linked = page
-      ? '<a class="gallery-link" href="' + esc(page) + '" target="_blank" rel="noopener noreferrer">' + img + "</a>"
-      : img;
+    var img = photoImgHtml({
+      src: reserved.src,
+      fallback: reserved.fallback,
+      page: page,
+      alt: alt,
+      loading: "lazy",
+    });
+    var frame = page
+      ? '<a class="gallery-link photo-frame" href="' + esc(page) + '" target="_blank" rel="noopener noreferrer">' + img + "</a>"
+      : '<div class="photo-frame">' + img + "</div>";
     var caption = esc(image.caption || "");
     if (image.credit) caption += (caption ? ". " : "") + esc(image.credit);
     if (lic) caption += (caption ? ", " : "") + lic;
     if (page) caption += (caption ? ". " : "") + '<a href="' + esc(page) + '" target="_blank" rel="noopener noreferrer">Source</a>';
     if (caption) caption += ".";
-    return '<figure class="gallery-item">' + linked + "<figcaption>" + caption + "</figcaption></figure>";
+    return '<figure class="gallery-item">' + frame + "<figcaption>" + caption + "</figcaption></figure>";
   }
 
   function galleryHtml(detail) {
@@ -492,7 +567,10 @@
   function detailsPanel(flight) {
     var detail = detailOf(flight);
     if (!detail) return "";
-    return galleryHtml(detail) +
+    // Defer gallery markup until the card is open so WebKit does not
+    // eagerly error lazy images sitting inside [hidden] panels.
+    var open = isOpen(flight.n);
+    return (open ? galleryHtml(detail) : "") +
       firstsHtml(detail, flight) +
       timelineHtml(detail) +
       telemetryHtml(detail) +
@@ -651,10 +729,26 @@
     return Object.keys(map).sort().map(function (year) { return { label: year, value: map[year] }; });
   }
 
+  function heroPhotoHtml(photo) {
+    var fallback = commonsFilePathFallback(photo);
+    if (fallback) claimMedia(fallback);
+    return '<div class="photo-frame hero-frame">' +
+      photoImgHtml({
+        className: "hero-img",
+        src: photo.src,
+        fallback: fallback,
+        page: photo.href || photo.pageUrl || "",
+        alt: photo.alt,
+        loading: "eager",
+        style: photo.position ? "object-position:" + photo.position : "",
+      }) +
+      "</div>";
+  }
+
   function heroHtml(data, upcoming) {
     var photo = SITE_PHOTOS[0];
     if (!upcoming) {
-      return '<section class="hero" id="next"><img class="hero-img" src="' + esc(photo.src) + '" alt="' + esc(photo.alt) + '" loading="eager" decoding="async" referrerpolicy="no-referrer" onerror="this.hidden=true">' +
+      return '<section class="hero" id="next">' + heroPhotoHtml(photo) +
         '<div class="hero-shade"></div><div class="hero-copy"><p class="eyebrow">Starship</p><h1 class="hero-flight"><span>Flight</span> tracker</h1></div>' +
         '<p class="hero-credit">' + shortCredit(photo) +
         (photo.href ? ' <a href="' + esc(photo.href) + '">Source</a>.' : "") +
@@ -665,7 +759,7 @@
     var meta = [vehicles, upcoming.version, upcoming.pad].filter(Boolean).join("  ·  ");
     var range = formatRange(upcoming.costEstimate);
     return '<section class="hero" id="next">' +
-      '<img class="hero-img" src="' + esc(photo.src) + '" alt="' + esc(photo.alt) + '" style="object-position:' + esc(photo.position) + '" loading="eager" decoding="async" referrerpolicy="no-referrer" onerror="this.hidden=true">' +
+      heroPhotoHtml(photo) +
       '<div class="hero-shade"></div>' +
       '<div class="hero-copy"><p class="eyebrow">Next launch</p>' +
       '<h1 class="hero-flight"><span>Flight</span> ' + esc(upcoming.n) + "</h1>" +
@@ -851,7 +945,7 @@
       return "<li class=\"credit-card\">" + fig + "</li>";
     }).join("");
     return '<section class="band" id="credits"><div class="wrap"><h2>Photography</h2>' +
-      '<p class="lede">Site and flight photographs are hotlinked from Wikimedia Commons or Flickr with attribution. Each media URL appears once.</p>' +
+      '<p class="lede">Site and flight photographs are hotlinked from Wikimedia Commons or Flickr with attribution. Each photograph appears once. If a CDN hotlink fails, the page retries via Commons Special:FilePath, then shows a link to the source page.</p>' +
       '<ul class="credits site-credits">' + items + "</ul></div></section>";
   }
 
