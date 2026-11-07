@@ -1,0 +1,995 @@
+{
+  "lastUpdated": "2026-11-07",
+  "lastUpdatedLabel": "Sat 7 Nov 2026, 15:00 CET",
+  "title": "Starship Flight Tracker",
+  "intro": "Every SpaceX Starship integrated flight, from Flight 1 in April 2023 to the upcoming Flight 15, with goals, results, causes, lessons and costs. Times are Netherlands time (CET/CEST).",
+  "overview": "14 flights flown, the last one the first to reach orbit; the next is planned as the first catch of both stages.",
+  "timezoneNote": "Times: local Netherlands time (CET = UTC+1 in winter, CEST = UTC+2 in summer). Starbase is on CDT (UTC-5) in summer and CST (UTC-6) in winter: CET = CST + 7 h.",
+  "summary": {
+    "flownLabel": "Flights flown",
+    "flownRange": "Apr 2023 – Sep 2026",
+    "outcomeLabel": "Successes / failures",
+    "outcomeNote": "Wikipedia's launch-outcome classification",
+    "catchesLabel": "Booster tower catches",
+    "nextShort": "NET 13 Nov",
+    "nextDetail": "Time and FAA licence pending"
+  },
+  "next": {
+    "aboutFlight": 15,
+    "status": "Awaiting FAA licence modification",
+    "timezone": "Starbase is on CST (UTC−6); CET = CST + 7 h",
+    "plan": "Orbit, then return both stages to Starbase for the first double tower catch",
+    "hardware": "Both vehicles static-fired late October; ship rehearsed in the chopsticks in September",
+    "callout": "Liftoff time is not announced yet and SpaceX has no Flight 15 mission page up. The time will be added here in CET once it is published."
+  },
+  "laterCaption": "Dates are no-earlier-than targets and will move.",
+  "laterNote": "Musk has also said the flight after Flight 15 could refly the caught vehicles; NASASpaceflight expects Flight 16 to use B23 and S43 instead.",
+  "costNote": "SpaceX has never published a per-flight cost. All figures here are estimates or programme totals, not a price for any single flight.",
+  "notes": [
+    "Success and failure follow Wikipedia's launch-outcome column; SpaceX counts most flights as successful tests.",
+    "V1/V2/V3 follow SpaceX's generation names (Block 1/2/3). Flights 7–11 paired a V2 ship with a first-generation booster.",
+    "Times are converted from SpaceX's CT times or Wikipedia's UTC times to Europe/Amsterdam.",
+    "Flights 12–14 facts that only appear on Wikipedia or secondary sites are flagged inside each flight."
+  ],
+  "indexLinks": [
+    {
+      "title": "SpaceX launches",
+      "site": "spacex.com",
+      "href": "https://www.spacex.com/launches"
+    },
+    {
+      "title": "FAA statements",
+      "site": "faa.gov",
+      "href": "https://www.faa.gov/newsroom/statements/general-statements"
+    },
+    {
+      "title": "Wikipedia: List of Starship launches (index)",
+      "site": "en.wikipedia.org",
+      "href": "https://en.wikipedia.org/wiki/List_of_Starship_launches"
+    },
+    {
+      "title": "Via Satellite: SpaceX S-1 financials",
+      "site": "satellitetoday.com",
+      "href": "https://www.satellitetoday.com/finance/2026/05/20/spacexs-ipo-filing-gives-first-look-into-companys-financials/"
+    }
+  ],
+  "costs": [
+    {
+      "figure": "About $2B in 2023",
+      "covers": "Starship programme spend for 2023",
+      "source": "Elon Musk, via CNBC, 29 Apr 2023"
+    },
+    {
+      "figure": "About $100M per launch",
+      "covers": "Outside estimate per test flight (2025 era)",
+      "source": "BBC, 27 Aug 2025"
+    },
+    {
+      "figure": "About $3.0B in 2025",
+      "covers": "Starship R&D for the year",
+      "source": "SpaceX S-1 filing, via Via Satellite, 20 May 2026"
+    },
+    {
+      "figure": "More than $15B",
+      "covers": "Cumulative Starship spending",
+      "source": "Reuters (1 May 2026), Bloomberg (20 May 2026)"
+    }
+  ],
+  "later": [
+    {
+      "when": "NET Thu 10 Dec 2026",
+      "mission": "Flight 16 (Starlink 30-1)",
+      "vehicles": "B23 / S43 (likely)",
+      "site": "KSC LC-39A, Florida",
+      "note": "Would be the first Starship launch from Florida.",
+      "confidence": "FAA planning slide; not a SpaceX date"
+    },
+    {
+      "when": "Q1 2027",
+      "mission": "Propellant transfer demo: target",
+      "vehicles": "V3",
+      "site": "TBA",
+      "note": "Prototype depot launched as the transfer target.",
+      "confidence": "NASA HLS presentation (IAC 2026)"
+    },
+    {
+      "when": "Q1 2027",
+      "mission": "Propellant transfer demo: chaser",
+      "vehicles": "V3",
+      "site": "TBA",
+      "note": "Prototype tanker transfers propellant to the target.",
+      "confidence": "NASA HLS presentation (IAC 2026)"
+    },
+    {
+      "when": "Mid 2027",
+      "mission": "Artemis III docking test",
+      "vehicles": "V3 / HLS prototype",
+      "site": "TBA",
+      "note": "Orion docks with a Starship in low Earth orbit.",
+      "confidence": "Wikipedia, citing NASA"
+    },
+    {
+      "when": "Q4 2027",
+      "mission": "Uncrewed HLS lunar demo",
+      "vehicles": "HLS + tankers",
+      "site": "TBA",
+      "note": "Landing on the Moon and return to lunar orbit; needs many tanker flights.",
+      "confidence": "Wikipedia, citing NASA"
+    },
+    {
+      "when": "2028",
+      "mission": "Artemis IV crewed landing",
+      "vehicles": "HLS",
+      "site": "TBA",
+      "note": "First crewed lunar landing since Apollo 17.",
+      "confidence": "Wikipedia, citing NASA"
+    }
+  ],
+  "flights": [
+    {
+      "n": 1,
+      "era": "V1",
+      "result": "Failure",
+      "dateLocal": "Thu 20 Apr 2023, 15:33 CEST",
+      "utc": "13:33 UTC (8:33 a.m. CDT)",
+      "booster": "Booster 7",
+      "ship": "Ship 24",
+      "boosterShort": "B7",
+      "shipShort": "S24",
+      "version": "V1 (Block 1)",
+      "pad": "Starbase OLP-1",
+      "summary": "First integrated flight. Cleared the pad, but engines failed, the stack tumbled and never separated.",
+      "goals": [
+        "Clear the pad and fly through max-Q",
+        "Stage separation (cold staging)",
+        "Ship coast on a near-orbital path, reentry and impact north of Hawaii"
+      ],
+      "achieved": [
+        "Cleared the pad and beach",
+        "Reached about 39 km altitude, the highest of any Starship up to then"
+      ],
+      "failed": [
+        "Several Raptors out before and during ascent",
+        "Loss of thrust vector control; vehicle spun and never separated",
+        "Flight termination system took about 40 s to destroy the stack",
+        "Pad concrete under the launch mount was pulverised, debris thrown widely"
+      ],
+      "lessons": [
+        "63 corrective actions accepted by the FAA",
+        "Water-cooled steel flame deflector (deluge) installed at OLP-1",
+        "Booster aft-end redesign, fire suppression, upgraded flight termination system",
+        "Booster switched to electric thrust vector control; hot staging adopted"
+      ],
+      "boosterOutcome": "Lost (terminated in flight)",
+      "shipOutcome": "Lost (never separated)",
+      "firsts": [
+        "First integrated Starship / Super Heavy launch"
+      ],
+      "faa": "Mishap investigation; closed 8 Sep 2023 with 63 corrective actions. Root cause per SpaceX: propellant leaks in the booster aft end caused fires that severed the link to the primary flight computer.",
+      "cost": "No flight-specific public estimate. Context: Musk said SpaceX would spend about $2B on Starship in 2023 (CNBC, 29 Apr 2023).",
+      "uncertain": [],
+      "sources": [
+        {
+          "title": "SpaceX: Flight 1 recap",
+          "site": "spacex.com",
+          "href": "https://www.spacex.com/launches/starship-flight-test"
+        },
+        {
+          "title": "Wikipedia: Starship flight test 1 (index, cross-check)",
+          "site": "en.wikipedia.org",
+          "href": "https://en.wikipedia.org/wiki/Starship_flight_test_1"
+        },
+        {
+          "title": "CNBC: Musk says Starship costing about $2B this year",
+          "site": "cnbc.com",
+          "href": "https://www.cnbc.com/2023/04/29/elon-musk-spacexs-starship-costing-about-2-billion-this-year.html"
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "era": "V1",
+      "result": "Failure",
+      "dateLocal": "Sat 18 Nov 2023, 14:02 CET",
+      "utc": "13:02 UTC (7:02 a.m. CST)",
+      "booster": "Booster 9",
+      "ship": "Ship 25",
+      "boosterShort": "B9",
+      "shipShort": "S25",
+      "version": "V1 (Block 1)",
+      "pad": "Starbase OLP-1",
+      "summary": "All 33 engines ran full duration and hot staging worked, but both stages were lost.",
+      "goals": [
+        "First hot-staging separation",
+        "Booster boostback and Gulf splashdown",
+        "Ship coast and reentry north of Hawaii"
+      ],
+      "achieved": [
+        "All 33 booster engines ran to staging",
+        "First successful hot staging",
+        "New water deluge protected the pad",
+        "Ship reached space (about 148 km)"
+      ],
+      "failed": [
+        "Booster exploded during boostback",
+        "Ship lost about 8 min in, just before planned engine cutoff"
+      ],
+      "lessons": [
+        "17 corrective actions (10 ship, 7 booster)",
+        "Improved LOX filtration on boosters",
+        "Ship moved to electric thrust vector control",
+        "Ship LOX venting moved to after engine cutoff"
+      ],
+      "boosterOutcome": "Lost (exploded during boostback)",
+      "shipOutcome": "Lost (flight termination near SECO)",
+      "firsts": [
+        "First hot staging",
+        "First Starship to reach space",
+        "First flight with the pad water deluge"
+      ],
+      "faa": "Mishap investigation; closed 26 Feb 2024. Booster: LOX filter blockage starved turbopumps and one engine failed energetically. Ship: LOX vent led to a leak and fires, loss of comms, then automatic termination.",
+      "cost": "No flight-specific public estimate. Context: Musk said SpaceX would spend about $2B on Starship in 2023 (CNBC, 29 Apr 2023).",
+      "uncertain": [],
+      "sources": [
+        {
+          "title": "SpaceX: Flight 2 recap",
+          "site": "spacex.com",
+          "href": "https://www.spacex.com/launches/starship-flight-2"
+        },
+        {
+          "title": "Wikipedia: Starship flight test 2 (index, cross-check)",
+          "site": "en.wikipedia.org",
+          "href": "https://en.wikipedia.org/wiki/Starship_flight_test_2"
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "era": "V1",
+      "result": "Success",
+      "dateLocal": "Thu 14 Mar 2024, 14:25 CET",
+      "utc": "13:25 UTC (8:25 a.m. CDT)",
+      "booster": "Booster 10",
+      "ship": "Ship 28",
+      "boosterShort": "B10",
+      "shipShort": "S28",
+      "version": "V1 (Block 1)",
+      "pad": "Starbase OLP-1",
+      "summary": "Ship completed its full ascent burn and reentered for the first time, but both stages were lost on the way down.",
+      "goals": [
+        "Full-duration ship ascent burn",
+        "Payload door open/close test",
+        "Internal propellant transfer demo",
+        "In-space Raptor relight",
+        "Booster Gulf landing burn",
+        "Ship controlled reentry and Indian Ocean splashdown"
+      ],
+      "achieved": [
+        "Full ascent on a near-orbital trajectory",
+        "Payload door test",
+        "Propellant transfer demo",
+        "First ship reentry data and live Starlink video from reentry"
+      ],
+      "failed": [
+        "Booster lost about 460 m above the Gulf when only 3 engines lit for landing",
+        "In-space relight skipped",
+        "Ship lost during reentry after uncontrolled roll"
+      ],
+      "lessons": [
+        "Added roll-control thrusters on ship",
+        "Further LOX filtration upgrades on booster"
+      ],
+      "boosterOutcome": "Lost (hard impact in Gulf)",
+      "shipOutcome": "Lost during reentry",
+      "firsts": [
+        "First ship to complete its ascent burn",
+        "First ship reentry",
+        "First in-flight propellant transfer demo"
+      ],
+      "faa": "Mishap investigation opened 14 Mar 2024; closed late May 2024 with a no-public-safety-impact finding. Causes: clogged roll-control valves on the ship; LOX filter blockage on the booster.",
+      "cost": "No public estimate for this flight.",
+      "uncertain": [
+        "Wikipedia counts this flight as a launch success even though both stages were lost; SpaceX treats it as a test that met most goals."
+      ],
+      "sources": [
+        {
+          "title": "SpaceX: Flight 3 recap",
+          "site": "spacex.com",
+          "href": "https://www.spacex.com/launches/starship-flight-3"
+        },
+        {
+          "title": "Wikipedia: Starship flight test 3 (index, cross-check)",
+          "site": "en.wikipedia.org",
+          "href": "https://en.wikipedia.org/wiki/Starship_flight_test_3"
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "era": "V1",
+      "result": "Success",
+      "dateLocal": "Thu 6 Jun 2024, 14:50 CEST",
+      "utc": "12:50 UTC (7:50 a.m. CDT)",
+      "booster": "Booster 11",
+      "ship": "Ship 29",
+      "boosterShort": "B11",
+      "shipShort": "S29",
+      "version": "V1 (Block 1)",
+      "pad": "Starbase OLP-1",
+      "summary": "First time both stages came back under control: booster and ship soft splashdowns.",
+      "goals": [
+        "Booster soft splashdown on a virtual tower",
+        "Ship survives reentry and splashes down in the Indian Ocean"
+      ],
+      "achieved": [
+        "Booster controlled splashdown in the Gulf",
+        "Ship survived reentry with a badly burned forward flap and splashed down in the target area"
+      ],
+      "failed": [
+        "One booster engine lost after liftoff (flight continued)",
+        "Severe forward flap damage during reentry"
+      ],
+      "lessons": [
+        "Forward flaps redesigned and moved leeward",
+        "Heat-shield tile and backup layer improvements",
+        "Cleared the way for a tower catch on Flight 5"
+      ],
+      "boosterOutcome": "Controlled splashdown (Gulf)",
+      "shipOutcome": "Controlled splashdown (Indian Ocean)",
+      "firsts": [
+        "First controlled splashdown of both stages",
+        "Booster jettisoned its hot-staging ring",
+        "First flight without an FAA mishap investigation"
+      ],
+      "faa": "No mishap investigation required (FAA, 12 Jun 2024).",
+      "cost": "No public estimate for this flight.",
+      "uncertain": [],
+      "sources": [
+        {
+          "title": "SpaceX: Flight 4 recap",
+          "site": "spacex.com",
+          "href": "https://www.spacex.com/launches/starship-flight-4"
+        },
+        {
+          "title": "Wikipedia: Starship flight test 4 (index, cross-check)",
+          "site": "en.wikipedia.org",
+          "href": "https://en.wikipedia.org/wiki/Starship_flight_test_4"
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "era": "V1",
+      "result": "Success",
+      "dateLocal": "Sun 13 Oct 2024, 14:25 CEST",
+      "utc": "12:25 UTC (7:25 a.m. CDT)",
+      "booster": "Booster 12",
+      "ship": "Ship 30",
+      "boosterShort": "B12",
+      "shipShort": "S30",
+      "version": "V1 (Block 1)",
+      "pad": "Starbase OLP-1",
+      "summary": "The tower's chopsticks caught the booster for the first time; the ship hit its splashdown target.",
+      "goals": [
+        "First booster return and tower catch",
+        "Precise ship splashdown in the Indian Ocean"
+      ],
+      "achieved": [
+        "Booster caught by the tower arms",
+        "Ship landing flip and splashdown on target"
+      ],
+      "failed": [
+        "None of the major goals; booster chine damage and ship flap heating noted"
+      ],
+      "lessons": [
+        "Catch tower proven; catch became the default plan for later boosters",
+        "Ship heat-shield refinements continued"
+      ],
+      "boosterOutcome": "Caught by tower (OLP-1)",
+      "shipOutcome": "Controlled splashdown (Indian Ocean)",
+      "firsts": [
+        "First booster catch by launch tower arms"
+      ],
+      "faa": "No mishap investigation. Licence issued 12 Oct 2024 after a public dispute over timing.",
+      "cost": "No public estimate for this flight.",
+      "uncertain": [],
+      "sources": [
+        {
+          "title": "SpaceX: Flight 5 recap",
+          "site": "spacex.com",
+          "href": "https://www.spacex.com/launches/starship-flight-5"
+        },
+        {
+          "title": "Wikipedia: Starship flight test 5 (index, cross-check)",
+          "site": "en.wikipedia.org",
+          "href": "https://en.wikipedia.org/wiki/Starship_flight_test_5"
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "era": "V1",
+      "result": "Success",
+      "dateLocal": "Tue 19 Nov 2024, 23:00 CET",
+      "utc": "22:00 UTC (4:00 p.m. CST)",
+      "booster": "Booster 13",
+      "ship": "Ship 31",
+      "boosterShort": "B13",
+      "shipShort": "S31",
+      "version": "V1 (Block 1)",
+      "pad": "Starbase OLP-1",
+      "summary": "Catch called off for safety, but the ship did the first in-space Raptor relight and a daylight splashdown.",
+      "goals": [
+        "Second booster catch",
+        "In-space Raptor relight",
+        "Reentry with tiles removed and a steeper profile",
+        "Daylight ship splashdown"
+      ],
+      "achieved": [
+        "In-space relight",
+        "Ship survived the harsher reentry with minimal flap damage",
+        "First daylight splashdown"
+      ],
+      "failed": [
+        "Catch aborted: tower sensors damaged at liftoff, booster diverted to Gulf splashdown"
+      ],
+      "lessons": [
+        "Hardened tower sensors and catch-abort criteria",
+        "Last Block 1 ship; Block 2 ship next"
+      ],
+      "boosterOutcome": "Controlled splashdown (Gulf), catch aborted",
+      "shipOutcome": "Controlled splashdown (Indian Ocean)",
+      "firsts": [
+        "First in-space Raptor relight",
+        "First daylight splashdown",
+        "First payload: a plush banana zero-g indicator"
+      ],
+      "faa": "No mishap investigation.",
+      "cost": "No public estimate for this flight.",
+      "uncertain": [],
+      "sources": [
+        {
+          "title": "SpaceX: Flight 6 recap",
+          "site": "spacex.com",
+          "href": "https://www.spacex.com/launches/starship-flight-6"
+        },
+        {
+          "title": "Wikipedia: Starship flight test 6 (index, cross-check)",
+          "site": "en.wikipedia.org",
+          "href": "https://en.wikipedia.org/wiki/Starship_flight_test_6"
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "era": "V2",
+      "result": "Failure",
+      "dateLocal": "Thu 16 Jan 2025, 23:37 CET",
+      "utc": "22:37 UTC (4:37 p.m. CST)",
+      "booster": "Booster 14",
+      "ship": "Ship 33",
+      "boosterShort": "B14",
+      "shipShort": "S33",
+      "version": "V2 ship (Block 2), V1-gen booster",
+      "pad": "Starbase OLP-1",
+      "summary": "Booster caught again, but the first Block 2 ship broke up about 8.5 minutes in.",
+      "goals": [
+        "Debut of the upgraded Block 2 ship",
+        "Deploy 10 Starlink simulators",
+        "Second booster catch",
+        "Reentry experiments"
+      ],
+      "achieved": [
+        "Booster caught (second ever catch)"
+      ],
+      "failed": [
+        "Ship lost telemetry about 8.5 min in and broke up; no payload deploy",
+        "Debris fell around Turks and Caicos; air traffic disrupted"
+      ],
+      "lessons": [
+        "Fuel feedlines changed, propellant temperatures and thrust target adjusted",
+        "Added vents and a nitrogen purge to the ship's aft 'attic'"
+      ],
+      "boosterOutcome": "Caught by tower (OLP-1)",
+      "shipOutcome": "Lost during ascent",
+      "firsts": [
+        "First Block 2 ship",
+        "First catch of a second booster"
+      ],
+      "faa": "Mishap investigation; closed 28 Mar 2025 (announced 31 Mar). Most probable cause: vibrations stronger than expected stressed propulsion hardware, causing leaks and fires in the aft section.",
+      "cost": "No flight-specific figure. Outside estimate: about $100M per launch (BBC, Aug 2025, reporting on this era of test flights).",
+      "uncertain": [],
+      "sources": [
+        {
+          "title": "SpaceX: Flight 7 recap",
+          "site": "spacex.com",
+          "href": "https://www.spacex.com/launches/starship-flight-7"
+        },
+        {
+          "title": "Wikipedia: Starship flight test 7 (index, cross-check)",
+          "site": "en.wikipedia.org",
+          "href": "https://en.wikipedia.org/wiki/Starship_flight_test_7"
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "era": "V2",
+      "result": "Failure",
+      "dateLocal": "Fri 7 Mar 2025, 00:31 CET",
+      "utc": "6 Mar 23:31 UTC (5:31 p.m. CST)",
+      "booster": "Booster 15",
+      "ship": "Ship 34",
+      "boosterShort": "B15",
+      "shipShort": "S34",
+      "version": "V2 ship (Block 2), V1-gen booster",
+      "pad": "Starbase OLP-1",
+      "summary": "Third booster catch, but the ship lost several engines and control near the end of its ascent.",
+      "goals": [
+        "Deploy 4 Starlink simulators",
+        "In-space relight",
+        "Booster catch",
+        "Ship reentry experiments"
+      ],
+      "achieved": [
+        "Booster caught despite two engines not relighting for boostback"
+      ],
+      "failed": [
+        "Ship lost several Raptors after an energetic event in the aft section, lost attitude control and was lost",
+        "Debris over the Bahamas; Florida air traffic disrupted"
+      ],
+      "lessons": [
+        "Raptor hardware changes and added preload on joints",
+        "New nitrogen purge and improved drainage in the engine bay"
+      ],
+      "boosterOutcome": "Caught by tower (OLP-1)",
+      "shipOutcome": "Lost during ascent",
+      "firsts": [
+        "Third booster catch, the last one before Flight 15's planned attempt"
+      ],
+      "faa": "Mishap investigation; return-to-flight determination 22 May 2025, closed 12 Jun 2025. Most probable cause: a hardware failure in a single Raptor led to propellant mixing and ignition in the engine bay.",
+      "cost": "No flight-specific figure. Outside estimate: about $100M per launch (BBC, Aug 2025, reporting on this era of test flights).",
+      "uncertain": [],
+      "sources": [
+        {
+          "title": "SpaceX: Flight 8 recap",
+          "site": "spacex.com",
+          "href": "https://www.spacex.com/launches/starship-flight-8"
+        },
+        {
+          "title": "Wikipedia: Starship flight test 8 (index, cross-check)",
+          "site": "en.wikipedia.org",
+          "href": "https://en.wikipedia.org/wiki/Starship_flight_test_8"
+        }
+      ]
+    },
+    {
+      "n": 9,
+      "era": "V2",
+      "result": "Failure",
+      "dateLocal": "Wed 28 May 2025, 01:36 CEST",
+      "utc": "27 May 23:36 UTC (6:36 p.m. CDT)",
+      "booster": "Booster 14-2 (reflown)",
+      "ship": "Ship 35",
+      "boosterShort": "B14-2",
+      "shipShort": "S35",
+      "version": "V2 ship (Block 2), V1-gen booster",
+      "pad": "Starbase OLP-1",
+      "summary": "First reflown booster. The ship reached engine cutoff, then leaked, tumbled and reentered uncontrolled.",
+      "goals": [
+        "First booster reuse",
+        "Booster high angle-of-attack descent experiment",
+        "Deploy 8 Starlink simulators",
+        "In-space relight",
+        "Reentry tile experiments"
+      ],
+      "achieved": [
+        "First flight of a reused Super Heavy (29 flight-proven engines)",
+        "First Block 2 ship to reach engine cutoff"
+      ],
+      "failed": [
+        "Payload door did not open; no deploy",
+        "Relight skipped",
+        "Ship leaked, lost attitude control, was passivated and broke up over the Indian Ocean",
+        "Booster lost during its landing burn experiment"
+      ],
+      "lessons": [
+        "Main fuel tank pressurisation diffuser redesigned and requalified"
+      ],
+      "boosterOutcome": "Lost (landing burn experiment; within approved test scope)",
+      "shipOutcome": "Lost (uncontrolled reentry)",
+      "firsts": [
+        "First reflown Super Heavy booster"
+      ],
+      "faa": "Mishap investigation (ship only); closed 15 Aug 2025. Most probable cause: failure of the main fuel tank pressurisation diffuser, leaking methane into the nosecone.",
+      "cost": "No flight-specific figure. Outside estimate: about $100M per launch (BBC, Aug 2025, reporting on this era of test flights).",
+      "uncertain": [],
+      "sources": [
+        {
+          "title": "SpaceX: Flight 9 recap",
+          "site": "spacex.com",
+          "href": "https://www.spacex.com/launches/starship-flight-9"
+        },
+        {
+          "title": "Wikipedia: Starship flight test 9 (index, cross-check)",
+          "site": "en.wikipedia.org",
+          "href": "https://en.wikipedia.org/wiki/Starship_flight_test_9"
+        },
+        {
+          "title": "Ars Technica: why the last two Starships failed",
+          "site": "arstechnica.com",
+          "href": "https://arstechnica.com/space/2025/08/spacex-reveals-why-the-last-two-starships-failed-as-another-launch-draws-near/"
+        }
+      ]
+    },
+    {
+      "n": 10,
+      "era": "V2",
+      "result": "Success",
+      "dateLocal": "Wed 27 Aug 2025, 01:30 CEST",
+      "utc": "26 Aug 23:30 UTC (6:30 p.m. CDT)",
+      "booster": "Booster 16",
+      "ship": "Ship 37",
+      "boosterShort": "B16",
+      "shipShort": "S37",
+      "version": "V2 ship (Block 2), V1-gen booster",
+      "pad": "Starbase OLP-1",
+      "summary": "Turnaround flight: first payload deployment, an in-space relight and an on-target splashdown.",
+      "goals": [
+        "Deploy 8 Starlink simulators",
+        "In-space relight",
+        "Booster engine-out landing test with Gulf splashdown",
+        "Stress-test heat shield and flaps"
+      ],
+      "achieved": [
+        "All 8 simulators deployed",
+        "In-space relight",
+        "Booster engine-out landing test and splashdown",
+        "Ship splashed down on target despite heavy damage"
+      ],
+      "failed": [
+        "Visible damage and an event in the engine section during reentry; flaps scorched (no mission loss)"
+      ],
+      "lessons": [
+        "Validated Block 2 fixes after three failures",
+        "Ship 36 had exploded on a test stand on 18 Jun 2025 (pressure vessel failure), delaying this flight by about two months"
+      ],
+      "boosterOutcome": "Controlled splashdown (Gulf)",
+      "shipOutcome": "Controlled splashdown (Indian Ocean)",
+      "firsts": [
+        "First Starship payload deployment",
+        "First fully successful Block 2 flight"
+      ],
+      "faa": "No mishap investigation.",
+      "cost": "No flight-specific figure. Outside estimate: about $100M per launch (BBC, Aug 2025, reporting on this era of test flights).",
+      "uncertain": [],
+      "sources": [
+        {
+          "title": "SpaceX: Flight 10 recap",
+          "site": "spacex.com",
+          "href": "https://www.spacex.com/launches/starship-flight-10"
+        },
+        {
+          "title": "Wikipedia: Starship flight test 10 (index, cross-check)",
+          "site": "en.wikipedia.org",
+          "href": "https://en.wikipedia.org/wiki/Starship_flight_test_10"
+        },
+        {
+          "title": "BBC: SpaceX pulls off Starship comeback (cost estimate)",
+          "site": "bbc.com",
+          "href": "https://www.bbc.com/news/articles/cly69z9lwnno"
+        }
+      ]
+    },
+    {
+      "n": 11,
+      "era": "V2",
+      "result": "Success",
+      "dateLocal": "Tue 14 Oct 2025, 01:23 CEST",
+      "utc": "13 Oct 23:23 UTC (6:23 p.m. CDT)",
+      "booster": "Booster 15-2 (reflown)",
+      "ship": "Ship 38",
+      "boosterShort": "B15-2",
+      "shipShort": "S38",
+      "version": "V2 ship (Block 2), V1-gen booster",
+      "pad": "Starbase OLP-1",
+      "summary": "Last Block 2 flight and last from the old Pad 1; every major objective met.",
+      "goals": [
+        "Test the V3 booster landing-burn engine sequence",
+        "Deploy 8 Starlink simulators",
+        "In-space relight",
+        "Dynamic banking manoeuvre that mimics a return to Starbase",
+        "Heat-shield stress tests"
+      ],
+      "achieved": [
+        "Booster hovered and splashed down after the new landing sequence",
+        "8 simulators deployed",
+        "Third in-space relight",
+        "Banking manoeuvre and soft splashdown on target"
+      ],
+      "failed": [
+        "One booster engine did not relight for boostback (it relit for landing)"
+      ],
+      "lessons": [
+        "Landing profile carried over to V3 boosters",
+        "Pad 1 retired for rebuild; V3 moved to Pad 2"
+      ],
+      "boosterOutcome": "Controlled splashdown (Gulf)",
+      "shipOutcome": "Controlled splashdown (Indian Ocean)",
+      "firsts": [
+        "Last flight of the second-generation ship and first-generation booster"
+      ],
+      "faa": "No mishap investigation.",
+      "cost": "No flight-specific figure. Outside estimate: about $100M per launch (BBC, Aug 2025, reporting on this era of test flights).",
+      "uncertain": [],
+      "sources": [
+        {
+          "title": "SpaceX: Flight 11 recap",
+          "site": "spacex.com",
+          "href": "https://www.spacex.com/launches/starship-flight-11"
+        },
+        {
+          "title": "Wikipedia: Starship flight test 11 (index, cross-check)",
+          "site": "en.wikipedia.org",
+          "href": "https://en.wikipedia.org/wiki/Starship_flight_test_11"
+        }
+      ]
+    },
+    {
+      "n": 12,
+      "era": "V3",
+      "result": "Success",
+      "dateLocal": "Sat 23 May 2026, 00:30 CEST",
+      "utc": "22 May 22:30 UTC (5:30 p.m. CDT)",
+      "booster": "Booster 19",
+      "ship": "Ship 39",
+      "boosterShort": "B19",
+      "shipShort": "S39",
+      "version": "V3 (Block 3), Raptor 3",
+      "pad": "Starbase OLP-2 (Pad 2)",
+      "summary": "V3 debut from Pad 2. Ship did well despite an engine out; the booster was lost after a failed boostback.",
+      "goals": [
+        "First flight of V3 vehicles and Raptor 3",
+        "First launch from Pad 2",
+        "Deploy 20 simulators plus 2 modified Starlinks that image the ship",
+        "Booster and ship controlled splashdowns",
+        "Flap stress and banking tests on reentry"
+      ],
+      "achieved": [
+        "All 22 satellites deployed; heat shield imaged in space",
+        "Ship reached its planned trajectory with one engine out",
+        "Flap stress test, banking manoeuvre and two-engine landing flip and splashdown"
+      ],
+      "failed": [
+        "One booster engine out on ascent",
+        "Booster flip went off-axis, partial boostback, hard impact in the Gulf",
+        "One ship Raptor Vacuum shut down on ascent; in-space relight reportedly cancelled"
+      ],
+      "lessons": [
+        "Four corrective actions: engine start-up sequence made tolerant of timing variation",
+        "Engine alarm and abort thresholds updated",
+        "Hardware changes for relight reliability"
+      ],
+      "boosterOutcome": "Lost (hard impact in Gulf)",
+      "shipOutcome": "Controlled splashdown (Indian Ocean)",
+      "firsts": [
+        "First V3 Starship and Super Heavy",
+        "First Raptor 3 flight",
+        "First launch from Pad 2",
+        "First satellites to image Starship in space"
+      ],
+      "faa": "Mishap investigation opened 27 May 2026; closed 13 Jul 2026. Causes: heat effects on booster propulsion components during ascent and erroneous engine alarm settings.",
+      "cost": "No flight-specific figure. Programme scale: about $3.0B Starship R&D in 2025 per SpaceX's S-1; more than $15B spent in total (Reuters/Bloomberg, May 2026).",
+      "uncertain": [
+        "Engine counts during the booster failure differ between sources (Wikipedia: 20 of 33 relit; Reuters: 5 did not re-ignite).",
+        "SpaceX's recap does not mention the relight; Wikipedia says it was cancelled."
+      ],
+      "sources": [
+        {
+          "title": "SpaceX: Flight 12 recap",
+          "site": "spacex.com",
+          "href": "https://www.spacex.com/launches/starship-flight-12"
+        },
+        {
+          "title": "Wikipedia: Starship flight test 12 (index, cross-check)",
+          "site": "en.wikipedia.org",
+          "href": "https://en.wikipedia.org/wiki/Starship_flight_test_12"
+        },
+        {
+          "title": "FAA statements (mishap opened and closed)",
+          "site": "faa.gov",
+          "href": "https://www.faa.gov/newsroom/statements/general-statements"
+        }
+      ]
+    },
+    {
+      "n": 13,
+      "era": "V3",
+      "result": "Success",
+      "dateLocal": "Sat 25 Jul 2026, 00:51 CEST",
+      "utc": "24 Jul 22:51 UTC (5:51 p.m. CDT)",
+      "booster": "Booster 20",
+      "ship": "Ship 40",
+      "boosterShort": "B20",
+      "shipShort": "S40",
+      "version": "V3 (Block 3)",
+      "pad": "Starbase OLP-2 (Pad 2)",
+      "summary": "First real Starlink V3 satellites deployed; the ship landed and stayed intact, the booster hit the Gulf hard.",
+      "goals": [
+        "Deploy 20 Starlink V3 satellites on a suborbital path",
+        "In-space relight",
+        "Booster boostback and Gulf splashdown",
+        "Banking manoeuvre and splashdown"
+      ],
+      "achieved": [
+        "All 20 Starlink V3s deployed and contacted (then reentered as planned)",
+        "In-space relight",
+        "First V3 boostback on all 33 engines",
+        "Ship soft splashdown and stayed intact after tipping over"
+      ],
+      "failed": [
+        "Booster landing burn: only a subset of engines relit, hard splashdown",
+        "First attempt on 16 Jul aborted at T-0 (Raptor LOX turbopump pressure, attributed to moisture); one weather delay"
+      ],
+      "lessons": [
+        "Ship 40 was towed and shipped back to Starbase (arrived 7 Oct 2026) for heat-shield inspection",
+        "Booster landing-burn relights remained the weak point going into Flight 14"
+      ],
+      "boosterOutcome": "Lost (hard splashdown in Gulf)",
+      "shipOutcome": "Soft splashdown, intact; later recovered",
+      "firsts": [
+        "First operational Starlink satellites deployed from Starship",
+        "First ship to survive tipping over after splashdown",
+        "First flown ship returned to Starbase"
+      ],
+      "faa": "No mishap investigation announced.",
+      "cost": "No flight-specific figure. Programme scale: about $3.0B Starship R&D in 2025 per SpaceX's S-1; more than $15B spent in total (Reuters/Bloomberg, May 2026).",
+      "uncertain": [
+        "Booster landing-burn engine counts differ between sources.",
+        "Ship 40 recovery details are from Wikipedia and secondary reports."
+      ],
+      "sources": [
+        {
+          "title": "SpaceX: Flight 13 recap",
+          "site": "spacex.com",
+          "href": "https://www.spacex.com/launches/starship-flight-13"
+        },
+        {
+          "title": "Wikipedia: Starship flight test 13 (index, cross-check)",
+          "site": "en.wikipedia.org",
+          "href": "https://en.wikipedia.org/wiki/Starship_flight_test_13"
+        },
+        {
+          "title": "NASASpaceflight: Flight 13 achieves new firsts",
+          "site": "nasaspaceflight.com",
+          "href": "https://www.nasaspaceflight.com/2026/07/starship-flight-13-flight/"
+        }
+      ]
+    },
+    {
+      "n": 14,
+      "era": "V3",
+      "result": "Success",
+      "dateLocal": "Mon 28 Sep 2026, 14:48 CEST",
+      "utc": "12:48 UTC (7:48 a.m. CDT)",
+      "booster": "Booster 21",
+      "ship": "Ship 41",
+      "boosterShort": "B21",
+      "shipShort": "S41",
+      "version": "V3 (Block 3)",
+      "pad": "Starbase OLP-2 (Pad 2)",
+      "summary": "First orbital Starship flight: 26 Starlink V3 satellites delivered, then an early deorbit after an engine issue.",
+      "goals": [
+        "First orbit insertion",
+        "Deploy 26 Starlink V3 satellites",
+        "About six orbits (nearly 10 h) then deorbit",
+        "Booster boostback to propellant depletion and Gulf splashdown"
+      ],
+      "achieved": [
+        "Orbit at about 275 km after a single-Raptor insertion burn",
+        "All 26 satellites deployed and contacted",
+        "First deorbit burn and on-target Pacific splashdown",
+        "Booster controlled splashdown, then intentional flight termination demo"
+      ],
+      "failed": [
+        "One booster engine out on ascent; 31 of 33 relit for boostback, 11 of 13 for landing",
+        "One ship Raptor Vacuum shut down early on ascent",
+        "Mission cut from about 10 h to about 3 h"
+      ],
+      "lessons": [
+        "Musk (10 Oct) blamed the Raptor Vacuum shutdown on engine-computer software, not hardware",
+        "Booster depletion test fed into return-to-launch-site plans for Flight 15"
+      ],
+      "boosterOutcome": "Controlled splashdown (Gulf)",
+      "shipOutcome": "Controlled splashdown (North Pacific, about 17:57 CEST)",
+      "firsts": [
+        "First Starship in orbit",
+        "First operational payload to orbit",
+        "First deorbit burn"
+      ],
+      "faa": "FAA licence cleared 27 Sep 2026; no mishap investigation announced.",
+      "cost": "No flight-specific figure. Programme scale: about $3.0B Starship R&D in 2025 per SpaceX's S-1; more than $15B spent in total (Reuters/Bloomberg, May 2026).",
+      "uncertain": [
+        "Software cause is Musk's statement; no formal report published.",
+        "SpaceX's timeline lists the original ~10 h plan; actual splashdown was about 3 h after launch."
+      ],
+      "sources": [
+        {
+          "title": "SpaceX: Flight 14 recap",
+          "site": "spacex.com",
+          "href": "https://www.spacex.com/launches/starship-flight-14"
+        },
+        {
+          "title": "Wikipedia: Starship flight 14",
+          "site": "en.wikipedia.org",
+          "href": "https://en.wikipedia.org/wiki/Starship_flight_14"
+        },
+        {
+          "title": "NASASpaceflight: Starship makes orbit",
+          "site": "nasaspaceflight.com",
+          "href": "https://www.nasaspaceflight.com/2026/09/starship-14-orbit-flight-15/"
+        }
+      ]
+    },
+    {
+      "n": 15,
+      "era": "V3",
+      "result": "Upcoming",
+      "dateLocal": "NET Fri 13 Nov 2026, time not announced",
+      "utc": "Starbase on CST: CET = CST + 7 h",
+      "booster": "Booster 22",
+      "ship": "Ship 42",
+      "boosterShort": "B22",
+      "shipShort": "S42",
+      "version": "V3 (Block 3)",
+      "pad": "Starbase OLP-2 (Pad 2)",
+      "summary": "Planned first attempt to catch both the booster and the ship at the tower.",
+      "goals": [
+        "Orbital flight with payload (reported as Starlink Group 31-2)",
+        "Booster return and tower catch: first V3 and first Pad 2 catch",
+        "Ship deorbit, return to Starbase and first ever ship catch"
+      ],
+      "achieved": [],
+      "failed": [],
+      "lessons": [
+        "B22 full-duration 33-engine static fire 25 Oct",
+        "S42 single-engine deorbit-simulation burn 26 Oct, 60 s six-engine firing 27 Oct",
+        "S42 chopstick fit and quick-disconnect tests at Pad 2 on 11–12 Sep"
+      ],
+      "boosterOutcome": "Planned: tower catch",
+      "shipOutcome": "Planned: tower catch",
+      "firsts": [
+        "Would be the first ship catch and first full recovery of both stages of an orbital-class rocket"
+      ],
+      "faa": "Licence modification for return to launch site and ship catch not yet issued (FAA Starship page, as of early Nov).",
+      "cost": "No public estimate.",
+      "uncertain": [
+        "Date is from SpaceX VP Kiko Dontchev at UP.Summit (via Eric Berger / Teslarati); FAA planning slides earlier showed 8 and 12 Nov.",
+        "Payload name comes from Wikipedia and is not confirmed by SpaceX.",
+        "Musk put first-catch odds at 50–60% (Sep) and 'more likely than not' (Oct)."
+      ],
+      "sources": [
+        {
+          "title": "NextSpaceflight: Flight 15",
+          "site": "nextspaceflight.com",
+          "href": "https://www.nextspaceflight.com/launches/details/8403/"
+        },
+        {
+          "title": "Teslarati: Flight 15 targets Friday the 13th",
+          "site": "teslarati.com",
+          "href": "https://www.teslarati.com/spacex-starship-catch-nov-13/"
+        },
+        {
+          "title": "FAA: Starship at Boca Chica (licensing)",
+          "site": "faa.gov",
+          "href": "https://www.faa.gov/space/stakeholder_engagement/spacex_starship"
+        },
+        {
+          "title": "NASASpaceflight: Flight 15 and 16 milestones",
+          "site": "nasaspaceflight.com",
+          "href": "https://www.nasaspaceflight.com/2026/10/spacex-flight-15-16-milestones/"
+        }
+      ]
+    }
+  ]
+}
