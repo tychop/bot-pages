@@ -111,6 +111,7 @@ h1, h2, h3, h4, p { overflow-wrap: break-word; }
   min-height: 4rem;
   padding: 0.75rem var(--pad);
   background: #000;
+  background-clip: border-box;
   border-bottom: 1px solid var(--line);
 }
 
@@ -405,16 +406,28 @@ h2 {
 }
 
 /* Section titles stick just under the top nav. Solid fill so body content
-   cannot show through; no bottom border (keeps the single-line flight rules). */
+   cannot show through; no bottom border (keeps the single-line flight rules).
+   Overlap 1px under the nav and paint a few px upward so 2x/3x DPR hairlines
+   never reveal scrolling text between sticky layers. */
 .band-head {
   position: sticky;
-  top: var(--nav-h);
+  top: calc(var(--nav-h) - 1px);
   z-index: 6;
   margin: 0;
   padding: 0.7rem 0 1.35rem;
   background: #000;
   border: 0;
-  box-shadow: none;
+  box-shadow: 0 -3px 0 0 #000;
+}
+.band-head::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -4px;
+  height: 5px;
+  background: inherit;
+  pointer-events: none;
 }
 .band-head h2 {
   margin: 0;
@@ -429,6 +442,7 @@ h2 {
 #costs .band-head,
 #credits .band-head {
   background: #070707;
+  box-shadow: 0 -3px 0 0 #070707;
 }
 
 .band .kicker {
@@ -691,14 +705,25 @@ input[type="search"]:focus, select:focus, .era button:focus-visible, .launch-tog
 }
 
 /* Flight name sticks under the section title while that flight's article
-   is in view; the next flight's header pushes it out at article end. */
+   is in view; the next flight's header pushes it out at article end.
+   Overlap the section sticky by 2px and seal upward (same as .band-head). */
 #flights .launch > h3 {
   position: sticky;
-  top: calc(var(--nav-h) + var(--band-sticky-h));
+  top: calc(var(--nav-h) + var(--band-sticky-h) - 2px);
   z-index: 5;
   background: #000;
   border: 0;
-  box-shadow: none;
+  box-shadow: 0 -3px 0 0 #000;
+}
+#flights .launch > h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -4px;
+  height: 5px;
+  background: #000;
+  pointer-events: none;
 }
 
 .launch-toggle:hover { color: #fff; }

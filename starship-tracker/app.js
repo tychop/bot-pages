@@ -96,9 +96,11 @@
     var nav = document.querySelector(".topbar");
     var bandHead = document.querySelector("#flights .band-head") || document.querySelector(".band-head");
     var flightHead = document.querySelector("#list .launch > h3");
-    root.style.setProperty("--nav-h", Math.ceil(nav ? nav.getBoundingClientRect().height : 64) + "px");
-    root.style.setProperty("--band-sticky-h", Math.ceil(bandHead ? bandHead.getBoundingClientRect().height : 88) + "px");
-    root.style.setProperty("--flight-sticky-h", Math.ceil(flightHead ? flightHead.getBoundingClientRect().height : 100) + "px");
+    // Floor heights so sticky `top` never sits below the real edge (ceil left
+    // hairline gaps on 2x/3x DPR). CSS also overlaps by 1–2px and seals with fill.
+    root.style.setProperty("--nav-h", Math.floor(nav ? nav.getBoundingClientRect().height : 64) + "px");
+    root.style.setProperty("--band-sticky-h", Math.floor(bandHead ? bandHead.getBoundingClientRect().height : 88) + "px");
+    root.style.setProperty("--flight-sticky-h", Math.floor(flightHead ? flightHead.getBoundingClientRect().height : 100) + "px");
   }
 
   function scheduleStickyOffsets() {
