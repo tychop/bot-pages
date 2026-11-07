@@ -73,6 +73,7 @@
   var detailsByN = {};
   var laterDetails = [];
   var mediaClaims = {};
+  var stickyOffsetsBound = false;
 
   Promise.all([
     fetch("flights.json", { cache: "no-cache" }).then(function (r) { if (!r.ok) throw new Error("flights"); return r.json(); }),
@@ -89,6 +90,43 @@
     .catch(function () {
       app.innerHTML = '<p class="loading">Could not load flight data.</p>';
     });
+
+  function syncStickyOffsets() {
+    var root = document.documentElement;
+    var nav = document.querySelector(".topbar");
+    var bandHead = document.querySelector("#flights .band-head") || document.querySelector(".band-head");
+    var flightHead = document.querySelector("#list .launch > h3");
+    root.style.setProperty("--nav-h", Math.ceil(nav ? nav.getBoundingClientRect().height : 64) + "px");
+    root.style.setProperty("--band-sticky-h", Math.ceil(bandHead ? bandHead.getBoundingClientRect().height : 88) + "px");
+    root.style.setProperty("--flight-sticky-h", Math.ceil(flightHead ? flightHead.getBoundingClientRect().height : 100) + "px");
+  }
+
+  function scheduleStickyOffsets() {
+    syncStickyOffsets();
+    requestAnimationFrame(function () {
+      syncStickyOffsets();
+    });
+  }
+
+  function bindStickyOffsets() {
+    scheduleStickyOffsets();
+    if (stickyOffsetsBound) return;
+    stickyOffsetsBound = true;
+    window.addEventListener("resize", scheduleStickyOffsets);
+    window.addEventListener("orientationchange", scheduleStickyOffsets);
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(scheduleStickyOffsets).catch(function () {});
+    }
+    if (typeof ResizeObserver === "function") {
+      var ro = new ResizeObserver(scheduleStickyOffsets);
+      var nav = document.querySelector(".topbar");
+      if (nav) ro.observe(nav);
+    }
+  }
+
+  function bandHeadHtml(titleInnerHtml, leadingHtml) {
+    return '<div class="band-head">' + (leadingHtml || "") + titleInnerHtml + "</div>";
+  }
 
   function esc(value) {
     return String(value == null ? "" : value)
@@ -680,7 +718,7 @@
       heroHtml(data, upcoming) +
       nextDetail(data, upcoming) +
       '<section class="band" id="overview"><div class="wrap">' +
-      "<h2>Overview</h2>" +
+      bandHeadHtml("<h2>Overview</h2>") +
       (data.overview ? '<p class="lede">' + esc(data.overview) + "</p>" : "") +
       (data.intro ? '<p class="lede">' + esc(data.intro) + "</p>" : "") +
       (data.timezoneNote ? '<p class="timezone">' + esc(data.timezoneNote) + "</p>" : "") +
@@ -702,7 +740,7 @@
       (summary.outcomeNote ? '<p class="fine">' + esc(summary.outcomeNote) + "</p>" : "") +
       "</div></div></div></section>" +
       '<section class="band" id="flights"><div class="wide">' +
-      "<h2>All flights</h2>" +
+      bandHeadHtml("<h2>All flights</h2>") +
       '<p class="lede">Open a flight for gallery, timeline, telemetry, trajectory and sources. Times are CET/CEST as listed.</p>' +
       '<div class="era" role="radiogroup" aria-label="Vehicle version">' +
       eraButton("all", "All", counts.all) +
@@ -731,6 +769,7 @@
     bind(data);
     renderList(data);
     startCountdown(upcoming);
+    bindStickyOffsets();
   }
 
   function stat(value, label, detail) {
@@ -804,7 +843,8 @@
 
   function nextDetail(data, upcoming) {
     if (!upcoming) {
-      return '<section class="band"><div class="wrap"><h2>Next flight</h2><p class="empty">No upcoming flight is listed.</p></div></section>';
+      return '<section class="band"><div class="wrap">' + bandHeadHtml("<h2>Next flight</h2>") +
+        '<p class="empty">No upcoming flight is listed.</p></div></section>';
     }
     var brief = data.next && Number(data.next.aboutFlight) === upcoming.n ? data.next : null;
     var detail = detailOf(upcoming);
@@ -820,7 +860,8 @@
     if (detail && detail.launchWindow) {
       rows.push(prop("Window", detail.launchWindow.windowMinutes + " minutes · opens " + detail.launchWindow.netLocal + " / " + detail.launchWindow.netCT));
     }
-    return '<section class="band" id="next-detail"><div class="wrap"><p class="kicker">Up next</p><h2>Flight ' + esc(upcoming.n) + "</h2>" +
+    return '<section class="band" id="next-detail"><div class="wrap">' +
+      bandHeadHtml("<h2>Flight " + esc(upcoming.n) + "</h2>", '<p class="kicker">Up next</p>') +
       (upcoming.summary ? '<p class="lede">' + esc(upcoming.summary) + "</p>" : "") +
       estimateBlock(upcoming.costEstimate, upcoming.cost) +
       '<dl class="facts">' + rows.join("") + "</dl>" +
@@ -832,7 +873,8 @@
     var options = data.flights.map(function (f) {
       return '<option value="' + f.n + '">Flight ' + f.n + " · " + esc(f.result) + "</option>";
     }).join("");
-    return '<section class="band" id="compare"><div class="wide"><h2>Compare flights</h2>' +
+    return '<section class="band" id="compare"><div class="wide">' +
+      bandHeadHtml("<h2>Compare flights</h2>") +
       '<p class="lede">Text and stats only. No photos or webcasts here.</p>' +
       '<div class="compare-picks">' +
       '<label class="field"><span class="lbl">Flight A</span><select id="compare-a">' + options + "</select></label>" +
@@ -902,7 +944,8 @@
         sourceList(item.costEstimate && item.costEstimate.sources, "Estimate sources") +
         "</li>";
     }).join("");
-    return '<section class="band" id="later"><div class="wrap"><h2>Later on the manifest</h2>' +
+    return '<section class="band" id="later"><div class="wrap">' +
+      bandHeadHtml("<h2>Later on the manifest</h2>") +
       (data.laterCaption ? '<p class="lede">' + esc(data.laterCaption) + "</p>" : "") +
       '<ol class="manifest">' + cards + "</ol>" +
       (data.laterNote ? '<p class="note">' + esc(data.laterNote) + "</p>" : "") +
@@ -947,7 +990,8 @@
       return '<li><p class="cost-figure">' + esc(cost.figure) + ' <span class="estimate">Estimate</span></p>' +
         "<p>" + esc(cost.covers) + '</p><p class="meta">Source: ' + esc(cost.source) + "</p></li>";
     }).join("");
-    return '<section class="band" id="costs"><div class="wide"><h2>What it costs</h2>' +
+    return '<section class="band" id="costs"><div class="wide">' +
+      bandHeadHtml("<h2>What it costs</h2>") +
       '<p class="lede">Rough per-flight direct-launch estimates. Not SpaceX prices, invoices or audited accounts. <span class="estimate-inline">Estimate</span></p>' +
       '<div class="cost-summary"><p class="cost-range">Flown flights ≈ ' + esc(formatUsd(flownMids)) +
       ' cumulative midpoint</p><p class="fine">Sum of midpoints for Flights 1–14. Low–high bars show the planning range for each flight.</p></div>' +
@@ -963,7 +1007,8 @@
 
   function notesHtml(data) {
     var notes = (data.notes || []).map(function (note) { return "<li>" + esc(note) + "</li>"; }).join("");
-    return '<section class="band" id="notes"><div class="wrap"><h2>Notes and uncertainties</h2>' +
+    return '<section class="band" id="notes"><div class="wrap">' +
+      bandHeadHtml("<h2>Notes and uncertainties</h2>") +
       '<ul class="block">' + notes + "</ul>" +
       sourceList(data.indexLinks, "Further reading") +
       "</div></section>";
@@ -982,7 +1027,8 @@
       }
       return "<li class=\"credit-card\">" + fig + "</li>";
     }).join("");
-    return '<section class="band" id="credits"><div class="wrap"><h2>Photography</h2>' +
+    return '<section class="band" id="credits"><div class="wrap">' +
+      bandHeadHtml("<h2>Photography</h2>") +
       '<p class="lede">Site and flight photographs are hotlinked from Wikimedia Commons or Flickr with attribution. Each photograph appears once. If a CDN hotlink fails, the page retries via Commons Special:FilePath, then shows a link to the source page.</p>' +
       '<ul class="credits site-credits">' + items + "</ul></div></section>";
   }
@@ -996,6 +1042,7 @@
     document.getElementById("list").innerHTML = list.length
       ? list.map(flightCard).join("")
       : '<p class="empty">No flights match these filters.</p>';
+    scheduleStickyOffsets();
     renderCompare(data);
   }
 

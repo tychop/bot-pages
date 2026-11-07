@@ -58,6 +58,10 @@
   --sans: "Barlow", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --display: "Barlow Condensed", "Barlow", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --pad: clamp(1.25rem, 4vw, 4.5rem);
+  /* Measured from .topbar / .band-head / flight h3 in app.js (load + resize). */
+  --nav-h: 4rem;
+  --band-sticky-h: 5.5rem;
+  --flight-sticky-h: 6.2rem;
 }
 
 * { box-sizing: border-box; }
@@ -156,8 +160,22 @@ h1, h2, h3, h4, p { overflow-wrap: break-word; }
   color: var(--muted);
 }
 
-.hero, #overview, #flights, #compare, #later, #costs, #notes, #credits, .launch {
-  scroll-margin-top: 4.75rem;
+.hero,
+.band,
+#overview,
+#flights,
+#compare,
+#later,
+#costs,
+#notes,
+#credits,
+#next,
+#next-detail {
+  scroll-margin-top: calc(var(--nav-h) + 0.35rem);
+}
+.launch {
+  /* Clear nav + stuck section title when deep-linking to a flight. */
+  scroll-margin-top: calc(var(--nav-h) + var(--band-sticky-h) + 0.35rem);
 }
 
 .hero {
@@ -385,6 +403,34 @@ h2 {
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
+
+/* Section titles stick just under the top nav. Solid fill so body content
+   cannot show through; no bottom border (keeps the single-line flight rules). */
+.band-head {
+  position: sticky;
+  top: var(--nav-h);
+  z-index: 6;
+  margin: 0;
+  padding: 0.7rem 0 1.35rem;
+  background: #000;
+  border: 0;
+  box-shadow: none;
+}
+.band-head h2 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.band-head .kicker {
+  margin: 0 0 0.85rem;
+}
+#overview .band-head,
+#compare .band-head,
+#costs .band-head,
+#credits .band-head {
+  background: #070707;
+}
+
 .band .kicker {
   margin-bottom: 0.85rem;
 }
@@ -643,6 +689,18 @@ input[type="search"]:focus, select:focus, .era button:focus-visible, .launch-tog
   border: 0;
   box-shadow: none;
 }
+
+/* Flight name sticks under the section title while that flight's article
+   is in view; the next flight's header pushes it out at article end. */
+#flights .launch > h3 {
+  position: sticky;
+  top: calc(var(--nav-h) + var(--band-sticky-h));
+  z-index: 5;
+  background: #000;
+  border: 0;
+  box-shadow: none;
+}
+
 .launch-toggle:hover { color: #fff; }
 .launch-toggle:hover .launch-date { color: #fff; }
 
@@ -1053,7 +1111,6 @@ input[type="search"]:focus, select:focus, .era button:focus-visible, .launch-tog
   .wordmark { order: 1; }
   .updated { order: 2; margin-left: auto; max-width: 58%; text-align: right; white-space: normal; }
   .topnav { order: 3; flex: 1 0 100%; min-width: 0; flex-wrap: wrap; overflow: visible; gap: 0.55rem 1.1rem; }
-  #overview, #flights, #compare, #later, #costs, #notes, #credits, .launch { scroll-margin-top: 8.75rem; }
 }
 
 @media (max-width: 720px) {
@@ -1099,6 +1156,12 @@ input[type="search"]:focus, select:focus, .era button:focus-visible, .launch-tog
     margin-bottom: 1.4rem;
     padding-bottom: 0;
     font-size: clamp(2.6rem, 11vw, 3.4rem);
+  }
+  .band-head {
+    padding: 0.55rem 0 1.05rem;
+  }
+  .band-head h2 {
+    margin-bottom: 0;
   }
   #list { gap: 2rem; margin-top: 1.5rem; }
   .launch-body > .cost-detail,
