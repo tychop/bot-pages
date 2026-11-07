@@ -307,7 +307,7 @@ h1, h2, h3, h4, p { overflow-wrap: break-word; }
 }
 
 .hero-cost { font-size: clamp(1.35rem, 2.6vw, 1.9rem); }
-.launch-cost { display: block; margin-top: 0.35rem; font-size: clamp(1.15rem, 2vw, 1.45rem); color: #fff; }
+.launch-cost { display: block; margin-top: 0.2rem; font-size: clamp(1.05rem, 1.9vw, 1.3rem); color: #fff; }
 .manifest-cost { font-size: clamp(1.4rem, 2.5vw, 1.9rem); }
 .cost-range { font-size: clamp(1.7rem, 3.4vw, 2.5rem); line-height: 1; }
 
@@ -670,12 +670,12 @@ input[type="search"]:focus, select:focus, .era button:focus-visible, .launch-tog
 
 .launch-toggle {
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto auto;
-  gap: 0.35rem 1.4rem;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 0.2rem 1rem;
   align-items: center;
   width: 100%;
-  min-height: 6.2rem;
-  padding: 1.45rem 0;
+  min-height: 0;
+  padding: 0.85rem 0;
   background: transparent;
   border: 0;
   border-bottom: 0;
@@ -707,8 +707,8 @@ input[type="search"]:focus, select:focus, .era button:focus-visible, .launch-tog
 .launch-n {
   font-family: var(--display);
   font-weight: 600;
-  font-size: clamp(2.6rem, 4vw, 3.5rem);
-  line-height: 0.85;
+  font-size: clamp(2.2rem, 3.6vw, 3rem);
+  line-height: 0.9;
   letter-spacing: -0.03em;
   font-variant-numeric: tabular-nums;
 }
@@ -716,7 +716,7 @@ input[type="search"]:focus, select:focus, .era button:focus-visible, .launch-tog
 .launch-date {
   display: block;
   font-family: var(--display);
-  font-size: clamp(1.25rem, 2vw, 1.7rem);
+  font-size: clamp(1.1rem, 1.8vw, 1.45rem);
   font-weight: 500;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -724,9 +724,9 @@ input[type="search"]:focus, select:focus, .era button:focus-visible, .launch-tog
 }
 .launch-sub {
   display: block;
-  margin-top: 0.35rem;
+  margin-top: 0.2rem;
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
@@ -834,12 +834,14 @@ input[type="search"]:focus, select:focus, .era button:focus-visible, .launch-tog
 }
 .input-claim { margin: 0; font-weight: 600; }
 .input-value { margin: 0.25rem 0 0; color: #ddd; }
-.launch-marks {
+.launch-outcome {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
-  justify-content: flex-end;
+  gap: 0.45rem 0.65rem;
   align-items: center;
+  margin: 0 0 0.85rem;
+  padding: 0;
+  border: 0;
 }
 .tag {
   font-family: var(--display);
@@ -864,10 +866,11 @@ input[type="search"]:focus, select:focus, .era button:focus-visible, .launch-tog
   border-bottom: 1.5px solid #fff;
   transform: rotate(45deg);
   margin-right: 0.15rem;
+  flex-shrink: 0;
 }
 .launch-toggle[aria-expanded="true"] .chev {
   transform: rotate(-135deg);
-  margin-top: 0.3rem;
+  margin-top: 0.15rem;
 }
 
 .launch-body {
@@ -1138,17 +1141,27 @@ input[type="search"]:focus, select:focus, .era button:focus-visible, .launch-tog
   .stat:last-child { border-bottom: 0; }
   .launch-toggle {
     grid-template-columns: auto minmax(0, 1fr) auto;
-    grid-template-areas:
-      "n main chev"
-      "n marks chev";
-    align-items: start;
+    align-items: center;
     min-height: 0;
-    padding: 1.25rem 0;
+    gap: 0.15rem 0.75rem;
+    padding: 0.7rem 0;
   }
-  .launch-n { grid-area: n; }
-  .launch-main { grid-area: main; }
-  .launch-marks { grid-area: marks; justify-content: flex-start; }
-  .chev { grid-area: chev; margin-top: 0.45rem; }
+  .launch-n {
+    font-size: clamp(1.9rem, 9vw, 2.4rem);
+  }
+  .launch-date {
+    font-size: clamp(1.05rem, 4.2vw, 1.25rem);
+  }
+  .launch-cost {
+    font-size: clamp(1rem, 3.8vw, 1.2rem);
+  }
+  .launch-sub {
+    font-size: 0.8rem;
+    margin-top: 0.15rem;
+  }
+  .chev {
+    margin-top: 0;
+  }
   .band {
     padding: 4rem 0 3.5rem;
   }

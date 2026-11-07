@@ -654,9 +654,12 @@
     var lessonsTitle = flight.result === "Upcoming" ? "Preparation so far" : "Lessons and changes afterwards";
     var resultCls = flight.result === "Failure" ? " failure" : "";
     var range = formatRange(flight.costEstimate);
-    var marks = '<span class="tag' + resultCls + '">' + esc(flight.result) + "</span>" +
-      (uncertain ? '<span class="tag uncertain">Uncertain</span>' : "");
+    var outcome = '<p class="launch-outcome">' +
+      '<span class="tag' + resultCls + '">' + esc(flight.result) + "</span>" +
+      (uncertain ? '<span class="tag uncertain">Uncertain</span>' : "") +
+      "</p>";
     var body =
+      outcome +
       '<p class="summary">' + esc(flight.summary) + "</p>" +
       estimateBlock(flight.costEstimate, flight.cost) +
       '<dl class="facts">' +
@@ -685,7 +688,6 @@
       '<span class="launch-main"><span class="launch-date">' + esc(flight.dateLocal) + "</span>" +
       (range ? '<span class="launch-cost">' + esc(range) + ' <span class="estimate-inline">Estimate</span></span>' : "") +
       '<span class="launch-sub">' + esc(flight.boosterShort) + " / " + esc(flight.shipShort) + " · " + esc(flight.era) + "</span></span>" +
-      '<span class="launch-marks">' + marks + "</span>" +
       '<span class="chev" aria-hidden="true"></span>' +
       "</button></h3>" +
       '<div class="launch-body" id="flight-panel-' + flight.n + '"' + (open ? "" : " hidden") + ">" + body + "</div></article>";
