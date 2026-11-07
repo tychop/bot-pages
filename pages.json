@@ -10,7 +10,7 @@
     "title": "Starship Flight Tracker",
     "path": "starship-tracker/",
     "bot": "starship-tracker",
-    "description": "Every integrated Starship flight, with goals, results, causes, lessons and cost estimates.",
+    "description": "Every integrated Starship flight, with timelines, telemetry, costs and a flight compare view.",
     "updated": "2026-11-07"
   }
 ]
