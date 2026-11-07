@@ -71,6 +71,7 @@
     compareB: 15,
   };
   var detailsByN = {};
+  var laterDetails = [];
   var mediaClaims = {};
 
   Promise.all([
@@ -82,6 +83,7 @@
       var details = pair[1];
       if (!data || !Array.isArray(data.flights)) throw new Error("bad flights");
       detailsByN = (details && details.flights) || {};
+      laterDetails = (details && details.later) || [];
       render(data);
     })
     .catch(function () {
@@ -310,10 +312,10 @@
     var page = img.getAttribute("data-page") || "";
     var frame = img.closest(".photo-frame") || img.parentNode;
     if (!frame || frame.querySelector(".photo-fallback")) return;
-    var isFlickr = /flickr\.com/i.test(page);
-    var label = isFlickr
-      ? "Photo couldn't load — view on Flickr"
-      : "Photo couldn't load — view on Wikimedia Commons";
+    var label = "Photo couldn't load — view source";
+    if (/flickr\.com/i.test(page)) label = "Photo couldn't load — view on Flickr";
+    else if (/commons\.wikimedia\.org/i.test(page)) label = "Photo couldn't load — view on Wikimedia Commons";
+    else if (/x\.com|twitter\.com/i.test(page)) label = "Photo couldn't load — view on X";
     var node = document.createElement(page ? "a" : "div");
     node.className = "photo-fallback" + (img.classList.contains("hero-img") ? " is-hero" : "");
     if (page) {
@@ -341,22 +343,26 @@
     var frame = page
       ? '<a class="gallery-link photo-frame" href="' + esc(page) + '" target="_blank" rel="noopener noreferrer">' + img + "</a>"
       : '<div class="photo-frame">' + img + "</div>";
-    var caption = esc(image.caption || "");
-    if (image.credit) caption += (caption ? ". " : "") + esc(image.credit);
+    // Caption / credit / optional licence / source — skip empty licence cleanly.
+    var parts = [];
+    if (image.caption) parts.push(esc(image.caption));
+    if (image.credit) parts.push(esc(image.credit));
+    var caption = parts.join(". ");
     if (lic) caption += (caption ? ", " : "") + lic;
-    if (page) caption += (caption ? ". " : "") + '<a href="' + esc(page) + '" target="_blank" rel="noopener noreferrer">Source</a>';
-    if (caption) caption += ".";
+    if (page) {
+      caption += (caption ? ". " : "") +
+        '<a href="' + esc(page) + '" target="_blank" rel="noopener noreferrer">Source</a>';
+    }
+    if (caption && !/\.$/.test(caption.replace(/<[^>]+>/g, ""))) caption += ".";
     return '<figure class="gallery-item">' + frame + "<figcaption>" + caption + "</figcaption></figure>";
   }
 
   function galleryHtml(detail) {
     if (!detail) return "";
     var images = detail.images || [];
-    if (!images.length) {
-      return '<section class="block gallery-empty"><h4>Photos</h4><p class="fine">' +
-        esc(detail.imagesNote || "No freely licensed photos") + "</p></section>";
-    }
+    if (!images.length) return "";
     var figures = images.map(attributedFigure).join("");
+    if (!figures) return "";
     return '<section class="block gallery"><h4>Photos</h4><div class="gallery-grid">' + figures + "</div></section>";
   }
 
@@ -850,13 +856,23 @@
       }).join("") + "</div>";
   }
 
+  function laterDetailFor(item, index) {
+    if (laterDetails[index] && laterDetails[index].mission === item.mission) return laterDetails[index];
+    for (var i = 0; i < laterDetails.length; i += 1) {
+      if (laterDetails[i] && laterDetails[i].mission === item.mission) return laterDetails[i];
+    }
+    return null;
+  }
+
   function laterHtml(data) {
-    var cards = (data.later || []).map(function (item) {
+    var cards = (data.later || []).map(function (item, index) {
       var range = formatRange(item.costEstimate);
+      var detail = laterDetailFor(item, index);
       return '<li><p class="when">' + esc(item.when) + "</p><h3>" + esc(item.mission) + "</h3>" +
         (range ? '<p class="manifest-cost">' + esc(range) + ' <span class="estimate-inline">Estimate</span></p>' : "") +
         '<p class="meta">' + esc(item.vehicles) + " · " + esc(item.site) + "</p>" +
         "<p>" + esc(item.note) + "</p>" +
+        galleryHtml(detail) +
         (item.costEstimate && item.costEstimate.basis ? '<p class="cost-basis">' + esc(item.costEstimate.basis) + "</p>" : "") +
         '<p class="meta">Basis: ' + esc(item.confidence) +
         (item.costEstimate && item.costEstimate.confidence ? " · Cost confidence: " + esc(item.costEstimate.confidence) : "") +

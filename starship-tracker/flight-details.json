@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-07T17:06+01:00",
+  "generated": "2026-11-07T18:35+01:00",
   "schemaVersion": 1,
   "flights": {
     "1": {
@@ -10,34 +10,56 @@
       "ship": "Ship 24",
       "images": [
         {
-          "file": "F1-1.webp",
-          "caption": "Booster 7 and Ship 24 stacked on the OLP-1 launch mount before the first flight test",
-          "role": "pre-launch",
-          "credit": "SpaceX",
-          "license": "CC BY-NC 2.0",
-          "licenseUrl": "https://creativecommons.org/licenses/by-nc/2.0/",
-          "pageUrl": "https://www.flickr.com/photos/spacex/52822653368/",
-          "directUrl": "https://live.staticflickr.com/65535/52822653368_ff034659d4_b.jpg",
-          "width": 1024,
-          "height": 775,
-          "bytes": 58850,
+          "file": null,
+          "hotlink": true,
+          "caption": "Liftoff on Flight 1 (SpaceX photo; post: \"First fully integrated Starship lifting off for the first time!\")",
+          "role": "liftoff",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1649089801797378048",
+          "directUrl": "https://pbs.twimg.com/media/FuK9icGaYAE13GS.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
           "sources": [
             {
-              "title": "Image page",
-              "site": "Flickr (SpaceX)",
-              "href": "https://www.flickr.com/photos/spacex/52822653368/"
+              "title": "@SpaceX post on X",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1649089801797378048"
             }
           ]
         },
         {
-          "file": "F1-2.webp",
+          "file": null,
+          "hotlink": true,
+          "caption": "Ascent on Flight 1 (SpaceX photo; post: \"Starship successfully lifted off from the orbital launch pad and climbed to an apogee of ~39 km\")",
+          "role": "ascent",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1649141462469312512",
+          "directUrl": "https://pbs.twimg.com/media/FuLsDFXaMAA4kmu.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX post on X",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1649141462469312512"
+            }
+          ]
+        },
+        {
+          "file": "flight-images/F1-2.webp",
           "caption": "Booster 7 and Ship 24 climbing out on 20 April 2023",
           "role": "liftoff/ascent",
           "credit": "Osunpokeh",
           "license": "CC BY-SA 4.0",
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
           "pageUrl": "https://commons.wikimedia.org/wiki/File:StarshipLaunch.jpg",
-          "directUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/StarshipLaunch.jpg/1280px-StarshipLaunch.jpg",
+          "directUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ab/StarshipLaunch.jpg",
           "width": 1000,
           "height": 2000,
           "bytes": 21814,
@@ -47,17 +69,18 @@
               "site": "Wikimedia Commons",
               "href": "https://commons.wikimedia.org/wiki/File:StarshipLaunch.jpg"
             }
-          ]
+          ],
+          "hotlink": false
         },
         {
-          "file": "F1-3.webp",
+          "file": "flight-images/F1-3.webp",
           "caption": "Booster 7 engine plume in flight; failed Raptors show as missing white dots",
           "role": "ascent anomaly",
           "credit": "Osunpokeh",
           "license": "CC BY-SA 4.0",
           "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
           "pageUrl": "https://commons.wikimedia.org/wiki/File:Starship_engines_during_first_orbital_test_flight._Failed_engines_can_be_identified_as_missing_white_dots.jpg",
-          "directUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Starship_engines_during_first_orbital_test_flight._Failed_engines_can_be_identified_as_missing_white_dots.jpg/1280px-Starship_engines_during_first_orbital_test_flight._Failed_engines_can_be_identified_as_missing_white_dots.jpg",
+          "directUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Starship_engines_during_first_orbital_test_flight._Failed_engines_can_be_identified_as_missing_white_dots.jpg",
           "width": 1280,
           "height": 720,
           "bytes": 12006,
@@ -67,27 +90,8 @@
               "site": "Wikimedia Commons",
               "href": "https://commons.wikimedia.org/wiki/File:Starship_engines_during_first_orbital_test_flight._Failed_engines_can_be_identified_as_missing_white_dots.jpg"
             }
-          ]
-        },
-        {
-          "file": "F1-4.webp",
-          "caption": "A chunk of pad concrete (fondag) thrown out by the first launch, which had no water deluge",
-          "role": "pad damage",
-          "credit": "jurvetson",
-          "license": "CC BY 2.0",
-          "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-          "pageUrl": "https://commons.wikimedia.org/wiki/File:Fondage_Ejecta_from_the_First_Integrated_Starship_Launch_(54079411213).jpg",
-          "directUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Fondage_Ejecta_from_the_First_Integrated_Starship_Launch_%2854079411213%29.jpg/1280px-Fondage_Ejecta_from_the_First_Integrated_Starship_Launch_%2854079411213%29.jpg",
-          "width": 1600,
-          "height": 1776,
-          "bytes": 196526,
-          "sources": [
-            {
-              "title": "Image page",
-              "site": "Wikimedia Commons",
-              "href": "https://commons.wikimedia.org/wiki/File:Fondage_Ejecta_from_the_First_Integrated_Starship_Launch_(54079411213).jpg"
-            }
-          ]
+          ],
+          "hotlink": false
         }
       ],
       "imagesNote": null,
@@ -586,42 +590,44 @@
       "ship": "Ship 25",
       "images": [
         {
-          "file": "F2-1.webp",
-          "caption": "NOAA weather radar picks up the Ship 25 debris cloud north of the Virgin Islands",
-          "role": "debris",
-          "credit": "National Oceanic and Atmospheric Administration",
-          "license": "Public domain",
+          "file": null,
+          "hotlink": true,
+          "caption": "Liftoff on Flight 2 (SpaceX photo; post: \"Starship launches off the pad under the power of all 33 Raptor engines on the Super Heavy Booster\")",
+          "role": "liftoff",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
           "licenseUrl": null,
-          "pageUrl": "https://commons.wikimedia.org/wiki/File:NOAA_weather_radar_image_of_Ship_25_re-entry_debris.jpg",
-          "directUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/NOAA_weather_radar_image_of_Ship_25_re-entry_debris.jpg/1280px-NOAA_weather_radar_image_of_Ship_25_re-entry_debris.jpg",
-          "width": 1600,
-          "height": 1090,
-          "bytes": 87150,
+          "pageUrl": "https://x.com/SpaceX/status/1725890107952218239",
+          "directUrl": "https://pbs.twimg.com/media/F_OUr-8aMAABvIf.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
           "sources": [
             {
-              "title": "Image page",
-              "site": "Wikimedia Commons",
-              "href": "https://commons.wikimedia.org/wiki/File:NOAA_weather_radar_image_of_Ship_25_re-entry_debris.jpg"
+              "title": "@SpaceX post on X",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1725890107952218239"
             }
           ]
         },
         {
-          "file": "F2-2.webp",
-          "caption": "NWS San Juan radar view of Ship 25 debris re-entering",
-          "role": "debris",
-          "credit": "National Weather Service in Puerto Rico",
-          "license": "Public domain",
+          "file": null,
+          "hotlink": true,
+          "caption": "Hot staging on Flight 2 (SpaceX photo; post: \"Starship liftoff through successful hot-stage separation\")",
+          "role": "hot staging",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
           "licenseUrl": null,
-          "pageUrl": "https://commons.wikimedia.org/wiki/File:SpaceX_Starship_Ship_25_debris_re-entering_the_atmosphere.png",
-          "directUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/SpaceX_Starship_Ship_25_debris_re-entering_the_atmosphere.png/1280px-SpaceX_Starship_Ship_25_debris_re-entering_the_atmosphere.png",
-          "width": 1600,
-          "height": 866,
-          "bytes": 104824,
+          "pageUrl": "https://x.com/SpaceX/status/1725898823262949586",
+          "directUrl": "https://pbs.twimg.com/media/F_OftU3boAAp0of.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
           "sources": [
             {
-              "title": "Image page",
-              "site": "Wikimedia Commons",
-              "href": "https://commons.wikimedia.org/wiki/File:SpaceX_Starship_Ship_25_debris_re-entering_the_atmosphere.png"
+              "title": "@SpaceX post on X",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1725898823262949586"
             }
           ]
         }
@@ -1104,27 +1110,49 @@
       "ship": "Ship 28",
       "images": [
         {
-          "file": "F3-1.webp",
-          "caption": "GOES satellite view of the Flight 3 plume rising over South Texas",
-          "role": "ascent from orbit",
-          "credit": "GOES imagery: CSU/CIRA & NOAA",
-          "license": "Public domain",
+          "file": null,
+          "hotlink": true,
+          "caption": "Liftoff on Flight 3 (SpaceX photo; post: \"Starship launching for the third time from the gateway to Mars\")",
+          "role": "liftoff",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
           "licenseUrl": null,
-          "pageUrl": "https://commons.wikimedia.org/wiki/File:SpaceX_Starship_Third_Flight_Test_Launch_(CIRA_2024-03-14).png",
-          "directUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/SpaceX_Starship_Third_Flight_Test_Launch_%28CIRA_2024-03-14%29.png/1280px-SpaceX_Starship_Third_Flight_Test_Launch_%28CIRA_2024-03-14%29.png",
-          "width": 1600,
-          "height": 900,
-          "bytes": 59252,
+          "pageUrl": "https://x.com/SpaceX/status/1768642869525725253",
+          "directUrl": "https://pbs.twimg.com/media/GIt7MzibIAAFOq9.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
           "sources": [
             {
-              "title": "Image page",
-              "site": "Wikimedia Commons",
-              "href": "https://commons.wikimedia.org/wiki/File:SpaceX_Starship_Third_Flight_Test_Launch_(CIRA_2024-03-14).png"
+              "title": "@SpaceX post on X",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1768642869525725253"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Ascent on Flight 3 (SpaceX photo; post: \"Congratulations to the entire SpaceX team on today's successful Starship flight test! →\")",
+          "role": "ascent",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1768341601049575460",
+          "directUrl": "https://pbs.twimg.com/media/GIpo6jvakAAFalR.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX post on X",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1768341601049575460"
             }
           ]
         }
       ],
-      "imagesNote": "Only a GOES satellite view is freely licensed.",
+      "imagesNote": null,
       "timeline": [
         {
           "event": "Liftoff",
@@ -1696,27 +1724,49 @@
       "ship": "Ship 29",
       "images": [
         {
-          "file": "F4-1.webp",
-          "caption": "GOES satellite view of the Flight 4 launch; the plume casts a long shadow",
-          "role": "ascent from orbit",
-          "credit": "GOES imagery: CSU/CIRA & NOAA",
-          "license": "Public domain",
+          "file": null,
+          "hotlink": true,
+          "caption": "Liftoff and ascent on Flight 4 (SpaceX photo; post: \"Starship’s fourth flight test launched with ambitious goals, attempting to go farther than any previous test before and begin demonstrating \")",
+          "role": "liftoff/ascent",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
           "licenseUrl": null,
-          "pageUrl": "https://commons.wikimedia.org/wiki/File:Fourth_Launch_for_SpaceX%E2%80%99s_Starship_(CIRA_2024-06-06).png",
-          "directUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Fourth_Launch_for_SpaceX%E2%80%99s_Starship_%28CIRA_2024-06-06%29.png/1280px-Fourth_Launch_for_SpaceX%E2%80%99s_Starship_%28CIRA_2024-06-06%29.png",
-          "width": 1600,
-          "height": 900,
-          "bytes": 36030,
+          "pageUrl": "https://x.com/SpaceX/status/1798789555342200964",
+          "directUrl": "https://pbs.twimg.com/media/GPaVPdLbQAAlW2f.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
           "sources": [
             {
-              "title": "Image page",
-              "site": "Wikimedia Commons",
-              "href": "https://commons.wikimedia.org/wiki/File:Fourth_Launch_for_SpaceX%E2%80%99s_Starship_(CIRA_2024-06-06).png"
+              "title": "@SpaceX post on X",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1798789555342200964"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Reentry on Flight 4 (SpaceX photo; post: \"Starship made a controlled reentry, successfully making it through the phases of peak heating and max aerodynamic pressure and demonstrating\")",
+          "role": "reentry",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1798792222743122164",
+          "directUrl": "https://pbs.twimg.com/media/GPaXWoga0AccBpr.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX post on X",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1798792222743122164"
             }
           ]
         }
       ],
-      "imagesNote": "Only a GOES satellite view is freely licensed.",
+      "imagesNote": null,
       "timeline": [
         {
           "event": "Liftoff",
@@ -2252,14 +2302,14 @@
       "ship": "Ship 30",
       "images": [
         {
-          "file": "F5-1.webp",
+          "file": "flight-images/F5-1.webp",
           "caption": "Booster 12 and Ship 30 clear the tower on 13 October 2024",
           "role": "liftoff",
           "credit": "Steve Jurvetson from Los Altos, USA",
           "license": "CC BY 2.0",
           "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
           "pageUrl": "https://commons.wikimedia.org/wiki/File:Liftoff_of_SpaceX_IFT-5_(54064037095).jpg",
-          "directUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Liftoff_of_SpaceX_IFT-5_%2854064037095%29.jpg/1280px-Liftoff_of_SpaceX_IFT-5_%2854064037095%29.jpg",
+          "directUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Liftoff_of_SpaceX_IFT-5_%2854064037095%29.jpg/1920px-Liftoff_of_SpaceX_IFT-5_%2854064037095%29.jpg",
           "width": 1600,
           "height": 1833,
           "bytes": 52778,
@@ -2269,17 +2319,18 @@
               "site": "Wikimedia Commons",
               "href": "https://commons.wikimedia.org/wiki/File:Liftoff_of_SpaceX_IFT-5_(54064037095).jpg"
             }
-          ]
+          ],
+          "hotlink": false
         },
         {
-          "file": "F5-2.webp",
+          "file": "flight-images/F5-2.webp",
           "caption": "Hot staging: Ship 30 lights its engines as it separates from Booster 12",
           "role": "hot staging",
           "credit": "Steve Jurvetson",
           "license": "CC BY 2.0",
           "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
           "pageUrl": "https://commons.wikimedia.org/wiki/File:SpaceX_Starship_hot_staging_IFT-5.jpg",
-          "directUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/SpaceX_Starship_hot_staging_IFT-5.jpg/1280px-SpaceX_Starship_hot_staging_IFT-5.jpg",
+          "directUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cb/SpaceX_Starship_hot_staging_IFT-5.jpg",
           "width": 1233,
           "height": 957,
           "bytes": 29724,
@@ -2289,17 +2340,18 @@
               "site": "Wikimedia Commons",
               "href": "https://commons.wikimedia.org/wiki/File:SpaceX_Starship_hot_staging_IFT-5.jpg"
             }
-          ]
+          ],
+          "hotlink": false
         },
         {
-          "file": "F5-3.webp",
+          "file": "flight-images/F5-3.webp",
           "caption": "Booster 12 landing burn on its way back to the tower",
           "role": "landing burn",
           "credit": "Steve Jurvetson",
           "license": "CC BY 2.0",
           "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
           "pageUrl": "https://commons.wikimedia.org/wiki/File:SpaceX_Starship_landing_burn_IFT-5.jpg",
-          "directUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/SpaceX_Starship_landing_burn_IFT-5.jpg/1280px-SpaceX_Starship_landing_burn_IFT-5.jpg",
+          "directUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/SpaceX_Starship_landing_burn_IFT-5.jpg/1920px-SpaceX_Starship_landing_burn_IFT-5.jpg",
           "width": 1600,
           "height": 2273,
           "bytes": 63834,
@@ -2309,17 +2361,18 @@
               "site": "Wikimedia Commons",
               "href": "https://commons.wikimedia.org/wiki/File:SpaceX_Starship_landing_burn_IFT-5.jpg"
             }
-          ]
+          ],
+          "hotlink": false
         },
         {
-          "file": "F5-4.webp",
+          "file": "flight-images/F5-4.webp",
           "caption": "Booster 12 on final approach to the chopsticks",
           "role": "catch approach",
           "credit": "Steve Jurvetson",
           "license": "CC BY 2.0",
           "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
           "pageUrl": "https://commons.wikimedia.org/wiki/File:Starship_Booster_Return_on_Final_Approach_(54063904149).jpg",
-          "directUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Starship_Booster_Return_on_Final_Approach_%2854063904149%29.jpg/1280px-Starship_Booster_Return_on_Final_Approach_%2854063904149%29.jpg",
+          "directUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Starship_Booster_Return_on_Final_Approach_%2854063904149%29.jpg/1920px-Starship_Booster_Return_on_Final_Approach_%2854063904149%29.jpg",
           "width": 1600,
           "height": 2226,
           "bytes": 105662,
@@ -2329,7 +2382,8 @@
               "site": "Wikimedia Commons",
               "href": "https://commons.wikimedia.org/wiki/File:Starship_Booster_Return_on_Final_Approach_(54063904149).jpg"
             }
-          ]
+          ],
+          "hotlink": false
         }
       ],
       "imagesNote": null,
@@ -2837,14 +2891,56 @@
       "ship": "Ship 31",
       "images": [
         {
-          "file": "F6-1.webp",
+          "file": null,
+          "hotlink": true,
+          "caption": "Liftoff on Flight 6 (SpaceX photo; post: \"33 Raptor engines powering the Super Heavy booster off the pad from Starbase\")",
+          "role": "liftoff",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1859378696735556032",
+          "directUrl": "https://pbs.twimg.com/media/Gc3WTTqaIAA_Ksj.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX post on X",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1859378696735556032"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Starship in space on Flight 6 (SpaceX photo; post: \"Starship reentry over the Indian Ocean\")",
+          "role": "ship in space",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1859717568162127873",
+          "directUrl": "https://pbs.twimg.com/media/Gc8LGRQaAAAEaQ0.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX post on X",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1859717568162127873"
+            }
+          ]
+        },
+        {
+          "file": "flight-images/F6-1.webp",
           "caption": "Flight 6 plume over the Gulf coast, photographed from the ISS by Don Pettit",
           "role": "ascent from ISS",
           "credit": "NASA/Don Pettit",
           "license": "Public domain",
           "licenseUrl": null,
           "pageUrl": "https://commons.wikimedia.org/wiki/File:The_launch_of_the_SpaceX_Starship_6_rocket_seen_from_the_space_station_(iss072e220043).jpg",
-          "directUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/The_launch_of_the_SpaceX_Starship_6_rocket_seen_from_the_space_station_%28iss072e220043%29.jpg/1280px-The_launch_of_the_SpaceX_Starship_6_rocket_seen_from_the_space_station_%28iss072e220043%29.jpg",
+          "directUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/The_launch_of_the_SpaceX_Starship_6_rocket_seen_from_the_space_station_%28iss072e220043%29.jpg/1920px-The_launch_of_the_SpaceX_Starship_6_rocket_seen_from_the_space_station_%28iss072e220043%29.jpg",
           "width": 1600,
           "height": 1067,
           "bytes": 138962,
@@ -2854,17 +2950,18 @@
               "site": "Wikimedia Commons",
               "href": "https://commons.wikimedia.org/wiki/File:The_launch_of_the_SpaceX_Starship_6_rocket_seen_from_the_space_station_(iss072e220043).jpg"
             }
-          ]
+          ],
+          "hotlink": false
         },
         {
-          "file": "F6-2.webp",
+          "file": "flight-images/F6-2.webp",
           "caption": "The Ship 31 launch plume seen from the ISS",
           "role": "ascent from ISS",
           "credit": "NASA JSC // DONALD PETTIT",
           "license": "Public domain",
           "licenseUrl": null,
           "pageUrl": "https://commons.wikimedia.org/wiki/File:ISS072-E-220068.jpg",
-          "directUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/ISS072-E-220068.jpg/1280px-ISS072-E-220068.jpg",
+          "directUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/ISS072-E-220068.jpg/1920px-ISS072-E-220068.jpg",
           "width": 1600,
           "height": 1444,
           "bytes": 46980,
@@ -2874,27 +2971,8 @@
               "site": "Wikimedia Commons",
               "href": "https://commons.wikimedia.org/wiki/File:ISS072-E-220068.jpg"
             }
-          ]
-        },
-        {
-          "file": "F6-3.webp",
-          "caption": "GOES view of the Flight 6 exhaust plume casting a shadow over the Gulf",
-          "role": "ascent from orbit",
-          "credit": "GOES imagery: CSU/CIRA & NOAA",
-          "license": "Public domain",
-          "licenseUrl": null,
-          "pageUrl": "https://commons.wikimedia.org/wiki/File:Starship_Sixth_Flight_Test_From_SpaceX_(CIRA_2024-11-19).png",
-          "directUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Starship_Sixth_Flight_Test_From_SpaceX_%28CIRA_2024-11-19%29.png/1280px-Starship_Sixth_Flight_Test_From_SpaceX_%28CIRA_2024-11-19%29.png",
-          "width": 1600,
-          "height": 900,
-          "bytes": 62570,
-          "sources": [
-            {
-              "title": "Image page",
-              "site": "Wikimedia Commons",
-              "href": "https://commons.wikimedia.org/wiki/File:Starship_Sixth_Flight_Test_From_SpaceX_(CIRA_2024-11-19).png"
-            }
-          ]
+          ],
+          "hotlink": false
         }
       ],
       "imagesNote": null,
@@ -3442,8 +3520,72 @@
       "status": "Failure",
       "booster": "Booster 14",
       "ship": "Ship 33",
-      "images": [],
-      "imagesNote": "No freely licensed photo of Flight 7 found (SpaceX photos are all-rights-reserved; the ISS frame tagged \"Starship launch\" does not show the vehicle).",
+      "images": [
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Liftoff on Flight 7 (SpaceX photo; post: \"Launching Starship on its seventh flight test\")",
+          "role": "liftoff",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1880652100696469583",
+          "directUrl": "https://pbs.twimg.com/media/GhlqUIrbYAA0GT_.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX post on X",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1880652100696469583"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Super Heavy returning for its landing burn on Flight 7 (SpaceX photo; post: \"Super Heavy ignites 13 Raptor engines for the start of its landing burn, then uses three for precise steering for catch\")",
+          "role": "booster return",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1880655580823773354",
+          "directUrl": "https://pbs.twimg.com/media/GhluEiaacAAt0Za.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX post on X",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1880655580823773354"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Super Heavy caught by the tower chopsticks on Flight 7 (SpaceX photo; post: \"The second successful catch of the Super Heavy booster\")",
+          "role": "booster catch",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1880661166395158694",
+          "directUrl": "https://pbs.twimg.com/media/GhlzMxJbEAAgx1w.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX post on X",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1880661166395158694"
+            }
+          ]
+        }
+      ],
+      "imagesNote": null,
       "timeline": [
         {
           "event": "Liftoff",
@@ -4022,14 +4164,56 @@
       "ship": "Ship 34",
       "images": [
         {
-          "file": "F8-1.webp",
+          "file": null,
+          "hotlink": true,
+          "caption": "Liftoff on Flight 8 (SpaceX photo; post: \"Liftoff of Starship's eighth flight test\")",
+          "role": "liftoff",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1898512022951874665",
+          "directUrl": "https://pbs.twimg.com/media/GljebvTaYAEC3Pk.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX post on X",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1898512022951874665"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Super Heavy caught by the tower chopsticks on Flight 8 (SpaceX photo; post: \"The third successful return to launch site and catch of the Super Heavy rocket\")",
+          "role": "booster catch",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1898513213794525244",
+          "directUrl": "https://pbs.twimg.com/media/GljfrJbaYAA03pM.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX post on X",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1898513213794525244"
+            }
+          ]
+        },
+        {
+          "file": "flight-images/F8-1.webp",
           "caption": "Debris cloud above the atmosphere after Ship 34 was lost, seen from the ISS",
           "role": "debris",
           "credit": "NASA/JSC/Donald Pettit",
           "license": "Public domain",
           "licenseUrl": null,
           "pageUrl": "https://commons.wikimedia.org/wiki/File:ISS072-E-757516.jpg",
-          "directUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/ISS072-E-757516.jpg/1280px-ISS072-E-757516.jpg",
+          "directUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/ISS072-E-757516.jpg/1920px-ISS072-E-757516.jpg",
           "width": 1600,
           "height": 1098,
           "bytes": 120492,
@@ -4039,27 +4223,8 @@
               "site": "Wikimedia Commons",
               "href": "https://commons.wikimedia.org/wiki/File:ISS072-E-757516.jpg"
             }
-          ]
-        },
-        {
-          "file": "F8-2.webp",
-          "caption": "GOES-East/West view of the Flight 8 launch and unplanned reentry",
-          "role": "debris",
-          "credit": "GOES imagery: CSU/CIRA & NOAA",
-          "license": "Public domain",
-          "licenseUrl": null,
-          "pageUrl": "https://commons.wikimedia.org/wiki/File:SpaceX%E2%80%99s_Eighth_Starship_Launch_and_Reentry_(CIRA_2025-03-06).png",
-          "directUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/SpaceX%E2%80%99s_Eighth_Starship_Launch_and_Reentry_%28CIRA_2025-03-06%29.png/1280px-SpaceX%E2%80%99s_Eighth_Starship_Launch_and_Reentry_%28CIRA_2025-03-06%29.png",
-          "width": 1600,
-          "height": 900,
-          "bytes": 47496,
-          "sources": [
-            {
-              "title": "Image page",
-              "site": "Wikimedia Commons",
-              "href": "https://commons.wikimedia.org/wiki/File:SpaceX%E2%80%99s_Eighth_Starship_Launch_and_Reentry_(CIRA_2025-03-06).png"
-            }
-          ]
+          ],
+          "hotlink": false
         }
       ],
       "imagesNote": null,
@@ -4616,8 +4781,51 @@
       "status": "Failure",
       "booster": "Booster 14-2 (reflown)",
       "ship": "Ship 35",
-      "images": [],
-      "imagesNote": "No freely licensed photo found.",
+      "images": [
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Liftoff and ascent on Flight 9 (SpaceX photo; post: \"Starship’s ninth flight test marked a major milestone for reuse with the first flight-proven Super Heavy booster launching from Starbase, an\")",
+          "role": "liftoff/ascent",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1927567126224593279",
+          "directUrl": "https://pbs.twimg.com/media/GsAXstrXcAA8LnB.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX post on X",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1927567126224593279"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Starship in space on Flight 9 (SpaceX photo; post: \"Starship in space\")",
+          "role": "ship in space",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1928826217853235394",
+          "directUrl": "https://pbs.twimg.com/media/GsSRMmqaMAIG5cr.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX post on X",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1928826217853235394"
+            }
+          ]
+        }
+      ],
+      "imagesNote": null,
       "timeline": [
         {
           "event": "Liftoff",
@@ -5196,8 +5404,51 @@
       "status": "Success",
       "booster": "Booster 16",
       "ship": "Ship 37",
-      "images": [],
-      "imagesNote": "No freely licensed photo found.",
+      "images": [
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Liftoff and ascent on Flight 10 (SpaceX photo; post: \"Starship’s tenth flight test pushed the limits and provided maximum excitement along the way →\")",
+          "role": "liftoff/ascent",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1960535661984817592",
+          "directUrl": "https://pbs.twimg.com/media/GzU2dePWMAAJXgO.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX post on X",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1960535661984817592"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Starship landing burn and splashdown on Flight 10 (SpaceX photo; post: \"View of Starship landing burn and splashdown on Flight 10, made possible by SpaceX’s recovery team. Starship made it through reentry with in\")",
+          "role": "ship landing burn/splashdown",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1961165064666312956",
+          "directUrl": "https://pbs.twimg.com/media/Gzdw3Y5WIAALuh7.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX post on X",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1961165064666312956"
+            }
+          ]
+        }
+      ],
+      "imagesNote": null,
       "timeline": [
         {
           "event": "Liftoff",
@@ -5859,8 +6110,72 @@
       "status": "Success",
       "booster": "Booster 15-2 (reflown)",
       "ship": "Ship 38",
-      "images": [],
-      "imagesNote": "Only free photo found is already used on the site (v2.webp), so none added.",
+      "images": [
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Liftoff on Flight 11 (SpaceX photo; post: \"Launch and ascent of Starship's eleventh flight test\")",
+          "role": "liftoff",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1978172905717453205",
+          "directUrl": "https://pbs.twimg.com/media/G3PhrgYW0AAvaOl.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX post on X",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1978172905717453205"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Hot staging on Flight 11 (SpaceX photo; post: \"Super Heavy hot-staging and boostback burn\")",
+          "role": "hot staging",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1979261047182635135",
+          "directUrl": "https://pbs.twimg.com/media/G3e_SH2XMAAlqLd.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX post on X",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1979261047182635135"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Reentry on Flight 11 (SpaceX photo; post: \"Starship reenters Earth’s atmosphere on Flight 11. Data gathered from this flight will inform future Starship missions that will return to t\")",
+          "role": "reentry",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1979285350167253058",
+          "directUrl": "https://pbs.twimg.com/media/G3fVb8VWgAABTw1.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX post on X",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1979285350167253058"
+            }
+          ]
+        }
+      ],
+      "imagesNote": null,
       "timeline": [
         {
           "event": "Liftoff",
@@ -6506,8 +6821,93 @@
       "status": "Success",
       "booster": "Booster 19",
       "ship": "Ship 39",
-      "images": [],
-      "imagesNote": "No freely licensed photo found.",
+      "images": [
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Liftoff on Flight 12 (SpaceX photo; post: \"Starship V3 takes flight for the first time →\")",
+          "role": "liftoff",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2058005949466501590",
+          "directUrl": "https://pbs.twimg.com/media/HI-A85lXgAA1txM.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX post on X",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2058005949466501590"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Starship in space on Flight 12 (SpaceX photo; post: \"Onboard views from Starship and Super Heavy V3, which are equipped with upgraded cameras capable of streaming 4K video through every phase o\")",
+          "role": "ship in space",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2058304809044750467",
+          "directUrl": "https://pbs.twimg.com/media/HJCQXuOWkAAF3rY.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX post on X",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2058304809044750467"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Starship landing burn and splashdown on Flight 12 (SpaceX photo; post: \"Starship V3 landing burn over the Indian Ocean\")",
+          "role": "ship splashdown",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2058305552866775118",
+          "directUrl": "https://pbs.twimg.com/media/HJCR-PuXMAAGnt1.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX post on X",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2058305552866775118"
+            }
+          ]
+        },
+        {
+          "file": "flight-images/F12-1.webp",
+          "caption": "Pre-flight hardware: Ship 39, the first Version 3 ship and the Flight 12 upper stage, being outfitted in Megabay 2 on 12 January 2026",
+          "role": "pre-flight hardware",
+          "credit": "Petty Officer 1st Class Alexander Kubitza",
+          "license": "Public domain",
+          "licenseUrl": null,
+          "pageUrl": "https://commons.wikimedia.org/wiki/File:Ship_39_in_Megabay_2,_Boca_Chica_TX.jpg",
+          "directUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Ship_39_in_Megabay_2%2C_Boca_Chica_TX.jpg/1920px-Ship_39_in_Megabay_2%2C_Boca_Chica_TX.jpg",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 184332,
+          "sources": [
+            {
+              "title": "Image page",
+              "site": "Wikimedia Commons",
+              "href": "https://commons.wikimedia.org/wiki/File:Ship_39_in_Megabay_2,_Boca_Chica_TX.jpg"
+            }
+          ],
+          "hotlink": false
+        }
+      ],
+      "imagesNote": "Ship 39 pre-flight hardware photo kept last.",
       "timeline": [
         {
           "event": "Liftoff",
@@ -7243,8 +7643,72 @@
       "status": "Success",
       "booster": "Booster 20",
       "ship": "Ship 40",
-      "images": [],
-      "imagesNote": "No freely licensed photo found.",
+      "images": [
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Liftoff on Flight 13 (SpaceX photo; post: \"Liftoff of Starship on its thirteenth flight test\")",
+          "role": "liftoff",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2081088918703759549",
+          "directUrl": "https://pbs.twimg.com/media/HOGCJc7WoAAMPvM.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX post on X",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2081088918703759549"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Starship in space on Flight 13 (SpaceX photo; post: \"Starship in space on Flight 13\")",
+          "role": "ship in space",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2081894924291654060",
+          "directUrl": "https://pbs.twimg.com/media/HORgGTxWAAEBoSV.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX post on X",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2081894924291654060"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Starship landing burn and splashdown on Flight 13 (SpaceX photo; post: \"Landing burn and splashdown of Starship on Flight 13\")",
+          "role": "ship landing burn/splashdown",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2082186658162626898",
+          "directUrl": "https://pbs.twimg.com/media/HOVpVmlWAAADPDg.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX post on X",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2082186658162626898"
+            }
+          ]
+        }
+      ],
+      "imagesNote": null,
       "timeline": [
         {
           "event": "Booster landing burn: only 10 engines relit, then 8, then 5; hard splashdown",
@@ -7947,8 +8411,51 @@
       "status": "Success",
       "booster": "Booster 21",
       "ship": "Ship 41",
-      "images": [],
-      "imagesNote": "No freely licensed photo found.",
+      "images": [
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Liftoff on Flight 14 (SpaceX photo; post: \"Liftoff of Starship's first orbital flight\")",
+          "role": "liftoff",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2104654998034690329",
+          "directUrl": "https://pbs.twimg.com/media/HTU8eCGWMAADqQ6.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX post on X",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2104654998034690329"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Starship in space on Flight 14 (SpaceX photo; post: \"Starship's first orbital flight delivered 26 Starlink V3 satellites to space\")",
+          "role": "ship in space",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2106090316747207047",
+          "directUrl": "https://pbs.twimg.com/media/HTpV0zqXYAAxnFD.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX post on X",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2106090316747207047"
+            }
+          ]
+        }
+      ],
+      "imagesNote": null,
       "timeline": [
         {
           "event": "Note",
@@ -8752,8 +9259,51 @@
       "status": "Upcoming",
       "booster": "Booster 22",
       "ship": "Ship 42",
-      "images": [],
-      "imagesNote": "Not flown.",
+      "images": [
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Header image of SpaceX's Flight 15 page: a Version 3 Super Heavy at the Starbase tower (SpaceX does not say which booster; pre-flight)",
+          "role": "pre-flight hardware",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://www.spacex.com/launches/starship-flight-15",
+          "directUrl": "https://sxcontent9668.azureedge.us/cms-assets/assets/Flight_15_Website_Desktop_1_7111645b6d.png",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "SpaceX: Starship Flight 15 mission page / recap",
+              "site": "SpaceX",
+              "href": "https://www.spacex.com/launches/starship-flight-15"
+            }
+          ]
+        },
+        {
+          "file": "flight-images/F15-1.webp",
+          "caption": "Pre-flight launch pad: NOAA aerial view of the Starbase launch site in January 2026, showing both launch towers including Pad 2, from which Flight 15 is set to launch",
+          "role": "pre-flight launch pad",
+          "credit": "NOAA / NODD",
+          "license": "Public domain",
+          "licenseUrl": null,
+          "pageUrl": "https://commons.wikimedia.org/wiki/File:SpaceX_Starbase_Launch_Site_Early_2026.jpg",
+          "directUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/SpaceX_Starbase_Launch_Site_Early_2026.jpg/1920px-SpaceX_Starbase_Launch_Site_Early_2026.jpg",
+          "width": 1600,
+          "height": 899,
+          "bytes": 290156,
+          "sources": [
+            {
+              "title": "Image page",
+              "site": "Wikimedia Commons",
+              "href": "https://commons.wikimedia.org/wiki/File:SpaceX_Starbase_Launch_Site_Early_2026.jpg"
+            }
+          ],
+          "hotlink": false
+        }
+      ],
+      "imagesNote": "Not flown. No photo of Booster 22 / Ship 42 published; SpaceX page header (V3 booster at tower) plus a NOAA aerial of the launch site.",
       "timeline": [
         {
           "event": "Liftoff",
@@ -9362,59 +9912,126 @@
     {
       "mission": "Flight 16 (Starlink 30-1)",
       "when": "NET Thu 10 Dec 2026",
-      "images": [],
+      "vehicles": "B23 / S43 (likely)",
+      "site": "KSC LC-39A, Florida",
+      "images": [
+        {
+          "file": "flight-images/F16-1.webp",
+          "caption": "Pre-flight launch pad: the Artemis III crew at the Starship launch tower at LC-39A, Kennedy Space Center, on 3 September 2026; Flight 16 is planned from this pad (FAA planning slide, not confirmed by SpaceX)",
+          "role": "pre-flight launch pad",
+          "credit": "NASA Kennedy Space Center / NASA/John Kraus",
+          "license": "Public domain",
+          "licenseUrl": null,
+          "pageUrl": "https://commons.wikimedia.org/wiki/File:Artemis_III_Crew_Visits_Launch_Complex_39A_(NHQ20260903_admin_0002).jpg",
+          "directUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Artemis_III_Crew_Visits_Launch_Complex_39A_%28NHQ20260903_admin_0002%29.jpg/1920px-Artemis_III_Crew_Visits_Launch_Complex_39A_%28NHQ20260903_admin_0002%29.jpg",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 181486,
+          "sources": [
+            {
+              "title": "Image page",
+              "site": "Wikimedia Commons",
+              "href": "https://commons.wikimedia.org/wiki/File:Artemis_III_Crew_Visits_Launch_Complex_39A_(NHQ20260903_admin_0002).jpg"
+            }
+          ]
+        },
+        {
+          "file": "flight-images/F16-2.webp",
+          "caption": "Pre-flight launch pad: LC-39A seen from KSC's Gantry on 18 January 2026, with the Starship launch tower on the right",
+          "role": "pre-flight launch pad",
+          "credit": "Olga Ernst",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "pageUrl": "https://commons.wikimedia.org/wiki/File:Kennedy_Space_Center,_Launch_Complex_39A.jpg",
+          "directUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Kennedy_Space_Center%2C_Launch_Complex_39A.jpg/1920px-Kennedy_Space_Center%2C_Launch_Complex_39A.jpg",
+          "width": 1600,
+          "height": 1060,
+          "bytes": 169408,
+          "sources": [
+            {
+              "title": "Image page",
+              "site": "Wikimedia Commons",
+              "href": "https://commons.wikimedia.org/wiki/File:Kennedy_Space_Center,_Launch_Complex_39A.jpg"
+            }
+          ]
+        }
+      ],
       "timeline": [],
       "telemetry": null,
-      "note": "No flight data yet; will fill in when SpaceX publishes a mission page."
+      "note": "No flight data yet; will fill in when SpaceX publishes a mission page.",
+      "n": 16,
+      "imagesNote": "Not flown. Vehicles (B23/S43) are only \"likely\" and no free photo of them was found; images show the planned pad, KSC LC-39A."
     },
     {
       "mission": "Propellant transfer demo: target",
       "when": "Q1 2027",
+      "vehicles": "V3",
+      "site": "TBA",
       "images": [],
       "timeline": [],
       "telemetry": null,
-      "note": "No flight data yet; will fill in when SpaceX publishes a mission page."
+      "note": "No flight data yet; will fill in when SpaceX publishes a mission page.",
+      "imagesNote": "No specific vehicle or launch site known yet, so no images."
     },
     {
       "mission": "Propellant transfer demo: chaser",
       "when": "Q1 2027",
+      "vehicles": "V3",
+      "site": "TBA",
       "images": [],
       "timeline": [],
       "telemetry": null,
-      "note": "No flight data yet; will fill in when SpaceX publishes a mission page."
+      "note": "No flight data yet; will fill in when SpaceX publishes a mission page.",
+      "imagesNote": "No specific vehicle or launch site known yet, so no images."
     },
     {
       "mission": "Artemis III docking test",
       "when": "Mid 2027",
+      "vehicles": "V3 / HLS prototype",
+      "site": "TBA",
       "images": [],
       "timeline": [],
       "telemetry": null,
-      "note": "No flight data yet; will fill in when SpaceX publishes a mission page."
+      "note": "No flight data yet; will fill in when SpaceX publishes a mission page.",
+      "imagesNote": "No specific vehicle or launch site known yet, so no images."
     },
     {
       "mission": "Uncrewed HLS lunar demo",
       "when": "Q4 2027",
+      "vehicles": "HLS + tankers",
+      "site": "TBA",
       "images": [],
       "timeline": [],
       "telemetry": null,
-      "note": "No flight data yet; will fill in when SpaceX publishes a mission page."
+      "note": "No flight data yet; will fill in when SpaceX publishes a mission page.",
+      "imagesNote": "No specific vehicle or launch site known yet, so no images."
     },
     {
       "mission": "Artemis IV crewed landing",
       "when": "2028",
+      "vehicles": "HLS",
+      "site": "TBA",
       "images": [],
       "timeline": [],
       "telemetry": null,
-      "note": "No flight data yet; will fill in when SpaceX publishes a mission page."
+      "note": "No flight data yet; will fill in when SpaceX publishes a mission page.",
+      "imagesNote": "No specific vehicle or launch site known yet, so no images."
     }
   ],
   "usedMedia": [
     {
       "kind": "image",
       "flight": 1,
-      "file": "flight-images/F1-1.webp",
-      "pageUrl": "https://www.flickr.com/photos/spacex/52822653368/",
-      "directUrl": "https://live.staticflickr.com/65535/52822653368_ff034659d4_b.jpg"
+      "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/1649089801797378048",
+      "directUrl": "https://pbs.twimg.com/media/FuK9icGaYAE13GS.jpg?name=large"
+    },
+    {
+      "kind": "image",
+      "flight": 1,
+      "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/1649141462469312512",
+      "directUrl": "https://pbs.twimg.com/media/FuLsDFXaMAA4kmu.jpg?name=large"
     },
     {
       "kind": "image",
@@ -9431,13 +10048,6 @@
       "directUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/Starship_engines_during_first_orbital_test_flight._Failed_engines_can_be_identified_as_missing_white_dots.jpg"
     },
     {
-      "kind": "image",
-      "flight": 1,
-      "file": "flight-images/F1-4.webp",
-      "pageUrl": "https://commons.wikimedia.org/wiki/File:Fondage_Ejecta_from_the_First_Integrated_Starship_Launch_(54079411213).jpg",
-      "directUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Fondage_Ejecta_from_the_First_Integrated_Starship_Launch_%2854079411213%29.jpg/1920px-Fondage_Ejecta_from_the_First_Integrated_Starship_Launch_%2854079411213%29.jpg"
-    },
-    {
       "kind": "video",
       "flight": 1,
       "url": "https://www.youtube.com/watch?v=-1wcilQ58hI"
@@ -9450,16 +10060,16 @@
     {
       "kind": "image",
       "flight": 2,
-      "file": "flight-images/F2-1.webp",
-      "pageUrl": "https://commons.wikimedia.org/wiki/File:NOAA_weather_radar_image_of_Ship_25_re-entry_debris.jpg",
-      "directUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a1/NOAA_weather_radar_image_of_Ship_25_re-entry_debris.jpg"
+      "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/1725890107952218239",
+      "directUrl": "https://pbs.twimg.com/media/F_OUr-8aMAABvIf.jpg?name=large"
     },
     {
       "kind": "image",
       "flight": 2,
-      "file": "flight-images/F2-2.webp",
-      "pageUrl": "https://commons.wikimedia.org/wiki/File:SpaceX_Starship_Ship_25_debris_re-entering_the_atmosphere.png",
-      "directUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/SpaceX_Starship_Ship_25_debris_re-entering_the_atmosphere.png/1920px-SpaceX_Starship_Ship_25_debris_re-entering_the_atmosphere.png"
+      "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/1725898823262949586",
+      "directUrl": "https://pbs.twimg.com/media/F_OftU3boAAp0of.jpg?name=large"
     },
     {
       "kind": "video",
@@ -9469,9 +10079,16 @@
     {
       "kind": "image",
       "flight": 3,
-      "file": "flight-images/F3-1.webp",
-      "pageUrl": "https://commons.wikimedia.org/wiki/File:SpaceX_Starship_Third_Flight_Test_Launch_(CIRA_2024-03-14).png",
-      "directUrl": "https://upload.wikimedia.org/wikipedia/commons/5/50/SpaceX_Starship_Third_Flight_Test_Launch_%28CIRA_2024-03-14%29.png"
+      "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/1768642869525725253",
+      "directUrl": "https://pbs.twimg.com/media/GIt7MzibIAAFOq9.jpg?name=large"
+    },
+    {
+      "kind": "image",
+      "flight": 3,
+      "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/1768341601049575460",
+      "directUrl": "https://pbs.twimg.com/media/GIpo6jvakAAFalR.jpg?name=large"
     },
     {
       "kind": "video",
@@ -9481,9 +10098,16 @@
     {
       "kind": "image",
       "flight": 4,
-      "file": "flight-images/F4-1.webp",
-      "pageUrl": "https://commons.wikimedia.org/wiki/File:Fourth_Launch_for_SpaceX%E2%80%99s_Starship_(CIRA_2024-06-06).png",
-      "directUrl": "https://upload.wikimedia.org/wikipedia/commons/0/00/Fourth_Launch_for_SpaceX%E2%80%99s_Starship_%28CIRA_2024-06-06%29.png"
+      "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/1798789555342200964",
+      "directUrl": "https://pbs.twimg.com/media/GPaVPdLbQAAlW2f.jpg?name=large"
+    },
+    {
+      "kind": "image",
+      "flight": 4,
+      "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/1798792222743122164",
+      "directUrl": "https://pbs.twimg.com/media/GPaXWoga0AccBpr.jpg?name=large"
     },
     {
       "kind": "video",
@@ -9526,6 +10150,20 @@
     {
       "kind": "image",
       "flight": 6,
+      "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/1859378696735556032",
+      "directUrl": "https://pbs.twimg.com/media/Gc3WTTqaIAA_Ksj.jpg?name=large"
+    },
+    {
+      "kind": "image",
+      "flight": 6,
+      "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/1859717568162127873",
+      "directUrl": "https://pbs.twimg.com/media/Gc8LGRQaAAAEaQ0.jpg?name=large"
+    },
+    {
+      "kind": "image",
+      "flight": 6,
       "file": "flight-images/F6-1.webp",
       "pageUrl": "https://commons.wikimedia.org/wiki/File:The_launch_of_the_SpaceX_Starship_6_rocket_seen_from_the_space_station_(iss072e220043).jpg",
       "directUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/The_launch_of_the_SpaceX_Starship_6_rocket_seen_from_the_space_station_%28iss072e220043%29.jpg/1920px-The_launch_of_the_SpaceX_Starship_6_rocket_seen_from_the_space_station_%28iss072e220043%29.jpg"
@@ -9538,16 +10176,30 @@
       "directUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/ISS072-E-220068.jpg/1920px-ISS072-E-220068.jpg"
     },
     {
-      "kind": "image",
-      "flight": 6,
-      "file": "flight-images/F6-3.webp",
-      "pageUrl": "https://commons.wikimedia.org/wiki/File:Starship_Sixth_Flight_Test_From_SpaceX_(CIRA_2024-11-19).png",
-      "directUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Starship_Sixth_Flight_Test_From_SpaceX_%28CIRA_2024-11-19%29.png"
-    },
-    {
       "kind": "video",
       "flight": 6,
       "url": "https://x.com/SpaceX/status/1857622520154960080"
+    },
+    {
+      "kind": "image",
+      "flight": 7,
+      "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/1880652100696469583",
+      "directUrl": "https://pbs.twimg.com/media/GhlqUIrbYAA0GT_.jpg?name=large"
+    },
+    {
+      "kind": "image",
+      "flight": 7,
+      "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/1880655580823773354",
+      "directUrl": "https://pbs.twimg.com/media/GhluEiaacAAt0Za.jpg?name=large"
+    },
+    {
+      "kind": "image",
+      "flight": 7,
+      "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/1880661166395158694",
+      "directUrl": "https://pbs.twimg.com/media/GhlzMxJbEAAgx1w.jpg?name=large"
     },
     {
       "kind": "video",
@@ -9557,16 +10209,23 @@
     {
       "kind": "image",
       "flight": 8,
-      "file": "flight-images/F8-1.webp",
-      "pageUrl": "https://commons.wikimedia.org/wiki/File:ISS072-E-757516.jpg",
-      "directUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/ISS072-E-757516.jpg/1920px-ISS072-E-757516.jpg"
+      "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/1898512022951874665",
+      "directUrl": "https://pbs.twimg.com/media/GljebvTaYAEC3Pk.jpg?name=large"
     },
     {
       "kind": "image",
       "flight": 8,
-      "file": "flight-images/F8-2.webp",
-      "pageUrl": "https://commons.wikimedia.org/wiki/File:SpaceX%E2%80%99s_Eighth_Starship_Launch_and_Reentry_(CIRA_2025-03-06).png",
-      "directUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1a/SpaceX%E2%80%99s_Eighth_Starship_Launch_and_Reentry_%28CIRA_2025-03-06%29.png"
+      "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/1898513213794525244",
+      "directUrl": "https://pbs.twimg.com/media/GljfrJbaYAA03pM.jpg?name=large"
+    },
+    {
+      "kind": "image",
+      "flight": 8,
+      "file": "flight-images/F8-1.webp",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File:ISS072-E-757516.jpg",
+      "directUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/ISS072-E-757516.jpg/1920px-ISS072-E-757516.jpg"
     },
     {
       "kind": "video",
@@ -9574,9 +10233,37 @@
       "url": "https://x.com/SpaceX/status/1896909928381768044"
     },
     {
+      "kind": "image",
+      "flight": 9,
+      "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/1927567126224593279",
+      "directUrl": "https://pbs.twimg.com/media/GsAXstrXcAA8LnB.jpg?name=large"
+    },
+    {
+      "kind": "image",
+      "flight": 9,
+      "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/1928826217853235394",
+      "directUrl": "https://pbs.twimg.com/media/GsSRMmqaMAIG5cr.jpg?name=large"
+    },
+    {
       "kind": "video",
       "flight": 9,
       "url": "https://x.com/SpaceX/status/1925929228232474849"
+    },
+    {
+      "kind": "image",
+      "flight": 10,
+      "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/1960535661984817592",
+      "directUrl": "https://pbs.twimg.com/media/GzU2dePWMAAJXgO.jpg?name=large"
+    },
+    {
+      "kind": "image",
+      "flight": 10,
+      "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/1961165064666312956",
+      "directUrl": "https://pbs.twimg.com/media/Gzdw3Y5WIAALuh7.jpg?name=large"
     },
     {
       "kind": "video",
@@ -9584,9 +10271,58 @@
       "url": "https://x.com/SpaceX/status/1960178606212063307"
     },
     {
+      "kind": "image",
+      "flight": 11,
+      "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/1978172905717453205",
+      "directUrl": "https://pbs.twimg.com/media/G3PhrgYW0AAvaOl.jpg?name=large"
+    },
+    {
+      "kind": "image",
+      "flight": 11,
+      "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/1979261047182635135",
+      "directUrl": "https://pbs.twimg.com/media/G3e_SH2XMAAlqLd.jpg?name=large"
+    },
+    {
+      "kind": "image",
+      "flight": 11,
+      "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/1979285350167253058",
+      "directUrl": "https://pbs.twimg.com/media/G3fVb8VWgAABTw1.jpg?name=large"
+    },
+    {
       "kind": "video",
       "flight": 11,
       "url": "https://x.com/SpaceX/status/1972796063359647955"
+    },
+    {
+      "kind": "image",
+      "flight": 12,
+      "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/2058005949466501590",
+      "directUrl": "https://pbs.twimg.com/media/HI-A85lXgAA1txM.jpg?name=large"
+    },
+    {
+      "kind": "image",
+      "flight": 12,
+      "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/2058304809044750467",
+      "directUrl": "https://pbs.twimg.com/media/HJCQXuOWkAAF3rY.jpg?name=large"
+    },
+    {
+      "kind": "image",
+      "flight": 12,
+      "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/2058305552866775118",
+      "directUrl": "https://pbs.twimg.com/media/HJCR-PuXMAAGnt1.jpg?name=large"
+    },
+    {
+      "kind": "image",
+      "flight": 12,
+      "file": "flight-images/F12-1.webp",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File:Ship_39_in_Megabay_2,_Boca_Chica_TX.jpg",
+      "directUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Ship_39_in_Megabay_2%2C_Boca_Chica_TX.jpg/1920px-Ship_39_in_Megabay_2%2C_Boca_Chica_TX.jpg"
     },
     {
       "kind": "video",
@@ -9594,14 +10330,77 @@
       "url": "https://x.com/SpaceX/status/2057843268038082848"
     },
     {
+      "kind": "image",
+      "flight": 13,
+      "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/2081088918703759549",
+      "directUrl": "https://pbs.twimg.com/media/HOGCJc7WoAAMPvM.jpg?name=large"
+    },
+    {
+      "kind": "image",
+      "flight": 13,
+      "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/2081894924291654060",
+      "directUrl": "https://pbs.twimg.com/media/HORgGTxWAAEBoSV.jpg?name=large"
+    },
+    {
+      "kind": "image",
+      "flight": 13,
+      "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/2082186658162626898",
+      "directUrl": "https://pbs.twimg.com/media/HOVpVmlWAAADPDg.jpg?name=large"
+    },
+    {
       "kind": "video",
       "flight": 13,
       "url": "https://x.com/i/broadcasts/1AJEmmYdMDnJL"
     },
     {
+      "kind": "image",
+      "flight": 14,
+      "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/2104654998034690329",
+      "directUrl": "https://pbs.twimg.com/media/HTU8eCGWMAADqQ6.jpg?name=large"
+    },
+    {
+      "kind": "image",
+      "flight": 14,
+      "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/2106090316747207047",
+      "directUrl": "https://pbs.twimg.com/media/HTpV0zqXYAAxnFD.jpg?name=large"
+    },
+    {
       "kind": "video",
       "flight": 14,
       "url": "https://x.com/i/broadcasts/1qxvvenMPMQxB"
+    },
+    {
+      "kind": "image",
+      "flight": 15,
+      "file": null,
+      "pageUrl": "https://www.spacex.com/launches/starship-flight-15",
+      "directUrl": "https://sxcontent9668.azureedge.us/cms-assets/assets/Flight_15_Website_Desktop_1_7111645b6d.png"
+    },
+    {
+      "kind": "image",
+      "flight": 15,
+      "file": "flight-images/F15-1.webp",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File:SpaceX_Starbase_Launch_Site_Early_2026.jpg",
+      "directUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/SpaceX_Starbase_Launch_Site_Early_2026.jpg/1920px-SpaceX_Starbase_Launch_Site_Early_2026.jpg"
+    },
+    {
+      "kind": "image",
+      "flight": 16,
+      "file": "flight-images/F16-1.webp",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File:Artemis_III_Crew_Visits_Launch_Complex_39A_(NHQ20260903_admin_0002).jpg",
+      "directUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Artemis_III_Crew_Visits_Launch_Complex_39A_%28NHQ20260903_admin_0002%29.jpg/1920px-Artemis_III_Crew_Visits_Launch_Complex_39A_%28NHQ20260903_admin_0002%29.jpg"
+    },
+    {
+      "kind": "image",
+      "flight": 16,
+      "file": "flight-images/F16-2.webp",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File:Kennedy_Space_Center,_Launch_Complex_39A.jpg",
+      "directUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Kennedy_Space_Center%2C_Launch_Complex_39A.jpg/1920px-Kennedy_Space_Center%2C_Launch_Complex_39A.jpg"
     }
   ],
   "existingSiteMedia": [
@@ -9632,6 +10431,6 @@
   ],
   "dedupe": {
     "byUrl": "no duplicates",
-    "perceptual": "pHash/dHash compared across all new images and the 6 existing site images; minimum pHash distance 20 (duplicates are typically <10); visually checked. Crops/variants of site images (Starship-IFT2-ascent crops, Mechzilla catch crop, IFT-5 ignition, IFT-11 liftoff, iss072e220161) excluded."
+    "perceptual": "pHash/dHash compared across all new images and the 6 existing site images; minimum pHash distance 16 (F11-1 vs site v3, checked visually: different photos); duplicates are typically <10. Crops of chosen images (e.g. Ship 39 in Megabay 2 (cropped)) and same-content GOES GIF/WebM variants excluded. Crops/variants of site images (Starship-IFT2-ascent crops, Mechzilla catch crop, IFT-5 ignition, IFT-11 liftoff, iss072e220161) excluded."
   }
 }
