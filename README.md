@@ -1,6 +1,6 @@
 # Steam Machine Game Radar
 
-Personal static page of isometric ARPGs, survivors-likes, and arcade shooters picked for Tycho's Steam Machine.
+The radar now has 20 genres with the top 50 games each, 10 per page, and loads its data from `games.json` and `data/`.
 
 Live at https://tychop.github.io/steam-game-radar/
 
