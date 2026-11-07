@@ -605,16 +605,22 @@ input[type="search"]:focus, select:focus, .era button:focus-visible, .launch-tog
 #list {
   display: flex;
   flex-direction: column;
-  gap: 2.75rem;
+  gap: 2.5rem;
   margin-top: 2rem;
 }
 
+/* Exactly one separator between consecutive flights: a top rule on the next card.
+   Never pair it with a bottom rule on the previous card. */
 .launch {
-  border-top: 2px solid #4a4a4a;
+  border: 0;
   border-bottom: 0;
-  padding-top: 0.35rem;
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
 }
-.launch + .launch { border-top-width: 2px; }
+.launch + .launch {
+  border-top: 1px solid #3d3d3d;
+}
 
 .launch-toggle {
   display: grid;
@@ -626,9 +632,16 @@ input[type="search"]:focus, select:focus, .era button:focus-visible, .launch-tog
   padding: 1.45rem 0;
   background: transparent;
   border: 0;
+  border-bottom: 0;
+  box-shadow: none;
   color: inherit;
   text-align: left;
   cursor: pointer;
+}
+.launch > h3 {
+  margin: 0;
+  border: 0;
+  box-shadow: none;
 }
 .launch-toggle:hover { color: #fff; }
 .launch-toggle:hover .launch-date { color: #fff; }
@@ -799,7 +812,31 @@ input[type="search"]:focus, select:focus, .era button:focus-visible, .launch-tog
   margin-top: 0.3rem;
 }
 
-.launch-body { padding: 0.35rem 0 3.25rem; }
+.launch-body {
+  padding: 0.35rem 0 0;
+  border: 0;
+  border-bottom: 0;
+  box-shadow: none;
+}
+
+.launch-body > :last-child {
+  margin-bottom: 0;
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* No trailing rule on the last chunk / last row inside an open flight card. */
+.launch-body > .facts > div:last-child,
+.launch-body .sources > li:last-child,
+.launch-body .tl-list > .tl-row:last-child,
+.launch-body .tl-row:last-child,
+.launch-body .credits > li:last-child,
+.launch-body > .block:last-child,
+.launch-body > .split:last-child,
+.launch-body > .uncertain:last-child,
+.launch-body > .cost-detail:last-child {
+  border-bottom: 0;
+}
 
 .launch-body > .summary {
   margin: 0 0 0.35rem;
@@ -925,14 +962,18 @@ input[type="search"]:focus, select:focus, .era button:focus-visible, .launch-tog
   border: 0;
 }
 
-.manifest { list-style: none; margin: 0; padding: 0; }
-.manifest li {
-  padding: 1.6rem 0;
-  border-top: 1px solid var(--line);
-  border-bottom: 0;
+.manifest {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
 }
-.manifest li:first-child { border-top: 0; }
-.manifest li + li { border-top: 1px solid var(--line); }
+.manifest li {
+  padding: 0;
+  border: 0;
+}
 .manifest .when {
   margin: 0 0 0.4rem;
   color: var(--muted);
