@@ -75,8 +75,8 @@
   var mediaClaims = {};
 
   Promise.all([
-    fetch("flights.json").then(function (r) { if (!r.ok) throw new Error("flights"); return r.json(); }),
-    fetch("flight-details.json").then(function (r) { if (!r.ok) throw new Error("details"); return r.json(); }),
+    fetch("flights.json", { cache: "no-cache" }).then(function (r) { if (!r.ok) throw new Error("flights"); return r.json(); }),
+    fetch("flight-details.json", { cache: "no-cache" }).then(function (r) { if (!r.ok) throw new Error("details"); return r.json(); }),
   ])
     .then(function (pair) {
       var data = pair[0];
