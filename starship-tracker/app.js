@@ -369,21 +369,43 @@
   function timelineHtml(detail) {
     var items = detail && detail.timeline;
     if (!items || !items.length) return "";
-    var rows = items.slice().sort(function (a, b) {
+    var sorted = items.slice().sort(function (a, b) {
       return (a.sortSec == null ? 1e12 : a.sortSec) - (b.sortSec == null ? 1e12 : b.sortSec);
-    }).map(function (row) {
-      var cls = "tl-row status-" + esc(row.status || "ok");
-      if (row.status === "anomaly") cls += " is-anomaly";
-      return '<li class="' + cls + '">' +
-        '<div class="tl-times"><span class="tl-planned">' + esc(row.planned || "—") + '</span>' +
-        '<span class="tl-actual">' + esc(row.actual || "—") + "</span></div>" +
-        '<div class="tl-body"><strong>' + esc(row.event) + "</strong>" +
-        (row.note ? '<p class="fine">' + esc(row.note) + "</p>" : "") +
-        '<p class="meta">' + esc(row.status || "") + "</p></div></li>";
+    });
+    var expandable = 0;
+    var rows = sorted.map(function (row, index) {
+      var note = row.note ? String(row.note).trim() : "";
+      var hasDetail = !!note;
+      if (hasDetail) expandable += 1;
+      var status = row.status || "";
+      var isAnomaly = status === "anomaly";
+      var cls = "tl-row" + (isAnomaly ? " is-anomaly" : "") + (hasDetail ? " has-detail" : " is-static");
+      var statusCls = "tl-status" + (isAnomaly ? " is-anomaly" : status === "ok" ? " is-ok" : "");
+      var statusText = isAnomaly ? "anomaly" : status === "ok" ? "ok" : status || "—";
+      var summaryInner =
+        '<span class="tl-planned">' + esc(row.planned || "—") + "</span>" +
+        '<span class="tl-actual">' + esc(row.actual || "—") + "</span>" +
+        '<span class="tl-title">' + esc(row.event || "Event") + "</span>" +
+        '<span class="' + statusCls + '">' + esc(statusText) + "</span>";
+      var summary;
+      if (hasDetail) {
+        var panelId = "tl-detail-" + (detail.n || "x") + "-" + index;
+        summary =
+          '<button type="button" class="tl-summary" aria-expanded="false" aria-controls="' + panelId + '">' +
+          summaryInner +
+          '<span class="tl-chev" aria-hidden="true"></span></button>' +
+          '<div class="tl-detail" id="' + panelId + '" hidden><p class="fine">' + esc(note) + "</p></div>";
+      } else {
+        summary = '<div class="tl-summary is-static">' + summaryInner + "</div>";
+      }
+      return '<li class="' + cls + '">' + summary + "</li>";
     }).join("");
-    return '<section class="block timeline"><h4>Mission timeline</h4>' +
-      '<p class="fine">Planned vs actual T+ times. Anomaly rows are highlighted.</p>' +
-      '<div class="tl-head"><span>Planned</span><span>Actual</span><span>Event</span></div>' +
+    var tools = expandable
+      ? '<button type="button" class="tl-expand-all" data-expanded="false">Expand all</button>'
+      : "";
+    return '<section class="block timeline"><div class="tl-heading"><h4>Mission timeline</h4>' + tools + "</div>" +
+      '<p class="fine">Planned vs actual T+ times. Click a row with a chevron for notes. Anomaly rows stay highlighted.</p>' +
+      '<div class="tl-head" aria-hidden="true"><span>Planned</span><span>Actual</span><span>Event</span><span>Status</span><span></span></div>' +
       '<ol class="tl-list">' + rows + "</ol></section>";
   }
 
@@ -1018,6 +1040,25 @@
       event.preventDefault();
     });
     document.getElementById("flights").addEventListener("click", function (event) {
+      var expandAllBtn = event.target.closest(".tl-expand-all");
+      if (expandAllBtn) {
+        var timeline = expandAllBtn.closest(".timeline");
+        if (!timeline) return;
+        var open = expandAllBtn.getAttribute("data-expanded") !== "true";
+        timeline.querySelectorAll(".tl-summary[aria-expanded]").forEach(function (btn) {
+          setTimelineRow(btn, open);
+        });
+        expandAllBtn.setAttribute("data-expanded", open ? "true" : "false");
+        expandAllBtn.textContent = open ? "Collapse all" : "Expand all";
+        return;
+      }
+      var tlSummary = event.target.closest(".tl-summary[aria-expanded]");
+      if (tlSummary) {
+        var next = tlSummary.getAttribute("aria-expanded") !== "true";
+        setTimelineRow(tlSummary, next);
+        syncTimelineExpandAll(tlSummary.closest(".timeline"));
+        return;
+      }
       var button = event.target.closest(".launch-toggle");
       if (!button) return;
       var n = Number(button.getAttribute("data-flight"));
@@ -1040,6 +1081,27 @@
       state.compareB = Number(event.target.value);
       renderCompare(data);
     });
+  }
+
+  function setTimelineRow(button, open) {
+    if (!button) return;
+    button.setAttribute("aria-expanded", open ? "true" : "false");
+    var row = button.closest(".tl-row");
+    if (row) row.classList.toggle("is-open", open);
+    var detail = button.nextElementSibling;
+    if (detail && detail.classList.contains("tl-detail")) detail.hidden = !open;
+  }
+
+  function syncTimelineExpandAll(timeline) {
+    if (!timeline) return;
+    var btn = timeline.querySelector(".tl-expand-all");
+    if (!btn) return;
+    var toggles = timeline.querySelectorAll(".tl-summary[aria-expanded]");
+    var allOpen = toggles.length > 0 && Array.prototype.every.call(toggles, function (el) {
+      return el.getAttribute("aria-expanded") === "true";
+    });
+    btn.setAttribute("data-expanded", allOpen ? "true" : "false");
+    btn.textContent = allOpen ? "Collapse all" : "Expand all";
   }
 
   function startCountdown(flight) {
