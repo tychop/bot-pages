@@ -1,9 +1,9 @@
 {
   "lastUpdated": "2026-11-07",
-  "lastUpdatedLabel": "Sat 7 Nov 2026, 15:00 CET",
+  "lastUpdatedLabel": "Sat 7 Nov 2026, 17:10 CET",
   "title": "Starship Flight Tracker",
   "intro": "Every SpaceX Starship integrated flight, from Flight 1 in April 2023 to the upcoming Flight 15, with goals, results, causes, lessons and costs. Times are Netherlands time (CET/CEST).",
-  "overview": "14 flights flown, the last one the first to reach orbit; the next is planned as the first catch of both stages.",
+  "overview": "14 flights flown, the last one the first to reach orbit; the next is planned as the first catch of both stages after about 14 orbits.",
   "timezoneNote": "Times: local Netherlands time (CET = UTC+1 in winter, CEST = UTC+2 in summer). Starbase is on CDT (UTC-5) in summer and CST (UTC-6) in winter: CET = CST + 7 h.",
   "summary": {
     "flownLabel": "Flights flown",
@@ -11,16 +11,16 @@
     "outcomeLabel": "Successes / failures",
     "outcomeNote": "Wikipedia's launch-outcome classification",
     "catchesLabel": "Booster tower catches",
-    "nextShort": "NET 13 Nov",
-    "nextDetail": "Time and FAA licence pending"
+    "nextShort": "23:45 CET",
+    "nextDetail": "NET 13 Nov · 75-min window · FAA pending"
   },
   "next": {
     "aboutFlight": 15,
     "status": "Awaiting FAA licence modification",
     "timezone": "Starbase is on CST (UTC−6); CET = CST + 7 h",
-    "plan": "Orbit, then return both stages to Starbase for the first double tower catch",
+    "plan": "About 14 orbits at ~275 km over ~22+ hours, then catch both stages at Starbase",
     "hardware": "Both vehicles static-fired late October; ship rehearsed in the chopsticks in September",
-    "callout": "Liftoff time is not announced yet and SpaceX has no Flight 15 mission page up. The time will be added here in CET once it is published."
+    "callout": "SpaceX’s Flight 15 page lists a NET Friday 13 Nov 2026 window opening at 23:45 CET (4:45 p.m. CT), lasting 75 minutes. Still pending FAA approval."
   },
   "laterCaption": "Dates are no-earlier-than targets and will move.",
   "laterNote": "Musk has also said the flight after Flight 15 could refly the caught vehicles; NASASpaceflight expects Flight 16 to use B23 and S43 instead.",
@@ -471,9 +471,9 @@
         "Severe forward flap damage during reentry"
       ],
       "lessons": [
-        "Forward flaps redesigned and moved leeward",
         "Heat-shield tile and backup layer improvements",
-        "Cleared the way for a tower catch on Flight 5"
+        "Cleared the way for a tower catch on Flight 5",
+        "Forward flap redesign moved leeward came with the Block 2 ship on Flight 7, not on Flight 5"
       ],
       "boosterOutcome": "Controlled splashdown (Gulf)",
       "shipOutcome": "Controlled splashdown (Indian Ocean)",
@@ -715,7 +715,7 @@
         "First Block 2 ship",
         "First catch of a second booster"
       ],
-      "faa": "Mishap investigation; closed 28 Mar 2025 (announced 31 Mar). Most probable cause: vibrations stronger than expected stressed propulsion hardware, causing leaks and fires in the aft section.",
+      "faa": "Mishap investigation; closed 28 Mar 2025 (announced 31 Mar) with 11 corrective actions. Most probable cause: vibrations stronger than expected stressed propulsion hardware, causing leaks and fires in the aft section.",
       "cost": "No flight-specific figure. Outside estimate: about $100M per launch (BBC, Aug 2025, reporting on this era of test flights).",
       "uncertain": [],
       "sources": [
@@ -1366,17 +1366,18 @@
       "n": 15,
       "era": "V3",
       "result": "Upcoming",
-      "dateLocal": "NET Fri 13 Nov 2026, time not announced",
-      "utc": "Starbase on CST: CET = CST + 7 h",
+      "dateLocal": "NET Fri 13 Nov 2026, 23:45 CET",
+      "utc": "22:45 UTC (4:45 p.m. CST); 75-minute window",
       "booster": "Booster 22",
       "ship": "Ship 42",
       "boosterShort": "B22",
       "shipShort": "S42",
       "version": "V3 (Block 3)",
       "pad": "Starbase OLP-2 (Pad 2)",
-      "summary": "Planned first attempt to catch both the booster and the ship at the tower.",
+      "summary": "Official SpaceX target: first attempt to catch both stages after about 14 orbits at ~275 km. Pending FAA licence modification.",
       "goals": [
         "Orbital flight with payload (reported as Starlink Group 31-2)",
+        "About 14 orbits at ~275 km over a ~22+ hour flight",
         "Booster return and tower catch: first V3 and first Pad 2 catch",
         "Ship deorbit, return to Starbase and first ever ship catch"
       ],
@@ -1385,7 +1386,8 @@
       "lessons": [
         "B22 full-duration 33-engine static fire 25 Oct",
         "S42 single-engine deorbit-simulation burn 26 Oct, 60 s six-engine firing 27 Oct",
-        "S42 chopstick fit and quick-disconnect tests at Pad 2 on 11–12 Sep"
+        "S42 chopstick fit and quick-disconnect tests at Pad 2 on 11–12 Sep",
+        "SpaceX Flight 15 page published a 75-minute window opening 23:45 CET; FAA approval still pending"
       ],
       "boosterOutcome": "Planned: tower catch",
       "shipOutcome": "Planned: tower catch",
@@ -1395,7 +1397,7 @@
       "faa": "Licence modification for return to launch site and ship catch not yet issued (FAA Starship page, as of early Nov).",
       "cost": "No public estimate.",
       "uncertain": [
-        "Date is from SpaceX VP Kiko Dontchev at UP.Summit (via Eric Berger / Teslarati); FAA planning slides earlier showed 8 and 12 Nov.",
+        "FAA licence modification for return to launch site and ship catch not yet issued (as of this update).",
         "Payload name comes from Wikipedia and is not confirmed by SpaceX.",
         "Musk put first-catch odds at 50–60% (Sep) and 'more likely than not' (Oct)."
       ],
