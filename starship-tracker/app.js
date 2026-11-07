@@ -220,6 +220,32 @@
     return "<div><dt>" + esc(label) + "</dt><dd>" + esc(value) + "</dd></div>";
   }
 
+  function millions(amount) {
+    return Math.round(Number(amount) / 1e6);
+  }
+
+  function formatUsd(amount) {
+    return "$" + millions(amount) + "M";
+  }
+
+  function formatRange(estimate) {
+    if (!estimate) return "";
+    return "≈ $" + millions(estimate.low) + "–" + millions(estimate.high) + "M";
+  }
+
+  function estimateBlock(estimate, narrative) {
+    if (!estimate) return "";
+    return '<section class="cost-detail">' +
+      '<div class="cost-detail-head"><h4>Estimated direct cost</h4><span class="estimate">Estimate</span></div>' +
+      '<p class="cost-range">' + esc(formatRange(estimate)) + "</p>" +
+      '<p class="cost-midline">Midpoint ' + esc(formatUsd(estimate.mid)) +
+      (estimate.confidence ? " · Confidence: " + esc(estimate.confidence) : "") + "</p>" +
+      (estimate.basis ? '<p class="cost-basis">' + esc(estimate.basis) + "</p>" : "") +
+      (narrative ? '<p class="cost-narrative"><span class="lbl">Programme note</span> ' + esc(narrative) + "</p>" : "") +
+      sourceList(estimate.sources, "Estimate sources") +
+      "</section>";
+  }
+
   function flightCard(flight) {
     var open = isOpen(flight.n);
     var photo = photoFor(flight);
@@ -227,12 +253,14 @@
     var goalsTitle = flight.result === "Upcoming" ? "Planned goals" : "Mission goals";
     var lessonsTitle = flight.result === "Upcoming" ? "Preparation so far" : "Lessons and changes afterwards";
     var resultCls = flight.result === "Failure" ? " failure" : "";
+    var range = formatRange(flight.costEstimate);
     var marks = '<span class="tag' + resultCls + '">' + esc(flight.result) + "</span>" +
       (uncertain ? '<span class="tag uncertain">Uncertain</span>' : "");
     var body =
       '<figure class="launch-photo"><img src="' + esc(photo.src) + '" alt="' + esc(photo.alt) + '" style="object-position:' + esc(photo.position) + '" loading="lazy" decoding="async">' +
       "<figcaption>" + shortCredit(photo) + "</figcaption></figure>" +
       '<p class="summary">' + esc(flight.summary) + "</p>" +
+      estimateBlock(flight.costEstimate, flight.cost) +
       '<dl class="facts">' +
       prop("Liftoff", (flight.dateLocal || "") + (flight.utc ? " (" + flight.utc + ")" : "")) +
       prop("Booster / ship", (flight.booster || "") + " / " + (flight.ship || "")) +
@@ -241,7 +269,6 @@
       prop("Booster outcome", flight.boosterOutcome) +
       prop("Ship outcome", flight.shipOutcome) +
       prop("FAA", flight.faa) +
-      prop("Cost estimate", flight.cost) +
       "</dl>" +
       bullets(goalsTitle, flight.goals) +
       splitBlock(flight.achieved, flight.failed) +
@@ -258,6 +285,7 @@
       '<h3><button type="button" class="launch-toggle" data-flight="' + flight.n + '" aria-expanded="' + open + '" aria-controls="flight-panel-' + flight.n + '">' +
       '<span class="launch-n">' + esc(flight.n) + "</span>" +
       '<span class="launch-main"><span class="launch-date">' + esc(flight.dateLocal) + "</span>" +
+      (range ? '<span class="launch-cost">' + esc(range) + ' <span class="estimate-inline">Estimate</span></span>' : "") +
       '<span class="launch-sub">' + esc(flight.boosterShort) + " / " + esc(flight.shipShort) + " · " + esc(flight.era) + "</span></span>" +
       '<span class="launch-marks">' + marks + "</span>" +
       '<span class="chev" aria-hidden="true"></span>' +
@@ -374,6 +402,7 @@
     var brief = data.next && Number(data.next.aboutFlight) === upcoming.n ? data.next : null;
     var vehicles = (upcoming.boosterShort || upcoming.booster) + " / " + (upcoming.shipShort || upcoming.ship);
     var meta = [vehicles, upcoming.version, upcoming.pad].filter(Boolean).join("  ·  ");
+    var range = formatRange(upcoming.costEstimate);
     return '<section class="hero" id="next">' +
       '<img class="hero-img" src="' + esc(photo.src) + '" alt="' + esc(photo.alt) + '" style="object-position:' + esc(photo.position) + '">' +
       '<div class="hero-shade"></div>' +
@@ -381,6 +410,7 @@
       '<h1 class="hero-flight"><span>Flight</span> ' + esc(upcoming.n) + "</h1>" +
       '<p class="hero-date">' + esc(upcoming.dateLocal) + "</p>" +
       '<p class="hero-vehicles">' + esc(meta) + "</p>" +
+      (range ? '<p class="hero-cost">' + esc(range) + ' <span class="estimate-inline">Estimate</span></p>' : "") +
       (brief && brief.status ? '<p class="status-line">' + esc(brief.status) + "</p>" : "") +
       '<div id="countdown" hidden></div>' +
       "</div>" +
@@ -403,6 +433,7 @@
     }
     return '<section class="band" id="next-detail"><div class="wrap"><p class="kicker">Up next</p><h2>Flight ' + esc(upcoming.n) + "</h2>" +
       (upcoming.summary ? '<p class="lede">' + esc(upcoming.summary) + "</p>" : "") +
+      estimateBlock(upcoming.costEstimate, upcoming.cost) +
       '<dl class="facts">' + rows.join("") + "</dl>" +
       (brief && brief.callout ? '<p class="callout">' + esc(brief.callout) + "</p>" : "") +
       "</div></section>";
@@ -410,10 +441,17 @@
 
   function laterHtml(data) {
     var cards = (data.later || []).map(function (item) {
+      var range = formatRange(item.costEstimate);
       return '<li><p class="when">' + esc(item.when) + "</p><h3>" + esc(item.mission) + "</h3>" +
+        (range ? '<p class="manifest-cost">' + esc(range) + ' <span class="estimate-inline">Estimate</span></p>' : "") +
         '<p class="meta">' + esc(item.vehicles) + " · " + esc(item.site) + "</p>" +
         "<p>" + esc(item.note) + "</p>" +
-        '<p class="meta">Basis: ' + esc(item.confidence) + "</p></li>";
+        (item.costEstimate && item.costEstimate.basis ? '<p class="cost-basis">' + esc(item.costEstimate.basis) + "</p>" : "") +
+        '<p class="meta">Basis: ' + esc(item.confidence) +
+        (item.costEstimate && item.costEstimate.confidence ? " · Cost confidence: " + esc(item.costEstimate.confidence) : "") +
+        "</p>" +
+        sourceList(item.costEstimate && item.costEstimate.sources, "Estimate sources") +
+        "</li>";
     }).join("");
     return '<section class="band" id="later"><div class="wrap"><h2>Later on the manifest</h2>' +
       (data.laterCaption ? '<p class="lede">' + esc(data.laterCaption) + "</p>" : "") +
@@ -423,13 +461,54 @@
   }
 
   function costsHtml(data) {
-    var cards = (data.costs || []).map(function (cost) {
+    var flights = data.flights || [];
+    var maxHigh = flights.reduce(function (max, flight) {
+      return Math.max(max, flight.costEstimate ? flight.costEstimate.high : 0);
+    }, 0) || 1;
+    var flownMids = flights.filter(function (flight) {
+      return flight.result !== "Upcoming" && flight.costEstimate;
+    }).reduce(function (sum, flight) { return sum + flight.costEstimate.mid; }, 0);
+    var chart = flights.slice().sort(function (a, b) { return a.n - b.n; }).map(function (flight) {
+      var estimate = flight.costEstimate;
+      if (!estimate) return "";
+      var projected = flight.result === "Upcoming";
+      var left = (estimate.low / maxHigh) * 100;
+      var width = ((estimate.high - estimate.low) / maxHigh) * 100;
+      var mid = (estimate.mid / maxHigh) * 100;
+      return '<div class="cost-row' + (projected ? " is-projected" : " is-flown") + '">' +
+        '<span class="cost-n">F' + esc(flight.n) + "</span>" +
+        '<div class="cost-track" role="img" aria-label="' + esc("Flight " + flight.n + " " + formatRange(estimate) + (projected ? ", projected" : ", flown")) + '">' +
+        '<span class="cost-band" style="left:' + left + "%;width:" + width + '%"></span>' +
+        '<span class="cost-fill" style="width:' + mid + '%"></span>' +
+        "</div>" +
+        '<span class="cost-val">' + esc(formatRange(estimate)) + "</span></div>";
+    }).join("");
+    var method = data.costMethod || {};
+    var inputs = (method.inputs || []).map(function (input) {
+      var href = typeof input.href === "string" && /^https:\/\//.test(input.href) ? input.href : "";
+      var title = esc(input.source_title || input.claim || "Source");
+      return '<li><p class="input-claim">' + esc(input.claim || "") + "</p>" +
+        '<p class="input-value">' + esc(input.value || "") + "</p>" +
+        (href
+          ? '<p class="meta"><a href="' + esc(href) + '" target="_blank" rel="noopener noreferrer">' + title + "</a></p>"
+          : '<p class="meta">' + title + "</p>") +
+        "</li>";
+    }).join("");
+    var programme = (data.costs || []).map(function (cost) {
       return '<li><p class="cost-figure">' + esc(cost.figure) + ' <span class="estimate">Estimate</span></p>' +
         "<p>" + esc(cost.covers) + '</p><p class="meta">Source: ' + esc(cost.source) + "</p></li>";
     }).join("");
-    return '<section class="band" id="costs"><div class="wrap"><h2>What it costs</h2>' +
-      '<ol class="manifest">' + cards + "</ol>" +
-      (data.costNote ? '<p class="note">' + esc(data.costNote) + "</p>" : "") +
+    return '<section class="band" id="costs"><div class="wide"><h2>What it costs</h2>' +
+      '<p class="lede">Rough per-flight direct-launch estimates. Not SpaceX prices, invoices or audited accounts. <span class="estimate-inline">Estimate</span></p>' +
+      '<div class="cost-summary"><p class="cost-range">Flown flights ≈ ' + esc(formatUsd(flownMids)) +
+      ' cumulative midpoint</p><p class="fine">Sum of midpoints for Flights 1–14. Low–high bars show the planning range for each flight.</p></div>' +
+      '<div class="cost-legend"><span class="legend-flown">Flown</span><span class="legend-projected">Projected</span></div>' +
+      '<div class="cost-chart">' + chart + "</div>" +
+      (method.text ? '<section class="method"><h3>Method</h3><p class="note">' + esc(method.text) + "</p></section>" : "") +
+      (inputs ? '<section class="method-inputs"><h3>Model inputs</h3><ol class="manifest">' + inputs + "</ol></section>" : "") +
+      '<section class="programme"><h3>Programme totals</h3>' +
+      (data.costNote ? '<p class="fine">' + esc(data.costNote) + "</p>" : "") +
+      '<ol class="manifest">' + programme + "</ol></section>" +
       "</div></section>";
   }
 

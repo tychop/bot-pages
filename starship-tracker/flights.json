@@ -82,7 +82,25 @@
       "vehicles": "B23 / S43 (likely)",
       "site": "KSC LC-39A, Florida",
       "note": "Would be the first Starship launch from Florida.",
-      "confidence": "FAA planning slide; not a SpaceX date"
+      "confidence": "FAA planning slide; not a SpaceX date",
+      "costEstimate": {
+        "low": 70000000,
+        "high": 140000000,
+        "mid": 105000000,
+        "currency": "USD",
+        "basis": "Forecast assumes NEW B23/S43 V3 stack, as tracker suggests; Florida pad construction and Starlink payload excluded; if BOTH Flight 15 stages instead reflight, conditional $10–40M incremental scenario replaces this estimate.",
+        "confidence": "low",
+        "sources": [
+          {
+            "title": "Payload cost-model anchor",
+            "href": "https://www.fool.com/investing/2024/02/11/the-secret-to-spacexs-10-million-starship-and-how/"
+          },
+          {
+            "title": "Existing tracker manifest; hardware assignment unconfirmed",
+            "href": "https://tychop.github.io/bot-pages/starship-tracker/flights.json"
+          }
+        ]
+      }
     },
     {
       "when": "Q1 2027",
@@ -90,7 +108,16 @@
       "vehicles": "V3",
       "site": "TBA",
       "note": "Prototype depot launched as the transfer target.",
-      "confidence": "NASA HLS presentation (IAC 2026)"
+      "confidence": "NASA HLS presentation (IAC 2026)",
+      "costEstimate": {
+        "low": 50000000,
+        "high": 170000000,
+        "mid": 110000000,
+        "currency": "USD",
+        "basis": "ONE depot/target Earth launch: specialised new V3 ship $35–75M + reused/new booster $10–80M + operations $5–15M; unconfirmed hardware; not a whole transfer campaign.",
+        "confidence": "low",
+        "sources": []
+      }
     },
     {
       "when": "Q1 2027",
@@ -98,7 +125,16 @@
       "vehicles": "V3",
       "site": "TBA",
       "note": "Prototype tanker transfers propellant to the target.",
-      "confidence": "NASA HLS presentation (IAC 2026)"
+      "confidence": "NASA HLS presentation (IAC 2026)",
+      "costEstimate": {
+        "low": 50000000,
+        "high": 170000000,
+        "mid": 110000000,
+        "currency": "USD",
+        "basis": "ONE tanker/chaser Earth launch: specialised new V3 ship $35–75M + reused/new booster $10–80M + operations $5–15M; unconfirmed hardware; not a whole transfer campaign.",
+        "confidence": "low",
+        "sources": []
+      }
     },
     {
       "when": "Mid 2027",
@@ -106,7 +142,16 @@
       "vehicles": "V3 / HLS prototype",
       "site": "TBA",
       "note": "Orion docks with a Starship in low Earth orbit.",
-      "confidence": "Wikipedia, citing NASA"
+      "confidence": "Wikipedia, citing NASA",
+      "costEstimate": {
+        "low": 80000000,
+        "high": 250000000,
+        "mid": 165000000,
+        "currency": "USD",
+        "basis": "ONE HLS docking-prototype Earth launch: specialised ship $65–150M + reused/new booster $10–80M + operations $5–20M; highly speculative; excludes depot/tankers, R&D, Orion/SLS and rest of mission.",
+        "confidence": "low",
+        "sources": []
+      }
     },
     {
       "when": "Q4 2027",
@@ -114,7 +159,16 @@
       "vehicles": "HLS + tankers",
       "site": "TBA",
       "note": "Landing on the Moon and return to lunar orbit; needs many tanker flights.",
-      "confidence": "Wikipedia, citing NASA"
+      "confidence": "Wikipedia, citing NASA",
+      "costEstimate": {
+        "low": 80000000,
+        "high": 250000000,
+        "mid": 165000000,
+        "currency": "USD",
+        "basis": "ONE HLS lander Earth launch: specialised ship $65–150M + reused/new booster $10–80M + operations $5–20M; highly speculative; excludes depot/tankers, R&D, Orion/SLS and rest of mission.",
+        "confidence": "low",
+        "sources": []
+      }
     },
     {
       "when": "2028",
@@ -122,7 +176,16 @@
       "vehicles": "HLS",
       "site": "TBA",
       "note": "First crewed lunar landing since Apollo 17.",
-      "confidence": "Wikipedia, citing NASA"
+      "confidence": "Wikipedia, citing NASA",
+      "costEstimate": {
+        "low": 80000000,
+        "high": 250000000,
+        "mid": 165000000,
+        "currency": "USD",
+        "basis": "ONE HLS lander Earth launch: specialised ship $65–150M + reused/new booster $10–80M + operations $5–20M; highly speculative; excludes depot/tankers, R&D, Orion/SLS and rest of mission.",
+        "confidence": "low",
+        "sources": []
+      }
     }
   ],
   "flights": [
@@ -184,7 +247,33 @@
           "site": "cnbc.com",
           "href": "https://www.cnbc.com/2023/04/29/elon-musk-spacexs-starship-costing-about-2-billion-this-year.html"
         }
-      ]
+      ],
+      "costEstimate": {
+        "low": 90000000,
+        "high": 150000000,
+        "mid": 120000000,
+        "currency": "USD",
+        "basis": "New early V1 B7/S24, 39 installed Raptors; prototype build allowance; both stages lost. Pad rebuild/damage excluded; no reliable itemised public figure.",
+        "confidence": "low",
+        "sources": [
+          {
+            "title": "Payload cost-model anchor (via Motley Fool)",
+            "href": "https://www.fool.com/investing/2024/02/11/the-secret-to-spacexs-10-million-starship-and-how/"
+          },
+          {
+            "title": "Payload Research: engine/full-stack estimates",
+            "href": "https://payloadspace.com/payload-research-starships-progress-and-exploring-expendable-configuration/"
+          },
+          {
+            "title": "BBC: ~$100M test-flight cross-check",
+            "href": "https://www.bbc.com/news/articles/cly69z9lwnno"
+          },
+          {
+            "title": "SpaceX: Flight 1 recap",
+            "href": "https://www.spacex.com/launches/starship-flight-test"
+          }
+        ]
+      }
     },
     {
       "n": 2,
@@ -241,7 +330,33 @@
           "site": "en.wikipedia.org",
           "href": "https://en.wikipedia.org/wiki/Starship_flight_test_2"
         }
-      ]
+      ],
+      "costEstimate": {
+        "low": 90000000,
+        "high": 150000000,
+        "mid": 120000000,
+        "currency": "USD",
+        "basis": "New early V1 B9/S25, 39 installed Raptors; prototype build allowance; both stages lost.",
+        "confidence": "low",
+        "sources": [
+          {
+            "title": "Payload cost-model anchor (via Motley Fool)",
+            "href": "https://www.fool.com/investing/2024/02/11/the-secret-to-spacexs-10-million-starship-and-how/"
+          },
+          {
+            "title": "Payload Research: engine/full-stack estimates",
+            "href": "https://payloadspace.com/payload-research-starships-progress-and-exploring-expendable-configuration/"
+          },
+          {
+            "title": "BBC: ~$100M test-flight cross-check",
+            "href": "https://www.bbc.com/news/articles/cly69z9lwnno"
+          },
+          {
+            "title": "SpaceX: Flight 2 recap",
+            "href": "https://www.spacex.com/launches/starship-flight-2"
+          }
+        ]
+      }
     },
     {
       "n": 3,
@@ -302,7 +417,33 @@
           "site": "en.wikipedia.org",
           "href": "https://en.wikipedia.org/wiki/Starship_flight_test_3"
         }
-      ]
+      ],
+      "costEstimate": {
+        "low": 75000000,
+        "high": 125000000,
+        "mid": 100000000,
+        "currency": "USD",
+        "basis": "New B10/S28 stack, V1, 39 installed Raptors; both stages unrecovered; no separate engine-loss surcharge.",
+        "confidence": "low",
+        "sources": [
+          {
+            "title": "Payload cost-model anchor (via Motley Fool)",
+            "href": "https://www.fool.com/investing/2024/02/11/the-secret-to-spacexs-10-million-starship-and-how/"
+          },
+          {
+            "title": "Payload Research: engine/full-stack estimates",
+            "href": "https://payloadspace.com/payload-research-starships-progress-and-exploring-expendable-configuration/"
+          },
+          {
+            "title": "BBC: ~$100M test-flight cross-check",
+            "href": "https://www.bbc.com/news/articles/cly69z9lwnno"
+          },
+          {
+            "title": "SpaceX: Flight 3 recap",
+            "href": "https://www.spacex.com/launches/starship-flight-3"
+          }
+        ]
+      }
     },
     {
       "n": 4,
@@ -355,7 +496,33 @@
           "site": "en.wikipedia.org",
           "href": "https://en.wikipedia.org/wiki/Starship_flight_test_4"
         }
-      ]
+      ],
+      "costEstimate": {
+        "low": 75000000,
+        "high": 125000000,
+        "mid": 100000000,
+        "currency": "USD",
+        "basis": "New B11/S29 stack, V1, 39 installed Raptors; both stages unrecovered; no separate engine-loss surcharge.",
+        "confidence": "low",
+        "sources": [
+          {
+            "title": "Payload cost-model anchor (via Motley Fool)",
+            "href": "https://www.fool.com/investing/2024/02/11/the-secret-to-spacexs-10-million-starship-and-how/"
+          },
+          {
+            "title": "Payload Research: engine/full-stack estimates",
+            "href": "https://payloadspace.com/payload-research-starships-progress-and-exploring-expendable-configuration/"
+          },
+          {
+            "title": "BBC: ~$100M test-flight cross-check",
+            "href": "https://www.bbc.com/news/articles/cly69z9lwnno"
+          },
+          {
+            "title": "SpaceX: Flight 4 recap",
+            "href": "https://www.spacex.com/launches/starship-flight-4"
+          }
+        ]
+      }
     },
     {
       "n": 5,
@@ -404,7 +571,33 @@
           "site": "en.wikipedia.org",
           "href": "https://en.wikipedia.org/wiki/Starship_flight_test_5"
         }
-      ]
+      ],
+      "costEstimate": {
+        "low": 75000000,
+        "high": 125000000,
+        "mid": 100000000,
+        "currency": "USD",
+        "basis": "New B12/S30 stack, V1, 39 installed Raptors; booster caught, ship lost; no immediate catch credit.",
+        "confidence": "low",
+        "sources": [
+          {
+            "title": "Payload cost-model anchor (via Motley Fool)",
+            "href": "https://www.fool.com/investing/2024/02/11/the-secret-to-spacexs-10-million-starship-and-how/"
+          },
+          {
+            "title": "Payload Research: engine/full-stack estimates",
+            "href": "https://payloadspace.com/payload-research-starships-progress-and-exploring-expendable-configuration/"
+          },
+          {
+            "title": "BBC: ~$100M test-flight cross-check",
+            "href": "https://www.bbc.com/news/articles/cly69z9lwnno"
+          },
+          {
+            "title": "SpaceX: Flight 5 recap",
+            "href": "https://www.spacex.com/launches/starship-flight-5"
+          }
+        ]
+      }
     },
     {
       "n": 6,
@@ -458,7 +651,33 @@
           "site": "en.wikipedia.org",
           "href": "https://en.wikipedia.org/wiki/Starship_flight_test_6"
         }
-      ]
+      ],
+      "costEstimate": {
+        "low": 75000000,
+        "high": 125000000,
+        "mid": 100000000,
+        "currency": "USD",
+        "basis": "New B13/S31 stack, V1, 39 installed Raptors; both stages unrecovered; no separate engine-loss surcharge.",
+        "confidence": "low",
+        "sources": [
+          {
+            "title": "Payload cost-model anchor (via Motley Fool)",
+            "href": "https://www.fool.com/investing/2024/02/11/the-secret-to-spacexs-10-million-starship-and-how/"
+          },
+          {
+            "title": "Payload Research: engine/full-stack estimates",
+            "href": "https://payloadspace.com/payload-research-starships-progress-and-exploring-expendable-configuration/"
+          },
+          {
+            "title": "BBC: ~$100M test-flight cross-check",
+            "href": "https://www.bbc.com/news/articles/cly69z9lwnno"
+          },
+          {
+            "title": "SpaceX: Flight 6 recap",
+            "href": "https://www.spacex.com/launches/starship-flight-6"
+          }
+        ]
+      }
     },
     {
       "n": 7,
@@ -510,7 +729,33 @@
           "site": "en.wikipedia.org",
           "href": "https://en.wikipedia.org/wiki/Starship_flight_test_7"
         }
-      ]
+      ],
+      "costEstimate": {
+        "low": 75000000,
+        "high": 125000000,
+        "mid": 100000000,
+        "currency": "USD",
+        "basis": "New B14/S33 stack, V2 ship/V1 booster, 39 installed Raptors; booster caught, ship lost; no immediate catch credit. One booster engine flight-proven; within rounding.",
+        "confidence": "low",
+        "sources": [
+          {
+            "title": "Payload cost-model anchor (via Motley Fool)",
+            "href": "https://www.fool.com/investing/2024/02/11/the-secret-to-spacexs-10-million-starship-and-how/"
+          },
+          {
+            "title": "Payload Research: engine/full-stack estimates",
+            "href": "https://payloadspace.com/payload-research-starships-progress-and-exploring-expendable-configuration/"
+          },
+          {
+            "title": "BBC: ~$100M test-flight cross-check",
+            "href": "https://www.bbc.com/news/articles/cly69z9lwnno"
+          },
+          {
+            "title": "SpaceX: Flight 7 recap",
+            "href": "https://www.spacex.com/launches/starship-flight-7"
+          }
+        ]
+      }
     },
     {
       "n": 8,
@@ -561,7 +806,33 @@
           "site": "en.wikipedia.org",
           "href": "https://en.wikipedia.org/wiki/Starship_flight_test_8"
         }
-      ]
+      ],
+      "costEstimate": {
+        "low": 75000000,
+        "high": 125000000,
+        "mid": 100000000,
+        "currency": "USD",
+        "basis": "New B15/S34 stack, V2 ship/V1 booster, 39 installed Raptors; booster caught, ship lost; no immediate catch credit.",
+        "confidence": "low",
+        "sources": [
+          {
+            "title": "Payload cost-model anchor (via Motley Fool)",
+            "href": "https://www.fool.com/investing/2024/02/11/the-secret-to-spacexs-10-million-starship-and-how/"
+          },
+          {
+            "title": "Payload Research: engine/full-stack estimates",
+            "href": "https://payloadspace.com/payload-research-starships-progress-and-exploring-expendable-configuration/"
+          },
+          {
+            "title": "BBC: ~$100M test-flight cross-check",
+            "href": "https://www.bbc.com/news/articles/cly69z9lwnno"
+          },
+          {
+            "title": "SpaceX: Flight 8 recap",
+            "href": "https://www.spacex.com/launches/starship-flight-8"
+          }
+        ]
+      }
     },
     {
       "n": 9,
@@ -620,7 +891,37 @@
           "site": "arstechnica.com",
           "href": "https://arstechnica.com/space/2025/08/spacex-reveals-why-the-last-two-starships-failed-as-another-launch-draws-near/"
         }
-      ]
+      ],
+      "costEstimate": {
+        "low": 35000000,
+        "high": 75000000,
+        "mid": 55000000,
+        "currency": "USD",
+        "basis": "Reflown B14-2 + new V2 S35; booster build already charged on Flight 7; refurbishment/replacement engines included; no stages recovered.",
+        "confidence": "low",
+        "sources": [
+          {
+            "title": "Payload cost-model anchor (via Motley Fool)",
+            "href": "https://www.fool.com/investing/2024/02/11/the-secret-to-spacexs-10-million-starship-and-how/"
+          },
+          {
+            "title": "Payload Research: engine/full-stack estimates",
+            "href": "https://payloadspace.com/payload-research-starships-progress-and-exploring-expendable-configuration/"
+          },
+          {
+            "title": "BBC: ~$100M test-flight cross-check",
+            "href": "https://www.bbc.com/news/articles/cly69z9lwnno"
+          },
+          {
+            "title": "SpaceX: Flight 9 recap",
+            "href": "https://www.spacex.com/launches/starship-flight-9"
+          },
+          {
+            "title": "Space.com: 29 flight-proven booster engines",
+            "href": "https://www.space.com/space-exploration/launches-spacecraft/spacex-fires-up-used-super-heavy-booster-ahead-of-9th-starship-test-flight-photos-videos"
+          }
+        ]
+      }
     },
     {
       "n": 10,
@@ -679,7 +980,33 @@
           "site": "bbc.com",
           "href": "https://www.bbc.com/news/articles/cly69z9lwnno"
         }
-      ]
+      ],
+      "costEstimate": {
+        "low": 75000000,
+        "high": 125000000,
+        "mid": 100000000,
+        "currency": "USD",
+        "basis": "New B16/S37 stack, V2 ship/V1 booster, 39 installed Raptors; both stages unrecovered; no separate engine-loss surcharge.",
+        "confidence": "low",
+        "sources": [
+          {
+            "title": "Payload cost-model anchor (via Motley Fool)",
+            "href": "https://www.fool.com/investing/2024/02/11/the-secret-to-spacexs-10-million-starship-and-how/"
+          },
+          {
+            "title": "Payload Research: engine/full-stack estimates",
+            "href": "https://payloadspace.com/payload-research-starships-progress-and-exploring-expendable-configuration/"
+          },
+          {
+            "title": "BBC: ~$100M test-flight cross-check",
+            "href": "https://www.bbc.com/news/articles/cly69z9lwnno"
+          },
+          {
+            "title": "SpaceX: Flight 10 recap",
+            "href": "https://www.spacex.com/launches/starship-flight-10"
+          }
+        ]
+      }
     },
     {
       "n": 11,
@@ -733,7 +1060,33 @@
           "site": "en.wikipedia.org",
           "href": "https://en.wikipedia.org/wiki/Starship_flight_test_11"
         }
-      ]
+      ],
+      "costEstimate": {
+        "low": 35000000,
+        "high": 75000000,
+        "mid": 55000000,
+        "currency": "USD",
+        "basis": "Reflown B15-2 + new V2 S38; booster build already charged on Flight 8; refurbishment/replacement engines included; no stages recovered.",
+        "confidence": "low",
+        "sources": [
+          {
+            "title": "Payload cost-model anchor (via Motley Fool)",
+            "href": "https://www.fool.com/investing/2024/02/11/the-secret-to-spacexs-10-million-starship-and-how/"
+          },
+          {
+            "title": "Payload Research: engine/full-stack estimates",
+            "href": "https://payloadspace.com/payload-research-starships-progress-and-exploring-expendable-configuration/"
+          },
+          {
+            "title": "BBC: ~$100M test-flight cross-check",
+            "href": "https://www.bbc.com/news/articles/cly69z9lwnno"
+          },
+          {
+            "title": "SpaceX: Flight 11 recap",
+            "href": "https://www.spacex.com/launches/starship-flight-11"
+          }
+        ]
+      }
     },
     {
       "n": 12,
@@ -800,7 +1153,33 @@
           "site": "faa.gov",
           "href": "https://www.faa.gov/newsroom/statements/general-statements"
         }
-      ]
+      ],
+      "costEstimate": {
+        "low": 70000000,
+        "high": 140000000,
+        "mid": 105000000,
+        "currency": "USD",
+        "basis": "New V3 B19/S39, 39 installed Raptor 3 engines; V3 cost uncertainty; modified Starlinks excluded.",
+        "confidence": "low",
+        "sources": [
+          {
+            "title": "Payload cost-model anchor (via Motley Fool)",
+            "href": "https://www.fool.com/investing/2024/02/11/the-secret-to-spacexs-10-million-starship-and-how/"
+          },
+          {
+            "title": "Payload Research: engine/full-stack estimates",
+            "href": "https://payloadspace.com/payload-research-starships-progress-and-exploring-expendable-configuration/"
+          },
+          {
+            "title": "BBC: ~$100M test-flight cross-check",
+            "href": "https://www.bbc.com/news/articles/cly69z9lwnno"
+          },
+          {
+            "title": "SpaceX: Flight 12 recap",
+            "href": "https://www.spacex.com/launches/starship-flight-12"
+          }
+        ]
+      }
     },
     {
       "n": 13,
@@ -864,7 +1243,33 @@
           "site": "nasaspaceflight.com",
           "href": "https://www.nasaspaceflight.com/2026/07/starship-flight-13-flight/"
         }
-      ]
+      ],
+      "costEstimate": {
+        "low": 70000000,
+        "high": 140000000,
+        "mid": 105000000,
+        "currency": "USD",
+        "basis": "New V3 B20/S40, 39 installed Raptor 3 engines; ship recovered for inspection, not reflown; 20 Starlink V3 payloads excluded.",
+        "confidence": "low",
+        "sources": [
+          {
+            "title": "Payload cost-model anchor (via Motley Fool)",
+            "href": "https://www.fool.com/investing/2024/02/11/the-secret-to-spacexs-10-million-starship-and-how/"
+          },
+          {
+            "title": "Payload Research: engine/full-stack estimates",
+            "href": "https://payloadspace.com/payload-research-starships-progress-and-exploring-expendable-configuration/"
+          },
+          {
+            "title": "BBC: ~$100M test-flight cross-check",
+            "href": "https://www.bbc.com/news/articles/cly69z9lwnno"
+          },
+          {
+            "title": "SpaceX: Flight 13 recap",
+            "href": "https://www.spacex.com/launches/starship-flight-13"
+          }
+        ]
+      }
     },
     {
       "n": 14,
@@ -929,7 +1334,33 @@
           "site": "nasaspaceflight.com",
           "href": "https://www.nasaspaceflight.com/2026/09/starship-14-orbit-flight-15/"
         }
-      ]
+      ],
+      "costEstimate": {
+        "low": 70000000,
+        "high": 140000000,
+        "mid": 105000000,
+        "currency": "USD",
+        "basis": "New V3 B21/S41, 39 installed Raptor 3 engines; both stages unrecovered; 26 Starlink V3 payloads excluded.",
+        "confidence": "low",
+        "sources": [
+          {
+            "title": "Payload cost-model anchor (via Motley Fool)",
+            "href": "https://www.fool.com/investing/2024/02/11/the-secret-to-spacexs-10-million-starship-and-how/"
+          },
+          {
+            "title": "Payload Research: engine/full-stack estimates",
+            "href": "https://payloadspace.com/payload-research-starships-progress-and-exploring-expendable-configuration/"
+          },
+          {
+            "title": "BBC: ~$100M test-flight cross-check",
+            "href": "https://www.bbc.com/news/articles/cly69z9lwnno"
+          },
+          {
+            "title": "SpaceX: Flight 14 recap",
+            "href": "https://www.spacex.com/launches/starship-flight-14"
+          }
+        ]
+      }
     },
     {
       "n": 15,
@@ -989,7 +1420,128 @@
           "site": "nasaspaceflight.com",
           "href": "https://www.nasaspaceflight.com/2026/10/spacex-flight-15-16-milestones/"
         }
-      ]
+      ],
+      "costEstimate": {
+        "low": 70000000,
+        "high": 140000000,
+        "mid": 105000000,
+        "currency": "USD",
+        "basis": "New V3 B22/S42, 39 installed Raptor 3 engines; forecast assumes new hardware; catches do not erase build cost; payload excluded.",
+        "confidence": "low",
+        "sources": [
+          {
+            "title": "Payload cost-model anchor (via Motley Fool)",
+            "href": "https://www.fool.com/investing/2024/02/11/the-secret-to-spacexs-10-million-starship-and-how/"
+          },
+          {
+            "title": "Payload Research: engine/full-stack estimates",
+            "href": "https://payloadspace.com/payload-research-starships-progress-and-exploring-expendable-configuration/"
+          },
+          {
+            "title": "BBC: ~$100M test-flight cross-check",
+            "href": "https://www.bbc.com/news/articles/cly69z9lwnno"
+          },
+          {
+            "title": "NextSpaceflight: Flight 15",
+            "href": "https://www.nextspaceflight.com/launches/details/8403/"
+          }
+        ]
+      }
     }
-  ]
+  ],
+  "costMethod": {
+    "text": "Rough direct launch-resource estimates, NOT SpaceX figures, audited accounts, customer prices or statistical confidence intervals. USD, rounded planning ranges on a 2024–26 reference-cost basis; no inflation normalisation. Model = newly built flight hardware (engines already included) + refurbishment/replacement hardware on reflights + direct test/launch operations and propellant. Charge a new vehicle to its first flight, never again on reflight; no residual-value credit merely for catching it. This acquisition-at-first-use convention makes Flights 9/11 cheaper but is not depreciation or net hardware-loss accounting. Payload’s $90M full-stack/$63M booster/$27M ship benchmark, as reported by Motley Fool, is an extrapolative post-R&D production estimate, NOT measured prototype expenditure; BBC’s ~$100M/test-launch estimate is only a sanity check. Our component bounds and prototype allowances are explicit editorial assumptions, not quotes. Early V1: booster $55–85M + ship $30–45M + operations $5–20M = $90–150M. Other V1/V2 new stacks: $45–70M + $25–40M + $5–15M = $75–125M. Reused V1 booster/V2 ship: ship $25–40M + refurbishment/replacement engines $5–20M + operations $5–15M = $35–75M. V3 new: booster $40–80M + ship $25–45M + operations $5–15M = $70–140M; no claimed verified Raptor 3 saving. Future specialised transfer vehicle: ship $35–75M + booster $10–80M (reuse versus new) + operations $5–15M = $50–170M. HLS prototype/lander: ship $65–150M + booster $10–80M + operations $5–20M = $80–250M, an especially weak scenario allowance, not an independently measured HLS unit cost. All ranges exclude programme R&D, factory/pad construction, extraordinary ground damage/rebuild, payload manufacture (including Starlink), investigation/third-party compensation and non-Starship vehicles. HLS rows are ONE lander/prototype Earth launch each, NOT complete missions: depot and many tanker launches are extra. A future ordinary V3 flight with both vehicles genuinely reflown would instead be a $10–40M incremental scenario (refurbishment/replacements $5–25M + operations $5–15M), contingent on demonstrated reuse. All confidence low; future/HLS lower still. Midpoint is arithmetic, not a best forecast.",
+    "inputs": [
+      {
+        "claim": "External full-stack manufacturing benchmark; not actual prototype spend",
+        "value": "$90M total; $63M booster / $27M ship; engines $39M, structure/plumbing/tiles $13M, avionics $3M, labour $35M",
+        "source_title": "Motley Fool, 11 Feb 2024, reporting Payload Research",
+        "href": "https://www.fool.com/investing/2024/02/11/the-secret-to-spacexs-10-million-starship-and-how/"
+      },
+      {
+        "claim": "Independent Raptor estimate and future full-stack projection",
+        "value": "~$1M/Raptor; below $100M/full stack in the next couple of years, post-R&D",
+        "source_title": "Payload Research, 20 Mar 2024",
+        "href": "https://payloadspace.com/payload-research-starships-progress-and-exploring-expendable-configuration/"
+      },
+      {
+        "claim": "Outside test-flight estimate used as cross-check only",
+        "value": "~$100M per launch; not a SpaceX quote or invoice",
+        "source_title": "BBC, 27 Aug 2025",
+        "href": "https://www.bbc.com/news/articles/cly69z9lwnno"
+      },
+      {
+        "claim": "Mature operating cost aspiration, NOT achieved present cost",
+        "value": "$900,000 propellant; ~$2M operating cost, Musk in Nov 2019",
+        "source_title": "Space.com, 6 Nov 2019",
+        "href": "https://www.space.com/spacex-starship-flight-passenger-cost-elon-musk.html"
+      },
+      {
+        "claim": "Cost decline forecast, NOT verified Raptor 3 price",
+        "value": "$250,000/Raptor target; $35M future stack assumes major labour/production gains",
+        "source_title": "Motley Fool reporting Payload projections",
+        "href": "https://www.fool.com/investing/2024/02/11/the-secret-to-spacexs-10-million-starship-and-how/"
+      },
+      {
+        "claim": "Flight 9 hardware reuse",
+        "value": "29 of 33 booster engines flight-proven; 4 not flight-proven; 6 ship engines installed",
+        "source_title": "Space.com reporting SpaceX static fire, Apr 2025",
+        "href": "https://www.space.com/space-exploration/launches-spacecraft/spacex-fires-up-used-super-heavy-booster-ahead-of-9th-starship-test-flight-photos-videos"
+      },
+      {
+        "claim": "V3 engine counts and payload scope",
+        "value": "Flight 12: 33 booster + 6 ship engines; 20 simulators + 2 modified Starlinks",
+        "source_title": "SpaceX Flight 12 recap",
+        "href": "https://www.spacex.com/launches/starship-flight-12"
+      },
+      {
+        "claim": "Payload scope excluded from launch-only totals",
+        "value": "Flight 14: 26 Starlink V3 satellites deployed",
+        "source_title": "SpaceX Flight 14 recap",
+        "href": "https://www.spacex.com/launches/starship-flight-14"
+      },
+      {
+        "claim": "Lunar missions require many launches, not just lander launch",
+        "value": "Depot plus more than 10 tankers before Artemis III/IV; not included in HLS launch rows",
+        "source_title": "NASA OIG IG-26-004, March 2026",
+        "href": "https://oig.nasa.gov/wp-content/uploads/2026/03/final-report-ig-26-004-nasas-management-of-the-human-landing-system-contracts.pdf"
+      },
+      {
+        "claim": "MODEL ASSUMPTION: early prototype uplift, not sourced SpaceX price",
+        "value": "Booster $55–85M; ship $30–45M; direct operations $5–20M",
+        "source_title": "Editorial bounds around Payload benchmark; cited source is anchor only",
+        "href": "https://www.fool.com/investing/2024/02/11/the-secret-to-spacexs-10-million-starship-and-how/"
+      },
+      {
+        "claim": "MODEL ASSUMPTION: ordinary V1/V2 bounds",
+        "value": "New booster $45–70M; new ship $25–40M; direct operations $5–15M; engines already included",
+        "source_title": "Editorial bounds around Payload benchmark; cited source is anchor only",
+        "href": "https://www.fool.com/investing/2024/02/11/the-secret-to-spacexs-10-million-starship-and-how/"
+      },
+      {
+        "claim": "MODEL ASSUMPTION: reuse allowance, not measured refurbishment cost",
+        "value": "$5–20M refurbishment/replacement hardware plus new ship and operations; previous booster build not charged again",
+        "source_title": "Editorial assumption; cited source establishes Flight 9 reuse only",
+        "href": "https://www.spacex.com/launches/starship-flight-9"
+      },
+      {
+        "claim": "MODEL ASSUMPTION: V3 uncertainty; no verified engine cost decline",
+        "value": "New booster $40–80M; ship $25–45M; operations $5–15M",
+        "source_title": "Editorial bounds; cited source establishes V3 design only",
+        "href": "https://www.spacex.com/launches/starship-flight-12"
+      },
+      {
+        "claim": "MODEL ASSUMPTION: specialised future launch scenarios",
+        "value": "Transfer ship $35–75M or HLS ship $65–150M; booster $10–80M; operations $5–15M or $5–20M",
+        "source_title": "Editorial scenario allowances, NOT NASA HLS unit prices; cited source establishes architecture only",
+        "href": "https://oig.nasa.gov/wp-content/uploads/2026/03/final-report-ig-26-004-nasas-management-of-the-human-landing-system-contracts.pdf"
+      },
+      {
+        "claim": "MODEL ASSUMPTION: future fully reflown V3 alternative",
+        "value": "$5–25M refurbishment/replacements + $5–15M operations = $10–40M, conditional on both-stage reuse",
+        "source_title": "Editorial scenario, not achieved cost; cited source provides ambition context only",
+        "href": "https://www.space.com/spacex-starship-flight-passenger-cost-elon-musk.html"
+      }
+    ]
+  }
 }
