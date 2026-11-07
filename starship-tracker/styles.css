@@ -352,7 +352,17 @@ h1, h2, h3, h4, p { overflow-wrap: break-word; }
 }
 .hero-credit a { color: #fff; }
 
-.band { padding: 5.5rem 0 1rem; }
+.band {
+  padding: 7.5rem 0 6rem;
+  border-top: 1px solid #3d3d3d;
+  background: #000;
+}
+#overview,
+#compare,
+#costs,
+#credits {
+  background: #070707;
+}
 
 .wrap {
   width: min(1120px, calc(100% - (var(--pad) * 2)));
@@ -365,13 +375,18 @@ h1, h2, h3, h4, p { overflow-wrap: break-word; }
 }
 
 h2 {
-  margin: 0 0 1.75rem;
+  margin: 0 0 2.1rem;
+  padding-bottom: 1.05rem;
+  border-bottom: 1px solid #3d3d3d;
   font-family: var(--display);
   font-weight: 600;
-  font-size: clamp(2.6rem, 6vw, 4.4rem);
-  line-height: 0.9;
-  letter-spacing: 0.02em;
+  font-size: clamp(3rem, 7vw, 5rem);
+  line-height: 0.88;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
+}
+.band .kicker {
+  margin-bottom: 0.85rem;
 }
 
 h3 { margin: 0; font-weight: 600; }
@@ -584,8 +599,19 @@ input[type="search"]:focus, select:focus, .era button:focus-visible, .launch-tog
 
 .showing { margin: 1.6rem 0 0; }
 
-.launch { border-top: 1px solid var(--line); }
-.launch:last-child { border-bottom: 1px solid var(--line); }
+#list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.75rem;
+  margin-top: 2rem;
+}
+
+.launch {
+  border-top: 2px solid #4a4a4a;
+  border-bottom: 1px solid #2e2e2e;
+  padding-top: 0.35rem;
+}
+.launch + .launch { border-top-width: 2px; }
 
 .launch-toggle {
   display: grid;
@@ -594,7 +620,7 @@ input[type="search"]:focus, select:focus, .era button:focus-visible, .launch-tog
   align-items: center;
   width: 100%;
   min-height: 6.2rem;
-  padding: 1.15rem 0;
+  padding: 1.45rem 0;
   background: transparent;
   border: 0;
   color: inherit;
@@ -632,9 +658,9 @@ input[type="search"]:focus, select:focus, .era button:focus-visible, .launch-tog
 }
 
 .cost-detail {
-  margin: 0 0 1.75rem;
-  padding: 1.15rem 0 0.2rem;
-  border-top: 1px solid var(--line);
+  margin: 0;
+  padding: 0;
+  border-top: 0;
 }
 .cost-detail-head {
   display: flex;
@@ -769,7 +795,32 @@ input[type="search"]:focus, select:focus, .era button:focus-visible, .launch-tog
   margin-top: 0.3rem;
 }
 
-.launch-body { padding: 0 0 2.5rem; }
+.launch-body { padding: 0.35rem 0 3.25rem; }
+
+.launch-body > .summary {
+  margin: 0 0 0.35rem;
+}
+
+.launch-body > .cost-detail,
+.launch-body > .facts,
+.launch-body > .block,
+.launch-body > .split,
+.launch-body > .uncertain {
+  margin: 3.5rem 0 0;
+  padding-top: 1.85rem;
+  border-top: 1px solid #353535;
+}
+
+.launch-body > .block h4,
+.launch-body > .split h4,
+.launch-body > .uncertain h4,
+.launch-body > .cost-detail h4 {
+  margin-top: 0;
+}
+
+.launch-body > .block.anomaly {
+  border-top-color: var(--fail);
+}
 
 .launch-photo {
   position: relative;
@@ -811,9 +862,9 @@ input[type="search"]:focus, select:focus, .era button:focus-visible, .launch-tog
 .block h4, .split h4, .uncertain h4 {
   margin: 0 0 0.75rem;
   font-family: var(--display);
-  font-size: 1.35rem;
+  font-size: 1.45rem;
   font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 .block ul, .split ul, .uncertain ul { margin: 0; padding-left: 1.15rem; }
@@ -823,14 +874,11 @@ input[type="search"]:focus, select:focus, .era button:focus-visible, .launch-tog
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
-  margin: 2rem 0;
 }
 .failed h4 { color: var(--fail); }
 
 .uncertain {
   margin: 2rem 0;
-  padding-top: 1rem;
-  border-top: 1px solid #fff;
 }
 
 .sources, .credits {
@@ -989,8 +1037,23 @@ input[type="search"]:focus, select:focus, .era button:focus-visible, .launch-tog
   .launch-main { grid-area: main; }
   .launch-marks { grid-area: marks; justify-content: flex-start; }
   .chev { grid-area: chev; margin-top: 0.45rem; }
-  .band { padding-top: 3.75rem; }
-  h2 { margin-bottom: 1.25rem; }
+  .band {
+    padding: 4rem 0 3.5rem;
+  }
+  h2 {
+    margin-bottom: 1.4rem;
+    padding-bottom: 0.85rem;
+    font-size: clamp(2.6rem, 11vw, 3.4rem);
+  }
+  #list { gap: 2rem; margin-top: 1.5rem; }
+  .launch-body > .cost-detail,
+  .launch-body > .facts,
+  .launch-body > .block,
+  .launch-body > .split,
+  .launch-body > .uncertain {
+    margin-top: 2.85rem;
+    padding-top: 1.5rem;
+  }
 }
 
 .gallery { margin-top: 1.75rem; }
