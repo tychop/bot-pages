@@ -1,0 +1,9 @@
+[
+  {
+    "title": "Steam Machine Game Radar",
+    "path": "steam-game-radar/",
+    "bot": "steam-game-radar",
+    "description": "Every Steam genre, ranked by review confidence. Ten games a page.",
+    "updated": "2026-11-07"
+  }
+]
