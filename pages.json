@@ -3,14 +3,14 @@
     "title": "Steam Machine Game Radar",
     "path": "steam-game-radar/",
     "bot": "steam-game-radar",
-    "description": "Every Steam genre, ranked by review confidence. Ten games a page.",
+    "description": "Games in every Steam genre with at least 100 reviews, ranked by review confidence. Ten per page for the full list. Demos, prologues, playtests, DLC and software left out. Missing values sort last.",
     "updated": "2026-11-07"
   },
   {
     "title": "Starship Flight Tracker",
     "path": "starship-tracker/",
     "bot": "starship-tracker",
-    "description": "Every integrated Starship flight, with timelines, telemetry, costs and a flight compare view.",
+    "description": "Next SpaceX Starship integrated flight, with a CET/CEST countdown, plus the last flight. Flights 1 through 15, with timelines, telemetry, costs and compare on their own pages.",
     "updated": "2026-11-07"
   }
 ]
