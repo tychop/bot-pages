@@ -7,7 +7,9 @@
   }
 
   var PAGE = document.body.getAttribute("data-page") || "home";
-  var ASSET_V = "20261108b";
+  var ASSET_V = "20261108c";
+  var openNotesBtn = null;
+  var notesHoverTimer = null;
 
   var NAV = [
     { id: "home", href: "index.html", label: "Home" },
@@ -37,6 +39,7 @@
       S.bindStickyOffsets();
       bindTimelineDelegation();
       bindNavToggle();
+      bindNotesPopovers();
     })
     .catch(function (err) {
       console.error(err);
@@ -133,12 +136,125 @@
     return result === "Failure" ? " failure" : "";
   }
 
+  function notesItems(flight) {
+    return (flight && flight.uncertain) || [];
+  }
+
+  function notesInfoHtml(flight) {
+    var items = notesItems(flight);
+    if (!items.length) return "";
+    var id = "notes-pop-" + flight.n;
+    var list = items.map(function (item) { return "<li>" + S.esc(item) + "</li>"; }).join("");
+    return '<span class="notes-wrap">' +
+      '<button type="button" class="notes-info" aria-label="Notes about this flight" aria-expanded="false" aria-controls="' + id + '" data-flight="' + flight.n + '">' +
+      '<span class="notes-info-glyph" aria-hidden="true">ⓘ</span></button>' +
+      '<div class="notes-popover" id="' + id + '" role="dialog" aria-label="Notes" hidden>' +
+      '<p class="notes-popover-title">Notes</p><ul class="notes-popover-list">' + list + "</ul></div></span>";
+  }
+
   function outcomePairHtml(flight) {
-    var uncertain = flight.uncertain && flight.uncertain.length;
     return '<span class="outcome-pair">' +
       '<span class="tag' + resultClass(flight.result) + '">' + S.esc(flight.result) + "</span>" +
-      (uncertain ? '<span class="tag uncertain">Uncertain</span>' : "") +
+      notesInfoHtml(flight) +
       "</span>";
+  }
+
+  function closeNotesPopover() {
+    if (!openNotesBtn) return;
+    var wrap = openNotesBtn.closest(".notes-wrap");
+    var pop = wrap && wrap.querySelector(".notes-popover");
+    openNotesBtn.setAttribute("aria-expanded", "false");
+    if (pop) {
+      pop.hidden = true;
+      pop.classList.remove("is-fixed");
+      pop.style.top = "";
+      pop.style.left = "";
+      pop.style.right = "";
+      pop.style.bottom = "";
+    }
+    openNotesBtn = null;
+  }
+
+  function positionNotesPopover(btn, pop) {
+    pop.classList.add("is-fixed");
+    pop.style.visibility = "hidden";
+    pop.hidden = false;
+    var pad = 12;
+    var br = btn.getBoundingClientRect();
+    var pr = pop.getBoundingClientRect();
+    var vw = window.innerWidth;
+    var vh = window.innerHeight;
+    var top = br.bottom + 8;
+    if (top + pr.height > vh - pad) {
+      top = Math.max(pad, br.top - pr.height - 8);
+    }
+    var left = br.right - pr.width;
+    if (left < pad) left = pad;
+    if (left + pr.width > vw - pad) left = Math.max(pad, vw - pad - pr.width);
+    pop.style.top = Math.round(top) + "px";
+    pop.style.left = Math.round(left) + "px";
+    pop.style.visibility = "";
+  }
+
+  function openNotesPopover(btn) {
+    if (openNotesBtn && openNotesBtn !== btn) closeNotesPopover();
+    var wrap = btn.closest(".notes-wrap");
+    var pop = wrap && wrap.querySelector(".notes-popover");
+    if (!pop) return;
+    openNotesBtn = btn;
+    btn.setAttribute("aria-expanded", "true");
+    positionNotesPopover(btn, pop);
+  }
+
+  function toggleNotesPopover(btn) {
+    if (openNotesBtn === btn) closeNotesPopover();
+    else openNotesPopover(btn);
+  }
+
+  function bindNotesPopovers() {
+    var main = document.getElementById("main");
+    if (!main || main.getAttribute("data-notes-bound") === "1") return;
+    main.setAttribute("data-notes-bound", "1");
+
+    main.addEventListener("click", function (event) {
+      var btn = event.target.closest(".notes-info");
+      if (btn) {
+        event.preventDefault();
+        event.stopPropagation();
+        toggleNotesPopover(btn);
+        return;
+      }
+      if (openNotesBtn && !event.target.closest(".notes-wrap")) closeNotesPopover();
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") closeNotesPopover();
+    });
+
+    main.addEventListener("mouseover", function (event) {
+      var wrap = event.target.closest(".notes-wrap");
+      if (!wrap) return;
+      var btn = wrap.querySelector(".notes-info");
+      if (!btn) return;
+      if (notesHoverTimer) clearTimeout(notesHoverTimer);
+      notesHoverTimer = setTimeout(function () { openNotesPopover(btn); }, 80);
+    });
+
+    main.addEventListener("mouseout", function (event) {
+      var wrap = event.target.closest(".notes-wrap");
+      if (!wrap) return;
+      var next = event.relatedTarget;
+      if (next && wrap.contains(next)) return;
+      if (notesHoverTimer) clearTimeout(notesHoverTimer);
+      notesHoverTimer = setTimeout(function () {
+        if (openNotesBtn && wrap.contains(openNotesBtn)) closeNotesPopover();
+      }, 160);
+    });
+
+    window.addEventListener("resize", closeNotesPopover);
+    window.addEventListener("scroll", function () {
+      if (openNotesBtn) positionNotesPopover(openNotesBtn, openNotesBtn.closest(".notes-wrap").querySelector(".notes-popover"));
+    }, true);
   }
 
   function livestreamHtml(detail) {
@@ -210,12 +326,14 @@
 
   function lastCard(last) {
     if (!last) return "";
-    return '<a class="last-flight" href="flight.html?n=' + last.n + '">' +
+    return '<div class="last-flight">' +
+      '<a class="last-flight-link" href="flight.html?n=' + last.n + '">' +
       '<p class="eyebrow">Last flight</p>' +
       '<p class="last-n">Flight ' + S.esc(last.n) + "</p>" +
       '<p class="last-meta">' + S.esc(last.dateLocal) + "</p>" +
+      "</a>" +
       '<p class="last-result">' + outcomePairHtml(last) + "</p>" +
-      "</a>";
+      "</div>";
   }
 
   function thumbForFlight(flight) {
@@ -242,14 +360,15 @@
     S.reserveHeroMedia();
     var list = S.sortedFlights(data, true);
     var rows = list.map(function (flight) {
-      return '<a class="flight-row" href="flight.html?n=' + flight.n + '">' +
+      return '<article class="flight-row">' +
+        '<a class="flight-row-link" href="flight.html?n=' + flight.n + '" aria-label="Flight ' + S.esc(flight.n) + '">' +
         thumbForFlight(flight) +
         '<span class="flight-row-n">' + S.esc(flight.n) + "</span>" +
         '<span class="flight-row-main">' +
         '<span class="flight-row-date">' + S.esc(flight.dateLocal) + "</span>" +
         '<span class="flight-row-sub">' + S.esc(flight.boosterShort) + " / " + S.esc(flight.shipShort) +
-        " · " + S.esc(flight.era) + "</span></span>" +
-        '<span class="flight-row-marks">' + outcomePairHtml(flight) + "</span></a>";
+        " · " + S.esc(flight.era) + "</span></span></a>" +
+        '<span class="flight-row-marks">' + outcomePairHtml(flight) + "</span></article>";
     }).join("");
 
     document.getElementById("main").innerHTML =
@@ -300,7 +419,7 @@
       S.splitBlock(flight.achieved, flight.failed) +
       S.bullets(lessonsTitle, flight.lessons) +
       (uncertain
-        ? '<section class="uncertain"><h4>Uncertain or disputed</h4><ul>' +
+        ? '<section class="uncertain notes-block"><h4>Notes</h4><ul>' +
           flight.uncertain.map(function (item) { return "<li>" + S.esc(item) + "</li>"; }).join("") +
           "</ul></section>"
         : "") +
@@ -374,7 +493,7 @@
       '<header class="page-head band-head"><h1>About</h1>' +
       '<p class="lede">' + S.esc(data.intro || "") + "</p></header>" +
       (data.timezoneNote ? '<p class="timezone">' + S.esc(data.timezoneNote) + "</p>" : "") +
-      "<h2>Notes and uncertainties</h2>" +
+      "<h2>Notes</h2>" +
       '<ul class="about-notes">' + notes + "</ul>" +
       S.sourceList(data.indexLinks, "Further reading") +
       "</div></section>" +

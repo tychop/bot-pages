@@ -699,7 +699,6 @@
     var range = formatRange(flight.costEstimate);
     var outcome = '<p class="launch-outcome">' +
       '<span class="tag' + resultCls + '">' + esc(flight.result) + "</span>" +
-      (uncertain ? '<span class="tag uncertain">Uncertain</span>' : "") +
       "</p>";
     var body =
       outcome +
@@ -718,7 +717,7 @@
       splitBlock(flight.achieved, flight.failed) +
       bullets(lessonsTitle, flight.lessons) +
       (uncertain
-        ? '<section class="uncertain"><h4>Uncertain or disputed</h4><ul>' +
+        ? '<section class="uncertain notes-block"><h4>Notes</h4><ul>' +
           flight.uncertain.map(function (item) { return "<li>" + esc(item) + "</li>"; }).join("") +
           "</ul></section>"
         : "") +
@@ -1053,7 +1052,7 @@
   function notesHtml(data) {
     var notes = (data.notes || []).map(function (note) { return "<li>" + esc(note) + "</li>"; }).join("");
     return '<section class="band" id="notes"><div class="wrap">' +
-      bandHeadHtml("<h2>Notes and uncertainties</h2>") +
+      bandHeadHtml("<h2>Notes</h2>") +
       '<ul class="block">' + notes + "</ul>" +
       sourceList(data.indexLinks, "Further reading") +
       "</div></section>";
