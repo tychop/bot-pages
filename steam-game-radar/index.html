@@ -50,6 +50,7 @@ select{background:var(--panel);color:var(--text);border:1px solid var(--line);bo
 .chk input:checked+span{background:rgba(56,225,255,.25);border-color:var(--accent)}
 .chk input:checked+span::after{left:18px;background:var(--accent)}
 .showing{margin-left:auto;color:var(--dim);font-size:14px}
+#results-view>.sel{margin-bottom:20px}
 .grid{display:grid;gap:clamp(16px,1.6vw,28px);grid-template-columns:repeat(auto-fill,minmax(min(100%,400px),1fr))}
 .card{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,border-color .2s,box-shadow .2s}
 .card:hover{transform:translateY(-3px);border-color:#34405c;box-shadow:0 18px 40px -18px rgba(56,225,255,.35)}
@@ -335,13 +336,21 @@ async function draw(){
  // Yield between bounded DOM batches so All never monopolises the UI thread.
  for(let i=0;i<visible.length;i+=100){if(token!==drawToken)return;$('groups').insertAdjacentHTML('beforeend',visible.slice(i,i+100).map(([pos,g])=>pos==='up'?upCard(g):card(g,pos)).join(''));if(visible.length>100){$('showing').textContent=`Rendering ${Math.min(i+100,visible.length).toLocaleString()} of ${visible.length.toLocaleString()}…`;await new Promise(resolve=>setTimeout(resolve,0));}}
  $('pagination').innerHTML=pager(page,pages);
+ if(token!==drawToken)return;
  $('showing').textContent=`${total?((page-1)*PAGE+1).toLocaleString():0}–${Math.min(page*PAGE,total).toLocaleString()} of ${total.toLocaleString()}`;
+ // Finish every replacement list at the top, including non-route filter changes.
+ // Temporarily defeat the global smooth-scroll rule (also in Safari).
+ $('view-title').focus({preventScroll:true});
+ const root=document.documentElement,previousScrollBehavior=root.style.scrollBehavior;
+ root.style.scrollBehavior='auto';
+ window.scrollTo({top:0,left:0,behavior:'instant'});
+ root.style.scrollBehavior=previousScrollBehavior;
  window.dispatchEvent(new Event('radar:render'));
 }
 function jumpTo(v){const r=route(),n=parseInt(v,10);if(n>0)go(r.key==='home'?'all':r.key,n);}
 $('pagination').addEventListener('click',e=>{const b=e.target.closest('[data-page]');if(b&&!b.disabled)jumpTo(b.dataset.page);});
 $('pagination').addEventListener('change',e=>{if(e.target.id==='jump')jumpTo(e.target.value);});
-window.addEventListener('hashchange',()=>{draw().then(()=>$('view-title').focus({preventScroll:true})).catch(showError);});
+window.addEventListener('hashchange',()=>{draw().catch(showError);});
 function showError(e){$('home-view').hidden=true;$('results-view').hidden=false;$('groups').innerHTML='<p class="empty">Unable to load radar data. Please refresh.</p>';console.error(e);}
 // ---- footer: sources, freshness, coverage
 $('about').innerHTML=`<h3>About the data</h3><p>Genres: every Steam tag in Steamworks' Top-level genre, Genre and Sub-genre categories (via <a href="https://srec.ai/stats/tags-frequency-median">SRec</a>), plus the curated Isometric ARPGs list. Feature and descriptor tags such as Singleplayer or Great Soundtrack are not genres. A game appears in every genre whose tag is among its 10 most-voted Steam tags (the curated Isometric ARPGs list needs both the Action RPG and Isometric tags anywhere). Candidates come from SteamSpy tag datasets with at least ${H.minReviews} reviews. Demos, prologues, playtests, DLC and software are removed. No pins or personal exclusions. Clicking a game opens the Steam app, with the web store as a fallback.</p>
