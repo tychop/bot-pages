@@ -7,7 +7,7 @@
   }
 
   var PAGE = document.body.getAttribute("data-page") || "home";
-  var ASSET_V = "20261108a";
+  var ASSET_V = "20261108b";
 
   var NAV = [
     { id: "home", href: "index.html", label: "Home" },
@@ -133,6 +133,14 @@
     return result === "Failure" ? " failure" : "";
   }
 
+  function outcomePairHtml(flight) {
+    var uncertain = flight.uncertain && flight.uncertain.length;
+    return '<span class="outcome-pair">' +
+      '<span class="tag' + resultClass(flight.result) + '">' + S.esc(flight.result) + "</span>" +
+      (uncertain ? '<span class="tag uncertain">Uncertain</span>' : "") +
+      "</span>";
+  }
+
   function livestreamHtml(detail) {
     var v = detail && detail.video;
     if (!v) return "";
@@ -206,7 +214,7 @@
       '<p class="eyebrow">Last flight</p>' +
       '<p class="last-n">Flight ' + S.esc(last.n) + "</p>" +
       '<p class="last-meta">' + S.esc(last.dateLocal) + "</p>" +
-      '<p class="last-result"><span class="tag' + resultClass(last.result) + '">' + S.esc(last.result) + "</span></p>" +
+      '<p class="last-result">' + outcomePairHtml(last) + "</p>" +
       "</a>";
   }
 
@@ -234,7 +242,6 @@
     S.reserveHeroMedia();
     var list = S.sortedFlights(data, true);
     var rows = list.map(function (flight) {
-      var uncertain = flight.uncertain && flight.uncertain.length;
       return '<a class="flight-row" href="flight.html?n=' + flight.n + '">' +
         thumbForFlight(flight) +
         '<span class="flight-row-n">' + S.esc(flight.n) + "</span>" +
@@ -242,10 +249,7 @@
         '<span class="flight-row-date">' + S.esc(flight.dateLocal) + "</span>" +
         '<span class="flight-row-sub">' + S.esc(flight.boosterShort) + " / " + S.esc(flight.shipShort) +
         " · " + S.esc(flight.era) + "</span></span>" +
-        '<span class="flight-row-marks">' +
-        '<span class="tag' + resultClass(flight.result) + '">' + S.esc(flight.result) + "</span>" +
-        (uncertain ? '<span class="tag uncertain">Uncertain</span>' : "") +
-        "</span></a>";
+        '<span class="flight-row-marks">' + outcomePairHtml(flight) + "</span></a>";
     }).join("");
 
     document.getElementById("main").innerHTML =
@@ -280,10 +284,7 @@
     var next = idx >= 0 && idx < sorted.length - 1 ? sorted[idx + 1] : null;
 
     var body =
-      '<p class="launch-outcome">' +
-      '<span class="tag' + resultClass(flight.result) + '">' + S.esc(flight.result) + "</span>" +
-      (uncertain ? '<span class="tag uncertain">Uncertain</span>' : "") +
-      "</p>" +
+      '<p class="launch-outcome">' + outcomePairHtml(flight) + "</p>" +
       '<p class="summary">' + S.esc(flight.summary) + "</p>" +
       S.estimateBlock(flight.costEstimate, flight.cost) +
       '<dl class="facts">' +

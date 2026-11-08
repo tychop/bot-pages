@@ -883,14 +883,25 @@ input[type="search"]:focus, select:focus, .era button:focus-visible, .launch-tog
 }
 .input-claim { margin: 0; font-weight: 600; }
 .input-value { margin: 0.25rem 0 0; color: #ddd; }
-.launch-outcome {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.45rem 0.65rem;
+.launch-outcome,
+.outcome-pair,
+.last-result {
+  display: inline-flex;
+  flex-wrap: nowrap;
   align-items: center;
-  margin: 0 0 0.85rem;
+  gap: 0.5rem;
+  margin: 0;
   padding: 0;
   border: 0;
+  white-space: nowrap;
+}
+.launch-outcome {
+  display: flex;
+  margin: 0 0 0.85rem;
+}
+.last-result {
+  display: flex;
+  margin: 0.75rem 0 0;
 }
 .tag {
   font-family: var(--display);
@@ -899,14 +910,17 @@ input[type="search"]:focus, select:focus, .era button:focus-visible, .launch-tog
   letter-spacing: 0.12em;
   text-transform: uppercase;
   line-height: 1;
+  flex-shrink: 0;
 }
 .tag.failure { color: var(--fail); }
 .tag.uncertain {
   border: 1px solid #fff;
-  padding: 0.28rem 0.4rem;
+  padding: 0.22rem 0.38rem;
   font-family: var(--sans);
-  font-size: 0.68rem;
+  font-size: 0.62rem;
   letter-spacing: 0.14em;
+  line-height: 1;
+  flex-shrink: 0;
 }
 .chev {
   width: 0.55rem;
@@ -1610,8 +1624,6 @@ button.tl-summary:hover .tl-title { color: #fff; }
   letter-spacing: 0.06em;
   font-size: 0.92rem;
 }
-.last-result { margin: 0.75rem 0 0; }
-
 .flight-index {
   display: flex;
   flex-direction: column;
@@ -1667,8 +1679,15 @@ button.tl-summary:hover .tl-title { color: #fff; }
 }
 .flight-row-marks {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-end;
+  align-self: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  min-width: 0;
+}
+.flight-row-marks .outcome-pair {
   justify-content: flex-end;
 }
 
@@ -1763,13 +1782,28 @@ button.tl-summary:hover .tl-title { color: #fff; }
   .flight-row {
     grid-template-columns: 3.6rem auto minmax(0, 1fr);
     grid-template-areas:
-      "thumb n marks"
-      "thumb main main";
+      "thumb n n"
+      "thumb main main"
+      "thumb marks marks";
   }
   .flight-thumb { grid-area: thumb; width: 3.6rem; height: 3.6rem; }
   .flight-row-n { grid-area: n; }
   .flight-row-main { grid-area: main; }
-  .flight-row-marks { grid-area: marks; }
+  .flight-row-marks {
+    grid-area: marks;
+    justify-content: flex-start;
+    margin-top: 0.15rem;
+  }
+  .flight-row-marks .outcome-pair {
+    justify-content: flex-start;
+  }
+  .flight-row-marks .tag {
+    font-size: 1rem;
+  }
+  .flight-row-marks .tag.uncertain {
+    font-size: 0.58rem;
+    padding: 0.18rem 0.32rem;
+  }
 }
 
 @media (max-width: 720px) {
