@@ -40,15 +40,6 @@
       href: "https://commons.wikimedia.org/wiki/File:Full_Stack_starship.jpg",
     },
     {
-      src: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Starship_Booster_Landing_on_Mechzilla_%2854064036815%29.jpg/1280px-Starship_Booster_Landing_on_Mechzilla_%2854064036815%29.jpg",
-      alt: "Super Heavy catch during Flight 5",
-      caption: "Flight 5, booster catch",
-      credit: "Steve Jurvetson",
-      license: "CC BY 2.0",
-      licenseHref: "https://creativecommons.org/licenses/by/2.0/",
-      href: "https://commons.wikimedia.org/wiki/File:Starship_Booster_Landing_on_Mechzilla_(54064036815).jpg",
-    },
-    {
       src: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Launch_of_SpaceX_Starship_6_rocket_seen_from_the_International_Space_Station_%28iss072e220161%2C_cropped%29.jpg/1280px-Launch_of_SpaceX_Starship_6_rocket_seen_from_the_International_Space_Station_%28iss072e220161%2C_cropped%29.jpg",
       alt: "Flight 6 plume seen from the International Space Station",
       caption: "Flight 6, seen from the International Space Station, 19 November 2024",
@@ -856,6 +847,89 @@
       "</div>";
   }
 
+  /** Claim every URL tied to a flight hero (video sources + poster + image). */
+  function claimFlightHero(hero) {
+    if (!hero) return false;
+    var ok = true;
+    if (hero.url && !claimMedia(hero.url)) ok = false;
+    if (hero.poster && !claimMedia(hero.poster)) ok = false;
+    (hero.sources || []).forEach(function (src) {
+      if (src && src.src) claimMedia(src.src);
+    });
+    return ok;
+  }
+
+  /**
+   * Non-interactive background hero for flight.html.
+   * Video: muted/autoplay/loop/playsinline, no controls, pointer-events none.
+   * Credit sits outside the media stage.
+   */
+  function flightHeroHtml(flight, detail) {
+    var hero = detail && detail.hero;
+    if (!hero || !hero.url) return "";
+    claimFlightHero(hero);
+    var caption = hero.caption || ("Flight " + flight.n);
+    var credit = hero.credit || "© SpaceX";
+    var creditUrl = hero.creditUrl || hero.page || "";
+    var creditHtml = esc(caption) + ". " +
+      (creditUrl
+        ? '<a href="' + esc(creditUrl) + '" target="_blank" rel="noopener noreferrer">' + esc(credit) + "</a>"
+        : esc(credit)) + ".";
+
+    var media;
+    if (hero.type === "video") {
+      var sources = (hero.sources && hero.sources.length)
+        ? hero.sources
+        : [{ src: hero.url, type: "video/mp4" }];
+      var sourceTags = sources.map(function (s) {
+        return '<source src="' + esc(s.src) + '"' +
+          (s.type ? ' type="' + esc(s.type) + '"' : "") +
+          (s.media ? ' media="' + esc(s.media) + '"' : "") +
+          ">";
+      }).join("");
+      media =
+        '<div class="flight-hero-stage" aria-hidden="true">' +
+        '<video class="flight-hero-video" muted autoplay loop playsinline webkit-playsinline' +
+        ' preload="metadata" tabindex="-1" disablePictureInPicture disableRemotePlayback' +
+        (hero.poster ? ' poster="' + esc(hero.poster) + '"' : "") +
+        ">" + sourceTags + "</video></div>";
+    } else {
+      media =
+        '<div class="flight-hero-stage" aria-hidden="true">' +
+        '<img class="flight-hero-img" src="' + esc(hero.url) + '" alt="' + esc(caption) + '" loading="eager" decoding="async">' +
+        "</div>";
+    }
+
+    return '<section class="flight-hero' + (hero.type === "video" ? " is-video" : " is-image") + '">' +
+      media +
+      '<div class="flight-hero-shade"></div>' +
+      '<p class="flight-hero-credit">' + creditHtml + "</p>" +
+      "</section>";
+  }
+
+  function mountFlightHeroVideos(root) {
+    if (!root) return;
+    var nodes = root.querySelectorAll("video.flight-hero-video");
+    Array.prototype.forEach.call(nodes, function (video) {
+      video.muted = true;
+      video.defaultMuted = true;
+      video.autoplay = true;
+      video.loop = true;
+      video.playsInline = true;
+      video.setAttribute("muted", "");
+      video.setAttribute("playsinline", "");
+      video.setAttribute("webkit-playsinline", "");
+      video.removeAttribute("controls");
+      video.controls = false;
+      video.disablePictureInPicture = true;
+      try { video.disableRemotePlayback = true; } catch (err) {}
+      var playAttempt = video.play();
+      if (playAttempt && typeof playAttempt.catch === "function") {
+        playAttempt.catch(function () { /* autoplay may be blocked until gesture; stays muted poster */ });
+      }
+    });
+  }
+
   function heroHtml(data, upcoming) {
     var photo = SITE_PHOTOS[0];
     if (!upcoming) {
@@ -1268,6 +1342,9 @@
     photoImgHtml: photoImgHtml,
     commonsFilePathFallback: commonsFilePathFallback,
     heroPhotoHtml: heroPhotoHtml,
+    claimFlightHero: claimFlightHero,
+    flightHeroHtml: flightHeroHtml,
+    mountFlightHeroVideos: mountFlightHeroVideos,
     compareTable: compareTable,
     costsHtml: costsHtml,
     laterHtml: laterHtml,
