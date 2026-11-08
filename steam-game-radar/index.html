@@ -264,26 +264,43 @@ function upCard(u,pos){return `<article class="card" data-game="${u.id}" tabinde
  <button class="shots-open" data-detail="${u.id}" data-up="1">Details &amp; screenshots</button></div></article>`;}
 // Decorative media are embedded from the local manifest at build time.
 // Source URLs stay inert until IntersectionObserver confirms actual visibility.
+// H.264 High / level 3.0 / 4:2:0 MP4 first; only one encoding is loaded at a time.
 const reducedMotion=window.matchMedia?window.matchMedia('(prefers-reduced-motion: reduce)'):{matches:false};
 let tileObserver=null;const tileVideos=new Set(),visibleTileVideos=new Set();
-function pauseTileVideo(v){v.pause();v.classList.remove('playing');if(v.dataset.loaded){for(const source of v.querySelectorAll('source'))source.removeAttribute('src');delete v.dataset.loaded;v.load();}}
+function pauseTileVideo(v){v.pause();v.classList.remove('playing');if(v.dataset.loaded){for(const source of v.querySelectorAll('source'))source.removeAttribute('src');delete v.dataset.loaded;delete v.dataset.blocked;v.load();}}
 function playTileVideo(v){
  if(reducedMotion.matches||document.hidden||!visibleTileVideos.has(v)||v.dataset.failed)return;
  // Reassert autoplay-safe properties before every load/play (including Safari resumes).
  v.muted=true;v.defaultMuted=true;v.playsInline=true;
- if(!v.dataset.loaded){for(const source of v.querySelectorAll('source[data-src]'))source.src=source.dataset.src;v.dataset.loaded='1';v.load();}
- const result=v.play();if(result&&result.catch)result.catch(()=>{v.classList.remove('playing');});
+ if(!v.dataset.loaded){const sources=v.querySelectorAll('source[data-src]');const source=sources[Number(v.dataset.source||0)];if(!source)return;source.src=source.dataset.src;v.dataset.loaded='1';v.load();}
+ const result=v.play();if(result&&result.catch)result.catch(()=>{v.classList.remove('playing');if(v.dataset.loaded&&!v.dataset.failed)v.dataset.blocked='1';});
 }
+// Try the other encoding once: Safari may claim WebM support but reject VP9 4:4:4.
+function tileVideoError(v,source=null){
+ if(!v.dataset.loaded||v.dataset.failed)return;
+ const sources=v.querySelectorAll('source[data-src]'),index=Number(v.dataset.source||0);
+ if(source&&source!==sources[index])return; // Ignore stale errors from an unloaded source.
+ pauseTileVideo(v);
+ if(index+1<sources.length){v.dataset.source=String(index+1);playTileVideo(v);}
+ else{v.dataset.failed='1';v.hidden=true;}
+}
+function retryBlockedTileVideos(){for(const v of visibleTileVideos)if(v.dataset.blocked){delete v.dataset.blocked;playTileVideo(v);}}
+// Autoplay policies (including Low Power Mode) can reject play without a decode error.
+// Keep the still and retry only after interaction, never a timer/retry loop.
+$('genre-tiles').addEventListener('pointerover',retryBlockedTileVideos);
+document.addEventListener('pointerdown',retryBlockedTileVideos,{passive:true});
+let tileRetryFrame=0;
+window.addEventListener('scroll',()=>{if(!tileRetryFrame)tileRetryFrame=requestAnimationFrame(()=>{tileRetryFrame=0;retryBlockedTileVideos();});},{passive:true});
 function clearTileVideos(){if(tileObserver)tileObserver.disconnect();for(const v of tileVideos)pauseTileVideo(v);tileVideos.clear();visibleTileVideos.clear();}
 function observeTileVideos(){
  if(!window.IntersectionObserver)return; // Still fallback, not an eager-media polyfill.
  tileObserver=new IntersectionObserver(entries=>{for(const entry of entries){const v=entry.target.querySelector('video');if(!v)continue;if(entry.isIntersecting&&entry.intersectionRatio>0){visibleTileVideos.add(v);playTileVideo(v);}else{visibleTileVideos.delete(v);pauseTileVideo(v);}}},{rootMargin:'0px',threshold:0.01});
- for(const v of $('genre-tiles').querySelectorAll('video')){v.muted=true;tileVideos.add(v);v.addEventListener('playing',()=>{if(reducedMotion.matches||document.hidden||!visibleTileVideos.has(v))pauseTileVideo(v);else v.classList.add('playing');});v.addEventListener('error',()=>{v.dataset.failed='1';v.classList.remove('playing');v.hidden=true;pauseTileVideo(v);});tileObserver.observe(v.closest('.genre-tile'));}
+ for(const v of $('genre-tiles').querySelectorAll('video')){v.muted=true;tileVideos.add(v);v.addEventListener('playing',()=>{if(reducedMotion.matches||document.hidden||!visibleTileVideos.has(v))pauseTileVideo(v);else{delete v.dataset.blocked;v.classList.add('playing');}});v.addEventListener('error',()=>tileVideoError(v));for(const source of v.querySelectorAll('source'))source.addEventListener('error',()=>tileVideoError(v,source));tileObserver.observe(v.closest('.genre-tile'));}
 }
 function syncTileMotion(){for(const v of tileVideos){if(reducedMotion.matches||document.hidden)pauseTileVideo(v);else playTileVideo(v);}}
 if(reducedMotion.addEventListener)reducedMotion.addEventListener('change',syncTileMotion);else if(reducedMotion.addListener)reducedMotion.addListener(syncTileMotion);
 document.addEventListener('visibilitychange',syncTileMotion);
-function genreVideo(key){const art=GENRE_ART[key],loop=GENRE_LOOPS[key];return art&&loop?`<video muted loop playsinline webkit-playsinline preload="none" poster="${esc(art)}" aria-hidden="true" tabindex="-1" width="616" height="353"><source data-src="${esc(loop.webm)}" type="video/webm"><source data-src="${esc(loop.mp4)}" type="video/mp4"></video>`:'';}
+function genreVideo(key){const art=GENRE_ART[key],loop=GENRE_LOOPS[key];return art&&loop?`<video muted loop playsinline webkit-playsinline preload="none" poster="${esc(art)}" aria-hidden="true" tabindex="-1" width="616" height="353"><source data-src="${esc(loop.mp4)}" type='video/mp4; codecs="avc1.64001E"'><source data-src="${esc(loop.webm)}" type="video/webm"></video>`:'';}
 
 // The gradient remains beneath the image, including when a download fails.
 function genreGradient(key){let hash=2166136261;for(const c of key){hash=Math.imul(hash^c.charCodeAt(0),16777619)>>>0;}const hue=hash%360;return `linear-gradient(135deg,hsl(${hue},42%,24%),hsl(${(hue+48)%360},38%,10%))`;}
