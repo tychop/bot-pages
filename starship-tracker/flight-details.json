@@ -561,12 +561,29 @@
         ]
       },
       "hero": {
-        "type": "image",
-        "url": "https://pbs.twimg.com/media/FuK9icGaYAE13GS.jpg?name=large",
+        "type": "video",
+        "url": "media/hero/flight-01-liftoff.mp4",
+        "sources": [
+          {
+            "src": "media/hero/flight-01-liftoff-720.mp4",
+            "type": "video/mp4",
+            "media": "(max-width: 720px)"
+          },
+          {
+            "src": "media/hero/flight-01-liftoff.webm",
+            "type": "video/webm"
+          },
+          {
+            "src": "media/hero/flight-01-liftoff.mp4",
+            "type": "video/mp4"
+          }
+        ],
+        "poster": "media/hero/flight-01-liftoff-poster.jpg",
         "caption": "First integrated Starship liftoff from Starbase",
-        "credit": "© SpaceX",
-        "creditUrl": "https://x.com/SpaceX/status/1647758597364035584",
-        "sourceKind": "image"
+        "credit": "© SpaceX, from SpaceX Flight 1 highlight",
+        "creditUrl": "https://x.com/SpaceX/status/1662251874936934400",
+        "sourceKind": "cut",
+        "sourceRange": "X highlight ~0:56–1:06 (pad/aerial liftoff)"
       }
     },
     "2": {
@@ -1068,12 +1085,29 @@
         ]
       },
       "hero": {
-        "type": "image",
-        "url": "https://pbs.twimg.com/media/F_OftU3boAAp0of.jpg?name=large",
-        "caption": "First hot-staging attempt during ascent",
-        "credit": "© SpaceX",
-        "creditUrl": "https://x.com/SpaceX/status/1725898823262949586",
-        "sourceKind": "image"
+        "type": "video",
+        "url": "media/hero/flight-02-hotstage.mp4",
+        "sources": [
+          {
+            "src": "media/hero/flight-02-hotstage-720.mp4",
+            "type": "video/mp4",
+            "media": "(max-width: 720px)"
+          },
+          {
+            "src": "media/hero/flight-02-hotstage.webm",
+            "type": "video/webm"
+          },
+          {
+            "src": "media/hero/flight-02-hotstage.mp4",
+            "type": "video/mp4"
+          }
+        ],
+        "poster": "media/hero/flight-02-hotstage-poster.jpg",
+        "caption": "First hot-staging separation during ascent",
+        "credit": "© SpaceX, from the Flight 2 webcast",
+        "creditUrl": "https://x.com/SpaceX/status/1725637151176659003",
+        "sourceKind": "cut",
+        "sourceRange": "webcast 41:38–41:48 ≈ T+2:43–T+2:53 (STAGE SEPARATION)"
       }
     },
     "3": {
@@ -1669,12 +1703,29 @@
         ]
       },
       "hero": {
-        "type": "image",
-        "url": "https://pbs.twimg.com/media/GIpo6jvakAAFalR.jpg?name=large",
-        "caption": "Ascent on the first flight to finish every test objective",
-        "credit": "© SpaceX",
-        "creditUrl": "https://x.com/SpaceX/status/1768341601049575460",
-        "sourceKind": "image"
+        "type": "video",
+        "url": "media/hero/flight-03-plasma.mp4",
+        "sources": [
+          {
+            "src": "media/hero/flight-03-plasma-720.mp4",
+            "type": "video/mp4",
+            "media": "(max-width: 720px)"
+          },
+          {
+            "src": "media/hero/flight-03-plasma.webm",
+            "type": "video/webm"
+          },
+          {
+            "src": "media/hero/flight-03-plasma.mp4",
+            "type": "video/mp4"
+          }
+        ],
+        "poster": "media/hero/flight-03-plasma-poster.jpg",
+        "caption": "Ship re-entering through plasma",
+        "credit": "© SpaceX, from SpaceX Flight 3 plasma views",
+        "creditUrl": "https://x.com/SpaceX/status/1768279990368612354",
+        "sourceKind": "cut",
+        "sourceRange": "X clip ~0:42–0:52 ≈ T+46:50–T+47:10 (plasma)"
       }
     },
     "4": {
@@ -2234,12 +2285,29 @@
         ]
       },
       "hero": {
-        "type": "image",
-        "url": "https://content.spacex.com/cms-assets/assets/Flight_4_Website_Desktop_3_ef4f400e2d.jpg",
-        "caption": "Starship ascending through golden haze",
-        "credit": "© SpaceX",
-        "creditUrl": "https://www.spacex.com/launches/starship-flight-4",
-        "sourceKind": "spacex-ready"
+        "type": "video",
+        "url": "media/hero/flight-04-splashdown.mp4",
+        "sources": [
+          {
+            "src": "media/hero/flight-04-splashdown-720.mp4",
+            "type": "video/mp4",
+            "media": "(max-width: 720px)"
+          },
+          {
+            "src": "media/hero/flight-04-splashdown.webm",
+            "type": "video/webm"
+          },
+          {
+            "src": "media/hero/flight-04-splashdown.mp4",
+            "type": "video/mp4"
+          }
+        ],
+        "poster": "media/hero/flight-04-splashdown-poster.jpg",
+        "caption": "Ship flip and soft splashdown in the Indian Ocean",
+        "credit": "© SpaceX, from the Flight 4 webcast",
+        "creditUrl": "https://x.com/SpaceX/status/1798098040588480826",
+        "sourceKind": "cut",
+        "sourceRange": "webcast ~1:45:40–1:45:52 ≈ T+1:05:34–T+1:05:46"
       }
     },
     "5": {
@@ -3466,12 +3534,29 @@
         ]
       },
       "hero": {
-        "type": "image",
-        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/The_launch_of_the_SpaceX_Starship_6_rocket_seen_from_the_space_station_%28iss072e220043%29.jpg/1920px-The_launch_of_the_SpaceX_Starship_6_rocket_seen_from_the_space_station_%28iss072e220043%29.jpg",
-        "caption": "Launch plume photographed from the International Space Station",
-        "credit": "NASA/Don Pettit",
-        "creditUrl": "https://commons.wikimedia.org/wiki/File:The_launch_of_the_SpaceX_Starship_6_rocket_seen_from_the_space_station_(iss072e220043).jpg",
-        "sourceKind": "image"
+        "type": "video",
+        "url": "media/hero/flight-06-splashdown.mp4",
+        "sources": [
+          {
+            "src": "media/hero/flight-06-splashdown-720.mp4",
+            "type": "video/mp4",
+            "media": "(max-width: 720px)"
+          },
+          {
+            "src": "media/hero/flight-06-splashdown.webm",
+            "type": "video/webm"
+          },
+          {
+            "src": "media/hero/flight-06-splashdown.mp4",
+            "type": "video/mp4"
+          }
+        ],
+        "poster": "media/hero/flight-06-splashdown-poster.jpg",
+        "caption": "Ship soft splashdown after Flight 6",
+        "credit": "© SpaceX, from SpaceX Flight 6 splashdown",
+        "creditUrl": "https://x.com/SpaceX/status/1859010620471079361",
+        "sourceKind": "cut",
+        "sourceRange": "X highlight ~0:04–0:14 (splashdown)"
       }
     },
     "7": {
@@ -4095,12 +4180,29 @@
         ]
       },
       "hero": {
-        "type": "image",
-        "url": "https://content.spacex.com/cms-assets/assets/Flight_7_Website_Desktop_7_4afb3a9d9a.jpg",
-        "caption": "Second Super Heavy catch at the tower",
-        "credit": "© SpaceX",
-        "creditUrl": "https://www.spacex.com/launches/starship-flight-7",
-        "sourceKind": "spacex-ready"
+        "type": "video",
+        "url": "media/hero/flight-07-liftoff.mp4",
+        "sources": [
+          {
+            "src": "media/hero/flight-07-liftoff-720.mp4",
+            "type": "video/mp4",
+            "media": "(max-width: 720px)"
+          },
+          {
+            "src": "media/hero/flight-07-liftoff.webm",
+            "type": "video/webm"
+          },
+          {
+            "src": "media/hero/flight-07-liftoff.mp4",
+            "type": "video/mp4"
+          }
+        ],
+        "poster": "media/hero/flight-07-liftoff-poster.jpg",
+        "caption": "Flight 7 liftoff from Starbase",
+        "credit": "© SpaceX, from SpaceX Flight 7 highlight",
+        "creditUrl": "https://x.com/SpaceX/status/1880652100696469583",
+        "sourceKind": "cut",
+        "sourceRange": "X highlight 0:08–0:18 (aerial liftoff)"
       }
     },
     "8": {
@@ -4701,12 +4803,29 @@
         ]
       },
       "hero": {
-        "type": "image",
-        "url": "https://content.spacex.com/cms-assets/assets/Flight_8_Website_Desktop_4_62344783aa.jpg",
-        "caption": "Third Super Heavy catch at the tower",
-        "credit": "© SpaceX",
-        "creditUrl": "https://www.spacex.com/launches/starship-flight-8",
-        "sourceKind": "spacex-ready"
+        "type": "video",
+        "url": "media/hero/flight-08-catch.mp4",
+        "sources": [
+          {
+            "src": "media/hero/flight-08-catch-720.mp4",
+            "type": "video/mp4",
+            "media": "(max-width: 720px)"
+          },
+          {
+            "src": "media/hero/flight-08-catch.webm",
+            "type": "video/webm"
+          },
+          {
+            "src": "media/hero/flight-08-catch.mp4",
+            "type": "video/mp4"
+          }
+        ],
+        "poster": "media/hero/flight-08-catch-poster.jpg",
+        "caption": "Super Heavy landing burn on Flight 8",
+        "credit": "© SpaceX, from SpaceX Flight 8 catch highlight",
+        "creditUrl": "https://x.com/SpaceX/status/1898513049931383004",
+        "sourceKind": "cut",
+        "sourceRange": "X highlight ~0:12–0:22 (landing burn)"
       }
     },
     "9": {
@@ -5311,12 +5430,29 @@
         ]
       },
       "hero": {
-        "type": "image",
-        "url": "https://pbs.twimg.com/media/GsSRMmqaMAIG5cr.jpg?name=large",
-        "caption": "Starship coasting in space before a failed reentry",
-        "credit": "© SpaceX",
-        "creditUrl": "https://x.com/SpaceX/status/1928826217853235394",
-        "sourceKind": "image"
+        "type": "video",
+        "url": "media/hero/flight-09-ascent.mp4",
+        "sources": [
+          {
+            "src": "media/hero/flight-09-ascent-720.mp4",
+            "type": "video/mp4",
+            "media": "(max-width: 720px)"
+          },
+          {
+            "src": "media/hero/flight-09-ascent.webm",
+            "type": "video/webm"
+          },
+          {
+            "src": "media/hero/flight-09-ascent.mp4",
+            "type": "video/mp4"
+          }
+        ],
+        "poster": "media/hero/flight-09-ascent-poster.jpg",
+        "caption": "Flight 9 climbing away from Starbase",
+        "credit": "© SpaceX, from SpaceX Flight 9 highlight",
+        "creditUrl": "https://x.com/SpaceX/status/1927567126224593279",
+        "sourceKind": "cut",
+        "sourceRange": "X highlight 0:42–0:52 (ascent)"
       }
     },
     "10": {
@@ -6004,12 +6140,29 @@
         ]
       },
       "hero": {
-        "type": "image",
-        "url": "https://content.spacex.com/cms-assets/assets/Flight_10_Website_Mobile_3_39310629e9.jpg",
-        "caption": "Flight 10 liftoff from Starbase",
-        "credit": "© SpaceX",
-        "creditUrl": "https://www.spacex.com/launches/starship-flight-10",
-        "sourceKind": "spacex-ready"
+        "type": "video",
+        "url": "media/hero/flight-10-splashdown.mp4",
+        "sources": [
+          {
+            "src": "media/hero/flight-10-splashdown-720.mp4",
+            "type": "video/mp4",
+            "media": "(max-width: 720px)"
+          },
+          {
+            "src": "media/hero/flight-10-splashdown.webm",
+            "type": "video/webm"
+          },
+          {
+            "src": "media/hero/flight-10-splashdown.mp4",
+            "type": "video/mp4"
+          }
+        ],
+        "poster": "media/hero/flight-10-splashdown-poster.jpg",
+        "caption": "Ship landing burn and soft splashdown",
+        "credit": "© SpaceX, from SpaceX Flight 10 splashdown",
+        "creditUrl": "https://x.com/SpaceX/status/1960502324050133328",
+        "sourceKind": "cut",
+        "sourceRange": "X highlight ~0:02–0:14 (landing flip → splash)"
       }
     },
     "11": {
@@ -6702,12 +6855,29 @@
         ]
       },
       "hero": {
-        "type": "image",
-        "url": "https://content.spacex.com/cms-assets/assets/Flight_11_Website_Mobile_3_e2c6fc1779.jpg",
-        "caption": "Flight 11 liftoff from Starbase",
-        "credit": "© SpaceX",
-        "creditUrl": "https://www.spacex.com/launches/starship-flight-11",
-        "sourceKind": "spacex-ready"
+        "type": "video",
+        "url": "media/hero/flight-11-hotstage.mp4",
+        "sources": [
+          {
+            "src": "media/hero/flight-11-hotstage-720.mp4",
+            "type": "video/mp4",
+            "media": "(max-width: 720px)"
+          },
+          {
+            "src": "media/hero/flight-11-hotstage.webm",
+            "type": "video/webm"
+          },
+          {
+            "src": "media/hero/flight-11-hotstage.mp4",
+            "type": "video/mp4"
+          }
+        ],
+        "poster": "media/hero/flight-11-hotstage-poster.jpg",
+        "caption": "Super Heavy hot-staging and boostback",
+        "credit": "© SpaceX, from SpaceX Flight 11 highlight",
+        "creditUrl": "https://x.com/SpaceX/status/1979261047182635135",
+        "sourceKind": "cut",
+        "sourceRange": "X highlight 0:00–0:08 (full clip)"
       }
     },
     "12": {
@@ -7511,12 +7681,29 @@
         ]
       },
       "hero": {
-        "type": "image",
-        "url": "https://content.spacex.com/cms-assets/assets/Flight_12_Website_Mobile_3_fba489c895.jpg",
-        "caption": "First Version 3 ship flight — liftoff",
-        "credit": "© SpaceX",
-        "creditUrl": "https://www.spacex.com/launches/starship-flight-12",
-        "sourceKind": "spacex-ready"
+        "type": "video",
+        "url": "media/hero/flight-12-splashdown.mp4",
+        "sources": [
+          {
+            "src": "media/hero/flight-12-splashdown-720.mp4",
+            "type": "video/mp4",
+            "media": "(max-width: 720px)"
+          },
+          {
+            "src": "media/hero/flight-12-splashdown.webm",
+            "type": "video/webm"
+          },
+          {
+            "src": "media/hero/flight-12-splashdown.mp4",
+            "type": "video/mp4"
+          }
+        ],
+        "poster": "media/hero/flight-12-splashdown-poster.jpg",
+        "caption": "Version 3 ship landing burn and soft splashdown",
+        "credit": "© SpaceX, from the Flight 12 webcast",
+        "creditUrl": "https://x.com/SpaceX/status/2057843268038082848",
+        "sourceKind": "cut",
+        "sourceRange": "webcast ~1:45:35–1:45:45 ≈ T+1:05:57–T+1:06:07"
       }
     },
     "13": {
@@ -9109,12 +9296,29 @@
         ]
       },
       "hero": {
-        "type": "image",
-        "url": "https://content.spacex.com/cms-assets/assets/Flight_14_Website_Mobile_3_fb8b462f51.jpg",
-        "caption": "First orbital Starship flight delivering Starlink satellites",
-        "credit": "© SpaceX",
-        "creditUrl": "https://www.spacex.com/launches/starship-flight-14",
-        "sourceKind": "spacex-ready"
+        "type": "video",
+        "url": "media/hero/flight-14-hotstage.mp4",
+        "sources": [
+          {
+            "src": "media/hero/flight-14-hotstage-720.mp4",
+            "type": "video/mp4",
+            "media": "(max-width: 720px)"
+          },
+          {
+            "src": "media/hero/flight-14-hotstage.webm",
+            "type": "video/webm"
+          },
+          {
+            "src": "media/hero/flight-14-hotstage.mp4",
+            "type": "video/mp4"
+          }
+        ],
+        "poster": "media/hero/flight-14-hotstage-poster.jpg",
+        "caption": "Hot-staging on the first orbital Starship flight",
+        "credit": "© SpaceX, from SpaceX Flight 14 hot-staging",
+        "creditUrl": "https://x.com/SpaceX/status/2106089751837278533",
+        "sourceKind": "cut",
+        "sourceRange": "X highlight ~0:02–0:12 (hot-staging)"
       }
     },
     "15": {
