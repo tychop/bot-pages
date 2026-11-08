@@ -1,0 +1,1164 @@
+{
+  "version": 1,
+  "width": 616,
+  "height": 353,
+  "format": "webp",
+  "style": "Original AI-generated cinematic painterly genre illustrations; indigo, teal and amber",
+  "genres": {
+    "casual": {
+      "src": "genre-art/casual.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 26606,
+      "sha256": "801d18732fbc8193da7c682f20abc42919976f1d8c9433931f7b30885c4eff0f"
+    },
+    "action": {
+      "src": "genre-art/action.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 34214,
+      "sha256": "4fdbfca25d7af13b33dae309ea903a5d96a8ef13dd97a355a76aa5df33c61c35"
+    },
+    "adventure": {
+      "src": "genre-art/adventure.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 35548,
+      "sha256": "2b80c8cf3018ff96fbeeb9491cf1aa5e0daec40a7cb0aa310e474fbcfedb4c6a"
+    },
+    "simulation": {
+      "src": "genre-art/simulation.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 41060,
+      "sha256": "6dfae611477018f08a2aae0368ed0b47bd8f766bc55e91e2bde0c92af217703c"
+    },
+    "strategy": {
+      "src": "genre-art/strategy.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 38602,
+      "sha256": "361a6325d6b1571cf4f6d93727fb9024f875d3d33a6584e4772ff6bc674dc0cc"
+    },
+    "rpg": {
+      "src": "genre-art/rpg.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 31570,
+      "sha256": "9e2cf046f97ab5053e77fa859b1431ec761b4dff31c5a7884134e33fd5ef86bd"
+    },
+    "puzzle": {
+      "src": "genre-art/puzzle.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 18640,
+      "sha256": "4a17728da89576617ea2dfae86f71be8ba20ec366e9eba60a41b90d8609cb3ee"
+    },
+    "sports": {
+      "src": "genre-art/sports.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 25022,
+      "sha256": "2708fb805d5c19d8a2018d9955f55b2bf2f0b71e530da09add6317d64774b946"
+    },
+    "racing": {
+      "src": "genre-art/racing.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 25802,
+      "sha256": "c99c2eab02794484af1c33385112014b1a923b6839c8dcd68b6e13e9b04747f9"
+    },
+    "tabletop": {
+      "src": "genre-art/tabletop.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 38648,
+      "sha256": "21d83fbc30a51053f48849318d056f703a6903c92c6352042ef535858f4357c8"
+    },
+    "experimental": {
+      "src": "genre-art/experimental.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 34006,
+      "sha256": "b36e96b23eba8b4af963b52232b5a081e4517bfce8770c07f9e1bcbb2bfecb46"
+    },
+    "exploration": {
+      "src": "genre-art/exploration.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 24634,
+      "sha256": "431d83ae3b9b62bc17f76d17cda15bff66c9b67d0c704d288131734d8f7d7029"
+    },
+    "arcade": {
+      "src": "genre-art/arcade.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 39096,
+      "sha256": "881f959b0f3f02db3c9a9d746c636dfe163076eb65c51a5c57e97c0098fb3cbc"
+    },
+    "action-adventure": {
+      "src": "genre-art/action-adventure.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 39160,
+      "sha256": "e92cf767297602fb27d0460ad75903e2e5f7b9d9761b472e023c78d7cddd1be9"
+    },
+    "shooter": {
+      "src": "genre-art/shooter.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 23254,
+      "sha256": "d154400c4e4140752c9903dfebc1748b40b01f420a881b03d51d96d2fbc6268b"
+    },
+    "platformer": {
+      "src": "genre-art/platformer.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 40262,
+      "sha256": "9892e33c4fad048c820611a1034c8fe5bf5a2de17b6c2802d61c0b0de8e2e1eb"
+    },
+    "visual-novel": {
+      "src": "genre-art/visual-novel.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 22590,
+      "sha256": "affed62c97c5477cfb9b0b2048d1e085945679596924f298212391639a12e2ce"
+    },
+    "roguelike": {
+      "src": "genre-art/roguelike.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 32746,
+      "sha256": "391020e342c507dd03d7d8327f7cbca4c78cced628923f616cb58006ce7ac609"
+    },
+    "survival": {
+      "src": "genre-art/survival.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 28144,
+      "sha256": "d3b771d9fa2f258a295e7b0548bbf28ba703bfaeda76ddc9f96adb95db304d79"
+    },
+    "open-world": {
+      "src": "genre-art/open-world.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 40730,
+      "sha256": "ebea0fa25b7136d6e80d13dcd6b4e52079224584de9ee7a092ed202c0f68ec99"
+    },
+    "management": {
+      "src": "genre-art/management.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 45756,
+      "sha256": "96f47bb1592c3cad5b4b89614be8a478837480c087d361bc62765a9d00031da9"
+    },
+    "sandbox": {
+      "src": "genre-art/sandbox.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 50142,
+      "sha256": "21d87c12e7d180272633c6a3e1642341d321470672d9fdf5ce488c3701e6e64b"
+    },
+    "point-and-click": {
+      "src": "genre-art/point-and-click.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 36302,
+      "sha256": "481e5c1d170d75702d61200fc9e13625d33841cdf1e80deba48c89975f614c48"
+    },
+    "action-rpg": {
+      "src": "genre-art/action-rpg.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 38216,
+      "sha256": "ad3b17f75b35e9b0d560b7bf06e9a6a08c4112b82eeaa9aee690caac74fb6019"
+    },
+    "building": {
+      "src": "genre-art/building.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 41318,
+      "sha256": "dc8f45d25c940c95eb0b441a023d27af09f452f839bc0f7ee0919fda79241ba9"
+    },
+    "interactive-fiction": {
+      "src": "genre-art/interactive-fiction.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 31186,
+      "sha256": "48a149bc3146faaef7f47d2537a0b88b11ffb740d04b188b474c2e89f2e758d6"
+    },
+    "turn-based-strategy": {
+      "src": "genre-art/turn-based-strategy.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 46708,
+      "sha256": "ec4d80dee567f1c9f01d00370029cfdd58182ba93c22953cb32b2a5440b93757"
+    },
+    "incremental": {
+      "src": "genre-art/incremental.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 28170,
+      "sha256": "dc74ec90ae9cff8de85573b620e91a0f72ffe86ffef54580b4c783d9ab0cab6f"
+    },
+    "hidden-object": {
+      "src": "genre-art/hidden-object.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 39502,
+      "sha256": "f048101605f1063e2173cb3fde38652a9d42c90ed4488aac10735be3cf008834"
+    },
+    "walking-simulator": {
+      "src": "genre-art/walking-simulator.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 29824,
+      "sha256": "4df1e4a236eaa13a24e507d0f3dccdb9bc4f9301f9cac3678522b624664ea0c6"
+    },
+    "card-game": {
+      "src": "genre-art/card-game.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 30760,
+      "sha256": "5562b93274ca54807c996ae0c2972ea3294d3856ed5e283e41220fd547981d5e"
+    },
+    "base-building": {
+      "src": "genre-art/base-building.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 32808,
+      "sha256": "99ed2a87694e69dd28484427da98e7d427e06819b9993effefe2b3bfe8263634"
+    },
+    "idler": {
+      "src": "genre-art/idler.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 38300,
+      "sha256": "49c02de45b9a229d7365fc1c4975bd9ebd16e485f3ec0ff0dd12af8b90f42ed3"
+    },
+    "stealth": {
+      "src": "genre-art/stealth.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 19672,
+      "sha256": "08c8d90d85e7b09fe4911f8c4e7af9b37174620dad09587087f13ed7422fcc49"
+    },
+    "strategy-rpg": {
+      "src": "genre-art/strategy-rpg.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 40050,
+      "sha256": "dc052bd486526fb442b2e5c869ff2f48dd703a1586b00b58ff2ea887b6144642"
+    },
+    "tower-defense": {
+      "src": "genre-art/tower-defense.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 29702,
+      "sha256": "fe5abca4cd1bb1635bd9e475bf0922e11a77ed6ee395bf8b953a2f366439cf9a"
+    },
+    "board-game": {
+      "src": "genre-art/board-game.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 35760,
+      "sha256": "338008b5af185e37be15785f0c293b815312df816e6d6af713b068ad9f758d93"
+    },
+    "rts": {
+      "src": "genre-art/rts.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 43992,
+      "sha256": "b662ba67867f5e2a2fd81cba17d22a6b890c30a88724a4e433702d6867db1356"
+    },
+    "party-based-rpg": {
+      "src": "genre-art/party-based-rpg.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 32986,
+      "sha256": "3db6eb8ff04852036b1620356a2ee4354b439388b90ec0d5e356d1e5e08051f5"
+    },
+    "auto-battler": {
+      "src": "genre-art/auto-battler.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 36434,
+      "sha256": "6a90b270bbfd3cf8d3147aaabfe4f441b3c81ca317c0128249673cdd93d4c83b"
+    },
+    "farming-sim": {
+      "src": "genre-art/farming-sim.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 44508,
+      "sha256": "4031a5adbe28c0717568c0277cc5d581dc559758d85eb23f0368047274267158"
+    },
+    "cooking": {
+      "src": "genre-art/cooking.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 34704,
+      "sha256": "917e583f554f794f670abe9ccdcf18018fdc266b7e729255423b0948c7f6d2a5"
+    },
+    "rhythm": {
+      "src": "genre-art/rhythm.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 33736,
+      "sha256": "eddd33a63414936ce7e2d879d67368c9df0efc65668a8ab9bb512472841dbda1"
+    },
+    "word-game": {
+      "src": "genre-art/word-game.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 19264,
+      "sha256": "2dda81f585a176dc825799228c9be81032a02fa37c9810ddd46e839b2ebe4615"
+    },
+    "automobile-sim": {
+      "src": "genre-art/automobile-sim.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 28118,
+      "sha256": "d931109319d4c3036c5607cd4ae496d9823a91d547163d665c8d1f5dc004ac26"
+    },
+    "space-sim": {
+      "src": "genre-art/space-sim.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 29636,
+      "sha256": "3f61b917b1e208aeadf9dd9fc3d42cd370243cc47edc0221a20b40d5ac826199"
+    },
+    "match-3": {
+      "src": "genre-art/match-3.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 32990,
+      "sha256": "c3d11790715fc5e7f68fd93ec88987a323adea1d2cc26914647bf1fbee0cf177"
+    },
+    "mining": {
+      "src": "genre-art/mining.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 31932,
+      "sha256": "928db3f28563ea1bf347fd7a4c49edc5285730499cf633d28e15fd1116236d84"
+    },
+    "fighting": {
+      "src": "genre-art/fighting.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 26670,
+      "sha256": "429a15a96aad7bcda3f8595069d2c9a1b0e9c7676de4614d129cf7fa0972f6ec"
+    },
+    "esports": {
+      "src": "genre-art/esports.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 31258,
+      "sha256": "ff7019bbaed91ae0910163029d78c0a74756e4f43a81ff15bb87c9952ed042b2"
+    },
+    "mmorpg": {
+      "src": "genre-art/mmorpg.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 47448,
+      "sha256": "5dd9b3dd0139cdca2383d91147fe257af735fcea9aa7e10e77ebdb092bee24e9"
+    },
+    "job-simulator": {
+      "src": "genre-art/job-simulator.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 31194,
+      "sha256": "66e589dad1fc2de3e705c0d2e83dbae79aa6f07bc95e27af89c6906c897a04b9"
+    },
+    "battle-royale": {
+      "src": "genre-art/battle-royale.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 35144,
+      "sha256": "d4a29bb7528dede4b810914415fed732a53e1f00dc2c2366973b8437f6dd2d11"
+    },
+    "action-rts": {
+      "src": "genre-art/action-rts.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 47048,
+      "sha256": "46b1b9ff91ebe4e0877ed7862dd0089eb16e7fd4ba8d222c5bf92a76cc925737"
+    },
+    "god-game": {
+      "src": "genre-art/god-game.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 27566,
+      "sha256": "0bca99256de7fd098bd9ef4b6f48eb339d01fa531de4e38d1fd37963ade39759"
+    },
+    "hacking": {
+      "src": "genre-art/hacking.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 26672,
+      "sha256": "291e9ce3d0f3cfa6126e894008202e6dde9452ca43b21edc6fcce37e1800d838"
+    },
+    "character-action-game": {
+      "src": "genre-art/character-action-game.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 30300,
+      "sha256": "f2e3fb43f6cb4f35e7353de64aa7e86b916041d5fb4aca9cfebf0ba53e634d4f"
+    },
+    "moba": {
+      "src": "genre-art/moba.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 35206,
+      "sha256": "e95c1356bc91f96ad9777f4de4539f1421bbfc7af42bc1b258e5b7cc1f2754eb"
+    },
+    "diplomacy": {
+      "src": "genre-art/diplomacy.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 30086,
+      "sha256": "9529bf8dfb15adb0fbbe33863226010c7493f970d2ae2488a53e591f387e0df1"
+    },
+    "trivia": {
+      "src": "genre-art/trivia.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 24436,
+      "sha256": "22c9332d6b8aef4bdb8149c0c685c032406425e9e66c4a85f9fbd98ffd207eca"
+    },
+    "farming": {
+      "src": "genre-art/farming.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 35154,
+      "sha256": "97e4a9a30dd667f9e14e88821951209a24f7f57ead4d29908534aca29d4976b0"
+    },
+    "chess": {
+      "src": "genre-art/chess.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 26480,
+      "sha256": "67a5f28eded569281fc9151bad6fa21d5aad374ce82ed5f11c3a1e0424d9a4ff"
+    },
+    "outbreak-sim": {
+      "src": "genre-art/outbreak-sim.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 33506,
+      "sha256": "8c7c4967a84bea6347349303aeb416948ec638fa6c65de69a84749acd0f694f1"
+    },
+    "medical-sim": {
+      "src": "genre-art/medical-sim.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 18100,
+      "sha256": "54ef47f40f23dc18303c63c35c43261350bba6434a031e8f2d5f0563a98ba311"
+    },
+    "hobby-sim": {
+      "src": "genre-art/hobby-sim.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 31944,
+      "sha256": "d4261fdb911a6639b63eb68e0dbe2c71a847140fc18b96e95bf20ae13c625dfd"
+    },
+    "golf": {
+      "src": "genre-art/golf.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 23088,
+      "sha256": "f6c0f538977261a4a152cb420df97475ed1e9b9ff954fa0b75a2ea2f73a36fab"
+    },
+    "pinball": {
+      "src": "genre-art/pinball.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 36584,
+      "sha256": "f47dbc0e61f60e71d51cfc4707f9e340ddfeec2e2889cdf5bfac2a93ff0f60d2"
+    },
+    "basketball": {
+      "src": "genre-art/basketball.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 17198,
+      "sha256": "c1f399c1fd437f530a5ab612da45765ca848096beffe5b63b1e26d983fa56c82"
+    },
+    "mini-golf": {
+      "src": "genre-art/mini-golf.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 32134,
+      "sha256": "5b777f506af1652dd9d283a7c683921590d9001733b695ca0a84cd48c87407e1"
+    },
+    "wrestling": {
+      "src": "genre-art/wrestling.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 26358,
+      "sha256": "333e359a7e6b537a021fc3488e9dd1340c330572a9e58120807a844139a7a656"
+    },
+    "skateboarding": {
+      "src": "genre-art/skateboarding.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 18642,
+      "sha256": "6f52ab9ff118b5838a618b8cea5581330f56a8dc92db6042fe7e74018a6afc63"
+    },
+    "skating": {
+      "src": "genre-art/skating.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 23856,
+      "sha256": "754133b5b1500244b9e2d4f1e5de4dc6806845586fcae3ec1ccf34dc7c4bf7c6"
+    },
+    "mahjong": {
+      "src": "genre-art/mahjong.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 27652,
+      "sha256": "62327cdef24733af8a08f5691503f1a1f5ccf38058265c63f380daa22cab1614"
+    },
+    "baseball": {
+      "src": "genre-art/baseball.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 32164,
+      "sha256": "9bbe08ee27ea55af069b0bc7416d6edc46ac3a99d12d2ac2643409325223f5d1"
+    },
+    "tennis": {
+      "src": "genre-art/tennis.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 28950,
+      "sha256": "8009238bb75605bc79baec8b6a6c9dd0ac4bad36eefbd96fd7931bb8cff20a82"
+    },
+    "cycling": {
+      "src": "genre-art/cycling.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 35334,
+      "sha256": "6144b33e46805c6f466c100d80cd9b37202b69237bdc8a9a048043d0e1ef4497"
+    },
+    "hockey": {
+      "src": "genre-art/hockey.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 29310,
+      "sha256": "93d413bb6f523c0de42c3c5f93cb272367c67cd163cb1565f5dfdbf58332367c"
+    },
+    "motocross": {
+      "src": "genre-art/motocross.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 37334,
+      "sha256": "fc1d52d5089a9044d76fe2cfc3479468b844a62fd00e644beeefe0d099a2fd5e"
+    },
+    "bowling": {
+      "src": "genre-art/bowling.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 28914,
+      "sha256": "10ba87b16f9c6499173b431eef0904e4957c63d4524bcb072a5f074b0c43bc60"
+    },
+    "skiing": {
+      "src": "genre-art/skiing.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 40390,
+      "sha256": "d9130fa30331931ec2bf2d4313fdf7845a541ca64d4e6942c4ba0891edc37d2a"
+    },
+    "snowboarding": {
+      "src": "genre-art/snowboarding.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 33508,
+      "sha256": "690f514595a1ba570576eec14bd2fee4c3509d667ed5d29fdbf15acf7c906cbb"
+    },
+    "bmx": {
+      "src": "genre-art/bmx.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 23956,
+      "sha256": "e35a3dedb2aa98cb2c402e750604d70301efa32c557653bc9ffa0234ec45119d"
+    },
+    "volleyball": {
+      "src": "genre-art/volleyball.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 18256,
+      "sha256": "5d2ff6ee4b024f883af005df2cb259b29c63c935cf1a4c4ab8b914a0e7d6a6a5"
+    },
+    "cricket": {
+      "src": "genre-art/cricket.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 32406,
+      "sha256": "a73e21afe98061ab34247d307be96f6d10bf43a14c4c14d6aa8e51657b411139"
+    },
+    "rugby": {
+      "src": "genre-art/rugby.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 25200,
+      "sha256": "ca8bbbc331346bc6b19ea5919c545cf2a21acadfcfba1ca5664244c559ec9345"
+    },
+    "snooker": {
+      "src": "genre-art/snooker.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 13062,
+      "sha256": "f945fa4495ea4cff1dfd5169249278c0277867707477df421e87912a12ac470e"
+    },
+    "horror": {
+      "src": "genre-art/horror.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 14418,
+      "sha256": "b1e0478272effb936381eb504497f9be45a27055775034f81aa2c459f6a66308"
+    },
+    "2d-platformer": {
+      "src": "genre-art/2d-platformer.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 24344,
+      "sha256": "5dbfbeff3f6b0941e898136c9b741b6355cfabdff34d21f14d7dc953ae228514"
+    },
+    "roguelite": {
+      "src": "genre-art/roguelite.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 24794,
+      "sha256": "d94e994bd315ee36e8e210482562464fbf1c397b6e8f97e39dd5162b40a19364"
+    },
+    "fps": {
+      "src": "genre-art/fps.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 22866,
+      "sha256": "61e729904f1c0a4fa443257dc468215547a50805bc93ede580b366f42839e998"
+    },
+    "action-roguelike": {
+      "src": "genre-art/action-roguelike.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 28822,
+      "sha256": "49e928ce6b502de5f0a582f63dca6c3296a04ba7adfafd2b8ae69bda8e11584e"
+    },
+    "immersive-sim": {
+      "src": "genre-art/immersive-sim.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 26956,
+      "sha256": "e613c38536d090af7b8739e536d6c1d3c56040445f68f322a0814db571ccbf06"
+    },
+    "3d-platformer": {
+      "src": "genre-art/3d-platformer.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 41224,
+      "sha256": "05db97e53069803b9ea64b731590c4ffc75cf47040dbc769ea1078323799c26d"
+    },
+    "choose-your-own-adventure": {
+      "src": "genre-art/choose-your-own-adventure.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 39234,
+      "sha256": "fddb6d9e623753c78136c3690546883ff1a0b8311535239b71426f32f15311da"
+    },
+    "turn-based-tactics": {
+      "src": "genre-art/turn-based-tactics.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 36490,
+      "sha256": "18fe4d6922ea6234f0eb4c909ab3bf2f6c6b361c21c8c2044ae4e4d155084d21"
+    },
+    "side-scroller": {
+      "src": "genre-art/side-scroller.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 25774,
+      "sha256": "a80d49bedfe1b1af2fa7c570063a8421371b38cdfb8d6b7d78ff067d48a3cd4b"
+    },
+    "survival-horror": {
+      "src": "genre-art/survival-horror.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 19640,
+      "sha256": "b4ad72142fecc130caa7a3b432784a8563828c9411d616e66185d6e37758cd52"
+    },
+    "bullet-hell": {
+      "src": "genre-art/bullet-hell.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 37976,
+      "sha256": "91e89c41100bf3bbe784c4860a2e0e6ba5b01b251beec9c051b9c3213b138111"
+    },
+    "puzzle-platformer": {
+      "src": "genre-art/puzzle-platformer.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 35138,
+      "sha256": "21946128b1b2432c9ba1d8a5aeb3b27d762482a168b43ce5c8e2060a29471a92"
+    },
+    "dungeon-crawler": {
+      "src": "genre-art/dungeon-crawler.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 27858,
+      "sha256": "e9c03bb6861df762f575c9041a7749cfa1a5e684444056fe38efe5d4c90182a3"
+    },
+    "hack-and-slash": {
+      "src": "genre-art/hack-and-slash.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 28302,
+      "sha256": "6de5e7a9f757e4caaaa030dcc8c994f32c46d1400f50e99a8b65afe653fe44df"
+    },
+    "life-sim": {
+      "src": "genre-art/life-sim.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 27778,
+      "sha256": "5eae52760dd084c494b3241bee3153549016500d8ceecd3189410fafdab16db9"
+    },
+    "dating-sim": {
+      "src": "genre-art/dating-sim.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 43554,
+      "sha256": "f46ba34232dc94fb7b7ba183e7d0e83a21a4c5828fc1e2b9ace9dc308c5b5ee9"
+    },
+    "shoot-em-up": {
+      "src": "genre-art/shoot-em-up.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 39778,
+      "sha256": "13ab41c24eed9108cbddb35e7719394f504d3a7420b747ec42d0a9e0715eac6d"
+    },
+    "investigation": {
+      "src": "genre-art/investigation.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 25968,
+      "sha256": "8a58b65be95faa52d4b15f88eb5d53a18dadb4763fac2c9e3343598fabb7ae55"
+    },
+    "time-management": {
+      "src": "genre-art/time-management.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 39318,
+      "sha256": "0f0552a9e4897ce759a8d0e3cd4b756f562c23551bb10b8034929598d63609e4"
+    },
+    "top-down-shooter": {
+      "src": "genre-art/top-down-shooter.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 44352,
+      "sha256": "7bfeb221d477a8d7f787a4e4daad19d6a2773d5b6a03a8fcb2398322ae3507f3"
+    },
+    "jrpg": {
+      "src": "genre-art/jrpg.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 44614,
+      "sha256": "5e510307661903b70c3e5049d62f9728c444a90fc881616173ac1b1f9172d3b0"
+    },
+    "collectathon": {
+      "src": "genre-art/collectathon.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 36322,
+      "sha256": "06205cd8aed186cebacff5e4e111dc1eb7f71e2d166876791c5df2f247017e5e"
+    },
+    "education": {
+      "src": "genre-art/education.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 24990,
+      "sha256": "b63a5216ecec732f4119965f16fd0b7eb7510e8e57bb8eb54d9c95a221246e00"
+    },
+    "precision-platformer": {
+      "src": "genre-art/precision-platformer.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 26242,
+      "sha256": "ab5fac8ff77c1fca77662957aa02a7c8b1c4da0b1251d0a08999afa82ae0e199"
+    },
+    "third-person-shooter": {
+      "src": "genre-art/third-person-shooter.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 25842,
+      "sha256": "83d1424d5dbfbe4cf3efe5afcf78d98608816cfea706f37b005140c8e46ea138"
+    },
+    "real-time-tactics": {
+      "src": "genre-art/real-time-tactics.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 31780,
+      "sha256": "df50cb6f10d623618cd799d450e3eddbdfa0fe689762b1d24d57d532783c228c"
+    },
+    "card-battler": {
+      "src": "genre-art/card-battler.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 32952,
+      "sha256": "1ff3b6c698354d632058082eb08bab742dc57bba227596a3228a53d143bd3947"
+    },
+    "arena-shooter": {
+      "src": "genre-art/arena-shooter.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 40080,
+      "sha256": "9b492a1365e0d4d8a0163deed08fcd2919c2bda459a01d815813ab5b03080eee"
+    },
+    "tactical-rpg": {
+      "src": "genre-art/tactical-rpg.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 39336,
+      "sha256": "2890fafc4be6b069a604f9cdbb8dc7dbd34e0d70f900d8593c30ca8634fb928a"
+    },
+    "city-builder": {
+      "src": "genre-art/city-builder.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 46036,
+      "sha256": "984134d22c73067b08be712de604e85330151d11fbec1cd88dcdddc67ae304ba"
+    },
+    "wargame": {
+      "src": "genre-art/wargame.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 36960,
+      "sha256": "509e247072ef6206b33a88c72865d2bdc06fcdd79aca9a52fe8aa3f082a7d0f1"
+    },
+    "runner": {
+      "src": "genre-art/runner.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 27478,
+      "sha256": "fb2ed7503778c68d382bc47987fd17691f87d9d9475587b4c41e5e124d61f1d0"
+    },
+    "souls-like": {
+      "src": "genre-art/souls-like.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 30258,
+      "sha256": "399c7753c7ef5372f7ff124750a243dcafdd8f8beca41efeb7cf8889399b8284"
+    },
+    "metroidvania": {
+      "src": "genre-art/metroidvania.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 29832,
+      "sha256": "532403f6de634a5f97bfa2ffd037afcb812a6bae052da8965cf8b696143140c5"
+    },
+    "beat-em-up": {
+      "src": "genre-art/beat-em-up.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 36958,
+      "sha256": "6ad6db9b8fbf56ca11dd43763c1bccc5c7695b37c014d612bb23ea9340578e55"
+    },
+    "flight": {
+      "src": "genre-art/flight.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 32044,
+      "sha256": "dc32c64245fe32fd2fdbc5a2512a14d9668ed775f682ffa69241a5b6351f4f33"
+    },
+    "crpg": {
+      "src": "genre-art/crpg.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 42508,
+      "sha256": "01762c46db1accf20ff8565a7a892aaec3df3c57972b9cc30950dfd121ab0be0"
+    },
+    "2d-fighter": {
+      "src": "genre-art/2d-fighter.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 33610,
+      "sha256": "549d06d4fed8fce1e8b851d13e1b79f83688afd347fde7e84ccc3f10738a93f8"
+    },
+    "twin-stick-shooter": {
+      "src": "genre-art/twin-stick-shooter.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 42100,
+      "sha256": "ae68c70c8f59eab7129984412ddad987b3a5cb94083813b324b26e977947b5f6"
+    },
+    "trading": {
+      "src": "genre-art/trading.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 46108,
+      "sha256": "6d8a7ddd8ed56998acd6a48fa34f61772cbc1e323c3a2d11a2edfe13ad169a22"
+    },
+    "3d-fighter": {
+      "src": "genre-art/3d-fighter.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 32022,
+      "sha256": "e59a6d3b82e046c26c1a4f4e256ce9537e2cf9a69d5cbcbc21145c5fe4490e82"
+    },
+    "colony-sim": {
+      "src": "genre-art/colony-sim.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 45500,
+      "sha256": "e3f8a10e51bbf74be0c1b0b718a9955531630a746d00d7d46ee5e196b02a10e7"
+    },
+    "roguelike-deckbuilder": {
+      "src": "genre-art/roguelike-deckbuilder.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 34994,
+      "sha256": "e0fe31a597dbe3266ce6717107adc047b069c9dbb296739340a3820698459c3d"
+    },
+    "shop-keeper": {
+      "src": "genre-art/shop-keeper.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 39598,
+      "sha256": "4e45644f5eeb160091bc0a90e2f9cc5b223d97a04ab5a703cb5e2bbcb820d773"
+    },
+    "grand-strategy": {
+      "src": "genre-art/grand-strategy.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 42638,
+      "sha256": "24f2b89a4b6f82c6585e6195f491511eb5be1f38554d419dbf3a9a2c024f3ac7"
+    },
+    "mystery-dungeon": {
+      "src": "genre-art/mystery-dungeon.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 43660,
+      "sha256": "ed143ae2e4dc71f3018bbf0e7b3ee56c23a62c347cc8812906c2f89dd0b1f4c8"
+    },
+    "looter-shooter": {
+      "src": "genre-art/looter-shooter.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 38296,
+      "sha256": "d666ed7684c9d777ed7e15159e5381ae39cbf7c521912733cc3869c12e9d7072"
+    },
+    "combat-racing": {
+      "src": "genre-art/combat-racing.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 38494,
+      "sha256": "5e5baaea3b53e438e013252c8df837c5740ce697896cf394f4385969773f24d7"
+    },
+    "spectacle-fighter": {
+      "src": "genre-art/spectacle-fighter.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 30438,
+      "sha256": "72124933ff2102045bbce27c8b1ba19dedd4dfa4dbfc3427909d5695255dd0e7"
+    },
+    "bullet-heaven": {
+      "src": "genre-art/bullet-heaven.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 37080,
+      "sha256": "9e04294725246743bf36c72c2d2e3b377f7f135b94e2ec7c37fca00b222d5cb8"
+    },
+    "solitaire": {
+      "src": "genre-art/solitaire.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 26530,
+      "sha256": "8ccf59a2db6ff00728310f611e2f22d3b7dcc44bc037c29fade3075f3382e042"
+    },
+    "hero-shooter": {
+      "src": "genre-art/hero-shooter.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 33326,
+      "sha256": "a1c939164630a39da04dc7c6635d49e71d3ae543be80c4c67ebf0ff6af1fad1a"
+    },
+    "boomer-shooter": {
+      "src": "genre-art/boomer-shooter.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 24768,
+      "sha256": "1c567bf82df1dbdbb1159dc973f273a02780ca590d17097c2185a4be896aafb1"
+    },
+    "trading-card-game": {
+      "src": "genre-art/trading-card-game.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 42346,
+      "sha256": "f3ea278ed689252354e315ddd2ec3fb906d868dde00b083ac2dfa14607c8b2ca"
+    },
+    "typing": {
+      "src": "genre-art/typing.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 24320,
+      "sha256": "b1c652507018497066cef7c225d7c03e87b69ad1ac0a831575d3e4b66a239082"
+    },
+    "sokoban": {
+      "src": "genre-art/sokoban.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 31016,
+      "sha256": "7a11d47ba0a7c2b4b2173cb28cdf6fe22c4213c1db7f5810bb7c7f1a904f5a37"
+    },
+    "political-sim": {
+      "src": "genre-art/political-sim.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 38616,
+      "sha256": "18343e129e019eb1fd28a8581c43dcd06e219ea6d12875573e14bf4996c464d6"
+    },
+    "open-world-survival-craft": {
+      "src": "genre-art/open-world-survival-craft.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 29958,
+      "sha256": "52288b8260a138946caff9a9847626e49540ae1b05f0949bc54a5b5195b3d0fa"
+    },
+    "programming": {
+      "src": "genre-art/programming.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 45028,
+      "sha256": "ce98b478bf59d8b7d18d9893081494c3da39b09f2d1f28344aaf3aeb2bddc967"
+    },
+    "4x": {
+      "src": "genre-art/4x.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 33134,
+      "sha256": "fa5c413ac701d565f070b01dd5cd3e885cd0839d4c7f8e256a346416204f7d19"
+    },
+    "escape-room": {
+      "src": "genre-art/escape-room.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 27668,
+      "sha256": "4a8ba19e591aaa6442fa9d91bfe9bc508160b339433f92139b89f5837a259322"
+    },
+    "traditional-roguelike": {
+      "src": "genre-art/traditional-roguelike.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 26004,
+      "sha256": "8eb30171dfac94f5336a3ee3d47370676e304ee3183f5cdc5f1c927cca01283c"
+    },
+    "football-soccer": {
+      "src": "genre-art/football-soccer.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 27152,
+      "sha256": "d0cf768d3a15dc2dae73f33a167b8d223972646a4e4bf947a5a8d54ffbd713be"
+    },
+    "organizing": {
+      "src": "genre-art/organizing.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 35520,
+      "sha256": "ec7ab9f4c5c19540d069dd1738b00834ca0648f77dec8f93a26d7110c5fcd657"
+    },
+    "heist": {
+      "src": "genre-art/heist.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 29264,
+      "sha256": "a91cec45730b7a8218155bd40fb5db184e7da54a705cee08a8953cef29b97159"
+    },
+    "on-rails-shooter": {
+      "src": "genre-art/on-rails-shooter.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 31274,
+      "sha256": "b8e2791113fff31b9ebf9f12581eb95b72e41345d6f4fcf53bc533bda104bd67"
+    },
+    "cleaning": {
+      "src": "genre-art/cleaning.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 32918,
+      "sha256": "9cdd1369ecc74c542c1c4a09f0216fdfa6b523b7e21439b47df47b268abcf191"
+    },
+    "spelling": {
+      "src": "genre-art/spelling.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 23088,
+      "sha256": "1a9a8373c59715cabab4fe0698558f9b24338ffeb9b7f7f93d55e896dc26a141"
+    },
+    "decorating": {
+      "src": "genre-art/decorating.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 29958,
+      "sha256": "41d574cdaf283609b046f134d62bb69500a14cc68bce3a4c6186759937cb3921"
+    },
+    "social-deduction": {
+      "src": "genre-art/social-deduction.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 17570,
+      "sha256": "1ccfe6e4c187d357d6bb68d2146db31764b4a3c4ab0cbbbc04cddef872e22829"
+    },
+    "boss-rush": {
+      "src": "genre-art/boss-rush.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 33448,
+      "sha256": "b06f9d5761894e9f55615b23d5bef029bdca8a6bf78d5507cd85ce12697568cb"
+    },
+    "extraction-shooter": {
+      "src": "genre-art/extraction-shooter.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 22936,
+      "sha256": "1d848639d2b15c26935d8208a2f5c013f7641a85217498f79ea76f9fa40d468f"
+    },
+    "falling-blocks": {
+      "src": "genre-art/falling-blocks.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 16306,
+      "sha256": "b986376ff8a86729b78edbd1f789329bf925ceb3b85b4d85e523f8d0858ef18a"
+    },
+    "poker": {
+      "src": "genre-art/poker.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 23934,
+      "sha256": "5d91a58d2af9427b5f679cf50fb660e1607ae6b4f4359d9bdd4a83b24f146d70"
+    },
+    "football-american": {
+      "src": "genre-art/football-american.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 23558,
+      "sha256": "584f5a726986a44bbcbcfde5dfbdf31665e0b5f7bd767a217c2e3fb8162d8ee3"
+    },
+    "language-learning": {
+      "src": "genre-art/language-learning.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 21088,
+      "sha256": "2ccc8c00c783ce9142e12fbc882c856a0ed62f154cc4f54f0abbea5cbfaa9055"
+    },
+    "zoo": {
+      "src": "genre-art/zoo.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 45160,
+      "sha256": "dff7b4605abe6c6f6713dd6ca7fed9e2fc17db5c10198b52dce643214483f400"
+    },
+    "arpg": {
+      "src": "genre-art/arpg.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 38790,
+      "sha256": "e184fe810e5da01ece2ae1a994c9d31d7b9e1197695086deeadade4fb56c47e0"
+    }
+  }
+}
