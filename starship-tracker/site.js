@@ -7,7 +7,7 @@
   }
 
   var PAGE = document.body.getAttribute("data-page") || "home";
-  var ASSET_V = "20261108c";
+  var ASSET_V = "20261108d";
   var openNotesBtn = null;
   var notesHoverTimer = null;
 
@@ -426,7 +426,10 @@
       S.detailsPanel(flight) +
       S.sourceList(flight.sources, "Sources");
 
+    var detail = S.detailOf(flight);
+    var hero = S.flightHeroHtml(flight, detail);
     main.innerHTML =
+      hero +
       '<section class="page-band flight-detail">' +
       '<div class="wrap">' +
       '<header class="page-head band-head flight-sticky-title">' +
@@ -448,6 +451,7 @@
         : '<span></span>') +
       "</nav>" +
       "</div></section>";
+    S.mountFlightHeroVideos(main);
   }
 
   function renderCompare(data) {

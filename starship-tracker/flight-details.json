@@ -12,27 +12,6 @@
         {
           "file": null,
           "hotlink": true,
-          "caption": "Liftoff on Flight 1 (SpaceX photo; post: \"First fully integrated Starship lifting off for the first time!\")",
-          "role": "liftoff",
-          "credit": "© SpaceX",
-          "license": "All rights reserved (used with credit, personal site)",
-          "licenseUrl": null,
-          "pageUrl": "https://x.com/SpaceX/status/1649089801797378048",
-          "directUrl": "https://pbs.twimg.com/media/FuK9icGaYAE13GS.jpg?name=large",
-          "width": null,
-          "height": null,
-          "bytes": null,
-          "sources": [
-            {
-              "title": "@SpaceX post on X",
-              "site": "X (@SpaceX)",
-              "href": "https://x.com/SpaceX/status/1649089801797378048"
-            }
-          ]
-        },
-        {
-          "file": null,
-          "hotlink": true,
           "caption": "Ascent on Flight 1 (SpaceX photo; post: \"Starship successfully lifted off from the orbital launch pad and climbed to an apogee of ~39 km\")",
           "role": "ascent",
           "credit": "© SpaceX",
@@ -580,6 +559,14 @@
             "href": "https://www.faa.gov/newsroom/faa-closes-spacex-starship-mishap-investigation"
           }
         ]
+      },
+      "hero": {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/FuK9icGaYAE13GS.jpg?name=large",
+        "caption": "First integrated Starship liftoff from Starbase",
+        "credit": "© SpaceX",
+        "creditUrl": "https://x.com/SpaceX/status/1647758597364035584",
+        "sourceKind": "image"
       }
     },
     "2": {
@@ -607,27 +594,6 @@
               "title": "@SpaceX post on X",
               "site": "X (@SpaceX)",
               "href": "https://x.com/SpaceX/status/1725890107952218239"
-            }
-          ]
-        },
-        {
-          "file": null,
-          "hotlink": true,
-          "caption": "Hot staging on Flight 2 (SpaceX photo; post: \"Starship liftoff through successful hot-stage separation\")",
-          "role": "hot staging",
-          "credit": "© SpaceX",
-          "license": "All rights reserved (used with credit, personal site)",
-          "licenseUrl": null,
-          "pageUrl": "https://x.com/SpaceX/status/1725898823262949586",
-          "directUrl": "https://pbs.twimg.com/media/F_OftU3boAAp0of.jpg?name=large",
-          "width": null,
-          "height": null,
-          "bytes": null,
-          "sources": [
-            {
-              "title": "@SpaceX post on X",
-              "site": "X (@SpaceX)",
-              "href": "https://x.com/SpaceX/status/1725898823262949586"
             }
           ]
         }
@@ -1100,6 +1066,14 @@
             "href": "https://arstechnica.com/space/2024/02/faa-closes-starship-inquiry-and-spacex-details-causes-of-november-accidents/"
           }
         ]
+      },
+      "hero": {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/F_OftU3boAAp0of.jpg?name=large",
+        "caption": "First hot-staging attempt during ascent",
+        "credit": "© SpaceX",
+        "creditUrl": "https://x.com/SpaceX/status/1725898823262949586",
+        "sourceKind": "image"
       }
     },
     "3": {
@@ -1127,27 +1101,6 @@
               "title": "@SpaceX post on X",
               "site": "X (@SpaceX)",
               "href": "https://x.com/SpaceX/status/1768642869525725253"
-            }
-          ]
-        },
-        {
-          "file": null,
-          "hotlink": true,
-          "caption": "Ascent on Flight 3 (SpaceX photo; post: \"Congratulations to the entire SpaceX team on today's successful Starship flight test! →\")",
-          "role": "ascent",
-          "credit": "© SpaceX",
-          "license": "All rights reserved (used with credit, personal site)",
-          "licenseUrl": null,
-          "pageUrl": "https://x.com/SpaceX/status/1768341601049575460",
-          "directUrl": "https://pbs.twimg.com/media/GIpo6jvakAAFalR.jpg?name=large",
-          "width": null,
-          "height": null,
-          "bytes": null,
-          "sources": [
-            {
-              "title": "@SpaceX post on X",
-              "site": "X (@SpaceX)",
-              "href": "https://x.com/SpaceX/status/1768341601049575460"
             }
           ]
         }
@@ -1714,6 +1667,14 @@
             "href": "https://www.faa.gov/newsroom/statements/general-statements"
           }
         ]
+      },
+      "hero": {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/GIpo6jvakAAFalR.jpg?name=large",
+        "caption": "Ascent on the first flight to finish every test objective",
+        "credit": "© SpaceX",
+        "creditUrl": "https://x.com/SpaceX/status/1768341601049575460",
+        "sourceKind": "image"
       }
     },
     "4": {
@@ -1741,27 +1702,6 @@
               "title": "@SpaceX post on X",
               "site": "X (@SpaceX)",
               "href": "https://x.com/SpaceX/status/1798789555342200964"
-            }
-          ]
-        },
-        {
-          "file": null,
-          "hotlink": true,
-          "caption": "Reentry on Flight 4 (SpaceX photo; post: \"Starship made a controlled reentry, successfully making it through the phases of peak heating and max aerodynamic pressure and demonstrating\")",
-          "role": "reentry",
-          "credit": "© SpaceX",
-          "license": "All rights reserved (used with credit, personal site)",
-          "licenseUrl": null,
-          "pageUrl": "https://x.com/SpaceX/status/1798792222743122164",
-          "directUrl": "https://pbs.twimg.com/media/GPaXWoga0AccBpr.jpg?name=large",
-          "width": null,
-          "height": null,
-          "bytes": null,
-          "sources": [
-            {
-              "title": "@SpaceX post on X",
-              "site": "X (@SpaceX)",
-              "href": "https://x.com/SpaceX/status/1798792222743122164"
             }
           ]
         }
@@ -2292,6 +2232,14 @@
             "href": "https://www.faa.gov/newsroom/statements/general-statements"
           }
         ]
+      },
+      "hero": {
+        "type": "image",
+        "url": "https://content.spacex.com/cms-assets/assets/Flight_4_Website_Desktop_3_ef4f400e2d.jpg",
+        "caption": "Starship ascending through golden haze",
+        "credit": "© SpaceX",
+        "creditUrl": "https://www.spacex.com/launches/starship-flight-4",
+        "sourceKind": "spacex-ready"
       }
     },
     "5": {
@@ -2881,6 +2829,31 @@
             "href": "https://en.wikipedia.org/wiki/Starship_flight_test_5"
           }
         ]
+      },
+      "hero": {
+        "type": "video",
+        "url": "media/hero/flight-05-catch.mp4",
+        "sources": [
+          {
+            "src": "media/hero/flight-05-catch-720.mp4",
+            "type": "video/mp4",
+            "media": "(max-width: 720px)"
+          },
+          {
+            "src": "media/hero/flight-05-catch.webm",
+            "type": "video/webm"
+          },
+          {
+            "src": "media/hero/flight-05-catch.mp4",
+            "type": "video/mp4"
+          }
+        ],
+        "poster": "media/hero/flight-05-catch-poster.jpg",
+        "caption": "First Super Heavy catch by the tower chopsticks",
+        "credit": "© SpaceX, from the Flight 5 webcast",
+        "creditUrl": "https://x.com/SpaceX/status/1845152255944819015",
+        "sourceKind": "cut",
+        "sourceRange": "webcast 39:48–39:58 ≈ T+6:43–T+6:53"
       }
     },
     "6": {
@@ -2931,27 +2904,6 @@
               "href": "https://x.com/SpaceX/status/1859717568162127873"
             }
           ]
-        },
-        {
-          "file": "flight-images/F6-1.webp",
-          "caption": "Flight 6 plume over the Gulf coast, photographed from the ISS by Don Pettit",
-          "role": "ascent from ISS",
-          "credit": "NASA/Don Pettit",
-          "license": "Public domain",
-          "licenseUrl": null,
-          "pageUrl": "https://commons.wikimedia.org/wiki/File:The_launch_of_the_SpaceX_Starship_6_rocket_seen_from_the_space_station_(iss072e220043).jpg",
-          "directUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/The_launch_of_the_SpaceX_Starship_6_rocket_seen_from_the_space_station_%28iss072e220043%29.jpg/1920px-The_launch_of_the_SpaceX_Starship_6_rocket_seen_from_the_space_station_%28iss072e220043%29.jpg",
-          "width": 1600,
-          "height": 1067,
-          "bytes": 138962,
-          "sources": [
-            {
-              "title": "Image page",
-              "site": "Wikimedia Commons",
-              "href": "https://commons.wikimedia.org/wiki/File:The_launch_of_the_SpaceX_Starship_6_rocket_seen_from_the_space_station_(iss072e220043).jpg"
-            }
-          ],
-          "hotlink": false
         },
         {
           "file": "flight-images/F6-2.webp",
@@ -3512,6 +3464,14 @@
             "href": "https://www.spacex.com/launches/starship-flight-6"
           }
         ]
+      },
+      "hero": {
+        "type": "image",
+        "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/The_launch_of_the_SpaceX_Starship_6_rocket_seen_from_the_space_station_%28iss072e220043%29.jpg/1920px-The_launch_of_the_SpaceX_Starship_6_rocket_seen_from_the_space_station_%28iss072e220043%29.jpg",
+        "caption": "Launch plume photographed from the International Space Station",
+        "credit": "NASA/Don Pettit",
+        "creditUrl": "https://commons.wikimedia.org/wiki/File:The_launch_of_the_SpaceX_Starship_6_rocket_seen_from_the_space_station_(iss072e220043).jpg",
+        "sourceKind": "image"
       }
     },
     "7": {
@@ -3560,27 +3520,6 @@
               "title": "@SpaceX post on X",
               "site": "X (@SpaceX)",
               "href": "https://x.com/SpaceX/status/1880655580823773354"
-            }
-          ]
-        },
-        {
-          "file": null,
-          "hotlink": true,
-          "caption": "Super Heavy caught by the tower chopsticks on Flight 7 (SpaceX photo; post: \"The second successful catch of the Super Heavy booster\")",
-          "role": "booster catch",
-          "credit": "© SpaceX",
-          "license": "All rights reserved (used with credit, personal site)",
-          "licenseUrl": null,
-          "pageUrl": "https://x.com/SpaceX/status/1880661166395158694",
-          "directUrl": "https://pbs.twimg.com/media/GhlzMxJbEAAgx1w.jpg?name=large",
-          "width": null,
-          "height": null,
-          "bytes": null,
-          "sources": [
-            {
-              "title": "@SpaceX post on X",
-              "site": "X (@SpaceX)",
-              "href": "https://x.com/SpaceX/status/1880661166395158694"
             }
           ]
         }
@@ -4154,6 +4093,14 @@
             "href": "https://arstechnica.com/space/2025/01/fire-destroys-starship-on-its-seventh-test-flight-raining-debris-from-space/"
           }
         ]
+      },
+      "hero": {
+        "type": "image",
+        "url": "https://content.spacex.com/cms-assets/assets/Flight_7_Website_Desktop_7_4afb3a9d9a.jpg",
+        "caption": "Second Super Heavy catch at the tower",
+        "credit": "© SpaceX",
+        "creditUrl": "https://www.spacex.com/launches/starship-flight-7",
+        "sourceKind": "spacex-ready"
       }
     },
     "8": {
@@ -4181,27 +4128,6 @@
               "title": "@SpaceX post on X",
               "site": "X (@SpaceX)",
               "href": "https://x.com/SpaceX/status/1898512022951874665"
-            }
-          ]
-        },
-        {
-          "file": null,
-          "hotlink": true,
-          "caption": "Super Heavy caught by the tower chopsticks on Flight 8 (SpaceX photo; post: \"The third successful return to launch site and catch of the Super Heavy rocket\")",
-          "role": "booster catch",
-          "credit": "© SpaceX",
-          "license": "All rights reserved (used with credit, personal site)",
-          "licenseUrl": null,
-          "pageUrl": "https://x.com/SpaceX/status/1898513213794525244",
-          "directUrl": "https://pbs.twimg.com/media/GljfrJbaYAA03pM.jpg?name=large",
-          "width": null,
-          "height": null,
-          "bytes": null,
-          "sources": [
-            {
-              "title": "@SpaceX post on X",
-              "site": "X (@SpaceX)",
-              "href": "https://x.com/SpaceX/status/1898513213794525244"
             }
           ]
         },
@@ -4773,6 +4699,14 @@
             "href": "https://www.spacex.com/launches/starship-flight-8"
           }
         ]
+      },
+      "hero": {
+        "type": "image",
+        "url": "https://content.spacex.com/cms-assets/assets/Flight_8_Website_Desktop_4_62344783aa.jpg",
+        "caption": "Third Super Heavy catch at the tower",
+        "credit": "© SpaceX",
+        "creditUrl": "https://www.spacex.com/launches/starship-flight-8",
+        "sourceKind": "spacex-ready"
       }
     },
     "9": {
@@ -4800,27 +4734,6 @@
               "title": "@SpaceX post on X",
               "site": "X (@SpaceX)",
               "href": "https://x.com/SpaceX/status/1927567126224593279"
-            }
-          ]
-        },
-        {
-          "file": null,
-          "hotlink": true,
-          "caption": "Starship in space on Flight 9 (SpaceX photo; post: \"Starship in space\")",
-          "role": "ship in space",
-          "credit": "© SpaceX",
-          "license": "All rights reserved (used with credit, personal site)",
-          "licenseUrl": null,
-          "pageUrl": "https://x.com/SpaceX/status/1928826217853235394",
-          "directUrl": "https://pbs.twimg.com/media/GsSRMmqaMAIG5cr.jpg?name=large",
-          "width": null,
-          "height": null,
-          "bytes": null,
-          "sources": [
-            {
-              "title": "@SpaceX post on X",
-              "site": "X (@SpaceX)",
-              "href": "https://x.com/SpaceX/status/1928826217853235394"
             }
           ]
         }
@@ -5396,6 +5309,14 @@
             "href": "https://www.faa.gov/newsroom/statements/general-statements"
           }
         ]
+      },
+      "hero": {
+        "type": "image",
+        "url": "https://pbs.twimg.com/media/GsSRMmqaMAIG5cr.jpg?name=large",
+        "caption": "Starship coasting in space before a failed reentry",
+        "credit": "© SpaceX",
+        "creditUrl": "https://x.com/SpaceX/status/1928826217853235394",
+        "sourceKind": "image"
       }
     },
     "10": {
@@ -5423,27 +5344,6 @@
               "title": "@SpaceX post on X",
               "site": "X (@SpaceX)",
               "href": "https://x.com/SpaceX/status/1960535661984817592"
-            }
-          ]
-        },
-        {
-          "file": null,
-          "hotlink": true,
-          "caption": "Starship landing burn and splashdown on Flight 10 (SpaceX photo; post: \"View of Starship landing burn and splashdown on Flight 10, made possible by SpaceX’s recovery team. Starship made it through reentry with in\")",
-          "role": "ship landing burn/splashdown",
-          "credit": "© SpaceX",
-          "license": "All rights reserved (used with credit, personal site)",
-          "licenseUrl": null,
-          "pageUrl": "https://x.com/SpaceX/status/1961165064666312956",
-          "directUrl": "https://pbs.twimg.com/media/Gzdw3Y5WIAALuh7.jpg?name=large",
-          "width": null,
-          "height": null,
-          "bytes": null,
-          "sources": [
-            {
-              "title": "@SpaceX post on X",
-              "site": "X (@SpaceX)",
-              "href": "https://x.com/SpaceX/status/1961165064666312956"
             }
           ]
         }
@@ -6102,6 +6002,14 @@
             "href": "https://www.faa.gov/newsroom/statements/general-statements"
           }
         ]
+      },
+      "hero": {
+        "type": "image",
+        "url": "https://content.spacex.com/cms-assets/assets/Flight_10_Website_Mobile_3_39310629e9.jpg",
+        "caption": "Flight 10 liftoff from Starbase",
+        "credit": "© SpaceX",
+        "creditUrl": "https://www.spacex.com/launches/starship-flight-10",
+        "sourceKind": "spacex-ready"
       }
     },
     "11": {
@@ -6150,27 +6058,6 @@
               "title": "@SpaceX post on X",
               "site": "X (@SpaceX)",
               "href": "https://x.com/SpaceX/status/1979261047182635135"
-            }
-          ]
-        },
-        {
-          "file": null,
-          "hotlink": true,
-          "caption": "Reentry on Flight 11 (SpaceX photo; post: \"Starship reenters Earth’s atmosphere on Flight 11. Data gathered from this flight will inform future Starship missions that will return to t\")",
-          "role": "reentry",
-          "credit": "© SpaceX",
-          "license": "All rights reserved (used with credit, personal site)",
-          "licenseUrl": null,
-          "pageUrl": "https://x.com/SpaceX/status/1979285350167253058",
-          "directUrl": "https://pbs.twimg.com/media/G3fVb8VWgAABTw1.jpg?name=large",
-          "width": null,
-          "height": null,
-          "bytes": null,
-          "sources": [
-            {
-              "title": "@SpaceX post on X",
-              "site": "X (@SpaceX)",
-              "href": "https://x.com/SpaceX/status/1979285350167253058"
             }
           ]
         }
@@ -6813,6 +6700,14 @@
             "href": "https://www.spacex.com/launches/starship-flight-11"
           }
         ]
+      },
+      "hero": {
+        "type": "image",
+        "url": "https://content.spacex.com/cms-assets/assets/Flight_11_Website_Mobile_3_e2c6fc1779.jpg",
+        "caption": "Flight 11 liftoff from Starbase",
+        "credit": "© SpaceX",
+        "creditUrl": "https://www.spacex.com/launches/starship-flight-11",
+        "sourceKind": "spacex-ready"
       }
     },
     "12": {
@@ -6861,27 +6756,6 @@
               "title": "@SpaceX post on X",
               "site": "X (@SpaceX)",
               "href": "https://x.com/SpaceX/status/2058304809044750467"
-            }
-          ]
-        },
-        {
-          "file": null,
-          "hotlink": true,
-          "caption": "Starship landing burn and splashdown on Flight 12 (SpaceX photo; post: \"Starship V3 landing burn over the Indian Ocean\")",
-          "role": "ship splashdown",
-          "credit": "© SpaceX",
-          "license": "All rights reserved (used with credit, personal site)",
-          "licenseUrl": null,
-          "pageUrl": "https://x.com/SpaceX/status/2058305552866775118",
-          "directUrl": "https://pbs.twimg.com/media/HJCR-PuXMAAGnt1.jpg?name=large",
-          "width": null,
-          "height": null,
-          "bytes": null,
-          "sources": [
-            {
-              "title": "@SpaceX post on X",
-              "site": "X (@SpaceX)",
-              "href": "https://x.com/SpaceX/status/2058305552866775118"
             }
           ]
         },
@@ -7635,6 +7509,14 @@
             "href": "https://www.faa.gov/newsroom/statements/general-statements"
           }
         ]
+      },
+      "hero": {
+        "type": "image",
+        "url": "https://content.spacex.com/cms-assets/assets/Flight_12_Website_Mobile_3_fba489c895.jpg",
+        "caption": "First Version 3 ship flight — liftoff",
+        "credit": "© SpaceX",
+        "creditUrl": "https://www.spacex.com/launches/starship-flight-12",
+        "sourceKind": "spacex-ready"
       }
     },
     "13": {
@@ -7683,27 +7565,6 @@
               "title": "@SpaceX post on X",
               "site": "X (@SpaceX)",
               "href": "https://x.com/SpaceX/status/2081894924291654060"
-            }
-          ]
-        },
-        {
-          "file": null,
-          "hotlink": true,
-          "caption": "Starship landing burn and splashdown on Flight 13 (SpaceX photo; post: \"Landing burn and splashdown of Starship on Flight 13\")",
-          "role": "ship landing burn/splashdown",
-          "credit": "© SpaceX",
-          "license": "All rights reserved (used with credit, personal site)",
-          "licenseUrl": null,
-          "pageUrl": "https://x.com/SpaceX/status/2082186658162626898",
-          "directUrl": "https://pbs.twimg.com/media/HOVpVmlWAAADPDg.jpg?name=large",
-          "width": null,
-          "height": null,
-          "bytes": null,
-          "sources": [
-            {
-              "title": "@SpaceX post on X",
-              "site": "X (@SpaceX)",
-              "href": "https://x.com/SpaceX/status/2082186658162626898"
             }
           ]
         }
@@ -8403,6 +8264,22 @@
             "href": "https://www.faa.gov/newsroom/statements/general-statements"
           }
         ]
+      },
+      "hero": {
+        "type": "video",
+        "url": "media/hero/flight-13-orbit.mp4",
+        "sources": [
+          {
+            "src": "media/hero/flight-13-orbit.mp4",
+            "type": "video/mp4"
+          }
+        ],
+        "poster": "media/hero/flight-13-orbit-poster.jpg",
+        "caption": "Ship coasting above Earth after stage separation",
+        "credit": "© SpaceX",
+        "creditUrl": "https://www.spacex.com/launches/starship-flight-13",
+        "sourceKind": "spacex-ready",
+        "sourceUrl": "https://content.spacex.com/cms-assets/assets/Flight_13_Ship_in_Orbit_NX_20260724_1080_P_Vertical_ae290559e3.mp4"
       }
     },
     "14": {
@@ -8430,27 +8307,6 @@
               "title": "@SpaceX post on X",
               "site": "X (@SpaceX)",
               "href": "https://x.com/SpaceX/status/2104654998034690329"
-            }
-          ]
-        },
-        {
-          "file": null,
-          "hotlink": true,
-          "caption": "Starship in space on Flight 14 (SpaceX photo; post: \"Starship's first orbital flight delivered 26 Starlink V3 satellites to space\")",
-          "role": "ship in space",
-          "credit": "© SpaceX",
-          "license": "All rights reserved (used with credit, personal site)",
-          "licenseUrl": null,
-          "pageUrl": "https://x.com/SpaceX/status/2106090316747207047",
-          "directUrl": "https://pbs.twimg.com/media/HTpV0zqXYAAxnFD.jpg?name=large",
-          "width": null,
-          "height": null,
-          "bytes": null,
-          "sources": [
-            {
-              "title": "@SpaceX post on X",
-              "site": "X (@SpaceX)",
-              "href": "https://x.com/SpaceX/status/2106090316747207047"
             }
           ]
         }
@@ -9251,6 +9107,14 @@
             "href": "https://tychop.github.io/bot-pages/starship-tracker/flights.json"
           }
         ]
+      },
+      "hero": {
+        "type": "image",
+        "url": "https://content.spacex.com/cms-assets/assets/Flight_14_Website_Mobile_3_fb8b462f51.jpg",
+        "caption": "First orbital Starship flight delivering Starlink satellites",
+        "credit": "© SpaceX",
+        "creditUrl": "https://www.spacex.com/launches/starship-flight-14",
+        "sourceKind": "spacex-ready"
       }
     },
     "15": {
@@ -9260,27 +9124,6 @@
       "booster": "Booster 22",
       "ship": "Ship 42",
       "images": [
-        {
-          "file": null,
-          "hotlink": true,
-          "caption": "Header image of SpaceX's Flight 15 page: a Version 3 Super Heavy at the Starbase tower (SpaceX does not say which booster; pre-flight)",
-          "role": "pre-flight hardware",
-          "credit": "© SpaceX",
-          "license": "All rights reserved (used with credit, personal site)",
-          "licenseUrl": null,
-          "pageUrl": "https://www.spacex.com/launches/starship-flight-15",
-          "directUrl": "https://sxcontent9668.azureedge.us/cms-assets/assets/Flight_15_Website_Desktop_1_7111645b6d.png",
-          "width": null,
-          "height": null,
-          "bytes": null,
-          "sources": [
-            {
-              "title": "SpaceX: Starship Flight 15 mission page / recap",
-              "site": "SpaceX",
-              "href": "https://www.spacex.com/launches/starship-flight-15"
-            }
-          ]
-        },
         {
           "file": "flight-images/F15-1.webp",
           "caption": "Pre-flight launch pad: NOAA aerial view of the Starbase launch site in January 2026, showing both launch towers including Pad 2, from which Flight 15 is set to launch",
@@ -9905,6 +9748,14 @@
           }
         ],
         "note": "Published on the SpaceX Flight 15 page; pending FAA approval"
+      },
+      "hero": {
+        "type": "image",
+        "url": "https://content.spacex.com/cms-assets/assets/Flight_15_Website_Mobile_1_562d65239a.png",
+        "caption": "Version 3 Super Heavy at the Starbase tower",
+        "credit": "© SpaceX",
+        "creditUrl": "https://www.spacex.com/launches/starship-flight-15",
+        "sourceKind": "spacex-ready"
       }
     }
   },
