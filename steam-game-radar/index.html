@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Steam Machine Game Radar</title>
+<link rel="icon" href="data:,">
 <meta name="referrer" content="no-referrer">
 <style>
 :root{--bg:#07090f;--panel:#0f1420;--panel2:#141b2b;--line:#222c42;--text:#e8ecf5;--muted:#8d97ad;--dim:#5d6780;
@@ -268,6 +269,8 @@ let tileObserver=null;const tileVideos=new Set(),visibleTileVideos=new Set();
 function pauseTileVideo(v){v.pause();v.classList.remove('playing');if(v.dataset.loaded){for(const source of v.querySelectorAll('source'))source.removeAttribute('src');delete v.dataset.loaded;v.load();}}
 function playTileVideo(v){
  if(reducedMotion.matches||document.hidden||!visibleTileVideos.has(v)||v.dataset.failed)return;
+ // Reassert autoplay-safe properties before every load/play (including Safari resumes).
+ v.muted=true;v.defaultMuted=true;v.playsInline=true;
  if(!v.dataset.loaded){for(const source of v.querySelectorAll('source[data-src]'))source.src=source.dataset.src;v.dataset.loaded='1';v.load();}
  const result=v.play();if(result&&result.catch)result.catch(()=>{v.classList.remove('playing');});
 }
@@ -280,7 +283,7 @@ function observeTileVideos(){
 function syncTileMotion(){for(const v of tileVideos){if(reducedMotion.matches||document.hidden)pauseTileVideo(v);else playTileVideo(v);}}
 if(reducedMotion.addEventListener)reducedMotion.addEventListener('change',syncTileMotion);else if(reducedMotion.addListener)reducedMotion.addListener(syncTileMotion);
 document.addEventListener('visibilitychange',syncTileMotion);
-function genreVideo(key){const art=GENRE_ART[key],loop=GENRE_LOOPS[key];return art&&loop?`<video muted loop playsinline preload="none" poster="${esc(art)}" aria-hidden="true" tabindex="-1" width="616" height="353"><source data-src="${esc(loop.webm)}" type="video/webm"><source data-src="${esc(loop.mp4)}" type="video/mp4"></video>`:'';}
+function genreVideo(key){const art=GENRE_ART[key],loop=GENRE_LOOPS[key];return art&&loop?`<video muted loop playsinline webkit-playsinline preload="none" poster="${esc(art)}" aria-hidden="true" tabindex="-1" width="616" height="353"><source data-src="${esc(loop.webm)}" type="video/webm"><source data-src="${esc(loop.mp4)}" type="video/mp4"></video>`:'';}
 
 // The gradient remains beneath the image, including when a download fails.
 function genreGradient(key){let hash=2166136261;for(const c of key){hash=Math.imul(hash^c.charCodeAt(0),16777619)>>>0;}const hue=hash%360;return `linear-gradient(135deg,hsl(${hue},42%,24%),hsl(${(hue+48)%360},38%,10%))`;}
