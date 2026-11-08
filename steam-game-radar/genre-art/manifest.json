@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "width": 616,
   "height": 353,
   "format": "webp",
@@ -10,1155 +10,4620 @@
       "width": 616,
       "height": 353,
       "bytes": 26606,
-      "sha256": "801d18732fbc8193da7c682f20abc42919976f1d8c9433931f7b30885c4eff0f"
+      "sha256": "801d18732fbc8193da7c682f20abc42919976f1d8c9433931f7b30885c4eff0f",
+      "loop": {
+        "webm": "genre-art/loops/casual.webm",
+        "mp4": "genre-art/loops/casual.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 318536,
+            "sha256": "be66bfd7a696a80f9c67cc26787c6e54884735df1a720a7c39dbb1044860bd19",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 334110,
+            "sha256": "f1fb3b89eb9b3d7bbebbb7eec8fe2befb550e8ef22470bce051f3ca7263736de",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "action": {
       "src": "genre-art/action.webp",
       "width": 616,
       "height": 353,
       "bytes": 34214,
-      "sha256": "4fdbfca25d7af13b33dae309ea903a5d96a8ef13dd97a355a76aa5df33c61c35"
+      "sha256": "4fdbfca25d7af13b33dae309ea903a5d96a8ef13dd97a355a76aa5df33c61c35",
+      "loop": {
+        "webm": "genre-art/loops/action.webm",
+        "mp4": "genre-art/loops/action.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 504599,
+            "sha256": "e608a5e1c7408df4732c85845db131529a1d8c2bbf63d0d0d1be07408644e766",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 403877,
+            "sha256": "30200711a8d5269b458ad5946e9a38262b277d89fc58846d243e083c83a75e08",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "adventure": {
       "src": "genre-art/adventure.webp",
       "width": 616,
       "height": 353,
       "bytes": 35548,
-      "sha256": "2b80c8cf3018ff96fbeeb9491cf1aa5e0daec40a7cb0aa310e474fbcfedb4c6a"
+      "sha256": "2b80c8cf3018ff96fbeeb9491cf1aa5e0daec40a7cb0aa310e474fbcfedb4c6a",
+      "loop": {
+        "webm": "genre-art/loops/adventure.webm",
+        "mp4": "genre-art/loops/adventure.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 303792,
+            "sha256": "2cad393f71f2debd2db6024969007ecb22c42997663ec89ec79ed102f059d05e",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 490240,
+            "sha256": "a2ef0caa160fd17f637b53f66b4fc77e3aeebfef410fc5c175e3ea2f7241f67e",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "simulation": {
       "src": "genre-art/simulation.webp",
       "width": 616,
       "height": 353,
       "bytes": 41060,
-      "sha256": "6dfae611477018f08a2aae0368ed0b47bd8f766bc55e91e2bde0c92af217703c"
+      "sha256": "6dfae611477018f08a2aae0368ed0b47bd8f766bc55e91e2bde0c92af217703c",
+      "loop": {
+        "webm": "genre-art/loops/simulation.webm",
+        "mp4": "genre-art/loops/simulation.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 427268,
+            "sha256": "49e79bb57a2f6a507959d66207630a0e9a75d79a89004c39aebb333f757205d4",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 307380,
+            "sha256": "730e9b756f8597e2ab71cf8721defe5f007f862debacd30287f711a1001dfe4b",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "strategy": {
       "src": "genre-art/strategy.webp",
       "width": 616,
       "height": 353,
       "bytes": 38602,
-      "sha256": "361a6325d6b1571cf4f6d93727fb9024f875d3d33a6584e4772ff6bc674dc0cc"
+      "sha256": "361a6325d6b1571cf4f6d93727fb9024f875d3d33a6584e4772ff6bc674dc0cc",
+      "loop": {
+        "webm": "genre-art/loops/strategy.webm",
+        "mp4": "genre-art/loops/strategy.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 345406,
+            "sha256": "3b6eaeecf54cbe751b091491c4894f6fda078250c13834ebbed20b67d2aeef33",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 370159,
+            "sha256": "19bc9b2f7fc0df001313a852a6a31304a76d53dbe0e71e70ccc7629de9654c62",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "rpg": {
       "src": "genre-art/rpg.webp",
       "width": 616,
       "height": 353,
       "bytes": 31570,
-      "sha256": "9e2cf046f97ab5053e77fa859b1431ec761b4dff31c5a7884134e33fd5ef86bd"
+      "sha256": "9e2cf046f97ab5053e77fa859b1431ec761b4dff31c5a7884134e33fd5ef86bd",
+      "loop": {
+        "webm": "genre-art/loops/rpg.webm",
+        "mp4": "genre-art/loops/rpg.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 362246,
+            "sha256": "7da1f6676227e7d898b9e56e0a7cbc369f03f2b29be6a862d35c71776eb675d7",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 305283,
+            "sha256": "ebfc3da8cc6873913bc8881cd01eea945512631654e8931f5f410c9cc23b86a7",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "puzzle": {
       "src": "genre-art/puzzle.webp",
       "width": 616,
       "height": 353,
       "bytes": 18640,
-      "sha256": "4a17728da89576617ea2dfae86f71be8ba20ec366e9eba60a41b90d8609cb3ee"
+      "sha256": "4a17728da89576617ea2dfae86f71be8ba20ec366e9eba60a41b90d8609cb3ee",
+      "loop": {
+        "webm": "genre-art/loops/puzzle.webm",
+        "mp4": "genre-art/loops/puzzle.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 404176,
+            "sha256": "2de75113e15162dc3afe97a831344bae4c32c44cb2203f9253b9aeef89388aa5",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 393379,
+            "sha256": "f4e70329f5c609e2a2ec2d40bf54492f9dd2e62fe1d9bc4730459d6832a03ad8",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "sports": {
       "src": "genre-art/sports.webp",
       "width": 616,
       "height": 353,
       "bytes": 25022,
-      "sha256": "2708fb805d5c19d8a2018d9955f55b2bf2f0b71e530da09add6317d64774b946"
+      "sha256": "2708fb805d5c19d8a2018d9955f55b2bf2f0b71e530da09add6317d64774b946",
+      "loop": {
+        "webm": "genre-art/loops/sports.webm",
+        "mp4": "genre-art/loops/sports.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 425959,
+            "sha256": "91398755c4aad3c1c8dfef4a4c8455b8418c7220cd254c26ccf538356c7d691b",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 368101,
+            "sha256": "d538bad98a10432c98d580f6c42ca539d2dfc501ed5d8070abd62a1eaecc038d",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "racing": {
       "src": "genre-art/racing.webp",
       "width": 616,
       "height": 353,
       "bytes": 25802,
-      "sha256": "c99c2eab02794484af1c33385112014b1a923b6839c8dcd68b6e13e9b04747f9"
+      "sha256": "c99c2eab02794484af1c33385112014b1a923b6839c8dcd68b6e13e9b04747f9",
+      "loop": {
+        "webm": "genre-art/loops/racing.webm",
+        "mp4": "genre-art/loops/racing.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 598417,
+            "sha256": "ef53d78653ca0980cc422f56f772c886a2cc5bcf0492f86404b61e128a31efa2",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 748181,
+            "sha256": "74560a84b16e11c9e40a56058453afc3728c0e6f302add958c88b623f97e4417",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "tabletop": {
       "src": "genre-art/tabletop.webp",
       "width": 616,
       "height": 353,
       "bytes": 38648,
-      "sha256": "21d83fbc30a51053f48849318d056f703a6903c92c6352042ef535858f4357c8"
+      "sha256": "21d83fbc30a51053f48849318d056f703a6903c92c6352042ef535858f4357c8",
+      "loop": {
+        "webm": "genre-art/loops/tabletop.webm",
+        "mp4": "genre-art/loops/tabletop.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 417990,
+            "sha256": "6f4303ab8087a93d5a28061d7aea793b60e52b63d3cb40ff915b75732218fcb5",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 358352,
+            "sha256": "4aca53ba4c92c2adf74ac3d9a5f11f0ad1c47b2ed73592b6c57b1f6ebf6bb554",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "experimental": {
       "src": "genre-art/experimental.webp",
       "width": 616,
       "height": 353,
       "bytes": 34006,
-      "sha256": "b36e96b23eba8b4af963b52232b5a081e4517bfce8770c07f9e1bcbb2bfecb46"
+      "sha256": "b36e96b23eba8b4af963b52232b5a081e4517bfce8770c07f9e1bcbb2bfecb46",
+      "loop": {
+        "webm": "genre-art/loops/experimental.webm",
+        "mp4": "genre-art/loops/experimental.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 457768,
+            "sha256": "576c583af5f5f1d8b9f940bdb7f923a2a71455a6c04784be2724a4ddba3de22a",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 313952,
+            "sha256": "b98a41eed2ab1961333a6529d78533d98c814b6a2c430cccc51318e776ba84a7",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "exploration": {
       "src": "genre-art/exploration.webp",
       "width": 616,
       "height": 353,
       "bytes": 24634,
-      "sha256": "431d83ae3b9b62bc17f76d17cda15bff66c9b67d0c704d288131734d8f7d7029"
+      "sha256": "431d83ae3b9b62bc17f76d17cda15bff66c9b67d0c704d288131734d8f7d7029",
+      "loop": {
+        "webm": "genre-art/loops/exploration.webm",
+        "mp4": "genre-art/loops/exploration.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 516287,
+            "sha256": "a1f86b106153c403121013229593e75d268a943c7a55ea9a4239c5939afc78fd",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 378416,
+            "sha256": "f174ced837d833b9086794e61fb7c20a8ebb13b810d617b9f5a881888f8208a2",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "arcade": {
       "src": "genre-art/arcade.webp",
       "width": 616,
       "height": 353,
       "bytes": 39096,
-      "sha256": "881f959b0f3f02db3c9a9d746c636dfe163076eb65c51a5c57e97c0098fb3cbc"
+      "sha256": "881f959b0f3f02db3c9a9d746c636dfe163076eb65c51a5c57e97c0098fb3cbc",
+      "loop": {
+        "webm": "genre-art/loops/arcade.webm",
+        "mp4": "genre-art/loops/arcade.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 365846,
+            "sha256": "f82af47b1c99a507825f49269bf3d14aa5cd2b2430dbc30f9a7dff195bb6de63",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 377355,
+            "sha256": "4c5ada274be8161657e5c7f50939d9df401e0b236f2f4135f5df3ed679760793",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "action-adventure": {
       "src": "genre-art/action-adventure.webp",
       "width": 616,
       "height": 353,
       "bytes": 39160,
-      "sha256": "e92cf767297602fb27d0460ad75903e2e5f7b9d9761b472e023c78d7cddd1be9"
+      "sha256": "e92cf767297602fb27d0460ad75903e2e5f7b9d9761b472e023c78d7cddd1be9",
+      "loop": {
+        "webm": "genre-art/loops/action-adventure.webm",
+        "mp4": "genre-art/loops/action-adventure.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 464638,
+            "sha256": "02247d7cf7b2c32ac28eb2e6aa472b3c7f1535e421bf175bcad5f8e673faa84c",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 472651,
+            "sha256": "fdc480392701ae554a0569b08bd8b2467b65be85e6f947a5f6e286cfc4192303",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "shooter": {
       "src": "genre-art/shooter.webp",
       "width": 616,
       "height": 353,
       "bytes": 23254,
-      "sha256": "d154400c4e4140752c9903dfebc1748b40b01f420a881b03d51d96d2fbc6268b"
+      "sha256": "d154400c4e4140752c9903dfebc1748b40b01f420a881b03d51d96d2fbc6268b",
+      "loop": {
+        "webm": "genre-art/loops/shooter.webm",
+        "mp4": "genre-art/loops/shooter.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 310063,
+            "sha256": "c6714b26fb72c4f4fbd2f916c83a0a73c2abe4bd1aaeac6c268c436ed16c65c2",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 447548,
+            "sha256": "79fd5eb7b070d2f8ec4d4d14388cff8a968b98f36f31b0d996cb39257bf482c7",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "platformer": {
       "src": "genre-art/platformer.webp",
       "width": 616,
       "height": 353,
       "bytes": 40262,
-      "sha256": "9892e33c4fad048c820611a1034c8fe5bf5a2de17b6c2802d61c0b0de8e2e1eb"
+      "sha256": "9892e33c4fad048c820611a1034c8fe5bf5a2de17b6c2802d61c0b0de8e2e1eb",
+      "loop": {
+        "webm": "genre-art/loops/platformer.webm",
+        "mp4": "genre-art/loops/platformer.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 506280,
+            "sha256": "704713351ddb2e23e199a742110277c112bce19586be9190f311c104d54b7fd1",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 382945,
+            "sha256": "1d92bf46bb919afe44d58a52260c4bda731c1b8afd0c2d7cba3793b490ebefbc",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "visual-novel": {
       "src": "genre-art/visual-novel.webp",
       "width": 616,
       "height": 353,
       "bytes": 22590,
-      "sha256": "affed62c97c5477cfb9b0b2048d1e085945679596924f298212391639a12e2ce"
+      "sha256": "affed62c97c5477cfb9b0b2048d1e085945679596924f298212391639a12e2ce",
+      "loop": {
+        "webm": "genre-art/loops/visual-novel.webm",
+        "mp4": "genre-art/loops/visual-novel.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 485458,
+            "sha256": "3a4fb0d0032e371b4d13f8a16c60a733bd52a947b90a6a63acc0df111ba81a0c",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 372879,
+            "sha256": "4eb470434a5d3731f83cfdbecead9221bf33a48adeac183860324e4351681061",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "roguelike": {
       "src": "genre-art/roguelike.webp",
       "width": 616,
       "height": 353,
       "bytes": 32746,
-      "sha256": "391020e342c507dd03d7d8327f7cbca4c78cced628923f616cb58006ce7ac609"
+      "sha256": "391020e342c507dd03d7d8327f7cbca4c78cced628923f616cb58006ce7ac609",
+      "loop": {
+        "webm": "genre-art/loops/roguelike.webm",
+        "mp4": "genre-art/loops/roguelike.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 323966,
+            "sha256": "eb17a13e10d18a87532d97143f8cd3cf0a5715617764a991f0d857cba71b8332",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 329495,
+            "sha256": "aade0d8c50a66ad8322bb47877b75837f8226210c54fe21040a8735702f8c834",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "survival": {
       "src": "genre-art/survival.webp",
       "width": 616,
       "height": 353,
       "bytes": 28144,
-      "sha256": "d3b771d9fa2f258a295e7b0548bbf28ba703bfaeda76ddc9f96adb95db304d79"
+      "sha256": "d3b771d9fa2f258a295e7b0548bbf28ba703bfaeda76ddc9f96adb95db304d79",
+      "loop": {
+        "webm": "genre-art/loops/survival.webm",
+        "mp4": "genre-art/loops/survival.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 381720,
+            "sha256": "f0aedbc181cdaa08e0c62a3056c6d18a5b733db0650981c262d88c137170d8f9",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 341449,
+            "sha256": "db6720441236bec46bda20569877e87fdad06d10a11296229dfca2895e910a0c",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "open-world": {
       "src": "genre-art/open-world.webp",
       "width": 616,
       "height": 353,
       "bytes": 40730,
-      "sha256": "ebea0fa25b7136d6e80d13dcd6b4e52079224584de9ee7a092ed202c0f68ec99"
+      "sha256": "ebea0fa25b7136d6e80d13dcd6b4e52079224584de9ee7a092ed202c0f68ec99",
+      "loop": {
+        "webm": "genre-art/loops/open-world.webm",
+        "mp4": "genre-art/loops/open-world.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 418797,
+            "sha256": "5886430b915ec2b7f0f3bd3a0b5978d48a729faaa4b8e95c1ea5f54a5ad237ba",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 392263,
+            "sha256": "c296d9450e16488889c03cbccf786960b1a0e08515655cbd8c026cd54d1916c6",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "management": {
       "src": "genre-art/management.webp",
       "width": 616,
       "height": 353,
       "bytes": 45756,
-      "sha256": "96f47bb1592c3cad5b4b89614be8a478837480c087d361bc62765a9d00031da9"
+      "sha256": "96f47bb1592c3cad5b4b89614be8a478837480c087d361bc62765a9d00031da9",
+      "loop": {
+        "webm": "genre-art/loops/management.webm",
+        "mp4": "genre-art/loops/management.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 346728,
+            "sha256": "9aec2dabc389e3e24eaf1ecfcdb787b29a249ecf0193ef7054a56f7e1aa5e326",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 361865,
+            "sha256": "36b0f2aa734cab8c30f2a19e73f076b704f1e059b12db58271fe09fbcbd986ac",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "sandbox": {
       "src": "genre-art/sandbox.webp",
       "width": 616,
       "height": 353,
       "bytes": 50142,
-      "sha256": "21d87c12e7d180272633c6a3e1642341d321470672d9fdf5ce488c3701e6e64b"
+      "sha256": "21d87c12e7d180272633c6a3e1642341d321470672d9fdf5ce488c3701e6e64b",
+      "loop": {
+        "webm": "genre-art/loops/sandbox.webm",
+        "mp4": "genre-art/loops/sandbox.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 519705,
+            "sha256": "f739af679c6e9e1e2a61437de0c0a3d5d71ac0f0114a4ebeb4d7bfd591e15194",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 418900,
+            "sha256": "f99b5a41f29f9959074d6da7f7c92e90eadbba17b4b16e33f4c1813b2c4efcf7",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "point-and-click": {
       "src": "genre-art/point-and-click.webp",
       "width": 616,
       "height": 353,
       "bytes": 36302,
-      "sha256": "481e5c1d170d75702d61200fc9e13625d33841cdf1e80deba48c89975f614c48"
+      "sha256": "481e5c1d170d75702d61200fc9e13625d33841cdf1e80deba48c89975f614c48",
+      "loop": {
+        "webm": "genre-art/loops/point-and-click.webm",
+        "mp4": "genre-art/loops/point-and-click.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 581221,
+            "sha256": "fe7ad00feb6250444051dc97bb539c6d210e9e42a2014d9f699453cf7458da6a",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 456556,
+            "sha256": "ce972f46c1b1d94aef8430bb58d6489be5800082877d173c1922a65786fa9bce",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "action-rpg": {
       "src": "genre-art/action-rpg.webp",
       "width": 616,
       "height": 353,
       "bytes": 38216,
-      "sha256": "ad3b17f75b35e9b0d560b7bf06e9a6a08c4112b82eeaa9aee690caac74fb6019"
+      "sha256": "ad3b17f75b35e9b0d560b7bf06e9a6a08c4112b82eeaa9aee690caac74fb6019",
+      "loop": {
+        "webm": "genre-art/loops/action-rpg.webm",
+        "mp4": "genre-art/loops/action-rpg.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 408259,
+            "sha256": "c68e7e7f2dde66c418e406d58bec6ae5ba36db18a6a022e807d7fda23aafe267",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 412102,
+            "sha256": "6155252aa415e6f41c3b78548de7af7e2330c9bfc904dc47c8efb08a1e93fefa",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "building": {
       "src": "genre-art/building.webp",
       "width": 616,
       "height": 353,
       "bytes": 41318,
-      "sha256": "dc8f45d25c940c95eb0b441a023d27af09f452f839bc0f7ee0919fda79241ba9"
+      "sha256": "dc8f45d25c940c95eb0b441a023d27af09f452f839bc0f7ee0919fda79241ba9",
+      "loop": {
+        "webm": "genre-art/loops/building.webm",
+        "mp4": "genre-art/loops/building.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 492432,
+            "sha256": "e79e0a79e376b224f16440ed6171b7e0d8f793154ad7a30a531d17a3f74f9c89",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 365599,
+            "sha256": "6bbb8bb22689950ded25d088e2b533ca6c3b3465093247e7213bdcdc1be9933c",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "interactive-fiction": {
       "src": "genre-art/interactive-fiction.webp",
       "width": 616,
       "height": 353,
       "bytes": 31186,
-      "sha256": "48a149bc3146faaef7f47d2537a0b88b11ffb740d04b188b474c2e89f2e758d6"
+      "sha256": "48a149bc3146faaef7f47d2537a0b88b11ffb740d04b188b474c2e89f2e758d6",
+      "loop": {
+        "webm": "genre-art/loops/interactive-fiction.webm",
+        "mp4": "genre-art/loops/interactive-fiction.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 319385,
+            "sha256": "92abf949233a64c1f18926fa7e818ec18131cc32da3f4d5318032e69fc4f807f",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 308609,
+            "sha256": "b67a8fa04cdb110d958ea3d9001c2f9730f631fd16d79c0453f9368cb3314d34",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "turn-based-strategy": {
       "src": "genre-art/turn-based-strategy.webp",
       "width": 616,
       "height": 353,
       "bytes": 46708,
-      "sha256": "ec4d80dee567f1c9f01d00370029cfdd58182ba93c22953cb32b2a5440b93757"
+      "sha256": "ec4d80dee567f1c9f01d00370029cfdd58182ba93c22953cb32b2a5440b93757",
+      "loop": {
+        "webm": "genre-art/loops/turn-based-strategy.webm",
+        "mp4": "genre-art/loops/turn-based-strategy.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 308543,
+            "sha256": "f5d7b456b978d946695424738a8e004205114ff163f3d6784e25b07b182f4296",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 312511,
+            "sha256": "8d13d2da80173138018d7f9c2ee0b75ec87d4615817c8819631611e0687a6ff5",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "incremental": {
       "src": "genre-art/incremental.webp",
       "width": 616,
       "height": 353,
       "bytes": 28170,
-      "sha256": "dc74ec90ae9cff8de85573b620e91a0f72ffe86ffef54580b4c783d9ab0cab6f"
+      "sha256": "dc74ec90ae9cff8de85573b620e91a0f72ffe86ffef54580b4c783d9ab0cab6f",
+      "loop": {
+        "webm": "genre-art/loops/incremental.webm",
+        "mp4": "genre-art/loops/incremental.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 345944,
+            "sha256": "ab547e5adfe8a6ba535a75573ba8a807c206c7dc3e3a5e725b8d9d10db55d77c",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 356570,
+            "sha256": "ba7e7f4e051e27a6110733d09637fcfc63bf77045d5ed78523dfe83d21c305c6",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "hidden-object": {
       "src": "genre-art/hidden-object.webp",
       "width": 616,
       "height": 353,
       "bytes": 39502,
-      "sha256": "f048101605f1063e2173cb3fde38652a9d42c90ed4488aac10735be3cf008834"
+      "sha256": "f048101605f1063e2173cb3fde38652a9d42c90ed4488aac10735be3cf008834",
+      "loop": {
+        "webm": "genre-art/loops/hidden-object.webm",
+        "mp4": "genre-art/loops/hidden-object.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 427134,
+            "sha256": "20bef4fb17081cbe9b31e2aec5b35eea3358d51ecfc41b7e3e9056abfb60210d",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 326953,
+            "sha256": "50e1c255cd189e6815670f3c40d4843ba71fcb79a0e35dffaa48b9b68e7a008d",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "walking-simulator": {
       "src": "genre-art/walking-simulator.webp",
       "width": 616,
       "height": 353,
       "bytes": 29824,
-      "sha256": "4df1e4a236eaa13a24e507d0f3dccdb9bc4f9301f9cac3678522b624664ea0c6"
+      "sha256": "4df1e4a236eaa13a24e507d0f3dccdb9bc4f9301f9cac3678522b624664ea0c6",
+      "loop": {
+        "webm": "genre-art/loops/walking-simulator.webm",
+        "mp4": "genre-art/loops/walking-simulator.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 399047,
+            "sha256": "5d5cf00503e69e92ac839b5ae7d474f00f0098f8c8c5ebfd3335bbeaacc615c5",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 588836,
+            "sha256": "5b3a208b4a5435dd84f574981bcb5252318b88d05b1497caa50ceca6b5941827",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "card-game": {
       "src": "genre-art/card-game.webp",
       "width": 616,
       "height": 353,
       "bytes": 30760,
-      "sha256": "5562b93274ca54807c996ae0c2972ea3294d3856ed5e283e41220fd547981d5e"
+      "sha256": "5562b93274ca54807c996ae0c2972ea3294d3856ed5e283e41220fd547981d5e",
+      "loop": {
+        "webm": "genre-art/loops/card-game.webm",
+        "mp4": "genre-art/loops/card-game.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 416671,
+            "sha256": "65f854e9be764a298e6467461e995cc52271dd9391cace93a053b2043b8bef66",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 429239,
+            "sha256": "4488a0e4a739d037f11b71af8ce349be31ef52dc4af01c221e9fab2738820cdd",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "base-building": {
       "src": "genre-art/base-building.webp",
       "width": 616,
       "height": 353,
       "bytes": 32808,
-      "sha256": "99ed2a87694e69dd28484427da98e7d427e06819b9993effefe2b3bfe8263634"
+      "sha256": "99ed2a87694e69dd28484427da98e7d427e06819b9993effefe2b3bfe8263634",
+      "loop": {
+        "webm": "genre-art/loops/base-building.webm",
+        "mp4": "genre-art/loops/base-building.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 478680,
+            "sha256": "6770237c1ddd2483d3c1ac40b77dc80ed941ff570af316db268f912262df7f4f",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 464249,
+            "sha256": "8ddf50c6f97bb03347480c49d309a49e30515cb3984592062f7c995b72a647c7",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "idler": {
       "src": "genre-art/idler.webp",
       "width": 616,
       "height": 353,
       "bytes": 38300,
-      "sha256": "49c02de45b9a229d7365fc1c4975bd9ebd16e485f3ec0ff0dd12af8b90f42ed3"
+      "sha256": "49c02de45b9a229d7365fc1c4975bd9ebd16e485f3ec0ff0dd12af8b90f42ed3",
+      "loop": {
+        "webm": "genre-art/loops/idler.webm",
+        "mp4": "genre-art/loops/idler.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 681538,
+            "sha256": "bb9f44d6e49734e9f59a0260bcde35922a9c5ed34c40b663950cd08160704549",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 595314,
+            "sha256": "3b789c81cc1ff4ab404601b7a88c98f1a1947b22011015759b21745ad11f1573",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "stealth": {
       "src": "genre-art/stealth.webp",
       "width": 616,
       "height": 353,
       "bytes": 19672,
-      "sha256": "08c8d90d85e7b09fe4911f8c4e7af9b37174620dad09587087f13ed7422fcc49"
+      "sha256": "08c8d90d85e7b09fe4911f8c4e7af9b37174620dad09587087f13ed7422fcc49",
+      "loop": {
+        "webm": "genre-art/loops/stealth.webm",
+        "mp4": "genre-art/loops/stealth.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 334423,
+            "sha256": "a914e21bcd894c1d36d825cb31e295e7c88198df43714295d20c97fafb7b3d83",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 325361,
+            "sha256": "672812832ee28565db3128d0dd91bffdad9f8f102b2ddf9d8f12192fdeeeb0a1",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "strategy-rpg": {
       "src": "genre-art/strategy-rpg.webp",
       "width": 616,
       "height": 353,
       "bytes": 40050,
-      "sha256": "dc052bd486526fb442b2e5c869ff2f48dd703a1586b00b58ff2ea887b6144642"
+      "sha256": "dc052bd486526fb442b2e5c869ff2f48dd703a1586b00b58ff2ea887b6144642",
+      "loop": {
+        "webm": "genre-art/loops/strategy-rpg.webm",
+        "mp4": "genre-art/loops/strategy-rpg.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 381200,
+            "sha256": "7a3678ad5f1f9b35bbb42c5a41c37dc82f1e899c39773df3e91b0554ccd2624d",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 367807,
+            "sha256": "14560f428171e6b9d211558b61e06f4fbeb49dad455b33ea6e6bf095faabb7e7",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "tower-defense": {
       "src": "genre-art/tower-defense.webp",
       "width": 616,
       "height": 353,
       "bytes": 29702,
-      "sha256": "fe5abca4cd1bb1635bd9e475bf0922e11a77ed6ee395bf8b953a2f366439cf9a"
+      "sha256": "fe5abca4cd1bb1635bd9e475bf0922e11a77ed6ee395bf8b953a2f366439cf9a",
+      "loop": {
+        "webm": "genre-art/loops/tower-defense.webm",
+        "mp4": "genre-art/loops/tower-defense.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 369196,
+            "sha256": "82359adc6913d4569ae2193d71484236ec674abed866b7196ed3e8b1f50d6fd9",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 318658,
+            "sha256": "a022bd60bebb2585957f4cc936e259ee65a91453f2019379724dcad06dcdd03a",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "board-game": {
       "src": "genre-art/board-game.webp",
       "width": 616,
       "height": 353,
       "bytes": 35760,
-      "sha256": "338008b5af185e37be15785f0c293b815312df816e6d6af713b068ad9f758d93"
+      "sha256": "338008b5af185e37be15785f0c293b815312df816e6d6af713b068ad9f758d93",
+      "loop": {
+        "webm": "genre-art/loops/board-game.webm",
+        "mp4": "genre-art/loops/board-game.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 554462,
+            "sha256": "acaf1cad672438709c473858447b094ef7c3bf4d5c7537d7d2da0d30cf85e200",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 503952,
+            "sha256": "ae4af626f86202d0e812eb62d9534671002c46662363bd6dc21e9c83595ba4da",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "rts": {
       "src": "genre-art/rts.webp",
       "width": 616,
       "height": 353,
       "bytes": 43992,
-      "sha256": "b662ba67867f5e2a2fd81cba17d22a6b890c30a88724a4e433702d6867db1356"
+      "sha256": "b662ba67867f5e2a2fd81cba17d22a6b890c30a88724a4e433702d6867db1356",
+      "loop": {
+        "webm": "genre-art/loops/rts.webm",
+        "mp4": "genre-art/loops/rts.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 504129,
+            "sha256": "073610f1e9d4ca6221d9cbafda916a8cd7e1e1e025be996ed392f83e19d2a52c",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 394321,
+            "sha256": "7f1f6e21065080d66499417592f7bed782eb21508c3981dab0ef09594ba86d61",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "party-based-rpg": {
       "src": "genre-art/party-based-rpg.webp",
       "width": 616,
       "height": 353,
       "bytes": 32986,
-      "sha256": "3db6eb8ff04852036b1620356a2ee4354b439388b90ec0d5e356d1e5e08051f5"
+      "sha256": "3db6eb8ff04852036b1620356a2ee4354b439388b90ec0d5e356d1e5e08051f5",
+      "loop": {
+        "webm": "genre-art/loops/party-based-rpg.webm",
+        "mp4": "genre-art/loops/party-based-rpg.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 412387,
+            "sha256": "5ef47bfe23b77423397858df43961266cb3ba309077a523118dedb5e394648c5",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 343688,
+            "sha256": "5fe344739c45ad4a79ad51936ce6f619e351ea5506932bbb95f8b73529372d54",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "auto-battler": {
       "src": "genre-art/auto-battler.webp",
       "width": 616,
       "height": 353,
       "bytes": 36434,
-      "sha256": "6a90b270bbfd3cf8d3147aaabfe4f441b3c81ca317c0128249673cdd93d4c83b"
+      "sha256": "6a90b270bbfd3cf8d3147aaabfe4f441b3c81ca317c0128249673cdd93d4c83b",
+      "loop": {
+        "webm": "genre-art/loops/auto-battler.webm",
+        "mp4": "genre-art/loops/auto-battler.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 585654,
+            "sha256": "c9ad0ce163afdc972f942025771d8967aa0b6aba3ab80b00596c690b44d7de49",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 424050,
+            "sha256": "477c3652135b0e7881ccfaedb6bb133c0fc709159fdc8b7b321e4dadd15dfefb",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "farming-sim": {
       "src": "genre-art/farming-sim.webp",
       "width": 616,
       "height": 353,
       "bytes": 44508,
-      "sha256": "4031a5adbe28c0717568c0277cc5d581dc559758d85eb23f0368047274267158"
+      "sha256": "4031a5adbe28c0717568c0277cc5d581dc559758d85eb23f0368047274267158",
+      "loop": {
+        "webm": "genre-art/loops/farming-sim.webm",
+        "mp4": "genre-art/loops/farming-sim.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 375658,
+            "sha256": "530a70ca788cadf3bf48416b559aa075e1f45634cf6e9e5fb58880a4bd4036e6",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 377976,
+            "sha256": "e1f4bcfb95941c52ab4610f76effc3abfc29acef83554739f782d50ac9deca6c",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "cooking": {
       "src": "genre-art/cooking.webp",
       "width": 616,
       "height": 353,
       "bytes": 34704,
-      "sha256": "917e583f554f794f670abe9ccdcf18018fdc266b7e729255423b0948c7f6d2a5"
+      "sha256": "917e583f554f794f670abe9ccdcf18018fdc266b7e729255423b0948c7f6d2a5",
+      "loop": {
+        "webm": "genre-art/loops/cooking.webm",
+        "mp4": "genre-art/loops/cooking.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 477867,
+            "sha256": "1d2047405b1bbb8873a9944cdc624a87e4a2acbf1bd45d7dd9d7f23d22a107fd",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 372161,
+            "sha256": "5dc6ed2b08a970a4393c484805fef664425fc1c8540d1129b817de2c267136df",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "rhythm": {
       "src": "genre-art/rhythm.webp",
       "width": 616,
       "height": 353,
       "bytes": 33736,
-      "sha256": "eddd33a63414936ce7e2d879d67368c9df0efc65668a8ab9bb512472841dbda1"
+      "sha256": "eddd33a63414936ce7e2d879d67368c9df0efc65668a8ab9bb512472841dbda1",
+      "loop": {
+        "webm": "genre-art/loops/rhythm.webm",
+        "mp4": "genre-art/loops/rhythm.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 567883,
+            "sha256": "56fe6556a77e8aaefdeb8d429ef52ae892f6ccd6d757a2fff28f414e97210d8d",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 476883,
+            "sha256": "98175f02910ab87e94ab1f8ac14c2f4d940b176e341ef1e733c96c38e139ecb9",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "word-game": {
       "src": "genre-art/word-game.webp",
       "width": 616,
       "height": 353,
       "bytes": 19264,
-      "sha256": "2dda81f585a176dc825799228c9be81032a02fa37c9810ddd46e839b2ebe4615"
+      "sha256": "2dda81f585a176dc825799228c9be81032a02fa37c9810ddd46e839b2ebe4615",
+      "loop": {
+        "webm": "genre-art/loops/word-game.webm",
+        "mp4": "genre-art/loops/word-game.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 338382,
+            "sha256": "8be1857cdab83fda8548c3c325fec544cbe22f0d4afffd04db90d9d6ba436d37",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 369123,
+            "sha256": "336dd8e2ffa33618c81fafe4c339b188244d73af109d95402b1874cbf9959ee0",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "automobile-sim": {
       "src": "genre-art/automobile-sim.webp",
       "width": 616,
       "height": 353,
       "bytes": 28118,
-      "sha256": "d931109319d4c3036c5607cd4ae496d9823a91d547163d665c8d1f5dc004ac26"
+      "sha256": "d931109319d4c3036c5607cd4ae496d9823a91d547163d665c8d1f5dc004ac26",
+      "loop": {
+        "webm": "genre-art/loops/automobile-sim.webm",
+        "mp4": "genre-art/loops/automobile-sim.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 734758,
+            "sha256": "ca6baf3b0adb075ba39555deda31896a8863dff47188c85f0fda64811ffd0c3b",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 553640,
+            "sha256": "7bb41756e2376dbed04c761f396dec0619b8a441684849b03a2c448435b0ae23",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "space-sim": {
       "src": "genre-art/space-sim.webp",
       "width": 616,
       "height": 353,
       "bytes": 29636,
-      "sha256": "3f61b917b1e208aeadf9dd9fc3d42cd370243cc47edc0221a20b40d5ac826199"
+      "sha256": "3f61b917b1e208aeadf9dd9fc3d42cd370243cc47edc0221a20b40d5ac826199",
+      "loop": {
+        "webm": "genre-art/loops/space-sim.webm",
+        "mp4": "genre-art/loops/space-sim.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 413529,
+            "sha256": "da6027fc8dbb973be0ebbb41e8d20efa7fe9b81a7008a5a8437c0771653c0066",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 404789,
+            "sha256": "aecd641dc079d08641167e6d169c771a2494a505f8e023e73aa78b0eb1ac6a9d",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "match-3": {
       "src": "genre-art/match-3.webp",
       "width": 616,
       "height": 353,
       "bytes": 32990,
-      "sha256": "c3d11790715fc5e7f68fd93ec88987a323adea1d2cc26914647bf1fbee0cf177"
+      "sha256": "c3d11790715fc5e7f68fd93ec88987a323adea1d2cc26914647bf1fbee0cf177",
+      "loop": {
+        "webm": "genre-art/loops/match-3.webm",
+        "mp4": "genre-art/loops/match-3.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 332593,
+            "sha256": "d63908b56f8cb319274cebc9e2120b5ef682d9bb25ce5d22e8ad4a6b8972f91e",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 347611,
+            "sha256": "f4b9ccba25d3a7b0385d8217c20293d77c73e32302193c366398aa4571270001",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "mining": {
       "src": "genre-art/mining.webp",
       "width": 616,
       "height": 353,
       "bytes": 31932,
-      "sha256": "928db3f28563ea1bf347fd7a4c49edc5285730499cf633d28e15fd1116236d84"
+      "sha256": "928db3f28563ea1bf347fd7a4c49edc5285730499cf633d28e15fd1116236d84",
+      "loop": {
+        "webm": "genre-art/loops/mining.webm",
+        "mp4": "genre-art/loops/mining.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 365876,
+            "sha256": "50af6618e7a5965b0626c5bc16aedf11b3e06edc0422c54a059f7f6be8ee8d94",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 343420,
+            "sha256": "7f8a2fb44eaf9d78fe9b51d9a3d742d4ae6d07b996c069a0c04b022fea567f8b",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "fighting": {
       "src": "genre-art/fighting.webp",
       "width": 616,
       "height": 353,
       "bytes": 26670,
-      "sha256": "429a15a96aad7bcda3f8595069d2c9a1b0e9c7676de4614d129cf7fa0972f6ec"
+      "sha256": "429a15a96aad7bcda3f8595069d2c9a1b0e9c7676de4614d129cf7fa0972f6ec",
+      "loop": {
+        "webm": "genre-art/loops/fighting.webm",
+        "mp4": "genre-art/loops/fighting.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 725554,
+            "sha256": "9b6c642e170ae6627b47be59c777c9a37e6dadb3be6e64e3ba669ab940947663",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 541070,
+            "sha256": "a3333e4330be1b4c7d6c54aaab2958e0676ca85dcf1a429817722c37adac70e1",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "esports": {
       "src": "genre-art/esports.webp",
       "width": 616,
       "height": 353,
       "bytes": 31258,
-      "sha256": "ff7019bbaed91ae0910163029d78c0a74756e4f43a81ff15bb87c9952ed042b2"
+      "sha256": "ff7019bbaed91ae0910163029d78c0a74756e4f43a81ff15bb87c9952ed042b2",
+      "loop": {
+        "webm": "genre-art/loops/esports.webm",
+        "mp4": "genre-art/loops/esports.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 329341,
+            "sha256": "cc2b5b34b682829549256717779a0d5b20b75000ee614c24fd723352d2add6d0",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 342698,
+            "sha256": "2ddc6243bccdc99df06afdd31d2a33e455761b335e318b4378bc68810d2d09d4",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "mmorpg": {
       "src": "genre-art/mmorpg.webp",
       "width": 616,
       "height": 353,
       "bytes": 47448,
-      "sha256": "5dd9b3dd0139cdca2383d91147fe257af735fcea9aa7e10e77ebdb092bee24e9"
+      "sha256": "5dd9b3dd0139cdca2383d91147fe257af735fcea9aa7e10e77ebdb092bee24e9",
+      "loop": {
+        "webm": "genre-art/loops/mmorpg.webm",
+        "mp4": "genre-art/loops/mmorpg.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 387337,
+            "sha256": "883466c649e01cd29e020c8cc55249e61a4c0ec1752667b3fa6c91eea2b5cd8b",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 376022,
+            "sha256": "5e873eca9b80c539b6fdc9f4b79645b79a95237d56276d28ae940155ae3c9b16",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "job-simulator": {
       "src": "genre-art/job-simulator.webp",
       "width": 616,
       "height": 353,
       "bytes": 31194,
-      "sha256": "66e589dad1fc2de3e705c0d2e83dbae79aa6f07bc95e27af89c6906c897a04b9"
+      "sha256": "66e589dad1fc2de3e705c0d2e83dbae79aa6f07bc95e27af89c6906c897a04b9",
+      "loop": {
+        "webm": "genre-art/loops/job-simulator.webm",
+        "mp4": "genre-art/loops/job-simulator.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 381014,
+            "sha256": "0ba8579917622c075ca790f91d9cf15fd87cd9581f208905e9f768bc9020fa96",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 375686,
+            "sha256": "075c4b5958301bc1fc02cf0d1a626a094c96216524b00a6939320b79c85a1e3d",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "battle-royale": {
       "src": "genre-art/battle-royale.webp",
       "width": 616,
       "height": 353,
       "bytes": 35144,
-      "sha256": "d4a29bb7528dede4b810914415fed732a53e1f00dc2c2366973b8437f6dd2d11"
+      "sha256": "d4a29bb7528dede4b810914415fed732a53e1f00dc2c2366973b8437f6dd2d11",
+      "loop": {
+        "webm": "genre-art/loops/battle-royale.webm",
+        "mp4": "genre-art/loops/battle-royale.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 340691,
+            "sha256": "6e0d047605de85c8faff125478e2887e3bfd54694d39984d190d62aab451bf78",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 342718,
+            "sha256": "0a5edebb927545855ebd9721e8c6f900502f34a6e43fbcbd8e2f23ab146416c8",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "action-rts": {
       "src": "genre-art/action-rts.webp",
       "width": 616,
       "height": 353,
       "bytes": 47048,
-      "sha256": "46b1b9ff91ebe4e0877ed7862dd0089eb16e7fd4ba8d222c5bf92a76cc925737"
+      "sha256": "46b1b9ff91ebe4e0877ed7862dd0089eb16e7fd4ba8d222c5bf92a76cc925737",
+      "loop": {
+        "webm": "genre-art/loops/action-rts.webm",
+        "mp4": "genre-art/loops/action-rts.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 394838,
+            "sha256": "c62cdf7dd7e04827d0dde491dd80846b99524de6fa5e8ef1a5db922f82617024",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 316076,
+            "sha256": "d064dee43e7e786d05d488cd6e28820264c7445c70741089d1d569ab6f2ab4f3",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "god-game": {
       "src": "genre-art/god-game.webp",
       "width": 616,
       "height": 353,
       "bytes": 27566,
-      "sha256": "0bca99256de7fd098bd9ef4b6f48eb339d01fa531de4e38d1fd37963ade39759"
+      "sha256": "0bca99256de7fd098bd9ef4b6f48eb339d01fa531de4e38d1fd37963ade39759",
+      "loop": {
+        "webm": "genre-art/loops/god-game.webm",
+        "mp4": "genre-art/loops/god-game.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 316687,
+            "sha256": "fe73ee020216548aecfc4af3d22a908128eac56d21e270d0e367cae9e40a2650",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 303337,
+            "sha256": "a822f4808234e48c66ace0964f69a48c5a3f0c015d6475e88db73580ea55d6a5",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "hacking": {
       "src": "genre-art/hacking.webp",
       "width": 616,
       "height": 353,
       "bytes": 26672,
-      "sha256": "291e9ce3d0f3cfa6126e894008202e6dde9452ca43b21edc6fcce37e1800d838"
+      "sha256": "291e9ce3d0f3cfa6126e894008202e6dde9452ca43b21edc6fcce37e1800d838",
+      "loop": {
+        "webm": "genre-art/loops/hacking.webm",
+        "mp4": "genre-art/loops/hacking.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 462721,
+            "sha256": "50aa61108492ce61ed6c1015dbcb4de4a016a93ee2563cbff90c09636ba9c5ac",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 455560,
+            "sha256": "629e70ffb66ce5c197c33e0311106ca25c0ae817cf2714b5dbf80772f96b9acf",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "character-action-game": {
       "src": "genre-art/character-action-game.webp",
       "width": 616,
       "height": 353,
       "bytes": 30300,
-      "sha256": "f2e3fb43f6cb4f35e7353de64aa7e86b916041d5fb4aca9cfebf0ba53e634d4f"
+      "sha256": "f2e3fb43f6cb4f35e7353de64aa7e86b916041d5fb4aca9cfebf0ba53e634d4f",
+      "loop": {
+        "webm": "genre-art/loops/character-action-game.webm",
+        "mp4": "genre-art/loops/character-action-game.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 377888,
+            "sha256": "f15d50ab7deb72fe9e63619586c43451e1e88233c69688c115d05a29e809fa2e",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 380310,
+            "sha256": "540ca6ce237c604375ff8cd6712a16265471d2e6bc98fcf0baf6d4668e0f1003",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "moba": {
       "src": "genre-art/moba.webp",
       "width": 616,
       "height": 353,
       "bytes": 35206,
-      "sha256": "e95c1356bc91f96ad9777f4de4539f1421bbfc7af42bc1b258e5b7cc1f2754eb"
+      "sha256": "e95c1356bc91f96ad9777f4de4539f1421bbfc7af42bc1b258e5b7cc1f2754eb",
+      "loop": {
+        "webm": "genre-art/loops/moba.webm",
+        "mp4": "genre-art/loops/moba.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 328902,
+            "sha256": "11ae786f1c8c9ed152cc630a8e069067902f1ac95b819663eabe56e754231b00",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 334609,
+            "sha256": "d27031eb044f7de55f72f88a2e543de504d43fac1fd1fdb02d7693ec43afb933",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "diplomacy": {
       "src": "genre-art/diplomacy.webp",
       "width": 616,
       "height": 353,
       "bytes": 30086,
-      "sha256": "9529bf8dfb15adb0fbbe33863226010c7493f970d2ae2488a53e591f387e0df1"
+      "sha256": "9529bf8dfb15adb0fbbe33863226010c7493f970d2ae2488a53e591f387e0df1",
+      "loop": {
+        "webm": "genre-art/loops/diplomacy.webm",
+        "mp4": "genre-art/loops/diplomacy.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 518973,
+            "sha256": "486d77bbea551a20b0e026b7da3baa141e6589164cdf022409b213162a9b6344",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 470710,
+            "sha256": "897b1db476d36d96c34554080b1185e9f372aa5a87dad456e6cbbe91c150dffa",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "trivia": {
       "src": "genre-art/trivia.webp",
       "width": 616,
       "height": 353,
       "bytes": 24436,
-      "sha256": "22c9332d6b8aef4bdb8149c0c685c032406425e9e66c4a85f9fbd98ffd207eca"
+      "sha256": "22c9332d6b8aef4bdb8149c0c685c032406425e9e66c4a85f9fbd98ffd207eca",
+      "loop": {
+        "webm": "genre-art/loops/trivia.webm",
+        "mp4": "genre-art/loops/trivia.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 435867,
+            "sha256": "67db311efd633eb6b5670ca8e6c6cd37accd4a2f94786bc11a8fcd3ce7b2fb26",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 448590,
+            "sha256": "4b47b374ae79e388f119a33f02327a92f6e285fad00c9634fe05b8ec2944c763",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "farming": {
       "src": "genre-art/farming.webp",
       "width": 616,
       "height": 353,
       "bytes": 35154,
-      "sha256": "97e4a9a30dd667f9e14e88821951209a24f7f57ead4d29908534aca29d4976b0"
+      "sha256": "97e4a9a30dd667f9e14e88821951209a24f7f57ead4d29908534aca29d4976b0",
+      "loop": {
+        "webm": "genre-art/loops/farming.webm",
+        "mp4": "genre-art/loops/farming.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 430429,
+            "sha256": "dc3680e1b77f2f50abaf5f762694761f3f25f665cab30682b9be540ff975e133",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 324585,
+            "sha256": "878a1cf96fd39c2b48bb96e3ecb63dc6ad74e4f3a42b1f412870c30fe388ab5b",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "chess": {
       "src": "genre-art/chess.webp",
       "width": 616,
       "height": 353,
       "bytes": 26480,
-      "sha256": "67a5f28eded569281fc9151bad6fa21d5aad374ce82ed5f11c3a1e0424d9a4ff"
+      "sha256": "67a5f28eded569281fc9151bad6fa21d5aad374ce82ed5f11c3a1e0424d9a4ff",
+      "loop": {
+        "webm": "genre-art/loops/chess.webm",
+        "mp4": "genre-art/loops/chess.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 443848,
+            "sha256": "61237e60d70c027b055677d88b9e3d5b723e3c5e3efc23db55b060097e25290a",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 307106,
+            "sha256": "ba0bc38f3e6654caf3187c528015e4d1ff7b2979b20f6c847fa6b02487b94bae",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "outbreak-sim": {
       "src": "genre-art/outbreak-sim.webp",
       "width": 616,
       "height": 353,
       "bytes": 33506,
-      "sha256": "8c7c4967a84bea6347349303aeb416948ec638fa6c65de69a84749acd0f694f1"
+      "sha256": "8c7c4967a84bea6347349303aeb416948ec638fa6c65de69a84749acd0f694f1",
+      "loop": {
+        "webm": "genre-art/loops/outbreak-sim.webm",
+        "mp4": "genre-art/loops/outbreak-sim.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 389795,
+            "sha256": "675539c56892188760bad400fb82f0571be3ff3ed6a8f0aee5a4fee6fa838fa9",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 310580,
+            "sha256": "be1a6b5a7157ac8945314dc3f51930575add083dc99508be38937b0ca7dad5d8",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "medical-sim": {
       "src": "genre-art/medical-sim.webp",
       "width": 616,
       "height": 353,
       "bytes": 18100,
-      "sha256": "54ef47f40f23dc18303c63c35c43261350bba6434a031e8f2d5f0563a98ba311"
+      "sha256": "54ef47f40f23dc18303c63c35c43261350bba6434a031e8f2d5f0563a98ba311",
+      "loop": {
+        "webm": "genre-art/loops/medical-sim.webm",
+        "mp4": "genre-art/loops/medical-sim.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 575420,
+            "sha256": "925ab6d63cd66ff04b9873e5b040f00542b9ca9875d8f090e937eeb24895b1cc",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 286294,
+            "sha256": "da90b1f11b63f8dee7a9d079c0c4e816aec1547fdefd2278943c4578f19f5a7f",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "hobby-sim": {
       "src": "genre-art/hobby-sim.webp",
       "width": 616,
       "height": 353,
       "bytes": 31944,
-      "sha256": "d4261fdb911a6639b63eb68e0dbe2c71a847140fc18b96e95bf20ae13c625dfd"
+      "sha256": "d4261fdb911a6639b63eb68e0dbe2c71a847140fc18b96e95bf20ae13c625dfd",
+      "loop": {
+        "webm": "genre-art/loops/hobby-sim.webm",
+        "mp4": "genre-art/loops/hobby-sim.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 398716,
+            "sha256": "78ff13a484864f10b4df7992b8d663f54eab039cf926f4a8cb0c646a35c78e1f",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 395312,
+            "sha256": "05008eb737c553596d58f332d701b32b1c10da363d3f6792a67e4760601f50f1",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "golf": {
       "src": "genre-art/golf.webp",
       "width": 616,
       "height": 353,
       "bytes": 23088,
-      "sha256": "f6c0f538977261a4a152cb420df97475ed1e9b9ff954fa0b75a2ea2f73a36fab"
+      "sha256": "f6c0f538977261a4a152cb420df97475ed1e9b9ff954fa0b75a2ea2f73a36fab",
+      "loop": {
+        "webm": "genre-art/loops/golf.webm",
+        "mp4": "genre-art/loops/golf.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 477894,
+            "sha256": "2a8a1433eed91a31b88096643cbf66244421ec1de4386479df282407db313f59",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 366117,
+            "sha256": "3c323d7fe813e60be1fda1080d95b4c4b7f39c5dcc4d11a4c56e62edb51e8468",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "pinball": {
       "src": "genre-art/pinball.webp",
       "width": 616,
       "height": 353,
       "bytes": 36584,
-      "sha256": "f47dbc0e61f60e71d51cfc4707f9e340ddfeec2e2889cdf5bfac2a93ff0f60d2"
+      "sha256": "f47dbc0e61f60e71d51cfc4707f9e340ddfeec2e2889cdf5bfac2a93ff0f60d2",
+      "loop": {
+        "webm": "genre-art/loops/pinball.webm",
+        "mp4": "genre-art/loops/pinball.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 314627,
+            "sha256": "f31fa1f3bb2cd87ecb8ab987745c35a340555ecc6a6beccb4ce670fe7abbfb99",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 506735,
+            "sha256": "054d3a59a0005ac97d865c6b9143c9dc1dfc44f946fe933d1751d1577d2d413c",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "basketball": {
       "src": "genre-art/basketball.webp",
       "width": 616,
       "height": 353,
       "bytes": 17198,
-      "sha256": "c1f399c1fd437f530a5ab612da45765ca848096beffe5b63b1e26d983fa56c82"
+      "sha256": "c1f399c1fd437f530a5ab612da45765ca848096beffe5b63b1e26d983fa56c82",
+      "loop": {
+        "webm": "genre-art/loops/basketball.webm",
+        "mp4": "genre-art/loops/basketball.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 515327,
+            "sha256": "4d91f5d2d97d8e945c06bcf6b6d8c92802a51b2f2b73810f59b89d9ffeb49aa7",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 218622,
+            "sha256": "8b6b917c8ad78f6e41d21f3529670d727e8d9e3f7ff90117738de738fc850307",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "mini-golf": {
       "src": "genre-art/mini-golf.webp",
       "width": 616,
       "height": 353,
       "bytes": 32134,
-      "sha256": "5b777f506af1652dd9d283a7c683921590d9001733b695ca0a84cd48c87407e1"
+      "sha256": "5b777f506af1652dd9d283a7c683921590d9001733b695ca0a84cd48c87407e1",
+      "loop": {
+        "webm": "genre-art/loops/mini-golf.webm",
+        "mp4": "genre-art/loops/mini-golf.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 312785,
+            "sha256": "04173dcc4f086001391ccd46042db0d6b8dd68a9e45167d8c5ccf0a85ad83a86",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 300268,
+            "sha256": "6dee83335594ca0c9563847ab522f9122e4e97dd52ffcdb000068431918d066e",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "wrestling": {
       "src": "genre-art/wrestling.webp",
       "width": 616,
       "height": 353,
       "bytes": 26358,
-      "sha256": "333e359a7e6b537a021fc3488e9dd1340c330572a9e58120807a844139a7a656"
+      "sha256": "333e359a7e6b537a021fc3488e9dd1340c330572a9e58120807a844139a7a656",
+      "loop": {
+        "webm": "genre-art/loops/wrestling.webm",
+        "mp4": "genre-art/loops/wrestling.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 402209,
+            "sha256": "43171b396cf615db62ca21ff07949126ef1b666866f63e73fc459afb806ef060",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 300038,
+            "sha256": "c658d42383310acda4765df7418395c4afec2857b548b7364422aee7e14dac43",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "skateboarding": {
       "src": "genre-art/skateboarding.webp",
       "width": 616,
       "height": 353,
       "bytes": 18642,
-      "sha256": "6f52ab9ff118b5838a618b8cea5581330f56a8dc92db6042fe7e74018a6afc63"
+      "sha256": "6f52ab9ff118b5838a618b8cea5581330f56a8dc92db6042fe7e74018a6afc63",
+      "loop": {
+        "webm": "genre-art/loops/skateboarding.webm",
+        "mp4": "genre-art/loops/skateboarding.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 343695,
+            "sha256": "b42d085d3cf850282fd3a98623b276d0336efadd2133e49dd27d3e1a2ec011b2",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 371395,
+            "sha256": "7e0edcc59b7cca8227058517329ec5db0935cb51924878c9c413d7a44274136b",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "skating": {
       "src": "genre-art/skating.webp",
       "width": 616,
       "height": 353,
       "bytes": 23856,
-      "sha256": "754133b5b1500244b9e2d4f1e5de4dc6806845586fcae3ec1ccf34dc7c4bf7c6"
+      "sha256": "754133b5b1500244b9e2d4f1e5de4dc6806845586fcae3ec1ccf34dc7c4bf7c6",
+      "loop": {
+        "webm": "genre-art/loops/skating.webm",
+        "mp4": "genre-art/loops/skating.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 366904,
+            "sha256": "93c2b782eda1b8f36ad1bcc8507a63f51a133dbc576273eceee20a6c07d5df64",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 351911,
+            "sha256": "33e57f0e6b80e2c0caef26cc2228743117402c13b62708dd58814556a5048022",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "mahjong": {
       "src": "genre-art/mahjong.webp",
       "width": 616,
       "height": 353,
       "bytes": 27652,
-      "sha256": "62327cdef24733af8a08f5691503f1a1f5ccf38058265c63f380daa22cab1614"
+      "sha256": "62327cdef24733af8a08f5691503f1a1f5ccf38058265c63f380daa22cab1614",
+      "loop": {
+        "webm": "genre-art/loops/mahjong.webm",
+        "mp4": "genre-art/loops/mahjong.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 324485,
+            "sha256": "2cefaf8e955b57ef6665179a615bccc0af9e170cf2dabf9894c7af9f3882ad0b",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 360934,
+            "sha256": "c4aa254197c2e4827ca22b7bccc8861317a28f506078f3b66a45013df3b2c2ba",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "baseball": {
       "src": "genre-art/baseball.webp",
       "width": 616,
       "height": 353,
       "bytes": 32164,
-      "sha256": "9bbe08ee27ea55af069b0bc7416d6edc46ac3a99d12d2ac2643409325223f5d1"
+      "sha256": "9bbe08ee27ea55af069b0bc7416d6edc46ac3a99d12d2ac2643409325223f5d1",
+      "loop": {
+        "webm": "genre-art/loops/baseball.webm",
+        "mp4": "genre-art/loops/baseball.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 313530,
+            "sha256": "6bf6a0c0d39a6cf9f4885da6e3e1eefaa2241290da095ba71b268f485128c7d4",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 328735,
+            "sha256": "20da88d4d64e9b78bc1d3241c642c51600cc52701f64f2293c26416b16e57bee",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "tennis": {
       "src": "genre-art/tennis.webp",
       "width": 616,
       "height": 353,
       "bytes": 28950,
-      "sha256": "8009238bb75605bc79baec8b6a6c9dd0ac4bad36eefbd96fd7931bb8cff20a82"
+      "sha256": "8009238bb75605bc79baec8b6a6c9dd0ac4bad36eefbd96fd7931bb8cff20a82",
+      "loop": {
+        "webm": "genre-art/loops/tennis.webm",
+        "mp4": "genre-art/loops/tennis.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 343851,
+            "sha256": "d8c6dd7aafbae06c7381d930574c25065fb0506a4a1b48ae5de2d0c9646b45b1",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 330988,
+            "sha256": "e55c0ce683a3898916acb8227b52e44d82f9c3d81ddf6410769f0d58face6f60",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "cycling": {
       "src": "genre-art/cycling.webp",
       "width": 616,
       "height": 353,
       "bytes": 35334,
-      "sha256": "6144b33e46805c6f466c100d80cd9b37202b69237bdc8a9a048043d0e1ef4497"
+      "sha256": "6144b33e46805c6f466c100d80cd9b37202b69237bdc8a9a048043d0e1ef4497",
+      "loop": {
+        "webm": "genre-art/loops/cycling.webm",
+        "mp4": "genre-art/loops/cycling.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 667969,
+            "sha256": "ee6814533b72d81eeed97362f8dfdcd002c392fac3e63556bf94e4c3d97228dd",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 706631,
+            "sha256": "f189f6549b4f05c7d6e4c57b5b978c368810887a792c289512c171323ea3b643",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "hockey": {
       "src": "genre-art/hockey.webp",
       "width": 616,
       "height": 353,
       "bytes": 29310,
-      "sha256": "93d413bb6f523c0de42c3c5f93cb272367c67cd163cb1565f5dfdbf58332367c"
+      "sha256": "93d413bb6f523c0de42c3c5f93cb272367c67cd163cb1565f5dfdbf58332367c",
+      "loop": {
+        "webm": "genre-art/loops/hockey.webm",
+        "mp4": "genre-art/loops/hockey.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 383505,
+            "sha256": "355ea230ce602b2691a717565ec93e0c04ae592c748e499ecdaf0087019f65d2",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 338015,
+            "sha256": "5350631a5a889634e0f22d7e3221f732a65b6df2a563225a86a8b5f443c9112d",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "motocross": {
       "src": "genre-art/motocross.webp",
       "width": 616,
       "height": 353,
       "bytes": 37334,
-      "sha256": "fc1d52d5089a9044d76fe2cfc3479468b844a62fd00e644beeefe0d099a2fd5e"
+      "sha256": "fc1d52d5089a9044d76fe2cfc3479468b844a62fd00e644beeefe0d099a2fd5e",
+      "loop": {
+        "webm": "genre-art/loops/motocross.webm",
+        "mp4": "genre-art/loops/motocross.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 593985,
+            "sha256": "25fad9924569d58b8971d175888c67a63a48bd99479220dfa4f108861503a0d9",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 434892,
+            "sha256": "69773d06eb26f5df5cb0926758c1e33d1ee5681b3b609d9d71cfaafff0a6ac72",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "bowling": {
       "src": "genre-art/bowling.webp",
       "width": 616,
       "height": 353,
       "bytes": 28914,
-      "sha256": "10ba87b16f9c6499173b431eef0904e4957c63d4524bcb072a5f074b0c43bc60"
+      "sha256": "10ba87b16f9c6499173b431eef0904e4957c63d4524bcb072a5f074b0c43bc60",
+      "loop": {
+        "webm": "genre-art/loops/bowling.webm",
+        "mp4": "genre-art/loops/bowling.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 625182,
+            "sha256": "06d9280afa99d7d91d346fb4c09ffcee4174cfc26a19ba9304ad7bd7afbcf00a",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 436259,
+            "sha256": "abb2619c58fe6ae9c7e1e287a32e91ce55c6455ac5da7d407fdcb85f049492d5",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "skiing": {
       "src": "genre-art/skiing.webp",
       "width": 616,
       "height": 353,
       "bytes": 40390,
-      "sha256": "d9130fa30331931ec2bf2d4313fdf7845a541ca64d4e6942c4ba0891edc37d2a"
+      "sha256": "d9130fa30331931ec2bf2d4313fdf7845a541ca64d4e6942c4ba0891edc37d2a",
+      "loop": {
+        "webm": "genre-art/loops/skiing.webm",
+        "mp4": "genre-art/loops/skiing.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 516773,
+            "sha256": "b6586fe49dd94c54a87ae0d70115d8abee55afe72fbf74a2ec4426def802df94",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 589275,
+            "sha256": "5d1adf85ec5a5bd6e54f02c868ceb18ef3b3226eb023ede443a4544ea05b0f53",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "snowboarding": {
       "src": "genre-art/snowboarding.webp",
       "width": 616,
       "height": 353,
       "bytes": 33508,
-      "sha256": "690f514595a1ba570576eec14bd2fee4c3509d667ed5d29fdbf15acf7c906cbb"
+      "sha256": "690f514595a1ba570576eec14bd2fee4c3509d667ed5d29fdbf15acf7c906cbb",
+      "loop": {
+        "webm": "genre-art/loops/snowboarding.webm",
+        "mp4": "genre-art/loops/snowboarding.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 585788,
+            "sha256": "66ee6143e9a0146775d07f25c33d2a40742b52b4df13088179e454fbfafc60a0",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 471559,
+            "sha256": "cfd79e78fc38885d2159f8ca3c59059521a985891159429bb25ac69f08c7516c",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "bmx": {
       "src": "genre-art/bmx.webp",
       "width": 616,
       "height": 353,
       "bytes": 23956,
-      "sha256": "e35a3dedb2aa98cb2c402e750604d70301efa32c557653bc9ffa0234ec45119d"
+      "sha256": "e35a3dedb2aa98cb2c402e750604d70301efa32c557653bc9ffa0234ec45119d",
+      "loop": {
+        "webm": "genre-art/loops/bmx.webm",
+        "mp4": "genre-art/loops/bmx.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 373981,
+            "sha256": "09ce152cec275e6298ff7e46cd46735cabd4f229a8453cf997fb737f564f52c4",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 311499,
+            "sha256": "84d6fc6404ac0a6536bf635cfa231b4fc3812a88316da109632efab13629b9bf",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "volleyball": {
       "src": "genre-art/volleyball.webp",
       "width": 616,
       "height": 353,
       "bytes": 18256,
-      "sha256": "5d2ff6ee4b024f883af005df2cb259b29c63c935cf1a4c4ab8b914a0e7d6a6a5"
+      "sha256": "5d2ff6ee4b024f883af005df2cb259b29c63c935cf1a4c4ab8b914a0e7d6a6a5",
+      "loop": {
+        "webm": "genre-art/loops/volleyball.webm",
+        "mp4": "genre-art/loops/volleyball.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 340302,
+            "sha256": "883e71e8a1fba27f03ed8919ff8d4dc92ac5926e6df3460670d5ccffb6cebb54",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 312176,
+            "sha256": "e321e5ff4ecfd73312c1d9f7f20aac8ad9084d554bce8dc07f446b75079741c0",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "cricket": {
       "src": "genre-art/cricket.webp",
       "width": 616,
       "height": 353,
       "bytes": 32406,
-      "sha256": "a73e21afe98061ab34247d307be96f6d10bf43a14c4c14d6aa8e51657b411139"
+      "sha256": "a73e21afe98061ab34247d307be96f6d10bf43a14c4c14d6aa8e51657b411139",
+      "loop": {
+        "webm": "genre-art/loops/cricket.webm",
+        "mp4": "genre-art/loops/cricket.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 414296,
+            "sha256": "3b3fff2784d1402d681cb26248a7a010941bd9eb4112c3fa2d50f7eed54270ac",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 318862,
+            "sha256": "5e742d2e2f21383f2d4a4af9fb507902eea840c7c86c8be2eb69c7df0da79048",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "rugby": {
       "src": "genre-art/rugby.webp",
       "width": 616,
       "height": 353,
       "bytes": 25200,
-      "sha256": "ca8bbbc331346bc6b19ea5919c545cf2a21acadfcfba1ca5664244c559ec9345"
+      "sha256": "ca8bbbc331346bc6b19ea5919c545cf2a21acadfcfba1ca5664244c559ec9345",
+      "loop": {
+        "webm": "genre-art/loops/rugby.webm",
+        "mp4": "genre-art/loops/rugby.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 656472,
+            "sha256": "14b233129f6eef01febbd3cea62e934ad0778fdd43b8ed57f0448ea30e5e54cd",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 491666,
+            "sha256": "a07f696dbd8052bf5b66037ae4e86780ea585e964667e2ce7e1d675352786e6e",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "snooker": {
       "src": "genre-art/snooker.webp",
       "width": 616,
       "height": 353,
       "bytes": 13062,
-      "sha256": "f945fa4495ea4cff1dfd5169249278c0277867707477df421e87912a12ac470e"
+      "sha256": "f945fa4495ea4cff1dfd5169249278c0277867707477df421e87912a12ac470e",
+      "loop": {
+        "webm": "genre-art/loops/snooker.webm",
+        "mp4": "genre-art/loops/snooker.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 344329,
+            "sha256": "14945453537a86d8430978203734d74ffb02cad21f94d411cba4a2ba75c4cf92",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 605239,
+            "sha256": "c92985e6d30a366297de9014488accf9a2ff89d8598c147eacc93c88a1619a47",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "horror": {
       "src": "genre-art/horror.webp",
       "width": 616,
       "height": 353,
       "bytes": 14418,
-      "sha256": "b1e0478272effb936381eb504497f9be45a27055775034f81aa2c459f6a66308"
+      "sha256": "b1e0478272effb936381eb504497f9be45a27055775034f81aa2c459f6a66308",
+      "loop": {
+        "webm": "genre-art/loops/horror.webm",
+        "mp4": "genre-art/loops/horror.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 397404,
+            "sha256": "eab1877d65ac01a66958c728c119aaa466284bcf02996b83976dea8df94b4056",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 356452,
+            "sha256": "9ffcc0fb6c39a5cd90ea29482f6db4fe14d602766c74d4144ca42de5d2eaa13d",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "2d-platformer": {
       "src": "genre-art/2d-platformer.webp",
       "width": 616,
       "height": 353,
       "bytes": 24344,
-      "sha256": "5dbfbeff3f6b0941e898136c9b741b6355cfabdff34d21f14d7dc953ae228514"
+      "sha256": "5dbfbeff3f6b0941e898136c9b741b6355cfabdff34d21f14d7dc953ae228514",
+      "loop": {
+        "webm": "genre-art/loops/2d-platformer.webm",
+        "mp4": "genre-art/loops/2d-platformer.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 303606,
+            "sha256": "7076df5a69e876fe9ff1873c76465e796acaf8012c49366888c85f43c5fe9516",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 434538,
+            "sha256": "d31a0e305cd53d7670a03303ff3b8ad4a91387e7acdbb1d055dea51c4a869c00",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "roguelite": {
       "src": "genre-art/roguelite.webp",
       "width": 616,
       "height": 353,
       "bytes": 24794,
-      "sha256": "d94e994bd315ee36e8e210482562464fbf1c397b6e8f97e39dd5162b40a19364"
+      "sha256": "d94e994bd315ee36e8e210482562464fbf1c397b6e8f97e39dd5162b40a19364",
+      "loop": {
+        "webm": "genre-art/loops/roguelite.webm",
+        "mp4": "genre-art/loops/roguelite.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 489193,
+            "sha256": "fdcef26e1482b6f77663f4e2320539066379993449d271cc662ebc5a23a6ee69",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 497044,
+            "sha256": "2a55f82bb7684f38f4d1db84c061b9be186367de83f3d50a1ab72ec0424fa382",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "fps": {
       "src": "genre-art/fps.webp",
       "width": 616,
       "height": 353,
       "bytes": 22866,
-      "sha256": "61e729904f1c0a4fa443257dc468215547a50805bc93ede580b366f42839e998"
+      "sha256": "61e729904f1c0a4fa443257dc468215547a50805bc93ede580b366f42839e998",
+      "loop": {
+        "webm": "genre-art/loops/fps.webm",
+        "mp4": "genre-art/loops/fps.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 355267,
+            "sha256": "40586af270e50aeb431f3b763df0004d83fea40806f7d6843d7f4e6d7bbc4103",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 326773,
+            "sha256": "6823a6a65ecc95abfb0ce3575984ffdf4e62b446be932c25eeec3ddbf245d89a",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "action-roguelike": {
       "src": "genre-art/action-roguelike.webp",
       "width": 616,
       "height": 353,
       "bytes": 28822,
-      "sha256": "49e928ce6b502de5f0a582f63dca6c3296a04ba7adfafd2b8ae69bda8e11584e"
+      "sha256": "49e928ce6b502de5f0a582f63dca6c3296a04ba7adfafd2b8ae69bda8e11584e",
+      "loop": {
+        "webm": "genre-art/loops/action-roguelike.webm",
+        "mp4": "genre-art/loops/action-roguelike.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 378426,
+            "sha256": "a38fb24e68be21cdb88dce9667a6309d41149ec5f95de64375a3c07f42fbc063",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 321923,
+            "sha256": "e00b5b8edc1a49e96f19eba43c6782fb8a9b277f95502852a9353e9b7376daa4",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "immersive-sim": {
       "src": "genre-art/immersive-sim.webp",
       "width": 616,
       "height": 353,
       "bytes": 26956,
-      "sha256": "e613c38536d090af7b8739e536d6c1d3c56040445f68f322a0814db571ccbf06"
+      "sha256": "e613c38536d090af7b8739e536d6c1d3c56040445f68f322a0814db571ccbf06",
+      "loop": {
+        "webm": "genre-art/loops/immersive-sim.webm",
+        "mp4": "genre-art/loops/immersive-sim.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 405216,
+            "sha256": "ea912eef8c294d2bab4ee70c53ee826eaa8725e672373183c82b968ea17b0d92",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 370432,
+            "sha256": "796f5e979fd02c200ce2a1dae097f660e1459823a728f0c616bfb1c4cb1bd20c",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "3d-platformer": {
       "src": "genre-art/3d-platformer.webp",
       "width": 616,
       "height": 353,
       "bytes": 41224,
-      "sha256": "05db97e53069803b9ea64b731590c4ffc75cf47040dbc769ea1078323799c26d"
+      "sha256": "05db97e53069803b9ea64b731590c4ffc75cf47040dbc769ea1078323799c26d",
+      "loop": {
+        "webm": "genre-art/loops/3d-platformer.webm",
+        "mp4": "genre-art/loops/3d-platformer.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 374136,
+            "sha256": "21f134329ed93d4a7a469a38ca51a7763667e765ab675a3e449e9d80bf4e864a",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 310201,
+            "sha256": "700db8e0cde94251a2a35ab0dafd2957f879882945ff1b66073e0121f8c4127b",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "choose-your-own-adventure": {
       "src": "genre-art/choose-your-own-adventure.webp",
       "width": 616,
       "height": 353,
       "bytes": 39234,
-      "sha256": "fddb6d9e623753c78136c3690546883ff1a0b8311535239b71426f32f15311da"
+      "sha256": "fddb6d9e623753c78136c3690546883ff1a0b8311535239b71426f32f15311da",
+      "loop": {
+        "webm": "genre-art/loops/choose-your-own-adventure.webm",
+        "mp4": "genre-art/loops/choose-your-own-adventure.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 363922,
+            "sha256": "ae49897dff00cd54fef938bb71d861f7f37c75d6ff14bc087e92c0d64fdcd944",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 301469,
+            "sha256": "72e1610b30b0dc926f80c8313b982d586aa01582bdf4e6a855f87635707b15fe",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "turn-based-tactics": {
       "src": "genre-art/turn-based-tactics.webp",
       "width": 616,
       "height": 353,
       "bytes": 36490,
-      "sha256": "18fe4d6922ea6234f0eb4c909ab3bf2f6c6b361c21c8c2044ae4e4d155084d21"
+      "sha256": "18fe4d6922ea6234f0eb4c909ab3bf2f6c6b361c21c8c2044ae4e4d155084d21",
+      "loop": {
+        "webm": "genre-art/loops/turn-based-tactics.webm",
+        "mp4": "genre-art/loops/turn-based-tactics.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 437348,
+            "sha256": "afb696d9a6e81d6e356c156ceea31feef5293619919f061a04def1185891257f",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 339038,
+            "sha256": "4489985d7a014e30101c25e4dab785327655f19465f79f5d7c6b8f1b783b7557",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "side-scroller": {
       "src": "genre-art/side-scroller.webp",
       "width": 616,
       "height": 353,
       "bytes": 25774,
-      "sha256": "a80d49bedfe1b1af2fa7c570063a8421371b38cdfb8d6b7d78ff067d48a3cd4b"
+      "sha256": "a80d49bedfe1b1af2fa7c570063a8421371b38cdfb8d6b7d78ff067d48a3cd4b",
+      "loop": {
+        "webm": "genre-art/loops/side-scroller.webm",
+        "mp4": "genre-art/loops/side-scroller.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 344651,
+            "sha256": "e59fba82ea0a2f068aa351ca2094ebdf9237f01ced6fb412072500eaa860ed85",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 363679,
+            "sha256": "3dbb44c1a64c99e5cacf1d819d732505864bc5e4621c7174b09921cd36ffb562",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "survival-horror": {
       "src": "genre-art/survival-horror.webp",
       "width": 616,
       "height": 353,
       "bytes": 19640,
-      "sha256": "b4ad72142fecc130caa7a3b432784a8563828c9411d616e66185d6e37758cd52"
+      "sha256": "b4ad72142fecc130caa7a3b432784a8563828c9411d616e66185d6e37758cd52",
+      "loop": {
+        "webm": "genre-art/loops/survival-horror.webm",
+        "mp4": "genre-art/loops/survival-horror.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 450456,
+            "sha256": "58108d5feb34bff70156e92de8d584d9bfe58e9301d2beb7aba8b38dd97a2c1d",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 452988,
+            "sha256": "599faf1e846f11c518dbc1833fdbd9714cb4b5d9230e9382e73f1b3b6c21d860",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "bullet-hell": {
       "src": "genre-art/bullet-hell.webp",
       "width": 616,
       "height": 353,
       "bytes": 37976,
-      "sha256": "91e89c41100bf3bbe784c4860a2e0e6ba5b01b251beec9c051b9c3213b138111"
+      "sha256": "91e89c41100bf3bbe784c4860a2e0e6ba5b01b251beec9c051b9c3213b138111",
+      "loop": {
+        "webm": "genre-art/loops/bullet-hell.webm",
+        "mp4": "genre-art/loops/bullet-hell.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 369796,
+            "sha256": "35217c3c703a31f4e67a5dd9883529cf50032c953537ae10709f4b63c6bc4d4e",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 364778,
+            "sha256": "7c925a3c3f3bf4b4fdf27bf55e08bc967e24374728f84c56dd5e71fbcd788967",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "puzzle-platformer": {
       "src": "genre-art/puzzle-platformer.webp",
       "width": 616,
       "height": 353,
       "bytes": 35138,
-      "sha256": "21946128b1b2432c9ba1d8a5aeb3b27d762482a168b43ce5c8e2060a29471a92"
+      "sha256": "21946128b1b2432c9ba1d8a5aeb3b27d762482a168b43ce5c8e2060a29471a92",
+      "loop": {
+        "webm": "genre-art/loops/puzzle-platformer.webm",
+        "mp4": "genre-art/loops/puzzle-platformer.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 426081,
+            "sha256": "1368b17e6bc4391894cce0727066d04f8c7ca8f1b13110b5cb7cec71f7b22ec6",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 335723,
+            "sha256": "6597ddc3020b78cf3baaa962c5e73afd378913fae89c81df5aa54084f499f3be",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "dungeon-crawler": {
       "src": "genre-art/dungeon-crawler.webp",
       "width": 616,
       "height": 353,
       "bytes": 27858,
-      "sha256": "e9c03bb6861df762f575c9041a7749cfa1a5e684444056fe38efe5d4c90182a3"
+      "sha256": "e9c03bb6861df762f575c9041a7749cfa1a5e684444056fe38efe5d4c90182a3",
+      "loop": {
+        "webm": "genre-art/loops/dungeon-crawler.webm",
+        "mp4": "genre-art/loops/dungeon-crawler.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 324175,
+            "sha256": "bfc6f45f4c05f8b4799d178fa57add29e7f206c6a6ba04bad9e38d500ed8f7b6",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 567014,
+            "sha256": "202655ce2f7dc3aa7a3699dc652c876eaff60e5fae60b20b8483926d8b43c32b",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "hack-and-slash": {
       "src": "genre-art/hack-and-slash.webp",
       "width": 616,
       "height": 353,
       "bytes": 28302,
-      "sha256": "6de5e7a9f757e4caaaa030dcc8c994f32c46d1400f50e99a8b65afe653fe44df"
+      "sha256": "6de5e7a9f757e4caaaa030dcc8c994f32c46d1400f50e99a8b65afe653fe44df",
+      "loop": {
+        "webm": "genre-art/loops/hack-and-slash.webm",
+        "mp4": "genre-art/loops/hack-and-slash.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 383738,
+            "sha256": "6c6c16923b741461eb05895417ba92e9158efb088101ff2b8d60d6811dc05629",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 304607,
+            "sha256": "3f96f95abce85a4933efe4d9b87d6ac1c7b5aa90e8e71ab7d4842f9975469136",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "life-sim": {
       "src": "genre-art/life-sim.webp",
       "width": 616,
       "height": 353,
       "bytes": 27778,
-      "sha256": "5eae52760dd084c494b3241bee3153549016500d8ceecd3189410fafdab16db9"
+      "sha256": "5eae52760dd084c494b3241bee3153549016500d8ceecd3189410fafdab16db9",
+      "loop": {
+        "webm": "genre-art/loops/life-sim.webm",
+        "mp4": "genre-art/loops/life-sim.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 409562,
+            "sha256": "06a03f12e0664fbbd372040132dd1174e69dacb97ac6a0785b80b1a5f542e82c",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 435673,
+            "sha256": "54b4053d0f4a9d2525ded43349af8387db1210f98036a49658ad0484a7e5b829",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "dating-sim": {
       "src": "genre-art/dating-sim.webp",
       "width": 616,
       "height": 353,
       "bytes": 43554,
-      "sha256": "f46ba34232dc94fb7b7ba183e7d0e83a21a4c5828fc1e2b9ace9dc308c5b5ee9"
+      "sha256": "f46ba34232dc94fb7b7ba183e7d0e83a21a4c5828fc1e2b9ace9dc308c5b5ee9",
+      "loop": {
+        "webm": "genre-art/loops/dating-sim.webm",
+        "mp4": "genre-art/loops/dating-sim.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 359047,
+            "sha256": "c4148fce59319f7e0743441321210c601c2a92641dd90a09ed058c9045169834",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 424458,
+            "sha256": "85a61cae268ef1dec1b86b8fe08d9f118e2612526be2d70e33a3ab99ee826e21",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "shoot-em-up": {
       "src": "genre-art/shoot-em-up.webp",
       "width": 616,
       "height": 353,
       "bytes": 39778,
-      "sha256": "13ab41c24eed9108cbddb35e7719394f504d3a7420b747ec42d0a9e0715eac6d"
+      "sha256": "13ab41c24eed9108cbddb35e7719394f504d3a7420b747ec42d0a9e0715eac6d",
+      "loop": {
+        "webm": "genre-art/loops/shoot-em-up.webm",
+        "mp4": "genre-art/loops/shoot-em-up.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 366551,
+            "sha256": "e217899da5a80e6835812bea8394116e6b4e5f0c107938c4a404da9a5bce89a2",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 362527,
+            "sha256": "0387c8dc5c0436fa3960b8986e4f3c18f5b6e9aa2e21dc146424a459dd7da0ac",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "investigation": {
       "src": "genre-art/investigation.webp",
       "width": 616,
       "height": 353,
       "bytes": 25968,
-      "sha256": "8a58b65be95faa52d4b15f88eb5d53a18dadb4763fac2c9e3343598fabb7ae55"
+      "sha256": "8a58b65be95faa52d4b15f88eb5d53a18dadb4763fac2c9e3343598fabb7ae55",
+      "loop": {
+        "webm": "genre-art/loops/investigation.webm",
+        "mp4": "genre-art/loops/investigation.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 543519,
+            "sha256": "2381c8a0f046619e3423ab978dee3a1fcedf27132d1261aab8f46c2d3fb9bcd7",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 488511,
+            "sha256": "27df52034ad6125a820978fcae1252c807537a278bbe8a34ea5a86fb65ef76d6",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "time-management": {
       "src": "genre-art/time-management.webp",
       "width": 616,
       "height": 353,
       "bytes": 39318,
-      "sha256": "0f0552a9e4897ce759a8d0e3cd4b756f562c23551bb10b8034929598d63609e4"
+      "sha256": "0f0552a9e4897ce759a8d0e3cd4b756f562c23551bb10b8034929598d63609e4",
+      "loop": {
+        "webm": "genre-art/loops/time-management.webm",
+        "mp4": "genre-art/loops/time-management.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 714005,
+            "sha256": "ada24e0ec5dac03351315762cbeba88fa5b9186358b3f6be17f19d65ec2fe42a",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 573787,
+            "sha256": "140940680e94a3c49ff85bdd223be16403da1586e7781d7d80f3bdf5ab5767d8",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "top-down-shooter": {
       "src": "genre-art/top-down-shooter.webp",
       "width": 616,
       "height": 353,
       "bytes": 44352,
-      "sha256": "7bfeb221d477a8d7f787a4e4daad19d6a2773d5b6a03a8fcb2398322ae3507f3"
+      "sha256": "7bfeb221d477a8d7f787a4e4daad19d6a2773d5b6a03a8fcb2398322ae3507f3",
+      "loop": {
+        "webm": "genre-art/loops/top-down-shooter.webm",
+        "mp4": "genre-art/loops/top-down-shooter.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 485765,
+            "sha256": "4539fd5cc99888d28e19615dcdde55f793fb18be727675c4dd23877b1cf3e8b3",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 466475,
+            "sha256": "b26bb9590a25b814a8a0493f058313cf760552b60a1e3d72db8bdc5dad32ba03",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "jrpg": {
       "src": "genre-art/jrpg.webp",
       "width": 616,
       "height": 353,
       "bytes": 44614,
-      "sha256": "5e510307661903b70c3e5049d62f9728c444a90fc881616173ac1b1f9172d3b0"
+      "sha256": "5e510307661903b70c3e5049d62f9728c444a90fc881616173ac1b1f9172d3b0",
+      "loop": {
+        "webm": "genre-art/loops/jrpg.webm",
+        "mp4": "genre-art/loops/jrpg.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 492751,
+            "sha256": "29be6786f4a01af72672ecf264486bb9a8f9e2c63c61ac92a58cc33c9e419b35",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 307592,
+            "sha256": "869e091b25e05a00c965262291004149c7fd61ab00e91cd82f7c150ff683e6cc",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "collectathon": {
       "src": "genre-art/collectathon.webp",
       "width": 616,
       "height": 353,
       "bytes": 36322,
-      "sha256": "06205cd8aed186cebacff5e4e111dc1eb7f71e2d166876791c5df2f247017e5e"
+      "sha256": "06205cd8aed186cebacff5e4e111dc1eb7f71e2d166876791c5df2f247017e5e",
+      "loop": {
+        "webm": "genre-art/loops/collectathon.webm",
+        "mp4": "genre-art/loops/collectathon.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 450529,
+            "sha256": "dd756ecb5030f1f3c877318272c52f4c4250eaaaef905f428eaec3ae218dffcd",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 431327,
+            "sha256": "c0433e3ddf7e129ed57aab6e2038540b1c08f9500d2513009d5af623b04518b8",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "education": {
       "src": "genre-art/education.webp",
       "width": 616,
       "height": 353,
       "bytes": 24990,
-      "sha256": "b63a5216ecec732f4119965f16fd0b7eb7510e8e57bb8eb54d9c95a221246e00"
+      "sha256": "b63a5216ecec732f4119965f16fd0b7eb7510e8e57bb8eb54d9c95a221246e00",
+      "loop": {
+        "webm": "genre-art/loops/education.webm",
+        "mp4": "genre-art/loops/education.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 476714,
+            "sha256": "51613b3ffb8b89d99d693a92936b96c74e355760d76d8d67c5c73265440a40cf",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 408743,
+            "sha256": "4b3627ac00cfcd710a5e509d00c46b3a4a1e7c450b9478fc2417cf7081fa2673",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "precision-platformer": {
       "src": "genre-art/precision-platformer.webp",
       "width": 616,
       "height": 353,
       "bytes": 26242,
-      "sha256": "ab5fac8ff77c1fca77662957aa02a7c8b1c4da0b1251d0a08999afa82ae0e199"
+      "sha256": "ab5fac8ff77c1fca77662957aa02a7c8b1c4da0b1251d0a08999afa82ae0e199",
+      "loop": {
+        "webm": "genre-art/loops/precision-platformer.webm",
+        "mp4": "genre-art/loops/precision-platformer.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 440218,
+            "sha256": "d3d7f294292ed13ce82dfdcbdb5f545e80be4c9d5bbcef33b1fd3632318df86c",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 403328,
+            "sha256": "5c79e42cb67cff82ed9a15776e2c3f765b5ab8741216542091be1354f3c4131b",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "third-person-shooter": {
       "src": "genre-art/third-person-shooter.webp",
       "width": 616,
       "height": 353,
       "bytes": 25842,
-      "sha256": "83d1424d5dbfbe4cf3efe5afcf78d98608816cfea706f37b005140c8e46ea138"
+      "sha256": "83d1424d5dbfbe4cf3efe5afcf78d98608816cfea706f37b005140c8e46ea138",
+      "loop": {
+        "webm": "genre-art/loops/third-person-shooter.webm",
+        "mp4": "genre-art/loops/third-person-shooter.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 410829,
+            "sha256": "046d0adb104c138cb436d39442b63a51688608076a4e57c5ded4f01fe0d65ebe",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 357083,
+            "sha256": "878d6eea935840a7f1828c9d022cc0acfc64d1908227b2858c61db5c6b48add3",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "real-time-tactics": {
       "src": "genre-art/real-time-tactics.webp",
       "width": 616,
       "height": 353,
       "bytes": 31780,
-      "sha256": "df50cb6f10d623618cd799d450e3eddbdfa0fe689762b1d24d57d532783c228c"
+      "sha256": "df50cb6f10d623618cd799d450e3eddbdfa0fe689762b1d24d57d532783c228c",
+      "loop": {
+        "webm": "genre-art/loops/real-time-tactics.webm",
+        "mp4": "genre-art/loops/real-time-tactics.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 321244,
+            "sha256": "8edc16319871824f4432a78524cca53306a73c34b0b6611b622192ef56e20138",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 337095,
+            "sha256": "580840f3c2101ba1c15cc3cc5b582191967f05c99a69adea64e305e334afe1c6",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "card-battler": {
       "src": "genre-art/card-battler.webp",
       "width": 616,
       "height": 353,
       "bytes": 32952,
-      "sha256": "1ff3b6c698354d632058082eb08bab742dc57bba227596a3228a53d143bd3947"
+      "sha256": "1ff3b6c698354d632058082eb08bab742dc57bba227596a3228a53d143bd3947",
+      "loop": {
+        "webm": "genre-art/loops/card-battler.webm",
+        "mp4": "genre-art/loops/card-battler.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 663434,
+            "sha256": "351a38771778e0c5bd6c92707bcfdb4ab052e5d7a8b8347ebfc938b7ce9b42c8",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 604320,
+            "sha256": "335e325fe6da04117dfa8b14dc50b5bc6c70c03d466c4d6559ac8f46a3ab2379",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "arena-shooter": {
       "src": "genre-art/arena-shooter.webp",
       "width": 616,
       "height": 353,
       "bytes": 40080,
-      "sha256": "9b492a1365e0d4d8a0163deed08fcd2919c2bda459a01d815813ab5b03080eee"
+      "sha256": "9b492a1365e0d4d8a0163deed08fcd2919c2bda459a01d815813ab5b03080eee",
+      "loop": {
+        "webm": "genre-art/loops/arena-shooter.webm",
+        "mp4": "genre-art/loops/arena-shooter.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 488810,
+            "sha256": "fc75bd12c056d0501a74961d80123590b09e72420d98c4227ae7a46111a9bbc8",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 493064,
+            "sha256": "3cbf3d795b035f8c25c2d9900173f2e0af2082996cb179d3bc40761c85222c94",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "tactical-rpg": {
       "src": "genre-art/tactical-rpg.webp",
       "width": 616,
       "height": 353,
       "bytes": 39336,
-      "sha256": "2890fafc4be6b069a604f9cdbb8dc7dbd34e0d70f900d8593c30ca8634fb928a"
+      "sha256": "2890fafc4be6b069a604f9cdbb8dc7dbd34e0d70f900d8593c30ca8634fb928a",
+      "loop": {
+        "webm": "genre-art/loops/tactical-rpg.webm",
+        "mp4": "genre-art/loops/tactical-rpg.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 376893,
+            "sha256": "8e270fa2bebaa899cb94564d6639a4c1da62574fa7fc8eb21dd3a85ac1b51c79",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 371369,
+            "sha256": "cba83e9abf3c3529736d5718b5edf1f2e5280828f52818829563af20a487f394",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "city-builder": {
       "src": "genre-art/city-builder.webp",
       "width": 616,
       "height": 353,
       "bytes": 46036,
-      "sha256": "984134d22c73067b08be712de604e85330151d11fbec1cd88dcdddc67ae304ba"
+      "sha256": "984134d22c73067b08be712de604e85330151d11fbec1cd88dcdddc67ae304ba",
+      "loop": {
+        "webm": "genre-art/loops/city-builder.webm",
+        "mp4": "genre-art/loops/city-builder.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 365883,
+            "sha256": "b74d273a2369d9d46d3f5377d2c1c53b23fa3e1a0d20ecba33277068f7ce5570",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 304157,
+            "sha256": "157de01cd2b9471f39d4e2d7bb52c130885b51e411238c965e4a336ab84d2ad6",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "wargame": {
       "src": "genre-art/wargame.webp",
       "width": 616,
       "height": 353,
       "bytes": 36960,
-      "sha256": "509e247072ef6206b33a88c72865d2bdc06fcdd79aca9a52fe8aa3f082a7d0f1"
+      "sha256": "509e247072ef6206b33a88c72865d2bdc06fcdd79aca9a52fe8aa3f082a7d0f1",
+      "loop": {
+        "webm": "genre-art/loops/wargame.webm",
+        "mp4": "genre-art/loops/wargame.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 353692,
+            "sha256": "5ac536a76c23561b3452e16c4272a3e01e33500ade2652c0bba4bef26bf95f77",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 326973,
+            "sha256": "2c227fd9a258e9c53f37e3338b4918c343160eb0c463dd81d4f21d66af0aef24",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "runner": {
       "src": "genre-art/runner.webp",
       "width": 616,
       "height": 353,
       "bytes": 27478,
-      "sha256": "fb2ed7503778c68d382bc47987fd17691f87d9d9475587b4c41e5e124d61f1d0"
+      "sha256": "fb2ed7503778c68d382bc47987fd17691f87d9d9475587b4c41e5e124d61f1d0",
+      "loop": {
+        "webm": "genre-art/loops/runner.webm",
+        "mp4": "genre-art/loops/runner.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 411382,
+            "sha256": "5ef2e156291618da3a5520d4fe0010e8809d672c82a1961bfb6a13e03b8042c2",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 339467,
+            "sha256": "f5b104635b5e0842e6fe477d886633fc9525ebf73d9983e4c7662c9c6009c36b",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "souls-like": {
       "src": "genre-art/souls-like.webp",
       "width": 616,
       "height": 353,
       "bytes": 30258,
-      "sha256": "399c7753c7ef5372f7ff124750a243dcafdd8f8beca41efeb7cf8889399b8284"
+      "sha256": "399c7753c7ef5372f7ff124750a243dcafdd8f8beca41efeb7cf8889399b8284",
+      "loop": {
+        "webm": "genre-art/loops/souls-like.webm",
+        "mp4": "genre-art/loops/souls-like.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 362398,
+            "sha256": "73ce2d1e6b03355620c6793c9d6383eb9d2b27262c90d4d20f931af8327e9fcc",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 308344,
+            "sha256": "6d06e30f9d3b28958b31c13cb5b8d28cd667e459ecaff75a35b0a1ecd944f0d6",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "metroidvania": {
       "src": "genre-art/metroidvania.webp",
       "width": 616,
       "height": 353,
       "bytes": 29832,
-      "sha256": "532403f6de634a5f97bfa2ffd037afcb812a6bae052da8965cf8b696143140c5"
+      "sha256": "532403f6de634a5f97bfa2ffd037afcb812a6bae052da8965cf8b696143140c5",
+      "loop": {
+        "webm": "genre-art/loops/metroidvania.webm",
+        "mp4": "genre-art/loops/metroidvania.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 456067,
+            "sha256": "fb83eefbe67d09705fed6b60d9fa47c88943ae68ec04015b5b888a7ea27d7908",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 384316,
+            "sha256": "542414ade3125ba0e5eefed3002b79237c181dd2b91bf36f859d45162ee93cd8",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "beat-em-up": {
       "src": "genre-art/beat-em-up.webp",
       "width": 616,
       "height": 353,
       "bytes": 36958,
-      "sha256": "6ad6db9b8fbf56ca11dd43763c1bccc5c7695b37c014d612bb23ea9340578e55"
+      "sha256": "6ad6db9b8fbf56ca11dd43763c1bccc5c7695b37c014d612bb23ea9340578e55",
+      "loop": {
+        "webm": "genre-art/loops/beat-em-up.webm",
+        "mp4": "genre-art/loops/beat-em-up.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 647357,
+            "sha256": "4ba03a0bdde73cd1372d06f0619c4c8e6b32d7dc5083dbeb8490ac1924d55688",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 753833,
+            "sha256": "283e5e03e531def62b669eb3bc010469fe10132140a11e6d6fef5b70320e085f",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "flight": {
       "src": "genre-art/flight.webp",
       "width": 616,
       "height": 353,
       "bytes": 32044,
-      "sha256": "dc32c64245fe32fd2fdbc5a2512a14d9668ed775f682ffa69241a5b6351f4f33"
+      "sha256": "dc32c64245fe32fd2fdbc5a2512a14d9668ed775f682ffa69241a5b6351f4f33",
+      "loop": {
+        "webm": "genre-art/loops/flight.webm",
+        "mp4": "genre-art/loops/flight.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 453633,
+            "sha256": "0c339d59de6bc11891783a66f9e23507e7b8cb0ed25233a7d64a2b348494b09b",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 405214,
+            "sha256": "61f757138891c99bdd17ff1503204392beaf350cb546b5f71599cd3ce0afc522",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "crpg": {
       "src": "genre-art/crpg.webp",
       "width": 616,
       "height": 353,
       "bytes": 42508,
-      "sha256": "01762c46db1accf20ff8565a7a892aaec3df3c57972b9cc30950dfd121ab0be0"
+      "sha256": "01762c46db1accf20ff8565a7a892aaec3df3c57972b9cc30950dfd121ab0be0",
+      "loop": {
+        "webm": "genre-art/loops/crpg.webm",
+        "mp4": "genre-art/loops/crpg.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 345222,
+            "sha256": "3b1e6c9e8d78c61ecc956eb1cc2b61fc50398dad716505268e823149071cd76d",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 364688,
+            "sha256": "42bfe89f7290dbf5588f1cd5add3d86b35967617930d907d8aa9db033fb177bc",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "2d-fighter": {
       "src": "genre-art/2d-fighter.webp",
       "width": 616,
       "height": 353,
       "bytes": 33610,
-      "sha256": "549d06d4fed8fce1e8b851d13e1b79f83688afd347fde7e84ccc3f10738a93f8"
+      "sha256": "549d06d4fed8fce1e8b851d13e1b79f83688afd347fde7e84ccc3f10738a93f8",
+      "loop": {
+        "webm": "genre-art/loops/2d-fighter.webm",
+        "mp4": "genre-art/loops/2d-fighter.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 598861,
+            "sha256": "f3469bfbf4d9aff7ab65f5255a798e0f6d17084c64602c6a26abc035e5365a1e",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 483266,
+            "sha256": "268f2b98cf65a5f04f666266f4117b263256352f5063238c879677e5395a9c71",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "twin-stick-shooter": {
       "src": "genre-art/twin-stick-shooter.webp",
       "width": 616,
       "height": 353,
       "bytes": 42100,
-      "sha256": "ae68c70c8f59eab7129984412ddad987b3a5cb94083813b324b26e977947b5f6"
+      "sha256": "ae68c70c8f59eab7129984412ddad987b3a5cb94083813b324b26e977947b5f6",
+      "loop": {
+        "webm": "genre-art/loops/twin-stick-shooter.webm",
+        "mp4": "genre-art/loops/twin-stick-shooter.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 412042,
+            "sha256": "9ce5c9b876a9d514455685ffc45ad020fb646f1b42fbfa4e9c2684ea84139932",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 412602,
+            "sha256": "3f163df94a74159304552d971fdcef6a2e132cd0498870a610eb7a9b7630f66b",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "trading": {
       "src": "genre-art/trading.webp",
       "width": 616,
       "height": 353,
       "bytes": 46108,
-      "sha256": "6d8a7ddd8ed56998acd6a48fa34f61772cbc1e323c3a2d11a2edfe13ad169a22"
+      "sha256": "6d8a7ddd8ed56998acd6a48fa34f61772cbc1e323c3a2d11a2edfe13ad169a22",
+      "loop": {
+        "webm": "genre-art/loops/trading.webm",
+        "mp4": "genre-art/loops/trading.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 449252,
+            "sha256": "7bce63191430dd77f475e483b666f321c606f1029eb7bb3353ed27e2a8d59f2e",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 441571,
+            "sha256": "db96cc7b328845f49d2f997a36111bfc30be6ebda6d7cf8cb03bc614c672c0d2",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "3d-fighter": {
       "src": "genre-art/3d-fighter.webp",
       "width": 616,
       "height": 353,
       "bytes": 32022,
-      "sha256": "e59a6d3b82e046c26c1a4f4e256ce9537e2cf9a69d5cbcbc21145c5fe4490e82"
+      "sha256": "e59a6d3b82e046c26c1a4f4e256ce9537e2cf9a69d5cbcbc21145c5fe4490e82",
+      "loop": {
+        "webm": "genre-art/loops/3d-fighter.webm",
+        "mp4": "genre-art/loops/3d-fighter.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 531053,
+            "sha256": "5f31caace2840d15f0cb1956e1aae5ed3bfe99a8a8b73ef4347e192ed827cb0d",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 554504,
+            "sha256": "df40f6c99f334a68059b720c1b17c269e6ad9d5317529cedf8aa207b58e7417d",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "colony-sim": {
       "src": "genre-art/colony-sim.webp",
       "width": 616,
       "height": 353,
       "bytes": 45500,
-      "sha256": "e3f8a10e51bbf74be0c1b0b718a9955531630a746d00d7d46ee5e196b02a10e7"
+      "sha256": "e3f8a10e51bbf74be0c1b0b718a9955531630a746d00d7d46ee5e196b02a10e7",
+      "loop": {
+        "webm": "genre-art/loops/colony-sim.webm",
+        "mp4": "genre-art/loops/colony-sim.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 392917,
+            "sha256": "76e13fc89b22748b92e01443cb9f8de65197ec729a5d60d98cc10191daeefdb4",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 316976,
+            "sha256": "957ec7f05404db2651fd96209cc49b04a4563dee93ab3eba3ff0ff7b79a681e2",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "roguelike-deckbuilder": {
       "src": "genre-art/roguelike-deckbuilder.webp",
       "width": 616,
       "height": 353,
       "bytes": 34994,
-      "sha256": "e0fe31a597dbe3266ce6717107adc047b069c9dbb296739340a3820698459c3d"
+      "sha256": "e0fe31a597dbe3266ce6717107adc047b069c9dbb296739340a3820698459c3d",
+      "loop": {
+        "webm": "genre-art/loops/roguelike-deckbuilder.webm",
+        "mp4": "genre-art/loops/roguelike-deckbuilder.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 315155,
+            "sha256": "25b8902f88461d3d1d1c9d4f2e605e40bf7265b2c6cfeae5390d89c17527356b",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 348857,
+            "sha256": "b3b9ac6a1905cafb3f11257bc6bea85ddf4213447ed46d75c6b846414e04bb2a",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "shop-keeper": {
       "src": "genre-art/shop-keeper.webp",
       "width": 616,
       "height": 353,
       "bytes": 39598,
-      "sha256": "4e45644f5eeb160091bc0a90e2f9cc5b223d97a04ab5a703cb5e2bbcb820d773"
+      "sha256": "4e45644f5eeb160091bc0a90e2f9cc5b223d97a04ab5a703cb5e2bbcb820d773",
+      "loop": {
+        "webm": "genre-art/loops/shop-keeper.webm",
+        "mp4": "genre-art/loops/shop-keeper.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 537839,
+            "sha256": "b7b4337de9c8d9d1968f09923a8c16925478055f369f39211710d4e4f6f714e0",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 284721,
+            "sha256": "cb2e560ed22a4a4c557321ce1aaf17cc6e117f99837f7cfbfe082ef785f77ffb",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "grand-strategy": {
       "src": "genre-art/grand-strategy.webp",
       "width": 616,
       "height": 353,
       "bytes": 42638,
-      "sha256": "24f2b89a4b6f82c6585e6195f491511eb5be1f38554d419dbf3a9a2c024f3ac7"
+      "sha256": "24f2b89a4b6f82c6585e6195f491511eb5be1f38554d419dbf3a9a2c024f3ac7",
+      "loop": {
+        "webm": "genre-art/loops/grand-strategy.webm",
+        "mp4": "genre-art/loops/grand-strategy.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 358054,
+            "sha256": "346eaedf244c171ec6be4b832c17cd83398e847c18065feb7c93b6becd643753",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 348090,
+            "sha256": "d6ec60ae71258d9cb96e7946caefefc47543b52a20f285cfcce261f9cae52f74",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "mystery-dungeon": {
       "src": "genre-art/mystery-dungeon.webp",
       "width": 616,
       "height": 353,
       "bytes": 43660,
-      "sha256": "ed143ae2e4dc71f3018bbf0e7b3ee56c23a62c347cc8812906c2f89dd0b1f4c8"
+      "sha256": "ed143ae2e4dc71f3018bbf0e7b3ee56c23a62c347cc8812906c2f89dd0b1f4c8",
+      "loop": {
+        "webm": "genre-art/loops/mystery-dungeon.webm",
+        "mp4": "genre-art/loops/mystery-dungeon.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 429965,
+            "sha256": "f8ed62e75521f57d07b9f0470f82746e72113adddfac17dc8bcbdd3f0abb7f19",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 322936,
+            "sha256": "e2d36f3dbf44c05b6df7eedf0de5b1c8bbbb097b02cb1aedfb84a8d1745e136e",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "looter-shooter": {
       "src": "genre-art/looter-shooter.webp",
       "width": 616,
       "height": 353,
       "bytes": 38296,
-      "sha256": "d666ed7684c9d777ed7e15159e5381ae39cbf7c521912733cc3869c12e9d7072"
+      "sha256": "d666ed7684c9d777ed7e15159e5381ae39cbf7c521912733cc3869c12e9d7072",
+      "loop": {
+        "webm": "genre-art/loops/looter-shooter.webm",
+        "mp4": "genre-art/loops/looter-shooter.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 332867,
+            "sha256": "12471da342666fa5707b3e74192d63a0500f2af02868683b0bcaf0d2159b0bc1",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 332967,
+            "sha256": "a3e572849c42080fea8c52bd96579d8ec2d3e3a7b350ee994f9825fb57880a53",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "combat-racing": {
       "src": "genre-art/combat-racing.webp",
       "width": 616,
       "height": 353,
       "bytes": 38494,
-      "sha256": "5e5baaea3b53e438e013252c8df837c5740ce697896cf394f4385969773f24d7"
+      "sha256": "5e5baaea3b53e438e013252c8df837c5740ce697896cf394f4385969773f24d7",
+      "loop": {
+        "webm": "genre-art/loops/combat-racing.webm",
+        "mp4": "genre-art/loops/combat-racing.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 660073,
+            "sha256": "07db260d8a1606968eb234706345078401f28b3820107f868a0afc0db99a3034",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 711493,
+            "sha256": "5610cc1dc098713d2c400ee871cc10750e089e4ad23a51aab3272f6f0cc873ac",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "spectacle-fighter": {
       "src": "genre-art/spectacle-fighter.webp",
       "width": 616,
       "height": 353,
       "bytes": 30438,
-      "sha256": "72124933ff2102045bbce27c8b1ba19dedd4dfa4dbfc3427909d5695255dd0e7"
+      "sha256": "72124933ff2102045bbce27c8b1ba19dedd4dfa4dbfc3427909d5695255dd0e7",
+      "loop": {
+        "webm": "genre-art/loops/spectacle-fighter.webm",
+        "mp4": "genre-art/loops/spectacle-fighter.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 583820,
+            "sha256": "2332daf456ab219b1e04642d83eddde9a4950aa16c3a7b25d3cdcbb9c9838e4f",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 469174,
+            "sha256": "dd36afd2af421d9336f0235c0cadec11e9df1bd02de72db9b41e7b7ce9b39ff6",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "bullet-heaven": {
       "src": "genre-art/bullet-heaven.webp",
       "width": 616,
       "height": 353,
       "bytes": 37080,
-      "sha256": "9e04294725246743bf36c72c2d2e3b377f7f135b94e2ec7c37fca00b222d5cb8"
+      "sha256": "9e04294725246743bf36c72c2d2e3b377f7f135b94e2ec7c37fca00b222d5cb8",
+      "loop": {
+        "webm": "genre-art/loops/bullet-heaven.webm",
+        "mp4": "genre-art/loops/bullet-heaven.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 328662,
+            "sha256": "69a903edecff5ea5d9929e4cdeafc7704809abbaf5e6d1982b1ac3cfb99a63c2",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 357041,
+            "sha256": "bdf3100cb75900f66adcdee7ea9b323b48d4b5844bbb4b5f555ca5216ad57db3",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "solitaire": {
       "src": "genre-art/solitaire.webp",
       "width": 616,
       "height": 353,
       "bytes": 26530,
-      "sha256": "8ccf59a2db6ff00728310f611e2f22d3b7dcc44bc037c29fade3075f3382e042"
+      "sha256": "8ccf59a2db6ff00728310f611e2f22d3b7dcc44bc037c29fade3075f3382e042",
+      "loop": {
+        "webm": "genre-art/loops/solitaire.webm",
+        "mp4": "genre-art/loops/solitaire.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 387086,
+            "sha256": "12af43c4196dc3e1b61a4c0ea83873678f3700583ffdd63d4907ad807a444c06",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 383985,
+            "sha256": "4d7d6e707ac60c4b4bbee02e4ba5d484636104c59d7b8dc00d60ce373e318311",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "hero-shooter": {
       "src": "genre-art/hero-shooter.webp",
       "width": 616,
       "height": 353,
       "bytes": 33326,
-      "sha256": "a1c939164630a39da04dc7c6635d49e71d3ae543be80c4c67ebf0ff6af1fad1a"
+      "sha256": "a1c939164630a39da04dc7c6635d49e71d3ae543be80c4c67ebf0ff6af1fad1a",
+      "loop": {
+        "webm": "genre-art/loops/hero-shooter.webm",
+        "mp4": "genre-art/loops/hero-shooter.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 363719,
+            "sha256": "e83fcd1c8f75ca80bcc00bbd8eb735b3c341d89791c86f79f214c1390e37adaa",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 377744,
+            "sha256": "bd457228beab8625338da5841434d8bc2f79ddcbb8a25da56fe7a8cd42193eef",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "boomer-shooter": {
       "src": "genre-art/boomer-shooter.webp",
       "width": 616,
       "height": 353,
       "bytes": 24768,
-      "sha256": "1c567bf82df1dbdbb1159dc973f273a02780ca590d17097c2185a4be896aafb1"
+      "sha256": "1c567bf82df1dbdbb1159dc973f273a02780ca590d17097c2185a4be896aafb1",
+      "loop": {
+        "webm": "genre-art/loops/boomer-shooter.webm",
+        "mp4": "genre-art/loops/boomer-shooter.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 418895,
+            "sha256": "0dc6dcb25be7008c3d990d849d5566d1116c1db47ffdbc5122997b322335e786",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 394387,
+            "sha256": "5a5fc51fb15ea8a21d2a24192991114388e1fb2341dc387b46c0edf61066d433",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "trading-card-game": {
       "src": "genre-art/trading-card-game.webp",
       "width": 616,
       "height": 353,
       "bytes": 42346,
-      "sha256": "f3ea278ed689252354e315ddd2ec3fb906d868dde00b083ac2dfa14607c8b2ca"
+      "sha256": "f3ea278ed689252354e315ddd2ec3fb906d868dde00b083ac2dfa14607c8b2ca",
+      "loop": {
+        "webm": "genre-art/loops/trading-card-game.webm",
+        "mp4": "genre-art/loops/trading-card-game.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 438673,
+            "sha256": "19a1e061e7a09ed59a19b6d3b874ccdd8af3a75fb8f4ceaa3caca9f653e35c92",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 412744,
+            "sha256": "475a35cafc3c05ebd41d9fcee9d121c1ced37ca2113bc6a0b3b8de24c264e3fd",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "typing": {
       "src": "genre-art/typing.webp",
       "width": 616,
       "height": 353,
       "bytes": 24320,
-      "sha256": "b1c652507018497066cef7c225d7c03e87b69ad1ac0a831575d3e4b66a239082"
+      "sha256": "b1c652507018497066cef7c225d7c03e87b69ad1ac0a831575d3e4b66a239082",
+      "loop": {
+        "webm": "genre-art/loops/typing.webm",
+        "mp4": "genre-art/loops/typing.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 465021,
+            "sha256": "6c6e5aea9dc25493aea73145549baa6323dab0b5802b2098e1f5e020584f49df",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 365188,
+            "sha256": "a6bdb04855ae329bc3bf52cc8f76316ce39b9dcdab898789644d6d2588a020dd",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "sokoban": {
       "src": "genre-art/sokoban.webp",
       "width": 616,
       "height": 353,
       "bytes": 31016,
-      "sha256": "7a11d47ba0a7c2b4b2173cb28cdf6fe22c4213c1db7f5810bb7c7f1a904f5a37"
+      "sha256": "7a11d47ba0a7c2b4b2173cb28cdf6fe22c4213c1db7f5810bb7c7f1a904f5a37",
+      "loop": {
+        "webm": "genre-art/loops/sokoban.webm",
+        "mp4": "genre-art/loops/sokoban.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 327580,
+            "sha256": "eef472f40792314f911af3617720ddfd0729f2fa7c8d8333f6697fde15cdf98a",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 326781,
+            "sha256": "d4e31294d2d22567b42fb0d7f691474e7a4d79989fd0fdf6b3eda0ab699b094b",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "political-sim": {
       "src": "genre-art/political-sim.webp",
       "width": 616,
       "height": 353,
       "bytes": 38616,
-      "sha256": "18343e129e019eb1fd28a8581c43dcd06e219ea6d12875573e14bf4996c464d6"
+      "sha256": "18343e129e019eb1fd28a8581c43dcd06e219ea6d12875573e14bf4996c464d6",
+      "loop": {
+        "webm": "genre-art/loops/political-sim.webm",
+        "mp4": "genre-art/loops/political-sim.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 482127,
+            "sha256": "2047f3645d1caca6d4456632192e0cc3ffbf0822f68d49a42ae5768a3e549f0a",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 306286,
+            "sha256": "c29d5d16c6332a90c6b663072fabcd6c8d5885cc1bdbae587228a6428cc36a8d",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "open-world-survival-craft": {
       "src": "genre-art/open-world-survival-craft.webp",
       "width": 616,
       "height": 353,
       "bytes": 29958,
-      "sha256": "52288b8260a138946caff9a9847626e49540ae1b05f0949bc54a5b5195b3d0fa"
+      "sha256": "52288b8260a138946caff9a9847626e49540ae1b05f0949bc54a5b5195b3d0fa",
+      "loop": {
+        "webm": "genre-art/loops/open-world-survival-craft.webm",
+        "mp4": "genre-art/loops/open-world-survival-craft.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 311623,
+            "sha256": "4e2a63d6e3c01a98c20384875d55cbba2bdaea13e6626e67ee6859e53162fbcb",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 342828,
+            "sha256": "ce573185ec6f3c8daddb1de5cf51b0c261be3a3536f60b9040c7082ef9ef0cec",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "programming": {
       "src": "genre-art/programming.webp",
       "width": 616,
       "height": 353,
       "bytes": 45028,
-      "sha256": "ce98b478bf59d8b7d18d9893081494c3da39b09f2d1f28344aaf3aeb2bddc967"
+      "sha256": "ce98b478bf59d8b7d18d9893081494c3da39b09f2d1f28344aaf3aeb2bddc967",
+      "loop": {
+        "webm": "genre-art/loops/programming.webm",
+        "mp4": "genre-art/loops/programming.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 455465,
+            "sha256": "a48838ad441aef3f7c3673bb8bb467e96eaf4ff380fddf3a0de40dd3b4ced679",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 366549,
+            "sha256": "4565888bb34192c4635c6687187371348367790b23e3e6a1062773da9d0aa02f",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "4x": {
       "src": "genre-art/4x.webp",
       "width": 616,
       "height": 353,
       "bytes": 33134,
-      "sha256": "fa5c413ac701d565f070b01dd5cd3e885cd0839d4c7f8e256a346416204f7d19"
+      "sha256": "fa5c413ac701d565f070b01dd5cd3e885cd0839d4c7f8e256a346416204f7d19",
+      "loop": {
+        "webm": "genre-art/loops/4x.webm",
+        "mp4": "genre-art/loops/4x.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 554644,
+            "sha256": "5bfef6f45a41680adf4e8b8ebe2288c1edc0cf2ea62d68f9d8090264fa4048ee",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 272412,
+            "sha256": "0b453f4ee1097691988adc4f4e420c93c9463aa0889ad409ef7cc840ebb37aa1",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "escape-room": {
       "src": "genre-art/escape-room.webp",
       "width": 616,
       "height": 353,
       "bytes": 27668,
-      "sha256": "4a8ba19e591aaa6442fa9d91bfe9bc508160b339433f92139b89f5837a259322"
+      "sha256": "4a8ba19e591aaa6442fa9d91bfe9bc508160b339433f92139b89f5837a259322",
+      "loop": {
+        "webm": "genre-art/loops/escape-room.webm",
+        "mp4": "genre-art/loops/escape-room.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 349876,
+            "sha256": "7ccac8349aca04922a544edc46577851e0f9fec8de8137abf5e5178be6bb333e",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 341253,
+            "sha256": "4793f52c7ffeb11d31024ee6af68acff086ddc9c316e376ab603e1508002716c",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "traditional-roguelike": {
       "src": "genre-art/traditional-roguelike.webp",
       "width": 616,
       "height": 353,
       "bytes": 26004,
-      "sha256": "8eb30171dfac94f5336a3ee3d47370676e304ee3183f5cdc5f1c927cca01283c"
+      "sha256": "8eb30171dfac94f5336a3ee3d47370676e304ee3183f5cdc5f1c927cca01283c",
+      "loop": {
+        "webm": "genre-art/loops/traditional-roguelike.webm",
+        "mp4": "genre-art/loops/traditional-roguelike.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 391282,
+            "sha256": "6bb375d93d4f1afcd2abbad151bfb284b51500817c0a8ab37cf8730ec070667d",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 395650,
+            "sha256": "5c7b7fdec6fe47420398718f133d708199fd4aaca23eeab567e9aed7bc7a07eb",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "football-soccer": {
       "src": "genre-art/football-soccer.webp",
       "width": 616,
       "height": 353,
       "bytes": 27152,
-      "sha256": "d0cf768d3a15dc2dae73f33a167b8d223972646a4e4bf947a5a8d54ffbd713be"
+      "sha256": "d0cf768d3a15dc2dae73f33a167b8d223972646a4e4bf947a5a8d54ffbd713be",
+      "loop": {
+        "webm": "genre-art/loops/football-soccer.webm",
+        "mp4": "genre-art/loops/football-soccer.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 417073,
+            "sha256": "e4620a5f31bbf1f476554bf694c2369a7f4e0393c490469c23cdf79c2c3e2a3d",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 401077,
+            "sha256": "db35192bad864827cbd1622b258a0cf67896e44b49d7da3c62365a2e77513baf",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "organizing": {
       "src": "genre-art/organizing.webp",
       "width": 616,
       "height": 353,
       "bytes": 35520,
-      "sha256": "ec7ab9f4c5c19540d069dd1738b00834ca0648f77dec8f93a26d7110c5fcd657"
+      "sha256": "ec7ab9f4c5c19540d069dd1738b00834ca0648f77dec8f93a26d7110c5fcd657",
+      "loop": {
+        "webm": "genre-art/loops/organizing.webm",
+        "mp4": "genre-art/loops/organizing.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 707267,
+            "sha256": "2918993bdbbb1efc554516346ebe4f64c1e13523d5b84f6c06bd60cafa437538",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 547032,
+            "sha256": "83ca0eed8e63964262b669910dd1a31391ec94bfdc33ecefdc63e1cfb78d434a",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "heist": {
       "src": "genre-art/heist.webp",
       "width": 616,
       "height": 353,
       "bytes": 29264,
-      "sha256": "a91cec45730b7a8218155bd40fb5db184e7da54a705cee08a8953cef29b97159"
+      "sha256": "a91cec45730b7a8218155bd40fb5db184e7da54a705cee08a8953cef29b97159",
+      "loop": {
+        "webm": "genre-art/loops/heist.webm",
+        "mp4": "genre-art/loops/heist.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 348044,
+            "sha256": "892388cb402fb225709d447e4e16eeb23e1b8e135a5a211e39aa441fd5d8dbe5",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 338658,
+            "sha256": "734ab6ec41d22ef01b80491ee0f40cd2bc8dd7a11e4e95d9bfdf9cd741cf683a",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "on-rails-shooter": {
       "src": "genre-art/on-rails-shooter.webp",
       "width": 616,
       "height": 353,
       "bytes": 31274,
-      "sha256": "b8e2791113fff31b9ebf9f12581eb95b72e41345d6f4fcf53bc533bda104bd67"
+      "sha256": "b8e2791113fff31b9ebf9f12581eb95b72e41345d6f4fcf53bc533bda104bd67",
+      "loop": {
+        "webm": "genre-art/loops/on-rails-shooter.webm",
+        "mp4": "genre-art/loops/on-rails-shooter.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 476888,
+            "sha256": "0c4c8b34993db62bed8a6dbce6c76fb089590431439ce3b1f192bc9f4f16b4f5",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 369868,
+            "sha256": "115f44dd9e30b9d608857d727846b8c1e6bf5632158c550bdbe3e504b925e95f",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "cleaning": {
       "src": "genre-art/cleaning.webp",
       "width": 616,
       "height": 353,
       "bytes": 32918,
-      "sha256": "9cdd1369ecc74c542c1c4a09f0216fdfa6b523b7e21439b47df47b268abcf191"
+      "sha256": "9cdd1369ecc74c542c1c4a09f0216fdfa6b523b7e21439b47df47b268abcf191",
+      "loop": {
+        "webm": "genre-art/loops/cleaning.webm",
+        "mp4": "genre-art/loops/cleaning.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 342964,
+            "sha256": "e952d4370d9cfda8447ac2067e43bbddf9f8ee52fafcd640442e0011534f9738",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 336065,
+            "sha256": "13c45f0b110a1934a68f588ead9f737f81d243a2f2c044b214c0e8dc9d708cc9",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "spelling": {
       "src": "genre-art/spelling.webp",
       "width": 616,
       "height": 353,
       "bytes": 23088,
-      "sha256": "1a9a8373c59715cabab4fe0698558f9b24338ffeb9b7f7f93d55e896dc26a141"
+      "sha256": "1a9a8373c59715cabab4fe0698558f9b24338ffeb9b7f7f93d55e896dc26a141",
+      "loop": {
+        "webm": "genre-art/loops/spelling.webm",
+        "mp4": "genre-art/loops/spelling.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 334486,
+            "sha256": "30b8624cc8c4e22244c8ea1477bfc229c08c6b8209581689989e6a0fb67a73e7",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 358175,
+            "sha256": "99b3aafd8dfdcdeac2e3fea5676ef41a35d737cb37772dd8b9ac9f6423c01f15",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "decorating": {
       "src": "genre-art/decorating.webp",
       "width": 616,
       "height": 353,
       "bytes": 29958,
-      "sha256": "41d574cdaf283609b046f134d62bb69500a14cc68bce3a4c6186759937cb3921"
+      "sha256": "41d574cdaf283609b046f134d62bb69500a14cc68bce3a4c6186759937cb3921",
+      "loop": {
+        "webm": "genre-art/loops/decorating.webm",
+        "mp4": "genre-art/loops/decorating.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 438849,
+            "sha256": "69b04eedf02234cd5dfbd264a9f02b33799e60c53dc66ad15907d66321bf296d",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 414155,
+            "sha256": "ffa6357061a734d8af4005f02c18f72f392b3980ef262fdbbcd6aecc0a7dd1e2",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "social-deduction": {
       "src": "genre-art/social-deduction.webp",
       "width": 616,
       "height": 353,
       "bytes": 17570,
-      "sha256": "1ccfe6e4c187d357d6bb68d2146db31764b4a3c4ab0cbbbc04cddef872e22829"
+      "sha256": "1ccfe6e4c187d357d6bb68d2146db31764b4a3c4ab0cbbbc04cddef872e22829",
+      "loop": {
+        "webm": "genre-art/loops/social-deduction.webm",
+        "mp4": "genre-art/loops/social-deduction.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 409058,
+            "sha256": "edc18de9485c846c0502d2dad96f98c2c69754c526cb0336d709f436b9c07ba8",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 401700,
+            "sha256": "9a927de25378fdb6001b995a311bd76831216efd00d281c38c1ccd25e857dc5e",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "boss-rush": {
       "src": "genre-art/boss-rush.webp",
       "width": 616,
       "height": 353,
       "bytes": 33448,
-      "sha256": "b06f9d5761894e9f55615b23d5bef029bdca8a6bf78d5507cd85ce12697568cb"
+      "sha256": "b06f9d5761894e9f55615b23d5bef029bdca8a6bf78d5507cd85ce12697568cb",
+      "loop": {
+        "webm": "genre-art/loops/boss-rush.webm",
+        "mp4": "genre-art/loops/boss-rush.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 343271,
+            "sha256": "85da4c1abcaab6ab27ae712f79701af2b36c062676ef0d0ee30ce29062c30adf",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 325364,
+            "sha256": "0dc4a34e08252cfb295c877cc461e2d950c48f55581482f59aa75b943a06b4a6",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "extraction-shooter": {
       "src": "genre-art/extraction-shooter.webp",
       "width": 616,
       "height": 353,
       "bytes": 22936,
-      "sha256": "1d848639d2b15c26935d8208a2f5c013f7641a85217498f79ea76f9fa40d468f"
+      "sha256": "1d848639d2b15c26935d8208a2f5c013f7641a85217498f79ea76f9fa40d468f",
+      "loop": {
+        "webm": "genre-art/loops/extraction-shooter.webm",
+        "mp4": "genre-art/loops/extraction-shooter.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 412930,
+            "sha256": "dee55fc406ea814b9ff09a99dc6808017781b679691eb589696c25ba099323ce",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 325181,
+            "sha256": "57a52bf63adce97211de1c2fc873131dd0fb5de355b2d54f9d107e60896d6f4f",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "falling-blocks": {
       "src": "genre-art/falling-blocks.webp",
       "width": 616,
       "height": 353,
       "bytes": 16306,
-      "sha256": "b986376ff8a86729b78edbd1f789329bf925ceb3b85b4d85e523f8d0858ef18a"
+      "sha256": "b986376ff8a86729b78edbd1f789329bf925ceb3b85b4d85e523f8d0858ef18a",
+      "loop": {
+        "webm": "genre-art/loops/falling-blocks.webm",
+        "mp4": "genre-art/loops/falling-blocks.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 354502,
+            "sha256": "ce2fce0e848c9298bdf6a8e20749398943e1c657e9272876cead96b1a810a39f",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 330144,
+            "sha256": "486aaa0e30ea0bfd2d15d87fc5fe94cbbaf26c4c936284a556509ebd802e8e7f",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "poker": {
       "src": "genre-art/poker.webp",
       "width": 616,
       "height": 353,
       "bytes": 23934,
-      "sha256": "5d91a58d2af9427b5f679cf50fb660e1607ae6b4f4359d9bdd4a83b24f146d70"
+      "sha256": "5d91a58d2af9427b5f679cf50fb660e1607ae6b4f4359d9bdd4a83b24f146d70",
+      "loop": {
+        "webm": "genre-art/loops/poker.webm",
+        "mp4": "genre-art/loops/poker.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 405706,
+            "sha256": "a367cee8b04138f155404e713655d76fe221080e9082881c7e3497e93d7d8bd9",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 347506,
+            "sha256": "2bdd7c067118d2d0a816e604ca1262179a10385d3d3a93e8dedb5bb69d8625fe",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "football-american": {
       "src": "genre-art/football-american.webp",
       "width": 616,
       "height": 353,
       "bytes": 23558,
-      "sha256": "584f5a726986a44bbcbcfde5dfbdf31665e0b5f7bd767a217c2e3fb8162d8ee3"
+      "sha256": "584f5a726986a44bbcbcfde5dfbdf31665e0b5f7bd767a217c2e3fb8162d8ee3",
+      "loop": {
+        "webm": "genre-art/loops/football-american.webm",
+        "mp4": "genre-art/loops/football-american.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 436994,
+            "sha256": "0db1d538c53b9b3c0814db61efe437408cf682bd05cef4ddb1c25ccc14fd00e6",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 399419,
+            "sha256": "dc67c2c5c1ff0ce32f2bc83ca648b915296526279d554a0d6ab35af00288c8bd",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "language-learning": {
       "src": "genre-art/language-learning.webp",
       "width": 616,
       "height": 353,
       "bytes": 21088,
-      "sha256": "2ccc8c00c783ce9142e12fbc882c856a0ed62f154cc4f54f0abbea5cbfaa9055"
+      "sha256": "2ccc8c00c783ce9142e12fbc882c856a0ed62f154cc4f54f0abbea5cbfaa9055",
+      "loop": {
+        "webm": "genre-art/loops/language-learning.webm",
+        "mp4": "genre-art/loops/language-learning.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 451276,
+            "sha256": "c720bf2f031389d18388458cdbbbc110eed3a581f9a20d94d80445df68b221ac",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 365418,
+            "sha256": "d6ef35aa1620718ad2958b036e3120c60c6135f71cd778dba9486b139c26ef95",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "zoo": {
       "src": "genre-art/zoo.webp",
       "width": 616,
       "height": 353,
       "bytes": 45160,
-      "sha256": "dff7b4605abe6c6f6713dd6ca7fed9e2fc17db5c10198b52dce643214483f400"
+      "sha256": "dff7b4605abe6c6f6713dd6ca7fed9e2fc17db5c10198b52dce643214483f400",
+      "loop": {
+        "webm": "genre-art/loops/zoo.webm",
+        "mp4": "genre-art/loops/zoo.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 437858,
+            "sha256": "7ea78d64026cbd44ddf4bef554668f31b1574c673499eff20cbebe6c42c0aa08",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 313443,
+            "sha256": "7d58d770612fe76d3d6e89dd40f60d026b67343115a56a2695ed207ae1a9abe4",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     },
     "arpg": {
       "src": "genre-art/arpg.webp",
       "width": 616,
       "height": 353,
       "bytes": 38790,
-      "sha256": "e184fe810e5da01ece2ae1a994c9d31d7b9e1197695086deeadade4fb56c47e0"
+      "sha256": "e184fe810e5da01ece2ae1a994c9d31d7b9e1197695086deeadade4fb56c47e0",
+      "loop": {
+        "webm": "genre-art/loops/arpg.webm",
+        "mp4": "genre-art/loops/arpg.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 313165,
+            "sha256": "940355a488c792eaa4a7d259cefcc67d8cb6b1a60c665b434d97022f84ade72f",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 308115,
+            "sha256": "ceafc1475ab6af4be3b9090cccce7290c628589d8513910b128c803cc69d4d68",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     }
   }
 }
