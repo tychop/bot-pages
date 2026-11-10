@@ -651,6 +651,60 @@ h3 { margin: 16px 0 8px; font-size: 1.05rem; }
 .legend i.close { background: var(--warn); }
 .chart svg { overflow: visible; }
 
+.hpanel {
+  margin: 8px 0 28px;
+  padding: 16px 16px 8px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--panel) 88%, transparent);
+}
+.hhead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.hhead h2 { font-size: clamp(1.05rem, 2vw, 1.28rem); max-width: 46rem; }
+.hlegend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  list-style: none;
+  margin: 8px 0 10px;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  width: fit-content;
+  max-width: 100%;
+  color: var(--muted);
+  font-size: 13px;
+}
+.swatch { display: inline-block; width: 18px; height: 3px; margin-right: 6px; vertical-align: middle; border-radius: 2px; }
+.swatch.read, .hc-read { background: #6ea8fe; }
+.hc-read { fill: none; stroke: #6ea8fe; stroke-width: 2.4; background: none; }
+.swatch.price, .hc-price { background: #f0c14a; }
+.hc-price { fill: none; stroke: #f0c14a; stroke-width: 2.2; background: none; }
+.swatch.x2 { background: #b388ff; }
+.hc-x2 { fill: none; stroke: #b388ff; stroke-width: 2.4; }
+.hc-x2-dot { fill: #b388ff; }
+.hc-read-dot { fill: #6ea8fe; }
+.swatch.right { width: 9px; height: 9px; border-radius: 50%; background: #3ddc97; }
+.hc-right { fill: #3ddc97; stroke: none; }
+.hc-right-line { fill: none; stroke: #3ddc97; stroke-width: 2.2; }
+.swatch.wrong { width: 9px; height: 9px; border-radius: 50%; background: transparent; border: 2px solid #ff5d5d; box-sizing: border-box; }
+.hc-wrong { fill: none; stroke: #ff5d5d; stroke-width: 2; }
+.hc-pending { fill: none; stroke: #9aa8bc; stroke-dasharray: 3 2; }
+.swatch.pred { background: none; border-top: 2px dashed #6ea8fe; height: 0; }
+.hc-pred { fill: none; stroke: #6ea8fe; stroke-width: 2; stroke-dasharray: 5 4; }
+.hc-guide { stroke: #7d8da6; stroke-dasharray: 4 4; stroke-width: 1; }
+.hc-guide-label { fill: var(--muted); font-size: 12px; font-family: var(--sans); }
+.hc-empty { fill: var(--muted); font-size: 16px; font-family: var(--sans); }
+@media (max-width: 720px) {
+  .hhead { flex-direction: column; }
+  .hlegend { width: 100%; }
+}
+
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
 input[type="range"] { width: 100%; accent-color: var(--accent); margin: 0; }
