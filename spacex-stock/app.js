@@ -110,14 +110,23 @@
     const net = netScore(state.weights, state.h);
     return { net, p: prob(state.target, state.h, net) };
   }
+  function money2(v) {
+    return v.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+  function money0(v) {
+    return v.toLocaleString("en-US", { maximumFractionDigits: 0 });
+  }
   function caption(target, h) {
     const horizon = H_LABEL[h];
     const price = DATA.market.price;
-    if (target === "rise") return `Chance SPCX trades above $${price} in ${horizon}`;
-    if (target === "x2") return `Chance the share price at least doubles within ${horizon}`;
-    if (target === "x10") return `Chance the share price reaches 10X within ${horizon}`;
-    if (target === "x100") return `Chance the share price reaches 100X within ${horizon}`;
-    return `Chance SpaceX is the world's most valuable company at some point within ${horizon}`;
+    const px = money2(price);
+    const note = DATA.market.changeNote;
+    if (target === "rise") return `Chance SPCX is higher than today's price of $${px} (${note}) in ${horizon}`;
+    if (target === "x2") return `Chance SPCX at least doubles from today's $${px} to $${money2(price * 2)} within ${horizon}`;
+    if (target === "x10") return `Chance SPCX goes 10X from today's $${px} to $${money0(price * 10)} within ${horizon}`;
+    if (target === "x100") return `Chance SPCX goes 100X from today's $${px} to $${money0(price * 100)} within ${horizon}`;
+    const cap = `$${DATA.market.capT.toFixed(2)}T`;
+    return `Chance SpaceX (today ${cap} market cap at $${px}) becomes the world's most valuable company at some point within ${horizon}`;
   }
   function scoreClass(score) {
     if (score > 0) return "bull";
