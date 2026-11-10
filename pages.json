@@ -12,5 +12,12 @@
     "bot": "starship-tracker",
     "description": "Next SpaceX Starship integrated flight, with a CET/CEST countdown, plus the last flight. Flights 1 through 15, with timelines, telemetry, costs and compare on their own pages.",
     "updated": "2026-11-07"
+  },
+  {
+    "title": "SpaceX Stock",
+    "path": "spacex-stock/",
+    "bot": "spacex-stock",
+    "description": "Chance meter and drill-downs on whether SpaceX (SPCX) can 10X, 100X or become the most valuable company",
+    "updated": "2026-11-10"
   }
 ]
