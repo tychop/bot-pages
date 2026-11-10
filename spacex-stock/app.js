@@ -1201,7 +1201,7 @@
   } catch (err) { /* ignore */ }
   document.documentElement.dataset.theme = state.theme;
 
-  fetch("data.json", { cache: "no-cache" })
+  fetch("data.json?v=20261110j", { cache: "no-cache" })
     .then((res) => {
       if (!res.ok) throw new Error(String(res.status));
       return res.json();
