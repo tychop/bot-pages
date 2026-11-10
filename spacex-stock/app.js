@@ -39,6 +39,8 @@
 
   const state = {
     h: 3,
+    shortH: 0,
+    longH: 3,
     target: "rise",
     weights: null,
     adjust: false,
@@ -820,90 +822,214 @@
     </svg>`;
   }
 
+  function callMark(e, hi) {
+    const p = e.readings[H_KEYS[hi]].rise;
+    const o = outcome(e, hi, "rise");
+    if (o.status === "pending") return { status: "pending", p, left: o.left };
+    const right = (p > 0.5) === (o.status === "hit");
+    return { status: right ? "right" : "wrong", p, left: 0 };
+  }
+
+  function layoutChart(spec) {
+    const closes = spec.closes;
+    const n = closes.length;
+    const W = 1100;
+    const H = 340;
+    const L = 52;
+    const R = 56;
+    const T = 16;
+    const B = 34;
+    const pw = W - L - R;
+    const ph = H - T - B;
+    const xAt = (i) => L + (n <= 1 ? pw / 2 : (i * pw) / Math.max(1, n - 1));
+    const yP = (v) => T + ph - ((v - spec.pMin) / (spec.pMax - spec.pMin)) * ph;
+    const yC = (v) => T + ph - ((v - spec.cMin) / (spec.cMax - spec.cMin)) * ph;
+    const idx = new Map(closes.map((c, i) => [c.date, i]));
+    const grid = [0, 0.25, 0.5, 0.75, 1].map((f) => {
+      const pv = spec.pMin + f * (spec.pMax - spec.pMin);
+      const cv = spec.cMin + f * (spec.cMax - spec.cMin);
+      const y = yP(pv);
+      return `<line x1="${L}" x2="${L + pw}" y1="${y.toFixed(1)}" y2="${y.toFixed(1)}" class="grid"/>
+        <text x="${L - 8}" y="${(y + 4).toFixed(1)}" text-anchor="end" class="axis">${esc(spec.pFmt(pv))}</text>
+        <text x="${L + pw + 8}" y="${(yC(cv) + 4).toFixed(1)}" class="axis">${esc(spec.cFmt(cv))}</text>`;
+    }).join("");
+    const price = spec.price === false || n < 2
+      ? ""
+      : `<polyline points="${closes.map((c, i) => `${xAt(i).toFixed(1)},${yC(c.close).toFixed(1)}`).join(" ")}" class="hc-price"/>`;
+    const guides = (spec.guides || []).map((g) => {
+      const y = g.axis === "p" ? yP(g.value) : yC(g.value);
+      if (g.value < (g.axis === "p" ? spec.pMin : spec.cMin) || g.value > (g.axis === "p" ? spec.pMax : spec.cMax)) return "";
+      return `<line x1="${L}" x2="${L + pw}" y1="${y.toFixed(1)}" y2="${y.toFixed(1)}" class="hc-guide"/>
+        ${g.label ? `<text x="${L + pw - 4}" y="${(y - 4).toFixed(1)}" text-anchor="end" class="hc-guide-label">${esc(g.label)}</text>` : ""}`;
+    }).join("");
+    const lines = (spec.lines || []).map((line) => {
+      const pts = line.points.filter((p) => idx.has(p.date));
+      if (pts.length < 2) return "";
+      return `<polyline points="${pts.map((p) => `${xAt(idx.get(p.date)).toFixed(1)},${yP(p.value).toFixed(1)}`).join(" ")}" class="${line.cls}"/>`;
+    }).join("");
+    const dots = (spec.dots || []).map((d) => {
+      if (!idx.has(d.date)) return "";
+      const x = xAt(idx.get(d.date));
+      const y = yP(d.value);
+      if (d.kind === "pending") return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="6" class="hc-read-dot"/><circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="11" class="hc-pending"><title>${esc(d.title || "")}</title></circle>`;
+      if (d.kind === "right") return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="5" class="hc-right"><title>${esc(d.title || "")}</title></circle>`;
+      if (d.kind === "wrong") return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="5" class="hc-wrong"><title>${esc(d.title || "")}</title></circle>`;
+      return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="4.5" class="${d.cls}"><title>${esc(d.title || "")}</title></circle>`;
+    }).join("");
+    const step = Math.max(1, Math.round((n - 1) / 5));
+    const tickIdx = [];
+    for (let i = 0; i < n; i += step) tickIdx.push(i);
+    if (tickIdx[tickIdx.length - 1] !== n - 1) tickIdx.push(n - 1);
+    const ticks = tickIdx.map((i) => `<text x="${xAt(i).toFixed(1)}" y="${H - 10}" text-anchor="${i === 0 ? "start" : i === n - 1 ? "end" : "middle"}" class="axis">${esc(md(closes[i].date))}</text>`).join("");
+    return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(spec.aria)}">${grid}${guides}${price}${lines}${dots}${ticks}</svg>`;
+  }
+
+  function emptyChart(message) {
+    return `<svg viewBox="0 0 1100 280" role="img" aria-label="${esc(message)}">
+      <line x1="52" x2="1044" y1="132" y2="132" class="hc-guide"/>
+      <text x="44" y="136" text-anchor="end" class="axis">50%</text>
+      <text x="550" y="168" text-anchor="middle" class="hc-empty">${esc(message)}</text>
+    </svg>`;
+  }
+
   function historyView() {
-    const key = H_KEYS[state.h];
-    const targetName = TARGETS.find((t) => t.id === state.target).label;
-    const oText = state.target === "rise" ? "the price ended above the logged price" : "the target level was touched by a daily close";
-    const day1 = DATA.history.length === 1 ? " Day 1 of the log: one reading so far, still pending." : "";
-    const rows = DATA.history.slice().reverse().map((e) => {
-      const o = outcome(e, state.h, state.target);
-      const callUp = e.readings[key].rise > 0.5;
-      let realized;
-      if (o.status === "pending") {
-        realized = `Pending, ${o.left} sessions left`;
-      } else if (state.target === "rise") {
-        const right = callUp === (o.status === "hit");
-        realized = `<span class="status ${right ? "success" : "danger"}">${o.status === "hit" ? "Rose" : "Fell or flat"} to $${o.close.toFixed(2)} by ${esc(md(o.date))} · call ${right ? "right" : "wrong"}</span>`;
-      } else {
-        realized = o.status === "hit"
-          ? `Touched $${o.close.toFixed(2)} on ${esc(md(o.date))}`
-          : "Not touched in window";
+    if (!DATA.history.length || !DATA.closes.length) {
+      return `<section class="hpanel"><h2>History</h2><p class="caption">Waiting for data. No readings have been logged yet.</p></section>`;
+    }
+    const closes = actualSeries();
+    const cLo = Math.min(...closes.map((c) => c.close));
+    const cHi = Math.max(...closes.map((c) => c.close));
+    const short = state.shortH;
+    const long = state.longH;
+    const shortName = { 0: "1-day", 1: "1-week", 2: "1-month" }[short];
+    const shortCall = { 0: "next day", 1: "next week", 2: "next month" }[short];
+    const marks = DATA.history.map((e) => ({ e, m: callMark(e, short) })).filter((row) => closes.some((c) => c.date === row.e.priceDate));
+    const risePts = marks.map((row) => ({ date: row.e.priceDate, value: row.m.p * 100 }));
+    const pVals = risePts.map((p) => p.value);
+    const pMin = Math.min(30, ...pVals, 50);
+    const pMax = Math.max(80, ...pVals, 50);
+    const latest = marks[marks.length - 1];
+    const shortNote = !latest
+      ? "No logged readings yet."
+      : latest.m.status === "pending"
+        ? `${marks.length} logged ${H_SHORT[short]} rise ${marks.length === 1 ? "call" : "calls"}. Latest is ${fmtP(latest.m.p)}, pending, ${latest.m.left} session${latest.m.left === 1 ? "" : "s"} left. A line is drawn once a second call is logged.`
+        : `${marks.length} logged ${H_SHORT[short]} rise calls. Green is a right call, red a wrong one.`;
+    const ref = DATA.history[DATA.history.length - 1].price;
+    const twoX = barrier("x2") * ref;
+    const riseLong = DATA.history.filter((e) => closes.some((c) => c.date === e.priceDate)).map((e) => ({ date: e.priceDate, value: e.readings[H_KEYS[long]].rise * 100 }));
+    const x2Long = DATA.history.filter((e) => closes.some((c) => c.date === e.priceDate)).map((e) => ({ date: e.priceDate, value: e.readings[H_KEYS[long]].x2 * 100 }));
+    const when = { 3: "Nov 2027", 4: "2031", 5: "2036" }[long];
+    const longLeft = outcome(DATA.history[DATA.history.length - 1], long, "rise");
+    const longNote = `Rise and 2X are the logged readings only. These ${H_SHORT[long]} calls resolve after ${SESSIONS[long]} trading sessions${longLeft.status === "pending" ? `, ${longLeft.left} session${longLeft.left === 1 ? "" : "s"} left on the latest call` : ""}, around ${when}.`;
+    const resolved = DATA.history.map((e) => ({ e, m: callMark(e, short) })).filter((row) => row.m.status !== "pending");
+    let trackSvg;
+    let trackNote;
+    if (resolved.length < 20) {
+      trackSvg = emptyChart(`Waiting for data. The rolling 20-call hit rate needs 20 resolved ${H_SHORT[short]} calls. Resolved so far: ${resolved.length}.`);
+      trackNote = "No hit-rate points are drawn until 20 calls have a real close at the end of the window. The dashed line is 50%, a coin flip.";
+    } else {
+      const roll = [];
+      for (let i = 19; i < resolved.length; i++) {
+        const w = resolved.slice(i - 19, i + 1);
+        roll.push({
+          date: w[w.length - 1].e.priceDate,
+          hit: (w.filter((r) => r.m.status === "right").length / 20) * 100,
+          pred: (w.reduce((s, r) => s + r.m.p, 0) / 20) * 100,
+        });
       }
-      return [
-        esc(e.date),
-        esc(`$${e.price.toFixed(2)} (${e.priceNote})`),
-        esc(fmtP(e.readings[key][state.target])),
-        o.status === "pending" || state.target !== "rise" ? esc(realized) : realized,
-        ...H_KEYS.filter((_, i) => i !== state.h).map((k) => esc(fmtP(e.readings[k][state.target]))),
-      ];
-    });
-    const track = [0, 1, 2].map((hi) => {
-      const res = DATA.history.map((e) => ({ e, o: outcome(e, hi, "rise") })).filter((r) => r.o.status !== "pending");
-      const hits = res.filter((r) => (r.e.readings[H_KEYS[hi]].rise > 0.5) === (r.o.status === "hit")).length;
-      return [
-        esc(H_KEYS[hi]),
-        String(DATA.history.length),
-        String(res.length),
-        String(DATA.history.length - res.length),
-        String(hits),
-        res.length > 0 ? `${Math.round((hits / res.length) * 100)}%` : "–",
-        res.length > 0 ? `<span class="status accent">Scoring</span>` : `<span class="status neutral">Waiting for data</span>`,
-      ];
-    });
-    const calib = [0, 1, 2].map((hi) => {
-      const res = DATA.history.map((e) => ({ e, o: outcome(e, hi, "rise") })).filter((r) => r.o.status !== "pending");
-      const avgP = res.length ? res.reduce((s, r) => s + r.e.readings[H_KEYS[hi]].rise, 0) / res.length : 0;
-      const actual = res.length ? res.filter((r) => r.o.status === "hit").length / res.length : 0;
-      const status = res.length >= 10
-        ? `<span class="status accent">Scoring</span>`
-        : res.length > 0
-          ? `<span class="status neutral">Too few calls</span>`
-          : `<span class="status neutral">Waiting for data</span>`;
-      return [
-        esc(H_KEYS[hi]),
-        String(res.length),
-        res.length ? esc(fmtP(avgP)) : "–",
-        res.length ? esc(fmtP(actual)) : "–",
-        res.length ? `${actual - avgP >= 0 ? "+" : ""}${Math.round((actual - avgP) * 100)} pts` : "–",
-        status,
-      ];
-    });
-    const actual = actualSeries();
-    return `<section class="section">
-      <h2>Model readings over time: ${esc(targetName)}, ${esc(H_SHORT[state.h])}</h2>
-      <p class="caption">Only readings actually logged at each daily refresh, at default weights. Nothing is backfilled.</p>
-      ${seg(H_SHORT.map((label, i) => ({ value: String(i), label })), state.h, "h")}
-      ${seg(TARGETS.map((t) => ({ value: t.id, label: t.label })), state.target, "target")}
-      <div class="legend"><span class="leg"><i class="s0"></i>Model reading (left axis)</span><span class="leg"><i class="close"></i>Actual SPCX close (right axis)</span></div>
-      <figure class="chart">${predictionChart()}</figure>
-      <p>Realized markers sit beside each reading once its ${esc(H_SHORT[state.h])} window (${SESSIONS[state.h]} trading sessions) has passed: a filled green dot at the top means ${esc(oText)}, a hollow red dot at the bottom means it did not. A dashed ring means pending.${esc(day1)}</p>
-      ${table(["Date", "SPCX close", `Reading ${H_SHORT[state.h]}`, `Realized ${H_SHORT[state.h]}`, ...H_SHORT.filter((_, i) => i !== state.h)], rows)}
+      const rollCloses = roll.map((r) => {
+        const c = closes.find((x) => x.date === r.date);
+        return c || { date: r.date, close: ref };
+      });
+      trackSvg = layoutChart({
+        aria: `${H_SHORT[short]} rolling hit rate and average predicted chance`,
+        closes: rollCloses,
+        pMin: 20,
+        pMax: 80,
+        cMin: 20,
+        cMax: 80,
+        pFmt: (v) => `${Math.round(v)}%`,
+        price: false,
+        cFmt: () => "",
+        guides: [{ axis: "p", value: 50, label: "50%" }],
+        lines: [
+          { cls: "hc-right-line", points: roll.map((r) => ({ date: r.date, value: r.hit })) },
+          { cls: "hc-pred", points: roll.map((r) => ({ date: r.date, value: r.pred })) },
+        ],
+      });
+      trackNote = `Each point is the last 20 resolved ${H_SHORT[short]} calls: green is how often the call was right, blue is their average predicted chance of a rise.`;
+    }
+    const cPad = (cHi - cLo) * 0.08 || 1;
+    return `<section class="hpanel">
+      <div class="hhead">
+        <h2>${esc(shortName)} horizon: ${short === 0 ? "daily" : short === 1 ? "weekly" : "monthly"} rise call vs. actual price</h2>
+        ${seg([{ value: "0", label: "1d" }, { value: "1", label: "1w" }, { value: "2", label: "1m" }], short, "short")}
+      </div>
+      <ul class="hlegend">
+        <li><i class="swatch read"></i>Model: chance of rise ${esc(shortCall)} (%)</li>
+        <li><i class="swatch right"></i>Call right</li>
+        <li><i class="swatch wrong"></i>Call wrong</li>
+        <li><i class="swatch price"></i>Actual SPCX close ($)</li>
+      </ul>
+      <figure class="chart">${layoutChart({
+        aria: `${shortName} rise calls against the actual close`,
+        closes,
+        pMin,
+        pMax,
+        cMin: cLo - cPad,
+        cMax: cHi + cPad,
+        pFmt: (v) => `${Math.round(v)}`,
+        cFmt: (v) => `$${Math.round(v)}`,
+        guides: [{ axis: "p", value: 50, label: "50%" }],
+        lines: [{ cls: "hc-read", points: risePts }],
+        dots: marks.map((row) => ({ date: row.e.priceDate, value: row.m.p * 100, kind: row.m.status, title: `${row.e.date} ${fmtP(row.m.p)} ${row.m.status}` })),
+      })}</figure>
+      <p class="caption">${esc(shortNote)} A dashed ring is still pending.</p>
     </section>
-    <section class="section">
-      <h2>Track record: short-horizon rise calls</h2>
-      <p class="caption">A call is 'up' when the logged rise reading is above 50%. It is scored on the real close 1, 5 or 21 trading sessions after the logged price.</p>
-      ${table(["Horizon", "Calls logged", "Resolved", "Pending", "Right calls", "Hit rate", "Status"], track)}
+    <section class="hpanel">
+      <div class="hhead">
+        <h2>${esc({ 3: "1-year", 4: "5-year", 5: "10-year" }[long])} horizon: how the long-term odds drifted (outcomes resolve ${esc(when)})</h2>
+        ${seg([{ value: "3", label: "1y" }, { value: "4", label: "5y" }, { value: "5", label: "10y" }], long, "long")}
+      </div>
+      <ul class="hlegend">
+        <li><i class="swatch read"></i>Model: rise within ${esc(H_SHORT[long])} (%)</li>
+        <li><i class="swatch x2"></i>Model: 2X within ${esc(H_SHORT[long])} (%)</li>
+        <li><i class="swatch price"></i>Actual SPCX close ($)</li>
+      </ul>
+      <figure class="chart">${layoutChart({
+        aria: `${H_SHORT[long]} rise and 2X readings against the actual close`,
+        closes,
+        pMin: 0,
+        pMax: 100,
+        cMin: Math.min(cLo, 135) * 0.92,
+        cMax: Math.max(cHi, twoX) * 1.04,
+        pFmt: (v) => `${Math.round(v)}`,
+        cFmt: (v) => `$${Math.round(v)}`,
+        guides: [
+          { axis: "c", value: 135, label: "IPO $135" },
+          { axis: "c", value: twoX, label: `2X $${Math.round(twoX).toLocaleString("en-US")}` },
+        ],
+        lines: [
+          { cls: "hc-read", points: riseLong },
+          { cls: "hc-x2", points: x2Long },
+        ],
+        dots: [
+          ...riseLong.map((p) => ({ date: p.date, value: p.value, kind: "read", cls: "hc-read-dot", title: `Rise ${p.value.toFixed(0)}%` })),
+          ...x2Long.map((p) => ({ date: p.date, value: p.value, kind: "x2", cls: "hc-x2-dot", title: `2X ${p.value.toFixed(0)}%` })),
+        ],
+      })}</figure>
+      <p class="caption">${esc(longNote)}</p>
     </section>
-    <section class="section">
-      <h2>Calibration: predicted vs actual</h2>
-      <p class="caption">Average predicted chance of a rise over resolved calls, against the share of those calls where the price actually rose. A well-calibrated model has a gap near zero.</p>
-      ${table(["Horizon", "Resolved calls", "Avg predicted rise", "Actual rise rate", "Gap", "Status"], calib)}
-      <p>A hit rate means little until there are dozens of calls; near 50% is the honest expectation for a coin-flip-like reading.</p>
-    </section>
-    <section class="section">
-      <h2>Actual SPCX daily close</h2>
-      <p class="caption">Real closes ${esc(md(actual[0].date))} – ${esc(md(actual[actual.length - 1].date))} 2026 (optionskew.com; Nov 9 from stockanalysis.com; Oct 12 missing in source). Dots are logged prices; dashed lines are target levels from the latest logged price where they fit. Since the IPO: $104.83 low (Aug 3), $225.64 high.</p>
-      <figure class="chart">${fullPriceChart()}</figure>
+    <section class="hpanel">
+      <div class="hhead">
+        <h2>Track record: is the model better than a coin flip?</h2>
+      </div>
+      <ul class="hlegend">
+        <li><i class="swatch right"></i>${esc(H_SHORT[short])} hit rate, rolling 20 calls</li>
+        <li><i class="swatch pred"></i>Average predicted chance</li>
+      </ul>
+      <figure class="chart">${trackSvg}</figure>
+      <p class="caption">${esc(trackNote)}</p>
     </section>`;
   }
 
@@ -1037,6 +1163,10 @@
     if (tab) { navigate(tab.dataset.tab); return; }
     const hBtn = t.closest("[data-h]");
     if (hBtn) { state.h = Number(hBtn.dataset.h); paint({ preserve: true }); return; }
+    const shortBtn = t.closest("[data-short]");
+    if (shortBtn) { state.shortH = Number(shortBtn.dataset.short); paint({ preserve: true }); return; }
+    const longBtn = t.closest("[data-long]");
+    if (longBtn) { state.longH = Number(longBtn.dataset.long); paint({ preserve: true }); return; }
     const targetBtn = t.closest("[data-target]");
     if (targetBtn) { state.target = targetBtn.dataset.target; paint({ preserve: true }); return; }
     const pillarBtn = t.closest("[data-pillar]");
