@@ -1,6 +1,7 @@
 /* SpaceX Stock. Daily refresh edits data.json only:
-   updated, market, factors (scores, news, and the rest of each factor),
-   today, catalysts, pillars (thesis confidence), charts, links. */
+   updated, market, vol, factors (scores, news, and the rest of each factor),
+   today, catalysts, pillars, shortWeights, and append one closes row plus one
+   history entry (priceDate = the close it is based on). Never edit past entries. */
 (function () {
   const ANCHOR = {
     rise: [0.55, 0.6, 0.62],
@@ -10,10 +11,17 @@
     top1: [0.1, 0.3, 0.35],
   };
   const K = 4;
-  const H_LABEL = ["1 year (Nov 2027)", "5 years (2031)", "10 years (2036)"];
-  const H_SHORT = ["1y", "5y", "10y"];
+  const KS = 1;
+  const T_YEARS = [1 / 252, 5 / 252, 21 / 252];
+  const SESSIONS = [1, 5, 21, 252, 1260, 2520];
+  const APPLE_T = 5.096;
+  const H_KEYS = ["1d", "1w", "1m", "1y", "5y", "10y"];
+  const H_SHORT = H_KEYS.slice();
+  const H_LABEL = ["1 trading day", "1 week", "1 month", "1 year (Nov 2027)", "5 years (2031)", "10 years (2036)"];
+  const MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
   const TABS = [
     ["meter", "Chance meter"],
+    ["history", "History"],
     ["thesis", "Thesis tracker"],
     ["ecosystem", "Ecosystem"],
     ["scenarios", "Scenarios"],
@@ -30,7 +38,7 @@
   ];
 
   const state = {
-    h: 0,
+    h: 3,
     target: "rise",
     weights: null,
     adjust: false,
@@ -82,9 +90,13 @@
     return countdown(ms);
   }
 
+  function weightOf(f) {
+    const s = (DATA.shortWeights && DATA.shortWeights[f.id]) || [0, 0, 0];
+    return [s[0], s[1], s[2], f.w[0], f.w[1], f.w[2]];
+  }
   function defaultW() {
     const o = {};
-    DATA.factors.forEach((f) => { o[f.id] = [f.w[0], f.w[1], f.w[2]]; });
+    DATA.factors.forEach((f) => { o[f.id] = weightOf(f).slice(); });
     return o;
   }
   function netScore(ws, h) {
@@ -97,14 +109,67 @@
     });
     return den > 0 ? num / den : 0;
   }
+  function normTail(x) {
+    const z = Math.abs(x);
+    const t = 1 / (1 + 0.2316419 * z);
+    const d = 0.3989423 * Math.exp((-z * z) / 2);
+    const p = d * t * (0.3193815 + t * (-0.3565638 + t * (1.781478 + t * (-1.821256 + t * 1.330274))));
+    return x >= 0 ? p : 1 - p;
+  }
+  function touchProb(k, hi) {
+    const z = Math.log(k) / (DATA.vol.iv * Math.sqrt(T_YEARS[hi]));
+    return Math.min(0.999, Math.max(1e-12, 2 * normTail(z)));
+  }
+  function barrier(t) {
+    if (t === "x2") return 2;
+    if (t === "x10") return 10;
+    if (t === "x100") return 100;
+    if (t === "top1") return APPLE_T / DATA.market.capT;
+    return 1;
+  }
   function prob(t, h, net) {
-    return sig(logit(ANCHOR[t][h]) + K * (net - NET0[h]));
+    if (h < 3) {
+      const base = t === "rise" ? 0.5 : touchProb(barrier(t), h);
+      return sig(logit(base) + KS * net);
+    }
+    return sig(logit(ANCHOR[t][h - 3]) + K * (net - NET0[h]));
+  }
+  function defaultProb(t, h) {
+    return prob(t, h, NET0[h]);
   }
   function isCustom() {
-    return DATA.factors.some((f) => {
-      const c = state.weights[f.id];
-      return c[0] !== f.w[0] || c[1] !== f.w[1] || c[2] !== f.w[2];
+    return DATA.factors.some((f) => weightOf(f).some((v, i) => state.weights[f.id][i] !== v));
+  }
+  function md(date) {
+    return `${MON[Number(date.slice(5, 7)) - 1]} ${Number(date.slice(8, 10))}`;
+  }
+  function actualSeries() {
+    const m = {};
+    DATA.closes.forEach((c) => { m[c.date] = c.close; });
+    DATA.history.forEach((e) => {
+      if (m[e.priceDate] === undefined) m[e.priceDate] = e.price;
     });
+    return Object.keys(m).sort().map((date) => ({ date, close: m[date] }));
+  }
+  function outcome(e, hi, t) {
+    const after = actualSeries().filter((c) => c.date > e.priceDate);
+    const n = SESSIONS[hi];
+    if (t === "rise") {
+      if (after.length < n) return { status: "pending", left: n - after.length };
+      const c = after[n - 1];
+      return { status: c.close > e.price ? "hit" : "miss", date: c.date, close: c.close };
+    }
+    const level = barrier(t) * e.price;
+    const win = after.slice(0, n);
+    const touch = win.find((c) => c.close >= level);
+    if (touch) return { status: "hit", date: touch.date, close: touch.close };
+    if (after.length < n) return { status: "pending", left: n - after.length };
+    return { status: "miss", date: win[n - 1].date, close: win[n - 1].close };
+  }
+  function logWindow() {
+    const actual = actualSeries();
+    const first = actual.findIndex((c) => c.date >= DATA.history[0].priceDate);
+    return actual.slice(Math.max(0, first - 20));
   }
   function current() {
     const net = netScore(state.weights, state.h);
@@ -305,7 +370,26 @@
     if (kind === "revenue") return columnChart(DATA.charts.revenue);
     if (kind === "valuation") return lineChart(DATA.charts.valuation, fmtMoneyB);
     if (kind === "mcap") return lineChart(DATA.charts.mcap, fmtMcap);
+    if (kind === "price") return priceDrillChart();
     return "";
+  }
+
+  function priceDrillChart() {
+    const actual = actualSeries();
+    const points = actual.map((c, i) => ({
+      label: i === 0 || i === actual.length - 1 || i % 7 === 0 ? md(c.date) : "",
+      value: c.close,
+    }));
+    return lineChart({
+      label: "SPCX daily close",
+      floor: 100,
+      ceiling: 180,
+      points,
+      annotations: [
+        { at: Math.max(0, actual.findIndex((c) => c.date === "2026-10-22")), label: "Unlock" },
+        { at: Math.max(0, actual.findIndex((c) => c.date === "2026-11-05")), label: "Midterms" },
+      ],
+    }, (v) => `$${v.toFixed(2)}`);
   }
 
   function gaugeSvg(p) {
@@ -406,7 +490,7 @@
     const { p } = current();
     const custom = isCustom();
     const note = custom
-      ? `Your weights move the reading from my default of ${fmtP(ANCHOR[state.target][state.h])}.`
+      ? `Your weights move the reading from my default of ${fmtP(defaultProb(state.target, state.h))}.`
       : "Tap a factor below for the why, metrics, news and sources.";
     const m = DATA.market;
     const at = Date.parse(m.nextCatalyst.at);
@@ -415,10 +499,10 @@
     const external = DATA.factors.filter((f) => f.group === "External influence");
     const anchorRows = TARGETS.map((t) => [
       esc(t.id === "rise" ? `Price above $${m.price}` : t.row),
-      esc(fmtP(ANCHOR[t.id][0])),
-      esc(fmtP(ANCHOR[t.id][1])),
-      esc(fmtP(ANCHOR[t.id][2])),
+      ...H_KEYS.map((_, i) => esc(fmtP(defaultProb(t.id, i)))),
     ]);
+    const usd = m.changeUsd;
+    const dayChange = `${usd >= 0 ? "+" : "-"}$${Math.abs(usd).toFixed(2)} (${m.change})`;
     return `<section class="section">
       <h2 id="chance-heading">${esc(caption(state.target, state.h))}</h2>
       <p class="caption">Opinion-based model, not advice. Updated ${esc(DATA.updated)}.</p>
@@ -426,18 +510,20 @@
         <div class="panel gauge-panel">${gaugeSvg(p)}</div>
         <div class="panel controls">
           <h3>Model controls</h3>
-          ${seg([{ value: "0", label: "1y" }, { value: "1", label: "5y" }, { value: "2", label: "10y" }], state.h, "h")}
+          ${seg(H_SHORT.map((label, i) => ({ value: String(i), label })), state.h, "h")}
           ${seg(TARGETS.map((t) => ({ value: t.id, label: t.label })), state.target, "target")}
           <label class="switch"><input type="checkbox" id="adjust" ${state.adjust ? "checked" : ""}><span class="track"><span class="knob"></span></span><span>Adjust factor weights</span></label>
           <button type="button" class="btn" id="reset-weights" ${custom ? "" : "hidden"}>Reset weights</button>
           <p class="note" id="weight-note">${esc(note)}</p>
         </div>
       </div>
+      <h3 class="spark-title">This reading over time: ${esc(TARGETS.find((t) => t.id === state.target).label)}, ${esc(H_SHORT[state.h])}</h3>
+      ${sparkline()}
       <p class="kicker">SPCX now, and the next event that can move it:</p>
       <div class="kpis">
         <article class="kpi"><span class="val">$${esc(m.price)}</span><span class="lbl">SPCX price</span><span class="sub">${esc(m.changeNote)}</span></article>
         <article class="kpi"><span class="val">$${m.capT.toFixed(2)}T</span><span class="lbl">Market cap</span><span class="sub">World #6\u20137</span></article>
-        <article class="kpi"><span class="val ${changeTone}">${esc(m.change)}</span><span class="lbl">Day change</span></article>
+        <article class="kpi"><span class="val val-long ${changeTone}">${esc(dayChange)}</span><span class="lbl">Day change</span></article>
         <article class="kpi"><span class="val" data-countdown="${at}">${esc(countdown(at - Date.now()))}</span><span class="lbl">${esc(m.nextCatalyst.name)}</span><span class="sub">${esc(m.nextCatalyst.when)}</span></article>
       </div>
     </section>
@@ -453,8 +539,9 @@
     </section>
     <details class="how" id="how">
       <summary>How the meter works</summary>
-      <p>Each factor has a score from -5 to +5 and a weight per horizon. The net score is the weighted average, scaled to ±100. For each target I set a default probability by judgment at today's scores; changing weights shifts its log-odds by 4 times the change in net score. Short-term factors (rates, sentiment, unlocks) weigh most at 1 year; orbital compute and competition weigh most at 10 years.</p>
-      ${table(["Target", "1y", "5y", "10y"], anchorRows)}
+      <p>Each factor has a score from -5 to +5 and a weight per horizon. The net score is the weighted average, scaled to ±100. For 1y, 5y and 10y I set a default probability by judgment at today's scores; changing weights shifts its log-odds by 4 times the change in net score.</p>
+      <p>For 1d, 1w and 1m the rise reading starts at 50/50 and shifts by 1 times the net score, so it stays near a coin flip. Momentum, sentiment, rates, catalysts and X mood carry most weight there. The 2X, 10X, 100X and #1 targets use the chance of touching that price at SPCX's options-implied volatility of ${(DATA.vol.iv * 100).toFixed(1)}% (flowmonkey.net, Nov 9 close; 20-day realized ${(DATA.vol.rv20 * 100).toFixed(1)}%), with zero drift. #1 means passing Apple's $5.10T, about ${(APPLE_T / m.capT).toFixed(2)}x today.</p>
+      ${table(["Target", ...H_SHORT], anchorRows)}
     </details>`;
   }
 
@@ -591,6 +678,235 @@
     </section>`;
   }
 
+  function sparkline() {
+    const win = logWindow();
+    const n = win.length;
+    const W0 = 600;
+    const H0 = 84;
+    const xAt = (i) => (n <= 1 ? W0 / 2 : 40 + (i * (W0 - 80)) / (n - 1));
+    const lo = Math.min(...win.map((c) => c.close));
+    const hiC = Math.max(...win.map((c) => c.close));
+    const yC = (v) => 60 - ((v - lo) / (hiC - lo || 1)) * 44;
+    const key = H_KEYS[state.h];
+    const pMax = state.target === "rise" ? 1 : Math.max(0.01, ...DATA.history.map((e) => e.readings[key][state.target] * 1.3));
+    const yP = (p) => 60 - (Math.min(p, pMax) / pMax) * 44;
+    const pts = DATA.history.map((e) => ({
+      x: xAt(win.findIndex((c) => c.date === e.priceDate)),
+      p: e.readings[key][state.target],
+      o: outcome(e, state.h, state.target),
+    }));
+    const last = pts[pts.length - 1];
+    const closeLine = n > 1 ? `<polyline points="${win.map((c, i) => `${xAt(i).toFixed(1)},${yC(c.close).toFixed(1)}`).join(" ")}" class="spark-close"/>` : "";
+    const readLine = pts.length > 1 ? `<polyline points="${pts.map((z) => `${z.x.toFixed(1)},${yP(z.p).toFixed(1)}`).join(" ")}" class="spark-read"/>` : "";
+    const dots = pts.map((z) => {
+      const ring = z.o.status === "pending"
+        ? `<circle cx="${z.x.toFixed(1)}" cy="${yP(z.p).toFixed(1)}" r="9" class="spark-pending"/>`
+        : `<circle cx="${z.x.toFixed(1)}" cy="${z.o.status === "hit" ? 16 : 60}" r="5" class="spark-out ${z.o.status}"/>`;
+      return `<g><circle cx="${z.x.toFixed(1)}" cy="${yP(z.p).toFixed(1)}" r="5" class="spark-read-dot"/>${ring}</g>`;
+    }).join("");
+    return `<button type="button" class="spark" data-tab="history">
+      <svg viewBox="0 0 ${W0} ${H0}" role="img" aria-label="Reading history with actual SPCX close">
+        <line x1="40" x2="${W0 - 40}" y1="60" y2="60" class="spark-base"/>
+        ${closeLine}${readLine}${dots}
+        <text x="${(last.x - 12).toFixed(1)}" y="${(yP(last.p) - 12).toFixed(1)}" text-anchor="end" class="spark-val">${esc(fmtP(last.p))} · ${last.o.status === "pending" ? "pending" : esc(last.o.status)}</text>
+        <text x="40" y="80" class="spark-date">${esc(md(win[0].date))}</text>
+        <text x="${W0 - 40}" y="80" text-anchor="end" class="spark-date">Reading and real SPCX close · ${esc(md(win[n - 1].date))}</text>
+      </svg>
+    </button>`;
+  }
+
+  function predictionChart() {
+    const win = logWindow();
+    const n = win.length;
+    const W0 = 1200;
+    const H0 = 330;
+    const L0 = 70;
+    const R0 = 80;
+    const T0 = 28;
+    const B0 = 40;
+    const pw = W0 - L0 - R0;
+    const ph = H0 - T0 - B0;
+    const xAt = (i) => L0 + (n <= 1 ? pw / 2 : (i * pw) / (n - 1));
+    const key = H_KEYS[state.h];
+    const pMax = state.target === "rise" ? 1 : Math.max(0.01, ...DATA.history.map((e) => e.readings[key][state.target] * 1.3));
+    const yP = (p) => T0 + ph - (Math.min(p, pMax) / pMax) * ph;
+    const lo = Math.min(...win.map((c) => c.close)) * 0.97;
+    const hiC = Math.max(...win.map((c) => c.close)) * 1.03;
+    const yC = (v) => T0 + ph - ((v - lo) / (hiC - lo)) * ph;
+    const iLog = Math.max(0, win.findIndex((c) => c.date === DATA.history[0].priceDate));
+    const ticks = n <= 6 ? win.map((_, i) => i) : [0, 1, 2, 3, 4, 5].map((k) => Math.round((k * (n - 1)) / 5));
+    const pts = DATA.history.map((e) => ({
+      x: xAt(Math.max(0, win.findIndex((c) => c.date === e.priceDate))),
+      p: e.readings[key][state.target],
+      o: outcome(e, state.h, state.target),
+    }));
+    const grid = [0, 0.5, 1].map((f) => `
+      <line x1="${L0}" x2="${W0 - R0}" y1="${yP(f * pMax).toFixed(1)}" y2="${yP(f * pMax).toFixed(1)}" class="grid"/>
+      <text x="${L0 - 10}" y="${(yP(f * pMax) + 4).toFixed(1)}" text-anchor="end" class="axis">${esc(fmtP(f * pMax))}</text>
+      <text x="${W0 - R0 + 10}" y="${(yC(lo + f * (hiC - lo)) + 4).toFixed(1)}" class="axis">$${Math.round(lo + f * (hiC - lo))}</text>`).join("");
+    const marks = pts.map((z) => {
+      const stem = z.o.status !== "pending"
+        ? `<line x1="${z.x.toFixed(1)}" x2="${z.x.toFixed(1)}" y1="${yP(z.p).toFixed(1)}" y2="${(z.o.status === "hit" ? yP(pMax) : yP(0)).toFixed(1)}" class="ann"/>`
+        : "";
+      const out = z.o.status === "pending"
+        ? `<circle cx="${z.x.toFixed(1)}" cy="${yP(z.p).toFixed(1)}" r="12" class="spark-pending"/>`
+        : `<circle cx="${z.x.toFixed(1)}" cy="${(z.o.status === "hit" ? yP(pMax) : yP(0)).toFixed(1)}" r="7" class="out-dot ${z.o.status}"/>`;
+      return `<g>${stem}<circle cx="${z.x.toFixed(1)}" cy="${yP(z.p).toFixed(1)}" r="6" class="spark-read-dot"/>${out}</g>`;
+    }).join("");
+    const pending = pts.length && pts[pts.length - 1].o.status === "pending"
+      ? `<text x="${(pts[pts.length - 1].x + 16).toFixed(1)}" y="${(yP(pts[pts.length - 1].p) + 4).toFixed(1)}" class="axis">${esc(fmtP(pts[pts.length - 1].p))} · pending, ${pts[pts.length - 1].o.left} sessions left</text>`
+      : "";
+    const readLine = pts.length > 1 ? `<polyline points="${pts.map((z) => `${z.x.toFixed(1)},${yP(z.p).toFixed(1)}`).join(" ")}" class="spark-read" stroke-width="3"/>` : "";
+    return `<svg viewBox="0 0 ${W0} ${H0}" role="img" aria-label="Model readings, realized outcomes and actual SPCX close">
+      ${grid}
+      <polyline points="${win.map((c, i) => `${xAt(i).toFixed(1)},${yC(c.close).toFixed(1)}`).join(" ")}" class="spark-close" stroke-width="2.5"/>
+      <line x1="${xAt(iLog).toFixed(1)}" x2="${xAt(iLog).toFixed(1)}" y1="${T0}" y2="${T0 + ph}" class="ann"/>
+      <text x="${(xAt(iLog) - 8).toFixed(1)}" y="${T0 - 10}" text-anchor="end" class="axis">Prediction log starts</text>
+      ${readLine}${marks}${pending}
+      ${ticks.map((i) => `<text x="${xAt(i).toFixed(1)}" y="${H0 - 12}" text-anchor="${i === 0 ? "start" : i === n - 1 ? "end" : "middle"}" class="axis">${esc(md(win[i].date))}</text>`).join("")}
+    </svg>`;
+  }
+
+  function fullPriceChart() {
+    const data = actualSeries();
+    const n = data.length;
+    const W0 = 1200;
+    const H0 = 360;
+    const L0 = 70;
+    const R0 = 190;
+    const T0 = 28;
+    const B0 = 40;
+    const pw = W0 - L0 - R0;
+    const ph = H0 - T0 - B0;
+    const maxC = Math.max(...data.map((c) => c.close));
+    const minC = Math.min(...data.map((c) => c.close));
+    const ref = DATA.history[DATA.history.length - 1].price;
+    const names = { x2: "2X", x10: "10X", x100: "100X", top1: "#1 company (price proxy)" };
+    const levels = [
+      { label: "IPO price $135", v: 135 },
+      ...["x2", "top1", "x10", "x100"].map((t) => ({
+        label: `${names[t]} $${Math.round(barrier(t) * ref).toLocaleString("en-US")}`,
+        v: barrier(t) * ref,
+      })),
+    ];
+    const fits = levels.filter((l) => l.v <= maxC * 2.5);
+    const off = levels.filter((l) => l.v > maxC * 2.5);
+    const top = Math.max(maxC, ...fits.map((l) => l.v)) * 1.05;
+    const bot = Math.min(minC, ...fits.map((l) => l.v)) * 0.92;
+    const xAt = (i) => L0 + (n <= 1 ? pw / 2 : (i * pw) / (n - 1));
+    const y = (v) => T0 + ph - ((v - bot) / (top - bot)) * ph;
+    const iLog = Math.max(0, data.findIndex((c) => c.date === DATA.history[0].priceDate));
+    const ticks = [0, 1, 2, 3, 4, 5].map((k) => Math.round((k * (n - 1)) / 5));
+    const yt = [0, 0.25, 0.5, 0.75, 1].map((f) => bot + f * (top - bot));
+    const guides = fits.map((l) => `
+      <line x1="${L0}" x2="${L0 + pw}" y1="${y(l.v).toFixed(1)}" y2="${y(l.v).toFixed(1)}" class="guide"/>
+      <text x="${L0 + pw + 8}" y="${(y(l.v) + 4).toFixed(1)}" class="guide-label">${esc(l.label)}</text>`).join("");
+    const logs = DATA.history.map((e, i) => {
+      const j = data.findIndex((c) => c.date === e.priceDate);
+      const label = i === DATA.history.length - 1
+        ? `<text x="${(xAt(j) - 10).toFixed(1)}" y="${(y(e.price) - 12).toFixed(1)}" text-anchor="end" class="spark-val">Logged $${e.price.toFixed(2)}</text>`
+        : "";
+      return `<g><circle cx="${xAt(j).toFixed(1)}" cy="${y(e.price).toFixed(1)}" r="6" class="spark-close-dot"/>${label}</g>`;
+    }).join("");
+    return `<svg viewBox="0 0 ${W0} ${H0}" role="img" aria-label="Actual SPCX daily close with logged prices and target levels">
+      ${yt.map((v) => `<g><line x1="${L0}" x2="${L0 + pw}" y1="${y(v).toFixed(1)}" y2="${y(v).toFixed(1)}" class="grid"/><text x="${L0 - 10}" y="${(y(v) + 4).toFixed(1)}" text-anchor="end" class="axis">$${Math.round(v)}</text></g>`).join("")}
+      ${guides}
+      <polyline points="${data.map((c, i) => `${xAt(i).toFixed(1)},${y(c.close).toFixed(1)}`).join(" ")}" class="spark-read" stroke-width="2.5"/>
+      <line x1="${xAt(iLog).toFixed(1)}" x2="${xAt(iLog).toFixed(1)}" y1="${T0}" y2="${T0 + ph}" class="ann"/>
+      <text x="${(xAt(iLog) - 8).toFixed(1)}" y="${T0 - 10}" text-anchor="end" class="axis">Prediction log starts</text>
+      ${logs}
+      ${ticks.map((i) => `<text x="${xAt(i).toFixed(1)}" y="${H0 - 12}" text-anchor="${i === 0 ? "start" : i === n - 1 ? "end" : "middle"}" class="axis">${esc(md(data[i].date))}</text>`).join("")}
+      ${off.length ? `<text x="${L0 + 8}" y="${T0 + 14}" class="axis">Off scale: ${esc(off.map((l) => l.label).join(" · "))}</text>` : ""}
+    </svg>`;
+  }
+
+  function historyView() {
+    const key = H_KEYS[state.h];
+    const targetName = TARGETS.find((t) => t.id === state.target).label;
+    const oText = state.target === "rise" ? "the price ended above the logged price" : "the target level was touched by a daily close";
+    const day1 = DATA.history.length === 1 ? " Day 1 of the log: one reading so far, still pending." : "";
+    const rows = DATA.history.slice().reverse().map((e) => {
+      const o = outcome(e, state.h, state.target);
+      const callUp = e.readings[key].rise > 0.5;
+      let realized;
+      if (o.status === "pending") {
+        realized = `Pending, ${o.left} sessions left`;
+      } else if (state.target === "rise") {
+        const right = callUp === (o.status === "hit");
+        realized = `<span class="status ${right ? "success" : "danger"}">${o.status === "hit" ? "Rose" : "Fell or flat"} to $${o.close.toFixed(2)} by ${esc(md(o.date))} · call ${right ? "right" : "wrong"}</span>`;
+      } else {
+        realized = o.status === "hit"
+          ? `Touched $${o.close.toFixed(2)} on ${esc(md(o.date))}`
+          : "Not touched in window";
+      }
+      return [
+        esc(e.date),
+        esc(`$${e.price.toFixed(2)} (${e.priceNote})`),
+        esc(fmtP(e.readings[key][state.target])),
+        o.status === "pending" || state.target !== "rise" ? esc(realized) : realized,
+        ...H_KEYS.filter((_, i) => i !== state.h).map((k) => esc(fmtP(e.readings[k][state.target]))),
+      ];
+    });
+    const track = [0, 1, 2].map((hi) => {
+      const res = DATA.history.map((e) => ({ e, o: outcome(e, hi, "rise") })).filter((r) => r.o.status !== "pending");
+      const hits = res.filter((r) => (r.e.readings[H_KEYS[hi]].rise > 0.5) === (r.o.status === "hit")).length;
+      return [
+        esc(H_KEYS[hi]),
+        String(DATA.history.length),
+        String(res.length),
+        String(DATA.history.length - res.length),
+        String(hits),
+        res.length > 0 ? `${Math.round((hits / res.length) * 100)}%` : "–",
+        res.length > 0 ? `<span class="status accent">Scoring</span>` : `<span class="status neutral">Waiting for data</span>`,
+      ];
+    });
+    const calib = [0, 1, 2].map((hi) => {
+      const res = DATA.history.map((e) => ({ e, o: outcome(e, hi, "rise") })).filter((r) => r.o.status !== "pending");
+      const avgP = res.length ? res.reduce((s, r) => s + r.e.readings[H_KEYS[hi]].rise, 0) / res.length : 0;
+      const actual = res.length ? res.filter((r) => r.o.status === "hit").length / res.length : 0;
+      const status = res.length >= 10
+        ? `<span class="status accent">Scoring</span>`
+        : res.length > 0
+          ? `<span class="status neutral">Too few calls</span>`
+          : `<span class="status neutral">Waiting for data</span>`;
+      return [
+        esc(H_KEYS[hi]),
+        String(res.length),
+        res.length ? esc(fmtP(avgP)) : "–",
+        res.length ? esc(fmtP(actual)) : "–",
+        res.length ? `${actual - avgP >= 0 ? "+" : ""}${Math.round((actual - avgP) * 100)} pts` : "–",
+        status,
+      ];
+    });
+    const actual = actualSeries();
+    return `<section class="section">
+      <h2>Model readings over time: ${esc(targetName)}, ${esc(H_SHORT[state.h])}</h2>
+      <p class="caption">Only readings actually logged at each daily refresh, at default weights. Nothing is backfilled.</p>
+      ${seg(H_SHORT.map((label, i) => ({ value: String(i), label })), state.h, "h")}
+      ${seg(TARGETS.map((t) => ({ value: t.id, label: t.label })), state.target, "target")}
+      <div class="legend"><span class="leg"><i class="s0"></i>Model reading (left axis)</span><span class="leg"><i class="close"></i>Actual SPCX close (right axis)</span></div>
+      <figure class="chart">${predictionChart()}</figure>
+      <p>Realized markers sit beside each reading once its ${esc(H_SHORT[state.h])} window (${SESSIONS[state.h]} trading sessions) has passed: a filled green dot at the top means ${esc(oText)}, a hollow red dot at the bottom means it did not. A dashed ring means pending.${esc(day1)}</p>
+      ${table(["Date", "SPCX close", `Reading ${H_SHORT[state.h]}`, `Realized ${H_SHORT[state.h]}`, ...H_SHORT.filter((_, i) => i !== state.h)], rows)}
+    </section>
+    <section class="section">
+      <h2>Track record: short-horizon rise calls</h2>
+      <p class="caption">A call is 'up' when the logged rise reading is above 50%. It is scored on the real close 1, 5 or 21 trading sessions after the logged price.</p>
+      ${table(["Horizon", "Calls logged", "Resolved", "Pending", "Right calls", "Hit rate", "Status"], track)}
+    </section>
+    <section class="section">
+      <h2>Calibration: predicted vs actual</h2>
+      <p class="caption">Average predicted chance of a rise over resolved calls, against the share of those calls where the price actually rose. A well-calibrated model has a gap near zero.</p>
+      ${table(["Horizon", "Resolved calls", "Avg predicted rise", "Actual rise rate", "Gap", "Status"], calib)}
+      <p>A hit rate means little until there are dozens of calls; near 50% is the honest expectation for a coin-flip-like reading.</p>
+    </section>
+    <section class="section">
+      <h2>Actual SPCX daily close</h2>
+      <p class="caption">Real closes ${esc(md(actual[0].date))} – ${esc(md(actual[actual.length - 1].date))} 2026 (optionskew.com; Nov 9 from stockanalysis.com; Oct 12 missing in source). Dots are logged prices; dashed lines are target levels from the latest logged price where they fit. Since the IPO: $104.83 low (Aug 3), $225.64 high.</p>
+      <figure class="chart">${fullPriceChart()}</figure>
+    </section>`;
+  }
+
   function sourcesView() {
     return `<section class="section">
       <h2>Sources</h2>
@@ -603,7 +919,7 @@
     const light = state.theme === "light";
     const tabs = `<nav class="tabs" aria-label="Sections">${TABS.map(([id, label]) => `
       <button type="button" class="tab ${id === tab ? "on" : ""}" role="tab" data-tab="${id}" aria-selected="${id === tab}">
-        ${esc(label)}${id === "today" ? `<span class="badge">${DATA.today.length}</span>` : ""}
+        ${esc(label)}${id === "today" ? `<span class="badge">${DATA.today.length}</span>` : ""}${id === "history" ? `<span class="badge">${DATA.history.length}</span>` : ""}
       </button>`).join("")}</nav>`;
     return `<header class="hero">
       <div>
@@ -624,7 +940,8 @@
     if (r.tab === "meter" && r.factor) body = factorView(r.factor);
     else if (r.tab === "meter" && r.missing) {
       body = `<button type="button" class="back" data-back>← Back to the meter</button><p class="caption">That factor is not on the board.</p>`;
-    } else if (r.tab === "meter") body = meterView();
+    }     else if (r.tab === "meter") body = meterView();
+    else if (r.tab === "history") body = historyView();
     else if (r.tab === "thesis") body = thesisView();
     else if (r.tab === "ecosystem") body = ecosystemView();
     else if (r.tab === "scenarios") body = scenariosView();
@@ -680,7 +997,7 @@
     const note = document.getElementById("weight-note");
     if (note) {
       note.textContent = custom
-        ? `Your weights move the reading from my default of ${fmtP(ANCHOR[state.target][state.h])}.`
+        ? `Your weights move the reading from my default of ${fmtP(defaultProb(state.target, state.h))}.`
         : "Tap a factor below for the why, metrics, news and sources.";
     }
     const reset = document.getElementById("reset-weights");
@@ -763,7 +1080,7 @@
       DATA = data;
       LINKS = Object.fromEntries(data.links.map((l) => [l.id, l]));
       state.weights = defaultW();
-      NET0 = [0, 1, 2].map((h) => netScore(defaultW(), h));
+      NET0 = H_KEYS.map((_, h) => netScore(defaultW(), h));
       paint({ preserve: false });
     })
     .catch(() => {
