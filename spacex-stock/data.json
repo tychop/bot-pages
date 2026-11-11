@@ -1,11 +1,11 @@
 {
-  "updated": "Tue 10 Nov 2026, 10:30 CET (Europe/Amsterdam) · market data: Nov 9 close",
+  "updated": "Wed 11 Nov 2026, 08:45 CET (Europe/Amsterdam) · market data: Nov 10 close",
   "market": {
-    "price": 142.07,
-    "capT": 1.929,
-    "change": "+5.81%",
-    "changeUsd": 7.8,
-    "changeNote": "Nov 9 close",
+    "price": 143.09,
+    "capT": 1.943,
+    "change": "+0.72%",
+    "changeUsd": 1.02,
+    "changeNote": "Nov 10 close",
     "nextCatalyst": {
       "name": "Starship Flight 15",
       "at": "2026-11-13T22:45:00.000Z",
@@ -13,9 +13,9 @@
     }
   },
   "vol": {
-    "iv": 0.658,
-    "rv20": 0.76,
-    "asOf": "Nov 9 2026 close"
+    "iv": 0.687,
+    "rv20": 0.745,
+    "asOf": "Nov 10 2026 close"
   },
   "shortWeights": {
     "starlink": [
@@ -169,6 +169,56 @@
           "top1": 0.35
         }
       }
+    },
+    {
+      "date": "2026-11-11",
+      "priceDate": "2026-11-10",
+      "price": 143.09,
+      "priceNote": "Nov 10 close",
+      "readings": {
+        "1d": {
+          "rise": 0.4871,
+          "x2": 0,
+          "x10": 0,
+          "x100": 0,
+          "top1": 0
+        },
+        "1w": {
+          "rise": 0.5023,
+          "x2": 0,
+          "x10": 0,
+          "x100": 0,
+          "top1": 0
+        },
+        "1m": {
+          "rise": 0.4892,
+          "x2": 0.0005,
+          "x10": 0,
+          "x100": 0,
+          "top1": 0
+        },
+        "1y": {
+          "rise": 0.55,
+          "x2": 0.1,
+          "x10": 0.002,
+          "x100": 0.00001,
+          "top1": 0.1
+        },
+        "5y": {
+          "rise": 0.6,
+          "x2": 0.35,
+          "x10": 0.02,
+          "x100": 0.0005,
+          "top1": 0.3
+        },
+        "10y": {
+          "rise": 0.62,
+          "x2": 0.45,
+          "x10": 0.06,
+          "x100": 0.003,
+          "top1": 0.35
+        }
+      }
     }
   ],
   "closes": [
@@ -235,6 +285,10 @@
     {
       "date": "2026-10-09",
       "close": 162.57
+    },
+    {
+      "date": "2026-10-12",
+      "close": 163.42
     },
     {
       "date": "2026-10-13",
@@ -315,6 +369,10 @@
     {
       "date": "2026-11-09",
       "close": 142.07
+    },
+    {
+      "date": "2026-11-10",
+      "close": 143.09
     }
   ],
   "factors": [
@@ -363,6 +421,26 @@
       ],
       "news": [
         {
+          "lead": "Nov 10",
+          "title": "FCC accepts SpaceX's bid for 546 nationwide 800 MHz licenses from Grain for filing; comments due Dec 1 (not yet approved)",
+          "meta": "fcc.gov"
+        },
+        {
+          "lead": "Nov 10",
+          "title": "Starlink Mini 2 with swappable battery: $999 incl. a year of Roam Unlimited, US deliveries from December",
+          "meta": "The Verge; @Starlink on X"
+        },
+        {
+          "lead": "Nov 10",
+          "title": "BT delays its Starlink broadband launch until the Ukraine 'noise' dies down",
+          "meta": "Reuters via Investing.com"
+        },
+        {
+          "lead": "Nov 10",
+          "title": "Dynamic, location-based pricing test in Missouri and Kansas; some plans to $156/month from Nov 30",
+          "meta": "Yahoo Finance"
+        },
+        {
           "lead": "Nov 9",
           "title": "Barclays: T-Mobile is the 'cleanest' carrier if SpaceX buys one",
           "meta": "Yahoo Finance"
@@ -382,7 +460,13 @@
         "q3",
         "slChart",
         "slHist",
+        "fcc800",
+        "mini2",
+        "bt",
+        "dynPrice",
         "barclays",
+        "xFcc800",
+        "xMini2",
         "xPrices"
       ],
       "chart": "subs"
@@ -433,8 +517,13 @@
       "news": [
         {
           "lead": "Nov 13",
-          "title": "Flight 15: first catch attempt of V3 booster and of the ship",
+          "title": "Flight 15: first catch attempt of V3 booster and of the ship; spacex.com still says 'pending regulatory approval'",
           "meta": "spacex.com"
+        },
+        {
+          "lead": "Nov 10",
+          "title": "Booster 22 rolled to the pad after a suspended 'squeeze test' at catch height; Berger: Friday weather looks good",
+          "meta": "Space.com; @SpaceX and @SciGuySpace on X"
         },
         {
           "lead": "Nov 5",
@@ -444,6 +533,9 @@
       ],
       "links": [
         "f15",
+        "spaceF15",
+        "xB22",
+        "xBerger",
         "nsf",
         "teslarati",
         "nova",
@@ -496,12 +588,25 @@
       ],
       "news": [
         {
+          "lead": "Nov 10",
+          "title": "SINGULUS signs turnkey HJT solar-cell line contract for Starmind satellites (Bastrop, TX); first line H1 2027, plan to scale past 100 GW of equipment",
+          "meta": "singulus.com; @SpaceX on X"
+        },
+        {
+          "lead": "Nov 10",
+          "title": "Musk on X: 'ordered 100 GW/year of HJT solar manufacturing equipment' (claim; contract value for line one reported at over €60M)",
+          "meta": "X post, unverified scale"
+        },
+        {
           "lead": "Nov 9",
           "title": "Musk at Baron: most future AI compute moves to space",
           "meta": "teslanorth.com"
         }
       ],
       "links": [
+        "singulus",
+        "xSingulus",
+        "xMuskSun",
         "fcc",
         "fwm",
         "ieee",
@@ -557,6 +662,16 @@
       "news": [
         {
           "lead": "Nov 10",
+          "title": "Security firm finds ~35,000 Grok Build apps publicly reachable, incl. 24 internal SpaceXSI apps; links pulled after Ars asked",
+          "meta": "Ars Technica"
+        },
+        {
+          "lead": "Nov 10",
+          "title": "Musk: Grok 4.8 in RL with a rewritten C/C++ stack based on Starlink software; soft rollout this week",
+          "meta": "X post / X news summary, unverified"
+        },
+        {
+          "lead": "Nov 10",
           "title": "Proposed $24B gas power plant and supercomputer at Starbase",
           "meta": "X news summary"
         },
@@ -570,6 +685,8 @@
         "q3",
         "reuters125",
         "cursor",
+        "grokLeak",
+        "xMuskStarlinkSw",
         "xStarbase",
         "baron",
         "musk2"
@@ -617,6 +734,11 @@
       ],
       "news": [
         {
+          "lead": "Nov 9",
+          "title": "Nikkei: Terafab told toolmakers it targets ~1M wafers/month by 2032 (700K memory); procurement team visited Japan",
+          "meta": "TrendForce citing Nikkei"
+        },
+        {
           "lead": "Oct 20",
           "title": "Musk: ASML and others expediting chipmaking gear for Terafab",
           "meta": "Bloomberg / Reuters"
@@ -624,6 +746,7 @@
       ],
       "links": [
         "terafab",
+        "terafabNikkei",
         "terafabSite",
         "tsmc"
       ],
@@ -731,16 +854,16 @@
       "name": "Macro and interest rates",
       "group": "External influence",
       "link": "Indirect",
-      "score": -2,
+      "score": -3,
       "w": [
         3,
         1,
         0.5
       ],
-      "line": "Fed hiked in Sep; markets price about 80% odds of a Dec hike",
+      "line": "Hot October CPI: a Dec hike is fully priced, 11% odds of 50 bp",
       "why": [
         "Long-duration growth stocks suffer most when rates rise; SPCX is priced on profits years away.",
-        "The Fed is at 3.75–4.00% after a September hike, with two dissents for another hike in October.",
+        "The Fed is at 3.75–4.00% after a September hike; October CPI rose 0.4% m/m (0.3% expected) and Waller backed a December hike.",
         "Mostly a 1-year factor; over 10 years the business matters more than the rate cycle."
       ],
       "metrics": [
@@ -753,8 +876,16 @@
           "value": "Dec 8–9, 2026"
         },
         {
-          "label": "Dec hike odds (futures)",
-          "value": "About 80% (AInvest, citing CME/Reuters)"
+          "label": "Dec hike odds (CME FedWatch, Nov 10)",
+          "value": "88.8% for 25 bp, 11.2% for 50 bp; 0% hold"
+        },
+        {
+          "label": "October CPI",
+          "value": "+0.4% m/m vs 0.3% consensus"
+        },
+        {
+          "label": "10-year Treasury yield",
+          "value": "About 4.95% after CPI (CNBC)"
         },
         {
           "label": "Core PCE inflation",
@@ -763,12 +894,19 @@
       ],
       "news": [
         {
+          "lead": "Nov 10",
+          "title": "Hotter-than-expected October CPI; markets price no chance of a December hold and 11% odds of a 50 bp hike",
+          "meta": "Investing.com, CNBC"
+        },
+        {
           "lead": "Oct 28",
           "title": "Fed holds; Cook and Hammack dissent in favor of a hike",
           "meta": "federalreserve.gov"
         }
       ],
       "links": [
+        "cpi",
+        "cnbcCpi",
         "fed",
         "cnbcFed",
         "ainvest"
@@ -806,11 +944,20 @@
           "value": "$104.83 – $225.64"
         },
         {
-          "label": "Nasdaq, Nov 9",
-          "value": "+2.3%"
+          "label": "Nasdaq, Nov 9 / Nov 10",
+          "value": "+2.3% / −0.74%"
+        },
+        {
+          "label": "Nov 10 close",
+          "value": "$143.09 (+0.72%) while Nvidia fell 5.5%"
         }
       ],
       "news": [
+        {
+          "lead": "Nov 10",
+          "title": "SPCX held a third straight gain (+0.72%) as the Nasdaq fell 0.74% after hot CPI",
+          "meta": "stockanalysis.com, IBD"
+        },
         {
           "lead": "Nov 9",
           "title": "ARK bought $96M of SPCX; Stifel Buy, $190 target",
@@ -823,6 +970,9 @@
         }
       ],
       "links": [
+        "saHist",
+        "ibdF15",
+        "invNov10",
         "ark",
         "yNasa",
         "biggo",
@@ -850,7 +1000,7 @@
       "metrics": [
         {
           "label": "Price / trailing sales",
-          "value": "60x (own arithmetic, $1.93T / $32.0B)"
+          "value": "61x (own arithmetic, $1.94T / $32.0B)"
         },
         {
           "label": "Forward P/E",
@@ -995,7 +1145,7 @@
         },
         {
           "label": "Spectrum",
-          "value": "80 MHz held by SpaceX vs almost 400 MHz at T-Mobile"
+          "value": "80 MHz held by SpaceX vs almost 400 MHz at T-Mobile; 800 MHz Grain deal accepted for filing Nov 10"
         },
         {
           "label": "Memphis",
@@ -1005,11 +1155,17 @@
       "news": [
         {
           "lead": "Nov 10",
+          "title": "FCC Wireless Bureau accepts SpaceX-Grain 800 MHz transfer for filing (docket 26-313); oppositions due Dec 8",
+          "meta": "fcc.gov"
+        },
+        {
+          "lead": "Nov 10",
           "title": "Starbase commissioners to review $24B plant tax breaks Dec 9",
           "meta": "X news summary"
         }
       ],
       "links": [
+        "fcc800",
         "fcc",
         "megapack",
         "barclays",
@@ -1054,6 +1210,16 @@
       ],
       "news": [
         {
+          "lead": "Nov 11",
+          "title": "Sen. Coons calls for a probe of Musk and Hegseth over Starlink/Starshield disruptions in Ukraine",
+          "meta": "X news summary; Combat Rated"
+        },
+        {
+          "lead": "Nov 10",
+          "title": "NASA CLPS-2 framework ($10B ceiling) includes SpaceX, plus a 2028 cislunar Starship task order",
+          "meta": "Investing.com"
+        },
+        {
           "lead": "Nov 9",
           "title": "NASA moon base awards lift space stocks",
           "meta": "IBD"
@@ -1063,7 +1229,10 @@
         "sdn",
         "amti",
         "nasa",
-        "yNasa"
+        "yNasa",
+        "invNov10",
+        "coons",
+        "xCoons"
       ],
       "chart": "none"
     },
@@ -1157,14 +1326,27 @@
           "value": "Musk's own odds: about 2%"
         }
       ],
-      "news": [],
+      "news": [
+        {
+          "lead": "Nov 11",
+          "title": "Sen. Coons (incoming Foreign Relations chair) wants Musk to 'answer' for Ukraine Starlink cuts",
+          "meta": "X news summary; Combat Rated"
+        },
+        {
+          "lead": "Nov 6",
+          "title": "Google's Don Harrison left the SpaceX board on Nov 4, 'not due to any disagreement'",
+          "meta": "sec.gov 8-K"
+        }
+      ],
       "links": [
         "owners",
         "voting",
         "late",
         "qz",
         "teslaQ3",
-        "musk2"
+        "musk2",
+        "harrison8k",
+        "coons"
       ],
       "chart": "none"
     },
@@ -1243,7 +1425,7 @@
       "metrics": [
         {
           "label": "Starship Flight 15",
-          "value": "As soon as Fri 13 Nov, 23:45 CET, pending regulatory approval"
+          "value": "As soon as Fri 13 Nov, 23:45 CET, pending regulatory approval; Booster 22 on the pad"
         },
         {
           "label": "Amazon Leo LV-01",
@@ -1265,12 +1447,19 @@
       "news": [
         {
           "lead": "Nov 10",
+          "title": "Booster 22 on the pad; Flight 15 on track for Fri 13 Nov",
+          "meta": "@SpaceX on X; Space.com"
+        },
+        {
+          "lead": "Nov 10",
           "title": "SpaceX targets historic double catch on Flight 15",
           "meta": "X news summary"
         }
       ],
       "links": [
         "f15",
+        "spaceF15",
+        "xB22",
         "teslarati",
         "verge",
         "lockup",
@@ -1289,24 +1478,24 @@
         0,
         0
       ],
-      "line": "+15% in two sessions, still below the Oct 6 close; options price ±$5.89 a day",
+      "line": "Three-day advance to $143.09, still below the Oct 6 close; options price ±$6.19 a day",
       "why": [
-        "Short-term moves are dominated by volatility: implied volatility is 65.8% a year and the last 20 sessions realized 76.0%.",
-        "The two-day rebound gives slight positive momentum; the 1-month trend is still down from $171.92 on Oct 6.",
+        "Short-term moves are dominated by volatility: implied volatility is 68.7% a year and the last 20 sessions realized 74.5%.",
+        "Three straight gains give slight positive momentum; the 1-month trend is still down from $171.92 on Oct 6.",
         "Puts cost 9.19 volatility points more than calls and the term structure is inverted: traders pay for near-term downside protection around dated events."
       ],
       "metrics": [
         {
           "label": "At-the-money implied volatility",
-          "value": "65.8% (Nov 9 close); IV rank 27"
+          "value": "68.7% (Nov 10 close); IV rank 30"
         },
         {
           "label": "Realized volatility, 20 sessions",
-          "value": "76.0%"
+          "value": "74.5%"
         },
         {
           "label": "Options-implied move",
-          "value": "±$5.89 a day, ±$13.17 a week, ±$27.00 a month"
+          "value": "±$6.19 a day, ±$13.85 a week, ±$28.38 a month"
         },
         {
           "label": "25-delta put skew",
@@ -1314,10 +1503,15 @@
         },
         {
           "label": "Recent closes",
-          "value": "$171.92 Oct 6, $123.62 Nov 5, $142.07 Nov 9"
+          "value": "$171.92 Oct 6, $123.62 Nov 5, $142.07 Nov 9, $143.09 Nov 10"
         }
       ],
       "news": [
+        {
+          "lead": "Nov 10",
+          "title": "+0.72% to $143.09, inside the ±4.15% options-implied daily move",
+          "meta": "flowmonkey.net"
+        },
         {
           "lead": "Nov 9",
           "title": "Biggest two-day gain since early October",
@@ -1343,31 +1537,41 @@
         0,
         0
       ],
-      "line": "Post volume spiked in the selloff; this week's X stories lean positive",
+      "line": "Post volume steady near 6.7K a day; X stories still lean positive",
       "why": [
         "Posts mentioning SPCX peaked at 12,233 on Nov 4 during the post-midterm selloff, then eased to 6,665 on Nov 9 as the stock rallied.",
-        "Of 8 X trending stories on SpaceX since Nov 8, 6 are upbeat, 1 negative (Starlink price hikes) and 1 a mostly unconfirmed rumor (own tally).",
+        "Of 7 SpaceX-specific X news stories in the 24h to Nov 11, 4 are upbeat (Singulus, 800 MHz, Booster 22, Mini 2), 2 negative (Coons probe, Gibney film claims) and 1 neutral (Grok stack rewrite) (own tally).",
         "A rough read, not a scored sentiment model; retail mood mainly matters over days."
       ],
       "metrics": [
         {
-          "label": "Posts mentioning SPCX, 7 days",
-          "value": "55,845 (X recent post counts, Nov 3–10 UTC)"
+          "label": "Posts mentioning SPCX, Nov 5–11",
+          "value": "45,604 (X recent post counts, to Nov 11 07:18 UTC)"
         },
         {
           "label": "Peak day",
           "value": "Nov 4: 12,233"
         },
         {
-          "label": "Nov 9",
-          "value": "6,665"
+          "label": "Nov 9 / Nov 10 (UTC)",
+          "value": "6,635 / 6,825"
         },
         {
-          "label": "Trending stories, Nov 8–10",
-          "value": "6 upbeat, 1 negative, 1 rumor"
+          "label": "SpaceX X news stories, 24h to Nov 11",
+          "value": "4 upbeat, 2 negative, 1 neutral"
         }
       ],
       "news": [
+        {
+          "lead": "Nov 10",
+          "title": "@elonmusk 'sentient sun' Starmind solar post: 2.2M views, 26K likes; @SawyerMerritt 800 MHz post ~5.7K likes",
+          "meta": "X posts"
+        },
+        {
+          "lead": "Nov 11",
+          "title": "Account flags a $584K Nov 27 $128 put block ahead of Flight 15 (unverified)",
+          "meta": "X post"
+        },
         {
           "lead": "Nov 9",
           "title": "SpaceX shares climb on analyst upgrade and AI growth outlook",
@@ -1380,6 +1584,10 @@
         }
       ],
       "links": [
+        "xMuskSun",
+        "xFcc800",
+        "xCoons",
+        "xPuts",
         "xUpgrade",
         "xF15",
         "xPrices",
@@ -1391,43 +1599,55 @@
   "today": [
     {
       "lead": "Price",
-      "title": "SPCX +5.81% to $142.07; two-day rebound from the Nov 5 low of $123.62",
+      "title": "SPCX +0.72% (+$1.02) to $143.09 on Nov 10, a third straight gain while the Nasdaq fell 0.74% and Nvidia 5.5%",
       "meta": "stockanalysis.com"
     },
     {
-      "lead": "Investors",
-      "title": "ARK Invest bought $96M of SPCX; Stifel kept Buy with a $190 target",
-      "meta": "Investing.com"
+      "lead": "Score change",
+      "title": "Macro −2 → −3: hot October CPI (+0.4% m/m); CME prices 88.8% for a 25 bp December hike and 11.2% for 50 bp, no hold; 10-year near 4.95%",
+      "meta": "Investing.com, CNBC"
     },
     {
-      "lead": "Contracts",
-      "title": "NASA awarded over $10B in moon base contracts; SpaceX among winners",
-      "meta": "IBD, Yahoo Finance"
+      "lead": "Orbital compute",
+      "title": "SINGULUS contract: turnkey HJT solar-cell line for Starmind satellites in Bastrop, first line H1 2027, plan to scale past 100 GW of equipment. Real procurement, but no score change: cost and physics questions remain",
+      "meta": "singulus.com; @SpaceX, @elonmusk on X"
     },
     {
       "lead": "Connectivity",
-      "title": "Barclays: T-Mobile the 'cleanest' fit for a SpaceX carrier acquisition",
-      "meta": "Yahoo Finance"
+      "title": "FCC accepted SpaceX's purchase of 546 nationwide 800 MHz licenses from Grain for filing (not approval); Starlink Mini 2 launched; BT delays its Starlink launch over Ukraine",
+      "meta": "fcc.gov, The Verge, Reuters"
     },
     {
-      "lead": "Compute",
-      "title": "Proposed $24B gas power plant and supercomputer at Starbase; review Dec 9",
-      "meta": "X news summary"
+      "lead": "Starship",
+      "title": "Booster 22 on the pad after catch testing; Flight 15 still Fri 13 Nov 23:45 CET, 'pending regulatory approval' on spacex.com",
+      "meta": "spacex.com, Space.com, @SpaceX on X"
     },
     {
-      "lead": "Holders",
-      "title": "Alphabet's filing: 555M SpaceX shares worth $83.7B at Sep 30",
-      "meta": "X news summary"
+      "lead": "Risks",
+      "title": "Grok Build link-sharing leak exposed 24 internal SpaceXSI apps (Ars); Sen. Coons seeks probe of Musk/Hegseth over Ukraine Starlink cuts (X news, not yet confirmed by a primary source)",
+      "meta": "Ars Technica; X news summary"
+    },
+    {
+      "lead": "From X",
+      "title": "SPCX post volume steady (6,825 on Nov 10 vs 6,635 on Nov 9); Musk's 'sentient sun' post drew 2.2M views; an unverified $584K put block for Nov 27 was flagged",
+      "meta": "X post counts and posts"
     }
   ],
   "todayLinks": [
-    "sa",
-    "ark",
-    "nasa",
-    "yNasa",
-    "barclays",
-    "xStarbase",
-    "xAlphabet"
+    "saHist",
+    "cpi",
+    "cnbcCpi",
+    "singulus",
+    "xSingulus",
+    "xMuskSun",
+    "fcc800",
+    "mini2",
+    "bt",
+    "spaceF15",
+    "xB22",
+    "grokLeak",
+    "xCoons",
+    "xPuts"
   ],
   "catalysts": [
     {
@@ -1441,6 +1661,12 @@
       "label": "13 Nov",
       "title": "Amazon Leo LV-01, first Vulcan launch, 40 satellites",
       "meta": "Orbital Radar"
+    },
+    {
+      "at": "2026-12-01T12:00:00.000Z",
+      "label": "1 Dec",
+      "title": "FCC comment deadline on SpaceX-Grain 800 MHz deal (oppositions Dec 8)",
+      "meta": "fcc.gov"
     },
     {
       "at": "2026-12-03T12:00:00.000Z",
@@ -1457,8 +1683,8 @@
     {
       "at": "2026-12-09T19:00:00.000Z",
       "label": "9 Dec",
-      "title": "Fed rate decision; about 80% odds of a hike priced",
-      "meta": "AInvest"
+      "title": "Fed rate decision; hike fully priced (88.8% 25 bp, 11.2% 50 bp)",
+      "meta": "CME FedWatch via Investing.com"
     },
     {
       "at": "2026-12-09T12:00:00.000Z",
@@ -1489,6 +1715,12 @@
       "label": "May–Jun 2027",
       "title": "Terafab first SRAM test chip",
       "meta": "Reuters"
+    },
+    {
+      "at": "2027-06-30T12:00:00.000Z",
+      "label": "H1 2027",
+      "title": "First SINGULUS HJT solar-cell line for Starmind delivered",
+      "meta": "singulus.com"
     },
     {
       "at": "2027-06-12T12:00:00.000Z",
@@ -1545,7 +1777,8 @@
       ],
       "against": [
         "Consumer ARPU fell from $83 to $69 a month.",
-        "Amazon Leo and two Chinese constellations are coming; T-Mobile refuses a SpaceX MVNO."
+        "Amazon Leo and two Chinese constellations are coming; T-Mobile refuses a SpaceX MVNO.",
+        "BT is holding back its Starlink launch over the Ukraine controversy (Nov 10)."
       ]
     },
     {
@@ -1571,6 +1804,7 @@
       "tone": "danger",
       "for": [
         "FCC filing accepted; prospectus calls 10 GW/year commercially attractive.",
+        "First priced Starmind supply deal: SINGULUS solar-cell line, delivery H1 2027 (Nov 10).",
         "Only SpaceX has heavy reusable launch, a satellite factory and a laser mesh together."
       ],
       "against": [
@@ -1601,7 +1835,7 @@
       "status": "Possible, not likely",
       "tone": "warning",
       "for": [
-        "Already #6–7 in the world at $1.93T; needs about 2.6x to pass Apple's $5.10T.",
+        "Already #6–7 in the world at $1.94T; needs about 2.6x to pass Apple's $5.10T.",
         "Revenue tripled from Q1 to Q3 2026."
       ],
       "against": [
@@ -1614,540 +1848,708 @@
     {
       "id": "sa",
       "title": "SPCX stock price and overview",
-      "href": "https://stockanalysis.com/stocks/spcx/",
       "site": "stockanalysis.com",
-      "date": "Nov 9, 2026"
+      "date": "Nov 10, 2026",
+      "href": "https://stockanalysis.com/stocks/spcx/"
+    },
+    {
+      "id": "saHist",
+      "title": "SPCX daily price history",
+      "site": "stockanalysis.com",
+      "date": "Nov 10, 2026",
+      "href": "https://stockanalysis.com/stocks/spcx/history/"
     },
     {
       "id": "saCap",
       "title": "SPCX market cap history",
-      "href": "https://stockanalysis.com/stocks/spcx/market-cap/",
       "site": "stockanalysis.com",
-      "date": "Nov 9, 2026"
+      "date": "Nov 9, 2026",
+      "href": "https://stockanalysis.com/stocks/spcx/market-cap/"
     },
     {
       "id": "cmc",
       "title": "SpaceX market capitalization",
-      "href": "https://companiesmarketcap.com/spacex/marketcap/",
       "site": "companiesmarketcap.com",
-      "date": "Nov 9, 2026"
+      "date": "Nov 9, 2026",
+      "href": "https://companiesmarketcap.com/spacex/marketcap/"
     },
     {
       "id": "q3",
       "title": "SpaceX Q3 2026 earnings call transcript",
-      "href": "https://www.fool.com/earnings/call-transcripts/2026/10/20/spacex-spcx-q3-2026-earnings-call-transcript/",
       "site": "fool.com",
-      "date": "Oct 20, 2026"
+      "date": "Oct 20, 2026",
+      "href": "https://www.fool.com/earnings/call-transcripts/2026/10/20/spacex-spcx-q3-2026-earnings-call-transcript/"
     },
     {
       "id": "slChart",
       "title": "Starlink subscribers, revenue and ARPU",
-      "href": "https://spacexchart.com/starlink",
       "site": "spacexchart.com",
-      "date": "Nov 2026"
+      "date": "Nov 2026",
+      "href": "https://spacexchart.com/starlink"
     },
     {
       "id": "slHist",
       "title": "Starlink subscriber statistics 2026",
-      "href": "https://www.companieshistory.com/starlink-subscribers/",
       "site": "companieshistory.com",
-      "date": "Oct 2026"
+      "date": "Oct 2026",
+      "href": "https://www.companieshistory.com/starlink-subscribers/"
     },
     {
       "id": "barclays",
       "title": "Barclays: T-Mobile cleanest fit for a SpaceX buyout",
-      "href": "https://finance.yahoo.com/markets/stocks/articles/spcx-stock-logs-2-day-042605532.html",
       "site": "Yahoo Finance",
-      "date": "Nov 9, 2026"
+      "date": "Nov 9, 2026",
+      "href": "https://finance.yahoo.com/markets/stocks/articles/spcx-stock-logs-2-day-042605532.html"
     },
     {
       "id": "xPrices",
       "title": "Starlink users frustrated by price hikes (X news)",
-      "href": "https://x.com/i/trending/2119427748460646497",
       "site": "x.com",
-      "date": "Nov 9, 2026"
+      "date": "Nov 9, 2026",
+      "href": "https://x.com/i/trending/2119427748460646497"
     },
     {
       "id": "reutersXai",
       "title": "SpaceX-xAI merger bets on data centers in space",
-      "href": "https://www.reuters.com/business/aerospace-defense/musks-mega-merger-spacex-xai-bets-sci-fi-future-data-centers-space-2026-02-04/",
       "site": "Reuters",
-      "date": "Feb 4, 2026"
+      "date": "Feb 4, 2026",
+      "href": "https://www.reuters.com/business/aerospace-defense/musks-mega-merger-spacex-xai-bets-sci-fi-future-data-centers-space-2026-02-04/"
     },
     {
       "id": "reuters125",
       "title": "SpaceX acquires xAI, combined $1.25T",
-      "href": "https://www.reuters.com/business/musks-spacex-merge-with-xai-combined-valuation-125-trillion-bloomberg-news-2026-02-02/",
       "site": "Reuters",
-      "date": "Feb 2, 2026"
+      "date": "Feb 2, 2026",
+      "href": "https://www.reuters.com/business/musks-spacex-merge-with-xai-combined-valuation-125-trillion-bloomberg-news-2026-02-02/"
     },
     {
       "id": "ars",
       "title": "SpaceX acquires xAI, plans 1M satellite constellation",
-      "href": "https://arstechnica.com/ai/2026/02/spacex-acquires-xai-plans-1-million-satellite-constellation-to-power-it/",
       "site": "Ars Technica",
-      "date": "Feb 2026"
+      "date": "Feb 2026",
+      "href": "https://arstechnica.com/ai/2026/02/spacex-acquires-xai-plans-1-million-satellite-constellation-to-power-it/"
     },
     {
       "id": "fcc",
       "title": "FCC accepts SpaceX orbital data center application",
-      "href": "https://www.fcc.gov/document/sb-accepts-filing-spacexs-application-orbital-data-centers",
       "site": "fcc.gov",
-      "date": "Feb 4, 2026"
+      "date": "Feb 4, 2026",
+      "href": "https://www.fcc.gov/document/sb-accepts-filing-spacexs-application-orbital-data-centers"
     },
     {
       "id": "ieee",
       "title": "Why orbital data centers are harder than Silicon Valley thinks",
-      "href": "https://spectrum.ieee.org/orbital-data-centers-heat",
       "site": "IEEE Spectrum",
-      "date": "Jun 11, 2026"
+      "date": "Jun 11, 2026",
+      "href": "https://spectrum.ieee.org/orbital-data-centers-heat"
     },
     {
       "id": "fwm",
       "title": "SpaceX seeks 1M orbital data center satellites (prospectus quotes)",
-      "href": "https://fourweekmba.com/ai-spacex-seeks-1m-orbital-data-center-satellites-90x-starlink/",
       "site": "FourWeekMBA",
-      "date": "2026"
+      "date": "2026",
+      "href": "https://fourweekmba.com/ai-spacex-seeks-1m-orbital-data-center-satellites-90x-starlink/"
     },
     {
       "id": "gao",
       "title": "GAO spotlight: data centers in space",
-      "href": "https://www.gao.gov/assets/gao-26-109012.pdf",
       "site": "gao.gov",
-      "date": "2026"
+      "date": "2026",
+      "href": "https://www.gao.gov/assets/gao-26-109012.pdf"
     },
     {
       "id": "cursor",
       "title": "SpaceX completes Cursor acquisition (8-K)",
-      "href": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026056945/spcx-20260814.htm",
       "site": "sec.gov",
-      "date": "Aug 14, 2026"
+      "date": "Aug 14, 2026",
+      "href": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026056945/spcx-20260814.htm"
     },
     {
       "id": "f15",
       "title": "Starship Flight 15",
-      "href": "https://www.spacex.com/launches/starship-flight-15",
       "site": "spacex.com",
-      "date": "Nov 2026"
+      "date": "Nov 2026",
+      "href": "https://www.spacex.com/launches/starship-flight-15"
     },
     {
       "id": "nsf",
       "title": "Starship makes orbit, Flight 15 preps",
-      "href": "https://www.nasaspaceflight.com/2026/09/starship-14-orbit-flight-15/",
       "site": "NASASpaceFlight",
-      "date": "Sep 2026"
+      "date": "Sep 2026",
+      "href": "https://www.nasaspaceflight.com/2026/09/starship-14-orbit-flight-15/"
     },
     {
       "id": "teslarati",
       "title": "SpaceX will attempt Starship double catch on Flight 15",
-      "href": "https://www.teslarati.com/spacex-perform-starship-double-catch-attempt-flight-15/",
       "site": "Teslarati",
-      "date": "Nov 2026"
+      "date": "Nov 2026",
+      "href": "https://www.teslarati.com/spacex-perform-starship-double-catch-attempt-flight-15/"
     },
     {
       "id": "nasa",
       "title": "NASA awards $10B in moon base contracts",
-      "href": "https://www.investors.com/news/spacex-blue-origin-nasa-moon-base-contracts-firefly-voyager-lockheed-billion-space-stocks/",
       "site": "Investor's Business Daily",
-      "date": "Nov 9, 2026"
+      "date": "Nov 9, 2026",
+      "href": "https://www.investors.com/news/spacex-blue-origin-nasa-moon-base-contracts-firefly-voyager-lockheed-billion-space-stocks/"
     },
     {
       "id": "nova",
       "title": "Falcon 9 launches in 2026",
-      "href": "https://nova-maind.com/launches/vehicle/falcon-9",
       "site": "nova-maind.com",
-      "date": "Nov 2026"
+      "date": "Nov 2026",
+      "href": "https://nova-maind.com/launches/vehicle/falcon-9"
     },
     {
       "id": "q2",
       "title": "SpaceX Q2 2026 earnings release (8-K)",
-      "href": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026052515/earningsreleaseq22608042.htm",
       "site": "sec.gov",
-      "date": "Aug 4, 2026"
+      "date": "Aug 4, 2026",
+      "href": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026052515/earningsreleaseq22608042.htm"
     },
     {
       "id": "s1",
       "title": "SpaceX S-1",
-      "href": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026036936/spaceexplorationtechnologi.htm",
       "site": "sec.gov",
-      "date": "May 2026"
+      "date": "May 2026",
+      "href": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026036936/spaceexplorationtechnologi.htm"
     },
     {
       "id": "zacks",
       "title": "Continued rebound after Musk's revenue forecast? (Zacks)",
-      "href": "https://finance.yahoo.com/markets/stocks/articles/continued-rebound-spacex-stock-imminent-185600427.html",
       "site": "Yahoo Finance",
-      "date": "Nov 9, 2026"
+      "date": "Nov 9, 2026",
+      "href": "https://finance.yahoo.com/markets/stocks/articles/continued-rebound-spacex-stock-imminent-185600427.html"
     },
     {
       "id": "musk2",
       "title": "Musk gave the top end of his forecast about a 2% chance",
-      "href": "https://www.fool.com/investing/2026/11/09/elon-musk-just-gave-the-top-end-of-his-spacex-revenue-forecast-about-a-2-chance-his-best-guess-sits-at-the-bottom-end/",
       "site": "fool.com",
-      "date": "Nov 9, 2026"
+      "date": "Nov 9, 2026",
+      "href": "https://www.fool.com/investing/2026/11/09/elon-musk-just-gave-the-top-end-of-his-spacex-revenue-forecast-about-a-2-chance-his-best-guess-sits-at-the-bottom-end/"
     },
     {
       "id": "baron",
       "title": "Baron Investment Conference recap",
-      "href": "https://teslanorth.com/2026/11/06/baron-conference-full-recap/",
       "site": "teslanorth.com",
-      "date": "Nov 6, 2026"
+      "date": "Nov 6, 2026",
+      "href": "https://teslanorth.com/2026/11/06/baron-conference-full-recap/"
     },
     {
       "id": "late",
       "title": "Elon Musk dreams big but often delivers late",
-      "href": "https://www.reuters.com/business/autos-transportation/elon-musks-late-unfulfilled-tesla-promises-2025-04-22/",
       "site": "Reuters",
-      "date": "Apr 22, 2025"
+      "date": "Apr 22, 2025",
+      "href": "https://www.reuters.com/business/autos-transportation/elon-musks-late-unfulfilled-tesla-promises-2025-04-22/"
     },
     {
       "id": "qz",
       "title": "Elon Musk's 10 worst predictions and broken promises",
-      "href": "https://qz.com/elon-musks-worst-predictions-promises-1851410720",
-      "site": "Quartz"
+      "site": "Quartz",
+      "href": "https://qz.com/elon-musks-worst-predictions-promises-1851410720"
     },
     {
       "id": "teslaQ3",
       "title": "Tesla Q3 2026 update",
-      "href": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026066738/exhibit9914.htm",
       "site": "sec.gov",
-      "date": "Oct 21, 2026"
+      "date": "Oct 21, 2026",
+      "href": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026066738/exhibit9914.htm"
     },
     {
       "id": "terafab",
       "title": "Terafab targets 2028 for volume chip production",
-      "href": "https://www.investing.com/news/stock-market-news/spacex-and-teslas-terafab-targets-2028-for-volume-chip-production-musk-says-4961351",
       "site": "Reuters via Investing.com",
-      "date": "Oct 20, 2026"
+      "date": "Oct 20, 2026",
+      "href": "https://www.investing.com/news/stock-market-news/spacex-and-teslas-terafab-targets-2028-for-volume-chip-production-musk-says-4961351"
     },
     {
       "id": "terafabSite",
       "title": "Terafab plant takes shape in Grimes County",
-      "href": "https://spectrumlocalnews.com/tx/austin/news/2026/09/28/terafab-semiconductor-plant-takes-shape-in-grimes-county",
       "site": "Spectrum News",
-      "date": "Sep 28, 2026"
+      "date": "Sep 28, 2026",
+      "href": "https://spectrumlocalnews.com/tx/austin/news/2026/09/28/terafab-semiconductor-plant-takes-shape-in-grimes-county"
     },
     {
       "id": "tsmc",
       "title": "Musk says TSMC won't run Terafab",
-      "href": "https://www.investing.com/news/stock-market-news/intel-to-keep-working-on-musks-terafab-chipmaking-venture-bloomberg-news-reports-4935609",
       "site": "Reuters via Investing.com",
-      "date": "Oct 7, 2026"
+      "date": "Oct 7, 2026",
+      "href": "https://www.investing.com/news/stock-market-news/intel-to-keep-working-on-musks-terafab-chipmaking-venture-bloomberg-news-reports-4935609"
     },
     {
       "id": "megapack",
       "title": "SpaceX spent more on Tesla Megapacks in Q2",
-      "href": "https://www.cnbc.com/2026/08/05/spacex-tesla-megapack-ai-data-centers.html",
       "site": "CNBC",
-      "date": "Aug 5, 2026"
+      "date": "Aug 5, 2026",
+      "href": "https://www.cnbc.com/2026/08/05/spacex-tesla-megapack-ai-data-centers.html"
     },
     {
       "id": "links",
       "title": "SpaceX reveals Musk company links",
-      "href": "https://www.investing.com/news/stock-market-news/spacex-reveals-musk-company-links-from-cybertrucks-and-jets-to-stock-investments-4702898",
       "site": "Reuters via Investing.com",
-      "date": "May 2026"
+      "date": "May 2026",
+      "href": "https://www.investing.com/news/stock-market-news/spacex-reveals-musk-company-links-from-cybertrucks-and-jets-to-stock-investments-4702898"
     },
     {
       "id": "verge",
       "title": "Tesla and SpaceX are discussing a possible merger",
-      "href": "https://www.theverge.com/science/1014984/spacex-tesla-merger-elon-musk-special-committees",
       "site": "The Verge",
-      "date": "Oct 2026"
+      "date": "Oct 2026",
+      "href": "https://www.theverge.com/science/1014984/spacex-tesla-merger-elon-musk-special-committees"
     },
     {
       "id": "cnbcMerger",
       "title": "SpaceX-Tesla merger chatter after earnings",
-      "href": "https://www.cnbc.com/2026/10/23/spacex-tesla-merger-chatter-takes-center-stage-after-earnings.html",
       "site": "CNBC",
-      "date": "Oct 23, 2026"
+      "date": "Oct 23, 2026",
+      "href": "https://www.cnbc.com/2026/10/23/spacex-tesla-merger-chatter-takes-center-stage-after-earnings.html"
     },
     {
       "id": "muskPay",
       "title": "Musk's pay under a SpaceX-Tesla merger",
-      "href": "https://ca.investing.com/news/stock-market-news/musks-pay-under-a-spacextesla-merger-voting-control-but-no-1-trillion-payday-4924853",
       "site": "Reuters via Investing.com",
-      "date": "Nov 3, 2026"
+      "date": "Nov 3, 2026",
+      "href": "https://ca.investing.com/news/stock-market-news/musks-pay-under-a-spacextesla-merger-voting-control-but-no-1-trillion-payday-4924853"
     },
     {
       "id": "optimus",
       "title": "Tesla Optimus production starts in Fremont",
-      "href": "https://roboticaguide.com/tesla-optimus-production-fremont-q3-2026/",
       "site": "roboticaguide.com",
-      "date": "Oct 2026"
+      "date": "Oct 2026",
+      "href": "https://roboticaguide.com/tesla-optimus-production-fremont-q3-2026/"
     },
     {
       "id": "tesla10q",
       "title": "Tesla 10-Q related party note",
-      "href": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026026673/R20.htm",
       "site": "sec.gov",
-      "date": "Q1 2026"
+      "date": "Q1 2026",
+      "href": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026026673/R20.htm"
     },
     {
       "id": "lockup",
       "title": "SpaceX's December lockup is nearly the biggest unlock ever",
-      "href": "https://www.fool.com/investing/2026/11/07/spacexs-december-lockup-is-nearly-the-biggest-shar/",
       "site": "fool.com",
-      "date": "Nov 7, 2026"
+      "date": "Nov 7, 2026",
+      "href": "https://www.fool.com/investing/2026/11/07/spacexs-december-lockup-is-nearly-the-biggest-shar/"
     },
     {
       "id": "owners",
       "title": "Who owns SpaceX: cap table and voting power",
-      "href": "https://spacexchart.com/ownership",
       "site": "spacexchart.com",
-      "date": "Nov 4, 2026"
+      "date": "Nov 4, 2026",
+      "href": "https://spacexchart.com/ownership"
     },
     {
       "id": "voting",
       "title": "Musk and insiders keep voting control after IPO",
-      "href": "https://www.reuters.com/world/musk-insiders-retain-voting-control-spacex-after-ipo-filing-shows-2026-04-21/",
       "site": "Reuters",
-      "date": "Apr 21, 2026"
+      "date": "Apr 21, 2026",
+      "href": "https://www.reuters.com/world/musk-insiders-retain-voting-control-spacex-after-ipo-filing-shows-2026-04-21/"
     },
     {
       "id": "leo",
       "title": "Amazon Leo targets Vulcan debut",
-      "href": "https://orbitalradar.com/blog/orbital-briefing-2026-11-09",
       "site": "Orbital Radar",
-      "date": "Nov 9, 2026"
+      "date": "Nov 9, 2026",
+      "href": "https://orbitalradar.com/blog/orbital-briefing-2026-11-09"
     },
     {
       "id": "china",
       "title": "China's mega-constellations",
-      "href": "https://www.china-in-space.com/p/chinas-mega-constellations-mega-article",
       "site": "china-in-space.com",
-      "date": "Nov 2026"
+      "date": "Nov 2026",
+      "href": "https://www.china-in-space.com/p/chinas-mega-constellations-mega-article"
     },
     {
       "id": "blue",
       "title": "Blue Origin pushes New Glenn return to 2027",
-      "href": "https://www.cnbc.com/2026/11/05/blue-origin-launch-new-glenn.html",
       "site": "CNBC",
-      "date": "Nov 5, 2026"
+      "date": "Nov 5, 2026",
+      "href": "https://www.cnbc.com/2026/11/05/blue-origin-launch-new-glenn.html"
     },
     {
       "id": "ng3",
       "title": "Blue Origin lands reused New Glenn booster",
-      "href": "https://www.reuters.com/business/media-telecom/blue-origin-says-it-has-landed-reused-new-glenn-rocket-booster-2026-04-19/",
       "site": "Reuters",
-      "date": "Apr 19, 2026"
+      "date": "Apr 19, 2026",
+      "href": "https://www.reuters.com/business/media-telecom/blue-origin-says-it-has-landed-reused-new-glenn-rocket-booster-2026-04-19/"
     },
     {
       "id": "ark",
       "title": "Why SpaceX stock is rallying today (ARK, Stifel)",
-      "href": "https://www.investing.com/news/stock-market-news/why-is-space-exploration-technologies-stock-rallying-today-93CH-5012727",
       "site": "Investing.com",
-      "date": "Nov 9, 2026"
+      "date": "Nov 9, 2026",
+      "href": "https://www.investing.com/news/stock-market-news/why-is-space-exploration-technologies-stock-rallying-today-93CH-5012727"
     },
     {
       "id": "yNasa",
       "title": "SpaceX, Rocket Lab jump on NASA moon base awards",
-      "href": "https://finance.yahoo.com/markets/article/spacex-rocket-lab-blast-higher-as-nasa-hands-out-10-billion-in-moon-base-awards-164320855.html",
       "site": "Yahoo Finance",
-      "date": "Nov 9, 2026"
+      "date": "Nov 9, 2026",
+      "href": "https://finance.yahoo.com/markets/article/spacex-rocket-lab-blast-higher-as-nasa-hands-out-10-billion-in-moon-base-awards-164320855.html"
     },
     {
       "id": "xStarbase",
       "title": "$24B Starbase power plant and supercomputer (X news)",
-      "href": "https://x.com/i/trending/2119577365370249712",
       "site": "x.com",
-      "date": "Nov 10, 2026"
+      "date": "Nov 10, 2026",
+      "href": "https://x.com/i/trending/2119577365370249712"
     },
     {
       "id": "xAlphabet",
       "title": "Alphabet boosts SpaceX stake to $83.7B (X news)",
-      "href": "https://x.com/i/trending/2119097903692029976",
       "site": "x.com",
-      "date": "Nov 8, 2026"
+      "date": "Nov 8, 2026",
+      "href": "https://x.com/i/trending/2119097903692029976"
     },
     {
       "id": "fed",
       "title": "FOMC statement, Oct 28 2026",
-      "href": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
       "site": "federalreserve.gov",
-      "date": "Oct 28, 2026"
+      "date": "Oct 28, 2026",
+      "href": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm"
     },
     {
       "id": "cnbcFed",
       "title": "Fed holds rates steady",
-      "href": "https://www.cnbc.com/2026/10/28/fed-interest-rate-decision-october-2026.html",
       "site": "CNBC",
-      "date": "Oct 28, 2026"
+      "date": "Oct 28, 2026",
+      "href": "https://www.cnbc.com/2026/10/28/fed-interest-rate-decision-october-2026.html"
     },
     {
       "id": "ainvest",
       "title": "The number that matters is a December hike",
-      "href": "https://www.ainvest.com/news/fed-decision-week-number-matters-december-hike-2611/",
       "site": "AInvest",
-      "date": "Nov 2026"
+      "date": "Nov 2026",
+      "href": "https://www.ainvest.com/news/fed-decision-week-number-matters-december-hike-2611/"
     },
     {
       "id": "biggo",
       "title": "SpaceX slides below IPO price as Democratic sweep rattles AI trade",
-      "href": "https://finance.biggo.com/news/99784aea-8d15-4f99-83ec-d79033aeb7b2",
       "site": "BigGo Finance",
-      "date": "Nov 2026"
+      "date": "Nov 2026",
+      "href": "https://finance.biggo.com/news/99784aea-8d15-4f99-83ec-d79033aeb7b2"
     },
     {
       "id": "sdn",
       "title": "Space Force awards SpaceX $2.29B data network contract",
-      "href": "https://www.reuters.com/science/us-space-force-awards-spacex-229-billion-contract-military-space-data-network-2026-05-26/",
       "site": "Reuters",
-      "date": "May 26, 2026"
+      "date": "May 26, 2026",
+      "href": "https://www.reuters.com/science/us-space-force-awards-spacex-229-billion-contract-military-space-data-network-2026-05-26/"
     },
     {
       "id": "amti",
       "title": "SpaceX wins $4.16B Space Force tracking-satellite contract",
-      "href": "https://www.cnbc.com/2026/05/29/spacex-wins-4point16-billion-space-force-contract-for-threat-detection-satellites.html",
       "site": "CNBC",
-      "date": "May 29, 2026"
+      "date": "May 29, 2026",
+      "href": "https://www.cnbc.com/2026/05/29/spacex-wins-4point16-billion-space-force-contract-for-threat-detection-satellites.html"
     },
     {
       "id": "ndx",
       "title": "SpaceX to join the Nasdaq-100 on July 7",
-      "href": "https://www.nasdaq.com/press-release/space-exploration-technologies-corporation-join-nasdaq-100-indexr-beginning-july-7",
       "site": "nasdaq.com",
-      "date": "Jun 26, 2026"
+      "date": "Jun 26, 2026",
+      "href": "https://www.nasdaq.com/press-release/space-exploration-technologies-corporation-join-nasdaq-100-indexr-beginning-july-7"
     },
     {
       "id": "foolSP",
       "title": "SpaceX can't join the S&P 500 before June 2027",
-      "href": "https://www.fool.com/investing/2026/09/23/spacex-can-t-join-the-s-and-p-500-before-june-2027-and-its-losses-could-keep-it-out-longer/",
       "site": "fool.com",
-      "date": "Sep 23, 2026"
+      "date": "Sep 23, 2026",
+      "href": "https://www.fool.com/investing/2026/09/23/spacex-can-t-join-the-s-and-p-500-before-june-2027-and-its-losses-could-keep-it-out-longer/"
     },
     {
       "id": "reutersSP",
       "title": "S&P keeps rules, blocks early SpaceX entry",
-      "href": "https://www.reuters.com/business/finance/sp-global-keeps-fast-entry-proposal-unchanged-spacex-listing-looms-2026-06-04/",
       "site": "Reuters",
-      "date": "Jun 4, 2026"
+      "date": "Jun 4, 2026",
+      "href": "https://www.reuters.com/business/finance/sp-global-keeps-fast-entry-proposal-unchanged-spacex-listing-looms-2026-06-04/"
     },
     {
       "id": "panke",
       "title": "SPCX S&P 500 checklist and Nasdaq-100 weight",
-      "href": "https://tape.panke.app/sp500",
       "site": "tape.panke.app",
-      "date": "Nov 9, 2026"
+      "date": "Nov 9, 2026",
+      "href": "https://tape.panke.app/sp500"
     },
     {
       "id": "visratio",
       "title": "US companies ranked by market cap",
-      "href": "https://visratio.com/rankings/market-cap/",
       "site": "visratio.com",
-      "date": "Nov 9, 2026"
+      "date": "Nov 9, 2026",
+      "href": "https://visratio.com/rankings/market-cap/"
     },
     {
       "id": "foolLargest",
       "title": "Largest companies by market cap",
-      "href": "https://www.fool.com/research/largest-companies-by-market-cap/",
       "site": "fool.com",
-      "date": "Nov 2026"
+      "date": "Nov 2026",
+      "href": "https://www.fool.com/research/largest-companies-by-market-cap/"
     },
     {
       "id": "imf",
       "title": "IMF World Economic Outlook, Oct 2026, tables",
-      "href": "https://www.imf.org/-/media/files/publications/weo/2026/october/english/tablea.pdf",
       "site": "imf.org",
-      "date": "Oct 13, 2026"
+      "date": "Oct 13, 2026",
+      "href": "https://www.imf.org/-/media/files/publications/weo/2026/october/english/tablea.pdf"
     },
     {
       "id": "irPricing",
       "title": "SpaceX announces IPO pricing",
-      "href": "https://ir.spacex.com/updates/releases-details/2026/Space-Exploration-Technologies-Corp--Announces-Pricing-of-Initial-Public-Offering/default.aspx",
       "site": "ir.spacex.com",
-      "date": "Jun 11, 2026"
+      "date": "Jun 11, 2026",
+      "href": "https://ir.spacex.com/updates/releases-details/2026/Space-Exploration-Technologies-Corp--Announces-Pricing-of-Initial-Public-Offering/default.aspx"
     },
     {
       "id": "irClosing",
       "title": "SpaceX announces closing of IPO",
-      "href": "https://ir.spacex.com/updates/releases-details/2026/Space-Exploration-Technologies-Corp--Announces-Closing-of-Initial-Public-Offering-Including-Full-Exercise-of-Underwriters-Option-to-Purchase-Additional-Shares-2026-RgoR-Y1Vwh/default.aspx",
       "site": "ir.spacex.com",
-      "date": "Jun 15, 2026"
+      "date": "Jun 15, 2026",
+      "href": "https://ir.spacex.com/updates/releases-details/2026/Space-Exploration-Technologies-Corp--Announces-Closing-of-Initial-Public-Offering-Including-Full-Exercise-of-Underwriters-Option-to-Purchase-Additional-Shares-2026-RgoR-Y1Vwh/default.aspx"
     },
     {
       "id": "r800",
       "title": "SpaceX $800B insider share sale",
-      "href": "https://www.reuters.com/business/spacex-sets-800-billion-valuation-bloomberg-news-reports-2025-12-13/",
       "site": "Reuters",
-      "date": "Dec 13, 2025"
+      "date": "Dec 13, 2025",
+      "href": "https://www.reuters.com/business/spacex-sets-800-billion-valuation-bloomberg-news-reports-2025-12-13/"
     },
     {
       "id": "c350",
       "title": "SpaceX valuation $350B",
-      "href": "https://www.cnbc.com/2024/12/11/spacex-valuation-surges-to-350-billion-as-company-buys-back-stock.html",
       "site": "CNBC",
-      "date": "Dec 11, 2024"
+      "date": "Dec 11, 2024",
+      "href": "https://www.cnbc.com/2024/12/11/spacex-valuation-surges-to-350-billion-as-company-buys-back-stock.html"
     },
     {
       "id": "b210",
       "title": "SpaceX tender at $210B",
-      "href": "https://www.bloomberg.com/news/articles/2024-06-27/spacex-tender-offer-said-to-value-company-at-record-210-billion",
       "site": "Bloomberg",
-      "date": "Jun 27, 2024"
+      "date": "Jun 27, 2024",
+      "href": "https://www.bloomberg.com/news/articles/2024-06-27/spacex-tender-offer-said-to-value-company-at-record-210-billion"
     },
     {
       "id": "r180",
       "title": "SpaceX value near $180B in tender",
-      "href": "https://www.reuters.com/markets/deals/musks-spacex-value-jumps-closer-180-bln-tender-offer-bloomberg-news-2023-12-13/",
       "site": "Reuters",
-      "date": "Dec 13, 2023"
+      "date": "Dec 13, 2023",
+      "href": "https://www.reuters.com/markets/deals/musks-spacex-value-jumps-closer-180-bln-tender-offer-bloomberg-news-2023-12-13/"
     },
     {
       "id": "b400",
       "title": "SpaceX $400B share sale",
-      "href": "https://www.bloomberg.com/news/articles/2025-07-08/spacex-valuation-said-to-hit-around-400-billion-in-share-sale",
       "site": "Bloomberg",
-      "date": "Jul 8, 2025"
+      "date": "Jul 8, 2025",
+      "href": "https://www.bloomberg.com/news/articles/2025-07-08/spacex-valuation-said-to-hit-around-400-billion-in-share-sale"
     },
     {
       "id": "fmIv",
-      "title": "SPCX implied volatility 65.8%, realized 76.0%",
-      "href": "https://flowmonkey.net/levels/spcx/implied-volatility",
+      "title": "SPCX implied volatility 68.7%, realized 74.5%",
       "site": "flowmonkey.net",
-      "date": "Nov 9, 2026"
+      "date": "Nov 10, 2026",
+      "href": "https://flowmonkey.net/levels/spcx/implied-volatility"
     },
     {
       "id": "fmMove",
-      "title": "SPCX expected move: ±$5.89 a day, ±$13.17 a week",
-      "href": "https://flowmonkey.net/levels/spcx/expected-move",
+      "title": "SPCX expected move: ±$6.19 a day, ±$13.85 a week",
       "site": "flowmonkey.net",
-      "date": "Nov 9, 2026"
+      "date": "Nov 10, 2026",
+      "href": "https://flowmonkey.net/levels/spcx/expected-move"
     },
     {
       "id": "oskew",
       "title": "SPCX implied volatility, skew and daily closes",
-      "href": "https://optionskew.com/options/SPCX",
       "site": "optionskew.com",
-      "date": "Nov 6, 2026"
+      "date": "Nov 6, 2026",
+      "href": "https://optionskew.com/options/SPCX"
     },
     {
       "id": "xF15",
       "title": "SpaceX targets double catch on Flight 15 (X news)",
-      "href": "https://x.com/i/trending/2119489627438321894",
       "site": "x.com",
-      "date": "Nov 10, 2026"
+      "date": "Nov 10, 2026",
+      "href": "https://x.com/i/trending/2119489627438321894"
     },
     {
       "id": "xUpgrade",
       "title": "SpaceX shares climb on analyst upgrade (X news)",
-      "href": "https://x.com/i/trending/2119810065091940633",
       "site": "x.com",
-      "date": "Nov 9, 2026"
+      "date": "Nov 9, 2026",
+      "href": "https://x.com/i/trending/2119810065091940633"
     },
     {
       "id": "xEu",
       "title": "Exaggerated claims of a Musk-EU space clash (X news)",
-      "href": "https://x.com/i/trending/2119217427707805968",
       "site": "x.com",
-      "date": "Nov 8, 2026"
+      "date": "Nov 8, 2026",
+      "href": "https://x.com/i/trending/2119217427707805968"
     },
     {
       "id": "asianet",
       "title": "SpaceX Q1 2026 net loss of $4.27B",
-      "href": "https://newsable.asianetnews.com/business/spacexs-q1-2026-net-loss-widens-to-427-billion-ahead-of-ipo-articleshow-ntvgvr6",
       "site": "Asianet Newsable",
-      "date": "2026"
+      "date": "2026",
+      "href": "https://newsable.asianetnews.com/business/spacexs-q1-2026-net-loss-widens-to-427-billion-ahead-of-ipo-articleshow-ntvgvr6"
+    },
+    {
+      "id": "singulus",
+      "title": "SINGULUS announces supply contract with SpaceX for HJT solar cell lines (Starmind)",
+      "site": "singulus.com",
+      "date": "Nov 10, 2026",
+      "href": "https://www.singulus.com/2026/11/10/spacex-heterojunction-solar-cells-singulus/"
+    },
+    {
+      "id": "xSingulus",
+      "title": "SpaceX: major SINGULUS supply contract for Starmind solar cells (X post)",
+      "site": "x.com",
+      "date": "Nov 10, 2026",
+      "href": "https://x.com/SpaceX/status/2120231065394590007"
+    },
+    {
+      "id": "xMuskSun",
+      "title": "Musk: 100 GW/year HJT solar equipment ordered for Starmind (X post)",
+      "site": "x.com",
+      "date": "Nov 10, 2026",
+      "href": "https://x.com/elonmusk/status/2120302471210033426"
+    },
+    {
+      "id": "fcc800",
+      "title": "FCC accepts SpaceX-Grain 800 MHz transfer applications for filing (DA-26-1218)",
+      "site": "fcc.gov via Public",
+      "date": "Nov 10, 2026",
+      "href": "https://pubt.io/view/C06697C9A177EC6A53A2EE8AF9D15878F3F059D5"
+    },
+    {
+      "id": "xFcc800",
+      "title": "Sawyer Merritt on FCC acceptance of 800 MHz deal (X post)",
+      "site": "x.com",
+      "date": "Nov 10, 2026",
+      "href": "https://x.com/SawyerMerritt/status/2120246301510295716"
+    },
+    {
+      "id": "mini2",
+      "title": "Starlink Mini 2 adds a swappable battery",
+      "site": "The Verge",
+      "date": "Nov 10, 2026",
+      "href": "https://www.theverge.com/tech/1031028/spacex-starlink-mini-2-satellite-internet-terminal-hot-swap-battery"
+    },
+    {
+      "id": "xMini2",
+      "title": "Starlink introduces Mini 2 (X post)",
+      "site": "x.com",
+      "date": "Nov 10, 2026",
+      "href": "https://x.com/Starlink/status/2120206875581186293"
+    },
+    {
+      "id": "bt",
+      "title": "BT holds off Starlink launch until Ukraine 'noise' dies down",
+      "site": "Reuters via Investing.com",
+      "date": "Nov 10, 2026",
+      "href": "https://www.investing.com/news/stock-market-news/bt-to-hold-off-starlink-launch-until-ukraine-noise-dies-down-ceo-tells-ft-5014219"
+    },
+    {
+      "id": "dynPrice",
+      "title": "Starlink tests dynamic pricing in Missouri and Kansas",
+      "site": "Yahoo Finance",
+      "date": "Nov 10, 2026",
+      "href": "https://finance.yahoo.com/technology/articles/missouri-kansas-starlink-customers-could-141500293.html"
+    },
+    {
+      "id": "xB22",
+      "title": "SpaceX: Booster 22 on the pad after catch testing (X post)",
+      "site": "x.com",
+      "date": "Nov 10, 2026",
+      "href": "https://x.com/SpaceX/status/2120220290219208884"
+    },
+    {
+      "id": "spaceF15",
+      "title": "Starship Flight 15 live updates: Booster 22 to the pad",
+      "site": "Space.com",
+      "date": "Nov 10, 2026",
+      "href": "https://www.space.com/news/live/spacex-starship-flight-15-live-updates-nov-10-2026-starship-first-double-landing-attempt"
+    },
+    {
+      "id": "xBerger",
+      "title": "Eric Berger: Flight 15 weather looks good (X post)",
+      "site": "x.com",
+      "date": "Nov 10, 2026",
+      "href": "https://x.com/SciGuySpace/status/2120274483810386328"
+    },
+    {
+      "id": "cpi",
+      "title": "Fed hike odds in December at 88% after hot CPI (CME FedWatch)",
+      "site": "Investing.com",
+      "date": "Nov 10, 2026",
+      "href": "https://www.investing.com/news/economy-news/fed-rate-hike-odds-in-december-at-88-after-hot-cpi-cme-fedwatch-5017585"
+    },
+    {
+      "id": "cnbcCpi",
+      "title": "Market spooked: Fed may need a supersized hike in December",
+      "site": "CNBC",
+      "date": "Nov 10, 2026",
+      "href": "https://www.cnbc.com/2026/11/10/market-spooked-because-now-the-fed-may-need-a-supersized-hike-in-december.html"
+    },
+    {
+      "id": "invNov10",
+      "title": "Why is SpaceX stock gaining today? (NASA CLPS-2, cislunar Starship task order)",
+      "site": "Investing.com",
+      "date": "Nov 10, 2026",
+      "href": "https://www.investing.com/news/stock-market-news/why-is-space-exploration-technologies-stock-gaining-today-93CH-5016150"
+    },
+    {
+      "id": "ibdF15",
+      "title": "SpaceX sets date for Flight 15; SPCX marks a three-day advance",
+      "site": "Investor's Business Daily",
+      "date": "Nov 10, 2026",
+      "href": "https://www.investors.com/news/spacex-starship-flight-15-date-tower-catch-super-heavy-elon-musk-spcx-stock/"
+    },
+    {
+      "id": "grokLeak",
+      "title": "Grok Build coding agent leaks confidential info, some belonging to SpaceXSI",
+      "site": "Ars Technica",
+      "date": "Nov 10, 2026",
+      "href": "https://arstechnica.com/security/2026/11/grok-build-coding-agent-leaks-oodles-of-confidential-info-some-belonging-to-spacexsi/"
+    },
+    {
+      "id": "xMuskStarlinkSw",
+      "title": "Musk: Starlink software well suited to training superintelligence (X post)",
+      "site": "x.com",
+      "date": "Nov 10, 2026",
+      "href": "https://x.com/elonmusk/status/2120102767624880364"
+    },
+    {
+      "id": "terafabNikkei",
+      "title": "Terafab reportedly eyes 1M wafers a month by 2032; Japan procurement visit",
+      "site": "TrendForce (citing Nikkei)",
+      "date": "Nov 9, 2026",
+      "href": "https://www.trendforce.com/news/2026/11/09/news-terafab-reportedly-eyes-1m-wafers-monthly-by-2032-with-700k-for-memory-near-samsungs-total-dram-capacity/"
+    },
+    {
+      "id": "harrison8k",
+      "title": "8-K: director Donald Harrison resigns (no disagreement)",
+      "site": "sec.gov",
+      "date": "Nov 6, 2026",
+      "href": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026071689/spcx-20261104.htm"
+    },
+    {
+      "id": "xCoons",
+      "title": "Sen. Coons calls for probe into Musk, Hegseth over Ukraine satellite incident (X news)",
+      "site": "x.com",
+      "date": "Nov 11, 2026",
+      "href": "https://x.com/i/trending/2120164746427257324"
+    },
+    {
+      "id": "coons",
+      "title": "Sen. Coons demands probe into Starlink/Starshield disruptions in Ukraine",
+      "site": "Combat Rated",
+      "date": "Nov 2026",
+      "href": "https://combatrated.com/sen-coons-demands-probe-into-musk-hegseth-ukraine-starlink-cuts/"
+    },
+    {
+      "id": "xPuts",
+      "title": "Unusual $584K SPCX Nov 27 $128 put bet flagged (X post, unverified)",
+      "site": "x.com",
+      "date": "Nov 11, 2026",
+      "href": "https://x.com/TrackSmartMoney/status/2120400609740222938"
     }
   ],
   "ecosystemLinks": [
@@ -2412,8 +2814,12 @@
           "value": 1.82
         },
         {
-          "label": "Nov 9",
+          "label": "",
           "value": 1.93
+        },
+        {
+          "label": "Nov 10",
+          "value": 1.94
         }
       ],
       "annotations": [
