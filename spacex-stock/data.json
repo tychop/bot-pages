@@ -1,11 +1,11 @@
 {
-  "updated": "Wed 11 Nov 2026, 08:45 CET (Europe/Amsterdam) · market data: Nov 10 close",
+  "updated": "Wed 11 Nov 2026, 17:15 CET (Europe/Amsterdam) · market data: Nov 11, 11:09 ET intraday",
   "market": {
-    "price": 143.09,
-    "capT": 1.943,
-    "change": "+0.72%",
-    "changeUsd": 1.02,
-    "changeNote": "Nov 10 close",
+    "price": 142.55,
+    "capT": 1.936,
+    "change": "-0.38%",
+    "changeUsd": -0.54,
+    "changeNote": "Nov 11, 11:09 ET, intraday",
     "nextCatalyst": {
       "name": "Starship Flight 15",
       "at": "2026-11-13T22:45:00.000Z",
@@ -421,6 +421,16 @@
       ],
       "news": [
         {
+          "lead": "Nov 11",
+          "title": "Ookla: 9 in 10 new US Starlink subscribers came from DSL, cable or fixed wireless; urban users +73% y/y, faster than rural in every state but Alaska and Hawaii",
+          "meta": "PCMag citing Ookla; @SawyerMerritt on X"
+        },
+        {
+          "lead": "Nov 11",
+          "title": "Musk promotes Starlink Mini 2: 'portable, lightning-fast Internet' (11.8M views)",
+          "meta": "X post"
+        },
+        {
           "lead": "Nov 10",
           "title": "FCC accepts SpaceX's bid for 546 nationwide 800 MHz licenses from Grain for filing; comments due Dec 1 (not yet approved)",
           "meta": "fcc.gov"
@@ -467,7 +477,10 @@
         "barclays",
         "xFcc800",
         "xMini2",
-        "xPrices"
+        "xPrices",
+        "ookla",
+        "xOokla",
+        "xMuskMini2"
       ],
       "chart": "subs"
     },
@@ -516,6 +529,11 @@
       ],
       "news": [
         {
+          "lead": "Nov 11",
+          "title": "FAA licence modification for the ship catch still not published two days before the window",
+          "meta": "SpaceQ; spacex.com"
+        },
+        {
           "lead": "Nov 13",
           "title": "Flight 15: first catch attempt of V3 booster and of the ship; spacex.com still says 'pending regulatory approval'",
           "meta": "spacex.com"
@@ -539,7 +557,8 @@
         "nsf",
         "teslarati",
         "nova",
-        "blue"
+        "blue",
+        "spaceq15"
       ],
       "chart": "none"
     },
@@ -661,6 +680,16 @@
       ],
       "news": [
         {
+          "lead": "Nov 11",
+          "title": "Anthropic reportedly told sell-side analysts it won't extend the SpaceX compute contract past mid-2027; unconfirmed. Contracts allow 90-day exits after Jan/Mar 2027; 'Customer B' was 34.5% of Q3 revenue (reportedly Anthropic)",
+          "meta": "TeslaNorth; @jukan05 on X, unverified"
+        },
+        {
+          "lead": "Nov 11",
+          "title": "Grok 4.8 limited rollout to Bot users planned this week (Musk: 'not yet impressive', foundations in place)",
+          "meta": "TokenPost"
+        },
+        {
           "lead": "Nov 10",
           "title": "Security firm finds ~35,000 Grok Build apps publicly reachable, incl. 24 internal SpaceXSI apps; links pulled after Ars asked",
           "meta": "Ars Technica"
@@ -689,7 +718,12 @@
         "xMuskStarlinkSw",
         "xStarbase",
         "baron",
-        "musk2"
+        "musk2",
+        "anthroTN",
+        "xJukan",
+        "xAnthro",
+        "anthIpo",
+        "grok48"
       ],
       "chart": "revenue"
     },
@@ -885,7 +919,7 @@
         },
         {
           "label": "10-year Treasury yield",
-          "value": "About 4.95% after CPI (CNBC)"
+          "value": "About 5.00% (4.998% last; cash market shut Nov 11)"
         },
         {
           "label": "Core PCE inflation",
@@ -893,6 +927,11 @@
         }
       ],
       "news": [
+        {
+          "lead": "Nov 11",
+          "title": "Reuters: Waller would weigh a 50 bp hike after 0.3% core CPI; Logan wants two more hikes; futures ~10% odds of 50 bp; Goldman adds a March 2027 hike",
+          "meta": "Reuters via Euronext"
+        },
         {
           "lead": "Nov 10",
           "title": "Hotter-than-expected October CPI; markets price no chance of a December hold and 11% odds of a 50 bp hike",
@@ -909,7 +948,9 @@
         "cnbcCpi",
         "fed",
         "cnbcFed",
-        "ainvest"
+        "ainvest",
+        "reutersBonds",
+        "squawk1111"
       ],
       "chart": "none"
     },
@@ -950,9 +991,18 @@
         {
           "label": "Nov 10 close",
           "value": "$143.09 (+0.72%) while Nvidia fell 5.5%"
+        },
+        {
+          "label": "Nov 11 intraday (11:09 ET)",
+          "value": "SPCX $142.55 (−0.38%) vs Nasdaq +1.7%"
         }
       ],
       "news": [
+        {
+          "lead": "Nov 11",
+          "title": "Chips rally after CoreWeave results (Nasdaq +1.7%, Nvidia +3.7%) but SPCX slips 0.4% amid X chatter about the Anthropic contract",
+          "meta": "Yahoo Finance; nasdaq.com"
+        },
         {
           "lead": "Nov 10",
           "title": "SPCX held a third straight gain (+0.72%) as the Nasdaq fell 0.74% after hot CPI",
@@ -976,7 +1026,9 @@
         "ark",
         "yNasa",
         "biggo",
-        "saCap"
+        "saCap",
+        "nasdaqQ",
+        "yLive1111"
       ],
       "chart": "mcap"
     },
@@ -1154,6 +1206,11 @@
       ],
       "news": [
         {
+          "lead": "Nov 11",
+          "title": "Texas Gov.-elect Hinojosa wants a data-center pause until new protections; 24/7 Wall St.: Democrats could slow the 800 MHz review",
+          "meta": "Stocktwits, 24/7 Wall St."
+        },
+        {
           "lead": "Nov 10",
           "title": "FCC Wireless Bureau accepts SpaceX-Grain 800 MHz transfer for filing (docket 26-313); oppositions due Dec 8",
           "meta": "fcc.gov"
@@ -1169,7 +1226,9 @@
         "fcc",
         "megapack",
         "barclays",
-        "xStarbase"
+        "xStarbase",
+        "ives",
+        "wall247"
       ],
       "chart": "none"
     },
@@ -1211,6 +1270,11 @@
       "news": [
         {
           "lead": "Nov 11",
+          "title": "SDA awards SpaceX $9.9M (up to $12.7M) to study Plaser laser terminals on missile-warning and tracking satellites",
+          "meta": "SpaceNews, Defence Blog"
+        },
+        {
+          "lead": "Nov 11",
           "title": "Sen. Coons calls for a probe of Musk and Hegseth over Starlink/Starshield disruptions in Ukraine",
           "meta": "X news summary; Combat Rated"
         },
@@ -1232,7 +1296,9 @@
         "yNasa",
         "invNov10",
         "coons",
-        "xCoons"
+        "xCoons",
+        "sdaPlaser",
+        "sdaBlog"
       ],
       "chart": "none"
     },
@@ -1274,6 +1340,11 @@
       "news": [
         {
           "lead": "Nov 9",
+          "title": "Rocket Lab: record Q3 revenue $267.8M (+73%), backlog $3.57B; Neutron debut slips to 2027",
+          "meta": "Rocket Lab IR, GuruFocus"
+        },
+        {
+          "lead": "Nov 9",
           "title": "Amazon Leo targets Vulcan debut",
           "meta": "Orbital Radar"
         }
@@ -1283,7 +1354,9 @@
         "china",
         "blue",
         "ng3",
-        "ieee"
+        "ieee",
+        "rklbQ3",
+        "rklbNeutron"
       ],
       "chart": "none"
     },
@@ -1329,6 +1402,11 @@
       "news": [
         {
           "lead": "Nov 11",
+          "title": "Dan Ives: SPCX carries a 20–25% 'political discount' after the Texas election; 24/7 Wall St.: SpaceX's 18 national-security launches make it harder to target than Tesla",
+          "meta": "Stocktwits, 24/7 Wall St."
+        },
+        {
+          "lead": "Nov 11",
           "title": "Sen. Coons (incoming Foreign Relations chair) wants Musk to 'answer' for Ukraine Starlink cuts",
           "meta": "X news summary; Combat Rated"
         },
@@ -1346,7 +1424,9 @@
         "teslaQ3",
         "musk2",
         "harrison8k",
-        "coons"
+        "coons",
+        "ives",
+        "wall247"
       ],
       "chart": "none"
     },
@@ -1391,6 +1471,16 @@
       ],
       "news": [
         {
+          "lead": "Nov 11",
+          "title": "Ives still expects SpaceX to acquire Tesla, with more hurdles after the midterms; TSLA +3.7% intraday",
+          "meta": "Stocktwits; nasdaq.com"
+        },
+        {
+          "lead": "Nov 11",
+          "title": "Finland approves Tesla FSD Supervised (as 'Tesla Assisted Driving'), the 11th European country",
+          "meta": "@SawyerMerritt on X, unverified"
+        },
+        {
           "lead": "Dec 3",
           "title": "Tesla annual meeting; Barclays flagged a possible announcement before it",
           "meta": "The Verge"
@@ -1401,7 +1491,10 @@
         "cnbcMerger",
         "muskPay",
         "megapack",
-        "tesla10q"
+        "tesla10q",
+        "ives",
+        "tslaQ",
+        "xFinland"
       ],
       "chart": "none"
     },
@@ -1442,9 +1535,18 @@
         {
           "label": "Fed decision",
           "value": "9 Dec"
+        },
+        {
+          "label": "Anthropic IPO",
+          "value": "Likely Nov 19 or 20 (ANT, $70–78); read-through for SpaceX's largest AI customer"
         }
       ],
       "news": [
+        {
+          "lead": "Nov 11",
+          "title": "Anthropic roadshow under way; pricing as soon as Nov 13, trading likely Nov 19 or 20",
+          "meta": "Yahoo Finance"
+        },
         {
           "lead": "Nov 10",
           "title": "Booster 22 on the pad; Flight 15 on track for Fri 13 Nov",
@@ -1463,7 +1565,8 @@
         "teslarati",
         "verge",
         "lockup",
-        "xF15"
+        "xF15",
+        "anthIpo"
       ],
       "chart": "none"
     },
@@ -1508,6 +1611,11 @@
       ],
       "news": [
         {
+          "lead": "Nov 11",
+          "title": "Intraday reversal: high $145.16, low $138.62, $142.55 at 11:09 ET (−0.38%), inside the ±4.15% implied daily move",
+          "meta": "nasdaq.com"
+        },
+        {
           "lead": "Nov 10",
           "title": "+0.72% to $143.09, inside the ±4.15% options-implied daily move",
           "meta": "flowmonkey.net"
@@ -1522,7 +1630,8 @@
         "fmIv",
         "fmMove",
         "oskew",
-        "yNasa"
+        "yNasa",
+        "nasdaqQ"
       ],
       "chart": "price"
     },
@@ -1531,17 +1640,17 @@
       "name": "X / social sentiment",
       "group": "External influence",
       "link": "Indirect",
-      "score": 1,
+      "score": 0,
       "w": [
         0.5,
         0,
         0
       ],
-      "line": "Post volume steady near 6.7K a day; X stories still lean positive",
+      "line": "Anthropic contract report dominates SPCX chatter; mood mixed",
       "why": [
-        "Posts mentioning SPCX peaked at 12,233 on Nov 4 during the post-midterm selloff, then eased to 6,665 on Nov 9 as the stock rallied.",
-        "Of 7 SpaceX-specific X news stories in the 24h to Nov 11, 4 are upbeat (Singulus, 800 MHz, Booster 22, Mini 2), 2 negative (Coons probe, Gibney film claims) and 1 neutral (Grok stack rewrite) (own tally).",
-        "A rough read, not a scored sentiment model; retail mood mainly matters over days."
+        "Posts mentioning SPCX peaked at 12,233 on Nov 4 during the post-midterm selloff and ran near 6.7K a day on Nov 9–10.",
+        "On Nov 11 the most-shared SPCX story was negative: analyst notes saying Anthropic won't extend its SpaceX compute deal (424K views); hourly SPCX posts hit a two-day high of 578 (14–15 UTC) as the stock slid from its high.",
+        "Offsets: dip-buying replies ahead of Flight 15 and Musk's Mini 2 post (11.8M views). Net read: neutral (own judgment, not a scored model)."
       ],
       "metrics": [
         {
@@ -1559,9 +1668,28 @@
         {
           "label": "SpaceX X news stories, 24h to Nov 11",
           "value": "4 upbeat, 2 negative, 1 neutral"
+        },
+        {
+          "label": "Posts mentioning SPCX, Nov 11 to 16:07 UTC",
+          "value": "4,196; peak hour 578 (14–15 UTC)"
         }
       ],
       "news": [
+        {
+          "lead": "Nov 11",
+          "title": "@jukan05 notes: Anthropic told analysts the SpaceX contract won't be extended past mid-2027 (424K views, 1.9K likes; unverified)",
+          "meta": "X post"
+        },
+        {
+          "lead": "Nov 11",
+          "title": "Retail replies call the dip an overreaction and a buy before Flight 15",
+          "meta": "X posts, unverified"
+        },
+        {
+          "lead": "Nov 11",
+          "title": "@elonmusk Starlink Mini 2 post: 11.8M views, 18K likes",
+          "meta": "X post"
+        },
         {
           "lead": "Nov 10",
           "title": "@elonmusk 'sentient sun' Starmind solar post: 2.2M views, 26K likes; @SawyerMerritt 800 MHz post ~5.7K likes",
@@ -1591,63 +1719,84 @@
         "xUpgrade",
         "xF15",
         "xPrices",
-        "xEu"
+        "xEu",
+        "xJukan",
+        "xAnthro",
+        "xDip",
+        "xMuskMini2"
       ],
       "chart": "none"
     }
   ],
   "today": [
     {
-      "lead": "Price",
-      "title": "SPCX +0.72% (+$1.02) to $143.09 on Nov 10, a third straight gain while the Nasdaq fell 0.74% and Nvidia 5.5%",
-      "meta": "stockanalysis.com"
+      "lead": "Price (intraday)",
+      "title": "SPCX −0.38% (−$0.54) to $142.55 at 11:09 ET after a $138.62–$145.16 range, lagging a Nasdaq up 1.7% (Nvidia +3.7%, Tesla +3.7%, CoreWeave +23% on results)",
+      "meta": "nasdaq.com real-time quote; Yahoo Finance"
+    },
+    {
+      "lead": "AI customer risk",
+      "title": "Anthropic reportedly told sell-side analysts it won't extend its SpaceX compute contract past mid-2027 (analyst notes posted on X; neither company confirmed). The $120.5B is a ceiling: non-cancelable periods end Jan/Mar 2027, then 90-day exits. No xAI score change until confirmed",
+      "meta": "TeslaNorth; @jukan05 on X (unverified)"
     },
     {
       "lead": "Score change",
-      "title": "Macro −2 → −3: hot October CPI (+0.4% m/m); CME prices 88.8% for a 25 bp December hike and 11.2% for 50 bp, no hold; 10-year near 4.95%",
-      "meta": "Investing.com, CNBC"
+      "title": "X / social sentiment +1 → 0: the Anthropic notes (424K views) became the most-shared SPCX story and hourly SPCX posts hit a two-day high (578, 14–15 UTC) as the stock fell from its high; dip-buying replies and Musk's Mini 2 post (11.8M views) offset it",
+      "meta": "X posts and post counts"
     },
     {
-      "lead": "Orbital compute",
-      "title": "SINGULUS contract: turnkey HJT solar-cell line for Starmind satellites in Bastrop, first line H1 2027, plan to scale past 100 GW of equipment. Real procurement, but no score change: cost and physics questions remain",
-      "meta": "singulus.com; @SpaceX, @elonmusk on X"
+      "lead": "Politics",
+      "title": "Dan Ives sees a 20–25% 'political discount' on SPCX after the Texas election but still expects SpaceX to buy Tesla; Gov.-elect Hinojosa wants a data-center pause; 24/7 Wall St. sees Tesla more exposed than SpaceX to Democratic oversight",
+      "meta": "Stocktwits, 24/7 Wall St."
     },
     {
-      "lead": "Connectivity",
-      "title": "FCC accepted SpaceX's purchase of 546 nationwide 800 MHz licenses from Grain for filing (not approval); Starlink Mini 2 launched; BT delays its Starlink launch over Ukraine",
-      "meta": "fcc.gov, The Verge, Reuters"
+      "lead": "Defense",
+      "title": "Space Development Agency awards SpaceX $9.9M (options to $12.7M) to study Plaser laser terminals for missile-warning and tracking satellites, through Oct 2027",
+      "meta": "SpaceNews, Defence Blog"
+    },
+    {
+      "lead": "Starlink",
+      "title": "Ookla: 9 in 10 new US Starlink users switched from non-fiber (DSL, cable, fixed wireless); urban users +73% y/y in H1 2026; median download 119.7 Mbps",
+      "meta": "PCMag citing Ookla; @SawyerMerritt on X"
     },
     {
       "lead": "Starship",
-      "title": "Booster 22 on the pad after catch testing; Flight 15 still Fri 13 Nov 23:45 CET, 'pending regulatory approval' on spacex.com",
-      "meta": "spacex.com, Space.com, @SpaceX on X"
+      "title": "Flight 15 still as soon as Fri 13 Nov 23:45 CET; the FAA licence change for the ship catch is not yet published",
+      "meta": "spacex.com, SpaceQ"
     },
     {
-      "lead": "Risks",
-      "title": "Grok Build link-sharing leak exposed 24 internal SpaceXSI apps (Ars); Sen. Coons seeks probe of Musk/Hegseth over Ukraine Starlink cuts (X news, not yet confirmed by a primary source)",
-      "meta": "Ars Technica; X news summary"
+      "lead": "Macro",
+      "title": "Cash Treasuries shut for Veterans Day; 10-year last ~5.00%. Reuters: Waller would weigh a 50 bp hike after 0.3% core CPI, Logan wants two more hikes; ~10% odds of 50 bp in December",
+      "meta": "Reuters via Euronext, SquawkNews"
     },
     {
-      "lead": "From X",
-      "title": "SPCX post volume steady (6,825 on Nov 10 vs 6,635 on Nov 9); Musk's 'sentient sun' post drew 2.2M views; an unverified $584K put block for Nov 27 was flagged",
-      "meta": "X post counts and posts"
+      "lead": "This morning",
+      "title": "Macro −2 → −3 on hot CPI; SINGULUS solar line for Starmind; FCC accepted the 800 MHz filing; Booster 22 on the pad; Grok Build leak exposed SpaceXSI apps",
+      "meta": "morning run, see factor sources"
     }
   ],
   "todayLinks": [
-    "saHist",
+    "nasdaqQ",
+    "yLive1111",
+    "anthroTN",
+    "xJukan",
+    "xAnthro",
+    "ives",
+    "wall247",
+    "sdaPlaser",
+    "sdaBlog",
+    "ookla",
+    "xOokla",
+    "xMuskMini2",
+    "f15",
+    "spaceq15",
+    "reutersBonds",
+    "squawk1111",
     "cpi",
-    "cnbcCpi",
     "singulus",
-    "xSingulus",
-    "xMuskSun",
     "fcc800",
-    "mini2",
-    "bt",
-    "spaceF15",
     "xB22",
-    "grokLeak",
-    "xCoons",
-    "xPuts"
+    "grokLeak"
   ],
   "catalysts": [
     {
@@ -1661,6 +1810,12 @@
       "label": "13 Nov",
       "title": "Amazon Leo LV-01, first Vulcan launch, 40 satellites",
       "meta": "Orbital Radar"
+    },
+    {
+      "at": "2026-11-19T14:30:00.000Z",
+      "label": "19–20 Nov",
+      "title": "Anthropic (ANT) Nasdaq debut expected; read-through for SpaceX's largest AI customer",
+      "meta": "Yahoo Finance"
     },
     {
       "at": "2026-12-01T12:00:00.000Z",
@@ -1709,6 +1864,12 @@
       "label": "Jan 2027",
       "title": "Blue Origin New Glenn return to flight",
       "meta": "CNBC"
+    },
+    {
+      "at": "2027-01-15T12:00:00.000Z",
+      "label": "Jan–Mar 2027",
+      "title": "Anthropic compute contracts' non-cancelable periods end; 90-day exits possible after",
+      "meta": "TeslaNorth, Anthropic S-1"
     },
     {
       "at": "2027-06-01T12:00:00.000Z",
@@ -1825,7 +1986,8 @@
       ],
       "against": [
         "Q4 capex of $35–40B; over $20B of related-party GPU leases.",
-        "Competes with OpenAI, Anthropic and Google; NAACP lawsuit over Memphis turbines."
+        "Competes with OpenAI, Anthropic and Google; NAACP lawsuit over Memphis turbines.",
+        "Anthropic, reportedly 'Customer B' at 34.5% of Q3 revenue, reportedly won't extend its compute deal past mid-2027 (unconfirmed, Nov 11)."
       ]
     },
     {
@@ -2550,6 +2712,160 @@
       "site": "x.com",
       "date": "Nov 11, 2026",
       "href": "https://x.com/TrackSmartMoney/status/2120400609740222938"
+    },
+    {
+      "id": "nasdaqQ",
+      "title": "SPCX real-time quote: $142.55, −$0.54 (−0.38%) at 11:09 AM ET",
+      "site": "nasdaq.com",
+      "date": "Nov 11, 2026",
+      "href": "https://www.nasdaq.com/market-activity/stocks/spcx"
+    },
+    {
+      "id": "yLive1111",
+      "title": "Stock market today: S&P 500, Nasdaq rise as Nvidia recovers, chips rally after CoreWeave earnings",
+      "site": "Yahoo Finance",
+      "date": "Nov 11, 2026",
+      "href": "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-november-11-dow-sp-500-nasdaq-nvidia-treasurys-veterans-day-140638547.html"
+    },
+    {
+      "id": "anthroTN",
+      "title": "Anthropic reportedly won't extend SpaceX compute deal past mid-2027 (unconfirmed)",
+      "site": "TeslaNorth",
+      "date": "Nov 11, 2026",
+      "href": "https://teslanorth.com/2026/11/11/anthropic-spacex-compute-contract-mid-2027/"
+    },
+    {
+      "id": "xJukan",
+      "title": "Jukan: Anthropic remarks to the sell side on the SpaceX contract (X post, unverified)",
+      "site": "x.com",
+      "date": "Nov 11, 2026",
+      "href": "https://x.com/jukan05/status/2120483370488750336"
+    },
+    {
+      "id": "xAnthro",
+      "title": "Anthropic signals end to SpaceX compute deal (X news summary)",
+      "site": "x.com",
+      "date": "Nov 11, 2026",
+      "href": "https://x.com/i/trending/2120515834925711664"
+    },
+    {
+      "id": "anthIpo",
+      "title": "Everything you need to know ahead of Anthropic's IPO (likely Nov 19 or 20)",
+      "site": "Yahoo Finance",
+      "date": "Nov 11, 2026",
+      "href": "https://finance.yahoo.com/technology/ai/article/anthropic-ipo-what-we-know-143321078.html"
+    },
+    {
+      "id": "grok48",
+      "title": "xAI plans limited Grok 4.8 rollout for Bot users this week",
+      "site": "TokenPost",
+      "date": "Nov 11, 2026",
+      "href": "https://www.tokenpost.com/news/technology/53847"
+    },
+    {
+      "id": "ives",
+      "title": "SpaceX stock carries up to 25% 'political discount,' Dan Ives says; Tesla merger still in play",
+      "site": "Stocktwits",
+      "date": "Nov 11, 2026",
+      "href": "https://stocktwits.com/news-articles/markets/equity/spacex-stock-political-discount-dan-ives-elon-musk-tesla-merger-play/cNGDhHhR9JU"
+    },
+    {
+      "id": "wall247",
+      "title": "Musk's companies will face intense Democrat scrutiny, but one is under more heat",
+      "site": "24/7 Wall St.",
+      "date": "Nov 11, 2026",
+      "href": "https://247wallst.com/investing/2026/11/11/musks-companies-will-face-intense-democrat-scrutiny-but-one-is-under-more-heat/"
+    },
+    {
+      "id": "sdaPlaser",
+      "title": "SpaceX to study options to bridge commercial and military satellite networks ($9.9M SDA Plaser study)",
+      "site": "SpaceNews",
+      "date": "Nov 11, 2026",
+      "href": "https://spacenews.com/spacex-to-study-options-to-bridge-commercial-and-military-satellite-networks/"
+    },
+    {
+      "id": "sdaBlog",
+      "title": "SpaceX wins Pentagon deal to test Starlink lasers for missile tracking",
+      "site": "Defence Blog",
+      "date": "Nov 11, 2026",
+      "href": "https://defence-blog.com/spacex-wins-pentagon-deal-to-test-starlink-lasers-for-missile-tracking/"
+    },
+    {
+      "id": "ookla",
+      "title": "Not just DSL: Starlink is attracting cable and fixed wireless customers too (Ookla data)",
+      "site": "PCMag",
+      "date": "Nov 11, 2026",
+      "href": "https://uk.pcmag.com/networking/168331/not-just-dsl-starlink-is-attracting-cable-and-fixed-wireless-customers-too"
+    },
+    {
+      "id": "xMuskMini2",
+      "title": "Musk: 'Portable, lightning-fast Internet that works anywhere on Earth' (X post, 11.8M views)",
+      "site": "x.com",
+      "date": "Nov 11, 2026",
+      "href": "https://x.com/elonmusk/status/2120432718639145404"
+    },
+    {
+      "id": "xOokla",
+      "title": "Sawyer Merritt on the Ookla Starlink report (X post)",
+      "site": "x.com",
+      "date": "Nov 11, 2026",
+      "href": "https://x.com/SawyerMerritt/status/2120506954900545805"
+    },
+    {
+      "id": "spaceq15",
+      "title": "Starship Flight 15 to attempt catch of both stages (FAA licence change still pending)",
+      "site": "SpaceQ",
+      "date": "Nov 2026",
+      "href": "https://spaceq.ca/starship-flight-15-catch-both-stages-preview/"
+    },
+    {
+      "id": "reutersBonds",
+      "title": "Bonds reel as hot inflation fuels jumbo Fed hike fears (Reuters)",
+      "site": "Euronext / Reuters",
+      "date": "Nov 11, 2026",
+      "href": "https://live.euronext.com/en/financial-news/bonds-reel-hot-inflation-fuels-jumbo-fed-hike-fears"
+    },
+    {
+      "id": "squawk1111",
+      "title": "Nov 11 market brief: 10-year at 4.998%, Nasdaq 100 up ~1.7%",
+      "site": "SquawkNews",
+      "date": "Nov 11, 2026",
+      "href": "https://squawknews.com/brief/livecast/2026-11-11"
+    },
+    {
+      "id": "rklbQ3",
+      "title": "Rocket Lab Q3 2026 results: record revenue, $3.57B backlog",
+      "site": "rocketlabcorp.com",
+      "date": "Nov 9, 2026",
+      "href": "https://investors.rocketlabcorp.com/news-releases/news-release-details/rocket-lab-announces-third-quarter-2026-financial-results-posts"
+    },
+    {
+      "id": "rklbNeutron",
+      "title": "Rocket Lab Q3 call highlights: Neutron slips to 2027",
+      "site": "GuruFocus",
+      "date": "Nov 10, 2026",
+      "href": "https://www.gurufocus.com/news/9187967/rocket-lab-corp-rklb-q3-2026-earnings-call-highlights-record-revenue-and-backlog-surge-as-neutron-slips-to-2027"
+    },
+    {
+      "id": "xFinland",
+      "title": "Tesla FSD Supervised approved in Finland, 11th European country (X post)",
+      "site": "x.com",
+      "date": "Nov 11, 2026",
+      "href": "https://x.com/SawyerMerritt/status/2120500435723121136"
+    },
+    {
+      "id": "tslaQ",
+      "title": "TSLA real-time quote: $393.72, +3.67% at 11:09 AM ET",
+      "site": "nasdaq.com",
+      "date": "Nov 11, 2026",
+      "href": "https://www.nasdaq.com/market-activity/stocks/tsla"
+    },
+    {
+      "id": "xDip",
+      "title": "Retail reply calls the Anthropic-driven SPCX dip an overreaction (X post)",
+      "site": "x.com",
+      "date": "Nov 11, 2026",
+      "href": "https://x.com/LetsGetToTheTr1/status/2120524250599862364"
     }
   ],
   "ecosystemLinks": [
