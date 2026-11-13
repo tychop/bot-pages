@@ -1,11 +1,11 @@
 {
-  "updated": "Thu 12 Nov 2026, 08:30 CET (Europe/Amsterdam) · market data: Nov 11 close",
+  "updated": "Fri 13 Nov 2026, 15:45 CET (Europe/Amsterdam) · market data: Nov 12 close",
   "market": {
-    "price": 139.75,
-    "capT": 1.898,
-    "change": "-2.33%",
-    "changeUsd": -3.34,
-    "changeNote": "Nov 11 close",
+    "price": 139.94,
+    "capT": 1.901,
+    "change": "+0.14%",
+    "changeUsd": 0.19,
+    "changeNote": "Nov 12 close",
     "nextCatalyst": {
       "name": "Starship Flight 15",
       "at": "2026-11-13T22:45:00.000Z",
@@ -13,9 +13,9 @@
     }
   },
   "vol": {
-    "iv": 0.695,
-    "rv20": 0.743,
-    "asOf": "Nov 11 2026 close"
+    "iv": 0.745,
+    "rv20": 0.739,
+    "asOf": "Nov 12 2026 close"
   },
   "shortWeights": {
     "starlink": [
@@ -269,6 +269,56 @@
           "top1": 0.35
         }
       }
+    },
+    {
+      "date": "2026-11-13",
+      "priceDate": "2026-11-12",
+      "price": 139.94,
+      "priceNote": "Nov 12 close",
+      "readings": {
+        "1d": {
+          "rise": 0.4629,
+          "x2": 0,
+          "x10": 0,
+          "x100": 0,
+          "top1": 0
+        },
+        "1w": {
+          "rise": 0.4861,
+          "x2": 0,
+          "x10": 0,
+          "x100": 0,
+          "top1": 0
+        },
+        "1m": {
+          "rise": 0.4775,
+          "x2": 0.0012,
+          "x10": 0,
+          "x100": 0,
+          "top1": 0
+        },
+        "1y": {
+          "rise": 0.55,
+          "x2": 0.1,
+          "x10": 0.002,
+          "x100": 0.00001,
+          "top1": 0.1
+        },
+        "5y": {
+          "rise": 0.6,
+          "x2": 0.35,
+          "x10": 0.02,
+          "x100": 0.0005,
+          "top1": 0.3
+        },
+        "10y": {
+          "rise": 0.62,
+          "x2": 0.45,
+          "x10": 0.06,
+          "x100": 0.003,
+          "top1": 0.35
+        }
+      }
     }
   ],
   "closes": [
@@ -427,6 +477,10 @@
     {
       "date": "2026-11-11",
       "close": 139.75
+    },
+    {
+      "date": "2026-11-12",
+      "close": 139.94
     }
   ],
   "factors": [
@@ -580,7 +634,7 @@
         },
         {
           "label": "Flight 15",
-          "value": "As soon as Fri 13 Nov, 23:45 CET, pending approval"
+          "value": "Fri 13 Nov, window 23:45–01:00 CET; ship catch Sat 14 Nov ~22:17 CET; 'pending regulatory approval'"
         },
         {
           "label": "Cost per kg",
@@ -588,6 +642,16 @@
         }
       ],
       "news": [
+        {
+          "lead": "Nov 13",
+          "title": "Countdown under way; Ship 42 at the pad. Booster catch ~6.5 min after liftoff, ship catch after ~14 orbits on Sat 14 Nov; splashdown fallback if any system is unhealthy",
+          "meta": "Space.com, spacex.com; @SpaceX and @NASASpaceflight on X"
+        },
+        {
+          "lead": "Nov 12",
+          "title": "Morgan Stanley's Adam Jonas: 'the stock market does not fully appreciate' Flight 15; a double catch 'likely a material positive for the stock'",
+          "meta": "@SawyerMerritt on X, unverified"
+        },
         {
           "lead": "Nov 11",
           "title": "FAA airspace restriction (NOTAM 6/7129) published for Starbase on Nov 13; the licence modification for the ship catch was still not listed as of Nov 12",
@@ -636,7 +700,10 @@
         "spaceq15",
         "notam15",
         "xNsfLoader",
-        "xUssf627"
+        "xUssf627",
+        "spaceF15live",
+        "xShip42Pad",
+        "xJonas"
       ],
       "chart": "none"
     },
@@ -767,9 +834,23 @@
         {
           "label": "Q4 capex guidance",
           "value": "$35–40B"
+        },
+        {
+          "label": "New campuses (Nov 12)",
+          "value": "$74B+: Starbase $24B (own power), Cochise County, AZ ~$50B"
         }
       ],
       "news": [
+        {
+          "lead": "Nov 12",
+          "title": "SpaceX plans $74B+ of new US supercompute campuses: $24B at Starbase with its own power and ~$50B in Cochise County, Arizona; 2.5–3 GW targeted by end-2026",
+          "meta": "Stocktwits via Yahoo Finance"
+        },
+        {
+          "lead": "Nov 12",
+          "title": "Musk called hiring Jensen Huang 'an honor' (before the resignation) and posted 'Jensen' overnight (5.3M views); no offer reported",
+          "meta": "Stocktwits; @elonmusk on X, unverified"
+        },
         {
           "lead": "Nov 11",
           "title": "Musk on the Anthropic report: 'We would be happy to take the compute back. No problem. But I think the opposite is going to happen.' Still no confirmation from either company; contracts allow 90-day exits after Jan/Mar 2027",
@@ -834,7 +915,9 @@
         "xMuskCompute",
         "xMuskGW",
         "xGrokBot",
-        "kessel"
+        "kessel",
+        "stwCampus",
+        "xMuskJensen"
       ],
       "chart": "revenue"
     },
@@ -874,10 +957,15 @@
         },
         {
           "label": "Partners",
-          "value": "Intel involved; TSMC at most a sublease"
+          "value": "Intel involved; talks with TSMC reportedly reopened (Nov)"
         }
       ],
       "news": [
+        {
+          "lead": "Nov 13",
+          "title": "Reports: Musk reopened talks with TSMC on Terafab and may soften his control stance; nothing announced",
+          "meta": "tbreak; Digitimes"
+        },
         {
           "lead": "Nov 11",
           "title": "After the WSJ report that Nvidia's board may oust Jensen Huang, X users speculate Musk could hire him to run Terafab; no report or statement supports this",
@@ -899,7 +987,9 @@
         "terafabNikkei",
         "terafabSite",
         "tsmc",
-        "xJensenMeme"
+        "xJensenMeme",
+        "digiTsmc",
+        "tbreakMerger"
       ],
       "chart": "none"
     },
@@ -1005,16 +1095,16 @@
       "name": "Macro and interest rates",
       "group": "External influence",
       "link": "Indirect",
-      "score": -3,
+      "score": -4,
       "w": [
         3,
         1,
         0.5
       ],
-      "line": "Hot October CPI: a Dec hike is fully priced, 11% odds of 50 bp",
+      "line": "10-year back above 5% (5.15%); Dec hike certain, ~14% odds of 50 bp",
       "why": [
         "Long-duration growth stocks suffer most when rates rise; SPCX is priced on profits years away.",
-        "The Fed is at 3.75–4.00% after a September hike; October CPI rose 0.4% m/m (0.3% expected) and Waller backed a December hike.",
+        "The Fed is at 3.75–4.00%; hot October CPI and PPI (+6.5% y/y, most since Nov 2022) make a December hike certain, and the 10-year jumped 13 bp to above 5% on Nov 12 (score −3 → −4).",
         "Mostly a 1-year factor; over 10 years the business matters more than the rate cycle."
       ],
       "metrics": [
@@ -1027,8 +1117,8 @@
           "value": "Dec 8–9, 2026"
         },
         {
-          "label": "Dec hike odds (CME FedWatch, Nov 10)",
-          "value": "88.8% for 25 bp, 11.2% for 50 bp; 0% hold"
+          "label": "Dec hike odds (CME FedWatch)",
+          "value": "100% a hike: ~86% 25 bp, ~14% 50 bp (Nov 13)"
         },
         {
           "label": "October CPI",
@@ -1036,14 +1126,28 @@
         },
         {
           "label": "10-year Treasury yield",
-          "value": "About 4.99% (Nov 12, Trading Economics)"
+          "value": "5.15% (Nov 13); +13 bp to 5.125% on Nov 12 (CNBC)"
         },
         {
           "label": "Core PCE inflation",
           "value": "About 3% (AInvest)"
+        },
+        {
+          "label": "October PPI",
+          "value": "+0.3% m/m (0.4% expected); +6.5% y/y, core +0.5% m/m"
         }
       ],
       "news": [
+        {
+          "lead": "Nov 13",
+          "title": "October PPI +0.3% m/m (0.4% expected) but +6.5% y/y, the biggest since Nov 2022; 10-year to 5.15%; FedWatch: 100% hike odds, ~14% for 50 bp",
+          "meta": "CNBC"
+        },
+        {
+          "lead": "Nov 12",
+          "title": "10-year jumps 13 bp to 5.125% and 2-year 15 bp to 4.88% as oil rises on Iran comments; existing home sales at a 16-year low",
+          "meta": "CNBC"
+        },
         {
           "lead": "Nov 12",
           "title": "10-year near 4.99%; futures keep ~88–91% odds of a 25 bp December hike and ~11% for 50 bp; dollar index at its highest since April 2025",
@@ -1074,7 +1178,9 @@
         "reutersBonds",
         "squawk1111",
         "tradEcon10y",
-        "morningBid"
+        "morningBid",
+        "cnbcYld1112",
+        "cnbcYld1113"
       ],
       "chart": "none"
     },
@@ -1089,11 +1195,11 @@
         1,
         0.5
       ],
-      "line": "Nasdaq erased its post-election loss, then Nvidia's CEO crisis hit futures",
+      "line": "Nvidia's CEO resigned; NVDA −4.3%, Nasdaq −0.4%, SPCX flat",
       "why": [
         "SPCX trades as an AI-infrastructure stock now; it fell to $123.62 on Nov 5 on fears that the midterm result slows data center buildout.",
         "The Nasdaq rose 1.6% on Nov 11 and erased its post-election losses after CoreWeave's results, but SPCX fell 2.33% the same day.",
-        "Overnight Nvidia fell ~8% after hours on a WSJ report its board may oust Jensen Huang; Nasdaq-100 futures were down ~1%. SpaceX's AI build runs on Nvidia GB300s, so AI-supply-chain turmoil is a near-term drag."
+        "Nov 12: Jensen Huang resigned as Nvidia CEO (CFO Kress interim); NVDA fell as much as 16% and closed −4.3% while AMD and Broadcom rose ~6%. SpaceX's AI build runs on Nvidia GB300s; Nvidia reports Nov 17."
       ],
       "metrics": [
         {
@@ -1121,11 +1227,21 @@
           "value": "SPCX $139.75 (−2.33%) vs Nasdaq +1.60% (25,466)"
         },
         {
-          "label": "Overnight (Nov 12)",
-          "value": "Nvidia about −8% after hours; Nasdaq-100 futures about −1%"
+          "label": "Nov 12 close",
+          "value": "SPCX $139.94 (+0.14%) vs Nasdaq −0.39% (25,366); NVDA −4.3% to $166.19"
         }
       ],
       "news": [
+        {
+          "lead": "Nov 12",
+          "title": "Nvidia: Jensen Huang resigns effective immediately; Colette Kress interim CEO, Harvey Jones first board chair; NVDA −4.3% after −16% intraday; AMD, Broadcom +6%",
+          "meta": "NVIDIA IR; Reuters"
+        },
+        {
+          "lead": "Nov 12",
+          "title": "SPCX +0.14% to $139.94, 0.53 points ahead of the Nasdaq (−0.39%); S&P 500 −0.35%",
+          "meta": "Gotrade; stockanalysis.com"
+        },
         {
           "lead": "Nov 12",
           "title": "Nvidia −8% after hours on a WSJ report that its board may oust CEO Jensen Huang; Nasdaq-100 futures −1%, Taiwan −2.8%. No decision announced",
@@ -1170,7 +1286,10 @@
         "apIdx1111",
         "nvdaFut",
         "morningBid",
-        "fool1111"
+        "fool1111",
+        "nvdaCeo",
+        "reutersHuang",
+        "gotrade1112"
       ],
       "chart": "mcap"
     },
@@ -1213,12 +1332,19 @@
           "value": "$255 average, 40 analysts"
         }
       ],
-      "news": [],
+      "news": [
+        {
+          "lead": "Nov 13",
+          "title": "Barron's: at ~$140 a SpaceX share, a 15% premium would mean ~3.2 SpaceX shares per Tesla share (2.3 at $200); BofA sees Tesla holders at ~47% of the combined company",
+          "meta": "tbreak citing Barron's and BofA"
+        }
+      ],
       "links": [
         "sa",
         "visratio",
         "foolLargest",
-        "cmc"
+        "cmc",
+        "tbreakMerger"
       ],
       "chart": "valuation"
     },
@@ -1391,17 +1517,17 @@
       "name": "Geopolitics and defense contracts",
       "group": "External influence",
       "link": "Direct",
-      "score": 2,
+      "score": 1,
       "w": [
         1,
         1.5,
         1
       ],
-      "line": "Golden Dome backbone and tracking satellites; NASA moon base",
+      "line": "Golden Dome contracts vs renewed Starshield dispute and coming Democratic probes",
       "why": [
         "SpaceX holds the Space Data Network Backbone ($2.29B) and a $4.16B tracking-satellite award tied to Golden Dome.",
         "NASA's $10B+ moon base awards include SpaceX.",
-        "Against: dependence on US politics, and friction with Europe that favors 'sovereign' rivals."
+        "Against: Ukraine says Starshield is speed-limited again (SpaceX: 'This is false'), and the new Democratic majority plans probes of SpaceX's defense contracts from January (score +2 → +1)."
       ],
       "metrics": [
         {
@@ -1422,6 +1548,16 @@
         }
       ],
       "news": [
+        {
+          "lead": "Nov 12",
+          "title": "Zelensky: Starshield again capped at 161 km/h over Ukraine, hurting drone interception; SpaceX: 'This is false. There has been no change.' Second episode in a month",
+          "meta": "CNBC, Axios, Ars Technica"
+        },
+        {
+          "lead": "Nov 12",
+          "title": "Axios: the new Democratic majority vows investigations of SpaceX contracts and Ukraine throttling; Senate Armed Services posture to change from January. Pentagon has no near-term SpaceX substitute",
+          "meta": "Axios"
+        },
         {
           "lead": "Nov 12",
           "title": "Falcon 9 launched the USSF-627 national-security mission from Vandenberg",
@@ -1458,7 +1594,10 @@
         "xCoons",
         "sdaPlaser",
         "sdaBlog",
-        "xUssf627"
+        "xUssf627",
+        "axiosStarshield",
+        "arsStarshield",
+        "axiosProbe"
       ],
       "chart": "none"
     },
@@ -1499,6 +1638,16 @@
       ],
       "news": [
         {
+          "lead": "Nov 13",
+          "title": "Amazon Leo LV-01: Vulcan return to flight with 40 satellites, window 18:54 CET",
+          "meta": "Spaceflight Now"
+        },
+        {
+          "lead": "Nov 12",
+          "title": "Blue Origin won't bid Orbital Reef in NASA's next commercial space station round; DoD gives Rocket Lab a $150M conditional loan",
+          "meta": "@SciGuySpace on X, unverified; Axios"
+        },
+        {
           "lead": "Nov 9",
           "title": "Rocket Lab: record Q3 revenue $267.8M (+73%), backlog $3.57B; Neutron debut slips to 2027",
           "meta": "Rocket Lab IR, GuruFocus"
@@ -1516,7 +1665,10 @@
         "ng3",
         "ieee",
         "rklbQ3",
-        "rklbNeutron"
+        "rklbNeutron",
+        "slnLeo",
+        "xBlueReef",
+        "axiosProbe"
       ],
       "chart": "none"
     },
@@ -1561,6 +1713,11 @@
       ],
       "news": [
         {
+          "lead": "Nov 12",
+          "title": "Musk on X about government contracts: 'happy to cancel any that the government doesn't want. Just say the word!' as Democrats plan probes",
+          "meta": "Axios"
+        },
+        {
           "lead": "Nov 11",
           "title": "Dan Ives: SPCX carries a 20–25% 'political discount' after the Texas election; 24/7 Wall St.: SpaceX's 18 national-security launches make it harder to target than Tesla",
           "meta": "Stocktwits, 24/7 Wall St."
@@ -1586,7 +1743,8 @@
         "harrison8k",
         "coons",
         "ives",
-        "wall247"
+        "wall247",
+        "axiosProbe"
       ],
       "chart": "none"
     },
@@ -1601,20 +1759,21 @@
         1,
         1
       ],
-      "line": "Special committees exploring a deal; no terms",
+      "line": "Bloomberg: merger could be announced as soon as December; terms not agreed",
       "why": [
         "A combination would create a company of about $3.4T, close to the #1 spot, but by combining rather than growing.",
         "Tesla supplies Megapacks and solar to SpaceX data centers and co-owns Terafab.",
-        "Analysts at William Blair see the merger as mostly about Musk's control; it needs 50% of all Tesla shares."
+        "Analysts at William Blair see the merger as mostly about Musk's control; it needs 50% of all Tesla shares.",
+        "Bloomberg (Nov 12): boards and advisers are negotiating price, control and the exchange ratio; ring-fencing Tesla China from SpaceX's defense work is the main obstacle. At ~$140, a 15% premium implies ~3.2 SpaceX shares per Tesla share (Barron's). Score kept at 0: SPCX spiked to $147.60 and gave it back, so the market treats it as roughly neutral for SpaceX holders."
       ],
       "metrics": [
         {
           "label": "Status",
-          "value": "Committees formed; no agreement or terms"
+          "value": "Negotiating price and control; announcement possible Dec 2026 or early 2027 (Bloomberg, Nov 12)"
         },
         {
           "label": "Tesla market cap",
-          "value": "$1.49T (Nov 9)"
+          "value": "About $1.5T; TSLA $397.45 (+1.69%) on Nov 12, fifth straight gain"
         },
         {
           "label": "Tesla stake in SpaceX",
@@ -1630,6 +1789,16 @@
         }
       ],
       "news": [
+        {
+          "lead": "Nov 13",
+          "title": "Tesla pulls the $41,990 Model Y AWD trim; Premium trims sold out for 2026",
+          "meta": "@SawyerMerritt on X, unverified"
+        },
+        {
+          "lead": "Nov 12",
+          "title": "Bloomberg: SpaceX and Tesla could announce a merger as soon as December, or early 2027; SpaceX absorbing Tesla via a share swap; neither company commented",
+          "meta": "Electrek; Reuters; tbreak"
+        },
         {
           "lead": "Nov 12",
           "title": "Tesla Robotaxi now runs 24 hours a day in all eight service cities (Austin, San Antonio, Houston, Fort Worth, Dallas, Miami, Orlando, Tampa)",
@@ -1666,7 +1835,11 @@
         "tslaQ",
         "xFinland",
         "xRobotaxi",
-        "cyberCbs"
+        "cyberCbs",
+        "electrekMerger",
+        "reutersMerger",
+        "tbreakMerger",
+        "xModelY"
       ],
       "chart": "none"
     },
@@ -1681,7 +1854,7 @@
         0,
         0
       ],
-      "line": "Starship Flight 15 on Nov 13; Tesla meeting Dec 3; unlock Dec 8–9",
+      "line": "Starship Flight 15 tonight; merger news possible in December; unlock Dec 8–9",
       "why": [
         "Flight 15 attempts the first catch of both stages; a clean result supports the cost-lead story, a lost vehicle would hit sentiment.",
         "Binary events widen the range of outcomes more than they shift the odds, so the score is only slightly positive.",
@@ -1690,11 +1863,11 @@
       "metrics": [
         {
           "label": "Starship Flight 15",
-          "value": "As soon as Fri 13 Nov, 23:45 CET, pending regulatory approval; Booster 22 on the pad"
+          "value": "Fri 13 Nov, 23:45 CET; ship catch Sat 14 Nov ~22:17 CET; still 'pending regulatory approval'"
         },
         {
           "label": "Amazon Leo LV-01",
-          "value": "13 Nov, first Vulcan launch"
+          "value": "13 Nov, 18:54 CET, Vulcan return to flight"
         },
         {
           "label": "Tesla annual meeting",
@@ -1711,9 +1884,22 @@
         {
           "label": "Anthropic IPO",
           "value": "Likely Nov 19 or 20 (ANT, $70–78); read-through for SpaceX's largest AI customer"
+        },
+        {
+          "label": "Nvidia results",
+          "value": "17 Nov, first under interim CEO Kress"
+        },
+        {
+          "label": "SpaceX–Tesla merger",
+          "value": "Announcement possible Dec 2026 or early 2027 (Bloomberg)"
         }
       ],
       "news": [
+        {
+          "lead": "Nov 13",
+          "title": "Flight 15 countdown under way, Ship 42 on the pad",
+          "meta": "Space.com; @SpaceX on X"
+        },
         {
           "lead": "Nov 11",
           "title": "FAA airspace notice posted for Flight 15 on Nov 13; licence change for the ship catch still pending",
@@ -1744,7 +1930,9 @@
         "lockup",
         "xF15",
         "anthIpo",
-        "notam15"
+        "notam15",
+        "spaceF15live",
+        "electrekMerger"
       ],
       "chart": "none"
     },
@@ -1759,24 +1947,24 @@
         0,
         0
       ],
-      "line": "Three-day advance broken: −2.33% to $139.75 while the Nasdaq rose 1.6%",
+      "line": "Flat close after a failed spike: $147.60 high faded to $139.94",
       "why": [
-        "Short-term moves are dominated by volatility: implied volatility is 69.5% a year and the last 20 sessions realized 74.3%.",
-        "Nov 11 reversed from a $145.16 high to a $139.75 close, lagging the Nasdaq by almost 4 points, and slipped another 1.2% after hours ($138.10): the three-day uptrend is broken, so momentum is now neutral.",
+        "Short-term moves are dominated by volatility: implied volatility is 74.5% a year and the last 20 sessions realized 73.9%.",
+        "Nov 12 opened $137.85, spiked to $147.60 early on Huang-hire and campus headlines, then faded to $139.94 (+0.14%): a long upper wick with no follow-through, so momentum stays neutral.",
         "The 1-month trend is still down from $171.92 on Oct 6; puts cost more than calls (inverted term structure) around dated events."
       ],
       "metrics": [
         {
           "label": "At-the-money implied volatility",
-          "value": "69.5% (Nov 11 close); IV rank 31"
+          "value": "74.5% (Nov 12 close); IV rank 36"
         },
         {
           "label": "Realized volatility, 20 sessions",
-          "value": "74.3%"
+          "value": "73.9%"
         },
         {
           "label": "Options-implied move",
-          "value": "±$6.12 a day, ±$13.68 a week, ±$28.03 a month"
+          "value": "±$6.57 a day, ±$14.68 a week, ±$30.09 a month"
         },
         {
           "label": "25-delta put skew",
@@ -1784,10 +1972,20 @@
         },
         {
           "label": "Recent closes",
-          "value": "$171.92 Oct 6, $123.62 Nov 5, $143.09 Nov 10, $139.75 Nov 11"
+          "value": "$171.92 Oct 6, $123.62 Nov 5, $143.09 Nov 10, $139.75 Nov 11, $139.94 Nov 12"
         }
       ],
       "news": [
+        {
+          "lead": "Nov 13",
+          "title": "Pre-market $140.20 (+0.19%) at 07:49 ET",
+          "meta": "stockanalysis.com"
+        },
+        {
+          "lead": "Nov 12",
+          "title": "+0.14% to $139.94 (range $137.75–$147.60, 96M shares), inside the ±4.38% implied move",
+          "meta": "stockanalysis.com; flowmonkey.net"
+        },
         {
           "lead": "Nov 11",
           "title": "−2.33% to $139.75 (range $138.62–$145.16, 114M shares), inside the ±4.33% implied move; after hours $138.10 (−1.18%)",
@@ -1816,7 +2014,9 @@
         "yNasa",
         "nasdaqQ",
         "saHist",
-        "fool1111"
+        "fool1111",
+        "gotrade1112",
+        "xSpcxDigest"
       ],
       "chart": "price"
     },
@@ -1831,24 +2031,24 @@
         0,
         0
       ],
-      "line": "Mixed: Musk's compute rebuttal and Jensen-to-Terafab memes vs unlock and pre-launch nerves",
+      "line": "Volume spike on merger, 'Jensen' and Flight 15; hopeful but split on the merger ratio",
       "why": [
-        "Posts mentioning SPCX peaked at 12,233 on Nov 4 during the post-midterm selloff and ran near 6.6–7.2K a day on Nov 9–11.",
-        "Since the last update: Musk's reply that SpaceX would 'happily take the compute back' (631K views) blunted the Anthropic story; memes about Jensen Huang joining SpaceX to run Terafab spread after the Nvidia report (unfounded).",
-        "Bearish threads focus on the Dec 8 unlock and pre-launch jitters; Stocktwits retail sentiment reads 'bullish'. Net read: neutral (own judgment, not a scored model)."
+        "Posts mentioning SPCX jumped to 11,658 on Nov 12 from 7,129 on Nov 11, close to the Nov 4 peak of 12,233.",
+        "Since the last update: Musk's one-word 'Jensen' post (5.3M views, 92K likes) fed hire-Huang hopes; Morgan Stanley's Flight 15 note circulated; merger-ratio threads dominate SPCX talk.",
+        "Bearish threads: dilution and control in a Tesla deal, the intraday fade, Starshield/Ukraine. Net read: still neutral (own judgment, not a scored model)."
       ],
       "metrics": [
         {
-          "label": "Posts mentioning SPCX, Nov 9 / 10 / 11 (UTC)",
-          "value": "6,635 / 6,776 / 7,203 (X recent post counts)"
+          "label": "Posts mentioning SPCX, Nov 10 / 11 / 12 (UTC)",
+          "value": "6,776 / 7,129 / 11,658 (X recent post counts)"
         },
         {
           "label": "Peak day",
           "value": "Nov 4: 12,233"
         },
         {
-          "label": "Nov 12 to 07:05 UTC",
-          "value": "2,280"
+          "label": "Nov 13 to 14:19 UTC",
+          "value": "5,328"
         },
         {
           "label": "SpaceX X news stories, 24h to Nov 11",
@@ -1856,10 +2056,25 @@
         },
         {
           "label": "Top SpaceX-stock X posts since last update",
-          "value": "Musk compute reply 631K views; Musk 'worth more than Earth' post 449K"
+          "value": "Musk 'Jensen' 5.3M views; Musk 'SpaceX community benefits' 2.3M"
         }
       ],
       "news": [
+        {
+          "lead": "Nov 13",
+          "title": "@elonmusk 'Jensen' quote of a16z's Huang tribute: 5.3M views, 92K likes",
+          "meta": "X post"
+        },
+        {
+          "lead": "Nov 12",
+          "title": "SPCX recap accounts: 'ripped to $147.58 by 9:35, then bled all day'; merger-ratio debate ahead of Flight 15",
+          "meta": "X posts, unverified"
+        },
+        {
+          "lead": "Nov 12",
+          "title": "@elonmusk 'SpaceX community benefits' (2.3M views) quoting @SpaceX's community-investment post",
+          "meta": "X post"
+        },
         {
           "lead": "Nov 11",
           "title": "@elonmusk: 'We would be happy to take the compute back… I think the opposite is going to happen' (631K views, 8.6K likes)",
@@ -1932,7 +2147,11 @@
         "xMuskCompute",
         "xMuskTW",
         "xJensenMeme",
-        "xUnlockDec8"
+        "xUnlockDec8",
+        "xMuskJensen",
+        "xJonas",
+        "xSpcxDigest",
+        "xMuskCommunity"
       ],
       "chart": "none"
     }
@@ -1940,87 +2159,102 @@
   "today": [
     {
       "lead": "Price",
-      "title": "SPCX −2.33% (−$3.34) to $139.75 on Nov 11 (range $138.62–$145.16, 114M shares), breaking a three-day advance while the Nasdaq rose 1.6%; after hours $138.10 (−1.18%)",
-      "meta": "stockanalysis.com; The Motley Fool"
+      "title": "SPCX +0.14% (+$0.19) to $139.94 on Nov 12 after spiking to $147.60 early (range $137.75–$147.60, 96M shares); Nasdaq −0.39%. Pre-market Fri $140.20 (+0.19%)",
+      "meta": "stockanalysis.com; Gotrade"
+    },
+    {
+      "lead": "Merger",
+      "title": "Bloomberg: SpaceX–Tesla merger could be announced as soon as December (or early 2027); boards negotiating price, control and the share ratio; Tesla China ring-fencing is the main hurdle. Tesla score stays 0",
+      "meta": "Electrek; Reuters"
     },
     {
       "lead": "Score change",
-      "title": "Momentum and volatility +1 → 0: the reversal from the $145.16 high and the ~4-point lag vs the Nasdaq end the short uptrend; IV 69.5%, realized 74.3%",
-      "meta": "stockanalysis.com, flowmonkey.net"
+      "title": "Macro −3 → −4: 10-year jumped 13 bp above 5% on Nov 12 (5.15% Fri); a December hike is 100% priced (~14% for 50 bp); October PPI +6.5% y/y",
+      "meta": "CNBC"
     },
     {
-      "lead": "AI sentiment shock",
-      "title": "Nvidia fell ~8% after hours on a WSJ report that its board may oust CEO Jensen Huang; Nasdaq-100 futures −1% and Asian chip stocks lower. SpaceX buys Nvidia GPUs, so watch the open; no score change yet (the Nasdaq itself had erased its post-election losses on Nov 11)",
-      "meta": "MarketWatch, Reuters"
+      "lead": "Score change",
+      "title": "Geopolitics +2 → +1: Zelensky says Starshield is speed-capped again (SpaceX: 'This is false'); Democrats plan probes of SpaceX defense contracts from January",
+      "meta": "CNBC, Axios, Ars Technica"
     },
     {
-      "lead": "Anthropic",
-      "title": "Musk on X: SpaceX 'would be happy to take the compute back… but I think the opposite is going to happen'. Still unconfirmed by either company; xAI score unchanged",
-      "meta": "TeslaNorth; @elonmusk on X"
+      "lead": "AI shock",
+      "title": "Jensen Huang resigned as Nvidia CEO (Kress interim); NVDA −4.3% after −16% intraday. Musk called hiring him 'an honor' and posted 'Jensen' (X, unverified; no offer reported). Nvidia reports Nov 17",
+      "meta": "NVIDIA IR; Reuters; @elonmusk on X"
     },
     {
-      "lead": "Orbital compute",
-      "title": "SemiAnalysis: SpaceX is designing 'Kessel', its own Nvidia-based rack for Earth and orbit, and has raised its 2027 capacity target to ~13 GW (3.6 GW under construction). Musk on X: ~0.5 GW of 'actually usable' compute next year",
-      "meta": "Stocktwits citing SemiAnalysis; @elonmusk on X"
+      "lead": "AI build",
+      "title": "$74B+ of new US supercompute campuses: Starbase $24B with own power, Cochise County AZ ~$50B; 2.5–3 GW targeted by end-2026",
+      "meta": "Stocktwits via Yahoo Finance"
     },
     {
       "lead": "Starship",
-      "title": "Flight 15 still as soon as Fri 13 Nov 23:45 CET: FAA airspace notice is out and Ship 42 is being loaded with 26 Starlink V3s, but the ship-catch licence change is not yet listed",
-      "meta": "spacex-news.com; @NASASpaceflight on X; spacex.com"
+      "title": "Flight 15 tonight 23:45–01:00 CET; booster catch ~6.5 min after liftoff, ship catch Sat ~22:17 CET; spacex.com still says 'pending regulatory approval'. Morgan Stanley: double catch 'a material positive' (via X)",
+      "meta": "spacex.com, Space.com; @SawyerMerritt on X"
     },
     {
-      "lead": "Starlink",
-      "title": "Ookla: download speeds +12% (upload +42%) nationally but down in 16 states and DC; analysts call dynamic pricing risky for loyalty but positive for ARPU",
-      "meta": "Light Reading"
-    },
-    {
-      "lead": "Ecosystem (indirect)",
-      "title": "Tesla extends Cybertruck production through summer 2027 (TSLA ~+4%); Robotaxi now 24/7 in all eight cities (X, unverified); Grok Bot 1.0 launched",
-      "meta": "CBS News; @SawyerMerritt and @bot on X"
+      "lead": "Competition",
+      "title": "Amazon Leo LV-01 on Vulcan's return to flight today 18:54 CET (40 satellites); Blue Origin won't bid Orbital Reef (X, unverified)",
+      "meta": "Spaceflight Now; @SciGuySpace on X"
     },
     {
       "lead": "X chatter",
-      "title": "SPCX posts rose to 7,203 on Nov 11; Jensen-to-Terafab memes are pure speculation; unlock warnings for Dec 8 circulate. X sentiment score stays 0",
+      "title": "SPCX posts jumped to 11,658 on Nov 12 (from 7,129): merger-ratio debate, Jensen hopes, Flight 15 hype. X sentiment stays 0",
       "meta": "X post counts and posts"
     },
     {
-      "lead": "Macro",
-      "title": "10-year ~4.99%; ~88–91% odds of a 25 bp December hike, ~11% for 50 bp; dollar at its highest since April 2025",
-      "meta": "Trading Economics; Reuters"
+      "lead": "Ecosystem (indirect)",
+      "title": "TSLA +1.69% to $397.45, fifth straight gain; Model Y Premium sold out for 2026 (X, unverified); Terafab–TSMC talks reportedly reopened",
+      "meta": "Gotrade; @SawyerMerritt on X; tbreak"
     }
   ],
   "todayLinks": [
     "saHist",
-    "fool1111",
-    "fmIv",
-    "nvdaFut",
-    "morningBid",
-    "muskCompute",
-    "xMuskCompute",
-    "kessel",
-    "xMuskGW",
-    "notam15",
-    "xNsfLoader",
-    "lrOokla",
-    "cyberCbs",
-    "xRobotaxi",
-    "xGrokBot",
-    "xJensenMeme",
-    "xUnlockDec8",
-    "tradEcon10y"
+    "gotrade1112",
+    "electrekMerger",
+    "reutersMerger",
+    "cnbcYld1112",
+    "cnbcYld1113",
+    "axiosStarshield",
+    "axiosProbe",
+    "arsStarshield",
+    "nvdaCeo",
+    "reutersHuang",
+    "stwCampus",
+    "xMuskJensen",
+    "spaceF15live",
+    "f15",
+    "xJonas",
+    "slnLeo",
+    "xBlueReef",
+    "xSpcxDigest",
+    "xModelY",
+    "tbreakMerger"
   ],
   "catalysts": [
     {
       "at": "2026-11-13T22:45:00.000Z",
       "label": "Fri 13 Nov",
-      "title": "Starship Flight 15: first catch attempt of booster and ship",
-      "meta": "spacex.com"
+      "title": "Starship Flight 15 liftoff (23:45 CET): booster catch ~6.5 min later, 26 Starlink V3s",
+      "meta": "spacex.com, Space.com"
     },
     {
-      "at": "2026-11-13T12:00:00.000Z",
+      "at": "2026-11-14T21:17:00.000Z",
+      "label": "Sat 14 Nov",
+      "title": "Flight 15 ship return and first-ever ship catch (~22:17 CET if launched on time)",
+      "meta": "Space.com"
+    },
+    {
+      "at": "2026-11-13T17:54:00.000Z",
       "label": "13 Nov",
-      "title": "Amazon Leo LV-01, first Vulcan launch, 40 satellites",
-      "meta": "Orbital Radar"
+      "title": "Amazon Leo LV-01, Vulcan return to flight, 40 satellites (18:54 CET)",
+      "meta": "Spaceflight Now"
+    },
+    {
+      "at": "2026-11-17T21:20:00.000Z",
+      "label": "17 Nov",
+      "title": "Nvidia Q3 results, first under interim CEO Kress; AI-capex read-through",
+      "meta": "NVIDIA IR"
     },
     {
       "at": "2026-11-19T14:30:00.000Z",
@@ -2039,6 +2273,12 @@
       "label": "3 Dec",
       "title": "Tesla annual meeting; possible merger news before it",
       "meta": "The Verge"
+    },
+    {
+      "at": "2026-12-15T12:00:00.000Z",
+      "label": "Dec 2026–early 2027",
+      "title": "Possible SpaceX–Tesla merger announcement (Bloomberg); terms not agreed",
+      "meta": "Electrek, Reuters"
     },
     {
       "at": "2026-12-08T12:00:00.000Z",
@@ -2069,6 +2309,12 @@
       "label": "Dec 2026",
       "title": "Test of Musk's claim of over $100B annualized revenue",
       "meta": "Baron conference"
+    },
+    {
+      "at": "2027-01-03T17:00:00.000Z",
+      "label": "3 Jan 2027",
+      "title": "Democratic-majority Congress sworn in; probes of SpaceX contracts and Starshield expected",
+      "meta": "Axios"
     },
     {
       "at": "2027-01-15T12:00:00.000Z",
@@ -2132,7 +2378,7 @@
         "Nearest rival Blue Origin is grounded until January 2027."
       ],
       "against": [
-        "Starship is not yet fully reusable; the first ship catch is Nov 13.",
+        "Starship is not yet fully reusable; Flight 15 (Nov 13, 23:45 CET) attempts the first catch of both stages.",
         "No official cost per kg; Flight 14 had engine-loss issues."
       ]
     },
@@ -2150,7 +2396,8 @@
       "against": [
         "Consumer ARPU fell from $83 to $69 a month.",
         "Amazon Leo and two Chinese constellations are coming; T-Mobile refuses a SpaceX MVNO.",
-        "BT is holding back its Starlink launch over the Ukraine controversy (Nov 10)."
+        "BT is holding back its Starlink launch over the Ukraine controversy (Nov 10).",
+        "Ukraine says Starshield is speed-capped again (SpaceX denies); Democrats plan probes of SpaceX contracts (Nov 12)."
       ]
     },
     {
@@ -2193,7 +2440,8 @@
       "tone": "warning",
       "for": [
         "AI revenue $7.6B in Q3, from $0.8B a year earlier; $63B backlog.",
-        "Q1 2027 guidance of $33–37B total revenue."
+        "Q1 2027 guidance of $33–37B total revenue.",
+        "$74B+ of new supercompute campuses announced (Starbase, Arizona; Nov 12)."
       ],
       "against": [
         "Q4 capex of $35–40B; over $20B of related-party GPU leases.",
@@ -2209,6 +2457,7 @@
       "tone": "warning",
       "for": [
         "Already #6–7 in the world at $1.90T; needs about 2.7x to pass Apple's $5.10T.",
+        "A Tesla merger (possible from December, Bloomberg) would create ~$3.4T, by combining rather than growing.",
         "Revenue tripled from Q1 to Q3 2026."
       ],
       "against": [
@@ -2229,7 +2478,7 @@
       "id": "saHist",
       "title": "SPCX daily price history",
       "site": "stockanalysis.com",
-      "date": "Nov 11, 2026",
+      "date": "Nov 12, 2026",
       "href": "https://stockanalysis.com/stocks/spcx/history/"
     },
     {
@@ -2716,16 +2965,16 @@
     },
     {
       "id": "fmIv",
-      "title": "SPCX implied volatility 69.5%, realized 74.3%",
+      "title": "SPCX implied volatility 74.5%, realized 73.9%",
       "site": "flowmonkey.net",
-      "date": "Nov 11, 2026",
+      "date": "Nov 12, 2026",
       "href": "https://flowmonkey.net/levels/spcx/implied-volatility"
     },
     {
       "id": "fmMove",
-      "title": "SPCX expected move: ±$6.12 a day, ±$13.68 a week",
+      "title": "SPCX expected move: ±$6.57 a day, ±$14.68 a week",
       "site": "flowmonkey.net",
-      "date": "Nov 11, 2026",
+      "date": "Nov 12, 2026",
       "href": "https://flowmonkey.net/levels/spcx/expected-move"
     },
     {
@@ -3212,6 +3461,160 @@
       "href": "https://x.com/QmoCrypto/status/2120591279931183244"
     },
     {
+      "id": "electrekMerger",
+      "title": "SpaceX could announce $1.5 trillion Tesla merger in December: report",
+      "site": "Electrek",
+      "date": "Nov 12, 2026",
+      "href": "https://electrek.co/2026/11/12/spacex-tesla-merger-announcement-december-report/"
+    },
+    {
+      "id": "reutersMerger",
+      "title": "SpaceX, Tesla merger talks progress, Bloomberg News reports",
+      "site": "Reuters via Investing.com",
+      "date": "Nov 12, 2026",
+      "href": "https://ca.investing.com/news/stock-market-news/spacex-tesla-merger-talks-progress-bloomberg-news-reports-4954156"
+    },
+    {
+      "id": "tbreakMerger",
+      "title": "SpaceX and Tesla could unveil a record merger as soon as December",
+      "site": "tbreak",
+      "date": "Nov 13, 2026",
+      "href": "https://tbreak.com/spacex-tesla-merger-december/"
+    },
+    {
+      "id": "gotrade1112",
+      "title": "SpaceX Stock (SPCX) Rises 0.1% to $139.94 (Nov 12)",
+      "site": "Gotrade",
+      "date": "Nov 13, 2026",
+      "href": "https://www.heygotrade.com/en/news/spacex-spcx-stock-news-november-13-2026/"
+    },
+    {
+      "id": "nvdaCeo",
+      "title": "NVIDIA Announces CEO Transition",
+      "site": "investor.nvidia.com",
+      "date": "Nov 12, 2026",
+      "href": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-CEO-Transition/"
+    },
+    {
+      "id": "reutersHuang",
+      "title": "Nvidia CEO Jensen Huang resigns in blow to AI boom he helped foster",
+      "site": "Reuters via Investing.com",
+      "date": "Nov 12, 2026",
+      "href": "https://www.investing.com/news/stock-market-news/nvidia-ceo-jensen-huang-to-step-down-in-big-blow-to-ai-boom-5021980"
+    },
+    {
+      "id": "cnbcYld1112",
+      "title": "10-year Treasury yield jumps back above 5% as oil gains and more Fed rate hikes expected",
+      "site": "CNBC",
+      "date": "Nov 12, 2026",
+      "href": "https://www.cnbc.com/2026/11/12/us-treasurys-bonds-yields.html"
+    },
+    {
+      "id": "cnbcYld1113",
+      "title": "10-year Treasury yield moves to 5.15% as traders weigh producer price report",
+      "site": "CNBC",
+      "date": "Nov 13, 2026",
+      "href": "https://www.cnbc.com/2026/11/13/treasury-yields-fed-rates.html"
+    },
+    {
+      "id": "axiosStarshield",
+      "title": "Zelensky says Musk-owned satellite system throttled again, SpaceX denies it",
+      "site": "Axios",
+      "date": "Nov 12, 2026",
+      "href": "https://www.axios.com/2026/11/12/ukraine-starshield-restricted-spacex-russia-zelensky"
+    },
+    {
+      "id": "arsStarshield",
+      "title": "Ukraine says it can't stop Russian strikes because Starshield is limited again",
+      "site": "Ars Technica",
+      "date": "Nov 12, 2026",
+      "href": "https://arstechnica.com/tech-policy/2026/11/ukraine-says-spacex-starshield-is-restricted-again-spacex-claims-it-isnt/"
+    },
+    {
+      "id": "axiosProbe",
+      "title": "SpaceX congressional scrutiny looms",
+      "site": "Axios",
+      "date": "Nov 12, 2026",
+      "href": "https://www.axios.com/2026/11/12/spacex-scrutiny-looms-congress"
+    },
+    {
+      "id": "stwCampus",
+      "title": "SpaceX commits $74B to new AI campuses while Musk eyes hiring former Nvidia CEO",
+      "site": "Stocktwits via Yahoo Finance",
+      "date": "Nov 12, 2026",
+      "href": "https://finance.yahoo.com/technology/ai/articles/spacex-commits-74b-ai-campuses-175531621.html"
+    },
+    {
+      "id": "spaceF15live",
+      "title": "Watch SpaceX attempt a historic Starship launch and double-catch landing today (Nov. 13)",
+      "site": "Space.com",
+      "date": "Nov 13, 2026",
+      "href": "https://www.space.com/space-exploration/launches-spacecraft/spacex-launching-historic-double-catch-starship-test-flight-today-watch-it-live"
+    },
+    {
+      "id": "slnLeo",
+      "title": "ULA's Vulcan rocket plans return to flight with launch of 40 Leo satellites for Amazon",
+      "site": "Spaceflight Now",
+      "date": "Nov 13, 2026",
+      "href": "https://spaceflightnow.com/2026/11/13/ulas-vulcan-rocket-plans-return-to-flight-with-launch-of-40-leo-satellites-for-amazon/"
+    },
+    {
+      "id": "digiTsmc",
+      "title": "Musk may let TSMC run his Texas chip fab as his do-it-alone plan stalls",
+      "site": "Digitimes",
+      "date": "Nov 2, 2026",
+      "href": "https://www.digitimes.com/news/a20261102PD209/tsmc-elon-musk-manufacturing-fab-investment.html"
+    },
+    {
+      "id": "xMuskJensen",
+      "title": "Musk: 'Jensen', quoting a16z's tribute to Huang (X post)",
+      "site": "x.com",
+      "date": "Nov 13, 2026",
+      "href": "https://x.com/elonmusk/status/2121118775210868871"
+    },
+    {
+      "id": "xJonas",
+      "title": "Morgan Stanley's Jonas: a double catch on Flight 15 'likely to be a material positive for the stock' (X post)",
+      "site": "x.com",
+      "date": "Nov 12, 2026",
+      "href": "https://x.com/SawyerMerritt/status/2121022747375530158"
+    },
+    {
+      "id": "xShip42Pad",
+      "title": "Ship 42 moves to the Starbase pad ahead of launch (X post)",
+      "site": "x.com",
+      "date": "Nov 12, 2026",
+      "href": "https://x.com/SpaceX/status/2121044579470233638"
+    },
+    {
+      "id": "xBlueReef",
+      "title": "Berger: Blue Origin will not bid Orbital Reef for NASA's next commercial station round (X post)",
+      "site": "x.com",
+      "date": "Nov 12, 2026",
+      "href": "https://x.com/SciGuySpace/status/2121015465782940128"
+    },
+    {
+      "id": "xSpcxDigest",
+      "title": "SPCX day recap: ripped to $147.58 by 9:35 ET, then bled all day (X post)",
+      "site": "x.com",
+      "date": "Nov 12, 2026",
+      "href": "https://x.com/spcxGOD/status/2121011407055384888"
+    },
+    {
+      "id": "xMuskCommunity",
+      "title": "Musk: 'SpaceX community benefits' (X post)",
+      "site": "x.com",
+      "date": "Nov 12, 2026",
+      "href": "https://x.com/elonmusk/status/2120912138772369758"
+    },
+    {
+      "id": "xModelY",
+      "title": "Tesla pulls $41,990 Model Y AWD; Premium trims sold out for 2026 (X post)",
+      "site": "x.com",
+      "date": "Nov 13, 2026",
+      "href": "https://x.com/SawyerMerritt/status/2121106496528216535"
+    },
+    {
       "id": "xStarbaseTax",
       "title": "SpaceX seeks tax break for $24B power plant and AI facility in Starbase (X news summary)",
       "site": "x.com",
@@ -3496,7 +3899,11 @@
           "value": 1.94
         },
         {
-          "label": "Nov 11",
+          "label": "",
+          "value": 1.9
+        },
+        {
+          "label": "Nov 12",
           "value": 1.9
         }
       ],
