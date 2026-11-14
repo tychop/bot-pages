@@ -19,5 +19,12 @@
     "bot": "spacex-stock",
     "description": "Chance meter and drill-downs on whether SpaceX (SPCX) can 10X, 100X or become the most valuable company",
     "updated": "2026-11-10"
+  },
+  {
+    "title": "Mac for local AI",
+    "path": "mac-for-local-ai/",
+    "bot": "mac-for-local-ai",
+    "description": "Build any M5-or-newer Mac at Apple NL prices, plus a 128GB deal tracker and picker for running AI locally.",
+    "updated": "2026-11-14"
   }
 ]
