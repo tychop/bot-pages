@@ -9330,7 +9330,7 @@
       "images": [
         {
           "file": "flight-images/F15-1.webp",
-          "caption": "Pre-flight launch pad: NOAA aerial view of the Starbase launch site in January 2026, showing both launch towers including Pad 2, from which Flight 15 is set to launch",
+          "caption": "Pre-flight: NOAA aerial of Starbase in January 2026, including Pad 2 (OLP-2) used for Flight 15",
           "role": "pre-flight launch pad",
           "credit": "NOAA / NODD",
           "license": "Public domain",
@@ -9348,9 +9348,303 @@
             }
           ],
           "hotlink": false
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Version 3 Super Heavy at the Starbase tower (SpaceX Flight 15 mission-page image)",
+          "role": "stack on pad",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://www.spacex.com/launches/starship-flight-15",
+          "directUrl": "https://content.spacex.com/cms-assets/assets/Flight_15_Website_Mobile_1_562d65239a.png",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "SpaceX: Starship Flight 15",
+              "site": "SpaceX",
+              "href": "https://www.spacex.com/launches/starship-flight-15"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Booster 22 in Mega Bay before moving to the pad for Flight 15 catch testing",
+          "role": "booster rollout",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2120220290219208884",
+          "directUrl": "https://pbs.twimg.com/media/HWyJCAYXcAAFtkn.jpg?name=orig",
+          "width": 1920,
+          "height": 1280,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Super Heavy moved to the launch pad",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2120220290219208884"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Booster 22 suspended in the Pad 2 tower arms for a catch-height squeeze test",
+          "role": "booster catch test",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2120220290219208884",
+          "directUrl": "https://pbs.twimg.com/media/HWyJFLKWIAAOuYn.jpg?name=orig",
+          "width": 1920,
+          "height": 1280,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Super Heavy moved to the launch pad",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2120220290219208884"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Ship 42 rolling to the Starbase pad ahead of Flight 15",
+          "role": "ship rollout",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2121044579470233638",
+          "directUrl": "https://pbs.twimg.com/media/HW92p7AWgAA-N1n.jpg?name=orig",
+          "width": 4096,
+          "height": 2304,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Ship 42 moves to the Starbase pad",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2121044579470233638"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Ship 42 at the Pad 2 tower ahead of Flight 15 launch",
+          "role": "ship on pad",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2121044579470233638",
+          "directUrl": "https://pbs.twimg.com/media/HW92vD_WIAAmDOP.jpg?name=orig",
+          "width": 4096,
+          "height": 2304,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Ship 42 moves to the Starbase pad",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2121044579470233638"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Liftoff of Starship Flight 15 (B22/S42) from Starbase Pad 2",
+          "role": "liftoff",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2121437515819159871",
+          "directUrl": "https://pbs.twimg.com/media/HXDb_kPXQAATb2F.jpg?name=orig",
+          "width": 4096,
+          "height": 2304,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Liftoff of Starship Flight 15",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2121437515819159871"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Flight 15 clearing the tower under Raptor plume",
+          "role": "ascent",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2121437515819159871",
+          "directUrl": "https://pbs.twimg.com/media/HXDcEwRWwAEIyMi.jpg?name=orig",
+          "width": 4096,
+          "height": 2304,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Liftoff of Starship Flight 15",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2121437515819159871"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Flight 15 climbing out over the South Texas coast",
+          "role": "ascent",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2121437515819159871",
+          "directUrl": "https://pbs.twimg.com/media/HXDcIk7WwAANmRV.jpg?name=orig",
+          "width": 2048,
+          "height": 1365,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Liftoff of Starship Flight 15",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2121437515819159871"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Booster 22 landing burn during the diverted Gulf of Mexico splashdown",
+          "role": "booster splashdown",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2121439746740170859",
+          "directUrl": "https://pbs.twimg.com/media/HXDdg72XwAEBfhQ.jpg?name=orig",
+          "width": 3240,
+          "height": 2160,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Landing burn and splashdown for Super Heavy Booster 22",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2121439746740170859"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Booster 22 engines firing just above the Gulf during splashdown",
+          "role": "booster splashdown",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2121439746740170859",
+          "directUrl": "https://pbs.twimg.com/media/HXDdifZXEAA2KCh.jpg?name=orig",
+          "width": 3455,
+          "height": 1943,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Landing burn and splashdown for Super Heavy Booster 22",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2121439746740170859"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Booster 22 at the waterline after the Flight 15 offshore divert",
+          "role": "booster splashdown",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2121439746740170859",
+          "directUrl": "https://pbs.twimg.com/media/HXDdj_zXMAA0N9I.jpg?name=orig",
+          "width": 4032,
+          "height": 3024,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Landing burn and splashdown for Super Heavy Booster 22",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2121439746740170859"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Onboard view as Ship 42 completes its orbital insertion burn (still from SpaceX video)",
+          "role": "orbit",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2121381593768186362",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/2121381488885432320/img/kOPe_cEJupV6WHnk.jpg",
+          "width": 3840,
+          "height": 2160,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: orbital insertion burn",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2121381593768186362"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Ship 42 deploying Starlink V3 satellites (still from SpaceX video)",
+          "role": "starlink deploy",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2121384424558453096",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/2121384344782798848/img/0Ls-onoWK9WSyly7.jpg",
+          "width": 3840,
+          "height": 2160,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Starlink V3 payload deploy",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2121384424558453096"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Live views of Starship in orbit via Starlink (still from SpaceX video)",
+          "role": "orbit",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2121434583178875245",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/2121434374503632896/img/FcmqQkHF1GCDwK5D.jpg",
+          "width": 3840,
+          "height": 2160,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Live views of Starship in orbit",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2121434583178875245"
+            }
+          ]
         }
       ],
-      "imagesNote": "Hero is a cut from SpaceX's Flight 15 hot-staging X clip. Watch live block remains separate.",
+      "imagesNote": "Gallery mixes SpaceX X stills, the Flight 15 mission-page CDN image, Wikimedia NOAA pad context, and still frames from SpaceX orbit/Starlink video posts. Hero remains the hot-staging cut; Watch live unchanged.",
       "timeline": [
         {
           "event": "Note",
@@ -9359,7 +9653,7 @@
           "actual": null,
           "actualSec": null,
           "status": null,
-          "note": "INTERIM update (14 Nov 2026, ~11:45 CET): ascent, orbit, and payload deploy complete; booster catch diverted to Gulf splashdown (reason unpublished by SpaceX); early Hawaii return not taken; SpaceX reported ship and heatshield healthy ~T+7h; ship catch still pending (~22:17 CET Sat 14 Nov) after remaining go/no-go gates. Not a final success/failure classification.",
+          "note": "INTERIM update (14 Nov 2026, ~12:00 CET): ascent, orbit, and payload deploy complete; booster catch diverted to Gulf splashdown (reason unpublished by SpaceX); early Hawaii return not taken; SpaceX reported ship and heatshield healthy ~T+7h; final Hawaii go/no-go (T+20h41m) and ship catch (~22:17 CET) still ahead as of this update. Not a final success/failure classification.",
           "sources": [
             {
               "title": "SpaceX: Starship and heatshield healthy (~T+7h)",

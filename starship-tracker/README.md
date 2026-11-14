@@ -31,7 +31,7 @@ HTML/JS do not need changes for normal data updates. After editing JSON, bump no
 - `styles.css` — dark SpaceX-style layout
 - `fonts/` — Barlow / Barlow Condensed
 
-Cache-bust query on CSS/JS links (currently `20261114c`).
+Cache-bust query on CSS/JS links (currently `20261114d`).
 
 ## Media uniqueness
 
