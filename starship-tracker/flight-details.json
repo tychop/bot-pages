@@ -10795,11 +10795,16 @@
           "event": "Starship is transonic",
           "planned": "T+22:29:34",
           "plannedSec": 80974,
-          "actual": null,
-          "actualSec": null,
-          "status": "planned",
-          "note": null,
+          "actual": "about 14 Nov 22:19 CET",
+          "actualSec": 81120,
+          "status": "ok",
+          "note": "Completed during ship return / final approach (webcast).",
           "sources": [
+            {
+              "title": "@SpaceX: Mechazilla catches Starship!",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2121715216597827756"
+            },
             {
               "title": "Space.com: Flight 15 launch; booster catch aborted",
               "site": "Space.com",
@@ -10832,11 +10837,16 @@
           "event": "Starship is subsonic",
           "planned": "T+22:30:13",
           "plannedSec": 81013,
-          "actual": null,
-          "actualSec": null,
-          "status": "planned",
-          "note": null,
+          "actual": "about 14 Nov 22:19 CET",
+          "actualSec": 81120,
+          "status": "ok",
+          "note": "Completed during ship return / final approach (webcast).",
           "sources": [
+            {
+              "title": "@SpaceX: Mechazilla catches Starship!",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2121715216597827756"
+            },
             {
               "title": "Space.com: Flight 15 launch; booster catch aborted",
               "site": "Space.com",
@@ -10940,11 +10950,16 @@
           "event": "Landing flip",
           "planned": "T+22:32:18",
           "plannedSec": 81138,
-          "actual": null,
-          "actualSec": null,
-          "status": "planned",
-          "note": null,
+          "actual": "about 14 Nov 22:19 CET",
+          "actualSec": 81120,
+          "status": "ok",
+          "note": "Landing flip during final approach to the tower (webcast ~0:52–0:56 of catch clip).",
           "sources": [
+            {
+              "title": "@SpaceX: Mechazilla catches Starship!",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2121715216597827756"
+            },
             {
               "title": "Space.com: Flight 15 launch; booster catch aborted",
               "site": "Space.com",
@@ -10977,11 +10992,16 @@
           "event": "Landing burn 3 to 2 engines",
           "planned": "T+22:32:26",
           "plannedSec": 81146,
-          "actual": null,
-          "actualSec": null,
-          "status": "planned",
-          "note": null,
+          "actual": "about 14 Nov 22:19 CET",
+          "actualSec": 81120,
+          "status": "ok",
+          "note": "Landing burn engine throttle-down during tower approach (webcast).",
           "sources": [
+            {
+              "title": "@SpaceX: Mechazilla catches Starship!",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2121715216597827756"
+            },
             {
               "title": "Space.com: Flight 15 launch; booster catch aborted",
               "site": "Space.com",
@@ -11014,11 +11034,16 @@
           "event": "Landing burn 2 to 1 engine",
           "planned": "T+22:32:33",
           "plannedSec": 81153,
-          "actual": null,
-          "actualSec": null,
-          "status": "planned",
-          "note": null,
+          "actual": "about 14 Nov 22:19 CET",
+          "actualSec": 81120,
+          "status": "ok",
+          "note": "Landing burn engine throttle-down during tower approach (webcast).",
           "sources": [
+            {
+              "title": "@SpaceX: Mechazilla catches Starship!",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2121715216597827756"
+            },
             {
               "title": "Space.com: Flight 15 launch; booster catch aborted",
               "site": "Space.com",
