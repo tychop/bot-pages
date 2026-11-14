@@ -1,9 +1,9 @@
 {
-  "lastUpdated": "2026-11-14",
-  "lastUpdatedLabel": "Sat 14 Nov 2026, 22:30 CET",
+  "lastUpdated": "2026-11-15",
+  "lastUpdatedLabel": "Sun 15 Nov 2026",
   "title": "Starship Flight Tracker",
-  "intro": "Every SpaceX Starship integrated flight, from Flight 1 in April 2023 through Flight 15 (in progress), with goals, results, causes, lessons and costs. Times are Netherlands time (CET/CEST).",
-  "overview": "15 flights flown or in progress; Flight 14 was the first to reach orbit. Flight 15 launched 13 Nov 2026: booster catch called off (Gulf splashdown); Ship 42 reached orbit, deployed 26 Starlink V3 satellites, and as of 21:14 CET on 14 Nov SpaceX had polled go to return it to Starbase for a first ship catch ~22:17 CET.",
+  "intro": "Every SpaceX Starship integrated flight, from Flight 1 in April 2023 through Flight 15, with goals, results, causes, lessons and costs. Times are Netherlands time (CET/CEST).",
+  "overview": "15 flights flown; Flight 14 was the first to reach orbit. Flight 15 (13 Nov 2026) was the first ship catch. B22's catch was called off and it splashed down in the Gulf. S42 deployed 26 Starlink V3 and was caught by Mechazilla at about 22:19 CET on 14 Nov, roughly 22 hours after liftoff.",
   "timezoneNote": "Times: local Netherlands time (CET = UTC+1 in winter, CEST = UTC+2 in summer). Starbase is on CDT (UTC-5) in summer and CST (UTC-6) in winter: CET = CST + 7 h.",
   "summary": {
     "flownLabel": "Flights flown",
@@ -1367,7 +1367,7 @@
       "shipShort": "S42",
       "version": "V3 (Block 3)",
       "pad": "Starbase OLP-2 (Pad 2)",
-      "summary": "Success: first ship catch. Booster catch called off (B22 controlled Gulf splashdown); S42 reached orbit, deployed 26 Starlink V3, and was caught by Mechazilla at about 22:19 CET on 14 Nov after more than 21 hours in orbit.",
+      "summary": "Success: first ship catch. B22's boostback ended early on a low-fuel-mass alarm; guidance aborted the catch and sent it to an offshore Gulf splashdown that triggered FTS (explosive). S42 reached orbit, deployed 26 Starlink V3, and was caught by Mechazilla at about 22:19 CET on 14 Nov after more than 21 hours in orbit.",
       "goals": [
         "Orbital flight with Starlink V3 payload",
         "About 14 orbits at ~275 km over a ~22+ hour flight",
@@ -1379,7 +1379,7 @@
         "Clean hot-staging / stage separation",
         "Ship reached orbit (~275 km) about T+26 min",
         "Deployed 26 Starlink V3 satellites (3 with heatshield-inspection cameras)",
-        "Booster completed a controlled Gulf of Mexico splashdown after catch was called off",
+        "Booster diverted to an offshore Gulf splashdown after catch abort; landing burn then FTS triggered (explosive splashdown ~6.5 min after launch)",
         "Early Hawaii return option not taken — continued toward full-duration mission (Space.com / SpaceX webcast)",
         "SpaceX reported Starship and heatshield healthy ~7 h after launch while monitoring for return",
         "Entered long coast phase (~21 h) with early deorbit options available; SpaceX: all systems looking good",
@@ -1390,13 +1390,13 @@
         "First-ever ship catch by Mechazilla at Starbase (about 22:19 CET 14 Nov)"
       ],
       "failed": [
-        "Booster tower catch called off; diverted to Gulf splashdown (~6.5 min after launch)"
+        "Booster tower catch aborted after early boostback (low-fuel-mass alarm); diverted to explosive Gulf splashdown with FTS (~6.5 min after launch)"
       ],
       "lessons": [
-        "SpaceX has not publicly stated why the booster catch was waved off (Dan Huot: will dig into the abort; Sci Am engine issues and NextSpaceflight GNC note remain unconfirmed by SpaceX)",
+        "B22 ended boostback early on a low-fuel-mass alarm; GNC then correctly aborted the catch and diverted offshore. Musk attributed slight engine underperformance / low fuel residuals; SpaceX is still investigating the root cause.",
         "First ship catch after >21 h in orbit validates return-to-launch-site recovery for Ship"
       ],
-      "boosterOutcome": "Catch called off; controlled splashdown (Gulf of Mexico)",
+      "boosterOutcome": "Catch aborted after early boostback (low-fuel-mass alarm); explosive Gulf splashdown (FTS)",
       "shipOutcome": "Caught by tower (OLP-2) — first ship catch",
       "firsts": [
         "First ship catch by Mechazilla (Ship 42 at OLP-2)",
@@ -1405,12 +1405,31 @@
       "faa": "Flight launched under FAA authorisation; SpaceX polled go for ship return to launch site.",
       "cost": "No public estimate.",
       "uncertain": [
-        "Booster catch called off; B22 did a controlled Gulf of Mexico splashdown (~6.5 min after launch). SpaceX has not published a reason; Scientific American reported some engine issues (unconfirmed); NextSpaceflight attributes a GNC issue (not confirmed by SpaceX).",
+        "B22's boostback burn ended early after a low-fuel-mass alarm; guidance aborted the catch and sent it to an offshore Gulf splashdown, which was explosive (FTS after landing-burn shutdown). Musk said on X that slight engine underperformance left the booster slightly low on fuel. SpaceX is still investigating the root cause.",
         "S42 reached orbit and deployed 26 Starlink V3 satellites.",
-        "First-ever ship catch by Mechazilla at about 22:19 CET on 14 Nov after more than 21 hours in orbit (catch time estimated from the webcast clock).",
-        "Some outlets described a post-splashdown fireball/explosion over the Gulf; Space.com and others call it a controlled splashdown."
+        "First-ever ship catch by Mechazilla at about 22:19 CET on 14 Nov after more than 21 hours in orbit (catch time estimated from the webcast clock)."
       ],
       "sources": [
+        {
+          "title": "Elon Musk: slight engine underperformance",
+          "site": "X (@elonmusk)",
+          "href": "https://x.com/elonmusk/status/2121648438144024943"
+        },
+        {
+          "title": "Elon Musk: Booster was slightly low on fuel",
+          "site": "X (@elonmusk)",
+          "href": "https://x.com/elonmusk/status/2121630197611208994"
+        },
+        {
+          "title": "Spaceflight Now: booster divert to explosive splashdown",
+          "site": "Spaceflight Now",
+          "href": "https://spaceflightnow.com/2026/11/13/live-coverage-starship-flight-15-attempts-to-recover-full-vehicle-in-double-launch-pad-catch/"
+        },
+        {
+          "title": "Space.com: booster aborted catch after low-fuel-mass alarm",
+          "site": "Space.com",
+          "href": "https://www.space.com/space-exploration/launches-spacecraft/spacex-says-starship-flight-15-booster-aborted-chopsticks-landing-catch-after-launch-due-to-guidance-issue-video"
+        },
         {
           "title": "SpaceX: banking maneuver and final approach",
           "site": "X / SpaceX",
