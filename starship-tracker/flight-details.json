@@ -9350,7 +9350,7 @@
           "hotlink": false
         }
       ],
-      "imagesNote": "Flight in progress. Hero remains the SpaceX Flight 15 page image for now; a launch video hero will be cut after the flight ends.",
+      "imagesNote": "Hero is a cut from SpaceX's Flight 15 hot-staging X clip. Watch live block remains separate.",
       "timeline": [
         {
           "event": "Note",
@@ -10333,7 +10333,7 @@
         "url": "https://x.com/i/broadcasts/2brajgZlOKRMka",
         "missionPage": "https://www.spacex.com/launches/starship-flight-15",
         "timestamps": [],
-        "note": "Live coverage on spacex.com and the Flight 15 X broadcast. SpaceX said coverage is planned through ship catch; a cut launch video hero will be added after the flight ends.",
+        "note": "Live coverage on spacex.com and the Flight 15 X broadcast. Flight page hero is a cut from SpaceX's hot-staging highlight on X.",
         "sources": [
           {
             "title": "SpaceX: Starship Flight 15 mission page / webcast",
@@ -10511,12 +10511,29 @@
         "note": "Lifted off at 23:47 CET (4:47 p.m. CT)"
       },
       "hero": {
-        "type": "image",
-        "url": "https://content.spacex.com/cms-assets/assets/Flight_15_Website_Mobile_1_562d65239a.png",
-        "caption": "Version 3 Super Heavy at the Starbase tower",
-        "credit": "© SpaceX",
-        "creditUrl": "https://www.spacex.com/launches/starship-flight-15",
-        "sourceKind": "spacex-ready"
+        "type": "video",
+        "url": "media/hero/flight-15-hotstage.mp4",
+        "sources": [
+          {
+            "src": "media/hero/flight-15-hotstage-720.mp4",
+            "type": "video/mp4",
+            "media": "(max-width: 720px)"
+          },
+          {
+            "src": "media/hero/flight-15-hotstage.webm",
+            "type": "video/webm"
+          },
+          {
+            "src": "media/hero/flight-15-hotstage.mp4",
+            "type": "video/mp4"
+          }
+        ],
+        "poster": "media/hero/flight-15-hotstage-poster.jpg",
+        "caption": "Hot-staging: Ship 42 separates from Booster 22",
+        "credit": "© SpaceX, from SpaceX Flight 15 hot-staging",
+        "creditUrl": "https://x.com/SpaceX/status/2121375384793231499",
+        "sourceKind": "cut",
+        "sourceRange": "X highlight ~0:04.5–0:13.5 (hot-staging / STAGE SEP)"
       },
       "live": {
         "active": true,
