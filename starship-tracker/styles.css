@@ -1655,6 +1655,50 @@ button.tl-summary:hover .tl-title { color: #fff; }
   font-weight: 600;
 }
 .btn:hover { background: #fff; color: #000; }
+.btn-quiet {
+  border-color: rgba(255, 255, 255, 0.45);
+  color: #ddd;
+}
+.btn-quiet:hover { background: rgba(255, 255, 255, 0.08); color: #fff; }
+.live-watch {
+  margin: 1.5rem 0 1.75rem;
+  padding: 1.15rem 0 1.25rem;
+  border-top: 1px solid #2e2e2e;
+  border-bottom: 1px solid #2e2e2e;
+}
+.live-watch .eyebrow {
+  margin: 0 0 0.55rem;
+  color: #c4a35a;
+}
+.live-when {
+  margin: 0 0 0.55rem;
+  max-width: 36rem;
+  font-size: 1.05rem;
+  line-height: 1.45;
+}
+.live-note {
+  margin: 0 0 1rem;
+  max-width: 40rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.live-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  margin: 0;
+}
+.live-watch-compact {
+  margin: 1.35rem 0 0;
+  padding: 0;
+  border: 0;
+}
+.live-watch-compact .live-when {
+  margin: 0.65rem 0 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.9rem;
+}
 .text-link {
   color: var(--muted);
   text-transform: uppercase;
