@@ -11304,7 +11304,7 @@
         "credit": "© SpaceX",
         "creditUrl": "https://x.com/SpaceX/status/2121709368945385477",
         "sourceKind": "cut",
-        "sourceRange": "X amplify 0–10s; crop right pane above telemetry (plasma / heat-shield / Earth)"
+        "sourceRange": "X amplify 0–10s; cropdetect right-pane content only (1800x1010 @1940,494 in 4K; no letterbox)"
       },
       "live": {
         "active": true,
