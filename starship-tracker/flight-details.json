@@ -9359,30 +9359,25 @@
           "actual": null,
           "actualSec": null,
           "status": null,
-          "note": "INTERIM update (14 Nov 2026 CET): ascent, orbit, and payload deploy complete; booster catch diverted to Gulf splashdown; ship catch still pending (~22:17 CET Sat 14 Nov). Not a final success/failure classification.",
+          "note": "INTERIM update (14 Nov 2026, ~11:45 CET): ascent, orbit, and payload deploy complete; booster catch diverted to Gulf splashdown (reason unpublished by SpaceX); early Hawaii return not taken; SpaceX reported ship and heatshield healthy ~T+7h; ship catch still pending (~22:17 CET Sat 14 Nov) after remaining go/no-go gates. Not a final success/failure classification.",
           "sources": [
             {
-              "title": "Space.com: Flight 15 launch; booster catch aborted",
+              "title": "SpaceX: Starship and heatshield healthy (~T+7h)",
+              "site": "X / SpaceX",
+              "href": "https://x.com/SpaceX/status/2121479482582441991"
+            },
+            {
+              "title": "Space.com: Flight 15 live updates",
               "site": "Space.com",
-              "href": "https://www.space.com/space-exploration/launches-spacecraft/spacex-starship-flight-15-chopsticks-double-catch-super-heavy-ship"
+              "href": "https://www.space.com/news/live/spacex-starship-flight-15-live-updates-nov-13-2026-starship-first-double-landing-attempt"
             },
             {
-              "title": "Universe Today: SpaceX passes up booster catch",
-              "site": "Universe Today",
-              "href": "https://www.universetoday.com/articles/spacex-launches-starship-but-passes-up-booster-catch-for-safetys-sake"
+              "title": "Ars Technica: Flight 15 powers to orbit; possible catch Saturday",
+              "site": "Ars Technica",
+              "href": "https://arstechnica.com/space/2026/11/starship-flight-15-powers-to-orbit-setting-up-a-possible-catch-on-saturday/"
             },
             {
-              "title": "NBC News: 15th Starship flight; booster recovery aborted",
-              "site": "NBC News",
-              "href": "https://www.nbcnews.com/science/space/spacex-launches-15th-starship-flight-aborts-booster-recovery-maneuver-rcna609274"
-            },
-            {
-              "title": "Scientific American: Can SpaceX catch its Starship?",
-              "site": "Scientific American",
-              "href": "https://www.scientificamerican.com/article/can-spacex-catch-its-starship/"
-            },
-            {
-              "title": "SpaceX: Starship Flight 15 mission page / recap",
+              "title": "SpaceX: Starship Flight 15 mission page / webcast",
               "site": "SpaceX",
               "href": "https://www.spacex.com/launches/starship-flight-15"
             }
@@ -9754,10 +9749,10 @@
           "event": "Early Hawaii Return Check",
           "planned": "T+1:27:46",
           "plannedSec": 5266,
-          "actual": null,
+          "actual": "Passed / not taken",
           "actualSec": null,
-          "status": "planned",
-          "note": "Go/no-go gate still ahead or in progress as of this interim update",
+          "status": "ok",
+          "note": "Flight controllers forwent the early Hawaii ocean-return option; mission continued toward full duration (Space.com / SpaceX webcast)",
           "sources": [
             {
               "title": "Space.com: Flight 15 launch; booster catch aborted",
@@ -9794,7 +9789,7 @@
           "actual": null,
           "actualSec": null,
           "status": "planned",
-          "note": "Go/no-go gate",
+          "note": "Go/no-go gate. SpaceX reported ship and heatshield healthy ~T+7h and was still monitoring toward the planned catch; no separate Mid Chile call published as of this update.",
           "sources": [
             {
               "title": "Space.com: Flight 15 launch; booster catch aborted",
@@ -9831,7 +9826,7 @@
           "actual": null,
           "actualSec": null,
           "status": "planned",
-          "note": "Last go/no-go at T+20h41m before committing to Starbase return",
+          "note": "Last go/no-go at T+20h41m before committing to Starbase return — still ahead as of this update",
           "sources": [
             {
               "title": "Space.com: Flight 15 launch; booster catch aborted",
@@ -10335,35 +10330,20 @@
       },
       "video": {
         "platform": "SpaceX webcast / X",
-        "url": null,
+        "url": "https://x.com/i/broadcasts/2brajgZlOKRMka",
         "missionPage": "https://www.spacex.com/launches/starship-flight-15",
         "timestamps": [],
-        "note": "Flight launched; webcast coverage ran on spacex.com / X @SpaceX. A cut launch video hero will be added after the flight ends; image hero kept for now.",
+        "note": "Live coverage on spacex.com and the Flight 15 X broadcast. SpaceX said coverage is planned through ship catch; a cut launch video hero will be added after the flight ends.",
         "sources": [
           {
-            "title": "Space.com: Flight 15 launch; booster catch aborted",
-            "site": "Space.com",
-            "href": "https://www.space.com/space-exploration/launches-spacecraft/spacex-starship-flight-15-chopsticks-double-catch-super-heavy-ship"
-          },
-          {
-            "title": "Universe Today: SpaceX passes up booster catch",
-            "site": "Universe Today",
-            "href": "https://www.universetoday.com/articles/spacex-launches-starship-but-passes-up-booster-catch-for-safetys-sake"
-          },
-          {
-            "title": "NBC News: 15th Starship flight; booster recovery aborted",
-            "site": "NBC News",
-            "href": "https://www.nbcnews.com/science/space/spacex-launches-15th-starship-flight-aborts-booster-recovery-maneuver-rcna609274"
-          },
-          {
-            "title": "Scientific American: Can SpaceX catch its Starship?",
-            "site": "Scientific American",
-            "href": "https://www.scientificamerican.com/article/can-spacex-catch-its-starship/"
-          },
-          {
-            "title": "SpaceX: Starship Flight 15 mission page / recap",
+            "title": "SpaceX: Starship Flight 15 mission page / webcast",
             "site": "SpaceX",
             "href": "https://www.spacex.com/launches/starship-flight-15"
+          },
+          {
+            "title": "SpaceX Flight 15 X broadcast",
+            "site": "X / SpaceX",
+            "href": "https://x.com/i/broadcasts/2brajgZlOKRMka"
           }
         ]
       },
@@ -10537,6 +10517,14 @@
         "credit": "© SpaceX",
         "creditUrl": "https://www.spacex.com/launches/starship-flight-15",
         "sourceKind": "spacex-ready"
+      },
+      "live": {
+        "active": true,
+        "missionPage": "https://www.spacex.com/launches/starship-flight-15",
+        "xBroadcast": "https://x.com/i/broadcasts/2brajgZlOKRMka",
+        "catchTargetLocal": "Sat 14 Nov 2026, ~22:17 CET",
+        "coverageStartLocal": null,
+        "note": "SpaceX planned coverage through ship catch on the mission page and X. No separate catch-only broadcast link has been posted; the Flight 15 X broadcast is the launch stream SpaceX linked."
       }
     }
   },

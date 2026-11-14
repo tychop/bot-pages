@@ -7,7 +7,7 @@
   }
 
   var PAGE = document.body.getAttribute("data-page") || "home";
-  var ASSET_V = "20261114a";
+  var ASSET_V = "20261114b";
   var openNotesBtn = null;
   var notesHoverTimer = null;
 
@@ -259,7 +259,9 @@
     }, true);
   }
 
-  function livestreamHtml(detail) {
+  function livestreamHtml(flight, detail) {
+    var live = S.liveWatchHtml(flight, detail, { compact: true });
+    if (live) return live;
     var v = detail && detail.video;
     if (!v) return "";
     var href = v.url || v.missionPage || "";
@@ -327,7 +329,7 @@
       (goals.length
         ? '<ul class="home-goals">' + goals.map(function (g) { return "<li>" + S.esc(g) + "</li>"; }).join("") + "</ul>"
         : "") +
-      (isActive ? "" : livestreamHtml(detail)) +
+      livestreamHtml(featured, detail) +
       '<p class="hero-actions"><a class="text-link" href="flight.html?n=' + featured.n + '">Full flight details</a></p>' +
       "</div>" +
       '<p class="hero-credit">' + S.shortCredit(photo) +
@@ -421,9 +423,11 @@
     var prev = idx > 0 ? sorted[idx - 1] : null;
     var next = idx >= 0 && idx < sorted.length - 1 ? sorted[idx + 1] : null;
 
+    var detail = S.detailOf(flight);
     var body =
       '<p class="launch-outcome">' + outcomePairHtml(flight) + "</p>" +
       '<p class="summary">' + S.esc(flight.summary) + "</p>" +
+      S.liveWatchHtml(flight, detail) +
       S.estimateBlock(flight.costEstimate, flight.cost) +
       '<dl class="facts">' +
       S.prop("Liftoff", (flight.dateLocal || "") + (flight.utc ? " (" + flight.utc + ")" : "")) +
@@ -445,7 +449,6 @@
       S.detailsPanel(flight) +
       S.sourceList(flight.sources, "Sources");
 
-    var detail = S.detailOf(flight);
     var hero = S.flightHeroHtml(flight, detail);
     main.innerHTML =
       hero +

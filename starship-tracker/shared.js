@@ -549,9 +549,54 @@
     return '<section class="block anomaly"><h4>Anomaly</h4><dl class="facts">' + rows + "</dl>" + report + "</section>";
   }
 
+  function liveOf(flight, detail) {
+    return (detail && detail.live) || (flight && flight.live) || null;
+  }
+
+  /** Shown only while live.active is true (turn off after the flight ends). */
+  function liveWatchHtml(flight, detail, opts) {
+    opts = opts || {};
+    var live = liveOf(flight, detail);
+    if (!live || !live.active) return "";
+    var compact = !!opts.compact;
+    var mission = live.missionPage || "";
+    var xBroadcast = live.xBroadcast || "";
+    if (!mission && !xBroadcast) return "";
+
+    var when = live.coverageStartLocal
+      ? "Coverage expected from " + live.coverageStartLocal + "."
+      : (live.catchTargetLocal
+        ? "Ship catch targeted " + live.catchTargetLocal + "."
+        : "");
+    var note = live.note || "";
+    var actions = [];
+    if (mission) {
+      actions.push('<a class="btn" href="' + esc(mission) + '" target="_blank" rel="noopener noreferrer">Watch live · SpaceX</a>');
+    }
+    if (xBroadcast) {
+      actions.push('<a class="btn btn-quiet" href="' + esc(xBroadcast) + '" target="_blank" rel="noopener noreferrer">Watch on X</a>');
+    }
+
+    if (compact) {
+      return '<div class="live-watch live-watch-compact">' +
+        '<p class="live-actions">' + actions.join("") + "</p>" +
+        (when ? '<p class="live-when">' + esc(when) + "</p>" : "") +
+        "</div>";
+    }
+
+    return '<section class="live-watch" aria-label="Watch live">' +
+      '<p class="eyebrow">Watch live</p>' +
+      (when ? '<p class="live-when">' + esc(when) + "</p>" : "") +
+      (note ? '<p class="live-note">' + esc(note) + "</p>" : "") +
+      '<p class="live-actions">' + actions.join("") + "</p>" +
+      "</section>";
+  }
+
   function videoHtml(detail) {
     var v = detail && detail.video;
     if (!v) return "";
+    // Prefer the dedicated Watch live block while a flight is live.
+    if (detail && detail.live && detail.live.active) return "";
     var parts = [];
     if (v.url && claimMedia(v.url)) {
       parts.push('<p><a class="webcast" href="' + esc(v.url) + '" target="_blank" rel="noopener noreferrer">Official webcast' +
@@ -702,9 +747,11 @@
     var outcome = '<p class="launch-outcome">' +
       '<span class="tag' + resultCls + '">' + esc(flight.result) + "</span>" +
       "</p>";
+    var detail = detailOf(flight);
     var body =
       outcome +
       '<p class="summary">' + esc(flight.summary) + "</p>" +
+      liveWatchHtml(flight, detail) +
       estimateBlock(flight.costEstimate, flight.cost) +
       '<dl class="facts">' +
       prop("Liftoff", (flight.dateLocal || "") + (flight.utc ? " (" + flight.utc + ")" : "")) +
@@ -1336,6 +1383,8 @@
     upcomingFlight: upcomingFlight,
     inProgressFlight: inProgressFlight,
     lastFlownFlight: lastFlownFlight,
+    liveWatchHtml: liveWatchHtml,
+    liveOf: liveOf,
     flightByN: flightByN,
     sortedFlights: sortedFlights,
     laterDetailFor: laterDetailFor,
