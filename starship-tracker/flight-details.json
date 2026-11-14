@@ -9966,6 +9966,30 @@
               "href": "https://x.com/SpaceX/status/2121701161040556374"
             }
           ]
+        },
+        {
+          "type": "video",
+          "hotlink": false,
+          "file": null,
+          "caption": "Hot-staging: Ship 42 separates from Booster 22 (~9 s)",
+          "role": "hot staging video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2121375384793231499",
+          "directUrl": "media/hero/flight-15-hotstage-poster.jpg",
+          "poster": "media/hero/flight-15-hotstage-poster.jpg",
+          "durationSec": 9,
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Flight 15 hot-staging",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2121375384793231499"
+            }
+          ]
         }
       ],
       "imagesNote": "Gallery includes SpaceX X stills and video cards (poster opens the X post). Hero remains the hot-staging cut; Watch live unchanged.",
@@ -9977,7 +10001,7 @@
           "actual": null,
           "actualSec": null,
           "status": null,
-          "note": "INTERIM update (14 Nov 2026, 21:37 CET): Good deorbit burn (SpaceX ~21:25 CET). Starship is on course to reenter ahead of a planned catch at Starbase ~22:17 CET. Coverage live. Not a final success/failure classification.",
+          "note": "INTERIM update (14 Nov 2026, 22:13 CET): Reentry begun (SpaceX ~21:58 CET). Starship is reentering Earth's atmosphere; catch targeted ~22:17 CET. Coverage live. Not a final success/failure classification.",
           "sources": [
             {
               "title": "SpaceX: long coast / systems looking good",
@@ -10698,6 +10722,23 @@
           "sortSec": 79846
         },
         {
+          "event": "Reentry begun",
+          "planned": "T+22:13:09",
+          "plannedSec": 79989,
+          "actual": "14 Nov 21:58 CET",
+          "actualSec": 79860,
+          "status": "ok",
+          "note": "Starship is reentering Earth's atmosphere.",
+          "sources": [
+            {
+              "title": "@SpaceX (14 Nov 21:58 CET)",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2121709368945385477"
+            }
+          ],
+          "sortSec": 79860
+        },
+        {
           "event": "Starship is transonic",
           "planned": "T+22:29:34",
           "plannedSec": 80974,
@@ -11242,28 +11283,28 @@
       },
       "hero": {
         "type": "video",
-        "url": "media/hero/flight-15-hotstage.mp4",
+        "url": "media/hero/flight-15-reentry.mp4",
         "sources": [
           {
-            "src": "media/hero/flight-15-hotstage-720.mp4",
+            "src": "media/hero/flight-15-reentry-720.mp4",
             "type": "video/mp4",
             "media": "(max-width: 720px)"
           },
           {
-            "src": "media/hero/flight-15-hotstage.webm",
+            "src": "media/hero/flight-15-reentry.webm",
             "type": "video/webm"
           },
           {
-            "src": "media/hero/flight-15-hotstage.mp4",
+            "src": "media/hero/flight-15-reentry.mp4",
             "type": "video/mp4"
           }
         ],
-        "poster": "media/hero/flight-15-hotstage-poster.jpg",
-        "caption": "Hot-staging: Ship 42 separates from Booster 22",
-        "credit": "© SpaceX, from SpaceX Flight 15 hot-staging",
-        "creditUrl": "https://x.com/SpaceX/status/2121375384793231499",
+        "poster": "media/hero/flight-15-reentry-poster.jpg",
+        "caption": "Ship 42 reentry plasma — Flight 15",
+        "credit": "© SpaceX",
+        "creditUrl": "https://x.com/SpaceX/status/2121709368945385477",
         "sourceKind": "cut",
-        "sourceRange": "X highlight ~0:04.5–0:13.5 (hot-staging / STAGE SEP)"
+        "sourceRange": "X amplify 0–10s; crop right pane above telemetry (plasma / heat-shield / Earth)"
       },
       "live": {
         "active": true,
@@ -11271,7 +11312,7 @@
         "xBroadcast": "https://x.com/i/broadcasts/2brajgZlOKRMka",
         "catchTargetLocal": "Sat 14 Nov 2026, ~22:17 CET",
         "coverageStartLocal": "Sat 14 Nov 2026, 21:16 CET",
-        "note": "Starship is heading for reentry after a good deorbit burn. Catch targeted ~22:17 CET. Coverage live on the mission page and Flight 15 X broadcast."
+        "note": "Starship is reentering Earth's atmosphere. Catch targeted ~22:17 CET. Coverage live on the mission page and Flight 15 X broadcast."
       }
     }
   },
