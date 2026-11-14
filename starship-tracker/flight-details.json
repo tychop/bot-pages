@@ -9941,6 +9941,31 @@
               "href": "https://x.com/SpaceX/status/2121684113526858011"
             }
           ]
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "Flight 15 deorbit burn; Starship heading for reentry and catch (158 s)",
+          "role": "deorbit video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2121701161040556374",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/2121701005490544640/img/IaWDnDtHBTuFEZoP.jpg",
+          "poster": "https://pbs.twimg.com/amplify_video_thumb/2121701005490544640/img/IaWDnDtHBTuFEZoP.jpg",
+          "videoUrl": "https://video.twimg.com/amplify_video/2121701005490544640/vid/avc1/1920x1080/nWzlBfP3yxc7YK9N.mp4",
+          "durationSec": 158,
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Good deorbit burn",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2121701161040556374"
+            }
+          ]
         }
       ],
       "imagesNote": "Gallery includes SpaceX X stills and video cards (poster opens the X post). Hero remains the hot-staging cut; Watch live unchanged.",
@@ -9952,7 +9977,7 @@
           "actual": null,
           "actualSec": null,
           "status": null,
-          "note": "INTERIM update (14 Nov 2026, 21:22 CET): SpaceX is live for deorbit, reentry, and the first ship return-to-launch-site catch attempt. Teams polled go for RTLS at 20:18 CET; catch targeted ~22:17 CET. Booster previously diverted to a Gulf splashdown. Not a final success/failure classification.",
+          "note": "INTERIM update (14 Nov 2026, 21:37 CET): Good deorbit burn (SpaceX ~21:25 CET). Starship is on course to reenter ahead of a planned catch at Starbase ~22:17 CET. Coverage live. Not a final success/failure classification.",
           "sources": [
             {
               "title": "SpaceX: long coast / systems looking good",
@@ -10543,11 +10568,16 @@
           "event": "Deorbit burn start",
           "planned": "T+21:35:57",
           "plannedSec": 77757,
-          "actual": null,
-          "actualSec": null,
-          "status": "planned",
-          "note": "Pending go for ship catch / return",
+          "actual": "T+~21:38",
+          "actualSec": 77880,
+          "status": "ok",
+          "note": "Good deorbit burn (SpaceX, 21:25 CET). Starship on course to reenter ahead of planned catch.",
           "sources": [
+            {
+              "title": "@SpaceX: Good deorbit burn",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2121701161040556374"
+            },
             {
               "title": "Space.com: Flight 15 launch; booster catch aborted",
               "site": "Space.com",
@@ -10582,8 +10612,8 @@
           "plannedSec": 77767,
           "actual": null,
           "actualSec": null,
-          "status": "planned",
-          "note": null,
+          "status": "ok",
+          "note": "Good deorbit burn confirmed by SpaceX",
           "sources": [
             {
               "title": "Space.com: Flight 15 launch; booster catch aborted",
@@ -10612,6 +10642,23 @@
             }
           ],
           "sortSec": 77767
+        },
+        {
+          "event": "Deorbit burn: good",
+          "planned": "T+21:35:57",
+          "plannedSec": 77757,
+          "actual": "14 Nov 21:25 CET",
+          "actualSec": 77880,
+          "status": "ok",
+          "note": "Good deorbit burn. Starship is on course to reenter Earth's atmosphere ahead of a planned catch at Starbase in ~1 hour.",
+          "sources": [
+            {
+              "title": "@SpaceX (14 Nov 21:25 CET)",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2121701161040556374"
+            }
+          ],
+          "sortSec": 77880
         },
         {
           "event": "Starship entry",
@@ -11224,7 +11271,7 @@
         "xBroadcast": "https://x.com/i/broadcasts/2brajgZlOKRMka",
         "catchTargetLocal": "Sat 14 Nov 2026, ~22:17 CET",
         "coverageStartLocal": "Sat 14 Nov 2026, 21:16 CET",
-        "note": "Deorbit, reentry and catch coverage is live now (from 21:16 CET). Catch targeted ~22:17 CET. Watch on the mission page and Flight 15 X broadcast."
+        "note": "Starship is heading for reentry after a good deorbit burn. Catch targeted ~22:17 CET. Coverage live on the mission page and Flight 15 X broadcast."
       }
     }
   },
