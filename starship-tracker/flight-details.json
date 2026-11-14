@@ -9990,9 +9990,57 @@
               "href": "https://x.com/SpaceX/status/2121375384793231499"
             }
           ]
+        },
+        {
+          "type": "video",
+          "hotlink": false,
+          "file": null,
+          "caption": "Ship 42 reentry plasma — Flight 15 (~10 s)",
+          "role": "reentry video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2121709368945385477",
+          "directUrl": "media/hero/flight-15-reentry-poster.jpg",
+          "poster": "media/hero/flight-15-reentry-poster.jpg",
+          "durationSec": 10,
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Starship is reentering",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2121709368945385477"
+            }
+          ]
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "Ship 42 banking maneuver and final approach to Starbase (33 s)",
+          "role": "approach video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2121714305968304321",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/2121714248523153408/img/2rVKnCZLQz-RgNmQ.jpg",
+          "poster": "https://pbs.twimg.com/amplify_video_thumb/2121714248523153408/img/2rVKnCZLQz-RgNmQ.jpg",
+          "durationSec": 33,
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: banking maneuver and final approach",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2121714305968304321"
+            }
+          ]
         }
       ],
-      "imagesNote": "Gallery includes SpaceX X stills and video cards (poster opens the X post). Hero remains the hot-staging cut; Watch live unchanged.",
+      "imagesNote": "Gallery includes SpaceX X stills and video cards (poster opens the X post). Hero is the ship-catch cut; Watch live off after flight end.",
       "timeline": [
         {
           "event": "Note",
@@ -10001,7 +10049,7 @@
           "actual": null,
           "actualSec": null,
           "status": null,
-          "note": "INTERIM update (14 Nov 2026, 22:13 CET): Reentry begun (SpaceX ~21:58 CET). Starship is reentering Earth's atmosphere; catch targeted ~22:17 CET. Coverage live. Not a final success/failure classification.",
+          "note": "FINAL (14 Nov 2026): Success. Booster catch called off (B22 controlled Gulf splashdown). S42 reached orbit, deployed 26 Starlink V3, and was caught by Mechazilla at about 22:19 CET after more than 21 hours in orbit — the first ship catch.",
           "sources": [
             {
               "title": "SpaceX: long coast / systems looking good",
@@ -10187,10 +10235,10 @@
           "event": "Super Heavy landing burn start",
           "planned": "T+06:10",
           "plannedSec": 370,
-          "actual": null,
-          "actualSec": null,
-          "status": "anomaly",
-          "note": "Tower catch called off; diverted to Gulf of Mexico",
+          "actual": "about 14 Nov 22:19 CET",
+          "actualSec": 81120,
+          "status": "ok",
+          "note": "Landing burn and tower approach ahead of first ship catch.",
           "sources": [
             {
               "title": "Space.com: Flight 15 launch; booster catch aborted",
@@ -10224,11 +10272,16 @@
           "event": "Super Heavy landing burn shutdown and catch",
           "planned": "T+06:35",
           "plannedSec": 395,
-          "actual": "T+~06:30",
-          "actualSec": 390,
-          "status": "anomaly",
-          "note": "Catch called off; controlled Gulf splashdown ~6.5 min after launch. Reason not given by SpaceX (Sci Am: some engine issues, unconfirmed).",
+          "actual": "about 14 Nov 22:19 CET",
+          "actualSec": 81120,
+          "status": "ok",
+          "note": "First-ever ship tower catch by Mechazilla at Starbase OLP-2 (time estimated from webcast clock).",
           "sources": [
+            {
+              "title": "@SpaceX: Mechazilla catches Starship!",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2121715216597827756"
+            },
             {
               "title": "Space.com: Flight 15 launch; booster catch aborted",
               "site": "Space.com",
@@ -10813,13 +10866,47 @@
           "sortSec": 81013
         },
         {
+          "event": "Banking maneuver / final approach",
+          "planned": null,
+          "plannedSec": null,
+          "actual": "14 Nov 22:18 CET",
+          "actualSec": 81060,
+          "status": "ok",
+          "note": "Starship is executing a banking maneuver and final approach as it returns to Starbase for a catch.",
+          "sources": [
+            {
+              "title": "@SpaceX (14 Nov 22:18 CET)",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2121714305968304321"
+            }
+          ],
+          "sortSec": 81060
+        },
+        {
+          "event": "Ship caught by the tower",
+          "planned": "T+22:32:34",
+          "plannedSec": 81154,
+          "actual": "about 14 Nov 22:19 CET",
+          "actualSec": 81120,
+          "status": "ok",
+          "note": "First-ever ship catch by Mechazilla at Starbase (time estimated from the webcast clock).",
+          "sources": [
+            {
+              "title": "@SpaceX: Mechazilla catches Starship!",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2121715216597827756"
+            }
+          ],
+          "sortSec": 81120
+        },
+        {
           "event": "Landing burn start",
           "planned": "T+22:32:16",
           "plannedSec": 81136,
-          "actual": null,
-          "actualSec": null,
-          "status": "planned",
-          "note": "Ship catch targeted ~22:17 CET Sat 14 Nov (~T+22.5 h)",
+          "actual": "about 14 Nov 22:19 CET",
+          "actualSec": 81120,
+          "status": "ok",
+          "note": "Landing burn and tower approach ahead of first ship catch.",
           "sources": [
             {
               "title": "Space.com: Flight 15 launch; booster catch aborted",
@@ -10964,11 +11051,16 @@
           "event": "Starship landing burn shutdown and catch",
           "planned": "T+22:32:34",
           "plannedSec": 81154,
-          "actual": null,
-          "actualSec": null,
-          "status": "planned",
-          "note": "First-ever ship tower catch still planned; fallback ocean splashdown if no-go",
+          "actual": "about 14 Nov 22:19 CET",
+          "actualSec": 81120,
+          "status": "ok",
+          "note": "First-ever ship tower catch by Mechazilla at Starbase OLP-2 (time estimated from webcast clock).",
           "sources": [
+            {
+              "title": "@SpaceX: Mechazilla catches Starship!",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2121715216597827756"
+            },
             {
               "title": "Space.com: Flight 15 launch; booster catch aborted",
               "site": "Space.com",
@@ -10996,27 +11088,44 @@
             }
           ],
           "sortSec": 81154
+        },
+        {
+          "event": "Mechazilla catches Starship",
+          "planned": null,
+          "plannedSec": null,
+          "actual": "14 Nov 22:21 CET",
+          "actualSec": 81240,
+          "status": "ok",
+          "note": "Mechazilla catches Starship! Congratulations to the entire SpaceX team on this incredible achievement!",
+          "sources": [
+            {
+              "title": "@SpaceX (14 Nov 22:21 CET)",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2121715216597827756"
+            }
+          ],
+          "sortSec": 81240
         }
       ],
       "telemetry": {
         "maxAltitudeKm": 275,
         "maxAltitudeBasis": "Orbit ~275 km (~170 mi) after insertion burn ~T+26:10 (Space.com / SpaceX timeline)",
         "maxSpeedKmh": null,
-        "flightDurationSec": null,
-        "flightDurationBasis": "Mission still in progress; ship catch planned T+22:32:34 / ~22:17 CET Sat 14 Nov",
+        "flightDurationSec": 81120,
+        "flightDurationBasis": "About 22 h 32 min from liftoff to ship catch (~22:19 CET 14 Nov; webcast clock estimate)",
         "boosterEnginesLit": 33,
         "boosterEnginesPlanned": 33,
         "shipEnginesLit": 6,
         "shipEnginesPlanned": 6,
         "downrangeKm": null,
         "planned": false,
-        "flightDuration": null,
+        "flightDuration": "~22 h 32 min",
         "units": {
           "altitude": "km",
           "speed": "km/h",
           "duration": "s"
         },
-        "note": "Interim telemetry from webcast reporting (Space.com, NBC). Final duration depends on ship catch or ocean splashdown.",
+        "note": "Final: orbit ~275 km; first ship catch after >21 h on orbit. Booster catch waved off.",
         "sources": [
           {
             "title": "Space.com: Flight 15 launch; booster catch aborted",
@@ -11104,7 +11213,7 @@
         "url": "https://x.com/i/broadcasts/2brajgZlOKRMka",
         "missionPage": "https://www.spacex.com/launches/starship-flight-15",
         "timestamps": [],
-        "note": "Live coverage on spacex.com and the Flight 15 X broadcast. Flight page hero is a cut from SpaceX's hot-staging highlight on X.",
+        "note": "Flight 15 complete. Archive webcast on spacex.com / X. Flight page hero is a cut from SpaceX's Mechazilla catch highlight.",
         "sources": [
           {
             "title": "SpaceX: Starship Flight 15 mission page / webcast",
@@ -11120,8 +11229,8 @@
       },
       "firsts": {
         "items": [
-          "First V3 Super Heavy tower-catch attempt (diverted to Gulf splashdown)",
-          "Would be first ship catch if Saturday's attempt succeeds",
+          "First ship catch by Mechazilla (Ship 42 at OLP-2)",
+          "First V3 Super Heavy return-to-launch-site catch attempt (diverted to Gulf splashdown)",
           "Second Starship delivery of operational Starlink V3 satellites"
         ],
         "sources": [
@@ -11166,12 +11275,12 @@
           "note": "Approximate offshore Gulf splashdown; exact coordinates not published"
         },
         "ship": {
-          "zone": "In orbit ~275 km; catch still planned at OLP-2 (~22:17 CET Sat 14 Nov)",
+          "zone": "Caught by Mechazilla at Starbase OLP-2 (about 22:19 CET 14 Nov)",
           "lat": 25.997,
           "lon": -97.157
         },
         "groundTrack": [],
-        "groundTrackNote": "Ship on multi-orbit coast with Hawaii/Chile return-check gates; booster ended in Gulf after catch divert. Ground track not republished for this interim.",
+        "groundTrackNote": "Ship completed multi-orbit coast and returned for the first tower catch; booster ended in Gulf after catch divert.",
         "inclinationDeg": null,
         "sources": [
           {
@@ -11283,36 +11392,36 @@
       },
       "hero": {
         "type": "video",
-        "url": "media/hero/flight-15-reentry.mp4",
+        "url": "media/hero/flight-15-catch.mp4",
         "sources": [
           {
-            "src": "media/hero/flight-15-reentry-720.mp4",
+            "src": "media/hero/flight-15-catch-720.mp4",
             "type": "video/mp4",
             "media": "(max-width: 720px)"
           },
           {
-            "src": "media/hero/flight-15-reentry.webm",
+            "src": "media/hero/flight-15-catch.webm",
             "type": "video/webm"
           },
           {
-            "src": "media/hero/flight-15-reentry.mp4",
+            "src": "media/hero/flight-15-catch.mp4",
             "type": "video/mp4"
           }
         ],
-        "poster": "media/hero/flight-15-reentry-poster.jpg",
-        "caption": "Ship 42 reentry plasma — Flight 15",
+        "poster": "media/hero/flight-15-catch-poster.jpg",
+        "caption": "Mechazilla catches Ship 42 — first ship catch",
         "credit": "© SpaceX",
-        "creditUrl": "https://x.com/SpaceX/status/2121709368945385477",
+        "creditUrl": "https://x.com/SpaceX/status/2121715216597827756",
         "sourceKind": "cut",
-        "sourceRange": "X amplify 0–10s; cropdetect right-pane content only (1800x1010 @1940,494 in 4K; no letterbox)"
+        "sourceRange": "X amplify ~0:56–1:06; crop bottom telemetry (3840×1840); flip through chopsticks settle"
       },
       "live": {
-        "active": true,
+        "active": false,
         "missionPage": "https://www.spacex.com/launches/starship-flight-15",
         "xBroadcast": "https://x.com/i/broadcasts/2brajgZlOKRMka",
         "catchTargetLocal": "Sat 14 Nov 2026, ~22:17 CET",
         "coverageStartLocal": "Sat 14 Nov 2026, 21:16 CET",
-        "note": "Starship is reentering Earth's atmosphere. Catch targeted ~22:17 CET. Coverage live on the mission page and Flight 15 X broadcast."
+        "note": "Flight 15 complete. Mechazilla caught Ship 42 at about 22:19 CET on 14 Nov — the first ship catch."
       }
     }
   },
