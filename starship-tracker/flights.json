@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-11-14",
-  "lastUpdatedLabel": "Sat 14 Nov 2026, 12:00 CET",
+  "lastUpdatedLabel": "Sat 14 Nov 2026, 12:10 CET",
   "title": "Starship Flight Tracker",
   "intro": "Every SpaceX Starship integrated flight, from Flight 1 in April 2023 through Flight 15 (in progress), with goals, results, causes, lessons and costs. Times are Netherlands time (CET/CEST).",
   "overview": "15 flights flown or in progress; Flight 14 was the first to reach orbit. Flight 15 launched 13 Nov 2026: booster catch called off (Gulf splashdown); Ship 42 reached orbit, deployed 26 Starlink V3 satellites, and SpaceX reported the ship and heatshield healthy ~7 h after launch while still targeting a first ship catch ~22:17 CET on 14 Nov if remaining go/no-go gates pass.",
@@ -16,11 +16,11 @@
   },
   "next": {
     "aboutFlight": 15,
-    "status": "In progress — ship in orbit; heatshield reported healthy; catch still pending go/no-go",
+    "status": "In progress — long coast; ship/heatshield healthy; catch still pending go/no-go",
     "timezone": "Starbase is on CST (UTC−6); CET = CST + 7 h",
     "plan": "Ship catch targeted ~22:17 CET Sat 14 Nov (~22.5 h after liftoff), after remaining go/no-go gates (final at T+20h41m); fallback ocean splashdown",
     "hardware": "B22 splashdown in the Gulf after catch called off; S42 in orbit with 26 Starlink V3 sats deployed",
-    "callout": "Flight 15 lifted off Fri 13 Nov 2026 at 23:47 CET (4:47 p.m. CT). Booster catch was called off; controlled Gulf splashdown ~6.5 min after launch (SpaceX has not published a reason). Ship reached ~275 km orbit, deployed 26 Starlink V3 satellites, and SpaceX said ship and heatshield were healthy ~7 h after launch. First-ever ship tower catch still planned ~Sat 14 Nov 22:17 CET if go/no-go gates pass."
+    "callout": "Flight 15 lifted off Fri 13 Nov 2026 at 23:47 CET. Booster catch waved off (Gulf splashdown). Ship reached orbit and deployed 26 Starlink V3 sats. SpaceX said the ship was in a ~21 h coast with early deorbit options and all systems looking good, then at 06:44 CET reported ship and heatshield healthy while still targeting catch ~22:17 CET Sat 14 Nov if go/no-go gates pass."
   },
   "laterCaption": "Dates are no-earlier-than targets and will move.",
   "laterNote": "Musk has also said the flight after Flight 15 could refly the caught vehicles; NASASpaceflight expects Flight 16 to use B23 and S43 instead.",
@@ -1374,7 +1374,7 @@
       "shipShort": "S42",
       "version": "V3 (Block 3)",
       "pad": "Starbase OLP-2 (Pad 2)",
-      "summary": "Interim: launched 13 Nov 2026. B22 tower catch called off — controlled Gulf splashdown ~6.5 min after liftoff (reason not published by SpaceX). S42 reached ~275 km orbit, deployed 26 Starlink V3 satellites; SpaceX reported ship and heatshield healthy ~7 h after launch. First ship tower catch still planned ~22:17 CET Sat 14 Nov after remaining go/no-go gates; outcome not final.",
+      "summary": "Interim: launched 13 Nov 2026. B22 catch called off (Gulf splashdown). S42 reached orbit, deployed 26 Starlink V3 satellites, then entered a ~21 h coast with early deorbit options — SpaceX said all systems were looking good. At 06:44 CET SpaceX reported ship and heatshield healthy and still targeting tower catch ~22.5 h after launch (~22:17 CET). Outcome not final.",
       "goals": [
         "Orbital flight with Starlink V3 payload",
         "About 14 orbits at ~275 km over a ~22+ hour flight",
@@ -1388,7 +1388,8 @@
         "Deployed 26 Starlink V3 satellites (3 with heatshield-inspection cameras)",
         "Booster completed a controlled Gulf of Mexico splashdown after catch was called off",
         "Early Hawaii return option not taken — continued toward full-duration mission (Space.com / SpaceX webcast)",
-        "SpaceX reported Starship and heatshield healthy ~7 h after launch while monitoring for return"
+        "SpaceX reported Starship and heatshield healthy ~7 h after launch while monitoring for return",
+        "Entered long coast phase (~21 h) with early deorbit options available; SpaceX: all systems looking good"
       ],
       "failed": [
         "Booster tower catch called off; diverted to Gulf splashdown (~6.5 min after launch)"
@@ -1398,7 +1399,7 @@
         "Ship catch attempt remains the primary remaining objective; return still depends on go/no-go gates"
       ],
       "boosterOutcome": "Catch called off; controlled splashdown (Gulf of Mexico)",
-      "shipOutcome": "In orbit — heatshield reported healthy (~T+7h); catch planned ~22:17 CET Sat 14 Nov if cleared",
+      "shipOutcome": "In orbit — long coast; heatshield healthy (SpaceX 06:44 CET); catch ~22:17 CET if cleared",
       "firsts": [
         "First V3 Super Heavy return-to-launch-site catch attempt (diverted to Gulf)",
         "Would be the first ship catch if Saturday's attempt succeeds"
@@ -1411,6 +1412,11 @@
         "Some outlets described a post-splashdown fireball/explosion over the Gulf; Space.com and others call it a controlled splashdown."
       ],
       "sources": [
+        {
+          "title": "SpaceX: long coast / systems looking good",
+          "site": "X / SpaceX",
+          "href": "https://x.com/SpaceX/status/2121394839954874797"
+        },
         {
           "title": "SpaceX: Starship and heatshield healthy (~T+7h)",
           "site": "X / SpaceX",

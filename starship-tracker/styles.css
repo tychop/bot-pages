@@ -1326,6 +1326,23 @@ input[type="search"]:focus, select:focus, .era button:focus-visible, .launch-tog
   background: #111;
 }
 .gallery-link { display: block; }
+.gallery-link.photo-frame.is-video {
+  position: relative;
+}
+.gallery-play {
+  position: absolute;
+  left: 0.85rem;
+  bottom: 0.85rem;
+  padding: 0.35rem 0.65rem;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  pointer-events: none;
+}
 .gallery-item figcaption, .credit-card figcaption {
   margin-top: 0.55rem;
   color: #ccc;

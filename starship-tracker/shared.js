@@ -407,11 +407,19 @@
   };
 
   function attributedFigure(image) {
-    var reserved = reservePhoto(image);
+    var isVideo = image && (image.type === "video" || image.kind === "video");
+    // Gallery videos use a poster still; clicking opens the source post.
+    var posterSrc = isVideo ? (image.poster || image.directUrl || image.src) : null;
+    var reserved = isVideo
+      ? (function () {
+          if (!posterSrc || !claimMedia(posterSrc)) return null;
+          return { src: posterSrc, fallback: "", page: image.pageUrl || image.href || "" };
+        })()
+      : reservePhoto(image);
     if (!reserved) return "";
     var page = reserved.page;
     var lic = licenseHtml(image.license, image.licenseHref || image.licenseUrl);
-    var alt = image.alt || image.caption || "Starship photo";
+    var alt = image.alt || image.caption || (isVideo ? "Starship video" : "Starship photo");
     var img = photoImgHtml({
       src: reserved.src,
       fallback: reserved.fallback,
@@ -419,21 +427,27 @@
       alt: alt,
       loading: "lazy",
     });
+    var badge = isVideo ? '<span class="gallery-play" aria-hidden="true">Play</span>' : "";
+    var frameInner = img + badge;
     var frame = page
-      ? '<a class="gallery-link photo-frame" href="' + esc(page) + '" target="_blank" rel="noopener noreferrer">' + img + "</a>"
-      : '<div class="photo-frame">' + img + "</div>";
+      ? '<a class="gallery-link photo-frame' + (isVideo ? " is-video" : "") + '" href="' + esc(page) +
+        '" target="_blank" rel="noopener noreferrer">' + frameInner + "</a>"
+      : '<div class="photo-frame' + (isVideo ? " is-video" : "") + '">' + frameInner + "</div>";
     // Caption / credit / optional licence / source — skip empty licence cleanly.
     var parts = [];
+    if (isVideo) parts.push("Video");
     if (image.caption) parts.push(esc(image.caption));
     if (image.credit) parts.push(esc(image.credit));
     var caption = parts.join(". ");
     if (lic) caption += (caption ? ", " : "") + lic;
     if (page) {
       caption += (caption ? ". " : "") +
-        '<a href="' + esc(page) + '" target="_blank" rel="noopener noreferrer">Source</a>';
+        '<a href="' + esc(page) + '" target="_blank" rel="noopener noreferrer">' +
+        (isVideo ? "Watch on X" : "Source") + "</a>";
     }
     if (caption && !/\.$/.test(caption.replace(/<[^>]+>/g, ""))) caption += ".";
-    return '<figure class="gallery-item">' + frame + "<figcaption>" + caption + "</figcaption></figure>";
+    return '<figure class="gallery-item' + (isVideo ? " is-video" : "") + '">' + frame +
+      "<figcaption>" + caption + "</figcaption></figure>";
   }
 
   function galleryHtml(detail) {
@@ -442,7 +456,9 @@
     if (!images.length) return "";
     var figures = images.map(attributedFigure).join("");
     if (!figures) return "";
-    return '<section class="block gallery"><h4>Photos</h4><div class="gallery-grid">' + figures + "</div></section>";
+    var hasVideo = images.some(function (im) { return im && (im.type === "video" || im.kind === "video"); });
+    var heading = hasVideo ? "Photos & video" : "Photos";
+    return '<section class="block gallery"><h4>' + heading + '</h4><div class="gallery-grid">' + figures + "</div></section>";
   }
 
   function timelineHtml(detail) {

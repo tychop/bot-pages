@@ -9642,9 +9642,191 @@
               "href": "https://x.com/SpaceX/status/2121434583178875245"
             }
           ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "type": "image",
+          "caption": "Liftoff of Starship Flight 15",
+          "role": "liftoff",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2121437515819159871",
+          "directUrl": "https://pbs.twimg.com/media/HXDcBzPWUAA0Qem.jpg?name=orig",
+          "width": 2048,
+          "height": 1365,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Liftoff of Starship Flight 15",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2121437515819159871"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "type": "image",
+          "caption": "Booster 22 landing burn and Gulf splashdown",
+          "role": "booster splashdown",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2121439746740170859",
+          "directUrl": "https://pbs.twimg.com/media/HXDdleKWgAAMtUT.jpg?name=orig",
+          "width": 3024,
+          "height": 4032,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Landing burn and splashdown for Super Heavy Booster 22",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2121439746740170859"
+            }
+          ]
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "Liftoff of Starship!",
+          "role": "liftoff video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2121374779680964991",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/2121374662450159616/img/ageOrY8-i3IftQfP.jpg",
+          "poster": "https://pbs.twimg.com/amplify_video_thumb/2121374662450159616/img/ageOrY8-i3IftQfP.jpg",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX on X",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2121374779680964991"
+            }
+          ]
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "Super Heavy diverted to an offshore Gulf splashdown",
+          "role": "booster splashdown video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2121376372576915909",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/2121376252674367488/img/cljOHqC79eFpRygT.jpg",
+          "poster": "https://pbs.twimg.com/amplify_video_thumb/2121376252674367488/img/cljOHqC79eFpRygT.jpg",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX on X",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2121376372576915909"
+            }
+          ]
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "Ship ascent burn complete; systems check before proceeding to orbit",
+          "role": "ascent video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2121376821635936710",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/2121376687963439104/img/sYynSYnGEZ_Rs6GH.jpg",
+          "poster": "https://pbs.twimg.com/amplify_video_thumb/2121376687963439104/img/sYynSYnGEZ_Rs6GH.jpg",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX on X",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2121376821635936710"
+            }
+          ]
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "Go for orbit!",
+          "role": "orbit video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2121380531640369470",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/2121380459003133952/img/u4zlaRRVSS8VMcxQ.jpg",
+          "poster": "https://pbs.twimg.com/amplify_video_thumb/2121380459003133952/img/u4zlaRRVSS8VMcxQ.jpg",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX on X",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2121380531640369470"
+            }
+          ]
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "Views of Starship in space during Starlink deploy",
+          "role": "starlink deploy video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2121387537235406928",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/2121387246066569217/img/nmK86HcluJQTcgB_.jpg",
+          "poster": "https://pbs.twimg.com/amplify_video_thumb/2121387246066569217/img/nmK86HcluJQTcgB_.jpg",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX on X",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2121387537235406928"
+            }
+          ]
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "All 26 Starlink V3 satellites in orbit",
+          "role": "starlink deploy video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2121394268652839309",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/2121394173030920192/img/LYi_WoaOvLOnn4mx.jpg",
+          "poster": "https://pbs.twimg.com/amplify_video_thumb/2121394173030920192/img/LYi_WoaOvLOnn4mx.jpg",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX on X",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2121394268652839309"
+            }
+          ]
         }
       ],
-      "imagesNote": "Gallery mixes SpaceX X stills, the Flight 15 mission-page CDN image, Wikimedia NOAA pad context, and still frames from SpaceX orbit/Starlink video posts. Hero remains the hot-staging cut; Watch live unchanged.",
+      "imagesNote": "Gallery includes SpaceX X stills and video cards (poster opens the X post). Hero remains the hot-staging cut; Watch live unchanged.",
       "timeline": [
         {
           "event": "Note",
@@ -9653,8 +9835,13 @@
           "actual": null,
           "actualSec": null,
           "status": null,
-          "note": "INTERIM update (14 Nov 2026, ~12:00 CET): ascent, orbit, and payload deploy complete; booster catch diverted to Gulf splashdown (reason unpublished by SpaceX); early Hawaii return not taken; SpaceX reported ship and heatshield healthy ~T+7h; final Hawaii go/no-go (T+20h41m) and ship catch (~22:17 CET) still ahead as of this update. Not a final success/failure classification.",
+          "note": "INTERIM update (14 Nov 2026, ~12:10 CET): ascent, orbit, and payload deploy complete; booster catch diverted to Gulf splashdown. After payload deploy, SpaceX said Starship was in a long coast of ~21 h with early deorbit options and all systems looking good (01:08 CET). At 06:44 CET SpaceX reported the ship and heatshield healthy, still targeting tower catch ~22.5 h after launch (~22:17 CET). Not a final success/failure classification.",
           "sources": [
+            {
+              "title": "SpaceX: long coast / systems looking good",
+              "site": "X / SpaceX",
+              "href": "https://x.com/SpaceX/status/2121394839954874797"
+            },
             {
               "title": "SpaceX: Starship and heatshield healthy (~T+7h)",
               "site": "X / SpaceX",
