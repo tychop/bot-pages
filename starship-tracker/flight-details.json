@@ -9952,7 +9952,7 @@
           "actual": null,
           "actualSec": null,
           "status": null,
-          "note": "INTERIM update (14 Nov 2026, 21:14 CET): ascent, orbit, and Starlink deploy complete; booster catch diverted to Gulf splashdown with recovery/cleanup underway. At 16:41 CET SpaceX said Starship was still looking good for return and pad/tower were go for catch. At 20:18 CET teams polled go to return Starship to Starbase. Catch targeted ~22:17 CET. Not a final success/failure classification.",
+          "note": "INTERIM update (14 Nov 2026, 21:22 CET): SpaceX is live for deorbit, reentry, and the first ship return-to-launch-site catch attempt. Teams polled go for RTLS at 20:18 CET; catch targeted ~22:17 CET. Booster previously diverted to a Gulf splashdown. Not a final success/failure classification.",
           "sources": [
             {
               "title": "SpaceX: long coast / systems looking good",
@@ -10521,6 +10521,23 @@
             }
           ],
           "sortSec": 74515
+        },
+        {
+          "event": "Status update",
+          "planned": null,
+          "plannedSec": null,
+          "actual": "14 Nov 21:16 CET",
+          "actualSec": 77340,
+          "status": "ok",
+          "note": "Watch live: After being in orbit for more than 21 hours, Starship is preparing for its deorbit burn, reentry, and for the first time ship's return to launch site and catch at Starbase.",
+          "sources": [
+            {
+              "title": "@SpaceX (14 Nov 21:16 CET)",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2121698835659706459"
+            }
+          ],
+          "sortSec": 77340
         },
         {
           "event": "Deorbit burn start",
@@ -11206,8 +11223,8 @@
         "missionPage": "https://www.spacex.com/launches/starship-flight-15",
         "xBroadcast": "https://x.com/i/broadcasts/2brajgZlOKRMka",
         "catchTargetLocal": "Sat 14 Nov 2026, ~22:17 CET",
-        "coverageStartLocal": null,
-        "note": "SpaceX polled go to return Starship to the launch site; pad and tower systems are go for catch. Catch targeted ~22:17 CET. Coverage on the mission page and Flight 15 X broadcast."
+        "coverageStartLocal": "Sat 14 Nov 2026, 21:16 CET",
+        "note": "Deorbit, reentry and catch coverage is live now (from 21:16 CET). Catch targeted ~22:17 CET. Watch on the mission page and Flight 15 X broadcast."
       }
     }
   },

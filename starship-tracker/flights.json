@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-11-14",
-  "lastUpdatedLabel": "Sat 14 Nov 2026, 21:14 CET",
+  "lastUpdatedLabel": "Sat 14 Nov 2026, 21:22 CET",
   "title": "Starship Flight Tracker",
   "intro": "Every SpaceX Starship integrated flight, from Flight 1 in April 2023 through Flight 15 (in progress), with goals, results, causes, lessons and costs. Times are Netherlands time (CET/CEST).",
   "overview": "15 flights flown or in progress; Flight 14 was the first to reach orbit. Flight 15 launched 13 Nov 2026: booster catch called off (Gulf splashdown); Ship 42 reached orbit, deployed 26 Starlink V3 satellites, and as of 21:14 CET on 14 Nov SpaceX had polled go to return it to Starbase for a first ship catch ~22:17 CET.",
@@ -12,15 +12,15 @@
     "outcomeNote": "Wikipedia's launch-outcome classification; Flight 15 is still In progress",
     "catchesLabel": "Booster tower catches",
     "nextShort": "Ship catch ~22:17 CET",
-    "nextDetail": "Polled go for RTLS · pad/tower go · Sat 14 Nov"
+    "nextDetail": "Coverage live · catch ~22:17 CET · Sat 14 Nov"
   },
   "next": {
     "aboutFlight": 15,
-    "status": "In progress — polled go for RTLS; catch ~22:17 CET",
+    "status": "In progress — deorbit/reentry/catch coverage live; catch ~22:17 CET",
     "timezone": "Starbase is on CST (UTC−6); CET = CST + 7 h",
-    "plan": "Ship catch targeted ~22:17 CET Sat 14 Nov; SpaceX polled go for return; pad and tower go for catch",
+    "plan": "Ship catch targeted ~22:17 CET Sat 14 Nov; SpaceX live for deorbit, reentry and catch",
     "hardware": "B22 splashdown in the Gulf after catch called off; S42 in orbit with 26 Starlink V3 sats deployed",
-    "callout": "As of 21:14 CET Sat 14 Nov: SpaceX polled go to return Starship to Starbase (20:18 CET). Earlier (16:41 CET) SpaceX said the ship was looking good for return and pad/tower were go for catch. Catch targeted ~22:17 CET. Booster previously diverted to a Gulf splashdown; recovery/cleanup underway."
+    "callout": "As of 21:22 CET Sat 14 Nov: SpaceX is live for deorbit, reentry, and the first ship catch at Starbase (coverage from 21:16 CET). Catch targeted ~22:17 CET after a go-for-return poll at 20:18 CET."
   },
   "laterCaption": "Dates are no-earlier-than targets and will move.",
   "laterNote": "Musk has also said the flight after Flight 15 could refly the caught vehicles; NASASpaceflight expects Flight 16 to use B23 and S43 instead.",
@@ -1374,7 +1374,7 @@
       "shipShort": "S42",
       "version": "V3 (Block 3)",
       "pad": "Starbase OLP-2 (Pad 2)",
-      "summary": "Interim (21:14 CET 14 Nov): B22 catch waved off (Gulf splashdown; recovery underway). S42 reached orbit and deployed 26 Starlink V3 satellites. SpaceX said pad and tower were go for catch (16:41 CET) and at 20:18 CET polled go to return Starship to Starbase. Catch targeted ~22:17 CET. Outcome not final.",
+      "summary": "Interim (21:22 CET 14 Nov): SpaceX is live for deorbit, reentry, and the first ship catch attempt. Teams polled go for return at 20:18 CET; catch targeted ~22:17 CET. B22 previously diverted to a Gulf splashdown. Outcome not final.",
       "goals": [
         "Orbital flight with Starlink V3 payload",
         "About 14 orbits at ~275 km over a ~22+ hour flight",
@@ -1401,7 +1401,7 @@
         "Ship catch attempt remains the primary remaining objective; return still depends on go/no-go gates"
       ],
       "boosterOutcome": "Catch called off; controlled splashdown (Gulf of Mexico)",
-      "shipOutcome": "Go for return to Starbase — catch targeted ~22:17 CET Sat 14 Nov",
+      "shipOutcome": "Deorbit/reentry/catch coverage live — catch targeted ~22:17 CET",
       "firsts": [
         "First V3 Super Heavy return-to-launch-site catch attempt (diverted to Gulf)",
         "Would be the first ship catch if Saturday's attempt succeeds"
@@ -1414,6 +1414,11 @@
         "Some outlets described a post-splashdown fireball/explosion over the Gulf; Space.com and others call it a controlled splashdown."
       ],
       "sources": [
+        {
+          "title": "SpaceX: Watch live — deorbit, reentry, ship catch",
+          "site": "X / SpaceX",
+          "href": "https://x.com/SpaceX/status/2121698835659706459"
+        },
         {
           "title": "SpaceX: Starship in orbit over Africa",
           "site": "X / SpaceX",
