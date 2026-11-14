@@ -913,6 +913,7 @@ input[type="search"]:focus, select:focus, .era button:focus-visible, .launch-tog
   flex-shrink: 0;
 }
 .tag.failure { color: var(--fail); }
+.tag.in-progress { color: #c4a35a; }
 
 .notes-wrap {
   position: relative;

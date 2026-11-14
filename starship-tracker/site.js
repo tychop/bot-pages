@@ -7,7 +7,7 @@
   }
 
   var PAGE = document.body.getAttribute("data-page") || "home";
-  var ASSET_V = "20261108e";
+  var ASSET_V = "20261114a";
   var openNotesBtn = null;
   var notesHoverTimer = null;
 
@@ -133,7 +133,9 @@
   }
 
   function resultClass(result) {
-    return result === "Failure" ? " failure" : "";
+    if (result === "Failure") return " failure";
+    if (result === "In progress") return " in-progress";
+    return "";
   }
 
   function notesItems(flight) {
@@ -272,11 +274,13 @@
   function renderHome(data) {
     S.resetMediaClaims();
     var upcoming = S.upcomingFlight(data);
+    var active = S.inProgressFlight(data);
+    var featured = upcoming || active;
     var last = S.lastFlownFlight(data);
     var photo = S.SITE_PHOTOS[0];
     S.claimMedia(photo.src);
     var main = document.getElementById("main");
-    if (!upcoming) {
+    if (!featured) {
       main.innerHTML =
         '<section class="home-hero bare">' +
         '<div class="wrap">' +
@@ -287,41 +291,52 @@
         "</div></section>";
       return;
     }
-    var detail = S.detailOf(upcoming);
-    var brief = data.next && Number(data.next.aboutFlight) === upcoming.n ? data.next : null;
-    var goals = (upcoming.goals || []).slice(0, 3);
-    var vehicles = (upcoming.boosterShort || upcoming.booster || "") + " / " + (upcoming.shipShort || upcoming.ship || "");
-    var faa = (brief && brief.status) || upcoming.faa || "FAA status not published";
-    var tzLabel = /CEST/i.test(upcoming.dateLocal || "") ? "CEST (UTC+2)" : /CET/i.test(upcoming.dateLocal || "") ? "CET (UTC+1)" : "Netherlands time";
+    var isActive = !upcoming && !!active;
+    var detail = S.detailOf(featured);
+    var brief = data.next && Number(data.next.aboutFlight) === featured.n ? data.next : null;
+    var goals = isActive
+      ? (featured.achieved || featured.goals || []).slice(0, 3)
+      : (featured.goals || []).slice(0, 3);
+    var vehicles = (featured.boosterShort || featured.booster || "") + " / " + (featured.shipShort || featured.ship || "");
+    var faa = (brief && brief.status) || featured.faa || "FAA status not published";
+    var tzLabel = /CEST/i.test(featured.dateLocal || "") ? "CEST (UTC+2)" : /CET/i.test(featured.dateLocal || "") ? "CET (UTC+1)" : "Netherlands time";
+    var eyebrow = isActive ? "In progress" : "Next launch";
+    var dateLine = isActive
+      ? '<p class="hero-date">Launched ' + S.esc(featured.dateLocal) + "</p>"
+      : '<p class="hero-date">' + S.esc(featured.dateLocal) + "</p>";
+    var tzLine = isActive
+      ? '<p class="hero-tz">' + S.esc((brief && brief.plan) || featured.shipOutcome || "Mission still in progress") + "</p>"
+      : '<p class="hero-tz">Liftoff time in ' + S.esc(tzLabel) + "</p>";
+    var lastBelow = (!isActive || (last && last.n !== featured.n)) ? lastCard(last) : "";
 
     main.innerHTML =
       '<section class="home-hero">' +
       S.heroPhotoHtml(photo) +
       '<div class="hero-shade"></div>' +
       '<div class="hero-copy wrap-hero">' +
-      '<p class="eyebrow">Next launch</p>' +
-      '<h1 class="hero-flight"><span>Flight</span> ' + S.esc(upcoming.n) + "</h1>" +
-      '<p class="hero-date">' + S.esc(upcoming.dateLocal) + '</p>' +
-      '<p class="hero-tz">Liftoff time in ' + S.esc(tzLabel) + "</p>" +
-      '<div id="countdown" class="home-countdown" hidden></div>' +
+      '<p class="eyebrow">' + eyebrow + "</p>" +
+      '<h1 class="hero-flight"><span>Flight</span> ' + S.esc(featured.n) + "</h1>" +
+      dateLine +
+      tzLine +
+      (isActive ? "" : '<div id="countdown" class="home-countdown" hidden></div>') +
       '<p class="status-line">' + S.esc(faa) + "</p>" +
       '<p class="hero-vehicles">' + S.esc(vehicles) +
-      (upcoming.version ? " · " + S.esc(upcoming.version) : "") +
-      (upcoming.pad ? " · " + S.esc(upcoming.pad) : "") +
+      (featured.version ? " · " + S.esc(featured.version) : "") +
+      (featured.pad ? " · " + S.esc(featured.pad) : "") +
       "</p>" +
       (goals.length
         ? '<ul class="home-goals">' + goals.map(function (g) { return "<li>" + S.esc(g) + "</li>"; }).join("") + "</ul>"
         : "") +
-      livestreamHtml(detail) +
-      '<p class="hero-actions"><a class="text-link" href="flight.html?n=' + upcoming.n + '">Full flight details</a></p>' +
+      (isActive ? "" : livestreamHtml(detail)) +
+      '<p class="hero-actions"><a class="text-link" href="flight.html?n=' + featured.n + '">Full flight details</a></p>' +
       "</div>" +
       '<p class="hero-credit">' + S.shortCredit(photo) +
       (photo.href ? ' <a href="' + S.esc(photo.href) + '">Source</a>.' : "") +
       "</p>" +
       "</section>" +
-      '<section class="home-below wrap">' + lastCard(last) + "</section>";
+      (lastBelow ? '<section class="home-below wrap">' + lastBelow + "</section>" : "");
 
-    S.startCountdown(upcoming);
+    if (!isActive) S.startCountdown(featured);
   }
 
   function lastCard(last) {
@@ -396,7 +411,11 @@
     document.title = "Flight " + flight.n + " · " + (data.title || "Starship");
     var uncertain = flight.uncertain && flight.uncertain.length;
     var goalsTitle = flight.result === "Upcoming" ? "Planned goals" : "Mission goals";
-    var lessonsTitle = flight.result === "Upcoming" ? "Preparation so far" : "Lessons and changes afterwards";
+    var lessonsTitle = flight.result === "Upcoming"
+      ? "Preparation so far"
+      : flight.result === "In progress"
+        ? "Notes so far"
+        : "Lessons and changes afterwards";
     var sorted = S.sortedFlights(data, false);
     var idx = sorted.findIndex(function (f) { return f.n === flight.n; });
     var prev = idx > 0 ? sorted[idx - 1] : null;
