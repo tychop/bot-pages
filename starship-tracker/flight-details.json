@@ -10049,7 +10049,7 @@
           "actual": null,
           "actualSec": null,
           "status": null,
-          "note": "FINAL (14 Nov 2026): Success. Booster catch called off (B22 controlled Gulf splashdown). S42 reached orbit, deployed 26 Starlink V3, and was caught by Mechazilla at about 22:19 CET after more than 21 hours in orbit — the first ship catch.",
+          "note": "FINAL (14 Nov 2026): Success. Booster catch called off (B22 explosive Gulf splashdown). S42 reached orbit, deployed 26 Starlink V3, and was caught by Mechazilla at about 22:19 CET after more than 21 hours in orbit — the first ship catch.",
           "sources": [
             {
               "title": "SpaceX: long coast / systems looking good",
@@ -11179,7 +11179,7 @@
           }
         ],
         "orbitAltitudeKm": 275,
-        "boosterEnginesNote": "Ascent ignition reported nominal; catch waved off — Sci Am cited some engine issues (unconfirmed)"
+        "boosterEnginesNote": "32/33 lit for boostback; burn ended early on low-fuel-mass alarm (root cause under investigation)"
       },
       "vehicleChanges": {
         "items": [
@@ -11198,14 +11198,29 @@
       "anomaly": {
         "hasAnomaly": true,
         "type": "Recovery divert",
-        "summary": "Booster tower catch called off; B22 diverted to a controlled Gulf of Mexico splashdown ~6.5 min after launch. SpaceX has not published a reason; Scientific American reported some engine issues (unconfirmed).",
+        "summary": "B22 ended boostback early due to a low-fuel-mass alarm; GNC aborted the tower catch and diverted to an offshore Gulf splashdown. After landing-burn shutdown, FTS triggered (explosive). Musk cited slight engine underperformance; SpaceX is still investigating the root cause.",
         "rootCause": null,
         "correctiveActions": null,
-        "investigation": null,
+        "investigation": "Open — SpaceX still investigating root cause of low-fuel-mass / early boostback",
         "opened": null,
         "closed": null,
         "reportUrl": null,
         "sources": [
+          {
+            "title": "Elon Musk: slight engine underperformance",
+            "site": "X (@elonmusk)",
+            "href": "https://x.com/elonmusk/status/2121648438144024943"
+          },
+          {
+            "title": "Spaceflight Now: booster divert to explosive splashdown",
+            "site": "Spaceflight Now",
+            "href": "https://spaceflightnow.com/2026/11/13/live-coverage-starship-flight-15-attempts-to-recover-full-vehicle-in-double-launch-pad-catch/"
+          },
+          {
+            "title": "Space.com: booster aborted catch after low-fuel-mass alarm",
+            "site": "Space.com",
+            "href": "https://www.space.com/space-exploration/launches-spacecraft/spacex-says-starship-flight-15-booster-aborted-chopsticks-landing-catch-after-launch-due-to-guidance-issue-video"
+          },
           {
             "title": "Space.com: Flight 15 launch; booster catch aborted",
             "site": "Space.com",
@@ -11294,10 +11309,10 @@
           "note": "Boca Chica Launch Site coordinate; pad-level offset (~100-300 m) ignored"
         },
         "booster": {
-          "zone": "Controlled splashdown, Gulf of Mexico (catch called off)",
+          "zone": "Offshore Gulf of Mexico divert after catch abort; explosive splashdown (FTS)",
           "lat": 26.0,
           "lon": -96.5,
-          "note": "Approximate offshore Gulf splashdown; exact coordinates not published"
+          "note": "Catch aborted after early boostback (low-fuel-mass alarm); landing burn then FTS over the Gulf"
         },
         "ship": {
           "zone": "Caught by Mechazilla at Starbase OLP-2 (about 22:19 CET 14 Nov)",
