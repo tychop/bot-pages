@@ -9824,6 +9824,123 @@
               "href": "https://x.com/SpaceX/status/2121394268652839309"
             }
           ]
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "Starship in orbit over Africa (83 s)",
+          "role": "orbit video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2121602376532742611",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/2121601548824510464/img/0aJ8a6jPC3uGzRTu.jpg",
+          "poster": "https://pbs.twimg.com/amplify_video_thumb/2121601548824510464/img/0aJ8a6jPC3uGzRTu.jpg",
+          "videoUrl": "https://video.twimg.com/amplify_video/2121601548824510464/vid/avc1/1920x1080/NGmHGwpl9Ese9-m7.mp4",
+          "durationSec": 83,
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Starship in orbit over Africa",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2121602376532742611"
+            }
+          ]
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "Flight 15 update: coasting in orbit, pad and tower go for catch (244 s)",
+          "role": "status video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2121629656868614213",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/2121628737649217536/img/ll4OqU_rOwXJkCFB.jpg",
+          "poster": "https://pbs.twimg.com/amplify_video_thumb/2121628737649217536/img/ll4OqU_rOwXJkCFB.jpg",
+          "durationSec": 244,
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: coasting / pad and tower go for catch",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2121629656868614213"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "hotlink": true,
+          "file": null,
+          "caption": "Booster splashdown recovery and Gulf clean-up",
+          "role": "recovery",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2121629958036492590",
+          "directUrl": "https://pbs.twimg.com/media/HXGLDmSWoAAeCBU.jpg?name=orig",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: recovery / Environmental Health and Safety",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2121629958036492590"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "hotlink": true,
+          "file": null,
+          "caption": "Recovery teams securing the Gulf splashdown area",
+          "role": "recovery",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2121629958036492590",
+          "directUrl": "https://pbs.twimg.com/media/HXGLKABWwAAb8N_.jpg?name=orig",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: recovery / Environmental Health and Safety",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2121629958036492590"
+            }
+          ]
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "Teams poll go to return Starship to the launch site (87 s)",
+          "role": "return go video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2121684113526858011",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/2121683901575999488/img/gqe4meIrgBJPUNAp.jpg",
+          "poster": "https://pbs.twimg.com/amplify_video_thumb/2121683901575999488/img/gqe4meIrgBJPUNAp.jpg",
+          "durationSec": 87,
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: polled go to return to Starbase",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2121684113526858011"
+            }
+          ]
         }
       ],
       "imagesNote": "Gallery includes SpaceX X stills and video cards (poster opens the X post). Hero remains the hot-staging cut; Watch live unchanged.",
@@ -9835,7 +9952,7 @@
           "actual": null,
           "actualSec": null,
           "status": null,
-          "note": "INTERIM update (14 Nov 2026, ~12:10 CET): ascent, orbit, and payload deploy complete; booster catch diverted to Gulf splashdown. After payload deploy, SpaceX said Starship was in a long coast of ~21 h with early deorbit options and all systems looking good (01:08 CET). At 06:44 CET SpaceX reported the ship and heatshield healthy, still targeting tower catch ~22.5 h after launch (~22:17 CET). Not a final success/failure classification.",
+          "note": "INTERIM update (14 Nov 2026, 21:14 CET): ascent, orbit, and Starlink deploy complete; booster catch diverted to Gulf splashdown with recovery/cleanup underway. At 16:41 CET SpaceX said Starship was still looking good for return and pad/tower were go for catch. At 20:18 CET teams polled go to return Starship to Starbase. Catch targeted ~22:17 CET. Not a final success/failure classification.",
           "sources": [
             {
               "title": "SpaceX: long coast / systems looking good",
@@ -10269,8 +10386,8 @@
           "plannedSec": 26135,
           "actual": null,
           "actualSec": null,
-          "status": "planned",
-          "note": "Go/no-go gate. SpaceX reported ship and heatshield healthy ~T+7h and was still monitoring toward the planned catch; no separate Mid Chile call published as of this update.",
+          "status": "ok",
+          "note": "Continued toward full-duration return; SpaceX later confirmed looking good for RTLS",
           "sources": [
             {
               "title": "Space.com: Flight 15 launch; booster catch aborted",
@@ -10301,13 +10418,81 @@
           "sortSec": 26135
         },
         {
+          "event": "Status update",
+          "planned": null,
+          "plannedSec": null,
+          "actual": "14 Nov 16:23 CET",
+          "actualSec": 59760,
+          "status": "ok",
+          "note": "SpaceX back live with a status update",
+          "sources": [
+            {
+              "title": "@SpaceX (14 Nov 16:23 CET)",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2121625194275951101"
+            }
+          ],
+          "sortSec": 59760
+        },
+        {
+          "event": "Status update",
+          "planned": null,
+          "plannedSec": null,
+          "actual": "14 Nov 16:41 CET",
+          "actualSec": 60840,
+          "status": "ok",
+          "note": "Starship coasting in orbit, still looking good for return to launch site today. Pad and tower systems are go for catch.",
+          "sources": [
+            {
+              "title": "@SpaceX (14 Nov 16:41 CET)",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2121629656868614213"
+            }
+          ],
+          "sortSec": 60840
+        },
+        {
+          "event": "Status update",
+          "planned": null,
+          "plannedSec": null,
+          "actual": "14 Nov 16:42 CET",
+          "actualSec": 60900,
+          "status": "ok",
+          "note": "After the Gulf booster splashdown, recovery teams secured the area and SpaceX's Environmental Health and Safety team is recovering any debris that washes ashore.",
+          "sources": [
+            {
+              "title": "@SpaceX (14 Nov 16:42 CET)",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2121629958036492590"
+            }
+          ],
+          "sortSec": 60900
+        },
+        {
+          "event": "Status update",
+          "planned": null,
+          "plannedSec": null,
+          "actual": "14 Nov 20:18 CET",
+          "actualSec": 73860,
+          "status": "ok",
+          "note": "Teams have polled go to return Starship to the launch site at Starbase.",
+          "sources": [
+            {
+              "title": "@SpaceX (14 Nov 20:18 CET)",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2121684113526858011"
+            }
+          ],
+          "sortSec": 73860
+        },
+        {
           "event": "Final Hawaii Return Check",
           "planned": "T+20:41:55",
           "plannedSec": 74515,
-          "actual": null,
+          "actual": "Passed / go",
           "actualSec": null,
-          "status": "planned",
-          "note": "Last go/no-go at T+20h41m before committing to Starbase return — still ahead as of this update",
+          "status": "ok",
+          "note": "Return path cleared; SpaceX later polled go to return to Starbase (20:18 CET)",
           "sources": [
             {
               "title": "Space.com: Flight 15 launch; booster catch aborted",
@@ -11022,7 +11207,7 @@
         "xBroadcast": "https://x.com/i/broadcasts/2brajgZlOKRMka",
         "catchTargetLocal": "Sat 14 Nov 2026, ~22:17 CET",
         "coverageStartLocal": null,
-        "note": "SpaceX planned coverage through ship catch on the mission page and X. No separate catch-only broadcast link has been posted; the Flight 15 X broadcast is the launch stream SpaceX linked."
+        "note": "SpaceX polled go to return Starship to the launch site; pad and tower systems are go for catch. Catch targeted ~22:17 CET. Coverage on the mission page and Flight 15 X broadcast."
       }
     }
   },
