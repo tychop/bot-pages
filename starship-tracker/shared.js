@@ -106,8 +106,15 @@
       .sort(function (a, b) { return a.n - b.n; })[0] || null;
   }
 
+  function inProgressFlight(data) {
+    return (data.flights || []).filter(function (f) { return f.result === "In progress"; })
+      .sort(function (a, b) { return b.n - a.n; })[0] || null;
+  }
+
   function lastFlownFlight(data) {
-    var flown = (data.flights || []).filter(function (f) { return f.result !== "Upcoming"; });
+    var flown = (data.flights || []).filter(function (f) {
+      return f.result !== "Upcoming" && f.result !== "In progress";
+    });
     if (!flown.length) return null;
     return flown.slice().sort(function (a, b) { return b.n - a.n; })[0];
   }
@@ -685,8 +692,12 @@
     var open = isOpen(flight.n);
     var uncertain = flight.uncertain && flight.uncertain.length;
     var goalsTitle = flight.result === "Upcoming" ? "Planned goals" : "Mission goals";
-    var lessonsTitle = flight.result === "Upcoming" ? "Preparation so far" : "Lessons and changes afterwards";
-    var resultCls = flight.result === "Failure" ? " failure" : "";
+    var lessonsTitle = flight.result === "Upcoming"
+      ? "Preparation so far"
+      : flight.result === "In progress"
+        ? "Notes so far"
+        : "Lessons and changes afterwards";
+    var resultCls = flight.result === "Failure" ? " failure" : flight.result === "In progress" ? " in-progress" : "";
     var range = formatRange(flight.costEstimate);
     var outcome = '<p class="launch-outcome">' +
       '<span class="tag' + resultCls + '">' + esc(flight.result) + "</span>" +
@@ -734,6 +745,7 @@
     var failures = flown.filter(function (f) { return f.result === "Failure"; }).length;
     var catchNums = flown.filter(function (f) { return (f.boosterOutcome || "").startsWith("Caught"); }).map(function (f) { return f.n; });
     var upcoming = flights.filter(function (f) { return f.result === "Upcoming"; }).sort(function (a, b) { return a.n - b.n; })[0];
+    var active = inProgressFlight({ flights: flights });
     var summary = data.summary || {};
     var counts = { all: flights.length, V1: 0, V2: 0, V3: 0, upcoming: 0 };
     flights.forEach(function (f) {
@@ -742,6 +754,8 @@
     });
     var years = yearCounts(flown);
     var maxYear = years.reduce(function (max, row) { return Math.max(max, row.value); }, 0) || 1;
+    var nextValue = summary.nextShort || (upcoming ? "Flight " + upcoming.n : (active ? "In progress" : "None"));
+    var nextLabel = upcoming ? "Next: Flight " + upcoming.n : (active ? "Flight " + active.n : "Next flight");
 
     document.getElementById("updated").textContent = "Last updated " + (data.lastUpdatedLabel || data.lastUpdated || "");
     if (data.title) document.title = data.title;
@@ -761,7 +775,7 @@
       stat(String(flown.length), summary.flownLabel || "Flights flown", summary.flownRange || "") +
       stat(successes + " / " + failures, summary.outcomeLabel || "Successes / failures", summary.outcomeNote || "") +
       stat(String(catchNums.length), summary.catchesLabel || "Booster tower catches", listPhrase(catchNums)) +
-      stat(summary.nextShort || (upcoming ? "Flight " + upcoming.n : "None"), upcoming ? "Next: Flight " + upcoming.n : "Next flight", summary.nextDetail || "") +
+      stat(nextValue, nextLabel, summary.nextDetail || "") +
       "</div>" +
       '<div class="panels"><div><h3>Flights per year</h3>' +
       years.map(function (row) {
@@ -786,7 +800,8 @@
       "</div>" +
       '<form class="tools" id="filters">' +
       '<label class="field"><span class="lbl">Outcome</span><select id="outcome">' +
-      option("any", "Any outcome") + option("Success", "Success") + option("Failure", "Failure") + option("Upcoming", "Upcoming") +
+      option("any", "Any outcome") + option("Success", "Success") + option("Failure", "Failure") +
+      option("In progress", "In progress") + option("Upcoming", "Upcoming") +
       "</select></label>" +
       '<label class="field search"><span class="lbl">Search</span><input id="q" type="search" placeholder="Catch, relight, Starlink" autocomplete="off" value="' + esc(state.q) + '"></label>' +
       '<label class="check"><input id="newest" type="checkbox"' + (state.newestFirst ? " checked" : "") + "> Newest first</label>" +
@@ -1319,6 +1334,7 @@
     getDetail: getDetail,
     getLaterDetails: getLaterDetails,
     upcomingFlight: upcomingFlight,
+    inProgressFlight: inProgressFlight,
     lastFlownFlight: lastFlownFlight,
     flightByN: flightByN,
     sortedFlights: sortedFlights,

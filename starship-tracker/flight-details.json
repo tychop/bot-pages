@@ -9323,8 +9323,8 @@
     },
     "15": {
       "n": 15,
-      "utc": null,
-      "status": "Upcoming",
+      "utc": "2026-11-13T22:47:00Z",
+      "status": "In progress",
       "booster": "Booster 22",
       "ship": "Ship 42",
       "images": [
@@ -9350,17 +9350,74 @@
           "hotlink": false
         }
       ],
-      "imagesNote": "Not flown. No photo of Booster 22 / Ship 42 published; SpaceX page header (V3 booster at tower) plus a NOAA aerial of the launch site.",
+      "imagesNote": "Flight in progress. Hero remains the SpaceX Flight 15 page image for now; a launch video hero will be cut after the flight ends.",
       "timeline": [
+        {
+          "event": "Note",
+          "planned": null,
+          "plannedSec": null,
+          "actual": null,
+          "actualSec": null,
+          "status": null,
+          "note": "INTERIM update (14 Nov 2026 CET): ascent, orbit, and payload deploy complete; booster catch diverted to Gulf splashdown; ship catch still pending (~22:17 CET Sat 14 Nov). Not a final success/failure classification.",
+          "sources": [
+            {
+              "title": "Space.com: Flight 15 launch; booster catch aborted",
+              "site": "Space.com",
+              "href": "https://www.space.com/space-exploration/launches-spacecraft/spacex-starship-flight-15-chopsticks-double-catch-super-heavy-ship"
+            },
+            {
+              "title": "Universe Today: SpaceX passes up booster catch",
+              "site": "Universe Today",
+              "href": "https://www.universetoday.com/articles/spacex-launches-starship-but-passes-up-booster-catch-for-safetys-sake"
+            },
+            {
+              "title": "NBC News: 15th Starship flight; booster recovery aborted",
+              "site": "NBC News",
+              "href": "https://www.nbcnews.com/science/space/spacex-launches-15th-starship-flight-aborts-booster-recovery-maneuver-rcna609274"
+            },
+            {
+              "title": "Scientific American: Can SpaceX catch its Starship?",
+              "site": "Scientific American",
+              "href": "https://www.scientificamerican.com/article/can-spacex-catch-its-starship/"
+            },
+            {
+              "title": "SpaceX: Starship Flight 15 mission page / recap",
+              "site": "SpaceX",
+              "href": "https://www.spacex.com/launches/starship-flight-15"
+            }
+          ],
+          "sortSec": -1
+        },
         {
           "event": "Liftoff",
           "planned": "T+00:00",
           "plannedSec": 0,
-          "actual": null,
-          "actualSec": null,
-          "status": "planned",
-          "note": null,
+          "actual": "T+00:00",
+          "actualSec": 0,
+          "status": "ok",
+          "note": "Liftoff 23:47 CET / 4:47 p.m. CT",
           "sources": [
+            {
+              "title": "Space.com: Flight 15 launch; booster catch aborted",
+              "site": "Space.com",
+              "href": "https://www.space.com/space-exploration/launches-spacecraft/spacex-starship-flight-15-chopsticks-double-catch-super-heavy-ship"
+            },
+            {
+              "title": "Universe Today: SpaceX passes up booster catch",
+              "site": "Universe Today",
+              "href": "https://www.universetoday.com/articles/spacex-launches-starship-but-passes-up-booster-catch-for-safetys-sake"
+            },
+            {
+              "title": "NBC News: 15th Starship flight; booster recovery aborted",
+              "site": "NBC News",
+              "href": "https://www.nbcnews.com/science/space/spacex-launches-15th-starship-flight-aborts-booster-recovery-maneuver-rcna609274"
+            },
+            {
+              "title": "Scientific American: Can SpaceX catch its Starship?",
+              "site": "Scientific American",
+              "href": "https://www.scientificamerican.com/article/can-spacex-catch-its-starship/"
+            },
             {
               "title": "SpaceX: Starship Flight 15 mission page / recap",
               "site": "SpaceX",
@@ -9375,13 +9432,18 @@
           "plannedSec": 58,
           "actual": null,
           "actualSec": null,
-          "status": "planned",
+          "status": "ok",
           "note": null,
           "sources": [
             {
               "title": "SpaceX: Starship Flight 15 mission page / recap",
               "site": "SpaceX",
               "href": "https://www.spacex.com/launches/starship-flight-15"
+            },
+            {
+              "title": "Space.com: Flight 15 launch; booster catch aborted",
+              "site": "Space.com",
+              "href": "https://www.space.com/space-exploration/launches-spacecraft/spacex-starship-flight-15-chopsticks-double-catch-super-heavy-ship"
             }
           ],
           "sortSec": 58
@@ -9392,13 +9454,13 @@
           "plannedSec": 139,
           "actual": null,
           "actualSec": null,
-          "status": "planned",
-          "note": null,
+          "status": "ok",
+          "note": "Ascent through MECO reported nominal",
           "sources": [
             {
-              "title": "SpaceX: Starship Flight 15 mission page / recap",
-              "site": "SpaceX",
-              "href": "https://www.spacex.com/launches/starship-flight-15"
+              "title": "Space.com: Flight 15 launch; booster catch aborted",
+              "site": "Space.com",
+              "href": "https://www.space.com/space-exploration/launches-spacecraft/spacex-starship-flight-15-chopsticks-double-catch-super-heavy-ship"
             }
           ],
           "sortSec": 139
@@ -9407,11 +9469,31 @@
           "event": "Hot-staging (Starship Raptor ignition and stage separation)",
           "planned": "T+02:21",
           "plannedSec": 141,
-          "actual": null,
-          "actualSec": null,
-          "status": "planned",
-          "note": null,
+          "actual": "T+~02:30",
+          "actualSec": 150,
+          "status": "ok",
+          "note": "Clean hot-staging ~2.5 min after launch (Space.com)",
           "sources": [
+            {
+              "title": "Space.com: Flight 15 launch; booster catch aborted",
+              "site": "Space.com",
+              "href": "https://www.space.com/space-exploration/launches-spacecraft/spacex-starship-flight-15-chopsticks-double-catch-super-heavy-ship"
+            },
+            {
+              "title": "Universe Today: SpaceX passes up booster catch",
+              "site": "Universe Today",
+              "href": "https://www.universetoday.com/articles/spacex-launches-starship-but-passes-up-booster-catch-for-safetys-sake"
+            },
+            {
+              "title": "NBC News: 15th Starship flight; booster recovery aborted",
+              "site": "NBC News",
+              "href": "https://www.nbcnews.com/science/space/spacex-launches-15th-starship-flight-aborts-booster-recovery-maneuver-rcna609274"
+            },
+            {
+              "title": "Scientific American: Can SpaceX catch its Starship?",
+              "site": "Scientific American",
+              "href": "https://www.scientificamerican.com/article/can-spacex-catch-its-starship/"
+            },
             {
               "title": "SpaceX: Starship Flight 15 mission page / recap",
               "site": "SpaceX",
@@ -9426,13 +9508,18 @@
           "plannedSec": 146,
           "actual": null,
           "actualSec": null,
-          "status": "planned",
-          "note": null,
+          "status": "partial",
+          "note": "Boostback begun before catch was waved off",
           "sources": [
             {
-              "title": "SpaceX: Starship Flight 15 mission page / recap",
-              "site": "SpaceX",
-              "href": "https://www.spacex.com/launches/starship-flight-15"
+              "title": "Space.com: Flight 15 launch; booster catch aborted",
+              "site": "Space.com",
+              "href": "https://www.space.com/space-exploration/launches-spacecraft/spacex-starship-flight-15-chopsticks-double-catch-super-heavy-ship"
+            },
+            {
+              "title": "Universe Today: SpaceX passes up booster catch",
+              "site": "Universe Today",
+              "href": "https://www.universetoday.com/articles/spacex-launches-starship-but-passes-up-booster-catch-for-safetys-sake"
             }
           ],
           "sortSec": 146
@@ -9443,13 +9530,13 @@
           "plannedSec": 182,
           "actual": null,
           "actualSec": null,
-          "status": "planned",
+          "status": "partial",
           "note": null,
           "sources": [
             {
-              "title": "SpaceX: Starship Flight 15 mission page / recap",
-              "site": "SpaceX",
-              "href": "https://www.spacex.com/launches/starship-flight-15"
+              "title": "Space.com: Flight 15 launch; booster catch aborted",
+              "site": "Space.com",
+              "href": "https://www.space.com/space-exploration/launches-spacecraft/spacex-starship-flight-15-chopsticks-double-catch-super-heavy-ship"
             }
           ],
           "sortSec": 182
@@ -9460,9 +9547,29 @@
           "plannedSec": 370,
           "actual": null,
           "actualSec": null,
-          "status": "planned",
-          "note": null,
+          "status": "anomaly",
+          "note": "Tower catch called off; diverted to Gulf of Mexico",
           "sources": [
+            {
+              "title": "Space.com: Flight 15 launch; booster catch aborted",
+              "site": "Space.com",
+              "href": "https://www.space.com/space-exploration/launches-spacecraft/spacex-starship-flight-15-chopsticks-double-catch-super-heavy-ship"
+            },
+            {
+              "title": "Universe Today: SpaceX passes up booster catch",
+              "site": "Universe Today",
+              "href": "https://www.universetoday.com/articles/spacex-launches-starship-but-passes-up-booster-catch-for-safetys-sake"
+            },
+            {
+              "title": "NBC News: 15th Starship flight; booster recovery aborted",
+              "site": "NBC News",
+              "href": "https://www.nbcnews.com/science/space/spacex-launches-15th-starship-flight-aborts-booster-recovery-maneuver-rcna609274"
+            },
+            {
+              "title": "Scientific American: Can SpaceX catch its Starship?",
+              "site": "Scientific American",
+              "href": "https://www.scientificamerican.com/article/can-spacex-catch-its-starship/"
+            },
             {
               "title": "SpaceX: Starship Flight 15 mission page / recap",
               "site": "SpaceX",
@@ -9475,11 +9582,31 @@
           "event": "Super Heavy landing burn shutdown and catch",
           "planned": "T+06:35",
           "plannedSec": 395,
-          "actual": null,
-          "actualSec": null,
-          "status": "planned",
-          "note": null,
+          "actual": "T+~06:30",
+          "actualSec": 390,
+          "status": "anomaly",
+          "note": "Catch called off; controlled Gulf splashdown ~6.5 min after launch. Reason not given by SpaceX (Sci Am: some engine issues, unconfirmed).",
           "sources": [
+            {
+              "title": "Space.com: Flight 15 launch; booster catch aborted",
+              "site": "Space.com",
+              "href": "https://www.space.com/space-exploration/launches-spacecraft/spacex-starship-flight-15-chopsticks-double-catch-super-heavy-ship"
+            },
+            {
+              "title": "Universe Today: SpaceX passes up booster catch",
+              "site": "Universe Today",
+              "href": "https://www.universetoday.com/articles/spacex-launches-starship-but-passes-up-booster-catch-for-safetys-sake"
+            },
+            {
+              "title": "NBC News: 15th Starship flight; booster recovery aborted",
+              "site": "NBC News",
+              "href": "https://www.nbcnews.com/science/space/spacex-launches-15th-starship-flight-aborts-booster-recovery-maneuver-rcna609274"
+            },
+            {
+              "title": "Scientific American: Can SpaceX catch its Starship?",
+              "site": "Scientific American",
+              "href": "https://www.scientificamerican.com/article/can-spacex-catch-its-starship/"
+            },
             {
               "title": "SpaceX: Starship Flight 15 mission page / recap",
               "site": "SpaceX",
@@ -9492,15 +9619,15 @@
           "event": "Starship engine cutoff",
           "planned": "T+08:09",
           "plannedSec": 489,
-          "actual": null,
-          "actualSec": null,
-          "status": "planned",
-          "note": null,
+          "actual": "T+~08:00",
+          "actualSec": 480,
+          "status": "ok",
+          "note": "Ascent burn complete just after eight minutes (Space.com)",
           "sources": [
             {
-              "title": "SpaceX: Starship Flight 15 mission page / recap",
-              "site": "SpaceX",
-              "href": "https://www.spacex.com/launches/starship-flight-15"
+              "title": "Space.com: Flight 15 launch; booster catch aborted",
+              "site": "Space.com",
+              "href": "https://www.space.com/space-exploration/launches-spacecraft/spacex-starship-flight-15-chopsticks-double-catch-super-heavy-ship"
             }
           ],
           "sortSec": 489
@@ -9509,11 +9636,16 @@
           "event": "Starship orbital insertion burn start",
           "planned": "T+26:10",
           "plannedSec": 1570,
-          "actual": null,
-          "actualSec": null,
-          "status": "planned",
+          "actual": "T+26:10",
+          "actualSec": 1570,
+          "status": "ok",
           "note": null,
           "sources": [
+            {
+              "title": "Space.com: Flight 15 launch; booster catch aborted",
+              "site": "Space.com",
+              "href": "https://www.space.com/space-exploration/launches-spacecraft/spacex-starship-flight-15-chopsticks-double-catch-super-heavy-ship"
+            },
             {
               "title": "SpaceX: Starship Flight 15 mission page / recap",
               "site": "SpaceX",
@@ -9526,11 +9658,31 @@
           "event": "Starship orbital insertion burn shutdown",
           "planned": "T+26:30",
           "plannedSec": 1590,
-          "actual": null,
-          "actualSec": null,
-          "status": "planned",
-          "note": null,
+          "actual": "T+26:30",
+          "actualSec": 1590,
+          "status": "ok",
+          "note": "Orbit ~275 km (~170 mi) after ~20 s insertion burn",
           "sources": [
+            {
+              "title": "Space.com: Flight 15 launch; booster catch aborted",
+              "site": "Space.com",
+              "href": "https://www.space.com/space-exploration/launches-spacecraft/spacex-starship-flight-15-chopsticks-double-catch-super-heavy-ship"
+            },
+            {
+              "title": "Universe Today: SpaceX passes up booster catch",
+              "site": "Universe Today",
+              "href": "https://www.universetoday.com/articles/spacex-launches-starship-but-passes-up-booster-catch-for-safetys-sake"
+            },
+            {
+              "title": "NBC News: 15th Starship flight; booster recovery aborted",
+              "site": "NBC News",
+              "href": "https://www.nbcnews.com/science/space/spacex-launches-15th-starship-flight-aborts-booster-recovery-maneuver-rcna609274"
+            },
+            {
+              "title": "Scientific American: Can SpaceX catch its Starship?",
+              "site": "Scientific American",
+              "href": "https://www.scientificamerican.com/article/can-spacex-catch-its-starship/"
+            },
             {
               "title": "SpaceX: Starship Flight 15 mission page / recap",
               "site": "SpaceX",
@@ -9543,11 +9695,31 @@
           "event": "Payload deploy start",
           "planned": "T+35:01",
           "plannedSec": 2101,
-          "actual": null,
-          "actualSec": null,
-          "status": "planned",
-          "note": null,
+          "actual": "T+35:01",
+          "actualSec": 2101,
+          "status": "ok",
+          "note": "26 Starlink V3 satellites; 3 with heatshield-inspection cameras",
           "sources": [
+            {
+              "title": "Space.com: Flight 15 launch; booster catch aborted",
+              "site": "Space.com",
+              "href": "https://www.space.com/space-exploration/launches-spacecraft/spacex-starship-flight-15-chopsticks-double-catch-super-heavy-ship"
+            },
+            {
+              "title": "Universe Today: SpaceX passes up booster catch",
+              "site": "Universe Today",
+              "href": "https://www.universetoday.com/articles/spacex-launches-starship-but-passes-up-booster-catch-for-safetys-sake"
+            },
+            {
+              "title": "NBC News: 15th Starship flight; booster recovery aborted",
+              "site": "NBC News",
+              "href": "https://www.nbcnews.com/science/space/spacex-launches-15th-starship-flight-aborts-booster-recovery-maneuver-rcna609274"
+            },
+            {
+              "title": "Scientific American: Can SpaceX catch its Starship?",
+              "site": "Scientific American",
+              "href": "https://www.scientificamerican.com/article/can-spacex-catch-its-starship/"
+            },
             {
               "title": "SpaceX: Starship Flight 15 mission page / recap",
               "site": "SpaceX",
@@ -9560,15 +9732,20 @@
           "event": "Payload deploy complete",
           "planned": "T+1:17:40",
           "plannedSec": 4660,
-          "actual": null,
-          "actualSec": null,
-          "status": "planned",
-          "note": null,
+          "actual": "T+~1:17",
+          "actualSec": 4620,
+          "status": "ok",
+          "note": "Deploy spanned ~42 minutes starting ~T+35 (Space.com)",
           "sources": [
             {
-              "title": "SpaceX: Starship Flight 15 mission page / recap",
-              "site": "SpaceX",
-              "href": "https://www.spacex.com/launches/starship-flight-15"
+              "title": "Space.com: Flight 15 launch; booster catch aborted",
+              "site": "Space.com",
+              "href": "https://www.space.com/space-exploration/launches-spacecraft/spacex-starship-flight-15-chopsticks-double-catch-super-heavy-ship"
+            },
+            {
+              "title": "NBC News: 15th Starship flight; booster recovery aborted",
+              "site": "NBC News",
+              "href": "https://www.nbcnews.com/science/space/spacex-launches-15th-starship-flight-aborts-booster-recovery-maneuver-rcna609274"
             }
           ],
           "sortSec": 4660
@@ -9580,8 +9757,28 @@
           "actual": null,
           "actualSec": null,
           "status": "planned",
-          "note": null,
+          "note": "Go/no-go gate still ahead or in progress as of this interim update",
           "sources": [
+            {
+              "title": "Space.com: Flight 15 launch; booster catch aborted",
+              "site": "Space.com",
+              "href": "https://www.space.com/space-exploration/launches-spacecraft/spacex-starship-flight-15-chopsticks-double-catch-super-heavy-ship"
+            },
+            {
+              "title": "Universe Today: SpaceX passes up booster catch",
+              "site": "Universe Today",
+              "href": "https://www.universetoday.com/articles/spacex-launches-starship-but-passes-up-booster-catch-for-safetys-sake"
+            },
+            {
+              "title": "NBC News: 15th Starship flight; booster recovery aborted",
+              "site": "NBC News",
+              "href": "https://www.nbcnews.com/science/space/spacex-launches-15th-starship-flight-aborts-booster-recovery-maneuver-rcna609274"
+            },
+            {
+              "title": "Scientific American: Can SpaceX catch its Starship?",
+              "site": "Scientific American",
+              "href": "https://www.scientificamerican.com/article/can-spacex-catch-its-starship/"
+            },
             {
               "title": "SpaceX: Starship Flight 15 mission page / recap",
               "site": "SpaceX",
@@ -9597,8 +9794,28 @@
           "actual": null,
           "actualSec": null,
           "status": "planned",
-          "note": null,
+          "note": "Go/no-go gate",
           "sources": [
+            {
+              "title": "Space.com: Flight 15 launch; booster catch aborted",
+              "site": "Space.com",
+              "href": "https://www.space.com/space-exploration/launches-spacecraft/spacex-starship-flight-15-chopsticks-double-catch-super-heavy-ship"
+            },
+            {
+              "title": "Universe Today: SpaceX passes up booster catch",
+              "site": "Universe Today",
+              "href": "https://www.universetoday.com/articles/spacex-launches-starship-but-passes-up-booster-catch-for-safetys-sake"
+            },
+            {
+              "title": "NBC News: 15th Starship flight; booster recovery aborted",
+              "site": "NBC News",
+              "href": "https://www.nbcnews.com/science/space/spacex-launches-15th-starship-flight-aborts-booster-recovery-maneuver-rcna609274"
+            },
+            {
+              "title": "Scientific American: Can SpaceX catch its Starship?",
+              "site": "Scientific American",
+              "href": "https://www.scientificamerican.com/article/can-spacex-catch-its-starship/"
+            },
             {
               "title": "SpaceX: Starship Flight 15 mission page / recap",
               "site": "SpaceX",
@@ -9614,8 +9831,28 @@
           "actual": null,
           "actualSec": null,
           "status": "planned",
-          "note": null,
+          "note": "Last go/no-go at T+20h41m before committing to Starbase return",
           "sources": [
+            {
+              "title": "Space.com: Flight 15 launch; booster catch aborted",
+              "site": "Space.com",
+              "href": "https://www.space.com/space-exploration/launches-spacecraft/spacex-starship-flight-15-chopsticks-double-catch-super-heavy-ship"
+            },
+            {
+              "title": "Universe Today: SpaceX passes up booster catch",
+              "site": "Universe Today",
+              "href": "https://www.universetoday.com/articles/spacex-launches-starship-but-passes-up-booster-catch-for-safetys-sake"
+            },
+            {
+              "title": "NBC News: 15th Starship flight; booster recovery aborted",
+              "site": "NBC News",
+              "href": "https://www.nbcnews.com/science/space/spacex-launches-15th-starship-flight-aborts-booster-recovery-maneuver-rcna609274"
+            },
+            {
+              "title": "Scientific American: Can SpaceX catch its Starship?",
+              "site": "Scientific American",
+              "href": "https://www.scientificamerican.com/article/can-spacex-catch-its-starship/"
+            },
             {
               "title": "SpaceX: Starship Flight 15 mission page / recap",
               "site": "SpaceX",
@@ -9631,8 +9868,28 @@
           "actual": null,
           "actualSec": null,
           "status": "planned",
-          "note": null,
+          "note": "Pending go for ship catch / return",
           "sources": [
+            {
+              "title": "Space.com: Flight 15 launch; booster catch aborted",
+              "site": "Space.com",
+              "href": "https://www.space.com/space-exploration/launches-spacecraft/spacex-starship-flight-15-chopsticks-double-catch-super-heavy-ship"
+            },
+            {
+              "title": "Universe Today: SpaceX passes up booster catch",
+              "site": "Universe Today",
+              "href": "https://www.universetoday.com/articles/spacex-launches-starship-but-passes-up-booster-catch-for-safetys-sake"
+            },
+            {
+              "title": "NBC News: 15th Starship flight; booster recovery aborted",
+              "site": "NBC News",
+              "href": "https://www.nbcnews.com/science/space/spacex-launches-15th-starship-flight-aborts-booster-recovery-maneuver-rcna609274"
+            },
+            {
+              "title": "Scientific American: Can SpaceX catch its Starship?",
+              "site": "Scientific American",
+              "href": "https://www.scientificamerican.com/article/can-spacex-catch-its-starship/"
+            },
             {
               "title": "SpaceX: Starship Flight 15 mission page / recap",
               "site": "SpaceX",
@@ -9651,6 +9908,26 @@
           "note": null,
           "sources": [
             {
+              "title": "Space.com: Flight 15 launch; booster catch aborted",
+              "site": "Space.com",
+              "href": "https://www.space.com/space-exploration/launches-spacecraft/spacex-starship-flight-15-chopsticks-double-catch-super-heavy-ship"
+            },
+            {
+              "title": "Universe Today: SpaceX passes up booster catch",
+              "site": "Universe Today",
+              "href": "https://www.universetoday.com/articles/spacex-launches-starship-but-passes-up-booster-catch-for-safetys-sake"
+            },
+            {
+              "title": "NBC News: 15th Starship flight; booster recovery aborted",
+              "site": "NBC News",
+              "href": "https://www.nbcnews.com/science/space/spacex-launches-15th-starship-flight-aborts-booster-recovery-maneuver-rcna609274"
+            },
+            {
+              "title": "Scientific American: Can SpaceX catch its Starship?",
+              "site": "Scientific American",
+              "href": "https://www.scientificamerican.com/article/can-spacex-catch-its-starship/"
+            },
+            {
               "title": "SpaceX: Starship Flight 15 mission page / recap",
               "site": "SpaceX",
               "href": "https://www.spacex.com/launches/starship-flight-15"
@@ -9667,6 +9944,26 @@
           "status": "planned",
           "note": null,
           "sources": [
+            {
+              "title": "Space.com: Flight 15 launch; booster catch aborted",
+              "site": "Space.com",
+              "href": "https://www.space.com/space-exploration/launches-spacecraft/spacex-starship-flight-15-chopsticks-double-catch-super-heavy-ship"
+            },
+            {
+              "title": "Universe Today: SpaceX passes up booster catch",
+              "site": "Universe Today",
+              "href": "https://www.universetoday.com/articles/spacex-launches-starship-but-passes-up-booster-catch-for-safetys-sake"
+            },
+            {
+              "title": "NBC News: 15th Starship flight; booster recovery aborted",
+              "site": "NBC News",
+              "href": "https://www.nbcnews.com/science/space/spacex-launches-15th-starship-flight-aborts-booster-recovery-maneuver-rcna609274"
+            },
+            {
+              "title": "Scientific American: Can SpaceX catch its Starship?",
+              "site": "Scientific American",
+              "href": "https://www.scientificamerican.com/article/can-spacex-catch-its-starship/"
+            },
             {
               "title": "SpaceX: Starship Flight 15 mission page / recap",
               "site": "SpaceX",
@@ -9685,6 +9982,26 @@
           "note": null,
           "sources": [
             {
+              "title": "Space.com: Flight 15 launch; booster catch aborted",
+              "site": "Space.com",
+              "href": "https://www.space.com/space-exploration/launches-spacecraft/spacex-starship-flight-15-chopsticks-double-catch-super-heavy-ship"
+            },
+            {
+              "title": "Universe Today: SpaceX passes up booster catch",
+              "site": "Universe Today",
+              "href": "https://www.universetoday.com/articles/spacex-launches-starship-but-passes-up-booster-catch-for-safetys-sake"
+            },
+            {
+              "title": "NBC News: 15th Starship flight; booster recovery aborted",
+              "site": "NBC News",
+              "href": "https://www.nbcnews.com/science/space/spacex-launches-15th-starship-flight-aborts-booster-recovery-maneuver-rcna609274"
+            },
+            {
+              "title": "Scientific American: Can SpaceX catch its Starship?",
+              "site": "Scientific American",
+              "href": "https://www.scientificamerican.com/article/can-spacex-catch-its-starship/"
+            },
+            {
               "title": "SpaceX: Starship Flight 15 mission page / recap",
               "site": "SpaceX",
               "href": "https://www.spacex.com/launches/starship-flight-15"
@@ -9702,6 +10019,26 @@
           "note": null,
           "sources": [
             {
+              "title": "Space.com: Flight 15 launch; booster catch aborted",
+              "site": "Space.com",
+              "href": "https://www.space.com/space-exploration/launches-spacecraft/spacex-starship-flight-15-chopsticks-double-catch-super-heavy-ship"
+            },
+            {
+              "title": "Universe Today: SpaceX passes up booster catch",
+              "site": "Universe Today",
+              "href": "https://www.universetoday.com/articles/spacex-launches-starship-but-passes-up-booster-catch-for-safetys-sake"
+            },
+            {
+              "title": "NBC News: 15th Starship flight; booster recovery aborted",
+              "site": "NBC News",
+              "href": "https://www.nbcnews.com/science/space/spacex-launches-15th-starship-flight-aborts-booster-recovery-maneuver-rcna609274"
+            },
+            {
+              "title": "Scientific American: Can SpaceX catch its Starship?",
+              "site": "Scientific American",
+              "href": "https://www.scientificamerican.com/article/can-spacex-catch-its-starship/"
+            },
+            {
               "title": "SpaceX: Starship Flight 15 mission page / recap",
               "site": "SpaceX",
               "href": "https://www.spacex.com/launches/starship-flight-15"
@@ -9716,8 +10053,28 @@
           "actual": null,
           "actualSec": null,
           "status": "planned",
-          "note": null,
+          "note": "Ship catch targeted ~22:17 CET Sat 14 Nov (~T+22.5 h)",
           "sources": [
+            {
+              "title": "Space.com: Flight 15 launch; booster catch aborted",
+              "site": "Space.com",
+              "href": "https://www.space.com/space-exploration/launches-spacecraft/spacex-starship-flight-15-chopsticks-double-catch-super-heavy-ship"
+            },
+            {
+              "title": "Universe Today: SpaceX passes up booster catch",
+              "site": "Universe Today",
+              "href": "https://www.universetoday.com/articles/spacex-launches-starship-but-passes-up-booster-catch-for-safetys-sake"
+            },
+            {
+              "title": "NBC News: 15th Starship flight; booster recovery aborted",
+              "site": "NBC News",
+              "href": "https://www.nbcnews.com/science/space/spacex-launches-15th-starship-flight-aborts-booster-recovery-maneuver-rcna609274"
+            },
+            {
+              "title": "Scientific American: Can SpaceX catch its Starship?",
+              "site": "Scientific American",
+              "href": "https://www.scientificamerican.com/article/can-spacex-catch-its-starship/"
+            },
             {
               "title": "SpaceX: Starship Flight 15 mission page / recap",
               "site": "SpaceX",
@@ -9736,6 +10093,26 @@
           "note": null,
           "sources": [
             {
+              "title": "Space.com: Flight 15 launch; booster catch aborted",
+              "site": "Space.com",
+              "href": "https://www.space.com/space-exploration/launches-spacecraft/spacex-starship-flight-15-chopsticks-double-catch-super-heavy-ship"
+            },
+            {
+              "title": "Universe Today: SpaceX passes up booster catch",
+              "site": "Universe Today",
+              "href": "https://www.universetoday.com/articles/spacex-launches-starship-but-passes-up-booster-catch-for-safetys-sake"
+            },
+            {
+              "title": "NBC News: 15th Starship flight; booster recovery aborted",
+              "site": "NBC News",
+              "href": "https://www.nbcnews.com/science/space/spacex-launches-15th-starship-flight-aborts-booster-recovery-maneuver-rcna609274"
+            },
+            {
+              "title": "Scientific American: Can SpaceX catch its Starship?",
+              "site": "Scientific American",
+              "href": "https://www.scientificamerican.com/article/can-spacex-catch-its-starship/"
+            },
+            {
               "title": "SpaceX: Starship Flight 15 mission page / recap",
               "site": "SpaceX",
               "href": "https://www.spacex.com/launches/starship-flight-15"
@@ -9752,6 +10129,26 @@
           "status": "planned",
           "note": null,
           "sources": [
+            {
+              "title": "Space.com: Flight 15 launch; booster catch aborted",
+              "site": "Space.com",
+              "href": "https://www.space.com/space-exploration/launches-spacecraft/spacex-starship-flight-15-chopsticks-double-catch-super-heavy-ship"
+            },
+            {
+              "title": "Universe Today: SpaceX passes up booster catch",
+              "site": "Universe Today",
+              "href": "https://www.universetoday.com/articles/spacex-launches-starship-but-passes-up-booster-catch-for-safetys-sake"
+            },
+            {
+              "title": "NBC News: 15th Starship flight; booster recovery aborted",
+              "site": "NBC News",
+              "href": "https://www.nbcnews.com/science/space/spacex-launches-15th-starship-flight-aborts-booster-recovery-maneuver-rcna609274"
+            },
+            {
+              "title": "Scientific American: Can SpaceX catch its Starship?",
+              "site": "Scientific American",
+              "href": "https://www.scientificamerican.com/article/can-spacex-catch-its-starship/"
+            },
             {
               "title": "SpaceX: Starship Flight 15 mission page / recap",
               "site": "SpaceX",
@@ -9770,6 +10167,26 @@
           "note": null,
           "sources": [
             {
+              "title": "Space.com: Flight 15 launch; booster catch aborted",
+              "site": "Space.com",
+              "href": "https://www.space.com/space-exploration/launches-spacecraft/spacex-starship-flight-15-chopsticks-double-catch-super-heavy-ship"
+            },
+            {
+              "title": "Universe Today: SpaceX passes up booster catch",
+              "site": "Universe Today",
+              "href": "https://www.universetoday.com/articles/spacex-launches-starship-but-passes-up-booster-catch-for-safetys-sake"
+            },
+            {
+              "title": "NBC News: 15th Starship flight; booster recovery aborted",
+              "site": "NBC News",
+              "href": "https://www.nbcnews.com/science/space/spacex-launches-15th-starship-flight-aborts-booster-recovery-maneuver-rcna609274"
+            },
+            {
+              "title": "Scientific American: Can SpaceX catch its Starship?",
+              "site": "Scientific American",
+              "href": "https://www.scientificamerican.com/article/can-spacex-catch-its-starship/"
+            },
+            {
               "title": "SpaceX: Starship Flight 15 mission page / recap",
               "site": "SpaceX",
               "href": "https://www.spacex.com/launches/starship-flight-15"
@@ -9784,8 +10201,28 @@
           "actual": null,
           "actualSec": null,
           "status": "planned",
-          "note": null,
+          "note": "First-ever ship tower catch still planned; fallback ocean splashdown if no-go",
           "sources": [
+            {
+              "title": "Space.com: Flight 15 launch; booster catch aborted",
+              "site": "Space.com",
+              "href": "https://www.space.com/space-exploration/launches-spacecraft/spacex-starship-flight-15-chopsticks-double-catch-super-heavy-ship"
+            },
+            {
+              "title": "Universe Today: SpaceX passes up booster catch",
+              "site": "Universe Today",
+              "href": "https://www.universetoday.com/articles/spacex-launches-starship-but-passes-up-booster-catch-for-safetys-sake"
+            },
+            {
+              "title": "NBC News: 15th Starship flight; booster recovery aborted",
+              "site": "NBC News",
+              "href": "https://www.nbcnews.com/science/space/spacex-launches-15th-starship-flight-aborts-booster-recovery-maneuver-rcna609274"
+            },
+            {
+              "title": "Scientific American: Can SpaceX catch its Starship?",
+              "site": "Scientific American",
+              "href": "https://www.scientificamerican.com/article/can-spacex-catch-its-starship/"
+            },
             {
               "title": "SpaceX: Starship Flight 15 mission page / recap",
               "site": "SpaceX",
@@ -9797,30 +10234,52 @@
       ],
       "telemetry": {
         "maxAltitudeKm": 275,
-        "maxAltitudeBasis": "Planned: ~275 km orbit, ~14 orbits, >22 h flight (SpaceX)",
+        "maxAltitudeBasis": "Orbit ~275 km (~170 mi) after insertion burn ~T+26:10 (Space.com / SpaceX timeline)",
         "maxSpeedKmh": null,
-        "flightDurationSec": 81154,
-        "flightDurationBasis": "Planned: ship catch at T+22:32:34 (SpaceX timeline)",
-        "boosterEnginesLit": null,
+        "flightDurationSec": null,
+        "flightDurationBasis": "Mission still in progress; ship catch planned T+22:32:34 / ~22:17 CET Sat 14 Nov",
+        "boosterEnginesLit": 33,
         "boosterEnginesPlanned": 33,
-        "shipEnginesLit": null,
+        "shipEnginesLit": 6,
         "shipEnginesPlanned": 6,
         "downrangeKm": null,
-        "planned": true,
-        "flightDuration": "22:32:34",
+        "planned": false,
+        "flightDuration": null,
         "units": {
           "altitude": "km",
           "speed": "km/h",
           "duration": "s"
         },
-        "note": "Max speed and downrange distance are not published per flight in the sources checked; webcast telemetry readouts were not transcribed.",
+        "note": "Interim telemetry from webcast reporting (Space.com, NBC). Final duration depends on ship catch or ocean splashdown.",
         "sources": [
+          {
+            "title": "Space.com: Flight 15 launch; booster catch aborted",
+            "site": "Space.com",
+            "href": "https://www.space.com/space-exploration/launches-spacecraft/spacex-starship-flight-15-chopsticks-double-catch-super-heavy-ship"
+          },
+          {
+            "title": "Universe Today: SpaceX passes up booster catch",
+            "site": "Universe Today",
+            "href": "https://www.universetoday.com/articles/spacex-launches-starship-but-passes-up-booster-catch-for-safetys-sake"
+          },
+          {
+            "title": "NBC News: 15th Starship flight; booster recovery aborted",
+            "site": "NBC News",
+            "href": "https://www.nbcnews.com/science/space/spacex-launches-15th-starship-flight-aborts-booster-recovery-maneuver-rcna609274"
+          },
+          {
+            "title": "Scientific American: Can SpaceX catch its Starship?",
+            "site": "Scientific American",
+            "href": "https://www.scientificamerican.com/article/can-spacex-catch-its-starship/"
+          },
           {
             "title": "SpaceX: Starship Flight 15 mission page / recap",
             "site": "SpaceX",
             "href": "https://www.spacex.com/launches/starship-flight-15"
           }
-        ]
+        ],
+        "orbitAltitudeKm": 275,
+        "boosterEnginesNote": "Ascent ignition reported nominal; catch waved off — Sci Am cited some engine issues (unconfirmed)"
       },
       "vehicleChanges": {
         "items": [
@@ -9837,9 +10296,9 @@
         ]
       },
       "anomaly": {
-        "hasAnomaly": false,
-        "type": null,
-        "summary": "Not flown yet.",
+        "hasAnomaly": true,
+        "type": "Recovery divert",
+        "summary": "Booster tower catch called off; B22 diverted to a controlled Gulf of Mexico splashdown ~6.5 min after launch. SpaceX has not published a reason; Scientific American reported some engine issues (unconfirmed).",
         "rootCause": null,
         "correctiveActions": null,
         "investigation": null,
@@ -9848,6 +10307,26 @@
         "reportUrl": null,
         "sources": [
           {
+            "title": "Space.com: Flight 15 launch; booster catch aborted",
+            "site": "Space.com",
+            "href": "https://www.space.com/space-exploration/launches-spacecraft/spacex-starship-flight-15-chopsticks-double-catch-super-heavy-ship"
+          },
+          {
+            "title": "Universe Today: SpaceX passes up booster catch",
+            "site": "Universe Today",
+            "href": "https://www.universetoday.com/articles/spacex-launches-starship-but-passes-up-booster-catch-for-safetys-sake"
+          },
+          {
+            "title": "NBC News: 15th Starship flight; booster recovery aborted",
+            "site": "NBC News",
+            "href": "https://www.nbcnews.com/science/space/spacex-launches-15th-starship-flight-aborts-booster-recovery-maneuver-rcna609274"
+          },
+          {
+            "title": "Scientific American: Can SpaceX catch its Starship?",
+            "site": "Scientific American",
+            "href": "https://www.scientificamerican.com/article/can-spacex-catch-its-starship/"
+          },
+          {
             "title": "SpaceX: Starship Flight 15 mission page / recap",
             "site": "SpaceX",
             "href": "https://www.spacex.com/launches/starship-flight-15"
@@ -9855,12 +10334,32 @@
         ]
       },
       "video": {
-        "platform": null,
+        "platform": "SpaceX webcast / X",
         "url": null,
         "missionPage": "https://www.spacex.com/launches/starship-flight-15",
         "timestamps": [],
-        "note": "Webcast not yet live; SpaceX says coverage starts ~30 min before liftoff on spacex.com and X @SpaceX.",
+        "note": "Flight launched; webcast coverage ran on spacex.com / X @SpaceX. A cut launch video hero will be added after the flight ends; image hero kept for now.",
         "sources": [
+          {
+            "title": "Space.com: Flight 15 launch; booster catch aborted",
+            "site": "Space.com",
+            "href": "https://www.space.com/space-exploration/launches-spacecraft/spacex-starship-flight-15-chopsticks-double-catch-super-heavy-ship"
+          },
+          {
+            "title": "Universe Today: SpaceX passes up booster catch",
+            "site": "Universe Today",
+            "href": "https://www.universetoday.com/articles/spacex-launches-starship-but-passes-up-booster-catch-for-safetys-sake"
+          },
+          {
+            "title": "NBC News: 15th Starship flight; booster recovery aborted",
+            "site": "NBC News",
+            "href": "https://www.nbcnews.com/science/space/spacex-launches-15th-starship-flight-aborts-booster-recovery-maneuver-rcna609274"
+          },
+          {
+            "title": "Scientific American: Can SpaceX catch its Starship?",
+            "site": "Scientific American",
+            "href": "https://www.scientificamerican.com/article/can-spacex-catch-its-starship/"
+          },
           {
             "title": "SpaceX: Starship Flight 15 mission page / recap",
             "site": "SpaceX",
@@ -9870,19 +10369,35 @@
       },
       "firsts": {
         "items": [
-          "Would be first ship catch",
-          "Would be first full recovery of both stages"
+          "First V3 Super Heavy tower-catch attempt (diverted to Gulf splashdown)",
+          "Would be first ship catch if Saturday's attempt succeeds",
+          "Second Starship delivery of operational Starlink V3 satellites"
         ],
         "sources": [
+          {
+            "title": "Space.com: Flight 15 launch; booster catch aborted",
+            "site": "Space.com",
+            "href": "https://www.space.com/space-exploration/launches-spacecraft/spacex-starship-flight-15-chopsticks-double-catch-super-heavy-ship"
+          },
+          {
+            "title": "Universe Today: SpaceX passes up booster catch",
+            "site": "Universe Today",
+            "href": "https://www.universetoday.com/articles/spacex-launches-starship-but-passes-up-booster-catch-for-safetys-sake"
+          },
+          {
+            "title": "NBC News: 15th Starship flight; booster recovery aborted",
+            "site": "NBC News",
+            "href": "https://www.nbcnews.com/science/space/spacex-launches-15th-starship-flight-aborts-booster-recovery-maneuver-rcna609274"
+          },
+          {
+            "title": "Scientific American: Can SpaceX catch its Starship?",
+            "site": "Scientific American",
+            "href": "https://www.scientificamerican.com/article/can-spacex-catch-its-starship/"
+          },
           {
             "title": "SpaceX: Starship Flight 15 mission page / recap",
             "site": "SpaceX",
             "href": "https://www.spacex.com/launches/starship-flight-15"
-          },
-          {
-            "title": "Wikipedia (pointer only): Starship flight 15, article",
-            "site": "Wikipedia",
-            "href": "https://en.wikipedia.org/wiki/Starship_flight_15"
           }
         ]
       },
@@ -9894,40 +10409,81 @@
           "note": "Boca Chica Launch Site coordinate; pad-level offset (~100-300 m) ignored"
         },
         "booster": {
-          "zone": "Planned: tower catch at OLP-2",
-          "lat": 25.997,
-          "lon": -97.157
+          "zone": "Controlled splashdown, Gulf of Mexico (catch called off)",
+          "lat": 26.0,
+          "lon": -96.5,
+          "note": "Approximate offshore Gulf splashdown; exact coordinates not published"
         },
         "ship": {
-          "zone": "Planned: tower catch at OLP-2 after ~14 orbits",
+          "zone": "In orbit ~275 km; catch still planned at OLP-2 (~22:17 CET Sat 14 Nov)",
           "lat": 25.997,
           "lon": -97.157
         },
         "groundTrack": [],
-        "groundTrackNote": "Planned ~14-orbit flight returning to Starbase; SpaceX lists Hawaii and Chile return checks. Ground track not published.",
+        "groundTrackNote": "Ship on multi-orbit coast with Hawaii/Chile return-check gates; booster ended in Gulf after catch divert. Ground track not republished for this interim.",
         "inclinationDeg": null,
         "sources": [
+          {
+            "title": "Space.com: Flight 15 launch; booster catch aborted",
+            "site": "Space.com",
+            "href": "https://www.space.com/space-exploration/launches-spacecraft/spacex-starship-flight-15-chopsticks-double-catch-super-heavy-ship"
+          },
+          {
+            "title": "Universe Today: SpaceX passes up booster catch",
+            "site": "Universe Today",
+            "href": "https://www.universetoday.com/articles/spacex-launches-starship-but-passes-up-booster-catch-for-safetys-sake"
+          },
+          {
+            "title": "NBC News: 15th Starship flight; booster recovery aborted",
+            "site": "NBC News",
+            "href": "https://www.nbcnews.com/science/space/spacex-launches-15th-starship-flight-aborts-booster-recovery-maneuver-rcna609274"
+          },
+          {
+            "title": "Scientific American: Can SpaceX catch its Starship?",
+            "site": "Scientific American",
+            "href": "https://www.scientificamerican.com/article/can-spacex-catch-its-starship/"
+          },
           {
             "title": "SpaceX: Starship Flight 15 mission page / recap",
             "site": "SpaceX",
             "href": "https://www.spacex.com/launches/starship-flight-15"
           },
           {
-            "title": "Boca Chica Launch Site coordinate (FAA Increased Cadence EA, via Wikipedia \"SpaceX Starbase\")",
-            "site": "FAA / Wikipedia",
-            "href": "https://en.wikipedia.org/wiki/SpaceX_Starbase"
+            "title": "SpaceX: Starship Flight 15 mission page / recap",
+            "site": "SpaceX",
+            "href": "https://www.spacex.com/launches/starship-flight-15"
           }
         ]
       },
       "regulatory": {
-        "licenceDate": null,
-        "licenceNote": "Pending: SpaceX says launch is \"pending regulatory approval\"; FAA licence modification not yet published",
+        "licenceDate": "2026-11-13",
+        "licenceNote": "Flight launched; ship return-to-launch-site still gated by go/no-go criteria",
         "mishapOpened": null,
         "mishapClosed": null,
         "debrisImpacts": [],
         "daysSincePrevious": 46,
-        "daysSincePreviousNote": "Computed to NET 13 Nov 2026",
+        "daysSincePreviousNote": "From Flight 14 (28 Sep) to Flight 15 (13 Nov 2026)",
         "sources": [
+          {
+            "title": "Space.com: Flight 15 launch; booster catch aborted",
+            "site": "Space.com",
+            "href": "https://www.space.com/space-exploration/launches-spacecraft/spacex-starship-flight-15-chopsticks-double-catch-super-heavy-ship"
+          },
+          {
+            "title": "Universe Today: SpaceX passes up booster catch",
+            "site": "Universe Today",
+            "href": "https://www.universetoday.com/articles/spacex-launches-starship-but-passes-up-booster-catch-for-safetys-sake"
+          },
+          {
+            "title": "NBC News: 15th Starship flight; booster recovery aborted",
+            "site": "NBC News",
+            "href": "https://www.nbcnews.com/science/space/spacex-launches-15th-starship-flight-aborts-booster-recovery-maneuver-rcna609274"
+          },
+          {
+            "title": "Scientific American: Can SpaceX catch its Starship?",
+            "site": "Scientific American",
+            "href": "https://www.scientificamerican.com/article/can-spacex-catch-its-starship/"
+          },
           {
             "title": "SpaceX: Starship Flight 15 mission page / recap",
             "site": "SpaceX",
@@ -9941,17 +10497,38 @@
         ]
       },
       "launchWindow": {
-        "netLocal": "Fri 13 Nov 2026, 23:45 CET",
-        "netCT": "4:45 p.m. CT",
+        "netLocal": "Fri 13 Nov 2026, 23:47 CET",
+        "netCT": "4:47 p.m. CT",
         "windowMinutes": 75,
+        "actualLiftoffLocal": "Fri 13 Nov 2026, 23:47 CET",
         "sources": [
+          {
+            "title": "Space.com: Flight 15 launch; booster catch aborted",
+            "site": "Space.com",
+            "href": "https://www.space.com/space-exploration/launches-spacecraft/spacex-starship-flight-15-chopsticks-double-catch-super-heavy-ship"
+          },
+          {
+            "title": "Universe Today: SpaceX passes up booster catch",
+            "site": "Universe Today",
+            "href": "https://www.universetoday.com/articles/spacex-launches-starship-but-passes-up-booster-catch-for-safetys-sake"
+          },
+          {
+            "title": "NBC News: 15th Starship flight; booster recovery aborted",
+            "site": "NBC News",
+            "href": "https://www.nbcnews.com/science/space/spacex-launches-15th-starship-flight-aborts-booster-recovery-maneuver-rcna609274"
+          },
+          {
+            "title": "Scientific American: Can SpaceX catch its Starship?",
+            "site": "Scientific American",
+            "href": "https://www.scientificamerican.com/article/can-spacex-catch-its-starship/"
+          },
           {
             "title": "SpaceX: Starship Flight 15 mission page / recap",
             "site": "SpaceX",
             "href": "https://www.spacex.com/launches/starship-flight-15"
           }
         ],
-        "note": "Published on the SpaceX Flight 15 page; pending FAA approval"
+        "note": "Lifted off at 23:47 CET (4:47 p.m. CT)"
       },
       "hero": {
         "type": "image",

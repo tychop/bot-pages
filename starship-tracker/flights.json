@@ -1,26 +1,26 @@
 {
-  "lastUpdated": "2026-11-07",
-  "lastUpdatedLabel": "Sat 7 Nov 2026, 17:10 CET",
+  "lastUpdated": "2026-11-14",
+  "lastUpdatedLabel": "Sat 14 Nov 2026, 02:05 CET",
   "title": "Starship Flight Tracker",
-  "intro": "Every SpaceX Starship integrated flight, from Flight 1 in April 2023 to the upcoming Flight 15, with goals, results, causes, lessons and costs. Times are Netherlands time (CET/CEST).",
-  "overview": "14 flights flown, the last one the first to reach orbit; the next is planned as the first catch of both stages after about 14 orbits.",
+  "intro": "Every SpaceX Starship integrated flight, from Flight 1 in April 2023 through Flight 15 (in progress), with goals, results, causes, lessons and costs. Times are Netherlands time (CET/CEST).",
+  "overview": "15 flights flown or in progress; Flight 14 was the first to reach orbit. Flight 15 launched 13 Nov 2026: booster catch called off (Gulf splashdown); Ship 42 reached orbit, deployed 26 Starlink V3 satellites, and is still targeting a first ship catch ~22:17 CET on 14 Nov.",
   "timezoneNote": "Times: local Netherlands time (CET = UTC+1 in winter, CEST = UTC+2 in summer). Starbase is on CDT (UTC-5) in summer and CST (UTC-6) in winter: CET = CST + 7 h.",
   "summary": {
     "flownLabel": "Flights flown",
-    "flownRange": "Apr 2023 – Sep 2026",
+    "flownRange": "Apr 2023 – Nov 2026",
     "outcomeLabel": "Successes / failures",
-    "outcomeNote": "Wikipedia's launch-outcome classification",
+    "outcomeNote": "Wikipedia's launch-outcome classification; Flight 15 is still In progress",
     "catchesLabel": "Booster tower catches",
-    "nextShort": "23:45 CET",
-    "nextDetail": "NET 13 Nov · 75-min window · FAA pending"
+    "nextShort": "Ship catch ~22:17 CET",
+    "nextDetail": "Sat 14 Nov · go/no-go gates · fallback ocean splashdown"
   },
   "next": {
     "aboutFlight": 15,
-    "status": "Awaiting FAA licence modification",
+    "status": "In progress — ship still on orbit; first ship catch pending",
     "timezone": "Starbase is on CST (UTC−6); CET = CST + 7 h",
-    "plan": "About 14 orbits at ~275 km over ~22+ hours, then catch both stages at Starbase",
-    "hardware": "Both vehicles static-fired late October; ship rehearsed in the chopsticks in September",
-    "callout": "SpaceX’s Flight 15 page lists a NET Friday 13 Nov 2026 window opening at 23:45 CET (4:45 p.m. CT), lasting 75 minutes. Still pending FAA approval."
+    "plan": "Ship catch targeted ~22:17 CET Sat 14 Nov (~22.5 h after liftoff), after go/no-go gates (last at T+20h41m); fallback ocean splashdown",
+    "hardware": "B22 splashdown in the Gulf after catch called off; S42 in orbit with 26 Starlink V3 sats deployed",
+    "callout": "Flight 15 lifted off Fri 13 Nov 2026 at 23:47 CET (4:47 p.m. CT). Booster catch was called off; controlled Gulf splashdown ~6.5 min after launch. Ship reached ~275 km orbit (~T+26 min) and deployed 26 Starlink V3 satellites. First-ever ship tower catch still planned ~Sat 14 Nov 22:17 CET if go/no-go gates pass."
   },
   "laterCaption": "Dates are no-earlier-than targets and will move.",
   "laterNote": "Musk has also said the flight after Flight 15 could refly the caught vehicles; NASASpaceflight expects Flight 16 to use B23 and S43 instead.",
@@ -1365,62 +1365,79 @@
     {
       "n": 15,
       "era": "V3",
-      "result": "Upcoming",
-      "dateLocal": "NET Fri 13 Nov 2026, 23:45 CET",
-      "utc": "22:45 UTC (4:45 p.m. CST); 75-minute window",
+      "result": "In progress",
+      "dateLocal": "Fri 13 Nov 2026, 23:47 CET",
+      "utc": "22:47 UTC (4:47 p.m. CT)",
       "booster": "Booster 22",
       "ship": "Ship 42",
       "boosterShort": "B22",
       "shipShort": "S42",
       "version": "V3 (Block 3)",
       "pad": "Starbase OLP-2 (Pad 2)",
-      "summary": "Official SpaceX target: first attempt to catch both stages after about 14 orbits at ~275 km. Pending FAA licence modification.",
+      "summary": "Interim: launched 13 Nov 2026. B22 tower catch called off — controlled Gulf splashdown ~6.5 min after liftoff. S42 clean hot-staging, reached ~275 km orbit (~T+26 min), deployed 26 Starlink V3 satellites. First ship tower catch still planned ~22:17 CET Sat 14 Nov after go/no-go gates; outcome not final.",
       "goals": [
-        "Orbital flight with payload (reported as Starlink Group 31-2)",
+        "Orbital flight with Starlink V3 payload",
         "About 14 orbits at ~275 km over a ~22+ hour flight",
         "Booster return and tower catch: first V3 and first Pad 2 catch",
         "Ship deorbit, return to Starbase and first ever ship catch"
       ],
-      "achieved": [],
-      "failed": [],
+      "achieved": [
+        "Liftoff of B22/S42 from OLP-2 at 23:47 CET on 13 Nov 2026",
+        "Clean hot-staging / stage separation",
+        "Ship reached orbit (~275 km) about T+26 min",
+        "Deployed 26 Starlink V3 satellites (3 with heatshield-inspection cameras)",
+        "Booster completed a controlled Gulf of Mexico splashdown after catch was called off"
+      ],
+      "failed": [
+        "Booster tower catch called off; diverted to Gulf splashdown (~6.5 min after launch)"
+      ],
       "lessons": [
-        "B22 full-duration 33-engine static fire 25 Oct",
-        "S42 single-engine deorbit-simulation burn 26 Oct, 60 s six-engine firing 27 Oct",
-        "S42 chopstick fit and quick-disconnect tests at Pad 2 on 11–12 Sep",
-        "SpaceX Flight 15 page published a 75-minute window opening 23:45 CET; FAA approval still pending"
+        "SpaceX has not publicly stated why the booster catch was waved off (Sci Am reports some engine issues — unconfirmed)",
+        "Ship catch attempt remains the primary remaining objective of this flight"
       ],
-      "boosterOutcome": "Planned: tower catch",
-      "shipOutcome": "Planned: tower catch",
+      "boosterOutcome": "Catch called off; controlled splashdown (Gulf of Mexico)",
+      "shipOutcome": "In orbit — ship catch planned ~22:17 CET Sat 14 Nov (fallback ocean splashdown)",
       "firsts": [
-        "Would be the first ship catch and first full recovery of both stages of an orbital-class rocket"
+        "First V3 Super Heavy return-to-launch-site catch attempt (diverted to Gulf)",
+        "Would be the first ship catch if Saturday's attempt succeeds"
       ],
-      "faa": "Licence modification for return to launch site and ship catch not yet issued (FAA Starship page, as of early Nov).",
+      "faa": "Flight launched under FAA authorisation; ship return-to-launch-site still subject to go/no-go gates.",
       "cost": "No public estimate.",
       "uncertain": [
-        "FAA licence modification for return to launch site and ship catch not yet issued (as of this update).",
-        "Payload name comes from Wikipedia and is not confirmed by SpaceX.",
-        "Musk put first-catch odds at 50–60% (Sep) and 'more likely than not' (Oct)."
+        "Final mission outcome pending ship catch or ocean splashdown (~22:17 CET Sat 14 Nov).",
+        "SpaceX has not published a reason for waving off the booster catch; Scientific American reported some engine issues (unconfirmed).",
+        "Some outlets described a post-splashdown fireball/explosion over the Gulf; Space.com and others call it a controlled splashdown."
       ],
       "sources": [
         {
-          "title": "NextSpaceflight: Flight 15",
-          "site": "nextspaceflight.com",
-          "href": "https://www.nextspaceflight.com/launches/details/8403/"
+          "title": "Space.com: Flight 15 launch; booster catch aborted",
+          "site": "Space.com",
+          "href": "https://www.space.com/space-exploration/launches-spacecraft/spacex-starship-flight-15-chopsticks-double-catch-super-heavy-ship"
         },
         {
-          "title": "Teslarati: Flight 15 targets Friday the 13th",
-          "site": "teslarati.com",
-          "href": "https://www.teslarati.com/spacex-starship-catch-nov-13/"
+          "title": "Universe Today: SpaceX passes up booster catch",
+          "site": "Universe Today",
+          "href": "https://www.universetoday.com/articles/spacex-launches-starship-but-passes-up-booster-catch-for-safetys-sake"
         },
         {
-          "title": "FAA: Starship at Boca Chica (licensing)",
-          "site": "faa.gov",
-          "href": "https://www.faa.gov/space/stakeholder_engagement/spacex_starship"
+          "title": "NBC News: 15th Starship flight; booster recovery aborted",
+          "site": "NBC News",
+          "href": "https://www.nbcnews.com/science/space/spacex-launches-15th-starship-flight-aborts-booster-recovery-maneuver-rcna609274"
         },
         {
-          "title": "NASASpaceflight: Flight 15 and 16 milestones",
-          "site": "nasaspaceflight.com",
-          "href": "https://www.nasaspaceflight.com/2026/10/spacex-flight-15-16-milestones/"
+          "title": "Scientific American: Can SpaceX catch its Starship?",
+          "site": "Scientific American",
+          "href": "https://www.scientificamerican.com/article/can-spacex-catch-its-starship/"
+        },
+        {
+          "title": "SpaceX: Starship Flight 15 mission page / recap",
+          "site": "SpaceX",
+          "href": "https://www.spacex.com/launches/starship-flight-15"
+        },
+        {
+          "title": "Wikipedia: Starship flight 15",
+          "site": "en.wikipedia.org",
+          "href": "https://en.wikipedia.org/wiki/Starship_flight_15"
         }
       ],
       "costEstimate": {
