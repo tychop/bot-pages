@@ -1,6 +1,6 @@
 {
   "lastUpdated": "2026-11-14",
-  "lastUpdatedLabel": "Sat 14 Nov 2026, 22:13 CET",
+  "lastUpdatedLabel": "Sat 14 Nov 2026, 22:30 CET",
   "title": "Starship Flight Tracker",
   "intro": "Every SpaceX Starship integrated flight, from Flight 1 in April 2023 through Flight 15 (in progress), with goals, results, causes, lessons and costs. Times are Netherlands time (CET/CEST).",
   "overview": "15 flights flown or in progress; Flight 14 was the first to reach orbit. Flight 15 launched 13 Nov 2026: booster catch called off (Gulf splashdown); Ship 42 reached orbit, deployed 26 Starlink V3 satellites, and as of 21:14 CET on 14 Nov SpaceX had polled go to return it to Starbase for a first ship catch ~22:17 CET.",
@@ -9,19 +9,12 @@
     "flownLabel": "Flights flown",
     "flownRange": "Apr 2023 – Nov 2026",
     "outcomeLabel": "Successes / failures",
-    "outcomeNote": "Wikipedia's launch-outcome classification; Flight 15 is still In progress",
+    "outcomeNote": "Wikipedia's launch-outcome classification",
     "catchesLabel": "Booster tower catches",
-    "nextShort": "Ship catch ~22:17 CET",
-    "nextDetail": "Reentering · catch ~22:17 CET"
+    "nextShort": "TBD",
+    "nextDetail": "No upcoming flight listed yet"
   },
-  "next": {
-    "aboutFlight": 15,
-    "status": "In progress — reentering; catch ~22:17 CET",
-    "timezone": "Starbase is on CST (UTC−6); CET = CST + 7 h",
-    "plan": "Ship catch targeted ~22:17 CET Sat 14 Nov during reentry",
-    "hardware": "B22 splashdown in the Gulf after catch called off; S42 in orbit with 26 Starlink V3 sats deployed",
-    "callout": "As of 22:13 CET Sat 14 Nov: SpaceX confirmed Starship is reentering Earth's atmosphere (~21:58 CET). Catch targeted ~22:17 CET."
-  },
+  "next": null,
   "laterCaption": "Dates are no-earlier-than targets and will move.",
   "laterNote": "Musk has also said the flight after Flight 15 could refly the caught vehicles; NASASpaceflight expects Flight 16 to use B23 and S43 instead.",
   "costNote": "SpaceX has never published a per-flight cost. All figures here are estimates or programme totals, not a price for any single flight.",
@@ -1365,7 +1358,7 @@
     {
       "n": 15,
       "era": "V3",
-      "result": "In progress",
+      "result": "Success",
       "dateLocal": "Fri 13 Nov 2026, 23:47 CET",
       "utc": "22:47 UTC (4:47 p.m. CT)",
       "booster": "Booster 22",
@@ -1374,7 +1367,7 @@
       "shipShort": "S42",
       "version": "V3 (Block 3)",
       "pad": "Starbase OLP-2 (Pad 2)",
-      "summary": "Interim (22:13 CET 14 Nov): Reentry begun (SpaceX ~21:58 CET). Starship is reentering Earth's atmosphere; catch targeted ~22:17 CET. Coverage live. Outcome not final.",
+      "summary": "Success: first ship catch. Booster catch called off (B22 controlled Gulf splashdown); S42 reached orbit, deployed 26 Starlink V3, and was caught by Mechazilla at about 22:19 CET on 14 Nov after more than 21 hours in orbit.",
       "goals": [
         "Orbital flight with Starlink V3 payload",
         "About 14 orbits at ~275 km over a ~22+ hour flight",
@@ -1393,29 +1386,41 @@
         "Pad and tower systems reported go for catch (SpaceX, 16:41 CET 14 Nov)",
         "Teams polled go to return Starship to Starbase (SpaceX, 20:18 CET 14 Nov)",
         "Good deorbit burn; on course for reentry ahead of planned Starbase catch (SpaceX, ~21:25 CET)",
-        "Reentry begun; Starship reentering Earth's atmosphere (SpaceX, ~21:58 CET)"
+        "Reentry begun; Starship reentering Earth's atmosphere (SpaceX, ~21:58 CET)",
+        "First-ever ship catch by Mechazilla at Starbase (about 22:19 CET 14 Nov)"
       ],
       "failed": [
         "Booster tower catch called off; diverted to Gulf splashdown (~6.5 min after launch)"
       ],
       "lessons": [
         "SpaceX has not publicly stated why the booster catch was waved off (Dan Huot: will dig into the abort; Sci Am engine issues and NextSpaceflight GNC note remain unconfirmed by SpaceX)",
-        "Ship catch attempt remains the primary remaining objective; return still depends on go/no-go gates"
+        "First ship catch after >21 h in orbit validates return-to-launch-site recovery for Ship"
       ],
       "boosterOutcome": "Catch called off; controlled splashdown (Gulf of Mexico)",
-      "shipOutcome": "Reentering; catch targeted ~22:17 CET",
+      "shipOutcome": "Caught by tower (OLP-2) — first ship catch",
       "firsts": [
-        "First V3 Super Heavy return-to-launch-site catch attempt (diverted to Gulf)",
-        "Would be the first ship catch if Saturday's attempt succeeds"
+        "First ship catch by Mechazilla (Ship 42 at OLP-2)",
+        "First V3 Super Heavy return-to-launch-site catch attempt (diverted to Gulf)"
       ],
       "faa": "Flight launched under FAA authorisation; SpaceX polled go for ship return to launch site.",
       "cost": "No public estimate.",
       "uncertain": [
-        "Final mission outcome pending ship catch or contingency ocean splashdown (~22:17 CET Sat 14 Nov).",
-        "SpaceX has not published a reason for waving off the booster catch; Scientific American reported some engine issues (unconfirmed); NextSpaceflight attributes a GNC issue (not confirmed by SpaceX).",
+        "Booster catch called off; B22 did a controlled Gulf of Mexico splashdown (~6.5 min after launch). SpaceX has not published a reason; Scientific American reported some engine issues (unconfirmed); NextSpaceflight attributes a GNC issue (not confirmed by SpaceX).",
+        "S42 reached orbit and deployed 26 Starlink V3 satellites.",
+        "First-ever ship catch by Mechazilla at about 22:19 CET on 14 Nov after more than 21 hours in orbit (catch time estimated from the webcast clock).",
         "Some outlets described a post-splashdown fireball/explosion over the Gulf; Space.com and others call it a controlled splashdown."
       ],
       "sources": [
+        {
+          "title": "SpaceX: banking maneuver and final approach",
+          "site": "X / SpaceX",
+          "href": "https://x.com/SpaceX/status/2121714305968304321"
+        },
+        {
+          "title": "SpaceX: Mechazilla catches Starship!",
+          "site": "X / SpaceX",
+          "href": "https://x.com/SpaceX/status/2121715216597827756"
+        },
         {
           "title": "SpaceX: Starship is reentering",
           "site": "X / SpaceX",
