@@ -86,6 +86,67 @@
     };
   }
 
+  // Belastingdienst published examples: round each forfait component to whole
+  // euros, truncate the share to 2 decimals, floor voordeel and tax.
+  // Continuous simulations keep exact arithmetic via forfait().
+  function forfaitOfficial(peildatum, params) {
+    var persons = personsOf(peildatum.partner);
+    var threshold = params.debtThreshold * persons;
+    var deductibleDebt = Math.max(0, (peildatum.debt || 0) - threshold);
+    var exemption = peildatum.partner ? params.exemptionWealthPartner : params.exemptionWealth;
+    var assets = (peildatum.bank || 0) + (peildatum.invest || 0) + (peildatum.crypto || 0);
+    var bankReturn = Math.round((peildatum.bank || 0) * params.rateBank);
+    var otherReturn = Math.round(((peildatum.invest || 0) + (peildatum.crypto || 0)) * params.rateOther);
+    var debtReturn = Math.round(deductibleDebt * params.rateDebt);
+    var belastbaarRendement = bankReturn + otherReturn - debtReturn;
+    var rendementsgrondslag = assets - deductibleDebt;
+    var grondslag = Math.max(0, rendementsgrondslag - exemption);
+    if (rendementsgrondslag <= 0 || grondslag <= 0) {
+      return {
+        tax: 0,
+        voordeel: 0,
+        sharePct: 0,
+        grondslag: grondslag,
+        rendementsgrondslag: rendementsgrondslag,
+        belastbaarRendement: belastbaarRendement,
+        deductibleDebt: deductibleDebt,
+        exemption: exemption,
+        bankReturn: bankReturn,
+        otherReturn: otherReturn,
+        debtReturn: debtReturn
+      };
+    }
+    var sharePct = Math.floor((grondslag / rendementsgrondslag) * 10000 + 1e-9) / 100;
+    var voordeel = Math.floor(belastbaarRendement * sharePct / 100 + 1e-9);
+    var tax = Math.floor(Math.max(0, voordeel) * params.forfaitTarief + 1e-9);
+    return {
+      tax: tax,
+      voordeel: voordeel,
+      sharePct: sharePct,
+      grondslag: grondslag,
+      rendementsgrondslag: rendementsgrondslag,
+      belastbaarRendement: belastbaarRendement,
+      deductibleDebt: deductibleDebt,
+      exemption: exemption,
+      bankReturn: bankReturn,
+      otherReturn: otherReturn,
+      debtReturn: debtReturn
+    };
+  }
+
+  function huidigTax(peildatum, actualReturn, params) {
+    var f = forfait(peildatum, params);
+    var tegen = Math.max(0, actualReturn) * params.forfaitTarief;
+    var tax = Math.min(f.tax, tegen);
+    return {
+      tax: tax,
+      forfaitTax: f.tax,
+      tegenbewijsTax: tegen,
+      used: tegen < f.tax - 1e-8 ? "tegenbewijs" : "forfait",
+      forfait: f
+    };
+  }
+
   function taxNew(result, lossCarryIn, params, partner) {
     var persons = personsOf(partner);
     var exemptionCap = partner ? params.exemptionResultPartner : params.exemptionResult;
@@ -435,6 +496,8 @@
     RECOVERY: RECOVERY,
     parseParams: parseParams,
     forfait: forfait,
+    forfaitOfficial: forfaitOfficial,
+    huidigTax: huidigTax,
     taxNew: taxNew,
     simulate: simulate,
     oneYearInvest: oneYearInvest,
