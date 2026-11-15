@@ -11,10 +11,17 @@
     "outcomeLabel": "Successes / failures",
     "outcomeNote": "Wikipedia's launch-outcome classification",
     "catchesLabel": "Booster tower catches",
-    "nextShort": "TBD",
-    "nextDetail": "No upcoming flight listed yet"
+    "nextShort": "Flight 16",
+    "nextDetail": "Date not announced · B23/S43 expected"
   },
-  "next": null,
+  "next": {
+    "aboutFlight": 16,
+    "status": "Date not announced yet",
+    "timezone": "Times will use Netherlands CET/CEST when announced",
+    "plan": "First Starship launch from LC-39A reported; schedule not confirmed",
+    "hardware": "B23 / S43 expected (NASASpaceflight); not confirmed by SpaceX",
+    "callout": "Vehicles and pad are from credible reporting, not a SpaceX schedule."
+  },
   "laterCaption": "Dates are no-earlier-than targets and will move.",
   "laterNote": "Musk has also said the flight after Flight 15 could refly the caught vehicles; NASASpaceflight expects Flight 16 to use B23 and S43 instead.",
   "costNote": "SpaceX has never published a per-flight cost. All figures here are estimates or programme totals, not a price for any single flight.",
@@ -1571,7 +1578,75 @@
             "href": "https://www.nextspaceflight.com/launches/details/8403/"
           }
         ]
-      }
+      },
+      "homeHeadline": "First ship catch: Ship 42 caught by Mechazilla",
+      "homeMoments": [
+        {
+          "label": "Liftoff",
+          "time": "Fri 13 Nov 2026, 23:47 CET"
+        },
+        {
+          "label": "Orbit · 26 Starlink V3",
+          "time": "Sat 14 Nov 2026, ~00:13–01:04 CET"
+        },
+        {
+          "label": "Booster divert",
+          "time": "Fri 13 Nov 2026, ~23:53 CET"
+        },
+        {
+          "label": "Ship catch",
+          "time": "Sat 14 Nov 2026, about 22:19 CET"
+        }
+      ]
+    },
+    {
+      "n": 16,
+      "era": "V3",
+      "result": "Upcoming",
+      "dateLocal": "Date not announced yet",
+      "utc": null,
+      "booster": "Booster 23",
+      "ship": "Ship 43",
+      "boosterShort": "B23",
+      "shipShort": "S43",
+      "vehiclesExpected": true,
+      "version": "V3 (Block 3)",
+      "pad": "Expected LC-39A, Kennedy Space Center (reported)",
+      "summary": "Next Starship flight. Date not announced. Vehicles expected to be B23/S43 (NASASpaceflight); reported as the first Starship launch from LC-39A.",
+      "goals": [
+        "First Starship launch from LC-39A (reported)"
+      ],
+      "achieved": [],
+      "failed": [],
+      "lessons": [],
+      "boosterOutcome": "Not announced yet",
+      "shipOutcome": "Not announced yet",
+      "firsts": [
+        "Expected first Starship launch from LC-39A (NASASpaceflight)"
+      ],
+      "faa": "Not announced yet",
+      "cost": "No public estimate.",
+      "uncertain": [
+        "Booster 23 / Ship 43 are expected for Flight 16 per NASASpaceflight; SpaceX has not confirmed the pairing.",
+        "Launch date not announced; Florida / LC-39A reporting is provisional."
+      ],
+      "sources": [
+        {
+          "title": "NASASpaceflight: Flight 15 and 16 milestones (B23/S43)",
+          "site": "NASASpaceflight",
+          "href": "https://www.nasaspaceflight.com/2026/10/spacex-flight-15-16-milestones/"
+        },
+        {
+          "title": "NASASpaceflight: Roberts Road / Flight 16 push",
+          "site": "NASASpaceflight",
+          "href": "https://www.nasaspaceflight.com/2026/10/roberts-road-expansion-flight-16/"
+        },
+        {
+          "title": "Next Spaceflight: Starship vehicles (B23 / S43)",
+          "site": "Next Spaceflight",
+          "href": "https://www.nextspaceflight.com/starship/"
+        }
+      ]
     }
   ],
   "costMethod": {
