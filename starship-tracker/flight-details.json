@@ -11239,28 +11239,6 @@
       "imagesNote": null,
       "timeline": [
         {
-          "event": "Note",
-          "planned": null,
-          "plannedSec": null,
-          "actual": null,
-          "actualSec": null,
-          "status": null,
-          "note": "Planned times are SpaceX's original ~10 h profile; mission was shortened after payload deploy (deorbit T+2:12:18, splashdown T+3:08:30 per NSF).",
-          "sources": [
-            {
-              "title": "SpaceX: Starship Flight 14 mission page / recap",
-              "site": "SpaceX",
-              "href": "https://www.spacex.com/launches/starship-flight-14"
-            },
-            {
-              "title": "NASASpaceflight: Starship makes orbit, Flight 15 preps in full swing",
-              "site": "NASASpaceflight",
-              "href": "https://www.nasaspaceflight.com/2026/09/starship-14-orbit-flight-15/"
-            }
-          ],
-          "sortSec": -1
-        },
-        {
           "event": "Liftoff",
           "planned": "T+00:00",
           "plannedSec": 0,
@@ -12057,7 +12035,8 @@
         "creditUrl": "https://x.com/SpaceX/status/2106089751837278533",
         "sourceKind": "cut",
         "sourceRange": "X highlight ~0:02–0:12 (hot-staging)"
-      }
+      },
+      "timelineNote": "Planned times are SpaceX's original ~10 h profile; mission was shortened after payload deploy (deorbit T+2:12:18, splashdown T+3:08:30 per NSF)."
     },
     "15": {
       "n": 15,
@@ -12446,7 +12425,9 @@
               "site": "X (@SpaceX)",
               "href": "https://x.com/SpaceX/status/2121374779680964991"
             }
-          ]
+          ],
+          "videoUrl": "https://video.twimg.com/amplify_video/2121374662450159616/vid/avc1/1280x720/N4tqesNHH4MFOMnU.mp4",
+          "durationSec": 45
         },
         {
           "type": "video",
@@ -12469,7 +12450,9 @@
               "site": "X (@SpaceX)",
               "href": "https://x.com/SpaceX/status/2121376372576915909"
             }
-          ]
+          ],
+          "videoUrl": "https://video.twimg.com/amplify_video/2121376252674367488/vid/avc1/1280x720/ZvCpo-s9BGLv-UhX.mp4",
+          "durationSec": 75
         },
         {
           "type": "video",
@@ -12492,7 +12475,9 @@
               "site": "X (@SpaceX)",
               "href": "https://x.com/SpaceX/status/2121376821635936710"
             }
-          ]
+          ],
+          "videoUrl": "https://video.twimg.com/amplify_video/2121376687963439104/vid/avc1/1280x720/kzTZdAEexf-ZAe_N.mp4",
+          "durationSec": 39
         },
         {
           "type": "video",
@@ -12515,7 +12500,9 @@
               "site": "X (@SpaceX)",
               "href": "https://x.com/SpaceX/status/2121380531640369470"
             }
-          ]
+          ],
+          "videoUrl": "https://video.twimg.com/amplify_video/2121380459003133952/vid/avc1/1280x720/fZ1BQdN8OS3kXxLz.mp4",
+          "durationSec": 39
         },
         {
           "type": "video",
@@ -12538,7 +12525,9 @@
               "site": "X (@SpaceX)",
               "href": "https://x.com/SpaceX/status/2121387537235406928"
             }
-          ]
+          ],
+          "videoUrl": "https://video.twimg.com/amplify_video/2121387246066569217/vid/avc1/1280x720/sX6-Ttxk91QrjhWE.mp4",
+          "durationSec": 61
         },
         {
           "type": "video",
@@ -12561,7 +12550,9 @@
               "site": "X (@SpaceX)",
               "href": "https://x.com/SpaceX/status/2121394268652839309"
             }
-          ]
+          ],
+          "videoUrl": "https://video.twimg.com/amplify_video/2121394173030920192/vid/avc1/1280x720/6uAWR6zN9ObKGfO5.mp4",
+          "durationSec": 16
         },
         {
           "type": "video",
@@ -12575,7 +12566,7 @@
           "pageUrl": "https://x.com/SpaceX/status/2121602376532742611",
           "directUrl": "https://pbs.twimg.com/amplify_video_thumb/2121601548824510464/img/0aJ8a6jPC3uGzRTu.jpg",
           "poster": "https://pbs.twimg.com/amplify_video_thumb/2121601548824510464/img/0aJ8a6jPC3uGzRTu.jpg",
-          "videoUrl": "https://video.twimg.com/amplify_video/2121601548824510464/vid/avc1/1920x1080/NGmHGwpl9Ese9-m7.mp4",
+          "videoUrl": "https://video.twimg.com/amplify_video/2121601548824510464/vid/avc1/1280x720/JnhPz6p6j3svil0t.mp4",
           "durationSec": 83,
           "width": null,
           "height": null,
@@ -12610,7 +12601,8 @@
               "site": "X (@SpaceX)",
               "href": "https://x.com/SpaceX/status/2121629656868614213"
             }
-          ]
+          ],
+          "videoUrl": "https://video.twimg.com/amplify_video/2121628737649217536/vid/avc1/1280x720/AHQ9bn1Ct-hoBQV5.mp4"
         },
         {
           "type": "image",
@@ -12678,7 +12670,8 @@
               "site": "X (@SpaceX)",
               "href": "https://x.com/SpaceX/status/2121684113526858011"
             }
-          ]
+          ],
+          "videoUrl": "https://video.twimg.com/amplify_video/2121683901575999488/vid/avc1/1280x720/kyGXE_88usISkf4N.mp4"
         },
         {
           "type": "video",
@@ -12692,7 +12685,7 @@
           "pageUrl": "https://x.com/SpaceX/status/2121701161040556374",
           "directUrl": "https://pbs.twimg.com/amplify_video_thumb/2121701005490544640/img/IaWDnDtHBTuFEZoP.jpg",
           "poster": "https://pbs.twimg.com/amplify_video_thumb/2121701005490544640/img/IaWDnDtHBTuFEZoP.jpg",
-          "videoUrl": "https://video.twimg.com/amplify_video/2121701005490544640/vid/avc1/1920x1080/nWzlBfP3yxc7YK9N.mp4",
+          "videoUrl": "https://video.twimg.com/amplify_video/2121701005490544640/vid/avc1/1280x720/kCDctMW8zDRUDlmK.mp4",
           "durationSec": 158,
           "width": null,
           "height": null,
@@ -12727,7 +12720,8 @@
               "site": "X (@SpaceX)",
               "href": "https://x.com/SpaceX/status/2121375384793231499"
             }
-          ]
+          ],
+          "videoUrl": "media/hero/flight-15-hotstage.mp4"
         },
         {
           "type": "video",
@@ -12751,7 +12745,8 @@
               "site": "X (@SpaceX)",
               "href": "https://x.com/SpaceX/status/2121709368945385477"
             }
-          ]
+          ],
+          "videoUrl": "media/hero/flight-15-reentry.mp4"
         },
         {
           "type": "video",
@@ -12775,48 +12770,12 @@
               "site": "X (@SpaceX)",
               "href": "https://x.com/SpaceX/status/2121714305968304321"
             }
-          ]
+          ],
+          "videoUrl": "https://video.twimg.com/amplify_video/2121714248523153408/vid/avc1/1280x720/EvXPepw3JHlVDXnj.mp4"
         }
       ],
       "imagesNote": "Gallery includes SpaceX X stills and video cards (poster opens the X post). Hero is the ship-catch cut; Watch live off after flight end.",
       "timeline": [
-        {
-          "event": "Note",
-          "planned": null,
-          "plannedSec": null,
-          "actual": null,
-          "actualSec": null,
-          "status": null,
-          "note": "FINAL (14 Nov 2026): Success. Booster catch called off (B22 explosive Gulf splashdown). S42 reached orbit, deployed 26 Starlink V3, and was caught by Mechazilla at about 22:19 CET after more than 21 hours in orbit — the first ship catch.",
-          "sources": [
-            {
-              "title": "SpaceX: long coast / systems looking good",
-              "site": "X / SpaceX",
-              "href": "https://x.com/SpaceX/status/2121394839954874797"
-            },
-            {
-              "title": "SpaceX: Starship and heatshield healthy (~T+7h)",
-              "site": "X / SpaceX",
-              "href": "https://x.com/SpaceX/status/2121479482582441991"
-            },
-            {
-              "title": "Space.com: Flight 15 live updates",
-              "site": "Space.com",
-              "href": "https://www.space.com/news/live/spacex-starship-flight-15-live-updates-nov-13-2026-starship-first-double-landing-attempt"
-            },
-            {
-              "title": "Ars Technica: Flight 15 powers to orbit; possible catch Saturday",
-              "site": "Ars Technica",
-              "href": "https://arstechnica.com/space/2026/11/starship-flight-15-powers-to-orbit-setting-up-a-possible-catch-on-saturday/"
-            },
-            {
-              "title": "SpaceX: Starship Flight 15 mission page / webcast",
-              "site": "SpaceX",
-              "href": "https://www.spacex.com/launches/starship-flight-15"
-            }
-          ],
-          "sortSec": -1
-        },
         {
           "event": "Liftoff",
           "planned": "T+00:00",
@@ -14112,7 +14071,8 @@
         "catchTargetLocal": "Sat 14 Nov 2026, ~22:17 CET",
         "coverageStartLocal": "Sat 14 Nov 2026, 21:16 CET",
         "note": "Flight 15 complete. Mechazilla caught Ship 42 at about 22:19 CET on 14 Nov — the first ship catch."
-      }
+      },
+      "timelineNote": "FINAL (14 Nov 2026): Success. Booster catch called off (B22 explosive Gulf splashdown). S42 reached orbit, deployed 26 Starlink V3, and was caught by Mechazilla at about 22:19 CET after more than 21 hours in orbit — the first ship catch."
     },
     "16": {
       "n": 16,
