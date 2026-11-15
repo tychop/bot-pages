@@ -198,7 +198,7 @@
     };
   }
 
-  // Bank-style overview totals for the chosen horizon (shared by all tabs).
+  // Two-column comparison totals (Huidige box 3 | Voorgestelde box 3).
   function statementTotals(sim, debt) {
     var d = Math.max(0, debt || 0);
     return {
@@ -208,6 +208,41 @@
       taxNieuw: sim.totals.nieuw.tax,
       endHuidig: sim.totals.huidig.end - d,
       endNieuw: sim.totals.nieuw.end - d
+    };
+  }
+
+  // Row labels shared by both columns, in display order.
+  var STATEMENT_ROWS = [
+    "Startvermogen",
+    "Vermogen na rente/winst",
+    "Belasting box 3",
+    "Vermogen na belasting",
+    "Benodigd rendement om quitte te spelen"
+  ];
+
+  function statementColumns(sim, debt, breakEven) {
+    var s = statementTotals(sim, debt);
+    var be = breakEven || {};
+    return {
+      labels: STATEMENT_ROWS.slice(),
+      huidig: {
+        title: "Huidige box 3",
+        start: s.start,
+        afterReturn: s.afterReturn,
+        tax: s.taxHuidig,
+        end: s.endHuidig,
+        breakEven: be.huidig,
+        breakEvenForfait: be.forfait
+      },
+      voorstel: {
+        title: "Voorgestelde box 3",
+        start: s.start,
+        afterReturn: s.afterReturn,
+        tax: s.taxNieuw,
+        end: s.endNieuw,
+        breakEven: be.nieuw
+      },
+      totals: s
     };
   }
 
@@ -235,7 +270,9 @@
     mix: mix,
     asNumber: asNumber,
     pickRate: pickRate,
+    STATEMENT_ROWS: STATEMENT_ROWS,
     statementTotals: statementTotals,
+    statementColumns: statementColumns,
     statementDelta: statementDelta
   };
 });
