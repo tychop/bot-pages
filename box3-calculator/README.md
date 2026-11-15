@@ -36,5 +36,5 @@ Elke regeltest citeert in een comment de primaire URL, het artikel/paragraaf en 
 
 - Beleggen start op **aanhouden tot het einde** (latente heffing meegerekend).
 - Rendementstappen van **1%**, default **7%**.
-- Labels: **Huidig forfait/tegenbewijs** vs **Voorstel werkelijk rendement**.
-- Overzicht toont eerst het **belastingverschil**, daarna eindvermogen.
+- Resultaat: één verticale bankafschrift-lijst (start → na groei → belasting − → eind), plus quitte-rendement voor forfait / tegenbewijs / voorstel.
+- Grafiek en jaar-tabel staan ingeklapt.

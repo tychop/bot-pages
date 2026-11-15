@@ -325,53 +325,94 @@
     return svg;
   }
 
+  function moneyCell(n) {
+    return euro0.format(Math.round(n));
+  }
+
+  function minusCell(n) {
+    var abs = Math.abs(Math.round(n));
+    return (n > 0.5 ? "− " : "") + euro0.format(abs);
+  }
+
+  function formatBreakEven(rate) {
+    if (rate == null || !isFinite(rate)) return "n.v.t.";
+    if (Math.abs(rate) < 5e-5) return "0%";
+    return pctLabel(rate) + " per jaar";
+  }
+
+  function statementRow(label, amountText, kind) {
+    return el("div", { class: "statement-row" + (kind ? " " + kind : "") }, [
+      el("span", { class: "statement-label", text: label }),
+      el("span", { class: "statement-amount", text: amountText })
+    ]);
+  }
+
   function render() {
     var input = currentInput();
     var sim = Box3.simulate(input, rules.params);
-    var netH = sim.totals.huidig.end - (input.debt || 0);
-    var netN = sim.totals.nieuw.end - (input.debt || 0);
+    var s = Box3Model.statementTotals(sim, input.debt || 0);
     var box = document.getElementById("results");
     box.replaceChildren();
-    box.append(el("p", { class: "when", text: "Na " + input.years + (input.years === 1 ? " jaar" : " jaar") }));
-    var grid = el("div", { class: "overview" });
-    ["", "Huidig forfait/tegenbewijs", "Voorstel werkelijk rendement"].forEach(function (name, index) {
-      grid.append(el("div", { class: index ? "h" : "", text: name }));
-    });
-    function row(label, a, b) {
-      grid.append(el("div", { class: "lab", text: label }));
-      grid.append(el("b", { class: "old", text: euro0.format(Math.round(a)) }));
-      grid.append(el("b", { class: "new", text: euro0.format(Math.round(b)) }));
-    }
-    row("Belasting", sim.totals.huidig.tax, sim.totals.nieuw.tax);
-    row("Eindvermogen", netH, netN);
-    box.append(grid);
-    var taxGap = sim.totals.nieuw.tax - sim.totals.huidig.tax;
-    var taxDelta = Math.abs(taxGap) < 1
-      ? "De totale belasting is vrijwel gelijk."
-      : taxGap > 0
-        ? "Het voorstel kost " + euro0.format(Math.round(taxGap)) + " meer belasting."
-        : "Het huidige stelsel kost " + euro0.format(Math.round(-taxGap)) + " meer belasting.";
-    box.append(el("p", { class: "delta", text: taxDelta }));
-    var gap = netH - netN;
-    var delta = Math.abs(gap) < 1 ? "Het eindvermogen is vrijwel gelijk." : gap > 0 ? "Het voorstel laat " + euro0.format(Math.round(gap)) + " minder over." : "Het voorstel laat " + euro0.format(Math.round(-gap)) + " meer over.";
-    box.append(el("p", { class: "delta", text: delta }));
+    box.append(el("p", {
+      class: "when",
+      text: "Na " + input.years + (input.years === 1 ? " jaar" : " jaar") + " in totaal"
+    }));
+
+    var list = el("div", { class: "statement", role: "list" });
+    list.append(statementRow("Startvermogen", moneyCell(s.start), "asset"));
+    list.append(statementRow("Vermogen na rente/winst", moneyCell(s.afterReturn), "asset"));
+    list.append(statementRow("Belasting box 3 huidig stelsel", minusCell(s.taxHuidig), "minus"));
+    list.append(statementRow("Belasting box 3 voorstel (toekomstig)", minusCell(s.taxNieuw), "minus"));
+    list.append(statementRow("Totaal vermogen na huidige belasting", moneyCell(s.endHuidig), "total"));
+    list.append(statementRow("Totaal vermogen na toekomstige belasting", moneyCell(s.endNieuw), "total"));
+
+    var be = Box3.breakEvenRates(input, rules.params);
+    list.append(statementRow(
+      "Benodigd rendement om quitte te spelen — huidig forfait (zonder tegenbewijs)",
+      formatBreakEven(be.forfait),
+      "breakeven"
+    ));
+    list.append(statementRow(
+      "Benodigd rendement om quitte te spelen — huidig met tegenbewijs",
+      formatBreakEven(be.huidig),
+      "breakeven"
+    ));
+    list.append(statementRow(
+      "Benodigd rendement om quitte te spelen — voorstel",
+      formatBreakEven(be.nieuw),
+      "breakeven"
+    ));
+    box.append(list);
+
+    box.append(el("p", {
+      class: "delta",
+      text: Box3Model.statementDelta(s.taxHuidig, s.taxNieuw, function (n) { return euro0.format(n); })
+    }));
+
+    renderChartFold(sim);
+    renderTable(sim, input);
+  }
+
+  function renderChartFold(sim) {
+    var host = document.getElementById("chart-body");
+    if (!host) return;
+    host.replaceChildren();
     var colors = dark()
       ? { huidig: "#8fd9d1", nieuw: "#fdba74" }
       : { huidig: "#0b6e66", nieuw: "#9a3412" };
-    box.append(el("div", { class: "legend" }, [
-      el("span", {}, [el("i", { class: "swatch", style: "background:" + colors.huidig }), "Huidig forfait/tegenbewijs"]),
-      el("span", {}, [el("i", { class: "swatch", style: "background:" + colors.nieuw }), "Voorstel werkelijk rendement"])
+    host.append(el("div", { class: "legend" }, [
+      el("span", {}, [el("i", { class: "swatch", style: "background:" + colors.huidig }), "Na huidige belasting"]),
+      el("span", {}, [el("i", { class: "swatch", style: "background:" + colors.nieuw }), "Na toekomstige belasting"])
     ]));
     var points = { huidig: [sim.start], nieuw: [sim.start] };
     sim.rows.forEach(function (rowItem) {
       points.huidig.push(rowItem.huidig.end);
       points.nieuw.push(rowItem.nieuw.end);
     });
-    box.append(chart([
-      { name: "Huidig forfait/tegenbewijs", color: colors.huidig, points: points.huidig },
-      { name: "Voorstel werkelijk rendement", color: colors.nieuw, points: points.nieuw }
+    host.append(chart([
+      { name: "Na huidige belasting", color: colors.huidig, points: points.huidig },
+      { name: "Na toekomstige belasting", color: colors.nieuw, points: points.nieuw }
     ]));
-    renderTable(sim, input);
   }
 
   function renderTable(sim, input) {
@@ -379,14 +420,33 @@
     host.replaceChildren();
     var table = el("table");
     var head = el("tr");
-    ["Jaar", "Belasting huidig", "Belasting voorstel", "Eind huidig", "Eind voorstel"].forEach(function (name) {
+    [
+      "Jaar",
+      "Startvermogen",
+      "Na rente/winst",
+      "Belasting huidig",
+      "Belasting voorstel",
+      "Na huidige belasting",
+      "Na toekomstige belasting"
+    ].forEach(function (name) {
       head.append(el("th", { scope: "col", text: name }));
     });
     table.append(el("thead", {}, [head]));
     var body = el("tbody");
+    var debt = input.debt || 0;
     sim.rows.forEach(function (row) {
       var tr = el("tr");
-      [String(row.year), euro0.format(Math.round(row.huidig.tax)), euro0.format(Math.round(row.nieuw.tax)), euro0.format(Math.round(row.huidig.end)), euro0.format(Math.round(row.nieuw.end))].forEach(function (cell, index) {
+      var afterGrowth = row.zonder.end - debt;
+      var cells = [
+        String(row.year),
+        moneyCell(row.zonder.opening),
+        moneyCell(afterGrowth),
+        minusCell(row.huidig.tax),
+        minusCell(row.nieuw.tax),
+        moneyCell(row.huidig.end - debt),
+        moneyCell(row.nieuw.end - debt)
+      ];
+      cells.forEach(function (cell, index) {
         tr.append(el(index ? "td" : "th", index ? { text: cell } : { scope: "row", text: cell }));
       });
       body.append(tr);
@@ -399,7 +459,7 @@
     if (sim.effective.huidig != null) bits.push("Effectief huidig " + pctLabel(sim.effective.huidig) + ".");
     if (sim.effective.nieuw != null) bits.push("Effectief voorstel " + pctLabel(sim.effective.nieuw) + ".");
     if (sim.totals.nieuw.lossCarry > 1) bits.push("Open verlies voor later: " + euro0.format(Math.round(sim.totals.nieuw.lossCarry)) + ". Geen teruggave.");
-    if (input.debt > 0) bits.push("Eindvermogen hierboven is het bezit. Netto min de schuld staat in het overzicht.");
+    if (input.debt > 0) bits.push("Bedragen zijn netto: bezit min de schuld.");
     if (bits.length) host.append(el("p", { class: "muted", text: bits.join(" ") }));
   }
 
@@ -441,6 +501,7 @@
         el("li", { text: "Tarief in het voorstel: " + pctLabel(p.rateLow) + " tot " + euro0.format(p.bracketLimit) + " resultaat in een jaar, daarna " + pctLabel(p.rateHigh) + "." }),
         el("li", { text: "Aandelen: koerswinst bij verkoop. Kies aanhouden om die winst tot het laatste jaar uit te stellen. Dividend telt elk jaar." }),
         el("li", { text: "Directe crypto: de koersmutatie telt elk jaar, ook zonder verkoop. De belasting gaat in dit model van het vermogen af." }),
+        el("li", { text: "Quitte-spelen: welk vast jaarlijks rendement (gelijkmatig, zonder nieuwe inleg, zonder inflatie) nodig is zodat het eindvermogen na box 3-belasting weer gelijk is aan het startvermogen. Drie cijfers: forfait zonder tegenbewijs; huidig met tegenbewijs; voorstel. Met tegenbewijs en in het voorstel is dat meestal 0%, omdat er bij nihil rendement geen (of geen hogere) heffing is; alleen het kale forfait vraagt een positief rendement om de forfaitaire heffing terug te verdienen. Bij aanhouden telt latente voorstelheffing in het laatste jaar mee." }),
         el("li", { text: "Geen kosten, geen vastgoed, geen indexatie. De inleg staat op 1 januari." })
       ])
     );
@@ -767,6 +828,7 @@
     }
 
     var folds = el("div", { class: "folds" });
+    folds.append(fold("chart-body", "Vermogensverloop"));
     folds.append(fold("year-body", "Jaar voor jaar"));
     folds.append(fold("check-body", "Controle op het rekenvoorbeeld"));
     folds.append(fold("notes-body", "Uitgangspunten"));

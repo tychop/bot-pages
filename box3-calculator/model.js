@@ -198,6 +198,26 @@
     };
   }
 
+  // Bank-style overview totals for the chosen horizon (shared by all tabs).
+  function statementTotals(sim, debt) {
+    var d = Math.max(0, debt || 0);
+    return {
+      start: sim.start,
+      afterReturn: sim.totals.zonder.end - d,
+      taxHuidig: sim.totals.huidig.tax,
+      taxNieuw: sim.totals.nieuw.tax,
+      endHuidig: sim.totals.huidig.end - d,
+      endNieuw: sim.totals.nieuw.end - d
+    };
+  }
+
+  function statementDelta(taxHuidig, taxNieuw, formatEuro) {
+    var gap = taxNieuw - taxHuidig;
+    if (Math.abs(gap) < 1) return "De totale belasting is vrijwel gelijk.";
+    if (gap > 0) return "Het voorstel kost " + formatEuro(Math.round(gap)) + " meer belasting.";
+    return "Het huidige stelsel kost " + formatEuro(Math.round(-gap)) + " meer belasting.";
+  }
+
   return {
     WEALTH: WEALTH,
     INLEG: INLEG,
@@ -214,6 +234,8 @@
     crypto: crypto,
     mix: mix,
     asNumber: asNumber,
-    pickRate: pickRate
+    pickRate: pickRate,
+    statementTotals: statementTotals,
+    statementDelta: statementDelta
   };
 });
