@@ -8913,6 +8913,69 @@
         {
           "file": null,
           "hotlink": true,
+          "caption": "Starship stacked for Flight 11 — final Pad 1 config launch planned",
+          "role": "stack",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1977437926041825737",
+          "directUrl": "https://pbs.twimg.com/media/G3FE-c_WoAAm7NK.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Starship stacked for flight",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1977437926041825737"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Another stack view ahead of Flight 11",
+          "role": "stack",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1977437926041825737",
+          "directUrl": "https://pbs.twimg.com/media/G3FFBO_XwAEhVze.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Starship stacked for flight",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1977437926041825737"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Starship and Super Heavy on the pad for Flight 11",
+          "role": "preflight",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1977733703804612931",
+          "directUrl": "https://pbs.twimg.com/media/G3JSO5QXMAEfVhk.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: On the pad for Flight 11",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1977733703804612931"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
           "caption": "Liftoff on Flight 11 (SpaceX photo; post: \"Launch and ascent of Starship's eleventh flight test\")",
           "role": "liftoff",
           "credit": "© SpaceX",
@@ -8926,6 +8989,48 @@
           "sources": [
             {
               "title": "@SpaceX post on X",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1978172905717453205"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Launch and ascent of Flight 11",
+          "role": "ascent",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1978172905717453205",
+          "directUrl": "https://pbs.twimg.com/media/G3PhoSlW8AE1UvL.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Launch and ascent of Flight 11",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1978172905717453205"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Flight 11 climbing out",
+          "role": "ascent",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1978172905717453205",
+          "directUrl": "https://pbs.twimg.com/media/G3PhspuWYAAdb2S.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Launch and ascent of Flight 11",
               "site": "X (@SpaceX)",
               "href": "https://x.com/SpaceX/status/1978172905717453205"
             }
@@ -8951,6 +9056,173 @@
               "href": "https://x.com/SpaceX/status/1979261047182635135"
             }
           ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Starship ascends to space (Flight 11)",
+          "role": "coast",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1979271919850618919",
+          "directUrl": "https://pbs.twimg.com/media/G3fI8ZvWwAASGDh.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Starship ascends to space",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1979271919850618919"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Starship reenters on Flight 11",
+          "role": "reentry",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1979285350167253058",
+          "directUrl": "https://pbs.twimg.com/media/G3fVb8VWgAABTw1.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Starship reenters on Flight 11",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1979285350167253058"
+            }
+          ]
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "Liftoff of Starship!",
+          "role": "liftoff video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1977878290489643190",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/1977878189088309248/img/vTduZ64mhY4cRWI5.jpg",
+          "poster": "https://pbs.twimg.com/amplify_video_thumb/1977878189088309248/img/vTduZ64mhY4cRWI5.jpg",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Liftoff of Starship!",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1977878290489643190"
+            }
+          ],
+          "videoUrl": "https://video.twimg.com/amplify_video/1977878189088309248/vid/avc1/1280x720/PrCY_7-6Qley8Sen.mp4",
+          "durationSec": 43
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "Starlink simulator deploy (Flight 11)",
+          "role": "deploy video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1977884820484272524",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/1977883989139652608/img/oRNE6slgHQ62CbkH.jpg",
+          "poster": "https://pbs.twimg.com/amplify_video_thumb/1977883989139652608/img/oRNE6slgHQ62CbkH.jpg",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Starlink simulator deploy (Flight 11)",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1977884820484272524"
+            }
+          ],
+          "videoUrl": "https://video.twimg.com/amplify_video/1977883989139652608/vid/avc1/1280x720/SzuzEhszugDkNaBu.mp4",
+          "durationSec": 56
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "Banking maneuver mimicking Starbase catch approach",
+          "role": "reentry video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1977893017421070424",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/1977892912445931520/img/oCywC0xJmJKEkFMD.jpg",
+          "poster": "https://pbs.twimg.com/amplify_video_thumb/1977892912445931520/img/oCywC0xJmJKEkFMD.jpg",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Banking maneuver mimicking Starbase catch approach",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1977893017421070424"
+            }
+          ],
+          "videoUrl": "https://video.twimg.com/amplify_video/1977892912445931520/vid/avc1/1280x720/Xcgqn_xxIwio3Kec.mp4",
+          "durationSec": 30
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "Splashdown confirmed — Flight 11",
+          "role": "splashdown video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1977895039318864296",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/1977894881613037569/img/1aYFKT6RlXUpexWH.jpg",
+          "poster": "https://pbs.twimg.com/amplify_video_thumb/1977894881613037569/img/1aYFKT6RlXUpexWH.jpg",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Splashdown confirmed — Flight 11",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1977895039318864296"
+            }
+          ],
+          "videoUrl": "https://video.twimg.com/amplify_video/1977894881613037569/vid/avc1/1280x720/Q_ziKX0yydK1ecuY.mp4",
+          "durationSec": 72
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "Landing flip, burn, and soft splashdown",
+          "role": "landing video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1978905901344907726",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/1978905473941204992/img/qg9dS_gfPa5HIC-M.jpg",
+          "poster": "https://pbs.twimg.com/amplify_video_thumb/1978905473941204992/img/qg9dS_gfPa5HIC-M.jpg",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Landing flip, burn, and soft splashdown",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1978905901344907726"
+            }
+          ],
+          "videoUrl": "https://video.twimg.com/amplify_video/1978905473941204992/vid/avc1/1280x720/IDk92i1Odlcu_yhI.mp4",
+          "durationSec": 23
         }
       ],
       "imagesNote": null,
@@ -9628,6 +9900,69 @@
         {
           "file": null,
           "hotlink": true,
+          "caption": "Starship stacked on the pad at Starbase for Flight 12",
+          "role": "stack",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2056946171386462451",
+          "directUrl": "https://pbs.twimg.com/media/HIu9jjiWYAA8VWV.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Starship stacked on the pad",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2056946171386462451"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Another stack view ahead of Flight 12",
+          "role": "stack",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2056946171386462451",
+          "directUrl": "https://pbs.twimg.com/media/HIu9mKcWAAAmrHQ.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Starship stacked on the pad",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2056946171386462451"
+            }
+          ]
+        },
+        {
+          "file": "flight-images/F12-1.webp",
+          "caption": "Pre-flight hardware: Ship 39, the first Version 3 ship and the Flight 12 upper stage, being outfitted in Megabay 2 on 12 January 2026",
+          "role": "pre-flight hardware",
+          "credit": "Petty Officer 1st Class Alexander Kubitza",
+          "license": "Public domain",
+          "licenseUrl": null,
+          "pageUrl": "https://commons.wikimedia.org/wiki/File:Ship_39_in_Megabay_2,_Boca_Chica_TX.jpg",
+          "directUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Ship_39_in_Megabay_2%2C_Boca_Chica_TX.jpg/1920px-Ship_39_in_Megabay_2%2C_Boca_Chica_TX.jpg",
+          "width": 1600,
+          "height": 1067,
+          "bytes": 184332,
+          "sources": [
+            {
+              "title": "Image page",
+              "site": "Wikimedia Commons",
+              "href": "https://commons.wikimedia.org/wiki/File:Ship_39_in_Megabay_2,_Boca_Chica_TX.jpg"
+            }
+          ],
+          "hotlink": false
+        },
+        {
+          "file": null,
+          "hotlink": true,
           "caption": "Liftoff on Flight 12 (SpaceX photo; post: \"Starship V3 takes flight for the first time →\")",
           "role": "liftoff",
           "credit": "© SpaceX",
@@ -9641,6 +9976,27 @@
           "sources": [
             {
               "title": "@SpaceX post on X",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2058005949466501590"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Starship V3 takes flight — another ascent view",
+          "role": "ascent",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2058005949466501590",
+          "directUrl": "https://pbs.twimg.com/media/HI-A7kbXEAEZyU_.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Starship V3 takes flight",
               "site": "X (@SpaceX)",
               "href": "https://x.com/SpaceX/status/2058005949466501590"
             }
@@ -9668,25 +10024,192 @@
           ]
         },
         {
-          "file": "flight-images/F12-1.webp",
-          "caption": "Pre-flight hardware: Ship 39, the first Version 3 ship and the Flight 12 upper stage, being outfitted in Megabay 2 on 12 January 2026",
-          "role": "pre-flight hardware",
-          "credit": "Petty Officer 1st Class Alexander Kubitza",
-          "license": "Public domain",
+          "file": null,
+          "hotlink": true,
+          "caption": "Onboard views from Starship and Super Heavy V3 (Flight 12)",
+          "role": "coast",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
           "licenseUrl": null,
-          "pageUrl": "https://commons.wikimedia.org/wiki/File:Ship_39_in_Megabay_2,_Boca_Chica_TX.jpg",
-          "directUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Ship_39_in_Megabay_2%2C_Boca_Chica_TX.jpg/1920px-Ship_39_in_Megabay_2%2C_Boca_Chica_TX.jpg",
-          "width": 1600,
-          "height": 1067,
-          "bytes": 184332,
+          "pageUrl": "https://x.com/SpaceX/status/2058304809044750467",
+          "directUrl": "https://pbs.twimg.com/media/HJCQUnFXcAEl6_F.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
           "sources": [
             {
-              "title": "Image page",
-              "site": "Wikimedia Commons",
-              "href": "https://commons.wikimedia.org/wiki/File:Ship_39_in_Megabay_2,_Boca_Chica_TX.jpg"
+              "title": "@SpaceX: Onboard views from V3",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2058304809044750467"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Starship V3 landing burn over the Indian Ocean",
+          "role": "landing",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2058305552866775118",
+          "directUrl": "https://pbs.twimg.com/media/HJCR7ReXQAARTDt.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: V3 landing burn",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2058305552866775118"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Flight 12 landing burn still",
+          "role": "landing",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2058305552866775118",
+          "directUrl": "https://pbs.twimg.com/media/HJCR8klXcAEF7ia.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: V3 landing burn",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2058305552866775118"
+            }
+          ]
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "Liftoff of Starship!",
+          "role": "liftoff video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2057952539417461045",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/2057952449164464128/img/dsVbVmdVZURvbCx3.jpg",
+          "poster": "https://pbs.twimg.com/amplify_video_thumb/2057952449164464128/img/dsVbVmdVZURvbCx3.jpg",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Liftoff of Starship!",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2057952539417461045"
             }
           ],
-          "hotlink": false
+          "videoUrl": "https://video.twimg.com/amplify_video/2057952449164464128/vid/avc1/1280x720/0DLicyfCa-P9Jhlc.mp4",
+          "durationSec": 51
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "Views of Starship in space from a Starlink satellite",
+          "role": "coast video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2057962516282577014",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/2057962439090507776/img/v4pH51pYmhKKkcKm.jpg",
+          "poster": "https://pbs.twimg.com/amplify_video_thumb/2057962439090507776/img/v4pH51pYmhKKkcKm.jpg",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Views of Starship in space from a Starlink satellite",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2057962516282577014"
+            }
+          ],
+          "videoUrl": "https://video.twimg.com/amplify_video/2057962439090507776/vid/avc1/1280x720/QaaUYzn0McWaO5so.mp4",
+          "durationSec": 59
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "Splashdown confirmed — Flight 12",
+          "role": "splashdown video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2057969484879528267",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/2057969270215127040/img/91VSXaqtr0kIhWRg.jpg",
+          "poster": "https://pbs.twimg.com/amplify_video_thumb/2057969270215127040/img/91VSXaqtr0kIhWRg.jpg",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Splashdown confirmed — Flight 12",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2057969484879528267"
+            }
+          ],
+          "videoUrl": "https://video.twimg.com/amplify_video/2057969270215127040/vid/avc1/1280x720/4tDUYePcmNxpXPoI.mp4",
+          "durationSec": 90
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "Starship flip and landing burn (Flight 12)",
+          "role": "landing video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2058939047662244226",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/2058938568236494848/img/tjpEwK-uRdvdPf4E.jpg",
+          "poster": "https://pbs.twimg.com/amplify_video_thumb/2058938568236494848/img/tjpEwK-uRdvdPf4E.jpg",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Starship flip and landing burn (Flight 12)",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2058939047662244226"
+            }
+          ],
+          "videoUrl": "https://video.twimg.com/amplify_video/2058938568236494848/vid/avc1/1280x720/5WPu490SrdieoO2_.mp4",
+          "durationSec": 23
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "Liftoff of Starship on its twelfth flight test",
+          "role": "liftoff video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2058313378171392061",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/2058312593752649729/img/trfIvK5NJz4PK1vZ.jpg",
+          "poster": "https://pbs.twimg.com/amplify_video_thumb/2058312593752649729/img/trfIvK5NJz4PK1vZ.jpg",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Liftoff of Starship on its twelfth flight test",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2058313378171392061"
+            }
+          ],
+          "videoUrl": "https://video.twimg.com/amplify_video/2058312593752649729/vid/avc1/1280x720/Sw9XE2fxRgkq1haX.mp4",
+          "durationSec": 28
         }
       ],
       "imagesNote": "Ship 39 pre-flight hardware photo kept last.",
@@ -10454,6 +10977,48 @@
         {
           "file": null,
           "hotlink": true,
+          "caption": "Sunset at Starbase with a fully stacked Starship (Flight 13)",
+          "role": "stack",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2080302195677728803",
+          "directUrl": "https://pbs.twimg.com/media/HN63sZMXYAAKuWo.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Sunset with fully stacked Starship",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2080302195677728803"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Another sunset stack view ahead of Flight 13",
+          "role": "preflight",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2080302195677728803",
+          "directUrl": "https://pbs.twimg.com/media/HN63sZPWgAACXWW.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Sunset with fully stacked Starship",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2080302195677728803"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
           "caption": "Liftoff on Flight 13 (SpaceX photo; post: \"Liftoff of Starship on its thirteenth flight test\")",
           "role": "liftoff",
           "credit": "© SpaceX",
@@ -10467,6 +11032,48 @@
           "sources": [
             {
               "title": "@SpaceX post on X",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2081088918703759549"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Liftoff of Flight 13 — another view",
+          "role": "liftoff",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2081088918703759549",
+          "directUrl": "https://pbs.twimg.com/media/HOGCLuoXsAAFotc.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Liftoff of Flight 13",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2081088918703759549"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Flight 13 ascent",
+          "role": "ascent",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2081088918703759549",
+          "directUrl": "https://pbs.twimg.com/media/HOGCOZBXsAAucHm.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Liftoff of Flight 13",
               "site": "X (@SpaceX)",
               "href": "https://x.com/SpaceX/status/2081088918703759549"
             }
@@ -10492,6 +11099,194 @@
               "href": "https://x.com/SpaceX/status/2081894924291654060"
             }
           ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Starship in space on Flight 13 — another view",
+          "role": "coast",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2081894924291654060",
+          "directUrl": "https://pbs.twimg.com/media/HORgFJZXIAAg48O.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Starship in space on Flight 13",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2081894924291654060"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Landing burn and splashdown still (Flight 13)",
+          "role": "landing",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2082186658162626898",
+          "directUrl": "https://pbs.twimg.com/media/HOVpVmlWAAADPDg.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Landing burn and splashdown",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2082186658162626898"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Ship still afloat after Flight 13 splashdown",
+          "role": "recovery",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2082186802912207064",
+          "directUrl": "https://pbs.twimg.com/media/HOVp0DUW4AArI4k.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Recovery team imagery",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2082186802912207064"
+            }
+          ]
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "Liftoff of Starship!",
+          "role": "liftoff video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2080788166584267075",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/2080788059776319488/img/noxLrnb24oXgLYYt.jpg",
+          "poster": "https://pbs.twimg.com/amplify_video_thumb/2080788059776319488/img/noxLrnb24oXgLYYt.jpg",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Liftoff of Starship!",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2080788166584267075"
+            }
+          ],
+          "videoUrl": "https://video.twimg.com/amplify_video/2080788059776319488/vid/avc1/1280x720/5gBS46C48KJHL12L.mp4",
+          "durationSec": 45
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "View from above as Starship launched from Pad 2",
+          "role": "liftoff video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2081091013729218562",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/2081090484118679552/img/dlgUrhPmwJX0lRTG.jpg",
+          "poster": "https://pbs.twimg.com/amplify_video_thumb/2081090484118679552/img/dlgUrhPmwJX0lRTG.jpg",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: View from above as Starship launched from Pad 2",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2081091013729218562"
+            }
+          ],
+          "videoUrl": "https://video.twimg.com/amplify_video/2081090484118679552/vid/avc1/1280x720/o8wl1UbmZXIdPitP.mp4",
+          "durationSec": 19
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "Splashdown confirmed — Flight 13",
+          "role": "splashdown video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2080804682918764619",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/2080804533995786240/img/GXqDYTtBg0l7Ze50.jpg",
+          "poster": "https://pbs.twimg.com/amplify_video_thumb/2080804533995786240/img/GXqDYTtBg0l7Ze50.jpg",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Splashdown confirmed — Flight 13",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2080804682918764619"
+            }
+          ],
+          "videoUrl": "https://video.twimg.com/amplify_video/2080804533995786240/vid/avc1/1280x720/NLcpHUsKtzGenmw6.mp4",
+          "durationSec": 81
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "Landing burn and splashdown of Starship on Flight 13",
+          "role": "landing video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2082186658162626898",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/2082186248727281665/img/G47myPlA6IMWLf5r.jpg",
+          "poster": "https://pbs.twimg.com/amplify_video_thumb/2082186248727281665/img/G47myPlA6IMWLf5r.jpg",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Landing burn and splashdown of Starship on Flight 13",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2082186658162626898"
+            }
+          ],
+          "videoUrl": "https://video.twimg.com/amplify_video/2082186248727281665/vid/avc1/1280x720/5445OstHTBrnPBhh.mp4",
+          "durationSec": 50
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "Starship in space from a Starlink V3 satellite (Flight 13)",
+          "role": "coast video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2083296921230164378",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/2083296564378816514/img/t1lsHFBVV6wTx6uQ.jpg",
+          "poster": "https://pbs.twimg.com/amplify_video_thumb/2083296564378816514/img/t1lsHFBVV6wTx6uQ.jpg",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Starship in space from a Starlink V3 satellite (Flight 13)",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2083296921230164378"
+            }
+          ],
+          "videoUrl": "https://video.twimg.com/amplify_video/2083296564378816514/vid/avc1/1280x720/KEOm8FBfLe9-O-UI.mp4",
+          "durationSec": 64
         }
       ],
       "imagesNote": null,
@@ -11217,6 +12012,69 @@
         {
           "file": null,
           "hotlink": true,
+          "caption": "Sunrise at Starbase — full stack testing ahead of Flight 14",
+          "role": "stack",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2102899767403851945",
+          "directUrl": "https://pbs.twimg.com/media/HS7_82eXsAAa-Hx.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Sunrise at Starbase ahead of Flight 14",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2102899767403851945"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Flight 14 stack silhouetted at sunrise",
+          "role": "preflight",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2102899767403851945",
+          "directUrl": "https://pbs.twimg.com/media/HS8AAMSWwAEg-aG.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Sunrise at Starbase ahead of Flight 14",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2102899767403851945"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Flight 14 — first morning launch from Starbase since Flight 5",
+          "role": "liftoff",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2105352066424017118",
+          "directUrl": "https://pbs.twimg.com/media/HTeWwfKXsAAyXlz.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Flight 14 morning launch",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2105352066424017118"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
           "caption": "Liftoff on Flight 14 (SpaceX photo; post: \"Liftoff of Starship's first orbital flight\")",
           "role": "liftoff",
           "credit": "© SpaceX",
@@ -11234,6 +12092,236 @@
               "href": "https://x.com/SpaceX/status/2104654998034690329"
             }
           ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Liftoff of Starship’s first orbital flight — another view",
+          "role": "liftoff",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2104654998034690329",
+          "directUrl": "https://pbs.twimg.com/media/HTU8grvWQAAXhSn.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Liftoff of first orbital flight",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2104654998034690329"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Flight 14 ascent plume",
+          "role": "ascent",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2104654998034690329",
+          "directUrl": "https://pbs.twimg.com/media/HTU8h5-XIAIE5s1.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Liftoff of first orbital flight",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2104654998034690329"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Super Heavy liftoff powered by 33 Raptor 3 engines",
+          "role": "liftoff",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2105061657558786148",
+          "directUrl": "https://pbs.twimg.com/media/HTauGVFXkAAF_G8.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Super Heavy liftoff",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2105061657558786148"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Starship’s first orbital flight delivered 26 Starlink V3 satellites",
+          "role": "orbit",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2106090316747207047",
+          "directUrl": "https://pbs.twimg.com/media/HTpVwjtWsAA5pW5.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: First orbital flight delivered Starlink V3",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2106090316747207047"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Orbital Flight 14 — another mission still",
+          "role": "orbit",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2106090316747207047",
+          "directUrl": "https://pbs.twimg.com/media/HTpVy8JXsAAM92t.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: First orbital flight delivered Starlink V3",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2106090316747207047"
+            }
+          ]
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "Hot-staging on Starship Flight 14",
+          "role": "hot staging video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2106089751837278533",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/2106089426765877248/img/EEVkW3bzYWn348Kv.jpg",
+          "poster": "https://pbs.twimg.com/amplify_video_thumb/2106089426765877248/img/EEVkW3bzYWn348Kv.jpg",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Hot-staging on Starship Flight 14",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2106089751837278533"
+            }
+          ],
+          "videoUrl": "https://video.twimg.com/amplify_video/2106089426765877248/vid/avc1/1280x720/a941Ng9SfYuZwGIb.mp4",
+          "durationSec": 16
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "Starship achieved orbit and delivered Starlink V3",
+          "role": "orbit video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2104653511883628569",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/2104652096767160320/img/ele_ocmu2m_CXk_r.jpg",
+          "poster": "https://pbs.twimg.com/amplify_video_thumb/2104652096767160320/img/ele_ocmu2m_CXk_r.jpg",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Starship achieved orbit and delivered Starlink V3",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2104653511883628569"
+            }
+          ],
+          "videoUrl": "https://video.twimg.com/amplify_video/2104652096767160320/vid/avc1/1280x720/4qRpxA0gOWlUdo27.mp4",
+          "durationSec": 40
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "Starlink V3 satellite deploy (Flight 14)",
+          "role": "deploy video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2104563035486499043",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/2104562900929056768/img/2tQF9u4hxT6WDVnJ.jpg",
+          "poster": "https://pbs.twimg.com/amplify_video_thumb/2104562900929056768/img/2tQF9u4hxT6WDVnJ.jpg",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Starlink V3 satellite deploy (Flight 14)",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2104563035486499043"
+            }
+          ],
+          "videoUrl": "https://video.twimg.com/amplify_video/2104562900929056768/vid/avc1/1280x720/9c_krNC6N2vS-ba5.mp4",
+          "durationSec": 67
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "Starship reentering the atmosphere (Flight 14)",
+          "role": "reentry video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2104595426099728734",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/2104595317513478144/img/aTM4rV9ya38hVPl4.jpg",
+          "poster": "https://pbs.twimg.com/amplify_video_thumb/2104595317513478144/img/aTM4rV9ya38hVPl4.jpg",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Starship reentering the atmosphere (Flight 14)",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2104595426099728734"
+            }
+          ],
+          "videoUrl": "https://video.twimg.com/amplify_video/2104595317513478144/vid/avc1/1280x720/olPKlkAWg_RCZNQK.mp4",
+          "durationSec": 59
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "Splashdown confirmed — first orbital flight of Starship",
+          "role": "splashdown video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/2104601695711904180",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/2104601502752948225/img/7cfSMzaXjc1N2Jpo.jpg",
+          "poster": "https://pbs.twimg.com/amplify_video_thumb/2104601502752948225/img/7cfSMzaXjc1N2Jpo.jpg",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Splashdown confirmed — first orbital flight of Starship",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/2104601695711904180"
+            }
+          ],
+          "videoUrl": "https://video.twimg.com/amplify_video/2104601502752948225/vid/avc1/1280x720/05zlFQdm9eV_4n3P.mp4",
+          "durationSec": 88
         }
       ],
       "imagesNote": null,
@@ -14529,8 +15617,43 @@
       "kind": "image",
       "flight": 11,
       "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/1977437926041825737",
+      "directUrl": "https://pbs.twimg.com/media/G3FE-c_WoAAm7NK.jpg?name=large"
+    },
+    {
+      "kind": "image",
+      "flight": 11,
+      "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/1977437926041825737",
+      "directUrl": "https://pbs.twimg.com/media/G3FFBO_XwAEhVze.jpg?name=large"
+    },
+    {
+      "kind": "image",
+      "flight": 11,
+      "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/1977733703804612931",
+      "directUrl": "https://pbs.twimg.com/media/G3JSO5QXMAEfVhk.jpg?name=large"
+    },
+    {
+      "kind": "image",
+      "flight": 11,
+      "file": null,
       "pageUrl": "https://x.com/SpaceX/status/1978172905717453205",
       "directUrl": "https://pbs.twimg.com/media/G3PhrgYW0AAvaOl.jpg?name=large"
+    },
+    {
+      "kind": "image",
+      "flight": 11,
+      "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/1978172905717453205",
+      "directUrl": "https://pbs.twimg.com/media/G3PhoSlW8AE1UvL.jpg?name=large"
+    },
+    {
+      "kind": "image",
+      "flight": 11,
+      "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/1978172905717453205",
+      "directUrl": "https://pbs.twimg.com/media/G3PhspuWYAAdb2S.jpg?name=large"
     },
     {
       "kind": "image",
@@ -14543,13 +15666,71 @@
       "kind": "image",
       "flight": 11,
       "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/1979271919850618919",
+      "directUrl": "https://pbs.twimg.com/media/G3fI8ZvWwAASGDh.jpg?name=large"
+    },
+    {
+      "kind": "image",
+      "flight": 11,
+      "file": null,
       "pageUrl": "https://x.com/SpaceX/status/1979285350167253058",
       "directUrl": "https://pbs.twimg.com/media/G3fVb8VWgAABTw1.jpg?name=large"
     },
     {
       "kind": "video",
       "flight": 11,
-      "url": "https://x.com/SpaceX/status/1972796063359647955"
+      "url": "https://x.com/SpaceX/status/1977878290489643190",
+      "poster": "https://pbs.twimg.com/amplify_video_thumb/1977878189088309248/img/vTduZ64mhY4cRWI5.jpg",
+      "videoUrl": "https://video.twimg.com/amplify_video/1977878189088309248/vid/avc1/1280x720/PrCY_7-6Qley8Sen.mp4"
+    },
+    {
+      "kind": "video",
+      "flight": 11,
+      "url": "https://x.com/SpaceX/status/1977884820484272524",
+      "poster": "https://pbs.twimg.com/amplify_video_thumb/1977883989139652608/img/oRNE6slgHQ62CbkH.jpg",
+      "videoUrl": "https://video.twimg.com/amplify_video/1977883989139652608/vid/avc1/1280x720/SzuzEhszugDkNaBu.mp4"
+    },
+    {
+      "kind": "video",
+      "flight": 11,
+      "url": "https://x.com/SpaceX/status/1977893017421070424",
+      "poster": "https://pbs.twimg.com/amplify_video_thumb/1977892912445931520/img/oCywC0xJmJKEkFMD.jpg",
+      "videoUrl": "https://video.twimg.com/amplify_video/1977892912445931520/vid/avc1/1280x720/Xcgqn_xxIwio3Kec.mp4"
+    },
+    {
+      "kind": "video",
+      "flight": 11,
+      "url": "https://x.com/SpaceX/status/1977895039318864296",
+      "poster": "https://pbs.twimg.com/amplify_video_thumb/1977894881613037569/img/1aYFKT6RlXUpexWH.jpg",
+      "videoUrl": "https://video.twimg.com/amplify_video/1977894881613037569/vid/avc1/1280x720/Q_ziKX0yydK1ecuY.mp4"
+    },
+    {
+      "kind": "video",
+      "flight": 11,
+      "url": "https://x.com/SpaceX/status/1978905901344907726",
+      "poster": "https://pbs.twimg.com/amplify_video_thumb/1978905473941204992/img/qg9dS_gfPa5HIC-M.jpg",
+      "videoUrl": "https://video.twimg.com/amplify_video/1978905473941204992/vid/avc1/1280x720/IDk92i1Odlcu_yhI.mp4"
+    },
+    {
+      "kind": "image",
+      "flight": 12,
+      "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/2056946171386462451",
+      "directUrl": "https://pbs.twimg.com/media/HIu9jjiWYAA8VWV.jpg?name=large"
+    },
+    {
+      "kind": "image",
+      "flight": 12,
+      "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/2056946171386462451",
+      "directUrl": "https://pbs.twimg.com/media/HIu9mKcWAAAmrHQ.jpg?name=large"
+    },
+    {
+      "kind": "image",
+      "flight": 12,
+      "file": "flight-images/F12-1.webp",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File:Ship_39_in_Megabay_2,_Boca_Chica_TX.jpg",
+      "directUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Ship_39_in_Megabay_2%2C_Boca_Chica_TX.jpg/1920px-Ship_39_in_Megabay_2%2C_Boca_Chica_TX.jpg"
     },
     {
       "kind": "image",
@@ -14562,6 +15743,13 @@
       "kind": "image",
       "flight": 12,
       "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/2058005949466501590",
+      "directUrl": "https://pbs.twimg.com/media/HI-A7kbXEAEZyU_.jpg?name=large"
+    },
+    {
+      "kind": "image",
+      "flight": 12,
+      "file": null,
       "pageUrl": "https://x.com/SpaceX/status/2058304809044750467",
       "directUrl": "https://pbs.twimg.com/media/HJCQXuOWkAAF3rY.jpg?name=large"
     },
@@ -14569,20 +15757,71 @@
       "kind": "image",
       "flight": 12,
       "file": null,
-      "pageUrl": "https://x.com/SpaceX/status/2058305552866775118",
-      "directUrl": "https://pbs.twimg.com/media/HJCR-PuXMAAGnt1.jpg?name=large"
+      "pageUrl": "https://x.com/SpaceX/status/2058304809044750467",
+      "directUrl": "https://pbs.twimg.com/media/HJCQUnFXcAEl6_F.jpg?name=large"
     },
     {
       "kind": "image",
       "flight": 12,
-      "file": "flight-images/F12-1.webp",
-      "pageUrl": "https://commons.wikimedia.org/wiki/File:Ship_39_in_Megabay_2,_Boca_Chica_TX.jpg",
-      "directUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Ship_39_in_Megabay_2%2C_Boca_Chica_TX.jpg/1920px-Ship_39_in_Megabay_2%2C_Boca_Chica_TX.jpg"
+      "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/2058305552866775118",
+      "directUrl": "https://pbs.twimg.com/media/HJCR7ReXQAARTDt.jpg?name=large"
+    },
+    {
+      "kind": "image",
+      "flight": 12,
+      "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/2058305552866775118",
+      "directUrl": "https://pbs.twimg.com/media/HJCR8klXcAEF7ia.jpg?name=large"
     },
     {
       "kind": "video",
       "flight": 12,
-      "url": "https://x.com/SpaceX/status/2057843268038082848"
+      "url": "https://x.com/SpaceX/status/2057952539417461045",
+      "poster": "https://pbs.twimg.com/amplify_video_thumb/2057952449164464128/img/dsVbVmdVZURvbCx3.jpg",
+      "videoUrl": "https://video.twimg.com/amplify_video/2057952449164464128/vid/avc1/1280x720/0DLicyfCa-P9Jhlc.mp4"
+    },
+    {
+      "kind": "video",
+      "flight": 12,
+      "url": "https://x.com/SpaceX/status/2057962516282577014",
+      "poster": "https://pbs.twimg.com/amplify_video_thumb/2057962439090507776/img/v4pH51pYmhKKkcKm.jpg",
+      "videoUrl": "https://video.twimg.com/amplify_video/2057962439090507776/vid/avc1/1280x720/QaaUYzn0McWaO5so.mp4"
+    },
+    {
+      "kind": "video",
+      "flight": 12,
+      "url": "https://x.com/SpaceX/status/2057969484879528267",
+      "poster": "https://pbs.twimg.com/amplify_video_thumb/2057969270215127040/img/91VSXaqtr0kIhWRg.jpg",
+      "videoUrl": "https://video.twimg.com/amplify_video/2057969270215127040/vid/avc1/1280x720/4tDUYePcmNxpXPoI.mp4"
+    },
+    {
+      "kind": "video",
+      "flight": 12,
+      "url": "https://x.com/SpaceX/status/2058939047662244226",
+      "poster": "https://pbs.twimg.com/amplify_video_thumb/2058938568236494848/img/tjpEwK-uRdvdPf4E.jpg",
+      "videoUrl": "https://video.twimg.com/amplify_video/2058938568236494848/vid/avc1/1280x720/5WPu490SrdieoO2_.mp4"
+    },
+    {
+      "kind": "video",
+      "flight": 12,
+      "url": "https://x.com/SpaceX/status/2058313378171392061",
+      "poster": "https://pbs.twimg.com/amplify_video_thumb/2058312593752649729/img/trfIvK5NJz4PK1vZ.jpg",
+      "videoUrl": "https://video.twimg.com/amplify_video/2058312593752649729/vid/avc1/1280x720/Sw9XE2fxRgkq1haX.mp4"
+    },
+    {
+      "kind": "image",
+      "flight": 13,
+      "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/2080302195677728803",
+      "directUrl": "https://pbs.twimg.com/media/HN63sZMXYAAKuWo.jpg?name=large"
+    },
+    {
+      "kind": "image",
+      "flight": 13,
+      "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/2080302195677728803",
+      "directUrl": "https://pbs.twimg.com/media/HN63sZPWgAACXWW.jpg?name=large"
     },
     {
       "kind": "image",
@@ -14595,8 +15834,29 @@
       "kind": "image",
       "flight": 13,
       "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/2081088918703759549",
+      "directUrl": "https://pbs.twimg.com/media/HOGCLuoXsAAFotc.jpg?name=large"
+    },
+    {
+      "kind": "image",
+      "flight": 13,
+      "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/2081088918703759549",
+      "directUrl": "https://pbs.twimg.com/media/HOGCOZBXsAAucHm.jpg?name=large"
+    },
+    {
+      "kind": "image",
+      "flight": 13,
+      "file": null,
       "pageUrl": "https://x.com/SpaceX/status/2081894924291654060",
       "directUrl": "https://pbs.twimg.com/media/HORgGTxWAAEBoSV.jpg?name=large"
+    },
+    {
+      "kind": "image",
+      "flight": 13,
+      "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/2081894924291654060",
+      "directUrl": "https://pbs.twimg.com/media/HORgFJZXIAAg48O.jpg?name=large"
     },
     {
       "kind": "image",
@@ -14606,9 +15866,67 @@
       "directUrl": "https://pbs.twimg.com/media/HOVpVmlWAAADPDg.jpg?name=large"
     },
     {
+      "kind": "image",
+      "flight": 13,
+      "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/2082186802912207064",
+      "directUrl": "https://pbs.twimg.com/media/HOVp0DUW4AArI4k.jpg?name=large"
+    },
+    {
       "kind": "video",
       "flight": 13,
-      "url": "https://x.com/i/broadcasts/1AJEmmYdMDnJL"
+      "url": "https://x.com/SpaceX/status/2080788166584267075",
+      "poster": "https://pbs.twimg.com/amplify_video_thumb/2080788059776319488/img/noxLrnb24oXgLYYt.jpg",
+      "videoUrl": "https://video.twimg.com/amplify_video/2080788059776319488/vid/avc1/1280x720/5gBS46C48KJHL12L.mp4"
+    },
+    {
+      "kind": "video",
+      "flight": 13,
+      "url": "https://x.com/SpaceX/status/2081091013729218562",
+      "poster": "https://pbs.twimg.com/amplify_video_thumb/2081090484118679552/img/dlgUrhPmwJX0lRTG.jpg",
+      "videoUrl": "https://video.twimg.com/amplify_video/2081090484118679552/vid/avc1/1280x720/o8wl1UbmZXIdPitP.mp4"
+    },
+    {
+      "kind": "video",
+      "flight": 13,
+      "url": "https://x.com/SpaceX/status/2080804682918764619",
+      "poster": "https://pbs.twimg.com/amplify_video_thumb/2080804533995786240/img/GXqDYTtBg0l7Ze50.jpg",
+      "videoUrl": "https://video.twimg.com/amplify_video/2080804533995786240/vid/avc1/1280x720/NLcpHUsKtzGenmw6.mp4"
+    },
+    {
+      "kind": "video",
+      "flight": 13,
+      "url": "https://x.com/SpaceX/status/2082186658162626898",
+      "poster": "https://pbs.twimg.com/amplify_video_thumb/2082186248727281665/img/G47myPlA6IMWLf5r.jpg",
+      "videoUrl": "https://video.twimg.com/amplify_video/2082186248727281665/vid/avc1/1280x720/5445OstHTBrnPBhh.mp4"
+    },
+    {
+      "kind": "video",
+      "flight": 13,
+      "url": "https://x.com/SpaceX/status/2083296921230164378",
+      "poster": "https://pbs.twimg.com/amplify_video_thumb/2083296564378816514/img/t1lsHFBVV6wTx6uQ.jpg",
+      "videoUrl": "https://video.twimg.com/amplify_video/2083296564378816514/vid/avc1/1280x720/KEOm8FBfLe9-O-UI.mp4"
+    },
+    {
+      "kind": "image",
+      "flight": 14,
+      "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/2102899767403851945",
+      "directUrl": "https://pbs.twimg.com/media/HS7_82eXsAAa-Hx.jpg?name=large"
+    },
+    {
+      "kind": "image",
+      "flight": 14,
+      "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/2102899767403851945",
+      "directUrl": "https://pbs.twimg.com/media/HS8AAMSWwAEg-aG.jpg?name=large"
+    },
+    {
+      "kind": "image",
+      "flight": 14,
+      "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/2105352066424017118",
+      "directUrl": "https://pbs.twimg.com/media/HTeWwfKXsAAyXlz.jpg?name=large"
     },
     {
       "kind": "image",
@@ -14621,13 +15939,71 @@
       "kind": "image",
       "flight": 14,
       "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/2104654998034690329",
+      "directUrl": "https://pbs.twimg.com/media/HTU8grvWQAAXhSn.jpg?name=large"
+    },
+    {
+      "kind": "image",
+      "flight": 14,
+      "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/2104654998034690329",
+      "directUrl": "https://pbs.twimg.com/media/HTU8h5-XIAIE5s1.jpg?name=large"
+    },
+    {
+      "kind": "image",
+      "flight": 14,
+      "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/2105061657558786148",
+      "directUrl": "https://pbs.twimg.com/media/HTauGVFXkAAF_G8.jpg?name=large"
+    },
+    {
+      "kind": "image",
+      "flight": 14,
+      "file": null,
       "pageUrl": "https://x.com/SpaceX/status/2106090316747207047",
-      "directUrl": "https://pbs.twimg.com/media/HTpV0zqXYAAxnFD.jpg?name=large"
+      "directUrl": "https://pbs.twimg.com/media/HTpVwjtWsAA5pW5.jpg?name=large"
+    },
+    {
+      "kind": "image",
+      "flight": 14,
+      "file": null,
+      "pageUrl": "https://x.com/SpaceX/status/2106090316747207047",
+      "directUrl": "https://pbs.twimg.com/media/HTpVy8JXsAAM92t.jpg?name=large"
     },
     {
       "kind": "video",
       "flight": 14,
-      "url": "https://x.com/i/broadcasts/1qxvvenMPMQxB"
+      "url": "https://x.com/SpaceX/status/2106089751837278533",
+      "poster": "https://pbs.twimg.com/amplify_video_thumb/2106089426765877248/img/EEVkW3bzYWn348Kv.jpg",
+      "videoUrl": "https://video.twimg.com/amplify_video/2106089426765877248/vid/avc1/1280x720/a941Ng9SfYuZwGIb.mp4"
+    },
+    {
+      "kind": "video",
+      "flight": 14,
+      "url": "https://x.com/SpaceX/status/2104653511883628569",
+      "poster": "https://pbs.twimg.com/amplify_video_thumb/2104652096767160320/img/ele_ocmu2m_CXk_r.jpg",
+      "videoUrl": "https://video.twimg.com/amplify_video/2104652096767160320/vid/avc1/1280x720/4qRpxA0gOWlUdo27.mp4"
+    },
+    {
+      "kind": "video",
+      "flight": 14,
+      "url": "https://x.com/SpaceX/status/2104563035486499043",
+      "poster": "https://pbs.twimg.com/amplify_video_thumb/2104562900929056768/img/2tQF9u4hxT6WDVnJ.jpg",
+      "videoUrl": "https://video.twimg.com/amplify_video/2104562900929056768/vid/avc1/1280x720/9c_krNC6N2vS-ba5.mp4"
+    },
+    {
+      "kind": "video",
+      "flight": 14,
+      "url": "https://x.com/SpaceX/status/2104595426099728734",
+      "poster": "https://pbs.twimg.com/amplify_video_thumb/2104595317513478144/img/aTM4rV9ya38hVPl4.jpg",
+      "videoUrl": "https://video.twimg.com/amplify_video/2104595317513478144/vid/avc1/1280x720/olPKlkAWg_RCZNQK.mp4"
+    },
+    {
+      "kind": "video",
+      "flight": 14,
+      "url": "https://x.com/SpaceX/status/2104601695711904180",
+      "poster": "https://pbs.twimg.com/amplify_video_thumb/2104601502752948225/img/7cfSMzaXjc1N2Jpo.jpg",
+      "videoUrl": "https://video.twimg.com/amplify_video/2104601502752948225/vid/avc1/1280x720/05zlFQdm9eV_4n3P.mp4"
     },
     {
       "kind": "image",
@@ -14685,7 +16061,7 @@
     }
   ],
   "dedupe": {
-    "byUrl": "no duplicates",
-    "perceptual": "pHash/dHash compared across all new images and the 6 existing site images; minimum pHash distance 16 (F11-1 vs site v3, checked visually: different photos); duplicates are typically <10. Crops of chosen images (e.g. Ship 39 in Megabay 2 (cropped)) and same-content GOES GIF/WebM variants excluded. Crops/variants of site images (Starship-IFT2-ascent crops, Mechzilla catch crop, IFT-5 ignition, IFT-11 liftoff, iss072e220161) excluded."
+    "byUrl": "no duplicates across flight galleries, heroes, and later[] after Flights 11–14 enrichment",
+    "perceptual": "URL-level uniqueness enforced site-wide for Flights 1–16 galleries/heroes. Flights 11–14 media sourced from dated @SpaceX posts (and existing F12 Wikimedia Ship 39 still); posters/videoUrls claimed once. Prior note: pHash/dHash vs site images; crops/variants excluded."
   }
 }
