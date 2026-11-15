@@ -2063,7 +2063,7 @@
               "href": "https://www.spacex.com/launches/starship-flight-4"
             }
           ],
-          "sortSec": 3966
+          "sortSec": 3956
         }
       ],
       "telemetry": {
@@ -3745,7 +3745,7 @@
               "href": "https://en.wikipedia.org/wiki/Starship_flight_test_7"
             }
           ],
-          "sortSec": 355
+          "sortSec": 415
         },
         {
           "event": "Super Heavy is transonic",
@@ -5694,7 +5694,7 @@
               "href": "https://en.wikipedia.org/wiki/Starship_flight_test_10"
             }
           ],
-          "sortSec": 411
+          "sortSec": 400
         },
         {
           "event": "Starship engine cutoff (SECO)",
@@ -7212,7 +7212,7 @@
               "href": "https://en.wikipedia.org/wiki/Starship_flight_test_12"
             }
           ],
-          "sortSec": 553
+          "sortSec": 491
         },
         {
           "event": "Payload deploy demo start",
@@ -7449,7 +7449,7 @@
               "href": "https://en.wikipedia.org/wiki/Starship_flight_test_12"
             }
           ],
-          "sortSec": 3988
+          "sortSec": 3926
         }
       ],
       "telemetry": {
@@ -8712,7 +8712,7 @@
               "href": "https://www.nasaspaceflight.com/2026/09/starship-14-orbit-flight-15/"
             }
           ],
-          "sortSec": 515
+          "sortSec": 491
         },
         {
           "event": "Starship orbital insertion burn start",
@@ -8773,7 +8773,7 @@
               "href": "https://www.nasaspaceflight.com/2026/09/starship-14-orbit-flight-15/"
             }
           ],
-          "sortSec": 2105
+          "sortSec": 2047
         },
         {
           "event": "Payload deploy complete",
@@ -8795,7 +8795,7 @@
               "href": "https://www.nasaspaceflight.com/2026/09/starship-14-orbit-flight-15/"
             }
           ],
-          "sortSec": 3862
+          "sortSec": 3879
         },
         {
           "event": "Decision to take first contingency landing zone (north of Hawaii)",
@@ -8834,7 +8834,7 @@
               "href": "https://www.nasaspaceflight.com/2026/09/starship-14-orbit-flight-15/"
             }
           ],
-          "sortSec": 7938
+          "sortSec": 31957
         },
         {
           "event": "Deorbit burn shutdown",
@@ -8851,7 +8851,7 @@
               "href": "https://www.spacex.com/launches/starship-flight-14"
             }
           ],
-          "sortSec": 7949
+          "sortSec": 31968
         },
         {
           "event": "Starship entry",
@@ -8873,7 +8873,7 @@
               "href": "https://www.nasaspaceflight.com/2026/09/starship-14-orbit-flight-15/"
             }
           ],
-          "sortSec": 10020
+          "sortSec": 34136
         },
         {
           "event": "Starship is transonic",
@@ -8890,7 +8890,7 @@
               "href": "https://www.spacex.com/launches/starship-flight-14"
             }
           ],
-          "sortSec": 11129
+          "sortSec": 35249
         },
         {
           "event": "Starship is subsonic",
@@ -8907,7 +8907,7 @@
               "href": "https://www.spacex.com/launches/starship-flight-14"
             }
           ],
-          "sortSec": 11167
+          "sortSec": 35287
         },
         {
           "event": "Landing burn start",
@@ -8924,7 +8924,7 @@
               "href": "https://www.spacex.com/launches/starship-flight-14"
             }
           ],
-          "sortSec": 11291
+          "sortSec": 35411
         },
         {
           "event": "Landing flip",
@@ -8941,7 +8941,7 @@
               "href": "https://www.spacex.com/launches/starship-flight-14"
             }
           ],
-          "sortSec": 11293
+          "sortSec": 35413
         },
         {
           "event": "Landing burn 3 to 2 engines",
@@ -8958,7 +8958,7 @@
               "href": "https://www.spacex.com/launches/starship-flight-14"
             }
           ],
-          "sortSec": 11301
+          "sortSec": 35421
         },
         {
           "event": "Landing burn 2 to 1 engine",
@@ -8975,7 +8975,7 @@
               "href": "https://www.spacex.com/launches/starship-flight-14"
             }
           ],
-          "sortSec": 11308
+          "sortSec": 35428
         },
         {
           "event": "An exciting landing!",
@@ -8997,7 +8997,7 @@
               "href": "https://www.nasaspaceflight.com/2026/09/starship-14-orbit-flight-15/"
             }
           ],
-          "sortSec": 11310
+          "sortSec": 35430
         }
       ],
       "telemetry": {
@@ -10235,10 +10235,10 @@
           "event": "Super Heavy landing burn start",
           "planned": "T+06:10",
           "plannedSec": 370,
-          "actual": "about 14 Nov 22:19 CET",
+          "actual": null,
           "actualSec": 81120,
           "status": "ok",
-          "note": "Landing burn and tower approach ahead of first ship catch.",
+          "note": "Landing burn begun during divert to offshore Gulf splashdown after catch was waved off.",
           "sources": [
             {
               "title": "Space.com: Flight 15 launch; booster catch aborted",
@@ -10269,13 +10269,13 @@
           "sortSec": 370
         },
         {
-          "event": "Super Heavy landing burn shutdown and catch",
+          "event": "Super Heavy landing burn shutdown / FTS",
           "planned": "T+06:35",
           "plannedSec": 395,
-          "actual": "about 14 Nov 22:19 CET",
+          "actual": null,
           "actualSec": 81120,
-          "status": "ok",
-          "note": "First-ever ship tower catch by Mechazilla at Starbase OLP-2 (time estimated from webcast clock).",
+          "status": "anomaly",
+          "note": "Catch aborted after early boostback (low-fuel-mass alarm). Offshore Gulf splashdown; FTS triggered after landing-burn shutdown (explosive).",
           "sources": [
             {
               "title": "@SpaceX: Mechazilla catches Starship!",
@@ -10520,7 +10520,7 @@
           "sortSec": 26135
         },
         {
-          "event": "Status update",
+          "event": "Webcast resumes",
           "planned": null,
           "plannedSec": null,
           "actual": "14 Nov 16:23 CET",
@@ -10537,7 +10537,7 @@
           "sortSec": 59760
         },
         {
-          "event": "Status update",
+          "event": "Looking good for RTLS catch",
           "planned": null,
           "plannedSec": null,
           "actual": "14 Nov 16:41 CET",
@@ -10554,7 +10554,7 @@
           "sortSec": 60840
         },
         {
-          "event": "Status update",
+          "event": "Booster splashdown site secured",
           "planned": null,
           "plannedSec": null,
           "actual": "14 Nov 16:42 CET",
@@ -10571,7 +10571,7 @@
           "sortSec": 60900
         },
         {
-          "event": "Status update",
+          "event": "Go for return to launch site",
           "planned": null,
           "plannedSec": null,
           "actual": "14 Nov 20:18 CET",
@@ -10625,7 +10625,7 @@
           "sortSec": 74515
         },
         {
-          "event": "Status update",
+          "event": "Preparing for deorbit and catch",
           "planned": null,
           "plannedSec": null,
           "actual": "14 Nov 21:16 CET",
@@ -10648,7 +10648,7 @@
           "actual": "T+~21:38",
           "actualSec": 77880,
           "status": "ok",
-          "note": "Good deorbit burn (SpaceX, 21:25 CET). Starship on course to reenter ahead of planned catch.",
+          "note": "Good deorbit burn (SpaceX, 21:25 CET). Starship on course to reenter ahead of planned catch. Good deorbit burn. Starship is on course to reenter Earth's atmosphere ahead of a planned catch at Starbase in ~1 hour. Confirmed 14 Nov 21:25 CET.",
           "sources": [
             {
               "title": "@SpaceX: Good deorbit burn",
@@ -10721,67 +10721,13 @@
           "sortSec": 77767
         },
         {
-          "event": "Deorbit burn: good",
-          "planned": "T+21:35:57",
-          "plannedSec": 77757,
-          "actual": "14 Nov 21:25 CET",
-          "actualSec": 77880,
-          "status": "ok",
-          "note": "Good deorbit burn. Starship is on course to reenter Earth's atmosphere ahead of a planned catch at Starbase in ~1 hour.",
-          "sources": [
-            {
-              "title": "@SpaceX (14 Nov 21:25 CET)",
-              "site": "X (@SpaceX)",
-              "href": "https://x.com/SpaceX/status/2121701161040556374"
-            }
-          ],
-          "sortSec": 77880
-        },
-        {
-          "event": "Starship entry",
-          "planned": "T+22:10:46",
-          "plannedSec": 79846,
-          "actual": null,
-          "actualSec": null,
-          "status": "planned",
-          "note": null,
-          "sources": [
-            {
-              "title": "Space.com: Flight 15 launch; booster catch aborted",
-              "site": "Space.com",
-              "href": "https://www.space.com/space-exploration/launches-spacecraft/spacex-starship-flight-15-chopsticks-double-catch-super-heavy-ship"
-            },
-            {
-              "title": "Universe Today: SpaceX passes up booster catch",
-              "site": "Universe Today",
-              "href": "https://www.universetoday.com/articles/spacex-launches-starship-but-passes-up-booster-catch-for-safetys-sake"
-            },
-            {
-              "title": "NBC News: 15th Starship flight; booster recovery aborted",
-              "site": "NBC News",
-              "href": "https://www.nbcnews.com/science/space/spacex-launches-15th-starship-flight-aborts-booster-recovery-maneuver-rcna609274"
-            },
-            {
-              "title": "Scientific American: Can SpaceX catch its Starship?",
-              "site": "Scientific American",
-              "href": "https://www.scientificamerican.com/article/can-spacex-catch-its-starship/"
-            },
-            {
-              "title": "SpaceX: Starship Flight 15 mission page / recap",
-              "site": "SpaceX",
-              "href": "https://www.spacex.com/launches/starship-flight-15"
-            }
-          ],
-          "sortSec": 79846
-        },
-        {
           "event": "Reentry begun",
           "planned": "T+22:13:09",
           "plannedSec": 79989,
           "actual": "14 Nov 21:58 CET",
           "actualSec": 79860,
           "status": "ok",
-          "note": "Starship is reentering Earth's atmosphere.",
+          "note": "Starship is reentering Earth's atmosphere. Planned entry T+22:10:46.",
           "sources": [
             {
               "title": "@SpaceX (14 Nov 21:58 CET)",
@@ -10789,7 +10735,7 @@
               "href": "https://x.com/SpaceX/status/2121709368945385477"
             }
           ],
-          "sortSec": 79860
+          "sortSec": 79989
         },
         {
           "event": "Starship is transonic",
@@ -10891,23 +10837,6 @@
             }
           ],
           "sortSec": 81060
-        },
-        {
-          "event": "Ship caught by the tower",
-          "planned": "T+22:32:34",
-          "plannedSec": 81154,
-          "actual": "about 14 Nov 22:19 CET",
-          "actualSec": 81120,
-          "status": "ok",
-          "note": "First-ever ship catch by Mechazilla at Starbase (time estimated from the webcast clock).",
-          "sources": [
-            {
-              "title": "@SpaceX: Mechazilla catches Starship!",
-              "site": "X (@SpaceX)",
-              "href": "https://x.com/SpaceX/status/2121715216597827756"
-            }
-          ],
-          "sortSec": 81120
         },
         {
           "event": "Landing burn start",
@@ -11073,13 +11002,13 @@
           "sortSec": 81153
         },
         {
-          "event": "Starship landing burn shutdown and catch",
+          "event": "Mechazilla catches Starship",
           "planned": "T+22:32:34",
           "plannedSec": 81154,
-          "actual": "about 14 Nov 22:19 CET",
+          "actual": "14 Nov 22:21 CET",
           "actualSec": 81120,
           "status": "ok",
-          "note": "First-ever ship tower catch by Mechazilla at Starbase OLP-2 (time estimated from webcast clock).",
+          "note": "First-ever ship catch by Mechazilla at Starbase OLP-2 (time estimated from the webcast clock). Mechazilla catches Starship! Congratulations to the entire SpaceX team on this incredible achievement!",
           "sources": [
             {
               "title": "@SpaceX: Mechazilla catches Starship!",
@@ -11113,23 +11042,6 @@
             }
           ],
           "sortSec": 81154
-        },
-        {
-          "event": "Mechazilla catches Starship",
-          "planned": null,
-          "plannedSec": null,
-          "actual": "14 Nov 22:21 CET",
-          "actualSec": 81240,
-          "status": "ok",
-          "note": "Mechazilla catches Starship! Congratulations to the entire SpaceX team on this incredible achievement!",
-          "sources": [
-            {
-              "title": "@SpaceX (14 Nov 22:21 CET)",
-              "site": "X (@SpaceX)",
-              "href": "https://x.com/SpaceX/status/2121715216597827756"
-            }
-          ],
-          "sortSec": 81240
         }
       ],
       "telemetry": {

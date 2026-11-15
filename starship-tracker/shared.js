@@ -461,11 +461,60 @@
     return '<section class="block gallery"><h4>' + heading + '</h4><div class="gallery-grid">' + figures + "</div></section>";
   }
 
+  /** Parse SpaceX-style T+ clocks to seconds. Two-part times are mm:ss; three-part are h:mm:ss. */
+  function parseTPlusSec(value) {
+    if (value == null || value === "") return null;
+    var t = String(value).trim();
+    var m3 = /^T\+\s*~?\s*(\d+):(\d+):(\d+)\s*$/i.exec(t);
+    if (m3) return Number(m3[1]) * 3600 + Number(m3[2]) * 60 + Number(m3[3]);
+    var m2 = /^T\+\s*~?\s*(\d+):(\d+)\s*$/i.exec(t);
+    if (m2) return Number(m2[1]) * 60 + Number(m2[2]);
+    return null;
+  }
+
+  /**
+   * Shorten local/actual timeline clocks so the Actual column never needs to
+   * overflow into the event title. Keeps T+ clocks; strips redundant TZ;
+   * turns "about 14 Nov 22:19 CET" into "~22:19".
+   */
+  function formatTimelineActual(value) {
+    if (value == null || value === "") return "—";
+    var t = String(value).trim();
+    if (!t) return "—";
+    if (/^T\+/i.test(t)) return t;
+    if (/^(Passed|Go|Not taken|Nominal)/i.test(t)) return t;
+    var about = /^(about|approx\.?|~)\s+/i.test(t);
+    var cleaned = t.replace(/^(about|approx\.?|~)\s+/i, "");
+    var m = /^(?:(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun)\s+)?(\d{1,2}\s+[A-Za-z]{3})(?:\s+\d{4})?,?\s+(\d{1,2}:\d{2})(?:\s*[A-Z]{2,5})?\s*$/i.exec(cleaned);
+    if (m) {
+      if (about) return "~" + m[2];
+      return m[1] + " " + m[2];
+    }
+    var timeOnly = /^(\d{1,2}:\d{2})(?:\s*[A-Z]{2,5})?\s*$/i.exec(cleaned);
+    if (timeOnly) return (about ? "~" : "") + timeOnly[1];
+    if (about) return "~" + cleaned;
+    return t;
+  }
+
+  function timelineSortKey(row) {
+    if (!row) return 1e12;
+    if (row.sortSec === -1) return -1;
+    var fromPlanned = parseTPlusSec(row.planned);
+    if (fromPlanned != null) return fromPlanned;
+    if (row.sortSec != null && isFinite(row.sortSec)) return row.sortSec;
+    var fromActual = parseTPlusSec(row.actual);
+    if (fromActual != null) return fromActual;
+    return 1e12;
+  }
+
   function timelineHtml(detail) {
     var items = detail && detail.timeline;
     if (!items || !items.length) return "";
     var sorted = items.slice().sort(function (a, b) {
-      return (a.sortSec == null ? 1e12 : a.sortSec) - (b.sortSec == null ? 1e12 : b.sortSec);
+      var ka = timelineSortKey(a);
+      var kb = timelineSortKey(b);
+      if (ka !== kb) return ka - kb;
+      return String(a.event || "").localeCompare(String(b.event || ""));
     });
     var expandable = 0;
     var rows = sorted.map(function (row, index) {
@@ -477,9 +526,10 @@
       var cls = "tl-row" + (isAnomaly ? " is-anomaly" : "") + (hasDetail ? " has-detail" : " is-static");
       var statusCls = "tl-status" + (isAnomaly ? " is-anomaly" : status === "ok" ? " is-ok" : "");
       var statusText = isAnomaly ? "anomaly" : status === "ok" ? "ok" : status || "—";
+      var actualLabel = formatTimelineActual(row.actual);
       var summaryInner =
         '<span class="tl-planned">' + esc(row.planned || "—") + "</span>" +
-        '<span class="tl-actual">' + esc(row.actual || "—") + "</span>" +
+        '<span class="tl-actual" title="' + esc(row.actual || "") + '">' + esc(actualLabel) + "</span>" +
         '<span class="tl-title">' + esc(row.event || "Event") + "</span>" +
         '<span class="' + statusCls + '">' + esc(statusText) + "</span>";
       var summary;
