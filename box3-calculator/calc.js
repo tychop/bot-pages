@@ -305,6 +305,9 @@
     var tax = 0;
     if (kind === "zonder") {
       tax = 0;
+    } else if (kind === "forfait") {
+      tax = f.tax;
+      used = "forfait";
     } else if (kind === "huidig") {
       tax = huidigTax;
     } else {
@@ -360,7 +363,7 @@
   }
 
   function simulate(input, params) {
-    var kinds = ["zonder", "huidig", "nieuw", "nieuwZonderVerlies"];
+    var kinds = ["zonder", "forfait", "huidig", "nieuw", "nieuwZonderVerlies"];
     var states = {};
     kinds.forEach(function (kind) {
       states[kind] = {
@@ -374,6 +377,7 @@
     var rows = [];
     var totals = {
       zonder: emptyTotals(),
+      forfait: emptyTotals(),
       huidig: emptyTotals(),
       nieuw: emptyTotals(),
       nieuwZonderVerlies: emptyTotals()
@@ -425,6 +429,88 @@
     };
   }
 
+  function flatList(years, rate) {
+    var out = [];
+    for (var i = 0; i < years; i++) out.push(rate);
+    return out;
+  }
+
+  // Flat "gelijkmatig" path at `rate`, inleg forced to 0. Keeps mode, dividend, debt, partner.
+  function withFlatRate(input, rate) {
+    var years = Math.max(1, input.years | 0);
+    var flat = flatList(years, rate);
+    var zero = flatList(years, 0);
+    var bankStart = input.bank && input.bank.start ? input.bank.start : 0;
+    var investStart = input.invest && input.invest.start ? input.invest.start : 0;
+    var cryptoStart = input.crypto && input.crypto.start ? input.crypto.start : 0;
+    return {
+      partner: !!input.partner,
+      years: years,
+      debt: input.debt || 0,
+      debtRate: input.debtRate || 0,
+      bank: { start: bankStart, inleg: 0, rates: bankStart > 0 ? flat : zero },
+      invest: {
+        start: investStart,
+        inleg: 0,
+        price: investStart > 0 ? flat : zero,
+        dividend: (input.invest && input.invest.dividend) || 0,
+        mode: (input.invest && input.invest.mode) || "hold"
+      },
+      crypto: { start: cryptoStart, inleg: 0, price: cryptoStart > 0 ? flat : zero }
+    };
+  }
+
+  function endWealth(sim, kind, debt) {
+    return sim.totals[kind].end - (debt || 0);
+  }
+
+  // Annual rate so end wealth after tax equals start wealth (net of debt).
+  // kind: "forfait" | "huidig" | "nieuw"
+  function breakEvenRateFor(input, params, kind) {
+    var base = withFlatRate(input, 0);
+    var start = (base.bank.start || 0) + (base.invest.start || 0) + (base.crypto.start || 0);
+    var debt = base.debt || 0;
+    var target = start - debt;
+    if (start <= 0) return null;
+
+    function endAt(rate) {
+      return endWealth(simulate(withFlatRate(base, rate), params), kind, debt);
+    }
+
+    var atZero = endAt(0);
+    if (Math.abs(atZero - target) <= 1) return 0;
+
+    var lo;
+    var hi;
+    var i;
+    if (atZero > target) {
+      // Need a lower (possibly negative) rate to shrink end wealth to start.
+      hi = 0;
+      lo = -0.99;
+      if (endAt(lo) > target) return lo;
+    } else {
+      lo = 0;
+      hi = 0.05;
+      for (i = 0; i < 20 && endAt(hi) < target; i++) hi *= 2;
+      if (endAt(hi) < target) return null;
+    }
+    for (i = 0; i < 56; i++) {
+      var mid = (lo + hi) / 2;
+      if (endAt(mid) >= target) hi = mid;
+      else lo = mid;
+    }
+    return (lo + hi) / 2;
+  }
+
+  function breakEvenRates(input, params) {
+    return {
+      forfait: breakEvenRateFor(input, params, "forfait"),
+      huidig: breakEvenRateFor(input, params, "huidig"),
+      nieuw: breakEvenRateFor(input, params, "nieuw")
+    };
+  }
+
+  // Cross-over rate where voorstel tax exceeds huidig tax (one-year invest helper).
   function breakEvenRate(start, params, partner) {
     var atZero = simulate(oneYearInvest(start, 0, partner), params);
     if (atZero.rows[0].huidig.forfaitTax <= 1e-8) {
@@ -501,6 +587,9 @@
     taxNew: taxNew,
     simulate: simulate,
     oneYearInvest: oneYearInvest,
+    withFlatRate: withFlatRate,
+    breakEvenRateFor: breakEvenRateFor,
+    breakEvenRates: breakEvenRates,
     breakEvenRate: breakEvenRate,
     articlePresets: articlePresets
   };
