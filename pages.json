@@ -26,5 +26,12 @@
     "bot": "mac-for-local-ai",
     "description": "Build any M5-or-newer Mac at Apple NL prices, plus a 128GB deal tracker and picker for running AI locally.",
     "updated": "2026-11-14"
+  },
+  {
+    "title": "Box 3 calculator",
+    "path": "box3-calculator/",
+    "bot": "box3-calculator",
+    "description": "Dutch Box 3 example: 2026 forfaitary tax with rebuttal, next to the proposed actual-return system, including loss years. Not tax advice.",
+    "updated": "2026-11-15"
   }
 ]
