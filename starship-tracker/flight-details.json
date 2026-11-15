@@ -7192,6 +7192,31 @@
           "type": "video",
           "hotlink": true,
           "file": null,
+          "caption": "Hot-staging — Super Heavy boosting back toward splashdown (Flight 9)",
+          "role": "hot staging video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1927510220835635706",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/1927510147615555584/img/k4OBbQB_koLdMmyx.jpg",
+          "poster": "https://pbs.twimg.com/amplify_video_thumb/1927510147615555584/img/k4OBbQB_koLdMmyx.jpg",
+          "videoUrl": "https://video.twimg.com/amplify_video/1927510147615555584/vid/avc1/1280x720/1HB3boSFE8hYd4ZM.mp4",
+          "durationSec": 34,
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Hot-staging on Flight 9",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1927510220835635706"
+            }
+          ]
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
           "caption": "Flight 9 — first flight-proven Super Heavy, ship back to space",
           "role": "ascent video",
           "credit": "© SpaceX",
