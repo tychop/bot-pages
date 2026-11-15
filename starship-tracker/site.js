@@ -7,7 +7,7 @@
   }
 
   var PAGE = document.body.getAttribute("data-page") || "home";
-  var ASSET_V = "20261115a";
+  var ASSET_V = "20261115b";
   var openNotesBtn = null;
   var notesHoverTimer = null;
 
@@ -277,50 +277,40 @@
     S.resetMediaClaims();
     var upcoming = S.upcomingFlight(data);
     var active = S.inProgressFlight(data);
-    var featured = upcoming || active;
     var last = S.lastFlownFlight(data);
-    var photo = S.SITE_PHOTOS[0];
-    S.claimMedia(photo.src);
+    var activeDetail = active ? S.detailOf(active) : null;
+    var liveActive = !!(activeDetail && activeDetail.live && activeDetail.live.active);
     var main = document.getElementById("main");
-    if (!featured) {
-      main.innerHTML =
-        '<section class="home-hero bare">' +
-        '<div class="wrap">' +
-        '<p class="eyebrow">Starship</p>' +
-        "<h1>No upcoming flight listed</h1>" +
-        '<p class="lede">Check the <a href="flights.html">flights list</a> for the latest flown missions.</p>' +
-        lastCard(last) +
-        "</div></section>";
+
+    // Live / in-progress: keep the existing featured-hero treatment.
+    if (liveActive) {
+      renderLiveHome(data, active, activeDetail, last);
       return;
     }
-    var isActive = !upcoming && !!active;
-    var detail = S.detailOf(featured);
+
+    // Between flights: last-flight hero + moments + next-up.
+    renderBetweenFlightsHome(data, last, upcoming);
+  }
+
+  function renderLiveHome(data, featured, detail, last) {
+    var photo = S.SITE_PHOTOS[0];
+    S.claimMedia(photo.src);
     var brief = data.next && Number(data.next.aboutFlight) === featured.n ? data.next : null;
-    var goals = isActive
-      ? (featured.achieved || featured.goals || []).slice(0, 3)
-      : (featured.goals || []).slice(0, 3);
+    var goals = (featured.achieved || featured.goals || []).slice(0, 3);
     var vehicles = (featured.boosterShort || featured.booster || "") + " / " + (featured.shipShort || featured.ship || "");
     var faa = (brief && brief.status) || featured.faa || "FAA status not published";
-    var tzLabel = /CEST/i.test(featured.dateLocal || "") ? "CEST (UTC+2)" : /CET/i.test(featured.dateLocal || "") ? "CET (UTC+1)" : "Netherlands time";
-    var eyebrow = isActive ? "In progress" : "Next launch";
-    var dateLine = isActive
-      ? '<p class="hero-date">Launched ' + S.esc(featured.dateLocal) + "</p>"
-      : '<p class="hero-date">' + S.esc(featured.dateLocal) + "</p>";
-    var tzLine = isActive
-      ? '<p class="hero-tz">' + S.esc((brief && brief.plan) || featured.shipOutcome || "Mission still in progress") + "</p>"
-      : '<p class="hero-tz">Liftoff time in ' + S.esc(tzLabel) + "</p>";
-    var lastBelow = (!isActive || (last && last.n !== featured.n)) ? lastCard(last) : "";
+    var lastBelow = (last && last.n !== featured.n) ? lastCard(last) : "";
+    var main = document.getElementById("main");
 
     main.innerHTML =
       '<section class="home-hero">' +
       S.heroPhotoHtml(photo) +
       '<div class="hero-shade"></div>' +
       '<div class="hero-copy wrap-hero">' +
-      '<p class="eyebrow">' + eyebrow + "</p>" +
+      '<p class="eyebrow">In progress</p>' +
       '<h1 class="hero-flight"><span>Flight</span> ' + S.esc(featured.n) + "</h1>" +
-      dateLine +
-      tzLine +
-      (isActive ? "" : '<div id="countdown" class="home-countdown" hidden></div>') +
+      '<p class="hero-date">Launched ' + S.esc(featured.dateLocal) + "</p>" +
+      '<p class="hero-tz">' + S.esc((brief && brief.plan) || featured.shipOutcome || "Mission still in progress") + "</p>" +
       '<p class="status-line">' + S.esc(faa) + "</p>" +
       '<p class="hero-vehicles">' + S.esc(vehicles) +
       (featured.version ? " · " + S.esc(featured.version) : "") +
@@ -337,8 +327,193 @@
       "</p>" +
       "</section>" +
       (lastBelow ? '<section class="home-below wrap">' + lastBelow + "</section>" : "");
+  }
 
-    if (!isActive) S.startCountdown(featured);
+  function homeHeadlineFor(flight) {
+    if (!flight) return "";
+    if (flight.homeHeadline) return flight.homeHeadline;
+    if (flight.firsts && flight.firsts.length) return flight.firsts[0];
+    return flight.shipOutcome || flight.summary || "";
+  }
+
+  function homeMomentsFor(flight, detail) {
+    if (flight && flight.homeMoments && flight.homeMoments.length) return flight.homeMoments.slice(0, 4);
+    var moments = [];
+    if (flight && flight.dateLocal) moments.push({ label: "Liftoff", time: flight.dateLocal });
+    var timeline = (detail && detail.timeline) || [];
+    function findEvent(re) {
+      for (var i = 0; i < timeline.length; i += 1) {
+        var ev = timeline[i];
+        if (re.test(ev.event || "") && (ev.actual || ev.planned)) {
+          return { label: ev.event, time: ev.actual || ev.planned };
+        }
+      }
+      return null;
+    }
+    var orbit = findEvent(/orbit|starlink|payload deploy/i);
+    if (orbit) moments.push(orbit);
+    else if (flight && flight.achieved) {
+      for (var a = 0; a < flight.achieved.length; a += 1) {
+        if (/starlink|orbit/i.test(flight.achieved[a])) {
+          moments.push({ label: "Orbit / payload", time: flight.achieved[a] });
+          break;
+        }
+      }
+    }
+    if (flight && flight.boosterOutcome) {
+      moments.push({ label: "Booster", time: flight.boosterOutcome });
+    }
+    var catchEv = findEvent(/ship caught|mechazilla|landing burn shutdown and catch/i);
+    if (catchEv) moments.push({ label: catchEv.label, time: catchEv.time });
+    else if (flight && flight.shipOutcome) {
+      moments.push({ label: "Ship", time: flight.shipOutcome });
+    }
+    return moments.slice(0, 4);
+  }
+
+  function lastFlightHeroMediaHtml(hero) {
+    if (!hero || !hero.url) return "";
+    S.claimFlightHero(hero);
+    if (hero.type === "video") {
+      var sources = (hero.sources && hero.sources.length)
+        ? hero.sources
+        : [{ src: hero.url, type: "video/mp4" }];
+      var sourceTags = sources.map(function (s) {
+        return '<source src="' + S.esc(s.src) + '"' +
+          (s.type ? ' type="' + S.esc(s.type) + '"' : "") +
+          (s.media ? ' media="' + S.esc(s.media) + '"' : "") +
+          ">";
+      }).join("");
+      return '<div class="home-hero-stage" aria-hidden="true">' +
+        '<video class="flight-hero-video home-hero-video" muted autoplay loop playsinline webkit-playsinline' +
+        ' preload="metadata" tabindex="-1" disablePictureInPicture disableRemotePlayback' +
+        (hero.poster ? ' poster="' + S.esc(hero.poster) + '"' : "") +
+        ">" + sourceTags + "</video></div>";
+    }
+    return '<div class="home-hero-stage" aria-hidden="true">' +
+      '<img class="home-hero-img" src="' + S.esc(hero.url) + '" alt="' + S.esc(hero.caption || "Last flight") +
+      '" loading="eager" decoding="async"></div>';
+  }
+
+  function lastFlightHeroCreditHtml(hero) {
+    if (!hero) return "";
+    var caption = hero.caption || "";
+    var credit = hero.credit || "© SpaceX";
+    var creditUrl = hero.creditUrl || hero.page || "";
+    return '<p class="hero-credit">' +
+      (caption ? S.esc(caption) + ". " : "") +
+      (creditUrl
+        ? '<a href="' + S.esc(creditUrl) + '" target="_blank" rel="noopener noreferrer">' + S.esc(credit) + "</a>"
+        : S.esc(credit)) +
+      ".</p>";
+  }
+
+  function momentsHtml(moments) {
+    if (!moments || !moments.length) return "";
+    return '<ul class="home-moments">' + moments.map(function (m) {
+      return '<li class="home-moment">' +
+        '<p class="home-moment-label">' + S.esc(m.label) + "</p>" +
+        '<p class="home-moment-time">' + S.esc(m.time) + "</p>" +
+        "</li>";
+    }).join("") + "</ul>";
+  }
+
+  function nextUpCardHtml(data, upcoming) {
+    if (!upcoming) {
+      return '<article class="next-up is-empty">' +
+        '<p class="eyebrow">Next up</p>' +
+        "<h2>Not announced yet</h2>" +
+        '<p class="lede">No upcoming flight is listed. Check back when SpaceX names the next one.</p>' +
+        '<p class="hero-actions"><a class="text-link" href="flights.html">All flights</a></p>' +
+        "</article>";
+    }
+    var detail = S.detailOf(upcoming);
+    var brief = data.next && Number(data.next.aboutFlight) === upcoming.n ? data.next : null;
+    var vehiclesExpected = !!upcoming.vehiclesExpected;
+    var vehicles = (upcoming.boosterShort || upcoming.booster || "") +
+      (upcoming.shipShort || upcoming.ship ? " / " + (upcoming.shipShort || upcoming.ship) : "");
+    var dateLine = upcoming.dateLocal || "Date not announced yet";
+    var thumb = "";
+    var images = (detail && detail.images) || [];
+    for (var i = 0; i < images.length; i += 1) {
+      var reserved = S.reservePhoto(images[i]);
+      if (!reserved) continue;
+      thumb = '<div class="next-up-media photo-frame">' +
+        S.photoImgHtml({
+          src: reserved.src,
+          fallback: reserved.fallback,
+          page: reserved.page,
+          alt: images[i].alt || images[i].caption || ("Flight " + upcoming.n),
+          loading: "lazy",
+        }) +
+        "</div>";
+      break;
+    }
+    return '<article class="next-up">' +
+      thumb +
+      '<div class="next-up-copy">' +
+      '<p class="eyebrow">Next up</p>' +
+      "<h2>Flight " + S.esc(upcoming.n) + "</h2>" +
+      '<p class="next-up-date">' + S.esc(dateLine) + "</p>" +
+      (vehicles
+        ? '<p class="next-up-vehicles">' + S.esc(vehicles) +
+          (vehiclesExpected ? ' <span class="expected-mark">expected</span>' : "") +
+          "</p>"
+        : '<p class="next-up-vehicles">Vehicles not announced yet</p>') +
+      (upcoming.pad ? '<p class="next-up-pad">' + S.esc(upcoming.pad) + "</p>" : "") +
+      (brief && brief.callout ? '<p class="next-up-note">' + S.esc(brief.callout) + "</p>" : "") +
+      '<div id="countdown" class="home-countdown" hidden></div>' +
+      '<p class="hero-actions"><a class="text-link" href="flight.html?n=' + upcoming.n + '">Flight details</a></p>' +
+      "</div></article>";
+  }
+
+  function renderBetweenFlightsHome(data, last, upcoming) {
+    var main = document.getElementById("main");
+    if (!last) {
+      main.innerHTML =
+        '<section class="home-rest wrap">' +
+        nextUpCardHtml(data, upcoming) +
+        "</section>";
+      if (upcoming) S.startCountdown(upcoming);
+      return;
+    }
+    var detail = S.detailOf(last);
+    var hero = detail && detail.hero;
+    var headline = homeHeadlineFor(last);
+    var moments = homeMomentsFor(last, detail);
+    var media = lastFlightHeroMediaHtml(hero);
+    if (!media) {
+      var photo = S.SITE_PHOTOS[0];
+      S.claimMedia(photo.src);
+      media = S.heroPhotoHtml(photo);
+    }
+
+    main.innerHTML =
+      '<section class="home-hero home-hero-last' + (hero && hero.type === "video" ? " is-video" : "") + '">' +
+      media +
+      '<div class="hero-shade"></div>' +
+      '<div class="hero-copy wrap-hero">' +
+      '<p class="eyebrow">Last flight</p>' +
+      '<h1 class="hero-flight"><span>Flight</span> ' + S.esc(last.n) + "</h1>" +
+      '<p class="hero-date">' + S.esc(last.dateLocal) + "</p>" +
+      '<p class="home-result-line">' + outcomePairHtml(last) + "</p>" +
+      (headline ? '<p class="home-headline">' + S.esc(headline) + "</p>" : "") +
+      "</div>" +
+      lastFlightHeroCreditHtml(hero) +
+      "</section>" +
+      '<section class="home-rest wrap">' +
+      '<div class="home-moments-block">' +
+      '<div class="home-moments-head">' +
+      "<h2>Key moments</h2>" +
+      '<a class="text-link" href="flight.html?n=' + last.n + '">Flight details</a>' +
+      "</div>" +
+      momentsHtml(moments) +
+      "</div>" +
+      nextUpCardHtml(data, upcoming) +
+      "</section>";
+
+    S.mountFlightHeroVideos(main);
+    if (upcoming) S.startCountdown(upcoming);
   }
 
   function lastCard(last) {

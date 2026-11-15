@@ -11463,6 +11463,50 @@
         "coverageStartLocal": "Sat 14 Nov 2026, 21:16 CET",
         "note": "Flight 15 complete. Mechazilla caught Ship 42 at about 22:19 CET on 14 Nov — the first ship catch."
       }
+    },
+    "16": {
+      "n": 16,
+      "hero": null,
+      "live": {
+        "active": false
+      },
+      "images": [
+        {
+          "type": "image",
+          "hotlink": true,
+          "file": null,
+          "caption": "Booster 23 under cryo at Massey’s ahead of Flight 16 preparations",
+          "role": "booster prep",
+          "credit": "© NASASpaceflight",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/NASASpaceflight/status/2110842610827071705",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/2110842415925886976/img/j4sY4Y-92lL1Y0Qk.jpg",
+          "width": 1168,
+          "height": 652,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "NASASpaceflight: Booster 23 cryo at Massey’s",
+              "site": "X (@NASASpaceflight)",
+              "href": "https://x.com/NASASpaceflight/status/2110842610827071705"
+            }
+          ]
+        }
+      ],
+      "timeline": [],
+      "firsts": {
+        "items": [
+          "Expected first Starship launch from LC-39A (reported)"
+        ],
+        "sources": [
+          {
+            "title": "NASASpaceflight: Flight 15 and 16 milestones",
+            "site": "NASASpaceflight",
+            "href": "https://www.nasaspaceflight.com/2026/10/spacex-flight-15-16-milestones/"
+          }
+        ]
+      }
     }
   },
   "later": [
