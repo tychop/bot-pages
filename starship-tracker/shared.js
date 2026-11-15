@@ -209,15 +209,7 @@
 
   function liftoffInstant(flight) {
     if (!flight || flight.result !== "Upcoming") return null;
-    var text = flight.dateLocal || "";
-    if (/not announced|tbd|tba|unknown/i.test(text) && !/\d{1,2}:\d{2}\s*(CET|CEST)/i.test(text)) return null;
-    var match = text.match(/(\d{1,2})\s+([A-Za-z]{3,9})\s+(\d{4}),\s*(\d{1,2}):(\d{2})\s*(CET|CEST)/);
-    if (!match) return null;
-    var month = MONTHS[match[2].slice(0, 3).toLowerCase()];
-    if (month == null) return null;
-    var offset = match[6] === "CEST" ? 2 : 1;
-    var utc = Date.UTC(+match[3], month, +match[1], +match[4] - offset, +match[5]);
-    return isNaN(utc) ? null : utc;
+    return launchInstantMs(flight);
   }
 
   function listPhrase(nums) {
@@ -472,52 +464,146 @@
     return null;
   }
 
-  /**
-   * Shorten local/actual timeline clocks so the Actual column never needs to
-   * overflow into the event title. Keeps T+ clocks; strips redundant TZ;
-   * turns "about 14 Nov 22:19 CET" into "~22:19".
-   */
-  function formatTimelineActual(value) {
-    if (value == null || value === "") return "—";
-    var t = String(value).trim();
-    if (!t) return "—";
-    if (/^T\+/i.test(t)) return t;
-    if (/^(Passed|Go|Not taken|Nominal)/i.test(t)) return t;
-    var about = /^(about|approx\.?|~)\s+/i.test(t);
-    var cleaned = t.replace(/^(about|approx\.?|~)\s+/i, "");
-    var m = /^(?:(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun)\s+)?(\d{1,2}\s+[A-Za-z]{3})(?:\s+\d{4})?,?\s+(\d{1,2}:\d{2})(?:\s*[A-Z]{2,5})?\s*$/i.exec(cleaned);
-    if (m) {
-      if (about) return "~" + m[2];
-      return m[1] + " " + m[2];
+  function pad2(n) {
+    return (n < 10 ? "0" : "") + n;
+  }
+
+  /** Format seconds since liftoff as T+… (mm:ss under 1h, h:mm[:ss] after). */
+  function formatTPlus(sec, opts) {
+    opts = opts || {};
+    if (sec == null || !isFinite(sec) || sec < 0) return "—";
+    var prefix = opts.approx ? "T+~" : "T+";
+    var whole = Math.round(sec);
+    if (whole < 3600) {
+      return prefix + pad2(Math.floor(whole / 60)) + ":" + pad2(whole % 60);
     }
-    var timeOnly = /^(\d{1,2}:\d{2})(?:\s*[A-Z]{2,5})?\s*$/i.exec(cleaned);
-    if (timeOnly) return (about ? "~" : "") + timeOnly[1];
-    if (about) return "~" + cleaned;
-    return t;
+    var h = Math.floor(whole / 3600);
+    var m = Math.floor((whole % 3600) / 60);
+    var s = whole % 60;
+    if (opts.omitSeconds || s === 0) return prefix + h + ":" + pad2(m);
+    return prefix + h + ":" + pad2(m) + ":" + pad2(s);
   }
 
-  function timelineSortKey(row) {
-    if (!row) return 1e12;
-    if (row.sortSec === -1) return -1;
-    var fromPlanned = parseTPlusSec(row.planned);
-    if (fromPlanned != null) return fromPlanned;
-    if (row.sortSec != null && isFinite(row.sortSec)) return row.sortSec;
-    var fromActual = parseTPlusSec(row.actual);
-    if (fromActual != null) return fromActual;
-    return 1e12;
+  /**
+   * Launch instant (ms UTC) from dateLocal CET/CEST. Used for flown and upcoming
+   * flights — header dates stay local, timeline math is T+ from this UTC liftoff.
+   */
+  function launchInstantMs(flight) {
+    if (!flight) return null;
+    var text = flight.dateLocal || "";
+    if (/not announced|tbd|tba|unknown/i.test(text) && !/\d{1,2}:\d{2}\s*(CET|CEST)/i.test(text)) return null;
+    var match = text.match(/(\d{1,2})\s+([A-Za-z]{3,9})\s+(\d{4}),\s*(\d{1,2}):(\d{2})\s*(CET|CEST)/);
+    if (!match) return null;
+    var month = MONTHS[match[2].slice(0, 3).toLowerCase()];
+    if (month == null) return null;
+    var offset = match[6] === "CEST" ? 2 : 1;
+    var utc = Date.UTC(+match[3], month, +match[1], +match[4] - offset, +match[5]);
+    return isNaN(utc) ? null : utc;
   }
 
-  function timelineHtml(detail) {
+  /** Parse a timeline local clock ("14 Nov 16:23 CET", "about 14 Nov 22:19 CET") to UTC ms. */
+  function localTimelineInstantMs(value, launchMs, flight) {
+    if (value == null || value === "" || launchMs == null) return null;
+    var t = String(value).trim();
+    if (!t || /^T\+/i.test(t) || /^(Passed|Go|Not taken|Nominal)/i.test(t)) return null;
+    var cleaned = t.replace(/^(about|approx\.?|~)\s+/i, "");
+    var m = /^(?:(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun)\s+)?(\d{1,2})\s+([A-Za-z]{3,9})(?:\s+(\d{4}))?,?\s+(\d{1,2}):(\d{2})(?:\s*(CET|CEST))?\s*$/i.exec(cleaned);
+    if (!m) return null;
+    var month = MONTHS[m[2].slice(0, 3).toLowerCase()];
+    if (month == null) return null;
+    var launchYear = null;
+    var dy = String((flight && flight.dateLocal) || "").match(/\b(20\d{2})\b/);
+    if (dy) launchYear = +dy[1];
+    var year = m[3] ? +m[3] : launchYear;
+    if (year == null) return null;
+    var tz = (m[6] || "CET").toUpperCase();
+    var offset = tz === "CEST" ? 2 : 1;
+    var instant = Date.UTC(year, month, +m[1], +m[4] - offset, +m[5]);
+    if (isNaN(instant)) return null;
+    // Event date without year that lands before liftoff → next calendar year.
+    if (instant < launchMs - 120000) {
+      instant = Date.UTC(year + 1, month, +m[1], +m[4] - offset, +m[5]);
+    }
+    if (isNaN(instant) || instant < launchMs - 120000) return null;
+    return instant;
+  }
+
+  function isApproxClock(value) {
+    return value != null && /~|about|approx/i.test(String(value));
+  }
+
+  function normalizeTPlusLabel(value) {
+    var t = String(value == null ? "" : value).trim();
+    if (!t) return "—";
+    var approx = isApproxClock(t);
+    var body = t.replace(/^T\+\s*~?\s*/i, "");
+    return (approx ? "T+~" : "T+") + body;
+  }
+
+  /**
+   * Resolve a single T+ label + sort key for a timeline row.
+   * Prefer actual T+, then planned T+, then T+ computed from a local/CET
+   * actual vs launch UTC, then sortSec.
+   */
+  function resolveTimelineClock(row, flight) {
+    if (!row) return { label: "—", sortSec: 1e12, approx: false };
+    if (row.sortSec === -1) return { label: "—", sortSec: -1, approx: false };
+
+    var launchMs = launchInstantMs(flight);
+    var actual = row.actual;
+    var planned = row.planned;
+
+    // Prefer real T+ clocks; only convert local/CET stamps when no T+ exists.
+    var actualT = parseTPlusSec(actual);
+    if (actualT != null) {
+      return {
+        label: normalizeTPlusLabel(actual),
+        sortSec: actualT,
+        approx: isApproxClock(actual),
+      };
+    }
+
+    var plannedT = parseTPlusSec(planned);
+    if (plannedT != null) {
+      return {
+        label: normalizeTPlusLabel(planned),
+        sortSec: plannedT,
+        approx: isApproxClock(planned),
+      };
+    }
+
+    var localMs = localTimelineInstantMs(actual, launchMs, flight);
+    if (localMs != null && launchMs != null) {
+      var computed = Math.round((localMs - launchMs) / 1000);
+      var approx = isApproxClock(actual);
+      return {
+        label: formatTPlus(computed, { approx: approx, omitSeconds: true }),
+        sortSec: computed,
+        approx: approx,
+        title: actual,
+      };
+    }
+
+    if (row.sortSec != null && isFinite(row.sortSec) && row.sortSec >= 0) {
+      return { label: formatTPlus(row.sortSec, {}), sortSec: row.sortSec, approx: false };
+    }
+    return { label: "—", sortSec: 1e12, approx: false };
+  }
+
+  function timelineHtml(detail, flight) {
     var items = detail && detail.timeline;
     if (!items || !items.length) return "";
-    var sorted = items.slice().sort(function (a, b) {
-      var ka = timelineSortKey(a);
-      var kb = timelineSortKey(b);
-      if (ka !== kb) return ka - kb;
-      return String(a.event || "").localeCompare(String(b.event || ""));
+    var enriched = items.map(function (row) {
+      return { row: row, clock: resolveTimelineClock(row, flight) };
+    });
+    enriched.sort(function (a, b) {
+      if (a.clock.sortSec !== b.clock.sortSec) return a.clock.sortSec - b.clock.sortSec;
+      return String(a.row.event || "").localeCompare(String(b.row.event || ""));
     });
     var expandable = 0;
-    var rows = sorted.map(function (row, index) {
+    var rows = enriched.map(function (item, index) {
+      var row = item.row;
+      var clock = item.clock;
       var note = row.note ? String(row.note).trim() : "";
       var hasDetail = !!note;
       if (hasDetail) expandable += 1;
@@ -526,15 +612,14 @@
       var cls = "tl-row" + (isAnomaly ? " is-anomaly" : "") + (hasDetail ? " has-detail" : " is-static");
       var statusCls = "tl-status" + (isAnomaly ? " is-anomaly" : status === "ok" ? " is-ok" : "");
       var statusText = isAnomaly ? "anomaly" : status === "ok" ? "ok" : status || "—";
-      var actualLabel = formatTimelineActual(row.actual);
+      var timeTitle = clock.title ? ' title="' + esc(clock.title) + '"' : "";
       var summaryInner =
-        '<span class="tl-planned">' + esc(row.planned || "—") + "</span>" +
-        '<span class="tl-actual" title="' + esc(row.actual || "") + '">' + esc(actualLabel) + "</span>" +
+        '<span class="tl-time"' + timeTitle + ">" + esc(clock.label) + "</span>" +
         '<span class="tl-title">' + esc(row.event || "Event") + "</span>" +
         '<span class="' + statusCls + '">' + esc(statusText) + "</span>";
       var summary;
       if (hasDetail) {
-        var panelId = "tl-detail-" + (detail.n || "x") + "-" + index;
+        var panelId = "tl-detail-" + (detail.n || (flight && flight.n) || "x") + "-" + index;
         summary =
           '<button type="button" class="tl-summary" aria-expanded="false" aria-controls="' + panelId + '">' +
           summaryInner +
@@ -549,8 +634,8 @@
       ? '<button type="button" class="tl-expand-all" data-expanded="false">Expand all</button>'
       : "";
     return '<section class="block timeline"><div class="tl-heading"><h4>Mission timeline</h4>' + tools + "</div>" +
-      '<p class="fine">Planned vs actual T+ times. Click a row with a chevron for notes. Anomaly rows stay highlighted.</p>' +
-      '<div class="tl-head" aria-hidden="true"><span>Planned</span><span>Actual</span><span>Event</span><span>Status</span><span></span></div>' +
+      '<p class="fine">Times are T+ from liftoff. Approximate clocks show a leading ~. Click a row with a chevron for notes. Anomaly rows stay highlighted.</p>' +
+      '<div class="tl-head" aria-hidden="true"><span>T+</span><span>Event</span><span>Status</span><span></span></div>' +
       '<ol class="tl-list">' + rows + "</ol></section>";
   }
 
@@ -790,7 +875,7 @@
     var open = isOpen(flight.n);
     return (open ? galleryHtml(detail) : "") +
       firstsHtml(detail, flight) +
-      timelineHtml(detail) +
+      timelineHtml(detail, flight) +
       telemetryHtml(detail) +
       vehicleChangesHtml(detail) +
       anomalyHtml(detail) +
