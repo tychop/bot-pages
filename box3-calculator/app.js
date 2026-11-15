@@ -340,17 +340,39 @@
     return pctLabel(rate) + " per jaar";
   }
 
-  function statementRow(label, amountText, kind) {
-    return el("div", { class: "statement-row" + (kind ? " " + kind : "") }, [
-      el("span", { class: "statement-label", text: label }),
-      el("span", { class: "statement-amount", text: amountText })
+  function amountCell(text, extraClass) {
+    return el("div", { class: "statement-amount" + (extraClass ? " " + extraClass : "") }, [
+      el("span", { text: text })
+    ]);
+  }
+
+  function breakEvenHuidigCell(beHuidig, beForfait) {
+    var wrap = el("div", { class: "statement-amount breakeven" });
+    wrap.append(el("span", { text: formatBreakEven(beHuidig) }));
+    wrap.append(el("span", {
+      class: "statement-sub",
+      text: "forfait alleen " + formatBreakEven(beForfait)
+    }));
+    return wrap;
+  }
+
+  function statementCompareRow(label, leftNode, rightNode, kind) {
+    return el("div", {
+      class: "statement-row" + (kind ? " " + kind : ""),
+      role: "row"
+    }, [
+      el("div", { class: "statement-label", text: label }),
+      leftNode,
+      rightNode
     ]);
   }
 
   function render() {
     var input = currentInput();
     var sim = Box3.simulate(input, rules.params);
-    var s = Box3Model.statementTotals(sim, input.debt || 0);
+    var be = Box3.breakEvenRates(input, rules.params);
+    var cols = Box3Model.statementColumns(sim, input.debt || 0, be);
+    var s = cols.totals;
     var box = document.getElementById("results");
     box.replaceChildren();
     box.append(el("p", {
@@ -358,31 +380,43 @@
       text: "Na " + input.years + (input.years === 1 ? " jaar" : " jaar") + " in totaal"
     }));
 
-    var list = el("div", { class: "statement", role: "list" });
-    list.append(statementRow("Startvermogen", moneyCell(s.start), "asset"));
-    list.append(statementRow("Vermogen na rente/winst", moneyCell(s.afterReturn), "asset"));
-    list.append(statementRow("Belasting box 3 huidig stelsel", minusCell(s.taxHuidig), "minus"));
-    list.append(statementRow("Belasting box 3 voorstel (toekomstig)", minusCell(s.taxNieuw), "minus"));
-    list.append(statementRow("Totaal vermogen na huidige belasting", moneyCell(s.endHuidig), "total"));
-    list.append(statementRow("Totaal vermogen na toekomstige belasting", moneyCell(s.endNieuw), "total"));
-
-    var be = Box3.breakEvenRates(input, rules.params);
-    list.append(statementRow(
-      "Benodigd rendement om quitte te spelen — huidig forfait (zonder tegenbewijs)",
-      formatBreakEven(be.forfait),
+    var table = el("div", { class: "statement", role: "table" });
+    table.append(el("div", { class: "statement-row statement-head", role: "row" }, [
+      el("div", { class: "statement-label", text: "" }),
+      el("div", { class: "statement-amount head", text: cols.huidig.title }),
+      el("div", { class: "statement-amount head", text: cols.voorstel.title })
+    ]));
+    table.append(statementCompareRow(
+      "Startvermogen",
+      amountCell(moneyCell(cols.huidig.start)),
+      amountCell(moneyCell(cols.voorstel.start)),
+      "asset"
+    ));
+    table.append(statementCompareRow(
+      "Vermogen na rente/winst",
+      amountCell(moneyCell(cols.huidig.afterReturn)),
+      amountCell(moneyCell(cols.voorstel.afterReturn)),
+      "asset"
+    ));
+    table.append(statementCompareRow(
+      "Belasting box 3",
+      amountCell(minusCell(cols.huidig.tax), "minus"),
+      amountCell(minusCell(cols.voorstel.tax), "minus"),
+      "minus"
+    ));
+    table.append(statementCompareRow(
+      "Vermogen na belasting",
+      amountCell(moneyCell(cols.huidig.end), "total"),
+      amountCell(moneyCell(cols.voorstel.end), "total"),
+      "total"
+    ));
+    table.append(statementCompareRow(
+      "Benodigd rendement om quitte te spelen",
+      breakEvenHuidigCell(cols.huidig.breakEven, cols.huidig.breakEvenForfait),
+      amountCell(formatBreakEven(cols.voorstel.breakEven), "breakeven"),
       "breakeven"
     ));
-    list.append(statementRow(
-      "Benodigd rendement om quitte te spelen — huidig met tegenbewijs",
-      formatBreakEven(be.huidig),
-      "breakeven"
-    ));
-    list.append(statementRow(
-      "Benodigd rendement om quitte te spelen — voorstel",
-      formatBreakEven(be.nieuw),
-      "breakeven"
-    ));
-    box.append(list);
+    box.append(table);
 
     box.append(el("p", {
       class: "delta",
