@@ -11475,21 +11475,65 @@
           "type": "image",
           "hotlink": true,
           "file": null,
-          "caption": "Booster 23 under cryo at Massey’s ahead of Flight 16 preparations",
+          "caption": "Booster 23 on rollout to Massey’s for cryogenic proof testing (B23 stencil visible on the hull)",
           "role": "booster prep",
-          "credit": "© NASASpaceflight",
+          "credit": "© Starship Gazer",
           "license": "All rights reserved (used with credit, personal site)",
           "licenseUrl": null,
-          "pageUrl": "https://x.com/NASASpaceflight/status/2110842610827071705",
-          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/2110842415925886976/img/j4sY4Y-92lL1Y0Qk.jpg",
-          "width": 1168,
-          "height": 652,
+          "pageUrl": "https://x.com/StarshipGazer/status/2109929503925625050",
+          "directUrl": "https://pbs.twimg.com/media/HUf3gx6acAAlglM.jpg?name=large",
+          "width": 2732,
+          "height": 4096,
           "bytes": null,
           "sources": [
             {
-              "title": "NASASpaceflight: Booster 23 cryo at Massey’s",
-              "site": "X (@NASASpaceflight)",
-              "href": "https://x.com/NASASpaceflight/status/2110842610827071705"
+              "title": "Starship Gazer: Booster 23 rollout to Massey’s",
+              "site": "X (@StarshipGazer)",
+              "href": "https://x.com/StarshipGazer/status/2109929503925625050"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "hotlink": true,
+          "file": null,
+          "caption": "Booster 23 base on SPMT during Massey’s rollout (B23 plate visible above the transport mount)",
+          "role": "booster prep",
+          "credit": "© Starship Gazer",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/StarshipGazer/status/2109929503925625050",
+          "directUrl": "https://pbs.twimg.com/media/HUf3jjDbUAAXlbZ.jpg?name=large",
+          "width": 4096,
+          "height": 2732,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "Starship Gazer: Booster 23 rollout to Massey’s",
+              "site": "X (@StarshipGazer)",
+              "href": "https://x.com/StarshipGazer/status/2109929503925625050"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "hotlink": true,
+          "file": null,
+          "caption": "Ship 43 at Massey’s test site (overhead; single ship on the stand, no conflicting vehicle tickers)",
+          "role": "ship prep",
+          "credit": "© RGV Aerial Photography",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/RGVaerialphotos/status/2113715340517470305",
+          "directUrl": "https://pbs.twimg.com/media/HVVs0QHWAAEzo55.jpg?name=large",
+          "width": 3498,
+          "height": 2428,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "RGV Aerial Photography: Ship 43 at Massey’s",
+              "site": "X (@RGVaerialphotos)",
+              "href": "https://x.com/RGVaerialphotos/status/2113715340517470305"
             }
           ]
         }
@@ -11561,7 +11605,7 @@
       "telemetry": null,
       "note": "No flight data yet; will fill in when SpaceX publishes a mission page.",
       "n": 16,
-      "imagesNote": "Not flown. Vehicles (B23/S43) are only \"likely\" and no free photo of them was found; images show the planned pad, KSC LC-39A."
+      "imagesNote": "Not flown. Vehicles B23/S43 are expected; the Flight 16 page uses verified prep photos of those vehicles. Images here show the planned pad, KSC LC-39A."
     },
     {
       "mission": "Propellant transfer demo: target",
