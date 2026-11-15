@@ -17,7 +17,7 @@
   var DIVIDEND = [0, 0.01, 0.02, 0.03, 0.04, 0.05];
   var DEBT = [0, 10000, 25000, 50000, 100000, 250000, 500000];
   var DEBT_RATE = [0, 0.02, 0.03, 0.04, 0.05, 0.06];
-  var INVEST_RATES = range(-0.3, 0.3, 0.05);
+  var INVEST_RATES = range(-0.3, 0.3, 0.01);
   var CRYPTO_RATES = range(-0.5, 1, 0.1);
   var SAVE_RATES = range(0, 0.05, 0.0025);
   var SPLITS = [
@@ -334,7 +334,7 @@
     box.replaceChildren();
     box.append(el("p", { class: "when", text: "Na " + input.years + (input.years === 1 ? " jaar" : " jaar") }));
     var grid = el("div", { class: "overview" });
-    ["", "Huidig", "Voorstel"].forEach(function (name, index) {
+    ["", "Huidig forfait/tegenbewijs", "Voorstel werkelijk rendement"].forEach(function (name, index) {
       grid.append(el("div", { class: index ? "h" : "", text: name }));
     });
     function row(label, a, b) {
@@ -345,6 +345,13 @@
     row("Belasting", sim.totals.huidig.tax, sim.totals.nieuw.tax);
     row("Eindvermogen", netH, netN);
     box.append(grid);
+    var taxGap = sim.totals.nieuw.tax - sim.totals.huidig.tax;
+    var taxDelta = Math.abs(taxGap) < 1
+      ? "De totale belasting is vrijwel gelijk."
+      : taxGap > 0
+        ? "Het voorstel kost " + euro0.format(Math.round(taxGap)) + " meer belasting."
+        : "Het huidige stelsel kost " + euro0.format(Math.round(-taxGap)) + " meer belasting.";
+    box.append(el("p", { class: "delta", text: taxDelta }));
     var gap = netH - netN;
     var delta = Math.abs(gap) < 1 ? "Het eindvermogen is vrijwel gelijk." : gap > 0 ? "Het voorstel laat " + euro0.format(Math.round(gap)) + " minder over." : "Het voorstel laat " + euro0.format(Math.round(-gap)) + " meer over.";
     box.append(el("p", { class: "delta", text: delta }));
@@ -352,8 +359,8 @@
       ? { huidig: "#8fd9d1", nieuw: "#fdba74" }
       : { huidig: "#0b6e66", nieuw: "#9a3412" };
     box.append(el("div", { class: "legend" }, [
-      el("span", {}, [el("i", { class: "swatch", style: "background:" + colors.huidig }), "Huidig"]),
-      el("span", {}, [el("i", { class: "swatch", style: "background:" + colors.nieuw }), "Voorstel"])
+      el("span", {}, [el("i", { class: "swatch", style: "background:" + colors.huidig }), "Huidig forfait/tegenbewijs"]),
+      el("span", {}, [el("i", { class: "swatch", style: "background:" + colors.nieuw }), "Voorstel werkelijk rendement"])
     ]));
     var points = { huidig: [sim.start], nieuw: [sim.start] };
     sim.rows.forEach(function (rowItem) {
@@ -361,8 +368,8 @@
       points.nieuw.push(rowItem.nieuw.end);
     });
     box.append(chart([
-      { name: "Huidig", color: colors.huidig, points: points.huidig },
-      { name: "Voorstel", color: colors.nieuw, points: points.nieuw }
+      { name: "Huidig forfait/tegenbewijs", color: colors.huidig, points: points.huidig },
+      { name: "Voorstel werkelijk rendement", color: colors.nieuw, points: points.nieuw }
     ]));
     renderTable(sim, input);
   }
@@ -666,13 +673,16 @@
     var belegPanel = panel("beleggen", [
       field("b-wealth", "Vermogen", moneyOpts(WEALTH), 100000),
       field("b-scenario", "Scenario", investScenarios(), "gelijk"),
-      field("b-rate", "Rendement per jaar", pctOpts(INVEST_RATES), 0.15),
-      field("b-years", "Jaren", YEARS.map(function (n) { return { value: n, label: String(n) }; }), 10)
+      field("b-rate", "Rendement per jaar", pctOpts(INVEST_RATES), 0.07),
+      field("b-years", "Jaren", YEARS.map(function (n) { return { value: n, label: String(n) }; }), 10),
+      field("b-mode", "Verkoop", [
+        { value: "hold", label: "Aanhouden tot het einde (latente heffing meegerekend)" },
+        { value: "sell", label: "Elk jaar verkopen" }
+      ], "hold")
     ], more("b-more", [
       field("b-inleg", "Inleg per jaar", moneyOpts(INLEG), 0),
       field("b-div", "Dividend", pctOpts(DIVIDEND), 0),
-      field("b-partner", "Fiscale partner", [{ value: "0", label: "Nee" }, { value: "1", label: "Ja" }], "0"),
-      field("b-mode", "Verkoop", [{ value: "sell", label: "Elk jaar verkopen" }, { value: "hold", label: "Aanhouden tot het einde" }], "sell")
+      field("b-partner", "Fiscale partner", [{ value: "0", label: "Nee" }, { value: "1", label: "Ja" }], "0")
     ]));
     belegPanel.insertBefore(el("div", { id: "b-custom", class: "custom", hidden: "hidden" }), belegPanel.querySelector(".more"));
     main.append(belegPanel);
@@ -723,11 +733,14 @@
         field("m-invest", "Beleggen", steps(100), 50),
         field("m-crypto", "Crypto", steps(100), 0),
         field("m-save-rate", "Rente sparen", pctOpts(SAVE_RATES), 0.015),
-        field("m-invest-rate", "Rendement beleggen", pctOpts(INVEST_RATES), 0.05),
+        field("m-invest-rate", "Rendement beleggen", pctOpts(INVEST_RATES), 0.07),
         field("m-crypto-rate", "Rendement crypto", pctOpts(CRYPTO_RATES), 0.1),
         field("m-inleg", "Inleg per jaar", moneyOpts(INLEG), 0),
         field("m-div", "Dividend op beleggen", pctOpts(DIVIDEND), 0),
-        field("m-mode", "Beleggingen", [{ value: "sell", label: "Elk jaar verkopen" }, { value: "hold", label: "Aanhouden tot het einde" }], "sell"),
+        field("m-mode", "Beleggingen", [
+          { value: "hold", label: "Aanhouden tot het einde (latente heffing)" },
+          { value: "sell", label: "Elk jaar verkopen" }
+        ], "hold"),
         field("m-partner", "Fiscale partner", [{ value: "0", label: "Nee" }, { value: "1", label: "Ja" }], "0"),
         field("m-debt", "Schuld", moneyOpts(DEBT), 0),
         field("m-debt-rate", "Rente op de schuld", pctOpts(DEBT_RATE), 0.04)
