@@ -7,7 +7,7 @@
   }
 
   var PAGE = document.body.getAttribute("data-page") || "home";
-  var ASSET_V = "20261115c";
+  var ASSET_V = "20261115e";
   var openNotesBtn = null;
   var notesHoverTimer = null;
 
