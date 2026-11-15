@@ -4257,6 +4257,69 @@
         {
           "file": null,
           "hotlink": true,
+          "caption": "Pad stack ahead of Flight 6",
+          "role": "preflight",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1858894148914606196",
+          "directUrl": "https://pbs.twimg.com/media/GcwaT2tbQAAnD7b.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Systems and weather looking good for Flight 6",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1858894148914606196"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Liftoff of Starship’s sixth flight test",
+          "role": "liftoff",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1859264782966390939",
+          "directUrl": "https://pbs.twimg.com/media/Gc1vZNHa8AAHar3.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Liftoff of Starship’s sixth flight test",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1859264782966390939"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Flight 6 ascending from Starbase",
+          "role": "ascent",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1859264782966390939",
+          "directUrl": "https://pbs.twimg.com/media/Gc1vZNKakAAvr_x.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Liftoff of Starship’s sixth flight test",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1859264782966390939"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
           "caption": "Liftoff on Flight 6 (SpaceX photo; post: \"33 Raptor engines powering the Super Heavy booster off the pad from Starbase\")",
           "role": "liftoff",
           "credit": "© SpaceX",
@@ -4270,6 +4333,27 @@
           "sources": [
             {
               "title": "@SpaceX post on X",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1859378696735556032"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "33 Raptors powering Super Heavy off the pad (Flight 6)",
+          "role": "liftoff",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1859378696735556032",
+          "directUrl": "https://pbs.twimg.com/media/Gc3VrRbaAAEmY-R.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: 33 Raptor engines powering Super Heavy",
               "site": "X (@SpaceX)",
               "href": "https://x.com/SpaceX/status/1859378696735556032"
             }
@@ -4297,6 +4381,48 @@
           ]
         },
         {
+          "file": null,
+          "hotlink": true,
+          "caption": "Starship reentry over the Indian Ocean (Flight 6)",
+          "role": "reentry",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1859717568162127873",
+          "directUrl": "https://pbs.twimg.com/media/Gc8LDnXaAAE4d3Z.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Starship reentry over the Indian Ocean",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1859717568162127873"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Views from Starship after launch on Flight 6",
+          "role": "coast",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1859716672623624586",
+          "directUrl": "https://pbs.twimg.com/media/Gc8KIctaAAQWK0D.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Views from Starship after launch",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1859716672623624586"
+            }
+          ]
+        },
+        {
           "file": "flight-images/F6-2.webp",
           "caption": "The Ship 31 launch plume seen from the ISS",
           "role": "ascent from ISS",
@@ -4316,6 +4442,131 @@
             }
           ],
           "hotlink": false
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "Liftoff of Starship!",
+          "role": "liftoff video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1858994002311475519",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/1858993941628231680/img/H7ObuLgaB8XHL2W8.jpg",
+          "poster": "https://pbs.twimg.com/amplify_video_thumb/1858993941628231680/img/H7ObuLgaB8XHL2W8.jpg",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Liftoff of Starship!",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1858994002311475519"
+            }
+          ],
+          "videoUrl": "https://video.twimg.com/amplify_video/1858993941628231680/vid/avc1/1280x720/YhDwVaHltTa8_atZ.mp4",
+          "durationSec": 60
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "Hot-staging — Starship Raptors ignite",
+          "role": "hot staging video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1858994574817194040",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/1858994456370069504/img/flk0O3Zncevqf6kb.jpg",
+          "poster": "https://pbs.twimg.com/amplify_video_thumb/1858994456370069504/img/flk0O3Zncevqf6kb.jpg",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Hot-staging — Starship Raptors ignite",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1858994574817194040"
+            }
+          ],
+          "videoUrl": "https://video.twimg.com/amplify_video/1858994456370069504/vid/avc1/1280x720/ABr8XCO88u6YR35m.mp4",
+          "durationSec": 16
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "Starship coasting after Raptor burn complete",
+          "role": "coast video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1858996893378113763",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/1858996239783849984/img/-Av8X2xCzl4qGwfa.jpg",
+          "poster": "https://pbs.twimg.com/amplify_video_thumb/1858996239783849984/img/-Av8X2xCzl4qGwfa.jpg",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Starship coasting after Raptor burn complete",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1858996893378113763"
+            }
+          ],
+          "videoUrl": "https://video.twimg.com/amplify_video/1858996239783849984/vid/avc1/1280x720/TJTTFUrT2rDuwVfG.mp4",
+          "durationSec": 43
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "Starship preparing to splash down in the Indian Ocean",
+          "role": "landing video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1859010302819684368",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/1859010195478986752/img/br82kqmQRbDJYRVH.jpg",
+          "poster": "https://pbs.twimg.com/amplify_video_thumb/1859010195478986752/img/br82kqmQRbDJYRVH.jpg",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Starship preparing to splash down in the Indian Ocean",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1859010302819684368"
+            }
+          ],
+          "videoUrl": "https://video.twimg.com/amplify_video/1859010195478986752/vid/avc1/1280x720/ttXPlXbCdKB3-UmC.mp4",
+          "durationSec": 43
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "Splashdown confirmed — Flight 6",
+          "role": "splashdown video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1859010620471079361",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/1859010556214341633/img/dSRLDWHYsqlfIFot.jpg",
+          "poster": "https://pbs.twimg.com/amplify_video_thumb/1859010556214341633/img/dSRLDWHYsqlfIFot.jpg",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Splashdown confirmed — Flight 6",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1859010620471079361"
+            }
+          ],
+          "videoUrl": "https://video.twimg.com/amplify_video/1859010556214341633/vid/avc1/1280x720/HLkMV5pLtZc8yJ8G.mp4",
+          "durationSec": 18
         }
       ],
       "imagesNote": null,
@@ -4892,6 +5143,27 @@
         {
           "file": null,
           "hotlink": true,
+          "caption": "Stacked ahead of Flight 7",
+          "role": "preflight",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1879952051985432959",
+          "directUrl": "https://pbs.twimg.com/media/GhbtjwdXcAAv-xZ.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: T-4 hours until Flight 7",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1879952051985432959"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
           "caption": "Liftoff on Flight 7 (SpaceX photo; post: \"Launching Starship on its seventh flight test\")",
           "role": "liftoff",
           "credit": "© SpaceX",
@@ -4907,6 +5179,69 @@
               "title": "@SpaceX post on X",
               "site": "X (@SpaceX)",
               "href": "https://x.com/SpaceX/status/1880652100696469583"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Launching Starship on its seventh flight test",
+          "role": "liftoff",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1880652100696469583",
+          "directUrl": "https://pbs.twimg.com/media/GhlqTj1boAAuoDm.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Launching Starship on Flight 7",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1880652100696469583"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Flight 7 ascent plume",
+          "role": "ascent",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1880652100696469583",
+          "directUrl": "https://pbs.twimg.com/media/GhlrDvpbsAAM75I.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Launching Starship on Flight 7",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1880652100696469583"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Raptor engines powering liftoff and landing of Super Heavy (Flight 7)",
+          "role": "liftoff",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1880332005084471404",
+          "directUrl": "https://pbs.twimg.com/media/GhhH7SAacAASL_6.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Raptor engines powering liftoff and landing",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1880332005084471404"
             }
           ]
         },
@@ -4930,6 +5265,215 @@
               "href": "https://x.com/SpaceX/status/1880655580823773354"
             }
           ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Super Heavy landing burn — start of 13 Raptors (Flight 7)",
+          "role": "landing burn",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1880655580823773354",
+          "directUrl": "https://pbs.twimg.com/media/Ghlt4h8bAAAkEtF.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Super Heavy landing burn",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1880655580823773354"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Second successful catch of Super Heavy (Flight 7)",
+          "role": "catch",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1880661166395158694",
+          "directUrl": "https://pbs.twimg.com/media/GhlzMxJbEAAgx1w.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Second successful catch of Super Heavy",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1880661166395158694"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Hot-staging to tower catch sequence (Flight 7)",
+          "role": "hot staging",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1881833313339580591",
+          "directUrl": "https://pbs.twimg.com/media/Gh2c09bbEAAuoHR.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Hot-staging to tower catch",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1881833313339580591"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Flight 7 — development testing can be unpredictable (ship lost)",
+          "role": "anomaly",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1880081293414920372",
+          "directUrl": "https://pbs.twimg.com/media/Ghdh8oxXsAAJXeO.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Flight 7 post-flight note",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1880081293414920372"
+            }
+          ]
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "Liftoff of Starship!",
+          "role": "liftoff video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1880021718661521611",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/1880021658297143296/img/d6Ovi2r6WPYPbT0z.jpg",
+          "poster": "https://pbs.twimg.com/amplify_video_thumb/1880021658297143296/img/d6Ovi2r6WPYPbT0z.jpg",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Liftoff of Starship!",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1880021718661521611"
+            }
+          ],
+          "videoUrl": "https://video.twimg.com/amplify_video/1880021658297143296/vid/avc1/1280x720/aoQdWec8Se2OKk7p.mp4",
+          "durationSec": 36
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "Hot-staging — Super Heavy returning for catch",
+          "role": "hot staging video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1880022600799105510",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/1880022544964612096/img/V3JpGIr5SltbvC6e.jpg",
+          "poster": "https://pbs.twimg.com/amplify_video_thumb/1880022544964612096/img/V3JpGIr5SltbvC6e.jpg",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Hot-staging — Super Heavy returning for catch",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1880022600799105510"
+            }
+          ],
+          "videoUrl": "https://video.twimg.com/amplify_video/1880022544964612096/vid/avc1/1280x720/c4C_V_avEmNyckF6.mp4",
+          "durationSec": 33
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "Mechazilla has caught the Super Heavy booster!",
+          "role": "catch video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1880024050048589841",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/1880023941583941632/img/xmykU8YGs1bDew4o.jpg",
+          "poster": "https://pbs.twimg.com/amplify_video_thumb/1880023941583941632/img/xmykU8YGs1bDew4o.jpg",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Mechazilla has caught the Super Heavy booster!",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1880024050048589841"
+            }
+          ],
+          "videoUrl": "https://video.twimg.com/amplify_video/1880023941583941632/vid/avc1/1280x720/U3Z9xnkiTvOC7HC5.mp4",
+          "durationSec": 73
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "Liftoff of Flight 7 — reused Raptor from Flight 5",
+          "role": "liftoff video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1880265972050981005",
+          "directUrl": "https://pbs.twimg.com/ext_tw_video_thumb/1880265818078076928/pu/img/zIHu9hZwX0U5bcFr.jpg",
+          "poster": "https://pbs.twimg.com/ext_tw_video_thumb/1880265818078076928/pu/img/zIHu9hZwX0U5bcFr.jpg",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Liftoff of Flight 7 — reused Raptor from Flight 5",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1880265972050981005"
+            }
+          ],
+          "videoUrl": "https://video.twimg.com/ext_tw_video/1880265818078076928/pu/vid/avc1/1280x720/iTnDQx7U9S9rH98x.mp4",
+          "durationSec": 26
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "Second successful catch of Super Heavy",
+          "role": "catch video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1880661166395158694",
+          "directUrl": "https://pbs.twimg.com/ext_tw_video_thumb/1880660908789354496/pu/img/S7axU4CIbLU5dAUr.jpg",
+          "poster": "https://pbs.twimg.com/ext_tw_video_thumb/1880660908789354496/pu/img/S7axU4CIbLU5dAUr.jpg",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Second successful catch of Super Heavy",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1880661166395158694"
+            }
+          ],
+          "videoUrl": "https://video.twimg.com/ext_tw_video/1880660908789354496/pu/vid/avc1/1280x720/vzZ5VoPCBXd-n22k.mp4",
+          "durationSec": 32
         }
       ],
       "imagesNote": null,
@@ -5538,6 +6082,27 @@
         {
           "file": null,
           "hotlink": true,
+          "caption": "Counting down to Flight 8 at the pad",
+          "role": "preflight",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1897737876819132846",
+          "directUrl": "https://pbs.twimg.com/media/GlYd464XUAAJUWx.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Counting down to Flight 8",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1897737876819132846"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
           "caption": "Liftoff on Flight 8 (SpaceX photo; post: \"Liftoff of Starship's eighth flight test\")",
           "role": "liftoff",
           "credit": "© SpaceX",
@@ -5553,6 +6118,132 @@
               "title": "@SpaceX post on X",
               "site": "X (@SpaceX)",
               "href": "https://x.com/SpaceX/status/1898512022951874665"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Liftoff of Starship’s eighth flight test",
+          "role": "liftoff",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1898512022951874665",
+          "directUrl": "https://pbs.twimg.com/media/GljebvSaoAAj0IM.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Liftoff of Flight 8",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1898512022951874665"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Flight 8 ascent",
+          "role": "ascent",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1898512022951874665",
+          "directUrl": "https://pbs.twimg.com/media/GljebvSb0AACtAp.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Liftoff of Flight 8",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1898512022951874665"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Third successful return and catch of Super Heavy (Flight 8)",
+          "role": "catch",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1898513213794525244",
+          "directUrl": "https://pbs.twimg.com/media/GljfrJaagAAEJ_m.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Third successful catch of Super Heavy",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1898513213794525244"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Caught Super Heavy after Flight 8",
+          "role": "catch",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1898513213794525244",
+          "directUrl": "https://pbs.twimg.com/media/GljfrJbaYAA03pM.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Third successful catch of Super Heavy",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1898513213794525244"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Flight 8 — learning from a hard ship day",
+          "role": "anomaly",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1897841723851645064",
+          "directUrl": "https://pbs.twimg.com/media/GlZ82OLWcAIcElq.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Flight 8 investigation note",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1897841723851645064"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Flight 8 post-flight still",
+          "role": "ascent",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1897841723851645064",
+          "directUrl": "https://pbs.twimg.com/media/GlZ83KHWgAAJnRe.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Flight 8 investigation note",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1897841723851645064"
             }
           ]
         },
@@ -5576,6 +6267,131 @@
             }
           ],
           "hotlink": false
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "Liftoff of Starship!",
+          "role": "liftoff video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1897792820242792942",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/1897792742446567424/img/LWEQxYG3TBtnz5kN.jpg",
+          "poster": "https://pbs.twimg.com/amplify_video_thumb/1897792742446567424/img/LWEQxYG3TBtnz5kN.jpg",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Liftoff of Starship!",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1897792820242792942"
+            }
+          ],
+          "videoUrl": "https://video.twimg.com/amplify_video/1897792742446567424/vid/avc1/1280x720/b0l5lQKPwT5noBGk.mp4",
+          "durationSec": 33
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "Mechazilla has caught the Super Heavy booster!",
+          "role": "catch video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1897794546781532408",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/1897794477990817793/img/ffbQr6DO31GRH300.jpg",
+          "poster": "https://pbs.twimg.com/amplify_video_thumb/1897794477990817793/img/ffbQr6DO31GRH300.jpg",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Mechazilla has caught the Super Heavy booster!",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1897794546781532408"
+            }
+          ],
+          "videoUrl": "https://video.twimg.com/amplify_video/1897794477990817793/vid/avc1/1280x720/a1pSgUErnp811DRA.mp4",
+          "durationSec": 49
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "Super Heavy catch on Flight 8",
+          "role": "catch video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1898513049931383004",
+          "directUrl": "https://pbs.twimg.com/ext_tw_video_thumb/1898512942947352576/pu/img/Jj1VuUI7uHw8QtWv.jpg",
+          "poster": "https://pbs.twimg.com/ext_tw_video_thumb/1898512942947352576/pu/img/Jj1VuUI7uHw8QtWv.jpg",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Super Heavy catch on Flight 8",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1898513049931383004"
+            }
+          ],
+          "videoUrl": "https://video.twimg.com/ext_tw_video/1898512942947352576/pu/vid/avc1/1280x720/jU5TN3zVfp-a_PGX.mp4",
+          "durationSec": 40
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "View under the launch mount — 33 Raptors ignite (Flight 8)",
+          "role": "liftoff video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1898805142868357240",
+          "directUrl": "https://pbs.twimg.com/media/GlnpFsOagAAkYz6.jpg",
+          "poster": "https://pbs.twimg.com/media/GlnpFsOagAAkYz6.jpg",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: View under the launch mount — 33 Raptors ignite (Flight 8)",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1898805142868357240"
+            }
+          ],
+          "videoUrl": "https://video.twimg.com/amplify_video/1898804705633136640/vid/avc1/1280x720/xY15AAefszDyEbt7.mp4",
+          "durationSec": 87
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "Liftoff of Flight 8 (tower view)",
+          "role": "liftoff video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1898512022951874665",
+          "directUrl": "https://pbs.twimg.com/ext_tw_video_thumb/1898511815107342336/pu/img/UpTGFkGVXsyNWW7M.jpg",
+          "poster": "https://pbs.twimg.com/ext_tw_video_thumb/1898511815107342336/pu/img/UpTGFkGVXsyNWW7M.jpg",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Liftoff of Flight 8 (tower view)",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1898512022951874665"
+            }
+          ],
+          "videoUrl": "https://video.twimg.com/ext_tw_video/1898511815107342336/pu/vid/avc1/1280x720/YwC9eUnQFY7DGcbg.mp4",
+          "durationSec": 27
         }
       ],
       "imagesNote": null,
@@ -6161,6 +6977,90 @@
         {
           "file": null,
           "hotlink": true,
+          "caption": "Starship and Super Heavy moved to the pad for Flight 9",
+          "role": "rollout",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1926787476930068573",
+          "directUrl": "https://pbs.twimg.com/media/Gr1S7epXcAAE2dy.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Moved to the launch pad for Flight 9",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1926787476930068573"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Flight 9 vehicles at the orbital pad",
+          "role": "preflight",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1926787476930068573",
+          "directUrl": "https://pbs.twimg.com/media/Gr1S8RSXgAAzRZx.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Moved to the launch pad for Flight 9",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1926787476930068573"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Starship stacked for Flight 9",
+          "role": "stack",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1927062575474233441",
+          "directUrl": "https://pbs.twimg.com/media/Gr5M8RCXkAE4IUn.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Starship stacked for flight",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1927062575474233441"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Another stack view ahead of Flight 9",
+          "role": "stack",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1927062575474233441",
+          "directUrl": "https://pbs.twimg.com/media/Gr5M9OZWsAAsNl8.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Starship stacked for flight",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1927062575474233441"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
           "caption": "Liftoff and ascent on Flight 9 (SpaceX photo; post: \"Starship’s ninth flight test marked a major milestone for reuse with the first flight-proven Super Heavy booster launching from Starbase, an\")",
           "role": "liftoff/ascent",
           "credit": "© SpaceX",
@@ -6176,6 +7076,182 @@
               "title": "@SpaceX post on X",
               "site": "X (@SpaceX)",
               "href": "https://x.com/SpaceX/status/1927567126224593279"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Flight 9 liftoff — first flight-proven Super Heavy reuse",
+          "role": "liftoff",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1927567126224593279",
+          "directUrl": "https://pbs.twimg.com/media/GsAXstBWUAAyLYN.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Flight 9 milestone for reuse",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1927567126224593279"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Flight 9 ascent",
+          "role": "ascent",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1927567126224593279",
+          "directUrl": "https://pbs.twimg.com/media/GsAXst1WAAAtXRs.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Flight 9 milestone for reuse",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1927567126224593279"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Starship in space on Flight 9",
+          "role": "coast",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1928826217853235394",
+          "directUrl": "https://pbs.twimg.com/media/GsSRLsFaMAIS3_l.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Starship in space",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1928826217853235394"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Another view of Starship in space (Flight 9)",
+          "role": "coast",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1928826217853235394",
+          "directUrl": "https://pbs.twimg.com/media/GsSRKRmaMAE99nd.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Starship in space",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1928826217853235394"
+            }
+          ]
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "Liftoff of Starship!",
+          "role": "liftoff video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1927509601001341037",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/1927509523129860096/img/E_zGGzoBqSCyU21Z.jpg",
+          "poster": "https://pbs.twimg.com/amplify_video_thumb/1927509523129860096/img/E_zGGzoBqSCyU21Z.jpg",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Liftoff of Starship!",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1927509601001341037"
+            }
+          ],
+          "videoUrl": "https://video.twimg.com/amplify_video/1927509523129860096/vid/avc1/1280x720/7BNhn0FbEgcmZO9H.mp4",
+          "durationSec": 51
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "Flight 9 — first flight-proven Super Heavy, ship back to space",
+          "role": "ascent video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1927567126224593279",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/1927566644986945536/img/9AlWVmGWDIfRTgKn.jpg",
+          "poster": "https://pbs.twimg.com/amplify_video_thumb/1927566644986945536/img/9AlWVmGWDIfRTgKn.jpg",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Flight 9 — first flight-proven Super Heavy, ship back to spa",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1927567126224593279"
+            }
+          ],
+          "videoUrl": "https://video.twimg.com/amplify_video/1927566644986945536/vid/avc1/1280x720/hT2ujE_KydMeo_Vl.mp4",
+          "durationSec": 73
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Ship coast view from Flight 9",
+          "role": "coast",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1928826217853235394",
+          "directUrl": "https://pbs.twimg.com/media/GsSRMmqaMAIG5cr.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Starship in space",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1928826217853235394"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Vertical view from Starship on Flight 9",
+          "role": "coast",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1928826217853235394",
+          "directUrl": "https://pbs.twimg.com/media/GsSRNQUbIAASPS_.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Starship in space",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1928826217853235394"
             }
           ]
         }
@@ -6805,6 +7881,320 @@
               "href": "https://x.com/SpaceX/status/1960535661984817592"
             }
           ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Flight 10 ascent",
+          "role": "ascent",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1960535661984817592",
+          "directUrl": "https://pbs.twimg.com/media/GzU2ejJXkAEpvnX.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Flight 10 pushed the limits",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1960535661984817592"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Flight 10 climbing away",
+          "role": "ascent",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1960535661984817592",
+          "directUrl": "https://pbs.twimg.com/media/GzU2fVYWwAA972x.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Flight 10 pushed the limits",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1960535661984817592"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Liftoff of Super Heavy on Flight 10",
+          "role": "liftoff",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1960786031567102283",
+          "directUrl": "https://pbs.twimg.com/media/GzYcJm1bIAAu8OZ.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Liftoff of Super Heavy on Flight 10",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1960786031567102283"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Flight 10 plume from the pad",
+          "role": "liftoff",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1960786031567102283",
+          "directUrl": "https://pbs.twimg.com/media/GzYcJmva4AUkxX0.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Liftoff of Super Heavy on Flight 10",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1960786031567102283"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Landing burn and splashdown still (Flight 10)",
+          "role": "landing",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1961165064666312956",
+          "directUrl": "https://pbs.twimg.com/media/Gzdw3Y5WIAALuh7.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Landing burn and splashdown on Flight 10",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1961165064666312956"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Ship after reentry stress test (Flight 10)",
+          "role": "reentry",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1961165064666312956",
+          "directUrl": "https://pbs.twimg.com/media/Gzdw3ZCW4AE_T_k.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Landing burn and splashdown on Flight 10",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1961165064666312956"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Onboard view from Flight 10",
+          "role": "coast",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1962961587049832623",
+          "directUrl": "https://pbs.twimg.com/media/Gz3W4uxWMAAZdRd.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Views from onboard Flight 10",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1962961587049832623"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Another onboard view from Flight 10",
+          "role": "coast",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1962961587049832623",
+          "directUrl": "https://pbs.twimg.com/media/Gz3W6KZXQAASHgg.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Views from onboard Flight 10",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1962961587049832623"
+            }
+          ]
+        },
+        {
+          "file": null,
+          "hotlink": true,
+          "caption": "Ship flap / hull view on Flight 10",
+          "role": "coast",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1962961587049832623",
+          "directUrl": "https://pbs.twimg.com/media/Gz3W7UYWsAAYcrb.jpg?name=large",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Views from onboard Flight 10",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1962961587049832623"
+            }
+          ]
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "Liftoff of Starship!",
+          "role": "liftoff video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1960485359239774487",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/1960485282903474176/img/9qe3xppX4EBmsjmR.jpg",
+          "poster": "https://pbs.twimg.com/amplify_video_thumb/1960485282903474176/img/9qe3xppX4EBmsjmR.jpg",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Liftoff of Starship!",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1960485359239774487"
+            }
+          ],
+          "videoUrl": "https://video.twimg.com/amplify_video/1960485282903474176/vid/avc1/1280x720/72eRIbW8W1w44A8o.mp4",
+          "durationSec": 44
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "Starlink simulator deploy — open the pod bay door, HAL",
+          "role": "deploy video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1960490432715993216",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/1960490322850377729/img/JLRQ6cBTKNE3pAVR.jpg",
+          "poster": "https://pbs.twimg.com/amplify_video_thumb/1960490322850377729/img/JLRQ6cBTKNE3pAVR.jpg",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Starlink simulator deploy — open the pod bay door, HAL",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1960490432715993216"
+            }
+          ],
+          "videoUrl": "https://video.twimg.com/amplify_video/1960490322850377729/vid/avc1/1280x720/IvBi1Pl-gkhgqo1E.mp4",
+          "durationSec": 55
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "Starship ignited a Raptor while in space (Flight 10)",
+          "role": "coast video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1960495065081503769",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/1960494921120444416/img/q4j2IVh355i43MsQ.jpg",
+          "poster": "https://pbs.twimg.com/amplify_video_thumb/1960494921120444416/img/q4j2IVh355i43MsQ.jpg",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Starship ignited a Raptor while in space (Flight 10)",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1960495065081503769"
+            }
+          ],
+          "videoUrl": "https://video.twimg.com/amplify_video/1960494921120444416/vid/avc1/1280x720/lifsqRpQrWyRbfmO.mp4",
+          "durationSec": 37
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "Splashdown confirmed — Flight 10",
+          "role": "splashdown video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1960502324050133328",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/1960502180693037056/img/CI8w-MGJNYdra0tE.jpg",
+          "poster": "https://pbs.twimg.com/amplify_video_thumb/1960502180693037056/img/CI8w-MGJNYdra0tE.jpg",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Splashdown confirmed — Flight 10",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1960502324050133328"
+            }
+          ],
+          "videoUrl": "https://video.twimg.com/amplify_video/1960502180693037056/vid/avc1/1280x720/5JElB7OE6bQqBR2s.mp4",
+          "durationSec": 47
+        },
+        {
+          "type": "video",
+          "hotlink": true,
+          "file": null,
+          "caption": "Landing burn and splashdown from the recovery team",
+          "role": "landing video",
+          "credit": "© SpaceX",
+          "license": "All rights reserved (used with credit, personal site)",
+          "licenseUrl": null,
+          "pageUrl": "https://x.com/SpaceX/status/1961165064666312956",
+          "directUrl": "https://pbs.twimg.com/amplify_video_thumb/1961160144303075328/img/9HUVBtPf0HMeMZ6o.jpg",
+          "poster": "https://pbs.twimg.com/amplify_video_thumb/1961160144303075328/img/9HUVBtPf0HMeMZ6o.jpg",
+          "width": null,
+          "height": null,
+          "bytes": null,
+          "sources": [
+            {
+              "title": "@SpaceX: Landing burn and splashdown from the recovery team",
+              "site": "X (@SpaceX)",
+              "href": "https://x.com/SpaceX/status/1961165064666312956"
+            }
+          ],
+          "videoUrl": "https://video.twimg.com/amplify_video/1961160144303075328/vid/avc1/1280x720/Phqlm6nAB6XfRG-J.mp4",
+          "durationSec": 32
         }
       ],
       "imagesNote": null,
