@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Box 3-rekenvoorbeeld</title>
+  <meta name="description" content="Rekenvoorbeeld voor box 3: het forfait van 2026 met tegenbewijs, naast het voorstel voor werkelijk rendement. Inclusief verliesjaren. Geen belastingadvies.">
+  <link rel="stylesheet" href="styles.css?v=20261115">
+</head>
+<body>
+  <a class="skip" href="#main">Naar de inhoud</a>
+  <div class="wrap">
+    <a class="back" href="../index.html">Alle pagina's</a>
+    <header>
+      <h1>Box 3: forfait en het voorgestelde stelsel</h1>
+      <p class="lede">Een vermogen, jaar voor jaar, onder twee regels. Links het forfaitaire stelsel van 2026, inclusief tegenbewijs. Rechts het voorstel voor werkelijk rendement dat de Tweede Kamer op 12 november 2026 heeft aangenomen. De Eerste Kamer heeft nog niet beslist. Tot invoering blijft het forfait gelden.</p>
+      <p class="disclaimer" id="top-disclaimer">Dit is een rekenvoorbeeld, geen belastingadvies en geen aangifte. Kosten, groene beleggingen, vastgoed, persoonsgebonden aftrek en indexatie zitten er niet in. De belasting gaat in het model aan het eind van het jaar van het vermogen af.</p>
+      <p class="muted small" id="updated"></p>
+      <div class="pills" id="pills"></div>
+    </header>
+
+    <main id="main">
+      <section class="panel" aria-labelledby="calc-title">
+        <h2 id="calc-title">Rekenmodule</h2>
+        <div class="tabs" role="tablist" aria-label="Soort vermogen">
+          <button type="button" role="tab" id="tab-beleggen" aria-controls="panel-beleggen" aria-selected="true">Beleggen</button>
+          <button type="button" role="tab" id="tab-sparen" aria-controls="panel-sparen" aria-selected="false">Sparen</button>
+          <button type="button" role="tab" id="tab-crypto" aria-controls="panel-crypto" aria-selected="false">Crypto</button>
+          <button type="button" role="tab" id="tab-mix" aria-controls="panel-mix" aria-selected="false">Mix</button>
+        </div>
+
+        <div role="tabpanel" id="panel-beleggen" aria-labelledby="tab-beleggen">
+          <p>Aandelen en ETF's. In het voorstel telt koerswinst bij verkoop en dividend in het jaar van ontvangst. Kies jaarlijks verkopen om een volledig gerealiseerde winst te zien, of aanhouden om de koerswinst tot het laatste jaar uit te stellen.</p>
+          <div class="presets">
+            <button type="button" data-preset="flat15">Artikelvoorbeeld: € 100.000 en 15%</button>
+            <button type="button" data-preset="gainThenLoss">Eerst +42,9%, dan −30%</button>
+            <button type="button" data-preset="lossThenGain">Eerst −30%, dan +42,9%</button>
+            <button type="button" data-preset="holdRoundTrip">Zelfde koersen, aanhouden</button>
+          </div>
+          <div class="fields">
+            <label class="field">Startvermogen op 1 januari <input id="b-start" inputmode="decimal" value="100000" autocomplete="off"></label>
+            <label class="field">Jaarlijkse inleg, op 1 januari <input id="b-inleg" inputmode="decimal" value="0" autocomplete="off"></label>
+            <label class="field">Dividend per jaar, percentage van de waarde op 1 januari <input id="b-div" inputmode="decimal" value="0" autocomplete="off"></label>
+            <label class="field">Aantal jaren <input id="b-years" inputmode="numeric" value="1" autocomplete="off"></label>
+            <label class="field">Verkoop <select id="b-mode"><option value="sell">Elk jaar verkopen en opnieuw kopen</option><option value="hold">Aanhouden, verkopen in het laatste jaar</option></select></label>
+            <label class="field check"><input id="b-partner" type="checkbox"> Fiscale partner het hele jaar</label>
+            <label class="field">Percentage voor nieuwe jaren <input id="b-uniform" inputmode="decimal" value="15" autocomplete="off"></label>
+            <div class="field"><button type="button" class="fill" id="b-fill">Zet alle jaren op dit percentage</button></div>
+          </div>
+          <div id="b-year-list" class="years"></div>
+        </div>
+
+        <div role="tabpanel" id="panel-sparen" aria-labelledby="tab-sparen" hidden>
+          <p>Spaartegoeden. Het forfait van 2026 rekent voorlopig met 1,28% over de stand op 1 januari. In het voorstel telt de rente die u hier invult, elk jaar. Banktegoeden blijven in de novelle tijdelijk onder de vermogensaanwasbelasting.</p>
+          <div class="fields">
+            <label class="field">Spaartegoed op 1 januari <input id="s-start" inputmode="decimal" value="150000" autocomplete="off"></label>
+            <label class="field">Jaarlijkse inleg, op 1 januari <input id="s-inleg" inputmode="decimal" value="0" autocomplete="off"></label>
+            <label class="field">Aantal jaren <input id="s-years" inputmode="numeric" value="5" autocomplete="off"></label>
+            <label class="field check"><input id="s-partner" type="checkbox"> Fiscale partner het hele jaar</label>
+            <label class="field">Rente voor nieuwe jaren, in procenten <input id="s-uniform" inputmode="decimal" value="1,28" autocomplete="off"></label>
+            <div class="field"><button type="button" class="fill" id="s-fill">Zet alle jaren op dit percentage</button></div>
+          </div>
+          <div id="s-year-list" class="years"></div>
+        </div>
+
+        <div role="tabpanel" id="panel-crypto" aria-labelledby="tab-crypto" hidden>
+          <p>Directe crypto, bijvoorbeeld in een eigen wallet. De novelle laat die tijdelijk onder de vermogensaanwasbelasting vallen. De koersmutatie van het jaar is dan belast, ook als u niet verkoopt. Een daling boven € 500 kan als verlies vooruit, niet terug. Crypto via een product dat als financieel instrument kwalificeert, volgt in het voorstel de verkoopregel van aandelen. Dit vak rekent de directe variant.</p>
+          <div class="fields">
+            <label class="field">Startwaarde op 1 januari <input id="c-start" inputmode="decimal" value="20000" autocomplete="off"></label>
+            <label class="field">Jaarlijkse inleg, op 1 januari <input id="c-inleg" inputmode="decimal" value="0" autocomplete="off"></label>
+            <label class="field">Aantal jaren <input id="c-years" inputmode="numeric" value="4" autocomplete="off"></label>
+            <label class="field check"><input id="c-partner" type="checkbox"> Fiscale partner het hele jaar</label>
+            <label class="field">Percentage voor nieuwe jaren <input id="c-uniform" inputmode="decimal" value="0" autocomplete="off"></label>
+            <div class="field"><button type="button" class="fill" id="c-fill">Zet alle jaren op dit percentage</button></div>
+          </div>
+          <div id="c-year-list" class="years"></div>
+        </div>
+
+        <div role="tabpanel" id="panel-mix" aria-labelledby="tab-mix" hidden>
+          <p>Eén box 3-resultaat over sparen, beleggen en crypto samen. Eén heffingsvrij resultaat, één verliesvoorraad en één tariefschijf. De schuiven sommeren tot 100%. Een schuld is optioneel: in het forfait telt alleen het deel boven de drempel, tegen het forfaitaire percentage. In het voorstel telt de rente die u invult, zonder drempel.</p>
+          <div class="fields">
+            <label class="field">Totaal vermogen op 1 januari, zonder de schuld <input id="m-total" inputmode="decimal" value="100000" autocomplete="off"></label>
+            <label class="field">Jaarlijkse inleg, verdeeld volgens de schuiven <input id="m-inleg" inputmode="decimal" value="0" autocomplete="off"></label>
+            <label class="field">Schuld <input id="m-debt" inputmode="decimal" value="0" autocomplete="off"></label>
+            <label class="field">Rente op de schuld, procenten per jaar <input id="m-debt-rate" inputmode="decimal" value="4" autocomplete="off"></label>
+            <label class="field">Dividend op het beleggingsdeel, procenten <input id="m-div" inputmode="decimal" value="0" autocomplete="off"></label>
+            <label class="field">Beleggingen <select id="m-mode"><option value="sell">Elk jaar verkopen</option><option value="hold">Aanhouden tot het laatste jaar</option></select></label>
+            <label class="field">Aantal jaren <input id="m-years" inputmode="numeric" value="5" autocomplete="off"></label>
+            <label class="field check"><input id="m-partner" type="checkbox"> Fiscale partner het hele jaar</label>
+          </div>
+          <div class="alloc" id="alloc">
+            <div>
+              <div class="alloc-head"><span>Sparen</span><strong id="m-bank-label">40%</strong></div>
+              <input id="m-bank" type="range" min="0" max="100" value="40" aria-label="Aandeel sparen">
+            </div>
+            <div>
+              <div class="alloc-head"><span>Beleggen</span><strong id="m-invest-label">40%</strong></div>
+              <input id="m-invest" type="range" min="0" max="100" value="40" aria-label="Aandeel beleggen">
+            </div>
+            <div>
+              <div class="alloc-head"><span>Crypto</span><strong id="m-crypto-label">20%</strong></div>
+              <input id="m-crypto" type="range" min="0" max="100" value="20" aria-label="Aandeel crypto">
+            </div>
+          </div>
+          <div id="m-year-list" class="years"></div>
+        </div>
+
+        <div id="results" aria-live="polite"></div>
+      </section>
+
+      <section class="section" id="check" aria-labelledby="check-title"></section>
+
+      <section class="section" aria-labelledby="method-title">
+        <h2 id="method-title">Hoe de vergelijking rekent</h2>
+        <div class="panel">
+          <h3>Huidig stelsel, belastingjaar 2026</h3>
+          <p>De peildatum is 1 januari, na de inleg van dat jaar. Banktegoeden maal het percentage voor banktegoeden, overige bezittingen — aandelen én cryptovaluta — maal het percentage voor overige bezittingen. Van een schuld gaat eerst de drempel af. Het heffingsvrij vermogen gaat af van de rendementsgrondslag, niet van het rendement zelf. Over het voordeel dat dan overblijft, staat het tarief van 36%.</p>
+          <p>Daarnaast rekent de pagina de tegenbewijsregeling. Het werkelijke rendement is rente, dividend, koerswinst en koersverlies, ook als u niet verkoopt, min de rente op schulden. Daarop zit geen heffingsvrij vermogen. Is dat rendement negatief, dan wordt het op nul gezet. Een verlies gaat niet mee naar een volgend jaar. De belasting is het lagere van forfait en tegenbewijs. Tegenbewijs verhoogt de aanslag niet.</p>
+          <h3>Voorstel, nog niet definitief</h3>
+          <p>Het resultaat is de rente, het dividend, de belaste koersmutatie en min de rente op schulden. Is dat resultaat positief, dan gaat eerst het heffingsvrije resultaat eraf, tot nul. Een niet gebruikte vrijstelling wordt geen verlies. Daarna gaan openstaande verliezen eraf. Over het bedrag tot de schijfgrens staat 35,5%, daarboven 38,5%. Die tarieven en de grens van € 60.000 komen uit het amendement dat de Tweede Kamer heeft aangenomen. Zij zijn nog geen wet.</p>
+          <p>Is het resultaat negatief en groter dan € 500, dan is het verrekenbare verlies het bedrag boven die drempel. De memorie van toelichting trekt de drempel af: € 19.090 negatief wordt € 18.590 verlies. Verrekening kan alleen met een later jaar, niet met een jaar waarin al belasting is betaald. Eerst winst en daarna verlies laat de eerdere aanslag staan. Het openstaande verlies is geen geld en geen teruggave.</p>
+          <p>Bij aandelen en ETF's belast het voorstel de koerswinst bij verkoop. Uitstel is geen vrijstelling: bij één verkoop kan winst van meerdere jaren in hetzelfde jaar vallen, en dus in de hogere schijf. Dividend telt wel elk jaar. De verkrijgingsprijs van wat iemand op 1 januari 2029 al heeft, is de waarde op die dag. Deze module begint de kostprijs bij het startvermogen en haalt eerdere koerswinst dus niet alsnog naar binnen.</p>
+          <p>Bij directe crypto belast het voorstel de jaarlijkse waardeverandering, ook zonder verkoop. De belasting in dit model wordt uit het vermogen betaald. Daarvoor kan een verkoop nodig zijn, of ander geld. Dat is een liquiditeitsgevolg, geen bijzaak. De memorie noemt een vervolgstap naar vermogenswinst, verwacht vanaf 2030. Die stap is nog geen uitgewerkt wetsartikel in deze parameters.</p>
+          <h3>Wat de pagina vastzet</h3>
+          <ul>
+            <li>De inleg staat op 1 januari en telt mee voor de peildatum. Zij rendeert het hele jaar mee.</li>
+            <li>Belasting en schuldrente gaan aan het eind van het jaar van het vermogen af: eerst spaargeld, dan crypto, dan beleggingen.</li>
+            <li>Koersrendement is de koersmutatie. Dividend komt erbovenop en wordt herbelegd. Bij een herbeleggende ETF hoort het totale rendement in het koersveld en dividend op nul.</li>
+            <li>De percentages uit het databestand worden elk jaar herhaald. Er is geen indexatie en geen overgang van 2026 naar 2029 in de kalender. Het is dezelfde vergelijking als een rekenvoorbeeld dat de regels constant houdt.</li>
+            <li>Bij een fiscale partner gebruikt de pagina het gezamenlijke heffingsvrije vermogen en het gezamenlijke heffingsvrije resultaat, één verliesdrempel, en twee tariefschijven. Die twee schijven volgen uit toerekening van het gezamenlijke inkomen. Het amendement noemt de partnergrens niet apart. In <code>data.json</code> zet <code>schijf_per_persoon</code> die aanname aan of uit.</li>
+            <li>De Belastingdienst rondt in gepubliceerde voorbeelden het aandeel in de rendementsgrondslag af op twee decimalen en tussentijdse bedragen op hele euro's. Deze pagina rondt tussentijds niet. Bij € 150.000 spaargeld in het voorbeeld van de Belastingdienst staat daardoor € 417; zonder die afronding is het € 417,68.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="news-title">
+        <h2 id="news-title">Laatste ontwikkelingen</h2>
+        <div class="news" id="news"></div>
+      </section>
+
+      <section class="section" aria-labelledby="sources-title">
+        <h2 id="sources-title">Bronnen</h2>
+        <p class="muted">Alleen primaire stukken: Belastingdienst, Kamerstukken, memorie van toelichting en het stemmingsoverzicht. Het rekenvoorbeeld met € 100.000 is de controle op de som, niet de bron van de tarieven.</p>
+        <ul class="docs" id="docs"></ul>
+        <details>
+          <summary>Alle parameters uit het databestand</summary>
+          <div class="param-list" id="params"></div>
+        </details>
+      </section>
+    </main>
+    <footer class="site">
+      <p>Rekenvoorbeeld, geen belastingadvies. De parameters staan in <code>data.json</code> en kunnen worden bijgewerkt zonder de rekenmodule te wijzigen.</p>
+    </footer>
+  </div>
+  <script src="calc.js?v=20261115b"></script>
+  <script src="app.js?v=20261115b"></script>
+</body>
+</html>
