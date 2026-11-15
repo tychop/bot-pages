@@ -209,15 +209,7 @@
 
   function liftoffInstant(flight) {
     if (!flight || flight.result !== "Upcoming") return null;
-    var text = flight.dateLocal || "";
-    if (/not announced|tbd|tba|unknown/i.test(text) && !/\d{1,2}:\d{2}\s*(CET|CEST)/i.test(text)) return null;
-    var match = text.match(/(\d{1,2})\s+([A-Za-z]{3,9})\s+(\d{4}),\s*(\d{1,2}):(\d{2})\s*(CET|CEST)/);
-    if (!match) return null;
-    var month = MONTHS[match[2].slice(0, 3).toLowerCase()];
-    if (month == null) return null;
-    var offset = match[6] === "CEST" ? 2 : 1;
-    var utc = Date.UTC(+match[3], month, +match[1], +match[4] - offset, +match[5]);
-    return isNaN(utc) ? null : utc;
+    return launchInstantMs(flight);
   }
 
   function listPhrase(nums) {
@@ -461,14 +453,171 @@
     return '<section class="block gallery"><h4>' + heading + '</h4><div class="gallery-grid">' + figures + "</div></section>";
   }
 
-  function timelineHtml(detail) {
+  /**
+   * Parse SpaceX-style T+ clocks to seconds.
+   * Three-part = h:mm:ss. Two-part defaults to mm:ss; when hintSec (planned /
+   * sortSec) is much closer to an h:mm reading (e.g. T+~21:38 vs T+21:35:57),
+   * use hours:minutes instead.
+   */
+  function parseTPlusSec(value, hintSec) {
+    if (value == null || value === "") return null;
+    var t = String(value).trim();
+    var m3 = /^T\+\s*~?\s*(\d+):(\d+):(\d+)\s*$/i.exec(t);
+    if (m3) return Number(m3[1]) * 3600 + Number(m3[2]) * 60 + Number(m3[3]);
+    var m2 = /^T\+\s*~?\s*(\d+):(\d+)\s*$/i.exec(t);
+    if (m2) {
+      var a = Number(m2[1]);
+      var b = Number(m2[2]);
+      var asMmSs = a * 60 + b;
+      var asHhMm = a * 3600 + b * 60;
+      if (hintSec != null && isFinite(hintSec) && a < 48 &&
+          Math.abs(asHhMm - hintSec) + 60 < Math.abs(asMmSs - hintSec)) {
+        return asHhMm;
+      }
+      return asMmSs;
+    }
+    return null;
+  }
+
+  function pad2(n) {
+    return (n < 10 ? "0" : "") + n;
+  }
+
+  /** Format seconds since liftoff as T+… */
+  function formatTPlus(sec, opts) {
+    opts = opts || {};
+    if (sec == null || !isFinite(sec) || sec < 0) return "—";
+    var prefix = opts.approx ? "T+~" : "T+";
+    var whole = Math.round(sec);
+    if (whole < 3600) {
+      return prefix + pad2(Math.floor(whole / 60)) + ":" + pad2(whole % 60);
+    }
+    var h = Math.floor(whole / 3600);
+    var m = Math.floor((whole % 3600) / 60);
+    var s = whole % 60;
+    if (opts.omitSeconds || s === 0) return prefix + h + ":" + pad2(m);
+    return prefix + h + ":" + pad2(m) + ":" + pad2(s);
+  }
+
+  /** Launch instant (ms UTC) from dateLocal CET/CEST. */
+  function launchInstantMs(flight) {
+    if (!flight) return null;
+    var text = flight.dateLocal || "";
+    if (/not announced|tbd|tba|unknown/i.test(text) && !/\d{1,2}:\d{2}\s*(CET|CEST)/i.test(text)) return null;
+    var match = text.match(/(\d{1,2})\s+([A-Za-z]{3,9})\s+(\d{4}),\s*(\d{1,2}):(\d{2})\s*(CET|CEST)/);
+    if (!match) return null;
+    var month = MONTHS[match[2].slice(0, 3).toLowerCase()];
+    if (month == null) return null;
+    var offset = match[6] === "CEST" ? 2 : 1;
+    var utc = Date.UTC(+match[3], month, +match[1], +match[4] - offset, +match[5]);
+    return isNaN(utc) ? null : utc;
+  }
+
+  /** Parse timeline local clock to UTC ms. */
+  function localTimelineInstantMs(value, launchMs, flight) {
+    if (value == null || value === "" || launchMs == null) return null;
+    var t = String(value).trim();
+    if (!t || /^T\+/i.test(t) || /^(Passed|Go|Not taken|Nominal)/i.test(t)) return null;
+    var cleaned = t.replace(/^(about|approx\.?|~)\s+/i, "");
+    var m = /^(?:(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun)\s+)?(\d{1,2})\s+([A-Za-z]{3,9})(?:\s+(\d{4}))?,?\s+(\d{1,2}):(\d{2})(?:\s*(CET|CEST))?\s*$/i.exec(cleaned);
+    if (!m) return null;
+    var month = MONTHS[m[2].slice(0, 3).toLowerCase()];
+    if (month == null) return null;
+    var launchYear = null;
+    var dy = String((flight && flight.dateLocal) || "").match(/\b(20\d{2})\b/);
+    if (dy) launchYear = +dy[1];
+    var year = m[3] ? +m[3] : launchYear;
+    if (year == null) return null;
+    var tz = (m[6] || "CET").toUpperCase();
+    var offset = tz === "CEST" ? 2 : 1;
+    var instant = Date.UTC(year, month, +m[1], +m[4] - offset, +m[5]);
+    if (isNaN(instant)) return null;
+    if (instant < launchMs - 120000) {
+      instant = Date.UTC(year + 1, month, +m[1], +m[4] - offset, +m[5]);
+    }
+    if (isNaN(instant) || instant < launchMs - 120000) return null;
+    return instant;
+  }
+
+  function isApproxClock(value) {
+    return value != null && /~|about|approx/i.test(String(value));
+  }
+
+  function normalizeTPlusLabel(value) {
+    var t = String(value == null ? "" : value).trim();
+    if (!t) return "—";
+    var approx = isApproxClock(t);
+    var body = t.replace(/^T\+\s*~?\s*/i, "");
+    return (approx ? "T+~" : "T+") + body;
+  }
+
+  /**
+   * Single T+ label + sort key for a timeline row.
+   * Prefer actual T+, then planned T+, then local/CET→T+ from launch UTC, then sortSec.
+   */
+  function resolveTimelineClock(row, flight) {
+    if (!row) return { label: "—", sortSec: 1e12, approx: false };
+    if (row.sortSec === -1) return { label: "—", sortSec: -1, approx: false };
+
+    var launchMs = launchInstantMs(flight);
+    var actual = row.actual;
+    var planned = row.planned;
+    var plannedT = parseTPlusSec(planned);
+    var hint = plannedT != null ? plannedT
+      : (row.sortSec != null && row.sortSec >= 0 ? row.sortSec : null);
+    var actualT = parseTPlusSec(actual, hint);
+
+    // Planned T+ wins for sort + label when present (avoids T+~21:38 → mm:ss
+    // traps and keeps start/shutdown labels in the same clock family).
+    if (plannedT != null) {
+      return {
+        label: normalizeTPlusLabel(planned),
+        sortSec: plannedT,
+        approx: isApproxClock(planned),
+        title: actual || undefined,
+      };
+    }
+
+    if (actualT != null) {
+      return {
+        label: normalizeTPlusLabel(actual),
+        sortSec: actualT,
+        approx: isApproxClock(actual),
+      };
+    }
+
+    var localMs = localTimelineInstantMs(actual, launchMs, flight);
+    if (localMs != null && launchMs != null) {
+      var computed = Math.round((localMs - launchMs) / 1000);
+      var approx = isApproxClock(actual);
+      return {
+        label: formatTPlus(computed, { approx: approx, omitSeconds: true }),
+        sortSec: computed,
+        approx: approx,
+        title: actual,
+      };
+    }
+
+    if (row.sortSec != null && isFinite(row.sortSec) && row.sortSec >= 0) {
+      return { label: formatTPlus(row.sortSec, {}), sortSec: row.sortSec, approx: false };
+    }
+    return { label: "—", sortSec: 1e12, approx: false };
+  }
+
+  function timelineHtml(detail, flight) {
     var items = detail && detail.timeline;
     if (!items || !items.length) return "";
-    var sorted = items.slice().sort(function (a, b) {
-      return (a.sortSec == null ? 1e12 : a.sortSec) - (b.sortSec == null ? 1e12 : b.sortSec);
+    var enriched = items.map(function (row) {
+      return { row: row, clock: resolveTimelineClock(row, flight) };
+    });
+    enriched.sort(function (a, b) {
+      if (a.clock.sortSec !== b.clock.sortSec) return a.clock.sortSec - b.clock.sortSec;
+      return String(a.row.event || "").localeCompare(String(b.row.event || ""));
     });
     var expandable = 0;
-    var rows = sorted.map(function (row, index) {
+    var rows = enriched.map(function (item, index) {
+      var row = item.row;
+      var clock = item.clock;
       var note = row.note ? String(row.note).trim() : "";
       var hasDetail = !!note;
       if (hasDetail) expandable += 1;
@@ -477,14 +626,14 @@
       var cls = "tl-row" + (isAnomaly ? " is-anomaly" : "") + (hasDetail ? " has-detail" : " is-static");
       var statusCls = "tl-status" + (isAnomaly ? " is-anomaly" : status === "ok" ? " is-ok" : "");
       var statusText = isAnomaly ? "anomaly" : status === "ok" ? "ok" : status || "—";
+      var timeTitle = clock.title ? ' title="' + esc(clock.title) + '"' : "";
       var summaryInner =
-        '<span class="tl-planned">' + esc(row.planned || "—") + "</span>" +
-        '<span class="tl-actual">' + esc(row.actual || "—") + "</span>" +
+        '<span class="tl-time"' + timeTitle + ">" + esc(clock.label) + "</span>" +
         '<span class="tl-title">' + esc(row.event || "Event") + "</span>" +
         '<span class="' + statusCls + '">' + esc(statusText) + "</span>";
       var summary;
       if (hasDetail) {
-        var panelId = "tl-detail-" + (detail.n || "x") + "-" + index;
+        var panelId = "tl-detail-" + (detail.n || (flight && flight.n) || "x") + "-" + index;
         summary =
           '<button type="button" class="tl-summary" aria-expanded="false" aria-controls="' + panelId + '">' +
           summaryInner +
@@ -499,8 +648,8 @@
       ? '<button type="button" class="tl-expand-all" data-expanded="false">Expand all</button>'
       : "";
     return '<section class="block timeline"><div class="tl-heading"><h4>Mission timeline</h4>' + tools + "</div>" +
-      '<p class="fine">Planned vs actual T+ times. Click a row with a chevron for notes. Anomaly rows stay highlighted.</p>' +
-      '<div class="tl-head" aria-hidden="true"><span>Planned</span><span>Actual</span><span>Event</span><span>Status</span><span></span></div>' +
+      '<p class="fine">Times are T+ from liftoff. Approximate clocks show a leading ~. Click a row with a chevron for notes. Anomaly rows stay highlighted.</p>' +
+      '<div class="tl-head" aria-hidden="true"><span>T+</span><span>Event</span><span>Status</span><span></span></div>' +
       '<ol class="tl-list">' + rows + "</ol></section>";
   }
 
@@ -740,7 +889,7 @@
     var open = isOpen(flight.n);
     return (open ? galleryHtml(detail) : "") +
       firstsHtml(detail, flight) +
-      timelineHtml(detail) +
+      timelineHtml(detail, flight) +
       telemetryHtml(detail) +
       vehicleChangesHtml(detail) +
       anomalyHtml(detail) +
