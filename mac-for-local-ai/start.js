@@ -12,7 +12,7 @@ const tools = [
   { title: "Mac picker for local AI", site: "Filter and compare every config", href: "picker.html" }
 ];
 function App() {
-  return /* @__PURE__ */ h(Page, { title: "Mac for local AI", summary: "Start here: build any current M5-or-newer Mac at Apple NL prices, or compare 128GB deals across Dutch shops." }, /* @__PURE__ */ h(Section, { heading: "Build a Mac" }, /* @__PURE__ */ h(Text, null, "One configurator per product line, with Apple NL prices in EUR incl. VAT as of 14 Nov 2026."), /* @__PURE__ */ h(LinkCards, { links: configurators })), /* @__PURE__ */ h(Section, { heading: "Compare and track" }, /* @__PURE__ */ h(LinkCards, { links: tools })));
+  return /* @__PURE__ */ h(Page, { title: "Mac for local AI", summary: "Start here: build any current M5-or-newer Mac at Apple NL prices, or compare 128GB deals across Dutch shops." }, /* @__PURE__ */ h(Section, { heading: "Build a Mac" }, /* @__PURE__ */ h(Text, null, "One configurator per product line, with Apple NL prices in EUR incl. VAT as of 16 Nov 2026."), /* @__PURE__ */ h(LinkCards, { links: configurators })), /* @__PURE__ */ h(Section, { heading: "Compare and track" }, /* @__PURE__ */ h(LinkCards, { links: tools })));
 }
 export {
   App as default

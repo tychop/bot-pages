@@ -674,14 +674,14 @@ const openBoxStudio = (id, base, memGb, ssdGb, price, newRef, pid, slug, stock) 
 });
 const studioVar = (id) => variants.find((v) => v.id === id);
 const refurbVariants = [
-  openBoxStudio("ob-studio-max40-1tb", studioVar("studio-max40"), 128, 1024, 5989, 6219, "5423", "mac-studio-m5-max-18x-cpu-40x-gpu-128gb-1tb", "listed Nov 3, Op bestelling, expected 18 Nov (in stock on Nov 12); up from €5.889 on Nov 10"),
-  openBoxStudio("ob-studio-max40-2tb", studioVar("studio-max40"), 128, 2048, 6439, 6769, "5424", "mac-studio-m5-max-18x-cpu-40x-gpu-128gb-2tb", "listed Nov 3, expected 24 Dec (was 18 Nov on Nov 12)"),
-  openBoxStudio("ob-studio-ultra30-2tb", studioVar("studio-ultra30"), 256, 2048, 11219, 11599, "5426", "mac-studio-m5-ultra-30x-cpu-64x-gpu-256gb-2tb", "listed Nov 3, expected 22 Feb 2027 (was 23 Nov on Nov 12)"),
-  openBox("ob-mbp14-m5max40-2tb", "mbp14", "14", 2048, 7109, 7709, "5127", "macbook-pro-14-inch-m5-max-18x-cpu-40x-gpu-128gb-2tb-spacezwart", "Op bestelling, expected 5 Dec (in stock on the morning of Nov 11)"),
-  openBox("ob-mbp16-m5max40-2tb", "mbp16", "16", 2048, 7399, 7949, "5077", "macbook-pro-16-inch-m5-max-18x-cpu-40x-gpu-128gb-2tb-spacezwart", "Op bestelling, expected 24 Nov (was 18 Nov on Nov 12)"),
-  openBox("ob-mbp16-m5max40-4tb", "mbp16", "16", 4096, 8499, 9049, "5091", "macbook-pro-16-inch-m5-max-18x-cpu-40x-gpu-128gb-4tb-spacezwart", "new listing Nov 11, Op bestelling, expected 24 Nov (in stock that morning)"),
+  openBoxStudio("ob-studio-max40-1tb", studioVar("studio-max40"), 128, 1024, 5989, 6219, "5423", "mac-studio-m5-max-18x-cpu-40x-gpu-128gb-1tb", "listed Nov 3, in stock again Nov 16, delivery expected 18 Nov; up from €5.889 on Nov 10"),
+  openBoxStudio("ob-studio-max40-2tb", studioVar("studio-max40"), 128, 2048, 6439, 6769, "5424", "mac-studio-m5-max-18x-cpu-40x-gpu-128gb-2tb", "listed Nov 3, expected 28 Dec (was 24 Dec on Nov 13)"),
+  openBoxStudio("ob-studio-ultra30-2tb", studioVar("studio-ultra30"), 256, 2048, 11219, 11599, "5426", "mac-studio-m5-ultra-30x-cpu-64x-gpu-256gb-2tb", "listed Nov 3, expected 24 Feb 2027 (was 23 Nov on Nov 12)"),
+  openBox("ob-mbp14-m5max40-2tb", "mbp14", "14", 2048, 7109, 7709, "5127", "macbook-pro-14-inch-m5-max-18x-cpu-40x-gpu-128gb-2tb-spacezwart", "Op bestelling, expected 8 Dec (in stock on the morning of Nov 11)"),
+  openBox("ob-mbp16-m5max40-2tb", "mbp16", "16", 2048, 7399, 7949, "5077", "macbook-pro-16-inch-m5-max-18x-cpu-40x-gpu-128gb-2tb-spacezwart", "in stock again Nov 16, delivery expected 18 Nov"),
+  openBox("ob-mbp16-m5max40-4tb", "mbp16", "16", 4096, 8499, 9049, "5091", "macbook-pro-16-inch-m5-max-18x-cpu-40x-gpu-128gb-4tb-spacezwart", "new listing Nov 11, Op bestelling, expected 27 Nov"),
   {
-    ...openBox("acr-mbp16-m4max40-8tb", "mbp16", "16", 8192, 9579, 0, "", "", "Apple Certified Refurbished, listed Nov 13, G1FWNN/A, nano-texture, ships within 24 h, limited stock"),
+    ...openBox("acr-mbp16-m4max40-8tb", "mbp16", "16", 8192, 9579, 0, "", "", "Apple Certified Refurbished, listed Nov 13 (still listed Nov 16), G1FWNN/A, nano-texture, ships within 24 h, limited stock"),
     chip: "M4 Max",
     cpu: 16,
     bw: flat(546),
@@ -700,42 +700,49 @@ const MM = "https://www.mediamarkt.nl/nl/product/_apple-z1u4000fcctomstdm5m18c40
 const up = (price, url, stock) => [{ shop: "UpGreatest", price, url, note: stock }];
 const retail = {
   "studio-max40|128|1024|0": [
-    { shop: "UpGreatest", price: 6089, url: "https://upgreatest.nl/product/5193/mac-studio-m5-max-18x-cpu-40x-gpu-128gb-1tb", note: "build to order, ETA 5 Dec" },
-    { shop: "Amac", price: 6219, url: "https://www.amac.nl/mac-studio-m5-max-18c-cpu-40c-gpu-128gb-1tb-10-gbit", note: "as of Nov 12; site down for maintenance Nov 13" },
-    { shop: "MediaMarkt", price: 5899, url: "https://www.mediamarkt.nl/nl/product/_apple-mac-studio-m5-max-cpu-18-core-gpu-40-core-128-gb-1-tb-edition-2026-1914729.html", note: "Black Friday €5.899 (was €6.219); still out of stock online (Nov 13)" }
+    { shop: "UpGreatest", price: 6089, url: "https://upgreatest.nl/product/5193/mac-studio-m5-max-18x-cpu-40x-gpu-128gb-1tb", note: "build to order, ETA 8 Dec" },
+    { shop: "Amac", price: 6219, url: "https://www.amac.nl/mac-studio-m5-max-18c-cpu-40c-gpu-128gb-1tb-10-gbit", note: "about 14 days delivery (Nov 16)" },
+    { shop: "MediaMarkt", price: 5899, url: "https://www.mediamarkt.nl/nl/product/_apple-mac-studio-m5-max-cpu-18-core-gpu-40-core-128-gb-1-tb-edition-2026-1914729.html", note: "Black Friday €5.899 (was €6.219); still out of stock online (Nov 16)" }
   ],
   "studio-max40|128|2048|0": [
-    { shop: "UpGreatest", price: 6639, url: "https://upgreatest.nl/product/5191/mac-studio-m5-max-18x-cpu-40x-gpu-128gb-2tb", note: "in stock, delivery expected 17 Nov" },
-    { shop: "MediaMarkt", price: 6599, url: MM, note: "out of stock online since Nov 3 (still Nov 13)" }
+    { shop: "UpGreatest", price: 6639, url: "https://upgreatest.nl/product/5191/mac-studio-m5-max-18x-cpu-40x-gpu-128gb-2tb", note: "in stock, delivery expected 18 Nov" },
+    { shop: "MediaMarkt", price: 6599, url: MM, note: "out of stock online since Nov 3 (still Nov 16)" }
   ],
-  "studio-max40|64|1024|0": up(4329, UPG, "in stock"),
+  "studio-max40|64|1024|0": up(4329, UPG, "Op bestelling"),
   "studio-max40|64|2048|0": up(4879, UPG, "in stock"),
   "studio-max40|48|512|0": up(3559, UPG, "in stock"),
-  "studio-max32|36|512|0": up(2745, UPG, "in stock"),
+  "studio-max32|36|512|0": up(2790, UPG, "in stock; €2.745 earlier"),
   "studio-max32|36|1024|0": up(3359, UPG, "in stock"),
-  "studio-ultra30|96|1024|0": up(6552, UPG, "build to order; €6.370 on Nov 12"),
-  "studio-ultra30|256|1024|0": [{ shop: "Amac", price: 11049, url: "https://www.amac.nl/mac-studio-m5-ultra-30c-cpu-64c-gpu-256gb-1tb-10-gbit", note: "not in stock online (as of Nov 12; site down for maintenance Nov 13)" }],
-  "studio-ultra30|256|2048|0": up(11419, "https://upgreatest.nl/product/5192/mac-studio-m5-ultra-30x-cpu-64x-gpu-256gb-2tb", "build to order, ETA 22 Feb 2027"),
-  "studio-ultra36|512|1024|0": up(24449, "https://upgreatest.nl/product/5405/mac-studio-m5-ultra-36x-cpu-80x-gpu-512gb-1tb", "build to order, ETA 22 Feb 2027"),
-  "mbp14-m6|16|1024|0": up(2118, UPG14, "build to order; was €2.279 on Nov 3"),
-  "mbp14-m6|24|1024|0": up(2319, UPG14, "build to order; was €2.499 on Nov 3"),
-  "mbp14-m6|32|1024|0": up(2516, UPG14, "Silver; Space Black €2.719; was €2.719 on Nov 3"),
-  "mbp14o-m5max40|48|2048|0": up(5909, "https://upgreatest.nl/product/5435/macbook-pro-14-inch-proled-xdr-m5-max-18x-cpu-40x-gpu-48gb-2tb-spacezwart", "listed Nov 4, Space Black or Silver, expected 5 Dec; €5.659 until Nov 10, discount gone Nov 11"),
-  "mbp14-m5pro15|24|1024|0": up(2663, UPG14, "in stock, Silver; Space Black €2.672"),
-  "mbp14-m5pro15|24|2048|0": up(3171, UPG14, "in stock"),
-  "mbp14-m5pro18|24|2048|0": up(3398, UPG14, "in stock, Space Black"),
+  "studio-ultra30|96|1024|0": up(6370, UPG, "build to order; €6.552 on Nov 13"),
+  "studio-ultra30|256|1024|0": [{ shop: "Amac", price: 11049, url: "https://www.amac.nl/mac-studio-m5-ultra-30c-cpu-64c-gpu-256gb-1tb-10-gbit", note: "not in stock online, about 14 days delivery (Nov 16)" }],
+  "studio-ultra30|256|2048|0": up(11419, "https://upgreatest.nl/product/5192/mac-studio-m5-ultra-30x-cpu-64x-gpu-256gb-2tb", "build to order, ETA 24 Feb 2027"),
+  "studio-ultra36|512|1024|0": up(24449, "https://upgreatest.nl/product/5405/mac-studio-m5-ultra-36x-cpu-80x-gpu-512gb-1tb", "build to order, ETA 24 Feb 2027"),
+  "mbp14-m6|16|1024|0": up(2106, UPG14, "in stock, Space Black or Silver; was €2.279 on Nov 3"),
+  "mbp14-m6|24|1024|0": up(2305, UPG14, "in stock, Space Black or Silver; was €2.499 on Nov 3"),
+  "mbp14-m6|32|1024|0": up(2663, UPG14, "in stock, Space Black or Silver; Silver was €2.504 on Nov 13"),
+  "mbp14o-m5pro15|24|1024|0": up(3030, "https://upgreatest.nl/product/5406/macbook-pro-14-inch-proled-xdr-m5-pro-15x-cpu-16x-gpu-24gb-1tb-spacezwart", "in stock, Space Black or Silver"),
+  "mbp14o-m5pro18|48|1024|0": up(3844, "https://upgreatest.nl/product/5409/macbook-pro-14-inch-proled-xdr-m5-pro-18x-cpu-20x-gpu-48gb-1tb-spacezwart", "in stock, Space Black or Silver"),
+  "mbp14o-m5max32|36|2048|0": up(4748, "https://upgreatest.nl/product/5411/macbook-pro-14-inch-proled-xdr-m5-max-18x-cpu-32x-gpu-36gb-2tb-spacezwart", "in stock, Space Black or Silver"),
+  "mbp14o-m5max40|48|2048|0": up(5909, "https://upgreatest.nl/product/5435/macbook-pro-14-inch-proled-xdr-m5-max-18x-cpu-40x-gpu-48gb-2tb-spacezwart", "listed Nov 4, Space Black or Silver, expected 8 Dec; €5.659 until Nov 10, discount gone Nov 11"),
+  "mbp16o-m5pro18|24|1024|0": up(3571, "https://upgreatest.nl/product/5414/macbook-pro-16-inch-proled-xdr-m5-pro-18x-cpu-20x-gpu-24gb-1tb-spacezwart", "in stock, Space Black or Silver"),
+  "mbp16o-m5pro18|48|1024|0": up(4168, "https://upgreatest.nl/product/5416/macbook-pro-16-inch-proled-xdr-m5-pro-18x-cpu-20x-gpu-48gb-1tb-zilver", "in stock, Silver; Space Black €4.428"),
+  "mbp16o-m5max32|36|2048|0": up(5109, "https://upgreatest.nl/product/5418/macbook-pro-16-inch-proled-xdr-m5-max-18x-cpu-32x-gpu-36gb-2tb-spacezwart", "in stock, Space Black or Silver"),
+  "mbp16o-m5max40|48|2048|0": up(5651, "https://upgreatest.nl/product/5419/macbook-pro-16-inch-proled-xdr-m5-max-18x-cpu-40x-gpu-48gb-2tb-spacezwart", "in stock, Space Black or Silver; €6.149 on Nov 13"),
+  "mbp14-m5pro15|24|1024|0": up(2670, UPG14, "in stock, Space Black; Silver €2.699 (Op bestelling)"),
+  "mbp14-m5pro15|24|2048|0": up(3110, UPG14, "in stock, Silver; Space Black €3.141"),
+  "mbp14-m5pro18|24|2048|0": up(3365, UPG14, "in stock, Space Black; Silver Op bestelling"),
   "mbp14-m5pro18|48|1024|0": up(3659, UPG14, "in stock, Space Black"),
-  "mbp14-m5max32|36|2048|0": up(4398, UPG14, "build to order, Space Black"),
+  "mbp14-m5max32|36|2048|0": up(4352, UPG14, "Op bestelling, Space Black; Silver €4.354 in stock"),
   "mbp14-m5max40|48|2048|0": up(5059, UPG14, "in stock, Space Black"),
   // "mbp14-m5max40|128|2048|0": UpGreatest's €7.309 listing (product 5147, in stock Nov 12) was gone on Nov 13; the page redirects to the category
-  "mbp16-m5pro18|24|1024|0": up(3115, UPG16, "in stock, Space Black"),
-  "mbp16-m5pro18|48|1024|0": up(3725, UPG16, "in stock"),
-  "mbp16-m5pro18|64|1024|0": up(4399, UPG16, "build to order, Space Black"),
-  "mbp16-m5pro18|64|2048|0": up(4949, UPG16, "in stock, Space Black"),
-  "mbp16-m5max32|36|2048|0": up(4667, UPG16, "in stock, Silver"),
-  "mbp16-m5max40|48|2048|0": up(5212, UPG16, "build to order"),
-  "mbp16-m5max40|64|2048|0": up(5989, UPG16, "in stock, Space Black"),
-  "mbp16-m5max40|128|2048|0": up(7749, "https://upgreatest.nl/product/5143/macbook-pro-16-inch-m5-max-18x-cpu-40x-gpu-128gb-2tb-spacezwart", "Op bestelling, Space Black, expected 5 Dec (was in stock Nov 9)")
+  "mbp16-m5pro18|24|1024|0": up(3096, UPG16, "in stock, Silver; Space Black €3.099"),
+  "mbp16-m5pro18|48|1024|0": up(3689, UPG16, "in stock, Space Black; Silver Op bestelling"),
+  "mbp16-m5pro18|64|1024|0": up(4399, UPG16, "Op bestelling, Space Black"),
+  // "mbp16-m5pro18|64|2048|0": no longer listed at UpGreatest (absent on Nov 13 and Nov 16)
+  "mbp16-m5max32|36|2048|0": up(4621, UPG16, "in stock, Silver; Space Black €4.624"),
+  "mbp16-m5max40|48|2048|0": up(5160, UPG16, "in stock, Space Black; Silver Op bestelling"),
+  "mbp16-m5max40|64|2048|0": up(5789, UPG16, "in stock, Space Black; €5.989 on Nov 13"),
+  "mbp16-m5max40|128|2048|0": up(7749, "https://upgreatest.nl/product/5143/macbook-pro-16-inch-m5-max-18x-cpu-40x-gpu-128gb-2tb-spacezwart", "Op bestelling, Space Black, expected 8 Dec (was in stock Nov 9)")
 };
 const keys = (r) => Object.keys(r).map(Number).sort((a, b) => a - b);
 const buildConfigs = () => {
@@ -970,7 +977,7 @@ function App() {
     Page,
     {
       title: "Mac picker for local AI",
-      summary: "Every orderable Mac config in the Netherlands (" + ALL.length + " priced configs across " + (FAMILY_OPTS.length - 1) + " models), ranked by your needs. Apple NL configurator prices re-checked Nov 13, 2026, incl. VAT; shops re-checked the same day.",
+      summary: "Every orderable Mac config in the Netherlands (" + ALL.length + " priced configs across " + (FAMILY_OPTS.length - 1) + " models), ranked by your needs. Apple NL configurator prices re-checked Nov 16, 2026, incl. VAT; shops re-checked the same day.",
       width: "wide"
     },
     /* @__PURE__ */ h(Section, { heading: "Your needs" }, /* @__PURE__ */ h(Text, null, "[Back to start](index.html)"), /* @__PURE__ */ h(Grid, { columns: 4 }, /* @__PURE__ */ h(Input, { label: "Max budget (€)", type: "number", value: budget, onChange: (v) => setBudget(v) }), /* @__PURE__ */ h(Select, { label: "Model", options: FAMILY_OPTS, value: family, onChange: (v) => setFamily(v) }), /* @__PURE__ */ h(Select, { label: "Chip", options: CHIP_OPTS, value: chip, onChange: (v) => setChip(v) }), /* @__PURE__ */ h(Select, { label: "Memory (at least)", options: MEM_OPTS, value: mem, onChange: (v) => setMem(v) }), /* @__PURE__ */ h(Select, { label: "CPU cores", options: CPU_OPTS, value: cpu, onChange: (v) => setCpu(v) }), /* @__PURE__ */ h(Select, { label: "GPU cores", options: GPU_OPTS, value: gpu, onChange: (v) => setGpu(v) }), /* @__PURE__ */ h(Select, { label: "Minimum bandwidth", options: BW_OPTS, value: bw, onChange: (v) => setBw(v) }), /* @__PURE__ */ h(Select, { label: "Minimum storage", options: SSD_OPTS, value: ssd, onChange: (v) => setSsd(v) }), /* @__PURE__ */ h(Select, { label: "Colour", options: COLOUR_OPTS, value: colour, onChange: (v) => setColour(v) }), /* @__PURE__ */ h(Toggle, { label: "Exactly this memory", value: exact, onChange: (v) => setExact(v) }), /* @__PURE__ */ h(Toggle, { label: "Needs 10Gb Ethernet", value: eth, onChange: (v) => setEth(v) })), /* @__PURE__ */ h(Grid, { columns: 3 }, /* @__PURE__ */ h(
@@ -1032,7 +1039,7 @@ function App() {
       Section,
       {
         heading: "Ranked matches (" + (ranked.length > 25 ? "top 25 of " : "") + ranked.length + ")",
-        caption: "Prices incl. VAT, Nov 13, 2026. Best price is the lowest of Apple NL and the retailers checked. Most high-memory configs are build to order."
+        caption: "Prices incl. VAT, Nov 16, 2026. Best price is the lowest of Apple NL and the retailers checked. Most high-memory configs are build to order."
       },
       /* @__PURE__ */ h(
         Table,
@@ -1051,14 +1058,14 @@ function App() {
         }
       )
     ) : null,
-    /* @__PURE__ */ h(Section, { heading: "More power: Mac Studio M5 Ultra, 256GB", caption: "A second pick if the M5 Max 40c is not enough. Apple NL prices re-checked Nov 13, 2026, incl. VAT." }, /* @__PURE__ */ h(Callout, { lead: "About 2x the Max on paper, with 128GB more memory", tone: "info" }, "The M5 Ultra has 1.2 TB/s of bandwidth against 614 GB/s and up to 80 GPU cores against 40, so roughly twice the Max for LLM tokens/s and image/video generation, and 256GB of memory against 128GB. Apple NL: " + eur(applePrice("studio-ultra36|256|1024|0")) + " for 36c CPU / 80c GPU with 1TB, or " + eur(applePrice("studio-ultra30|256|1024|0")) + " for 30c/64c (Amac has the same price, not in stock online). Community figures (llmcheck.net): M5 Max 128GB vs M5 Ultra 43 vs 88 tok/s on Qwen3.5-122B-A10B and 76 vs 120 tok/s on gpt-oss-120B, so the real gain is about 1.6x to 2x. To see every storage tier, set Model to Mac Studio, Chip to M5 Ultra and Memory to 256GB."), /* @__PURE__ */ h(
+    /* @__PURE__ */ h(Section, { heading: "More power: Mac Studio M5 Ultra, 256GB", caption: "A second pick if the M5 Max 40c is not enough. Apple NL prices re-checked Nov 16, 2026, incl. VAT." }, /* @__PURE__ */ h(Callout, { lead: "About 2x the Max on paper, with 128GB more memory", tone: "info" }, "The M5 Ultra has 1.2 TB/s of bandwidth against 614 GB/s and up to 80 GPU cores against 40, so roughly twice the Max for LLM tokens/s and image/video generation, and 256GB of memory against 128GB. Apple NL: " + eur(applePrice("studio-ultra36|256|1024|0")) + " for 36c CPU / 80c GPU with 1TB, or " + eur(applePrice("studio-ultra30|256|1024|0")) + " for 30c/64c (Amac has the same price, not in stock online, about 14 days delivery). Community figures (llmcheck.net): M5 Max 128GB vs M5 Ultra 43 vs 88 tok/s on Qwen3.5-122B-A10B and 76 vs 120 tok/s on gpt-oss-120B, so the real gain is about 1.6x to 2x. To see every storage tier, set Model to Mac Studio, Chip to M5 Ultra and Memory to 256GB."), /* @__PURE__ */ h(
       LinkCards,
       {
         links: [
           { title: "Mac Studio M5 Ultra (configure 256GB)", site: "apple.com/nl", href: STUDIO_ULTRA },
-          { title: "Mac Studio M5 Ultra 30c/64c 256GB/2TB, " + eur(11419) + ", ETA 22 Feb 2027", site: "upgreatest.nl", href: "https://upgreatest.nl/product/5192/mac-studio-m5-ultra-30x-cpu-64x-gpu-256gb-2tb" },
-          { title: "Mac Studio M5 Ultra 30c/64c 256GB/2TB open box, " + eur(11219) + ", expected 22 Feb 2027", site: "upgreatest.nl", href: "https://upgreatest.nl/product/5426/mac-studio-m5-ultra-30x-cpu-64x-gpu-256gb-2tb" },
-          { title: "Mac Studio M5 Ultra 30c/64c 256GB/1TB, " + eur(11049) + " (as of Nov 12)", site: "amac.nl", href: "https://www.amac.nl/mac-studio-m5-ultra-30c-cpu-64c-gpu-256gb-1tb-10-gbit" }
+          { title: "Mac Studio M5 Ultra 30c/64c 256GB/2TB, " + eur(11419) + ", ETA 24 Feb 2027", site: "upgreatest.nl", href: "https://upgreatest.nl/product/5192/mac-studio-m5-ultra-30x-cpu-64x-gpu-256gb-2tb" },
+          { title: "Mac Studio M5 Ultra 30c/64c 256GB/2TB open box, " + eur(11219) + ", expected 24 Feb 2027", site: "upgreatest.nl", href: "https://upgreatest.nl/product/5426/mac-studio-m5-ultra-30x-cpu-64x-gpu-256gb-2tb" },
+          { title: "Mac Studio M5 Ultra 30c/64c 256GB/1TB, " + eur(11049) + ", about 14 days delivery", site: "amac.nl", href: "https://www.amac.nl/mac-studio-m5-ultra-30c-cpu-64c-gpu-256gb-1tb-10-gbit" }
         ]
       }
     )),
@@ -1074,11 +1081,12 @@ function App() {
         align: ["start", "start", "start", "start"]
       }
     )),
-    /* @__PURE__ */ h(Section, { heading: "Notes" }, /* @__PURE__ */ h(Text, null, "Covers " + newCount + ` new configs from base price plus Apple's option deltas: MacBook Air 13"/15", MacBook Pro 14"/16" (LCD and the new OLED), iMac 24", Mac mini and Mac Studio, every chip, memory, storage and display combination Apple allows. Plus ` + refurbVariants.length + ' refurbished 128GB+ configs: open-box MacBook Pros and Mac Studios from UpGreatest, plus one Apple Certified Refurbished 16" M4 Max 128GB/8TB (listed Nov 13). Colour and keyboard layout never change the price. Bandwidth drives LLM token speed; GPU cores drive image and video speed. Token speeds marked estimated scale the measured M5 Max figure by bandwidth; M6 bandwidth is assumed (153 GB/s at 16GB, 170 GB/s above) until Apple or a review confirms it.'), /* @__PURE__ */ h(Text, null, `Not included: the MacBook Neo (A18 Pro, 8GB), Apple Certified Refurbished below 128GB (the only 128GB unit on Nov 13 is included above), iMac M6 12-core with 32GB and 256GB (the configurator will not price it), and shops without usable prices: Coolblue (reachable, but lists no 128GB+ Macs), Bol (search results load since Nov 12, but no 128GB+ Macs listed), Tweakers (DPG consent wall blocks automated access) and TechFabrique (listings not readable). OLED MacBook Pro 128GB totals were re-checked live on Nov 13 (14" €8.109; 16" €8.449) and are unchanged since Nov 4. UpGreatest open-box listings do not state the display type, so the display filter excludes them (the Apple refurbished M4 Max is excluded too). Retailer prices come from the [128GB tracker](tracker.html) and UpGreatest's site; 128GB+ offers re-read on the afternoon of Nov 13, 2026; Amac was down for maintenance (HTTP 503), so its prices are from Nov 12. MediaMarkt's Studio 128GB/1TB is Black Friday €5.899 (was €6.219) and 128GB/2TB is €6.599; both remain unavailable online as of Nov 13.`)),
+    /* @__PURE__ */ h(Section, { heading: "Notes" }, /* @__PURE__ */ h(Text, null, "Covers " + newCount + ` new configs from base price plus Apple's option deltas: MacBook Air 13"/15", MacBook Pro 14"/16" (LCD and the new OLED), iMac 24", Mac mini and Mac Studio, every chip, memory, storage and display combination Apple allows. Plus ` + refurbVariants.length + ' refurbished 128GB+ configs: open-box MacBook Pros and Mac Studios from UpGreatest, plus one Apple Certified Refurbished 16" M4 Max 128GB/8TB (listed since Nov 13). Colour and keyboard layout never change the price. Bandwidth drives LLM token speed; GPU cores drive image and video speed. Token speeds marked estimated scale the measured M5 Max figure by bandwidth; M6 bandwidth is assumed (153 GB/s at 16GB, 170 GB/s above) until Apple or a review confirms it.'), /* @__PURE__ */ h(Text, null, `Not included: the MacBook Neo (A18 Pro, 8GB), Apple Certified Refurbished below 128GB (the only 128GB unit on Nov 16 is included above), iMac M6 12-core with 32GB and 256GB (the configurator will not price it), and shops without usable prices: Coolblue (reachable, but lists no 128GB+ Macs), Bol (search results load, but no 128GB+ Macs listed on Nov 16), Tweakers (DPG consent wall blocks automated access) and TechFabrique (listings not readable). OLED MacBook Pro 128GB totals were re-checked live on Nov 16 (14" €8.109; 16" €8.449) and are unchanged since Nov 4. UpGreatest open-box listings do not state the display type, so the display filter excludes them (the Apple refurbished M4 Max is excluded too). Retailer prices come from the [128GB tracker](tracker.html) and UpGreatest's site; all offers re-read on the afternoon of Nov 16, 2026 (UpGreatest's OLED MacBook Pro listings were added that day). MediaMarkt's Studio 128GB/1TB is Black Friday €5.899 (was €6.219) and 128GB/2TB is €6.599; both remain unavailable online as of Nov 16.`)),
     /* @__PURE__ */ h(Section, { heading: "New since Oct 26" }, /* @__PURE__ */ h(
       NumberedList,
       {
         items: [
+          `Nov 16 (about 15:30): no meaningful change on 128GB+ configs. Apple NL is unchanged: a full live crawl of every configurator (all chip, memory and storage combinations and add-ons, incl. OLED and Ultra 512GB) matches Nov 14 exactly, and the buy-mac page lists no new line. Apple Newsroom NL and global have no new Mac or chip. Apple Certified Refurbished NL still lists the 16" M4 Max 128GB/8TB nano-texture at €9.579. No price changes on any 128GB+ config at UpGreatest, MediaMarkt (€5.899 / €6.599, both out of stock online) or Amac (back online: €6.219 / €11.049, about 14 days delivery). UpGreatest stock: open-box Studio Max 128GB/1TB (€5.989) and open-box 16" 128GB/2TB (€7.399) are in stock again, delivery 18 Nov; new Studio Max 128GB/2TB in stock, 18 Nov; open-box 16" 128GB/4TB 27 Nov; new Studio Max 128GB/1TB, new 16" 128GB/2TB, open-box 14" 128GB/2TB and OLED 14" 48GB 8 Dec; open-box Studio Max 128GB/2TB 28 Dec; Ultra 24 Feb 2027. Below 128GB, all UpGreatest offers were re-read: new to this picker are its 7 other OLED MacBook Pro listings, €319–€598 below Apple (for example 16" OLED M5 Max 48GB/2TB €5.651, down from €6.149 on Nov 13, against Apple's €6.249); the 16" M5 Max 64GB/2TB fell to €5.789 (was €5.989), the Ultra 96GB/1TB to €6.370 (was €6.552), and 12 other sub-128GB UpGreatest prices shown here moved by €7–€147 (M6, M5 Pro and M5 Max MacBook Pros, Studio M5 Max 32c); the 16" M5 Pro 64GB/2TB (€4.949) is no longer listed and was removed. New benchmarks: three llamaperf M5 Ultra reports (Nov 14–16: Qwen3.8 Flash-Next about 100 tok/s at 130K–200K context on 256GB; DeepSeek V4.1 Flash 64.1 tok/s and GLM-5.3 753B 25.7 tok/s on 512GB) and Phosphene's crowd-sourced video timings (5-second LTX-2.5 576p clip: M5 Ultra about 45 s, M5 Max 1 min 20 s, M5 Pro 2 min 30 s).`,
           `Nov 13 (about 15:35): two real changes. Apple Certified Refurbished NL lists a 128GB Mac again, the first since Oct 26: MacBook Pro 16" M4 Max 16c CPU / 40c GPU, 128GB/8TB, nano-texture, Space Black (G1FWNN/A), €9.579, ships within 24 h, limited stock (546 GB/s; a new M5 Max 16" 128GB/8TB nano-texture is €11.414 at Apple NL). And UpGreatest's new MacBook Pro 14" M5 Max 128GB/2TB (€7.309, in stock on Nov 12) is gone: its page now redirects to the category. The cheapest new 14" 128GB is now Apple NL at €7.709, and the open box is still €7.109. Apple NL is unchanged: every 128GB+ configurator total and base price is the same. Apple Newsroom NL and global have no new Mac or chip (the only new post is Apple HomeView, Nov 13). MediaMarkt is unchanged at €5.899 / €6.599, both out of stock online. UpGreatest stock moves: open-box Studio Max 128GB/1TB (€5.989) went from in stock to Op bestelling, expected 18 Nov. Open-box Studio Max 128GB/2TB is now 24 Dec (was 18 Nov). Open-box Ultra 256GB/2TB is back to 22 Feb 2027 (was 23 Nov). New Studio Max 128GB/2TB is still in stock, delivery 17 Nov. Open-box 16" 128GB/2TB and 128GB/4TB: 24 Nov. New Studio Max 128GB/1TB, new 16" 128GB/2TB, open-box 14" 128GB/2TB and OLED 14" 48GB: 5 Dec. Ultra build-to-order: 22 Feb 2027. Amac's site was down for maintenance (HTTP 503), so its prices are still the Nov 12 ones. Tweakers is still behind the DPG consent wall. New llamaperf report (Nov 13): Qwen3.8 Flash-Next on an M5 Max 128GB averages about 68 tok/s over an agent session (mlx-serve, 4.7-bit MLX, 100K–190K context). Medians are unchanged.`,
           'Nov 12 afternoon (about 15:30): re-checked everything live. No changes at Apple NL (every 128GB+ configurator total and every base price unchanged), in Apple Newsroom NL or global (no new Mac or chip), at MediaMarkt (€5.899 / €6.599, both still out of stock online), Amac, Coolblue or Bol. No UpGreatest price changes on 128GB+ configs and no new or removed listings; delivery dates moved a day: open-box Studio Max 128GB/1TB, new Studio Max 128GB/2TB and new 14" 128GB/2TB in stock, delivery 14 Nov; new Studio Max 128GB/1TB, new 16" 128GB/2TB, open-box 14" 128GB/2TB and OLED 14" 48GB 4 Dec; Ultra build-to-order 20 Feb 2027. Apple Certified Refurbished NL still tops out at 64GB (only cheaper models rotated). llamaperf medians unchanged; Tweakers still behind the DPG consent wall.',
           'Nov 12 morning: no new Macs, chips or options at Apple NL or in Apple Newsroom NL (the only new post is the Nov 11 Apple Arcade holiday lineup), and no price changes on any 128GB+ config at Apple NL (all configurator totals re-checked live, incl. OLED and Ultra 512GB), UpGreatest, MediaMarkt or Amac. No new or removed offers. UpGreatest stock moved: the new Mac Studio M5 Max 128GB/2TB (€6.639) and the new MacBook Pro 14" M5 Max 128GB/2TB (€7.309) are in stock again, delivery expected 13 Nov (both were ETA 3 Dec on the evening of Nov 11). Other UpGreatest ETAs unchanged: open-box Studio Max 128GB/1TB in stock (13 Nov); new Studio Max 128GB/1TB, new 16" 128GB/2TB, open-box 14" 128GB/2TB and OLED 14" 48GB 3 Dec; open-box Studio Max 128GB/2TB and 16" 128GB/2TB 18 Nov; open-box 16" 128GB/4TB and Ultra 256GB/2TB 23 Nov; Ultra build-to-order 19 Feb 2027. MediaMarkt still shows Black Friday €5.899 (128GB/1TB) and €6.599 (128GB/2TB), both unavailable online. Apple Certified Refurbished NL still tops out at 64GB. Bol now returns search results to automated access but lists no 128GB+ Mac; Tweakers is still behind the DPG consent wall. No new benchmarks: llamaperf medians and reports for the M5 Max 128GB and M5 Ultra 256GB/512GB are unchanged (as of 12 Nov).',
