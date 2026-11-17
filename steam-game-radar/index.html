@@ -138,6 +138,7 @@ footer h3{color:var(--text)}footer table td{white-space:normal;font-size:13px}op
   <div class="showing" id="showing" aria-live="polite"></div>
 </div>
 <div class="wrap filters" id="filters" hidden>
+  <label class="sel" title="Valve's Steam Machine compatibility rating from the Steam store. Unknown means the game has not completed the review.">Steam Machine <select id="f-machine" aria-label="Steam Machine compatibility"><option value="">Any</option><option value="3">Verified</option><option value="2">Playable</option><option value="1">Unsupported</option><option value="0">Unknown</option></select></label>
   <label class="sel">Players <select id="f-mode" aria-label="Player modes"><option value="">Any</option><option value="1">Single-player only</option><option value="2">Local co-op</option><option value="4">Online co-op</option><option value="8">PvP</option></select></label>
   <label class="sel">Controller <select id="f-ctl" aria-label="Controller support"><option value="">Any</option><option value="2">Full support</option><option value="1">Partial or full</option></select></label>
   <label class="sel" title="Indie = has Steam's Indie tag. Publisher = publisher has 10+ games in this radar. Small = everything else.">Developer <select id="f-dev" aria-label="Developer size"><option value="">Any</option><option value="0">Indie (Indie tag)</option><option value="1">Small publisher</option><option value="2">Publisher (10+ radar titles)</option></select></label>
@@ -211,10 +212,10 @@ const M=[
  ['storage','Download size (smallest first)','Game info',g=>g.storageGB,g=>g.storageGB==null?NA:g.storageGB+' GB',-1,'store','Minimum PC storage requirement. Steam does not publish exact download sizes'],
  ['contentWarnings','Content warnings (fewest first)','Game info',g=>g.contentWarnings,g=>num(g.contentWarnings),-1,'items','Number of Steam content descriptors'],
  ['deck','Steam Deck status','Game info',g=>g.deck,g=>deckName(g.deck),1,'items','Verified > Playable > Unsupported > Unknown'],
- ['machine','Steam Machine status','Game info',g=>g.machine||null,g=>g.machine==null?NA:deckName(g.machine),1,'items','Steam Machine compatibility category'],
+ ['machine','Steam Machine status','Game info',g=>g.machine==null?null:g.machine,g=>g.machine==null?NA:deckName(g.machine),1,'items','Verified > Playable > Unsupported > Unknown'],
  ['controller','Controller support','Game info',g=>g.controller,g=>g.controller==null?NA:CTL[g.controller],1,'items','Full > Partial > None (Steam categories)']];
 const MET=Object.fromEntries(M.map(m=>[m[0],{key:m[0],label:m[1],group:m[2],val:m[3],fmt:m[4],dir:m[5],src:m[6],note:m[7]}]));
-const state={q:'',sort:'rank',sale:false,deck:false,free:false,gem:false,mode:'',ctl:'',dev:'',gq:'',gsort:'count',gcat:''};let drawToken=0;
+const state={q:'',sort:'rank',sale:false,deck:false,free:false,gem:false,mode:'',ctl:'',dev:'',machine:'',gq:'',gsort:'count',gcat:''};let drawToken=0;
 // ---- data loading
 const chunks=new Map();let INDEX=null,IDX_BY=null;const details=new Map(),detShards=new Map();
 function loadChunk(key,n){const k=key+'/'+n;if(!chunks.has(k))chunks.set(k,getJSON(`data/g/${encodeURIComponent(key)}/${n}.json`).then(rows=>key==='up'?rows:rows.map(r=>unpack(r,H.cf))).catch(e=>{chunks.delete(k);throw e;}));return chunks.get(k);}
@@ -223,7 +224,7 @@ async function loadDetail(id){const s=Math.floor(id/10)%H.ds;if(!detShards.has(s
 // ---- routing
 function route(){const m=location.hash.match(/^#genre\/([^/]+)(?:\/(\d+))?$/);if(!m)return{key:'home',page:1};let key=decodeURIComponent(m[1]);if(H.alias[key])key=H.alias[key];return{key,page:Math.max(1,Number(m[2]||1))};}
 function go(k,page=1){const h=k==='home'?'#home':`#genre/${encodeURIComponent(k)}/${page}`;if(location.hash===h)draw().catch(showError);else location.hash=h;}
-const filtersOn=()=>state.sale||state.deck||state.free||state.gem||state.mode||state.ctl||state.dev;
+const filtersOn=()=>state.sale||state.deck||state.free||state.gem||state.mode||state.ctl||state.dev||state.machine;
 function refresh(){const r=route();if(r.page!==1)go(r.key==='home'?'all':r.key,1);else draw().catch(showError);}
 // ---- controls
 $('updated').textContent=H.u;$('ed').textContent=` · Edition ${H.e} · ${H.n.toLocaleString()} games · ${GL.length} genres`;
@@ -240,9 +241,9 @@ $('f-sort').addEventListener('change',e=>{state.sort=e.target.value;refresh();})
 $('f-page-size').value=pageSizeChoice;
 $('f-page-size').addEventListener('change',e=>{const value=e.target.value;if(!PAGE_SIZES.includes(value)){e.target.value=pageSizeChoice;return;}pageSizeChoice=value;PAGE=+value;try{localStorage.setItem('radar-page-size',value);}catch{}refresh();});
 for(const [id,key] of [['f-sale','sale'],['f-deck','deck'],['f-free','free'],['f-gem','gem']])$(id).addEventListener('change',e=>{state[key]=e.target.checked;refresh();});
-for(const [id,key] of [['f-mode','mode'],['f-ctl','ctl'],['f-dev','dev']])$(id).addEventListener('change',e=>{state[key]=e.target.value;refresh();});
+for(const [id,key] of [['f-mode','mode'],['f-ctl','ctl'],['f-dev','dev'],['f-machine','machine']])$(id).addEventListener('change',e=>{state[key]=e.target.value;refresh();});
 $('f-more').addEventListener('click',()=>{const f=$('filters');f.hidden=!f.hidden;$('f-more').setAttribute('aria-expanded',String(!f.hidden));});
-$('reset').addEventListener('click',()=>{Object.assign(state,{q:'',sort:'rank',sale:false,deck:false,free:false,gem:false,mode:'',ctl:'',dev:''});$('f-search').value='';$('f-sort').value='rank';for(const id of ['f-sale','f-deck','f-free','f-gem'])$(id).checked=false;for(const id of ['f-mode','f-ctl','f-dev'])$(id).value='';go('home');});
+$('reset').addEventListener('click',()=>{Object.assign(state,{q:'',sort:'rank',sale:false,deck:false,free:false,gem:false,mode:'',ctl:'',dev:'',machine:''});$('f-search').value='';$('f-sort').value='rank';for(const id of ['f-sale','f-deck','f-free','f-gem'])$(id).checked=false;for(const id of ['f-mode','f-ctl','f-dev'])$(id).value='';$('f-machine').value='';go('home');});
 $('g-search').addEventListener('input',e=>{state.gq=e.target.value.trim().toLocaleLowerCase();drawTiles();});
 $('g-sort').addEventListener('change',e=>{state.gsort=e.target.value;drawTiles();});
 $('g-cat').addEventListener('change',e=>{state.gcat=e.target.value;drawTiles();});
@@ -311,7 +312,7 @@ function drawTiles(){clearTileVideos();let L=GL.filter(g=>(!state.gcat||g.cat===
  const S={count:(a,b)=>b.count-a.count,reviews:(a,b)=>b.reviews-a.reviews,name:(a,b)=>a.label.localeCompare(b.label)};L.sort(S[state.gsort]);
  $('genre-count').textContent=L.length;
  $('genre-tiles').innerHTML=L.map(g=>`<a class="genre-tile" href="#genre/${esc(g.key)}/1" data-genre="${esc(g.key)}" style="background:${genreGradient(g.key)}">${GENRE_ART[g.key]?`<img src="${esc(GENRE_ART[g.key])}" alt="" loading="lazy" decoding="async" width="616" height="353">`:''}${genreVideo(g.key)}<div><strong>${esc(g.label)}</strong><span>${g.count.toLocaleString()} games · ${esc(g.cat)} · #1 ${esc(g.leadName)}</span><span>${g.reviews.toLocaleString()} reviews</span></div></a>`).join('')||'<p class="empty">No genre matches.</p>';observeTileVideos();}
-function matches(g){return (!state.q||g.lc.includes(state.q))&&(!state.sale||g.discount>0)&&(!state.deck||g.deck===3)&&(!state.free||g.free)&&(!state.gem||(g.pct>=90&&g.ownersHi!=null&&g.ownersHi<=100000))&&(!state.mode||(g.modes&+state.mode))&&(!state.ctl||(g.controller!=null&&g.controller>=+state.ctl))&&(!state.dev||g.devSize===+state.dev);}
+function matches(g){return (!state.q||g.lc.includes(state.q))&&(!state.sale||g.discount>0)&&(!state.deck||g.deck===3)&&(!state.free||g.free)&&(!state.gem||(g.pct>=90&&g.ownersHi!=null&&g.ownersHi<=100000))&&(!state.mode||(g.modes&+state.mode))&&(!state.ctl||(g.controller!=null&&g.controller>=+state.ctl))&&(!state.dev||g.devSize===+state.dev)&&(!state.machine||(g.machine==null?0:g.machine)===+state.machine);}
 // Missing metrics always trail known values, before applying either sort direction.
 const missingMetric=v=>v==null||Number.isNaN(v);
 const rankSort=(a,b)=>{const x=a.score,y=b.score,nx=missingMetric(x),ny=missingMetric(y);if(nx!==ny)return nx?1:-1;return (nx?0:Math.round(y*1e6)-Math.round(x*1e6))||(b.reviews??0)-(a.reviews??0)||a.id-b.id;};
