@@ -378,10 +378,22 @@
       img.src = fallback;
       return;
     }
+    // Gallery video posters: promote the #t=1 metadata video if present.
+    var frame = img.closest(".photo-frame") || img.parentNode;
+    var probe = frame && frame.querySelector("video.gallery-video-fallback");
+    if (probe && img.classList.contains("gallery-poster")) {
+      img.setAttribute("data-photo-failed", "1");
+      img.hidden = true;
+      probe.classList.remove("gallery-video-fallback");
+      probe.classList.add("gallery-video");
+      probe.removeAttribute("aria-hidden");
+      probe.removeAttribute("tabindex");
+      try { probe.currentTime = Math.min(1, probe.duration || 1); } catch (err) { /* ignore */ }
+      return;
+    }
     img.setAttribute("data-photo-failed", "1");
     img.hidden = true;
     var page = img.getAttribute("data-page") || "";
-    var frame = img.closest(".photo-frame") || img.parentNode;
     if (!frame || frame.querySelector(".photo-fallback")) return;
     var label = "Photo couldn't load — view source";
     if (/flickr\.com/i.test(page)) label = "Photo couldn't load — view on Flickr";
@@ -398,29 +410,69 @@
     frame.appendChild(node);
   };
 
+  function galleryVideoFrame(image, posterSrc, page, alt) {
+    // Always prefer a real poster <img> (reliable paint). If there is no poster,
+    // fall back to <video preload="metadata" src="#t=1"> so the tile still shows
+    // a frame instead of an empty black box with only a Play badge.
+    var videoSrc = image.videoUrl || image.url || "";
+    if (videoSrc) claimMedia(videoSrc);
+    var media;
+    if (posterSrc) {
+      media = photoImgHtml({
+        src: posterSrc,
+        fallback: "",
+        page: page,
+        alt: alt,
+        loading: "lazy",
+        className: "gallery-poster",
+      });
+      // Keep a hidden metadata probe so browsers that block the poster CDN can
+      // still decode a #t=1 frame; starshipGalleryPosterError swaps it in.
+      if (videoSrc) {
+        var srcWithT = videoSrc.indexOf("#") >= 0 ? videoSrc : videoSrc + "#t=1";
+        media +=
+          '<video class="gallery-video-fallback" muted playsinline preload="metadata"' +
+          ' src="' + esc(srcWithT) + '"' +
+          ' aria-hidden="true" tabindex="-1"></video>';
+      }
+    } else if (videoSrc) {
+      var onlyT = videoSrc.indexOf("#") >= 0 ? videoSrc : videoSrc + "#t=1";
+      media =
+        '<video class="gallery-video" muted playsinline preload="metadata"' +
+        ' src="' + esc(onlyT) + '"' +
+        ' aria-label="' + esc(alt) + '"></video>';
+    } else {
+      return "";
+    }
+    var badge = '<span class="gallery-play" aria-hidden="true">Play</span>';
+    return media + badge;
+  }
+
   function attributedFigure(image) {
     var isVideo = image && (image.type === "video" || image.kind === "video");
-    // Gallery videos use a poster still; clicking opens the source post.
+    // Gallery videos use a poster still (or #t=1 frame); clicking opens the source post.
     var posterSrc = isVideo ? (image.poster || image.directUrl || image.src) : null;
     var reserved = isVideo
       ? (function () {
-          if (!posterSrc || !claimMedia(posterSrc)) return null;
-          return { src: posterSrc, fallback: "", page: image.pageUrl || image.href || "" };
+          if (posterSrc && !claimMedia(posterSrc)) return null;
+          if (!posterSrc && !(image.videoUrl || image.url)) return null;
+          return { src: posterSrc || "", fallback: "", page: image.pageUrl || image.href || "" };
         })()
       : reservePhoto(image);
     if (!reserved) return "";
     var page = reserved.page;
     var lic = licenseHtml(image.license, image.licenseHref || image.licenseUrl);
     var alt = image.alt || image.caption || (isVideo ? "Starship video" : "Starship photo");
-    var img = photoImgHtml({
-      src: reserved.src,
-      fallback: reserved.fallback,
-      page: page,
-      alt: alt,
-      loading: "lazy",
-    });
-    var badge = isVideo ? '<span class="gallery-play" aria-hidden="true">Play</span>' : "";
-    var frameInner = img + badge;
+    var frameInner = isVideo
+      ? galleryVideoFrame(image, reserved.src, page, alt)
+      : photoImgHtml({
+          src: reserved.src,
+          fallback: reserved.fallback,
+          page: page,
+          alt: alt,
+          loading: "lazy",
+        });
+    if (!frameInner) return "";
     var frame = page
       ? '<a class="gallery-link photo-frame' + (isVideo ? " is-video" : "") + '" href="' + esc(page) +
         '" target="_blank" rel="noopener noreferrer">' + frameInner + "</a>"
@@ -606,8 +658,24 @@
 
   function timelineHtml(detail, flight) {
     var items = detail && detail.timeline;
-    if (!items || !items.length) return "";
-    var enriched = items.map(function (row) {
+    if ((!items || !items.length) && !(detail && detail.timelineNote)) return "";
+    var introNotes = [];
+    if (detail && detail.timelineNote) introNotes.push(String(detail.timelineNote).trim());
+    var timed = (items || []).filter(function (row) {
+      // Untitled Note rows with no T+/status belong in the intro, not the grid.
+      var isBareNote =
+        row &&
+        row.event === "Note" &&
+        !row.planned &&
+        !row.actual &&
+        !row.status;
+      if (isBareNote) {
+        if (row.note) introNotes.push(String(row.note).trim());
+        return false;
+      }
+      return !!row;
+    });
+    var enriched = timed.map(function (row) {
       return { row: row, clock: resolveTimelineClock(row, flight) };
     });
     enriched.sort(function (a, b) {
@@ -647,10 +715,18 @@
     var tools = expandable
       ? '<button type="button" class="tl-expand-all" data-expanded="false">Expand all</button>'
       : "";
+    var intro = introNotes
+      .filter(Boolean)
+      .map(function (text) { return '<p class="fine tl-intro">' + esc(text) + "</p>"; })
+      .join("");
     return '<section class="block timeline"><div class="tl-heading"><h4>Mission timeline</h4>' + tools + "</div>" +
       '<p class="fine">Times are T+ from liftoff. Approximate clocks show a leading ~. Click a row with a chevron for notes. Anomaly rows stay highlighted.</p>' +
-      '<div class="tl-head" aria-hidden="true"><span>T+</span><span>Event</span><span>Status</span><span></span></div>' +
-      '<ol class="tl-list">' + rows + "</ol></section>";
+      intro +
+      (rows
+        ? '<div class="tl-head" aria-hidden="true"><span>T+</span><span>Event</span><span>Status</span><span></span></div>' +
+          '<ol class="tl-list">' + rows + "</ol>"
+        : "") +
+      "</section>";
   }
 
   function telemetryHtml(detail) {
