@@ -4624,6 +4624,34 @@
           }
         }
       }
+    },
+    "adult": {
+      "src": "genre-art/adult.webp",
+      "width": 616,
+      "height": 353,
+      "bytes": 26918,
+      "sha256": "21726fb04640f8b968374ff07f348aa6353c67fd1e6c26d818fbee39763990ea",
+      "loop": {
+        "webm": "genre-art/loops/adult.webm",
+        "mp4": "genre-art/loops/adult.mp4",
+        "durationSeconds": 5.791666666666667,
+        "fps": 24,
+        "decodedEndpointsIdentical": true,
+        "files": {
+          "mp4": {
+            "bytes": 555615,
+            "sha256": "232a4b5c905b4c15b50db13eac93c4c0addce5c917e8204db55598cfe7c14e30",
+            "width": 616,
+            "height": 354
+          },
+          "webm": {
+            "bytes": 499340,
+            "sha256": "750a6b7af9bd4b6a36aa24445dd4fe00ebc882206ef8409a54786d504dcb32b0",
+            "width": 616,
+            "height": 353
+          }
+        }
+      }
     }
   }
 }
