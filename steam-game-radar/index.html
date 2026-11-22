@@ -118,6 +118,25 @@ table.mt th{white-space:normal;text-transform:none;letter-spacing:0;font-size:14
 footer h3{color:var(--text)}footer table td{white-space:normal;font-size:13px}optgroup{font-weight:700;color:var(--muted)}option{color:var(--text)}
 
 #adult-gate{text-align:center}#adult-gate button{margin-top:12px}
+.genre-picker{position:relative;z-index:21}
+#f-genre{display:inline-flex;align-items:center;gap:8px;background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:10px;padding:8px 10px;font:inherit;font-size:14px;cursor:pointer;max-width:min(100%,280px)}
+#f-genre-summary{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#f-genre::after{content:"";border:solid currentColor;border-width:0 2px 2px 0;padding:3px;transform:rotate(45deg);margin-left:2px;opacity:.7;flex:none}
+#genre-menu{position:absolute;top:calc(100% + 6px);left:0;z-index:30;width:min(92vw,340px);max-height:min(70vh,420px);display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--line);border-radius:12px;box-shadow:0 18px 40px rgba(0,0,0,.45);padding:8px}
+#genre-menu[hidden]{display:none!important}
+.genre-menu-bar{display:flex;gap:8px;align-items:center;margin-bottom:8px}
+#genre-menu-q{flex:1;min-width:0;background:var(--panel2);color:var(--text);border:1px solid var(--line);border-radius:10px;padding:8px 10px;font:inherit;font-size:14px}
+#genre-menu-list{overflow:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;display:flex;flex-direction:column;gap:2px}
+.genre-opt{display:flex;align-items:center;gap:10px;margin:0;padding:8px 10px;border-radius:8px;color:var(--text);font-size:14px;cursor:pointer}
+.genre-opt:hover,.genre-opt:focus-within{background:var(--panel2)}
+.genre-opt input{accent-color:var(--accent);width:18px;height:18px;min-height:0;flex:none;margin:0}
+.genre-opt .n{margin-left:auto;color:var(--dim);font-size:12px;font-variant-numeric:tabular-nums}
+#genre-menu .genre-special{background:var(--panel2);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:8px 10px;font:inherit;font-size:14px;text-align:left;cursor:pointer;width:100%;margin-bottom:2px}
+#genre-menu .genre-special[aria-current=true]{border-color:var(--accent);color:var(--accent)}
+#genre-picked{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+#genre-picked[hidden]{display:none!important}
+#genre-picked .chip{display:inline-flex;align-items:center;gap:6px;background:var(--panel);color:var(--text);cursor:pointer}
+#genre-picked .chip:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
 .genre-tile video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;pointer-events:none}.genre-tile video.playing{opacity:1}.genre-tile video[hidden]{display:none}.genre-tile>div{z-index:1}@media(prefers-reduced-motion:reduce){.genre-tile video{display:none!important}.genre-tile img{transition:none}.genre-tile:hover img{transform:none}}
 </style>
 </head>
@@ -131,7 +150,10 @@ footer h3{color:var(--text)}footer table td{white-space:normal;font-size:13px}op
   </div>
 </header>
 <div class="toolbar"><div class="wrap" id="controls">
-  <label class="sel">Genre <select id="f-genre" aria-label="Genre"></select></label>
+  <div class="sel genre-picker" id="genre-picker"><span id="genre-lbl">Genre</span>
+    <button type="button" id="f-genre" aria-haspopup="dialog" aria-expanded="false" aria-controls="genre-menu" aria-labelledby="genre-lbl f-genre-summary"><span id="f-genre-summary">All genres</span></button>
+    <div id="genre-menu" hidden role="dialog" aria-label="Choose genres"><div class="genre-menu-bar"><input id="genre-menu-q" type="search" placeholder="Find a genre" autocomplete="off" aria-label="Find a genre in the list"><button type="button" id="genre-clear">Clear</button></div><div id="genre-menu-list"></div></div></div>
+  <nav class="picked" id="genre-picked" hidden aria-label="Selected genres"></nav>
   <label class="sel search-label">Search <input id="f-search" type="search" placeholder="Search every game…" autocomplete="off" aria-label="Search every game"></label>
   <label class="sel">Sort <select id="f-sort" aria-label="Sort by"></select></label>
   <button id="f-more" class="reset" aria-expanded="false" aria-controls="filters">Filters</button>
@@ -222,25 +244,48 @@ const state={q:'',sort:'rank',sale:false,deck:false,free:false,gem:false,mode:''
 try{localStorage.removeItem('radar-show-adult');}catch{}
 try{if(localStorage.getItem('radar-hide-adult')==='1')state.hideAdult=true;}catch{}
 function visibleGenres(){return state.hideAdult?GL.filter(g=>g.key!=='adult'):GL;}
-function fillGenreNav(){const L=visibleGenres();$('f-genre').innerHTML='<option value="home">Home · all genres</option>'+[...L].sort((a,b)=>a.label.localeCompare(b.label)).map(g=>`<option value="${esc(g.key)}">${esc(g.label)} (${g.count.toLocaleString()})</option>`).join('')+`<option value="up">Upcoming · most wishlisted (${H.up})</option>`;$('genre-chips').innerHTML='<a href="#home" class="chip">All genres</a>'+[...L].sort((a,b)=>b.count-a.count).slice(0,14).map(g=>`<a href="#genre/${esc(g.key)}/1" class="chip">${esc(g.label)}</a>`).join('')+'<a href="#genre/up/1" class="chip">Upcoming</a>';}
+function genreKeysFromRaw(raw){const out=[];for(const part of String(raw||'').split(',')){let k=decodeURIComponent(part.trim());if(!k)continue;if(H.alias[k])k=H.alias[k];if((GBY[k]||k==='up')&&!out.includes(k))out.push(k);}return out;}
+function visibleKeys(keys){return keys.filter(k=>k==='up'||(GBY[k]&&!(state.hideAdult&&k==='adult')));}
+function sortKeys(keys){return keys.slice().sort((a,b)=>a.localeCompare(b));}
+function genreLabel(k){return k==='up'?'Upcoming':(GBY[k]?GBY[k].label:k);}
+function genreSummary(keys){const k=visibleKeys(keys).filter(x=>x!=='up');if(keys.length===1&&keys[0]==='up')return 'Upcoming';if(!k.length)return 'All genres';const labels=k.map(genreLabel);if(labels.length===1)return labels[0];if(labels.length===2)return labels[0]+' + '+labels[1];return labels[0]+' + '+labels[1]+' +'+ (labels.length-2);}
+function hashFor(keys,page=1){const genres=sortKeys(visibleKeys(keys).filter(k=>k!=='up'));if(!genres.length)return keys.includes('up')||(keys.length===1&&keys[0]==='up')?`#genre/up/${page}`:'#home';if(genres.length===1)return `#genre/${encodeURIComponent(genres[0])}/${page}`;return `#genres/${genres.map(encodeURIComponent).join(',')}${page>1?'/'+page:''}`;}
+function fillGenreNav(){const L=visibleGenres();const menu=$('genre-menu-list');const opts=[...L].sort((a,b)=>a.label.localeCompare(b.label)).map(g=>`<label class="genre-opt"><input type="checkbox" value="${esc(g.key)}" id="gopt-${esc(g.key)}"><span>${esc(g.label)}</span><span class="n">${g.count.toLocaleString()}</span></label>`).join('');menu.innerHTML=`<button type="button" class="genre-special" id="genre-up" data-genre-up>Upcoming · most wishlisted (${H.up.toLocaleString()})</button>`+opts;$('genre-chips').innerHTML='<a href="#home" class="chip">All genres</a>'+[...L].sort((a,b)=>b.count-a.count).slice(0,14).map(g=>`<a href="#genre/${esc(g.key)}/1" class="chip">${esc(g.label)}</a>`).join('')+'<a href="#genre/up/1" class="chip">Upcoming</a>';syncGenrePicker(route());}
+function genreMenuOpen(){return !$('genre-menu').hidden;}
+function closeGenreMenu(){if($('genre-menu').hidden)return;$('genre-menu').hidden=true;$('f-genre').setAttribute('aria-expanded','false');if($('genre-menu').contains(document.activeElement))$('f-genre').focus();}
+function openGenreMenu(){$('genre-menu').hidden=false;$('f-genre').setAttribute('aria-expanded','true');$('genre-menu-q').value='';filterGenreMenu('');const checked=$('genre-menu-list').querySelector('input:checked');(checked||$('genre-menu-q')).focus();if(checked){const row=checked.closest('.genre-opt');if(row&&typeof row.scrollIntoView==='function')row.scrollIntoView({block:'nearest'});}}
+function filterGenreMenu(q){const s=q.trim().toLocaleLowerCase();for(const lab of $('genre-menu-list').querySelectorAll('.genre-opt')){const hit=!s||lab.querySelector('span').textContent.toLocaleLowerCase().includes(s);lab.hidden=!hit;}}
+function genreOptionInputs(){return [...$('genre-menu-list').querySelectorAll('.genre-opt:not([hidden]) input')];}
+function moveGenreOption(dir){const inputs=genreOptionInputs();if(!inputs.length)return;const i=inputs.indexOf(document.activeElement);const n=i<0?(dir>0?0:inputs.length-1):Math.max(0,Math.min(inputs.length-1,i+dir));inputs[n].focus();}
+function syncGenrePicker(r){const keys=r?r.keys:(route().keys);const genres=visibleKeys(keys).filter(k=>k!=='up');const onUp=keys.length===1&&keys[0]==='up';$('f-genre-summary').textContent=genreSummary(keys);for(const inp of $('genre-menu-list').querySelectorAll('input[type=checkbox]'))inp.checked=genres.includes(inp.value);const upBtn=$('genre-up');if(upBtn)upBtn.setAttribute('aria-current',onUp?'true':'false');const picked=$('genre-picked');if(!genres.length){picked.hidden=true;picked.innerHTML='';}else{picked.hidden=false;picked.innerHTML=genres.map(k=>`<button type="button" class="chip" data-remove="${esc(k)}" aria-label="Remove ${esc(genreLabel(k))}">${esc(genreLabel(k))} ×</button>`).join('');}
+ document.querySelectorAll('#genre-chips a').forEach(a=>{const href=a.getAttribute('href');const cur=onUp?href==='#genre/up/1':!genres.length?href==='#home':genres.length===1&&href===`#genre/${genres[0]}/1`;a.setAttribute('aria-current',cur?'page':'false');});}
+function applyGenres(keys,page=1){state.q='';$('f-search').value='';go(keys,page);}
 // ---- data loading
 const chunks=new Map();let INDEX=null,IDX_BY=null;const details=new Map(),detShards=new Map();
 function loadChunk(key,n){const k=key+'/'+n;if(!chunks.has(k))chunks.set(k,getJSON(`data/g/${encodeURIComponent(key)}/${n}.json`).then(rows=>key==='up'?rows:rows.map(r=>unpack(r,H.cf))).catch(e=>{chunks.delete(k);throw e;}));return chunks.get(k);}
 function loadIndex(){if(!INDEX)INDEX=Promise.all(Array.from({length:H.is_},(_,i)=>getJSON(`data/i/${i}.json`))).then(parts=>{const all=parts.flat().map(r=>unpack(r,XF));all.forEach(g=>g.lc=g.name.toLocaleLowerCase());IDX_BY=new Map(all.map(g=>[g.id,g]));return all;}).catch(e=>{INDEX=null;throw e;});return INDEX;}
 async function loadDetail(id){const s=Math.floor(id/10)%H.ds;if(!detShards.has(s))detShards.set(s,getJSON(`data/d/${s}.json`).catch(e=>{detShards.delete(s);throw e;}));const d=(await detShards.get(s))[id];return d&&{desc:d[0],shots:d[1].map(x=>artUrl(id,/^[0-9a-f]{40}$/.test(x)?`ss_${x}.jpg`:x)),developer:d[2],publisher:d[3],row:d[4]?unpack(d[4],XF):null};}
 // ---- routing
-function route(){const m=location.hash.match(/^#genre\/([^/]+)(?:\/(\d+))?$/);if(!m)return{key:'home',page:1};let key=decodeURIComponent(m[1]);if(H.alias[key])key=H.alias[key];return{key,page:Math.max(1,Number(m[2]||1))};}
-function go(k,page=1){const h=k==='home'?'#home':`#genre/${encodeURIComponent(k)}/${page}`;if(location.hash===h)draw().catch(showError);else location.hash=h;}
+function route(){const hm=location.hash.match(/^#genres\/([^/]+)(?:\/(\d+))?$/);if(hm){const keys=sortKeys(visibleKeys(genreKeysFromRaw(hm[1]).filter(k=>k!=='up')));const page=Math.max(1,Number(hm[2]||1));if(!keys.length)return{key:'home',page:1,keys:[]};if(keys.length===1)return{key:keys[0],page,keys};return{key:'multi',page,keys};}
+ const m=location.hash.match(/^#genre\/([^/]+)(?:\/(\d+))?$/);if(!m)return{key:'home',page:1,keys:[]};let key=decodeURIComponent(m[1]);if(H.alias[key])key=H.alias[key];const page=Math.max(1,Number(m[2]||1));if(key==='all')return{key:'all',page,keys:[]};if(key==='up')return{key:'up',page,keys:['up']};if(GBY[key])return{key,page,keys:[key]};return{key,page,keys:[]};}
+function normalizeHash(){const r=route();let want=null;if(r.key==='multi')want=hashFor(r.keys,r.page);else if(location.hash.startsWith('#genres/'))want=r.keys.length?hashFor(r.keys,r.page):'#home';if(want&&want!==location.hash)history.replaceState(null,'',want);return r;}
+function go(k,page=1){let h;if(Array.isArray(k))h=hashFor(k,page);else if(k==='home')h='#home';else if(k==='all')h=`#genre/all/${page}`;else h=hashFor([k],page);if(location.hash===h)draw().catch(showError);else location.hash=h;}
 const filtersOn=()=>state.sale||state.deck||state.free||state.gem||state.mode||state.ctl||state.dev||state.machine;
-function refresh(){const r=route();if(r.page!==1)go(r.key==='home'?'all':r.key,1);else draw().catch(showError);}
+function refresh(){const r=route();if(r.page!==1)go(r.keys.length?r.keys:(r.key==='home'?'all':r.key),1);else draw().catch(showError);}
 // ---- controls
 $('updated').textContent=H.u;$('ed').textContent=` · Edition ${H.e} · ${H.n.toLocaleString()} games · ${GL.length} genres`;
 $('sub').textContent=`Every Steam genre tag, every qualifying game (at least ${H.minReviews} reviews), ranked by review confidence. 10 per page by default (25, 50 or 100 on request).`;
 fillGenreNav();
 const groups=[...new Set(M.map(m=>m[2]))];
 $('f-sort').innerHTML=groups.map(gr=>`<optgroup label="${esc(gr)}">`+M.filter(m=>m[2]===gr).map(m=>`<option value="${m[0]}" title="${esc(m[7])}">${esc(m[1])}</option>`).join('')+'</optgroup>').join('');
-$('f-genre').addEventListener('change',e=>{state.q='';$('f-search').value='';go(e.target.value);});
-$('genre-chips').addEventListener('click',e=>{if(e.target.closest('a')){state.q='';$('f-search').value='';}});
+$('f-genre').addEventListener('click',e=>{e.stopPropagation();genreMenuOpen()?closeGenreMenu():openGenreMenu();});
+$('genre-clear').addEventListener('click',()=>{closeGenreMenu();applyGenres([]);});
+$('genre-menu').addEventListener('change',e=>{const inp=e.target.closest('input[type=checkbox]');if(!inp)return;const on=new Set(visibleKeys(route().keys).filter(k=>k!=='up'));if(inp.checked)on.add(inp.value);else on.delete(inp.value);applyGenres([...on]);});
+$('genre-menu').addEventListener('click',e=>{if(e.target.closest('[data-genre-up]')){closeGenreMenu();applyGenres(['up']);}});
+$('genre-menu-q').addEventListener('input',e=>filterGenreMenu(e.target.value));
+$('genre-picked').addEventListener('click',e=>{const b=e.target.closest('[data-remove]');if(!b)return;applyGenres(visibleKeys(route().keys).filter(k=>k!==b.dataset.remove&&k!=='up'));});
+document.addEventListener('pointerdown',e=>{if(genreMenuOpen()&&!e.target.closest('#genre-picker'))closeGenreMenu();});
+$('genre-chips').addEventListener('click',e=>{if(e.target.closest('a')){state.q='';$('f-search').value='';closeGenreMenu();}});
 let searchTimer;$('f-search').addEventListener('input',e=>{clearTimeout(searchTimer);searchTimer=setTimeout(()=>{state.q=e.target.value.trim().toLocaleLowerCase();refresh();},120);});
 $('f-search').addEventListener('focus',()=>loadIndex().catch(()=>{}),{once:true});
 $('f-sort').addEventListener('change',e=>{state.sort=e.target.value;refresh();});
@@ -327,9 +372,8 @@ const rankSort=(a,b)=>{const x=a.score,y=b.score,nx=missingMetric(x),ny=missingM
 function sorter(key){const m=MET[key];return (a,b)=>{const x=m.val(a),y=m.val(b),nx=missingMetric(x),ny=missingMetric(y);if(nx!==ny)return nx?1:-1;if(nx)return rankSort(a,b);return (y-x)*m.dir||rankSort(a,b);};}
 function pager(page,pages){if(pages<=1)return '';const b=(p,l,dis,cur)=>`<button data-page="${p}" ${dis?'disabled':''} ${cur?'aria-current="page"':''} aria-label="${typeof l==='number'?'Page '+l:l.replace(/[←→] ?| ?[←→]/g,'')}">${l}</button>`;const set=new Set([1,pages]);for(let p=page-2;p<=page+2;p++)if(p>=1&&p<=pages)set.add(p);let out=b(page-1,'← Previous',page===1),last=0;for(const p of [...set].sort((a,c)=>a-c)){if(p-last>1)out+='<span class="gap">…</span>';out+=b(p,p,false,p===page);last=p;}out+=b(page+1,'Next →',page===pages);return out+`<label class="sel jump">Go to <input id="jump" type="number" min="1" max="${pages}" value="${page}" aria-label="Go to page"> of ${pages.toLocaleString()}</label>`;}
 async function draw(){
- const token=++drawToken,r=route(),searching=!!state.q,home=r.key==='home'&&!searching&&!filtersOn();
- const known=r.key==='home'||r.key==='all'||r.key==='up'||GBY[r.key];$('f-genre').value=GBY[r.key]||r.key==='up'?r.key:'home';
- document.querySelectorAll('#genre-chips a').forEach(a=>a.setAttribute('aria-current',a.getAttribute('href')===(r.key==='home'?'#home':`#genre/${r.key}/1`)?'page':'false'));
+ const token=++drawToken,r=normalizeHash(),searching=!!state.q,home=r.key==='home'&&!searching&&!filtersOn(),multi=r.key==='multi';
+ const known=r.key==='home'||r.key==='all'||r.key==='up'||multi||GBY[r.key];syncGenrePicker(r);
  $('home-view').hidden=!home;$('results-view').hidden=home;
  if(home){const hl=state.hideAdult?H.h.filter(([,row])=>!unpack(row,H.cf).adult):H.h;$('highlights').innerHTML=hl.map(([lead,row],i)=>card(unpack(row,H.cf),0,lead)).join('');drawTiles();$('groups').innerHTML='';$('pagination').innerHTML='';$('showing').textContent=`Home · ${visibleGenres().length} genres · ${H.n.toLocaleString()} games`;window.dispatchEvent(new Event('radar:render'));return;}
  clearTileVideos();$('highlights').innerHTML='';$('genre-tiles').innerHTML='';$('groups').innerHTML='<p class="empty">Loading…</p>';
@@ -338,13 +382,13 @@ async function draw(){
  else if(!known){title='Genre not found';visible=[];total=0;detail='Pick a genre from the list.';}
  else if(r.key==='up'&&!searching){const L=await loadChunk('up',1);if(token!==drawToken)return;total=L.length;page=Math.min(page,Math.max(1,Math.ceil(total/PAGE)));visible=L.slice((page-1)*PAGE,page*PAGE).map((u,i)=>['up',u]);title='Upcoming · most wishlisted';detail=`${total} unreleased games in Steam's "Popular upcoming" order (by wishlists). Filters and sorts apply to released games only.`;}
  else if(gen&&!searching&&!filtersOn()&&!state.hideAdult&&state.sort==='rank'){total=gen.count;const pages=Math.max(1,Math.ceil(total/PAGE));page=Math.min(page,pages);const s=(page-1)*PAGE,end=Math.min(total,s+PAGE),first=Math.floor(s/CH)+1,last=Math.ceil(end/CH);let rows=[];for(let n=first;n<=last;n+=8){const batch=await Promise.all(Array.from({length:Math.min(8,last-n+1)},(_,i)=>loadChunk(gen.key,n+i)));if(token!==drawToken)return;rows.push(...batch.flat());}visible=rows.slice(s-(first-1)*CH,s-(first-1)*CH+PAGE).map((g,i)=>[s+i+1,g]);title=gen.label;detail=`${total.toLocaleString()} games · ${gen.cat} · ranked by 95% confidence score of SteamSpy review counts`;}
- else{const all=await loadIndex();if(token!==drawToken)return;let L=all;const gi=gen?GEN.findIndex(x=>x.key===gen.key):-1;if(gen&&!searching)L=L.filter(g=>g.genres.includes(gi));L=L.filter(matches).sort(state.sort==='rank'?rankSort:sorter(state.sort));total=L.length;const pages=Math.max(1,Math.ceil(total/PAGE));page=Math.min(page,pages);visible=L.slice((page-1)*PAGE,page*PAGE).map((g,i)=>[(page-1)*PAGE+i+1,g]);
-  title=searching?'Search all games':gen?gen.label:'Filtered radar';const sm=MET[state.sort];detail=(searching?`${total.toLocaleString()} matches for “${state.q}”`:`${total.toLocaleString()} games`)+` · sorted by ${sm.label} (${SRC[sm.src]}) · n/a values last`;}
+ else{const all=await loadIndex();if(token!==drawToken)return;let L=all;const gkeys=(!searching&&(multi||gen))?visibleKeys(r.keys).filter(k=>k!=='up'):[];const idxs=gkeys.map(k=>GEN.findIndex(x=>x.key===k)).filter(i=>i>=0);if(idxs.length&&!searching)L=L.filter(g=>idxs.every(i=>g.genres.includes(i)));L=L.filter(matches).sort(state.sort==='rank'?rankSort:sorter(state.sort));total=L.length;const pages=Math.max(1,Math.ceil(total/PAGE));page=Math.min(page,pages);visible=L.slice((page-1)*PAGE,page*PAGE).map((g,i)=>[(page-1)*PAGE+i+1,g]);
+  const labels=gkeys.map(genreLabel);title=searching?'Search all games':labels.length?genreSummary(gkeys):'Filtered radar';const sm=MET[state.sort];detail=(searching?`${total.toLocaleString()} matches for “${state.q}”`:labels.length>1?`${total.toLocaleString()} games in every selected genre (${labels.join(' + ')})`:`${total.toLocaleString()} games`)+` · sorted by ${sm.label} (${SRC[sm.src]}) · n/a values last`;}
  const pages=Math.max(1,Math.ceil(total/PAGE));
  $('view-title').textContent=title;$('view-detail').textContent=detail+(adultLocked?'':` · Page ${page.toLocaleString()} of ${pages.toLocaleString()}`);
  $('groups').innerHTML='';
  if(adultLocked)$('groups').innerHTML='<div class="empty" id="adult-gate"><p>Adult games are hidden. Turn off Hide adult games to open this genre.</p><button type="button" id="adult-enable" class="reset">Show adult games</button></div>';
- else if(!visible.length)$('groups').innerHTML='<p class="empty">No games match. Clear filters or search another title.</p>';
+ else if(!visible.length)$('groups').innerHTML=(!searching&&multi)?'<p class="empty" id="genre-empty">No games belong to all of the selected genres. Clear a genre or pick a different combination.</p>':'<p class="empty">No games match. Clear filters or search another title.</p>';
  // Yield between bounded DOM batches so All never monopolises the UI thread.
  for(let i=0;i<visible.length;i+=100){if(token!==drawToken)return;$('groups').insertAdjacentHTML('beforeend',visible.slice(i,i+100).map(([pos,g])=>pos==='up'?upCard(g):card(g,pos)).join(''));if(visible.length>100){$('showing').textContent=`Rendering ${Math.min(i+100,visible.length).toLocaleString()} of ${visible.length.toLocaleString()}…`;await new Promise(resolve=>setTimeout(resolve,0));}}
  $('pagination').innerHTML=pager(page,pages);
@@ -361,7 +405,7 @@ async function draw(){
  root.style.scrollBehavior=previousScrollBehavior;
  window.dispatchEvent(new Event('radar:render'));
 }
-function jumpTo(v){const r=route(),n=parseInt(v,10);if(n>0)go(r.key==='home'?'all':r.key,n);}
+function jumpTo(v){const r=route(),n=parseInt(v,10);if(n>0)go(r.keys.length?r.keys:(r.key==='home'?'all':r.key),n);}
 $('pagination').addEventListener('click',e=>{const b=e.target.closest('[data-page]');if(b&&!b.disabled)jumpTo(b.dataset.page);});
 $('groups').addEventListener('click',e=>{if(e.target&&e.target.id==='adult-enable'){state.hideAdult=false;$('f-adult').checked=false;try{localStorage.setItem('radar-hide-adult','0');}catch{}fillGenreNav();refresh();}});
 $('pagination').addEventListener('change',e=>{if(e.target.id==='jump')jumpTo(e.target.value);});
@@ -392,18 +436,19 @@ document.addEventListener('click',e=>{if(e.target.matches('.card')){e.target.que
 lb.addEventListener('click',e=>{if(e.target.closest('.prev'))step(-1);else if(e.target.closest('.next'))step(1);else if(e.target===lb||e.target.closest('.x'))closeLb();});
 lbImg.addEventListener('error',()=>{const s=current?.shots[shot];const t=s&&s.replace(/\.jpg$/,'.600x338.jpg');if(t&&lbImg.src!==t)lbImg.src=t;});
 // ---- keyboard + controller
-function scope(){return current?lb:dlg.classList.contains('open')?dlg:null;}
-function focusMove(delta){const sc=scope();const els=sc?[...sc.querySelectorAll('button,a,input,select')]:[...document.querySelectorAll('#controls input,#controls select,#controls button,#filters:not([hidden]) input,#filters:not([hidden]) select,#genre-chips a,main a,main button,main input,main select,.card[tabindex]')].filter(e=>!e.closest('[hidden]')&&!e.disabled);const i=els.indexOf(document.activeElement);els[(Math.max(i,0)+delta+els.length)%els.length]?.focus();}
-function stepSelect(el,d){const n=el.selectedIndex+d;if(n>=0&&n<el.options.length){el.selectedIndex=n;el.dispatchEvent(new Event('change',{bubbles:true}));}}
+function scope(){return current?lb:dlg.classList.contains('open')?dlg:genreMenuOpen()?$('genre-menu'):null;}
+function focusMove(delta){const sc=scope();const els=sc?[...sc.querySelectorAll('button,a,input,select')]:[...document.querySelectorAll('#controls input,#controls select,#controls button,#filters:not([hidden]) input,#filters:not([hidden]) select,#genre-chips a,#genre-picked button,main a,main button,main input,main select,.card[tabindex]')].filter(e=>!e.closest('[hidden]')&&!e.disabled&&!e.closest('#genre-menu'));const i=els.indexOf(document.activeElement);els[(Math.max(i,0)+delta+els.length)%els.length]?.focus();}
+function stepSelect(el,d){if(!el||el.tagName!=='SELECT')return;const n=el.selectedIndex+d;if(n>=0&&n<el.options.length){el.selectedIndex=n;el.dispatchEvent(new Event('change',{bubbles:true}));}}
 document.addEventListener('keydown',e=>{if(current){if(e.key==='Escape')closeLb();else if(e.key==='ArrowRight')step(1);else if(e.key==='ArrowLeft')step(-1);return;}
  if(dlg.classList.contains('open')){if(e.key==='Escape'){closeDlg();e.preventDefault();}else if(e.key==='Tab'){focusMove(e.shiftKey?-1:1);e.preventDefault();}return;}
+ if(genreMenuOpen()){if(e.key==='Escape'){closeGenreMenu();e.preventDefault();}else if(e.key==='ArrowDown'){moveGenreOption(1);e.preventDefault();}else if(e.key==='ArrowUp'){moveGenreOption(-1);e.preventDefault();}return;}
  if(e.target.matches('input,select,textarea'))return;if(e.key==='ArrowDown'||e.key==='ArrowRight'){focusMove(1);e.preventDefault();}else if(e.key==='ArrowUp'||e.key==='ArrowLeft'){focusMove(-1);e.preventDefault();}else if(e.key==='Escape'){go('home');}else if(e.key==='Enter'&&e.target.matches('.card'))e.target.querySelector('a').click();});
 // Gamepad: D-pad/stick up-down moves focus, left-right changes a focused select (sort menu), A activates, B closes/back.
 window.RADAR_PAD={stepSelect,focusMove};
 if(navigator.getGamepads&&window.requestAnimationFrame){let last=0;const loop=t=>{const pad=[...navigator.getGamepads()].find(Boolean);if(pad&&t-last>200){const el=document.activeElement,sel=el&&el.tagName==='SELECT';const L=pad.buttons[14]?.pressed||pad.axes[0]<-.6,R=pad.buttons[15]?.pressed||pad.axes[0]>.6,U=pad.buttons[12]?.pressed||pad.axes[1]<-.6,D=pad.buttons[13]?.pressed||pad.axes[1]>.6;
- if(pad.buttons[0]?.pressed){if(!sel)el?.click();last=t;}else if(pad.buttons[1]?.pressed){current?closeLb():dlg.classList.contains('open')?closeDlg():history.back();last=t;}else if(sel&&(L||R)){stepSelect(el,R?1:-1);last=t;}else if(D||R){focusMove(1);last=t;}else if(U||L){focusMove(-1);last=t;}}requestAnimationFrame(loop);};requestAnimationFrame(loop);}
+ if(pad.buttons[0]?.pressed){if(!sel)el?.click();last=t;}else if(pad.buttons[1]?.pressed){current?closeLb():dlg.classList.contains('open')?closeDlg():genreMenuOpen()?closeGenreMenu():history.back();last=t;}else if(genreMenuOpen()&&(D||U)){moveGenreOption(D?1:-1);last=t;}else if(sel&&(L||R)){stepSelect(el,R?1:-1);last=t;}else if(D||R){focusMove(1);last=t;}else if(U||L){focusMove(-1);last=t;}}requestAnimationFrame(loop);};requestAnimationFrame(loop);}
 await draw();
-return {route,loadIndex,loadChunk,metrics:M,state};
+return {route,loadIndex,loadChunk,metrics:M,state,hashFor,applyGenres};
 })().catch(e=>{document.getElementById("showing").textContent="Radar data unavailable — please refresh.";console.error(e);throw e;});
 </script>
 </body>
