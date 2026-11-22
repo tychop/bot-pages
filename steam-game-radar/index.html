@@ -342,7 +342,9 @@ async function draw(){
  $('showing').textContent=`${total?((page-1)*PAGE+1).toLocaleString():0}–${Math.min(page*PAGE,total).toLocaleString()} of ${total.toLocaleString()}`;
  // Finish every replacement list at the top, including non-route filter changes.
  // Temporarily defeat the global smooth-scroll rule (also in Safari).
- $('view-title').focus({preventScroll:true});
+ // Keep caret and focus if the user is mid-input (search would otherwise lose them on every render).
+ const typing=document.activeElement?.matches?.('input,select,textarea');
+ if(!typing)$('view-title').focus({preventScroll:true});
  const root=document.documentElement,previousScrollBehavior=root.style.scrollBehavior;
  root.style.scrollBehavior='auto';
  window.scrollTo({top:0,left:0,behavior:'instant'});
