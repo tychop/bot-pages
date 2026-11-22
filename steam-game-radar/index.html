@@ -146,6 +146,7 @@ footer h3{color:var(--text)}footer table td{white-space:normal;font-size:13px}op
   <label class="chk"><input type="checkbox" id="f-deck"><span></span>Deck Verified</label>
   <label class="chk"><input type="checkbox" id="f-free"><span></span>Free</label>
   <label class="chk" title="At least 90% positive Steam reviews and at most 100,000 estimated owners (SteamSpy upper bound)"><input type="checkbox" id="f-gem"><span></span>Hidden gems</label>
+  <label class="chk" title="Games Steam marks with Adult Only Sexual Content or Frequent Nudity or Sexual Content. Hidden by default."><input type="checkbox" id="f-adult"><span></span>Show adult games</label>
 </div>
 <nav class="wrap chips" id="genre-chips" aria-label="Popular genres"></nav></div>
 <main class="wrap">
@@ -215,7 +216,8 @@ const M=[
  ['machine','Steam Machine status','Game info',g=>g.machine==null?null:g.machine,g=>g.machine==null?NA:deckName(g.machine),1,'items','Verified > Playable > Unsupported > Unknown'],
  ['controller','Controller support','Game info',g=>g.controller,g=>g.controller==null?NA:CTL[g.controller],1,'items','Full > Partial > None (Steam categories)']];
 const MET=Object.fromEntries(M.map(m=>[m[0],{key:m[0],label:m[1],group:m[2],val:m[3],fmt:m[4],dir:m[5],src:m[6],note:m[7]}]));
-const state={q:'',sort:'rank',sale:false,deck:false,free:false,gem:false,mode:'',ctl:'',dev:'',machine:'',gq:'',gsort:'count',gcat:''};let drawToken=0;
+const state={q:'',sort:'rank',sale:false,deck:false,free:false,gem:false,mode:'',ctl:'',dev:'',machine:'',adult:false,gq:'',gsort:'count',gcat:''};let drawToken=0;
+try{if(localStorage.getItem('radar-show-adult')==='1')state.adult=true;}catch{}
 // ---- data loading
 const chunks=new Map();let INDEX=null,IDX_BY=null;const details=new Map(),detShards=new Map();
 function loadChunk(key,n){const k=key+'/'+n;if(!chunks.has(k))chunks.set(k,getJSON(`data/g/${encodeURIComponent(key)}/${n}.json`).then(rows=>key==='up'?rows:rows.map(r=>unpack(r,H.cf))).catch(e=>{chunks.delete(k);throw e;}));return chunks.get(k);}
@@ -241,9 +243,11 @@ $('f-sort').addEventListener('change',e=>{state.sort=e.target.value;refresh();})
 $('f-page-size').value=pageSizeChoice;
 $('f-page-size').addEventListener('change',e=>{const value=e.target.value;if(!PAGE_SIZES.includes(value)){e.target.value=pageSizeChoice;return;}pageSizeChoice=value;PAGE=+value;try{localStorage.setItem('radar-page-size',value);}catch{}refresh();});
 for(const [id,key] of [['f-sale','sale'],['f-deck','deck'],['f-free','free'],['f-gem','gem']])$(id).addEventListener('change',e=>{state[key]=e.target.checked;refresh();});
+$('f-adult').checked=state.adult;
+$('f-adult').addEventListener('change',e=>{state.adult=e.target.checked;try{localStorage.setItem('radar-show-adult',state.adult?'1':'0');}catch{}refresh();});
 for(const [id,key] of [['f-mode','mode'],['f-ctl','ctl'],['f-dev','dev'],['f-machine','machine']])$(id).addEventListener('change',e=>{state[key]=e.target.value;refresh();});
 $('f-more').addEventListener('click',()=>{const f=$('filters');f.hidden=!f.hidden;$('f-more').setAttribute('aria-expanded',String(!f.hidden));});
-$('reset').addEventListener('click',()=>{Object.assign(state,{q:'',sort:'rank',sale:false,deck:false,free:false,gem:false,mode:'',ctl:'',dev:'',machine:''});$('f-search').value='';$('f-sort').value='rank';for(const id of ['f-sale','f-deck','f-free','f-gem'])$(id).checked=false;for(const id of ['f-mode','f-ctl','f-dev'])$(id).value='';$('f-machine').value='';go('home');});
+$('reset').addEventListener('click',()=>{Object.assign(state,{q:'',sort:'rank',sale:false,deck:false,free:false,gem:false,mode:'',ctl:'',dev:'',machine:'',adult:false});$('f-search').value='';$('f-sort').value='rank';for(const id of ['f-sale','f-deck','f-free','f-gem','f-adult'])$(id).checked=false;for(const id of ['f-mode','f-ctl','f-dev'])$(id).value='';$('f-machine').value='';try{localStorage.setItem('radar-show-adult','0');}catch{}go('home');});
 $('g-search').addEventListener('input',e=>{state.gq=e.target.value.trim().toLocaleLowerCase();drawTiles();});
 $('g-sort').addEventListener('change',e=>{state.gsort=e.target.value;drawTiles();});
 $('g-cat').addEventListener('change',e=>{state.gcat=e.target.value;drawTiles();});
@@ -312,7 +316,7 @@ function drawTiles(){clearTileVideos();let L=GL.filter(g=>(!state.gcat||g.cat===
  const S={count:(a,b)=>b.count-a.count,reviews:(a,b)=>b.reviews-a.reviews,name:(a,b)=>a.label.localeCompare(b.label)};L.sort(S[state.gsort]);
  $('genre-count').textContent=L.length;
  $('genre-tiles').innerHTML=L.map(g=>`<a class="genre-tile" href="#genre/${esc(g.key)}/1" data-genre="${esc(g.key)}" style="background:${genreGradient(g.key)}">${GENRE_ART[g.key]?`<img src="${esc(GENRE_ART[g.key])}" alt="" loading="lazy" decoding="async" width="616" height="353">`:''}${genreVideo(g.key)}<div><strong>${esc(g.label)}</strong><span>${g.count.toLocaleString()} games · ${esc(g.cat)} · #1 ${esc(g.leadName)}</span><span>${g.reviews.toLocaleString()} reviews</span></div></a>`).join('')||'<p class="empty">No genre matches.</p>';observeTileVideos();}
-function matches(g){return (!state.q||g.lc.includes(state.q))&&(!state.sale||g.discount>0)&&(!state.deck||g.deck===3)&&(!state.free||g.free)&&(!state.gem||(g.pct>=90&&g.ownersHi!=null&&g.ownersHi<=100000))&&(!state.mode||(g.modes&+state.mode))&&(!state.ctl||(g.controller!=null&&g.controller>=+state.ctl))&&(!state.dev||g.devSize===+state.dev)&&(!state.machine||(g.machine==null?0:g.machine)===+state.machine);}
+function matches(g){return (!state.q||g.lc.includes(state.q))&&(!state.sale||g.discount>0)&&(!state.deck||g.deck===3)&&(!state.free||g.free)&&(!state.gem||(g.pct>=90&&g.ownersHi!=null&&g.ownersHi<=100000))&&(!state.mode||(g.modes&+state.mode))&&(!state.ctl||(g.controller!=null&&g.controller>=+state.ctl))&&(!state.dev||g.devSize===+state.dev)&&(!state.machine||(g.machine==null?0:g.machine)===+state.machine)&&(state.adult||!g.adult);}
 // Missing metrics always trail known values, before applying either sort direction.
 const missingMetric=v=>v==null||Number.isNaN(v);
 const rankSort=(a,b)=>{const x=a.score,y=b.score,nx=missingMetric(x),ny=missingMetric(y);if(nx!==ny)return nx?1:-1;return (nx?0:Math.round(y*1e6)-Math.round(x*1e6))||(b.reviews??0)-(a.reviews??0)||a.id-b.id;};
@@ -328,7 +332,7 @@ async function draw(){
  let visible,total,page=r.page,title,detail;const gen=GBY[r.key];
  if(!known){title='Genre not found';visible=[];total=0;detail='Pick a genre from the list.';}
  else if(r.key==='up'&&!searching){const L=await loadChunk('up',1);if(token!==drawToken)return;total=L.length;page=Math.min(page,Math.max(1,Math.ceil(total/PAGE)));visible=L.slice((page-1)*PAGE,page*PAGE).map((u,i)=>['up',u]);title='Upcoming · most wishlisted';detail=`${total} unreleased games in Steam's "Popular upcoming" order (by wishlists). Filters and sorts apply to released games only.`;}
- else if(gen&&!searching&&!filtersOn()&&state.sort==='rank'){total=gen.count;const pages=Math.max(1,Math.ceil(total/PAGE));page=Math.min(page,pages);const s=(page-1)*PAGE,end=Math.min(total,s+PAGE),first=Math.floor(s/CH)+1,last=Math.ceil(end/CH);let rows=[];for(let n=first;n<=last;n+=8){const batch=await Promise.all(Array.from({length:Math.min(8,last-n+1)},(_,i)=>loadChunk(gen.key,n+i)));if(token!==drawToken)return;rows.push(...batch.flat());}visible=rows.slice(s-(first-1)*CH,s-(first-1)*CH+PAGE).map((g,i)=>[s+i+1,g]);title=gen.label;detail=`${total.toLocaleString()} games · ${gen.cat} · ranked by 95% confidence score of SteamSpy review counts`;}
+ else if(gen&&!searching&&!filtersOn()&&!state.adult&&state.sort==='rank'){total=gen.count;const pages=Math.max(1,Math.ceil(total/PAGE));page=Math.min(page,pages);const s=(page-1)*PAGE,end=Math.min(total,s+PAGE),first=Math.floor(s/CH)+1,last=Math.ceil(end/CH);let rows=[];for(let n=first;n<=last;n+=8){const batch=await Promise.all(Array.from({length:Math.min(8,last-n+1)},(_,i)=>loadChunk(gen.key,n+i)));if(token!==drawToken)return;rows.push(...batch.flat());}visible=rows.slice(s-(first-1)*CH,s-(first-1)*CH+PAGE).map((g,i)=>[s+i+1,g]);title=gen.label;detail=`${total.toLocaleString()} games · ${gen.cat} · ranked by 95% confidence score of SteamSpy review counts`;}
  else{const all=await loadIndex();if(token!==drawToken)return;let L=all;const gi=gen?GEN.findIndex(x=>x.key===gen.key):-1;if(gen&&!searching)L=L.filter(g=>g.genres.includes(gi));L=L.filter(matches).sort(state.sort==='rank'?rankSort:sorter(state.sort));total=L.length;const pages=Math.max(1,Math.ceil(total/PAGE));page=Math.min(page,pages);visible=L.slice((page-1)*PAGE,page*PAGE).map((g,i)=>[(page-1)*PAGE+i+1,g]);
   title=searching?'Search all games':gen?gen.label:'Filtered radar';const sm=MET[state.sort];detail=(searching?`${total.toLocaleString()} matches for “${state.q}”`:`${total.toLocaleString()} games`)+` · sorted by ${sm.label} (${SRC[sm.src]}) · n/a values last`;}
  const pages=Math.max(1,Math.ceil(total/PAGE));
