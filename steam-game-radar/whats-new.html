@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#07090f">
+<title>What's new · Steam Machine Game Radar</title>
+<style>
+:root{--bg:#07090f;--panel:#0f1420;--panel2:#141b2b;--line:#222c42;--text:#e8ecf5;--muted:#8d97ad;--dim:#5d6780;--accent:#38e1ff;--accent2:#ff3fa4;--good:#4ade80;--ok:#38bdf8;--warn:#fbbf24;--bad:#f87171;--radius:16px;color-scheme:dark}
+[hidden]{display:none!important}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased;overflow-wrap:anywhere}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1880px;margin:0 auto;padding:0 clamp(16px,3vw,48px)}
+header.hero{border-bottom:1px solid var(--line);background:linear-gradient(180deg,rgba(56,225,255,.08),transparent)}
+header.hero .wrap{padding-top:28px;padding-bottom:22px}
+.back{display:inline-block;font-size:14px;margin-bottom:10px}
+.kicker{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:700}
+h1{font-size:clamp(30px,4.4vw,54px);line-height:1.05;margin:.2em 0 .2em;letter-spacing:-.02em;font-weight:900;background:linear-gradient(90deg,#fff,var(--accent) 55%,var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{color:var(--muted);max-width:900px;margin:0;font-size:clamp(15px,1.3vw,19px)}
+.sched{display:inline-flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:14px;padding:6px 14px;border:1px solid var(--line);border-radius:999px;background:rgba(15,20,32,.7);font-size:14px;color:var(--muted)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--good);box-shadow:0 0 10px var(--good)}
+.tools{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;padding:16px 0 6px}
+label.sel{display:inline-flex;gap:8px;align-items:center;font-size:14px;color:var(--muted);min-width:0}
+select{background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:10px;padding:8px 10px;font:inherit;font-size:14px;min-height:44px;max-width:100%}
+button{background:var(--panel2);color:var(--text);border:1px solid var(--line);border-radius:10px;padding:8px 14px;cursor:pointer;font:inherit;font-size:14px;min-height:44px;touch-action:manipulation}
+button:hover{border-color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:8px 0 14px}
+.chips button{min-height:36px;padding:4px 12px;border-radius:999px;font-size:13px;color:var(--muted)}
+.chips button b{color:var(--text);margin-left:6px}
+.note{color:var(--muted);font-size:14px;margin:0 0 14px}
+details.grp{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);margin:0 0 14px;overflow:hidden}
+details.grp>summary{display:flex;align-items:center;gap:12px;padding:14px 18px;cursor:pointer;list-style:none;font-weight:800;font-size:18px;min-height:52px}
+details.grp>summary::-webkit-details-marker{display:none}
+details.grp>summary::after{content:"";margin-left:auto;flex:none;border:solid var(--muted);border-width:0 2px 2px 0;padding:3.5px;transform:rotate(45deg);transition:transform .15s}
+details.grp[open]>summary::after{transform:rotate(-135deg)}
+details.grp>summary .n{font-size:14px;font-weight:700;color:var(--bg);background:var(--accent);border-radius:999px;padding:1px 10px}
+details.grp.zero>summary .n{background:var(--panel2);color:var(--muted)}
+.gbody{padding:0 18px 18px}
+.help{color:var(--muted);font-size:14px;margin:0 0 4px}
+.cap{color:var(--dim);font-size:13px;margin:0 0 12px}
+.rows{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(min(100%,380px),1fr))}
+.row{display:flex;gap:12px;align-items:flex-start;min-width:0;background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:10px}
+.row .th{flex:none;width:112px;height:auto;aspect-ratio:616/353;align-self:flex-start;border-radius:8px;object-fit:cover;background:#0b0f18;display:block}
+.row .th.none{display:flex;align-items:center;justify-content:center;color:var(--dim);font-size:11px;text-align:center}
+.row .tx{min-width:0;flex:1}
+.row .t{font-weight:700;line-height:1.3}
+.row .t a{color:var(--text)}.row .t a:hover{color:var(--accent)}
+.row .m{color:var(--muted);font-size:13.5px;margin-top:3px}
+.row .m b{color:var(--text)}
+.row .m s{color:var(--dim)}
+.tag{display:inline-block;font-weight:800;font-size:12px;border-radius:6px;padding:0 6px;background:rgba(74,222,128,.16);color:var(--good)}
+.tag.bad{background:rgba(248,113,113,.16);color:var(--bad)}
+.up{color:var(--good)}.down{color:var(--bad)}
+.more{margin-top:12px}
+.site{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+.site li{background:var(--panel2);border:1px solid var(--line);border-left:3px solid var(--accent2);border-radius:10px;padding:10px 14px}
+.site time{display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);font-weight:700}
+.empty{color:var(--muted);padding:6px 0}
+footer{color:var(--dim);font-size:13px;padding:30px 0 60px;border-top:1px solid var(--line);margin-top:30px}
+@media(max-width:520px){.row .th{width:88px}details.grp>summary{padding:12px 14px;font-size:17px}.gbody{padding:0 14px 14px}.rows{grid-template-columns:100%}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap">
+  <a class="back" href="index.html">← Steam Machine Game Radar</a>
+  <div class="kicker">Steam Machine · Weekly radar</div>
+  <h1>What's new</h1>
+  <p class="sub" id="sub" aria-live="polite">Loading…</p>
+  <div class="sched"><span class="dot"></span><span id="sched">Updated weekly</span></div>
+</div></header>
+<main class="wrap">
+  <div class="tools">
+    <label class="sel">Update <select id="u-pick" aria-label="Choose an update"></select></label>
+    <label class="sel">Sort rows <select id="u-sort" aria-label="Sort rows within each group"><option value="pop">Most reviews</option><option value="chg">Biggest change</option><option value="name">A–Z</option></select></label>
+    <button id="u-open" type="button">Open all</button><button id="u-close" type="button">Close all</button>
+  </div>
+  <nav class="chips" id="chips" aria-label="Jump to a group"></nav>
+  <p class="note" id="note"></p>
+  <div id="groups"></div>
+  <footer>Prices are EUR from the Netherlands Steam store. Each update is compared with the previous published snapshot of this radar. Rows show the real values from both updates; groups list the most-reviewed rows (the real total is always shown). Sort rows only re-orders the rows already shown.</footer>
+</main>
+<script>
+"use strict";
+const $=id=>document.getElementById(id),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const NA='n/a',PAGE=40;
+const eur=c=>c==null?NA:c===0?'Free':(c/100).toFixed(2).replace('.',',')+'€';
+const num=n=>n==null?NA:Number(n).toLocaleString('en-US');
+const day=s=>s?new Date(s+'T12:00:00Z').toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric',timeZone:'UTC'}):NA;
+const ymd=n=>{if(!n)return NA;const s=String(n);return day(`${s.slice(0,4)}-${s.slice(4,6)}-${s.slice(6,8)}`);};
+const sg=(n,u='')=>n==null?NA:(n>0?'+':n<0?'−':'')+Math.abs(n)+u;
+const store=id=>`https://store.steampowered.com/app/${id}/`;
+let IDX=null,CUR=null,B='https://shared.akamai.steamstatic.com/store_item_assets/';
+const shown={};
+async function getJSON(f){const r=await fetch(f);if(!r.ok)throw Error(f+': HTTP '+r.status);return r.json();}
+const artUrl=(id,a)=>!a?'':/^https?:/.test(a)?a:B+(a.startsWith('steam/')?a:`steam/apps/${id}/${a}`);
+const obj=(cols,r)=>{const o={};cols.forEach((c,i)=>o[c]=r[i]===undefined?null:r[i]);return o;};
+const off=d=>d?`<span class="tag">−${d}%</span> `:'';
+const rv=o=>o.pct==null?(o.reviews==null?'Reviews n/a':`${num(o.reviews)} reviews`):`${o.pct}% positive · ${num(o.reviews)} reviews`;
+const price=o=>`${off(o.discount)}<b>${eur(o.price)}</b>`;
+const chg=v=>v==null?NA:`<span class="${v>0?'up':'down'}">${sg(v,'%')}</span>`;
+const META={
+ added:o=>`${price(o)} · ${rv(o)} · Released ${ymd(o.release)}`,
+ released:o=>`${price(o)} · ${rv(o)} · Released ${ymd(o.release)}${o.was?` · was listed as “${esc(o.was)}”`:''}`,
+ removed:o=>`Last seen at ${price(o)} · ${rv(o)}`,
+ sales:o=>`<s>${eur(o.oldPrice)}</s> → <b>${eur(o.price)}</b> <span class="tag">−${o.discount}%</span> · ${num(o.reviews)} reviews`,
+ discounts:o=>`<s>${eur(o.oldPrice)}</s> → <b>${eur(o.price)}</b> · discount −${o.oldDiscount}% → <span class="tag">−${o.discount}%</span> · ${num(o.reviews)} reviews`,
+ ended:o=>`<s>${eur(o.oldPrice)}</s> → <b>${eur(o.price)}</b> · sale of −${o.oldDiscount}% ended · ${num(o.reviews)} reviews`,
+ base:o=>`Base price ${eur(o.oldBase)} → <b>${eur(o.base)}</b> (${chg(o.change)})${o.discount?` · now <span class="tag">−${o.discount}%</span>`:''} · ${num(o.reviews)} reviews`,
+ reviews:o=>`${o.oldPct}% → <b>${o.pct}%</b> positive (<span class="${o.delta>0?'up':'down'}">${sg(o.delta)} pts</span>) · ${num(o.oldReviews)} → ${num(o.reviews)} reviews`,
+ upcoming:o=>`Wishlist rank #${num(o.rank)} · ${esc(o.release||NA)}`,
+};
+const abs=v=>v==null?null:Math.abs(v);
+const CHG={sales:o=>o.discount,discounts:o=>abs(o.discount-o.oldDiscount),ended:o=>o.oldDiscount,base:o=>abs(o.change),reviews:o=>abs(o.delta)};
+const POP={upcoming:o=>o.rank==null?null:-o.rank};
+// n/a sorts last whatever the direction.
+function cmp(a,b){if(a==null&&b==null)return 0;if(a==null)return 1;if(b==null)return -1;return b-a;}
+function sorted(g,mode){
+ const rows=g.rows.map(r=>obj(g.cols,r)),pop=POP[g.id]||(o=>o.reviews),chg=CHG[g.id]||pop;
+ if(g.id==='genres')return rows.sort((a,b)=>cmp(a.count,b.count));
+ if(mode==='name')return rows.sort((a,b)=>a.name==null?(b.name==null?0:1):b.name==null?-1:a.name.localeCompare(b.name));
+ const key=mode==='chg'?chg:pop;
+ return rows.sort((a,b)=>cmp(key(a),key(b))||cmp(pop(a),pop(b)));
+}
+function rowHtml(id,o){
+ if(id==='genres')return `<div class="row"><div class="tx"><div class="t">${esc(o.label)}</div><div class="m"><b>${num(o.count)}</b> games${o.leadId?` · most reviewed: <a class="gl" data-appid="${o.leadId}" href="${store(o.leadId)}" target="_blank" rel="noopener">${esc(o.leadName)}</a>`:''}</div></div></div>`;
+ const img=o.art?`<img class="th" src="${esc(artUrl(o.id,o.art))}" alt="" loading="lazy" decoding="async" width="616" height="353">`:'<div class="th none">no art</div>';
+ return `<div class="row">${img}<div class="tx"><div class="t"><a class="gl" data-appid="${o.id}" href="${store(o.id)}" target="_blank" rel="noopener" title="Open ${esc(o.name)} in Steam">${esc(o.name)}</a></div><div class="m">${META[id](o)}</div></div></div>`;
+}
+function groupHtml(g,mode,open){
+ const list=sorted(g,mode),n=Math.min(shown[g.id]||PAGE,list.length);
+ const cap=g.total>g.shown?`<p class="cap">Showing the ${num(g.shown)} with the ${esc(g.capBy||'most reviews')} (of ${num(g.total)}).</p>`:'';
+ const body=g.total?`<p class="help">${esc(g.help)}</p>${cap}<div class="rows">${list.slice(0,n).map(o=>rowHtml(g.id,o)).join('')}</div>${n<list.length?`<button class="more" type="button" data-more="${g.id}">Show ${Math.min(PAGE,list.length-n)} more (${num(list.length-n)} left)</button>`:''}`:`<p class="help">${esc(g.help)}</p><p class="empty">None in this update.</p>`;
+ return `<details class="grp${g.total?'':' zero'}" id="grp-${g.id}"${open?' open':''}><summary>${esc(g.title)} <span class="n">${num(g.total)}</span></summary><div class="gbody">${body}</div></details>`;
+}
+function siteHtml(u,open){
+ const items=u.site.length?`<ul class="site">${u.site.map(s=>`<li><time datetime="${esc(s.date)}">${day(s.date)}</time>${esc(s.text)}</li>`).join('')}</ul>`:'<p class="empty">No site changes listed for this update.</p>';
+ return `<details class="grp${u.site.length?'':' zero'}" id="grp-site"${open?' open':''}><summary>Site &amp; UI changes <span class="n">${u.site.length}</span></summary><div class="gbody">${items}</div></details>`;
+}
+function render(){
+ const u=CUR,mode=$('u-sort').value,open=new Set();
+ document.querySelectorAll('#groups details[open]').forEach(d=>open.add(d.id));
+ const first=!document.querySelector('#groups details');
+ const filled=u.groups.filter(g=>g.total);
+ filled.slice(0,3).forEach(g=>first&&open.add('grp-'+g.id));
+ if(first)open.add('grp-site');
+ $('groups').innerHTML=(u.baseline?'':u.groups.map(g=>groupHtml(g,mode,open.has('grp-'+g.id))).join(''))+siteHtml(u,open.has('grp-site'));
+ $('chips').innerHTML=(u.baseline?[]:filled).map(g=>`<button type="button" data-jump="grp-${g.id}">${esc(g.title)}<b>${num(g.total)}</b></button>`).join('')+(u.site.length?`<button type="button" data-jump="grp-site">Site &amp; UI<b>${u.site.length}</b></button>`:'');
+ const diff=u.prevN==null?'':` (${u.n>=u.prevN?'+':'−'}${num(Math.abs(u.n-u.prevN))} compared with the previous update)`;
+ $('sub').textContent=u.baseline?`${day(u.date)} · first snapshot: ${num(u.n)} games on the radar. There is no earlier update to compare with yet; the next update will show what changed.`:`${day(u.date)} update compared with ${day(u.since)}: ${num(u.n)} games on the radar${diff}.`;
+ $('note').textContent=u.baseline?'':`Changes between the ${day(u.since)} and ${day(u.date)} updates. Only real differences are listed.`;
+ document.title=`What's new · ${day(u.date)} · Steam Machine Game Radar`;
+}
+async function load(date){
+ try{CUR=await getJSON(`data/w/${date}.json`);}catch(e){$('sub').textContent='Could not load this update. '+e.message;return;}
+ for(const k in shown)delete shown[k];
+ $('groups').innerHTML='';render();
+ window.dispatchEvent(new Event('whatsnew:render'));
+}
+function steam(appid,webUrl){let timer;const done=()=>{clearTimeout(timer);window.removeEventListener('blur',done);document.removeEventListener('visibilitychange',vis);window.removeEventListener('pagehide',done);};const vis=()=>{if(document.visibilityState==='hidden')done();};window.addEventListener('blur',done);document.addEventListener('visibilitychange',vis);window.addEventListener('pagehide',done);timer=setTimeout(()=>{done();if(!window.open(webUrl,'_blank','noopener'))location.href=webUrl;},1500);location.href=`steam://store/${appid}`;}
+document.addEventListener('click',e=>{
+ const a=e.target.closest('a.gl[data-appid]');if(a&&e.button===0&&!e.metaKey&&!e.ctrlKey&&!e.shiftKey&&!e.altKey){e.preventDefault();steam(a.dataset.appid,a.href);return;}
+ const m=e.target.closest('[data-more]');if(m){const id=m.dataset.more;shown[id]=(shown[id]||PAGE)+PAGE;render();return;}
+ const j=e.target.closest('[data-jump]');if(j){const d=$(j.dataset.jump);if(d){d.open=true;d.scrollIntoView?.({block:'start'});d.querySelector('summary').focus({preventScroll:true});}}
+});
+$('u-sort').addEventListener('change',()=>{for(const k in shown)delete shown[k];if(CUR)render();});
+$('u-pick').addEventListener('change',e=>{history.replaceState(null,'','#'+e.target.value);load(e.target.value);});
+$('u-open').addEventListener('click',()=>document.querySelectorAll('#groups details').forEach(d=>d.open=true));
+$('u-close').addEventListener('click',()=>document.querySelectorAll('#groups details').forEach(d=>d.open=false));
+(async()=>{
+ try{IDX=await getJSON('data/w/index.json');}catch(e){$('sub').textContent='Could not load the update list. '+e.message;return;}
+ if(IDX.b)B=IDX.b;
+ $('sched').textContent=`Updated weekly: ${IDX.schedule}`;
+ $('u-pick').innerHTML=IDX.updates.map(u=>`<option value="${esc(u.date)}">${day(u.date)}${u.since?' (vs '+day(u.since)+')':' (first snapshot)'}</option>`).join('');
+ const want=location.hash.slice(1),pick=IDX.updates.find(u=>u.date===want)||IDX.updates[0];
+ if(!pick){$('sub').textContent='No updates yet.';return;}
+ $('u-pick').value=pick.date;await load(pick.date);
+})();
+</script>
+</body>
+</html>
