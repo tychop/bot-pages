@@ -15,7 +15,6 @@ body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-ap
 a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
 .wrap{max-width:1880px;margin:0 auto;padding:0 clamp(16px,3vw,48px)}
 header.hero{position:relative;min-height:340px;display:flex;align-items:flex-end;overflow:hidden;border-bottom:1px solid var(--line)}
-header.hero .bg{position:absolute;inset:0;background:center/cover no-repeat;opacity:.45;filter:saturate(1.2)}
 header.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,9,15,.2),var(--bg) 92%),linear-gradient(90deg,var(--bg),transparent 70%)}
 header.hero .wrap{position:relative;z-index:1;padding-top:64px;padding-bottom:36px;width:100%}
 .kicker{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:700}
@@ -25,10 +24,11 @@ background:linear-gradient(90deg,#fff,var(--accent) 55%,var(--accent2));-webkit-
 .updated{display:inline-flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:16px;padding:6px 14px;border:1px solid var(--line);border-radius:999px;background:rgba(15,20,32,.7);font-size:14px;color:var(--muted)}
 .updated b{color:var(--text)}
 .dot{width:8px;height:8px;border-radius:50%;background:var(--good);box-shadow:0 0 10px var(--good)}
+.wn{display:flex;flex-wrap:wrap;align-items:center;gap:4px 14px;margin:22px 0 0;padding:12px 16px;border:1px solid var(--line);border-left:3px solid var(--accent2);border-radius:12px;background:linear-gradient(90deg,rgba(56,225,255,.1),rgba(255,63,164,.08));color:var(--muted);font-size:14.5px}.wn:hover{border-color:var(--accent);text-decoration:none}.wn strong{color:var(--text);font-size:16px}.wn time{color:var(--dim)}.wn b{color:var(--text)}.wn .go{margin-left:auto;color:var(--accent);font-weight:700}@media(max-width:560px){.wn .go{margin-left:0;flex-basis:100%}}
 section.block{margin:36px 0}
 h2{font-size:clamp(20px,1.8vw,28px);margin:0 0 16px;display:flex;align-items:center;gap:12px;font-weight:800}
 h2 .count{font-size:14px;font-weight:700;color:var(--bg);background:var(--accent);border-radius:999px;padding:2px 10px}
-.changes,.picks{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr))}
+.changes{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr))}
 .pick{display:flex;gap:14px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px;color:var(--text)}
 .pick:hover{border-color:var(--accent);text-decoration:none}
 .pick img{width:120px;aspect-ratio:616/353;object-fit:cover;border-radius:8px;flex:none;background:var(--panel2)}
@@ -37,10 +37,7 @@ h2 .count{font-size:14px;font-weight:700;color:var(--bg);background:var(--accent
 .change{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent2);border-radius:10px;padding:10px 14px}
 .toolbar{position:sticky;top:0;z-index:20;background:rgba(7,9,15,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .toolbar .wrap{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;padding-top:12px;padding-bottom:12px}
-.seg{display:inline-flex;flex-wrap:wrap;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:3px}
-.seg button{all:unset;cursor:pointer;padding:7px 14px;border-radius:9px;font-size:14px;font-weight:600;color:var(--muted)}
-.seg button[aria-pressed=true]{background:var(--accent);color:#04121a}
-.seg button:focus-visible,.chk input:focus-visible+span,select:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.chk input:focus-visible+span,select:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 label.sel{display:inline-flex;gap:8px;align-items:center;font-size:14px;color:var(--muted)}
 select{background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:10px;padding:8px 10px;font:inherit;font-size:14px}
 .chk{display:inline-flex;gap:8px;align-items:center;font-size:14px;color:var(--muted);cursor:pointer;user-select:none}
@@ -74,7 +71,6 @@ select{background:var(--panel);color:var(--text);border:1px solid var(--line);bo
 .stat{background:rgba(7,9,15,.5);border:1px solid var(--line);border-radius:10px;padding:8px 10px;min-width:0}
 .stat .k{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--dim);font-weight:700}
 .stat .v{font-weight:700;font-size:15px;overflow-wrap:anywhere}
-.was{color:var(--dim);text-decoration:line-through;font-weight:500;font-size:13px;margin-left:6px}
 .bar{height:5px;border-radius:9px;background:var(--panel2);margin-top:6px;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--good))}
 .rmeta{font-size:12px;color:var(--muted);font-weight:500}
 .deck-Verified{color:var(--good)}.deck-Playable{color:var(--ok)}.deck-Unsupported{color:var(--bad)}.deck-Unknown{color:var(--muted)}
@@ -174,6 +170,7 @@ footer h3{color:var(--text)}footer table td{white-space:normal;font-size:13px}op
 <nav class="wrap chips" id="genre-chips" aria-label="Featured genres"></nav></div>
 <main class="wrap">
   <div id="home-view">
+    <a class="wn" id="wn" href="whats-new.html" hidden></a>
     <section class="block"><h2>Highlights</h2><p class="section-note">Best-ranked new releases (last 60 days), deals of 50% or more, and hidden gems.</p><div class="highlight-strip" id="highlights"></div></section>
     <section class="block"><h2>All genres <span class="count" id="genre-count"></span></h2>
       <div class="gtools"><label class="sel search-label">Find a genre <input id="g-search" type="search" placeholder="e.g. Metroidvania" autocomplete="off" aria-label="Find a genre"></label>
@@ -213,7 +210,6 @@ const eur=c=>c==null?NA:c===0?'Free':(c/100).toFixed(2).replace('.',',')+'€';
 const DECK=['Unknown','Unsupported','Playable','Verified'],deckName=n=>n==null?NA:DECK[n]||'Unknown',CTL=['None','Partial','Full'],DEV=['Indie','Small publisher','Publisher'];
 const priceText=g=>g.free?'Free to play':g.price!=null?eur(g.price)+(g.pkg?' (package)':''):g.eaPack?'Early Access pack only':'Price n/a';
 const SRC={spy:'SteamSpy tag datasets (estimates, updated daily by SteamSpy)',items:'Steam IStoreBrowseService/GetItems (NL store) at build time',webapi:'Steam Web API at build time',store:`Steam appdetails + Steam Web API GetAppReviews (30-day window); ${H.storeTierN.toLocaleString()} games fetched so far, most-reviewed first, refreshed every 30 days`,snap:'Radar weekly snapshots (n/a until a snapshot ≥6 days old exists)'};
-// Metric catalogue: key, label, group, value(g), format, direction (1 = high first), source, note
 const M=[
  ['rank','Rank (95% confidence score)','Ranking',g=>g.score,g=>g.score==null?NA:(100*g.score).toFixed(2)+'%',1,'spy','Wilson lower bound of SteamSpy positive/negative review counts'],
  ['gem','Hidden gem score','Ranking',g=>g.gem,g=>g.gem==null?NA:(100*g.gem).toFixed(1),1,'spy','Confidence score ÷ log10(estimated owners midpoint). High reviews, few owners rank first'],
@@ -252,6 +248,7 @@ function genreSummary(keys){const k=visibleKeys(keys).filter(x=>x!=='up');if(key
 function hashFor(keys,page=1){const genres=sortKeys(visibleKeys(keys).filter(k=>k!=='up'));if(!genres.length)return keys.includes('up')||(keys.length===1&&keys[0]==='up')?`#genre/up/${page}`:'#home';if(genres.length===1)return `#genre/${encodeURIComponent(genres[0])}/${page}`;return `#genres/${genres.map(encodeURIComponent).join(',')}${page>1?'/'+page:''}`;}
 const CHIP_KEYS=/*GENRE_CHIPS*/["adventure","action","simulation","rpg","action-rpg","strategy","exploration","shooter","open-world","arcade","sandbox"];
 const CHIP_LABELS=/*GENRE_CHIP_LABELS*/{"action-rpg":"ARPG"};
+function drawWn(){const w=H.w,el=$('wn');if(!w)return;const L=[['n','new'],['s','newly on sale'],['e','sales ended'],['p','base price changes'],['r','review moves'],['x','removed'],['g','new genres']].filter(([k])=>w[k]).map(([k,t])=>`<span><b>${w[k].toLocaleString()}</b> ${t}</span>`).join('');el.innerHTML=`<strong>What's new</strong><time>${new Date(w.d+'T12:00:00Z').toLocaleDateString('en-GB',{day:'numeric',month:'short',timeZone:'UTC'})}</time>${L||'<span>First snapshot</span>'}<span class="go">See what changed →</span>`;el.hidden=false;}
 function fillGenreNav(){const L=visibleGenres();const menu=$('genre-menu-list');const opts=[...L].sort((a,b)=>a.label.localeCompare(b.label)).map(g=>`<label class="genre-opt"><input type="checkbox" value="${esc(g.key)}" id="gopt-${esc(g.key)}"><span>${esc(g.label)}</span><span class="n">${g.count.toLocaleString()}</span></label>`).join('');menu.innerHTML=`<button type="button" class="genre-special" id="genre-up" data-genre-up>Upcoming · most wishlisted (${H.up.toLocaleString()})</button>`+opts;const by=Object.fromEntries(L.map(g=>[g.key,g]));const chips=['<a href="#home" class="chip">All genres</a>'];for(const key of CHIP_KEYS){const g=by[key];if(!g)continue;chips.push(`<a href="#genre/${esc(g.key)}/1" class="chip">${esc(CHIP_LABELS[key]||g.label)}</a>`);}chips.push('<a href="#genre/up/1" class="chip">Upcoming</a>');$('genre-chips').innerHTML=chips.join('');syncGenrePicker(route());}
 function genreMenuOpen(){return !$('genre-menu').hidden;}
 function closeGenreMenu(){if($('genre-menu').hidden)return;$('genre-menu').hidden=true;$('f-genre').setAttribute('aria-expanded','false');if($('genre-menu').contains(document.activeElement))$('f-genre').focus();}
@@ -262,22 +259,19 @@ function moveGenreOption(dir){const inputs=genreOptionInputs();if(!inputs.length
 function syncGenrePicker(r){const keys=r?r.keys:(route().keys);const genres=visibleKeys(keys).filter(k=>k!=='up');const onUp=keys.length===1&&keys[0]==='up';$('f-genre-summary').textContent=genreSummary(keys);for(const inp of $('genre-menu-list').querySelectorAll('input[type=checkbox]'))inp.checked=genres.includes(inp.value);const upBtn=$('genre-up');if(upBtn)upBtn.setAttribute('aria-current',onUp?'true':'false');const picked=$('genre-picked');if(!genres.length){picked.hidden=true;picked.innerHTML='';}else{picked.hidden=false;picked.innerHTML=genres.map(k=>`<button type="button" class="chip" data-remove="${esc(k)}" aria-label="Remove ${esc(genreLabel(k))}">${esc(genreLabel(k))} ×</button>`).join('');}
  document.querySelectorAll('#genre-chips a').forEach(a=>{const href=a.getAttribute('href');const cur=onUp?href==='#genre/up/1':!genres.length?href==='#home':genres.length===1&&href===`#genre/${genres[0]}/1`;a.setAttribute('aria-current',cur?'page':'false');});}
 function applyGenres(keys,page=1){state.q='';$('f-search').value='';go(keys,page);}
-// ---- data loading
 const chunks=new Map();let INDEX=null,IDX_BY=null;const details=new Map(),detShards=new Map();
 function loadChunk(key,n){const k=key+'/'+n;if(!chunks.has(k))chunks.set(k,getJSON(`data/g/${encodeURIComponent(key)}/${n}.json`).then(rows=>key==='up'?rows:rows.map(r=>unpack(r,H.cf))).catch(e=>{chunks.delete(k);throw e;}));return chunks.get(k);}
 function loadIndex(){if(!INDEX)INDEX=Promise.all(Array.from({length:H.is_},(_,i)=>getJSON(`data/i/${i}.json`))).then(parts=>{const all=parts.flat().map(r=>unpack(r,XF));all.forEach(g=>g.lc=g.name.toLocaleLowerCase());IDX_BY=new Map(all.map(g=>[g.id,g]));return all;}).catch(e=>{INDEX=null;throw e;});return INDEX;}
 async function loadDetail(id){const s=Math.floor(id/10)%H.ds;if(!detShards.has(s))detShards.set(s,getJSON(`data/d/${s}.json`).catch(e=>{detShards.delete(s);throw e;}));const d=(await detShards.get(s))[id];return d&&{desc:d[0],shots:d[1].map(x=>artUrl(id,/^[0-9a-f]{40}$/.test(x)?`ss_${x}.jpg`:x)),developer:d[2],publisher:d[3],row:d[4]?unpack(d[4],XF):null};}
-// ---- routing
 function route(){const hm=location.hash.match(/^#genres\/([^/]+)(?:\/(\d+))?$/);if(hm){const keys=sortKeys(visibleKeys(genreKeysFromRaw(hm[1]).filter(k=>k!=='up')));const page=Math.max(1,Number(hm[2]||1));if(!keys.length)return{key:'home',page:1,keys:[]};if(keys.length===1)return{key:keys[0],page,keys};return{key:'multi',page,keys};}
  const m=location.hash.match(/^#genre\/([^/]+)(?:\/(\d+))?$/);if(!m)return{key:'home',page:1,keys:[]};let key=decodeURIComponent(m[1]);if(H.alias[key])key=H.alias[key];const page=Math.max(1,Number(m[2]||1));if(key==='all')return{key:'all',page,keys:[]};if(key==='up')return{key:'up',page,keys:['up']};if(GBY[key])return{key,page,keys:[key]};return{key,page,keys:[]};}
 function normalizeHash(){const r=route();let want=null;if(r.key==='multi')want=hashFor(r.keys,r.page);else if(location.hash.startsWith('#genres/'))want=r.keys.length?hashFor(r.keys,r.page):'#home';if(want&&want!==location.hash)history.replaceState(null,'',want);return r;}
 function go(k,page=1){let h;if(Array.isArray(k))h=hashFor(k,page);else if(k==='home')h='#home';else if(k==='all')h=`#genre/all/${page}`;else h=hashFor([k],page);if(location.hash===h)draw().catch(showError);else location.hash=h;}
 const filtersOn=()=>state.sale||state.deck||state.free||state.gem||state.mode||state.ctl||state.dev||state.machine;
 function refresh(){const r=route();if(r.page!==1)go(r.keys.length?r.keys:(r.key==='home'?'all':r.key),1);else draw().catch(showError);}
-// ---- controls
 $('updated').textContent=H.u;$('ed').textContent=` · Edition ${H.e} · ${H.n.toLocaleString()} games · ${GL.length} genres`;
 $('sub').textContent=`Every Steam genre tag, every qualifying game (at least ${H.minReviews} reviews), ranked by review confidence. 10 per page by default (25, 50 or 100 on request).`;
-fillGenreNav();
+fillGenreNav();drawWn();
 const groups=[...new Set(M.map(m=>m[2]))];
 $('f-sort').innerHTML=groups.map(gr=>`<optgroup label="${esc(gr)}">`+M.filter(m=>m[2]===gr).map(m=>`<option value="${m[0]}" title="${esc(m[7])}">${esc(m[1])}</option>`).join('')+'</optgroup>').join('');
 $('f-genre').addEventListener('click',e=>{e.stopPropagation();genreMenuOpen()?closeGenreMenu():openGenreMenu();});
@@ -302,7 +296,6 @@ $('reset').addEventListener('click',()=>{Object.assign(state,{q:'',sort:'rank',s
 $('g-search').addEventListener('input',e=>{state.gq=e.target.value.trim().toLocaleLowerCase();drawTiles();});
 $('g-sort').addEventListener('change',e=>{state.gsort=e.target.value;drawTiles();});
 $('g-cat').addEventListener('change',e=>{state.gcat=e.target.value;drawTiles();});
-// ---- rendering
 const store=id=>`https://store.steampowered.com/app/${id}/`;
 const genreLine=g=>(g.genres||[]).slice().sort((a,b)=>GCOUNT[a]-GCOUNT[b]).slice(0,3).map(i=>GEN[i]?.label).filter(Boolean).join(' · ');
 function card(g,pos,lead=''){
@@ -320,20 +313,15 @@ function upCard(u,pos){return `<article class="card" data-game="${u.id}" tabinde
  <div class="body"><div class="genre">${esc(genreLine(u))}</div><div class="trow"><h3 class="title"><a class="gl" data-appid="${u.id}" href="${store(u.id)}" target="_blank" rel="noopener">${esc(u.name)}</a></h3><a class="web" href="${store(u.id)}" target="_blank" rel="noopener" aria-label="${esc(u.name)} Steam website">↗ web</a></div>
  <div class="stats"><div class="stat" title="Position in Steam's 'Popular upcoming' list, which is ordered by wishlists"><div class="k">Wishlist rank</div><div class="v">#${u.rank}</div></div><div class="stat"><div class="k">Release</div><div class="v">${esc(u.release||NA)}</div></div></div>
  <button class="shots-open" data-detail="${u.id}" data-up="1">Details &amp; screenshots</button></div></article>`;}
-// Decorative media are embedded from the local manifest at build time.
-// Source URLs stay inert until IntersectionObserver confirms actual visibility.
-// H.264 High / level 3.0 / 4:2:0 MP4 first; only one encoding is loaded at a time.
 const reducedMotion=window.matchMedia?window.matchMedia('(prefers-reduced-motion: reduce)'):{matches:false};
 let tileObserver=null;const tileVideos=new Set(),visibleTileVideos=new Set();
 function pauseTileVideo(v){v.pause();v.classList.remove('playing');if(v.dataset.loaded){for(const source of v.querySelectorAll('source'))source.removeAttribute('src');delete v.dataset.loaded;delete v.dataset.blocked;v.load();}}
 function playTileVideo(v){
  if(reducedMotion.matches||document.hidden||!visibleTileVideos.has(v)||v.dataset.failed)return;
- // Reassert autoplay-safe properties before every load/play (including Safari resumes).
  v.muted=true;v.defaultMuted=true;v.playsInline=true;
  if(!v.dataset.loaded){const sources=v.querySelectorAll('source[data-src]');const source=sources[Number(v.dataset.source||0)];if(!source)return;source.src=source.dataset.src;v.dataset.loaded='1';v.load();}
  const result=v.play();if(result&&result.catch)result.catch(()=>{v.classList.remove('playing');if(v.dataset.loaded&&!v.dataset.failed)v.dataset.blocked='1';});
 }
-// Try the other encoding once: Safari may claim WebM support but reject VP9 4:4:4.
 function tileVideoError(v,source=null){
  if(!v.dataset.loaded||v.dataset.failed)return;
  const sources=v.querySelectorAll('source[data-src]'),index=Number(v.dataset.source||0);
@@ -343,8 +331,6 @@ function tileVideoError(v,source=null){
  else{v.dataset.failed='1';v.hidden=true;}
 }
 function retryBlockedTileVideos(){for(const v of visibleTileVideos)if(v.dataset.blocked){delete v.dataset.blocked;playTileVideo(v);}}
-// Autoplay policies (including Low Power Mode) can reject play without a decode error.
-// Keep the still and retry only after interaction, never a timer/retry loop.
 $('genre-tiles').addEventListener('pointerover',retryBlockedTileVideos);
 document.addEventListener('pointerdown',retryBlockedTileVideos,{passive:true});
 let tileRetryFrame=0;
@@ -360,7 +346,6 @@ if(reducedMotion.addEventListener)reducedMotion.addEventListener('change',syncTi
 document.addEventListener('visibilitychange',syncTileMotion);
 function genreVideo(key){const art=GENRE_ART[key],loop=GENRE_LOOPS[key];return art&&loop?`<video muted loop playsinline webkit-playsinline preload="none" poster="${esc(art)}" aria-hidden="true" tabindex="-1" width="616" height="353"><source data-src="${esc(loop.mp4)}" type='video/mp4; codecs="avc1.64001E"'><source data-src="${esc(loop.webm)}" type="video/webm"></video>`:'';}
 
-// The gradient remains beneath the image, including when a download fails.
 function genreGradient(key){let hash=2166136261;for(const c of key){hash=Math.imul(hash^c.charCodeAt(0),16777619)>>>0;}const hue=hash%360;return `linear-gradient(135deg,hsl(${hue},42%,24%),hsl(${(hue+48)%360},38%,10%))`;}
 $('genre-tiles').addEventListener('error',e=>{if(e.target.tagName==='IMG')e.target.hidden=true;},true);
 function drawTiles(){clearTileVideos();let L=visibleGenres().filter(g=>(!state.gcat||g.cat===state.gcat)&&(!state.gq||g.label.toLocaleLowerCase().includes(state.gq)));
@@ -368,7 +353,6 @@ function drawTiles(){clearTileVideos();let L=visibleGenres().filter(g=>(!state.g
  $('genre-count').textContent=L.length;
  $('genre-tiles').innerHTML=L.map(g=>`<a class="genre-tile" href="#genre/${esc(g.key)}/1" data-genre="${esc(g.key)}" style="background:${genreGradient(g.key)}">${GENRE_ART[g.key]?`<img src="${esc(GENRE_ART[g.key])}" alt="" loading="lazy" decoding="async" width="616" height="353">`:''}${genreVideo(g.key)}<div><strong>${esc(g.label)}</strong><span>${g.count.toLocaleString()} games · ${esc(g.cat)} · #1 ${esc(g.leadName)}</span><span>${g.reviews.toLocaleString()} reviews</span></div></a>`).join('')||'<p class="empty">No genre matches.</p>';observeTileVideos();}
 function matches(g){return (!state.q||g.lc.includes(state.q))&&(!state.sale||g.discount>0)&&(!state.deck||g.deck===3)&&(!state.free||g.free)&&(!state.gem||(g.pct>=90&&g.ownersHi!=null&&g.ownersHi<=100000))&&(!state.mode||(g.modes&+state.mode))&&(!state.ctl||(g.controller!=null&&g.controller>=+state.ctl))&&(!state.dev||g.devSize===+state.dev)&&(!state.machine||(g.machine==null?0:g.machine)===+state.machine)&&(!state.hideAdult||!g.adult);}
-// Missing metrics always trail known values, before applying either sort direction.
 const missingMetric=v=>v==null||Number.isNaN(v);
 const rankSort=(a,b)=>{const x=a.score,y=b.score,nx=missingMetric(x),ny=missingMetric(y);if(nx!==ny)return nx?1:-1;return (nx?0:Math.round(y*1e6)-Math.round(x*1e6))||(b.reviews??0)-(a.reviews??0)||a.id-b.id;};
 function sorter(key){const m=MET[key];return (a,b)=>{const x=m.val(a),y=m.val(b),nx=missingMetric(x),ny=missingMetric(y);if(nx!==ny)return nx?1:-1;if(nx)return rankSort(a,b);return (y-x)*m.dir||rankSort(a,b);};}
@@ -391,14 +375,10 @@ async function draw(){
  $('groups').innerHTML='';
  if(adultLocked)$('groups').innerHTML='<div class="empty" id="adult-gate"><p>Adult games are hidden. Turn off Hide adult games to open this genre.</p><button type="button" id="adult-enable" class="reset">Show adult games</button></div>';
  else if(!visible.length)$('groups').innerHTML=(!searching&&multi)?'<p class="empty" id="genre-empty">No games belong to all of the selected genres. Clear a genre or pick a different combination.</p>':'<p class="empty">No games match. Clear filters or search another title.</p>';
- // Yield between bounded DOM batches so All never monopolises the UI thread.
  for(let i=0;i<visible.length;i+=100){if(token!==drawToken)return;$('groups').insertAdjacentHTML('beforeend',visible.slice(i,i+100).map(([pos,g])=>pos==='up'?upCard(g):card(g,pos)).join(''));if(visible.length>100){$('showing').textContent=`Rendering ${Math.min(i+100,visible.length).toLocaleString()} of ${visible.length.toLocaleString()}…`;await new Promise(resolve=>setTimeout(resolve,0));}}
  $('pagination').innerHTML=pager(page,pages);
  if(token!==drawToken)return;
  $('showing').textContent=`${total?((page-1)*PAGE+1).toLocaleString():0}–${Math.min(page*PAGE,total).toLocaleString()} of ${total.toLocaleString()}`;
- // Finish every replacement list at the top, including non-route filter changes.
- // Temporarily defeat the global smooth-scroll rule (also in Safari).
- // Keep caret and focus if the user is mid-input (search would otherwise lose them on every render).
  const typing=document.activeElement?.matches?.('input,select,textarea');
  if(!typing)$('view-title').focus({preventScroll:true});
  const root=document.documentElement,previousScrollBehavior=root.style.scrollBehavior;
@@ -413,11 +393,9 @@ $('groups').addEventListener('click',e=>{if(e.target&&e.target.id==='adult-enabl
 $('pagination').addEventListener('change',e=>{if(e.target.id==='jump')jumpTo(e.target.value);});
 window.addEventListener('hashchange',()=>{draw().catch(showError);});
 function showError(e){$('home-view').hidden=true;$('results-view').hidden=false;$('groups').innerHTML='<p class="empty">Unable to load radar data. Please refresh.</p>';console.error(e);}
-// ---- footer: sources, freshness, coverage
 $('about').innerHTML=`<h3>About the data</h3><p>Genres: every Steam tag in Steamworks' Top-level genre, Genre and Sub-genre categories (via <a href="https://srec.ai/stats/tags-frequency-median">SRec</a>), plus the curated Isometric ARPGs list. Feature and descriptor tags such as Singleplayer or Great Soundtrack are not genres. A game appears in every genre whose tag is among its 10 most-voted Steam tags (the curated Isometric ARPGs list needs both the Action RPG and Isometric tags anywhere). Candidates come from SteamSpy tag datasets with at least ${H.minReviews} reviews. Demos, prologues, playtests, DLC and software are removed. No pins or personal exclusions. Clicking a game opens the Steam app, with the web store as a fallback.</p>
 <div class="tablewrap"><table><thead><tr><th>Sort / metric</th><th>Source</th><th class="n">Coverage</th><th>Notes</th></tr></thead><tbody>${M.map(m=>{const ck={rank:'reviews',owners:'ownersMid',storage:'storageGB',newest:'release',oldest:'release',deck:'reviews',discount:'price',contentWarnings:'reviews',recentReviews:'recentPct'}[m[0]]||m[0];const c=H.coverage[ck];return `<tr><td>${esc(m[1])}</td><td>${esc(SRC[m[6]])}</td><td class="n">${c==null?'100%':c+'%'}</td><td>${esc(m[7])}</td></tr>`;}).join('')}</tbody></table></div>
 <p>Not available from a clean source, so not shown: average or median playtime and "hours per euro" (SteamSpy reports 0 for every game), multi-day average players, installs or downloads, followers, all-time lowest price (IsThereAnyDeal needs an API key), sale frequency and free weekends (the radar's own weekly snapshots started ${esc(H.snapshots[0]||H.date)}), and How Long to Beat (no public API). Snapshots so far: ${H.snapshots.length}.</p>`;
-// ---- details dialog, screenshots
 const dlg=$('dlg');let dlgReturn=null;
 async function openDetail(id,btn,up){let d;try{d=await loadDetail(id);}catch(e){showError(e);return;}if(!d)return;const g=d.row;dlgReturn=btn;
  const rows=g?M.filter(m=>!['oldest'].includes(m[0])).map(m=>`<tr><th>${esc(m[0]==='newest'?'Release date':m[1].replace(/ \((low|newest|smallest|fewest) first\)/,''))}</th><td>${esc(MET[m[0]].fmt(g))}</td><td class="src">${esc(SRC[m[6]])}</td></tr>`).join('')+`<tr><th>Player modes</th><td>${[[1,'Single-player only'],[2,'Local co-op'],[4,'Online co-op'],[8,'PvP']].filter(([b])=>g.modes&b).map(x=>x[1]).join(', ')||NA}</td><td class="src">${SRC.items}</td></tr><tr><th>Developer size</th><td>${g.devSize==null?NA:DEV[g.devSize]}</td><td class="src">Indie tag, or publisher with 10+ radar titles</td></tr>`:'';
@@ -437,7 +415,6 @@ document.addEventListener('click',e=>{if(e.target.matches('.card')){e.target.que
  const a=e.target.closest('a.gl[data-appid]');if(a&&!e.defaultPrevented&&e.button===0&&!e.metaKey&&!e.ctrlKey&&!e.shiftKey&&!e.altKey){e.preventDefault();openInSteam(a.dataset.appid,a.href);}});
 lb.addEventListener('click',e=>{if(e.target.closest('.prev'))step(-1);else if(e.target.closest('.next'))step(1);else if(e.target===lb||e.target.closest('.x'))closeLb();});
 lbImg.addEventListener('error',()=>{const s=current?.shots[shot];const t=s&&s.replace(/\.jpg$/,'.600x338.jpg');if(t&&lbImg.src!==t)lbImg.src=t;});
-// ---- keyboard + controller
 function scope(){return current?lb:dlg.classList.contains('open')?dlg:genreMenuOpen()?$('genre-menu'):null;}
 function focusMove(delta){const sc=scope();const els=sc?[...sc.querySelectorAll('button,a,input,select')]:[...document.querySelectorAll('#controls input,#controls select,#controls button,#filters:not([hidden]) input,#filters:not([hidden]) select,#genre-chips a,#genre-picked button,main a,main button,main input,main select,.card[tabindex]')].filter(e=>!e.closest('[hidden]')&&!e.disabled&&!e.closest('#genre-menu'));const i=els.indexOf(document.activeElement);els[(Math.max(i,0)+delta+els.length)%els.length]?.focus();}
 function stepSelect(el,d){if(!el||el.tagName!=='SELECT')return;const n=el.selectedIndex+d;if(n>=0&&n<el.options.length){el.selectedIndex=n;el.dispatchEvent(new Event('change',{bubbles:true}));}}
@@ -445,7 +422,6 @@ document.addEventListener('keydown',e=>{if(current){if(e.key==='Escape')closeLb(
  if(dlg.classList.contains('open')){if(e.key==='Escape'){closeDlg();e.preventDefault();}else if(e.key==='Tab'){focusMove(e.shiftKey?-1:1);e.preventDefault();}return;}
  if(genreMenuOpen()){if(e.key==='Escape'){closeGenreMenu();e.preventDefault();}else if(e.key==='ArrowDown'){moveGenreOption(1);e.preventDefault();}else if(e.key==='ArrowUp'){moveGenreOption(-1);e.preventDefault();}return;}
  if(e.target.matches('input,select,textarea'))return;if(e.key==='ArrowDown'||e.key==='ArrowRight'){focusMove(1);e.preventDefault();}else if(e.key==='ArrowUp'||e.key==='ArrowLeft'){focusMove(-1);e.preventDefault();}else if(e.key==='Escape'){go('home');}else if(e.key==='Enter'&&e.target.matches('.card'))e.target.querySelector('a').click();});
-// Gamepad: D-pad/stick up-down moves focus, left-right changes a focused select (sort menu), A activates, B closes/back.
 window.RADAR_PAD={stepSelect,focusMove};
 if(navigator.getGamepads&&window.requestAnimationFrame){let last=0;const loop=t=>{const pad=[...navigator.getGamepads()].find(Boolean);if(pad&&t-last>200){const el=document.activeElement,sel=el&&el.tagName==='SELECT';const L=pad.buttons[14]?.pressed||pad.axes[0]<-.6,R=pad.buttons[15]?.pressed||pad.axes[0]>.6,U=pad.buttons[12]?.pressed||pad.axes[1]<-.6,D=pad.buttons[13]?.pressed||pad.axes[1]>.6;
  if(pad.buttons[0]?.pressed){if(!sel)el?.click();last=t;}else if(pad.buttons[1]?.pressed){current?closeLb():dlg.classList.contains('open')?closeDlg():genreMenuOpen()?closeGenreMenu():history.back();last=t;}else if(genreMenuOpen()&&(D||U)){moveGenreOption(D?1:-1);last=t;}else if(sel&&(L||R)){stepSelect(el,R?1:-1);last=t;}else if(D||R){focusMove(1);last=t;}else if(U||L){focusMove(-1);last=t;}}requestAnimationFrame(loop);};requestAnimationFrame(loop);}
